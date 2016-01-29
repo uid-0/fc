@@ -1,0 +1,70 @@
+<<nobr>>
+
+<<set $slaveCost to 0>>
+
+<<set $useActiveSlave to 1>>
+<<display "Beauty">>
+<<display "FResult">>
+<<set $useActiveSlave to 0>>
+
+<<set $slaveCost += ($beauty*$FResult)>>
+
+<<set $slaveMultiplier to $slaveCostFactor>>
+
+<<if $activeSlave.behavioralQuirk isnot "none">>
+	<<set $slaveMultiplier -= 0.1>>
+<</if>>
+<<if $activeSlave.sexualQuirk isnot "none">>
+	<<set $slaveMultiplier -= 0.1>>
+<</if>>
+
+<<if $activeSlave.fetishDiscovered is 1>>
+  <<if $activeSlave.fetish is "mindbroken">>
+	  <<set $slaveMultiplier -= 0.3>>
+  <<elseif $activeSlave.fetish is "nympho">>
+	  <<set $slaveMultiplier += 0.2>>
+  <<elseif $activeSlave.fetish isnot "none">>
+	  <<set $slaveMultiplier += 0.1>>
+  <</if>>
+<<else>>
+  <<set $slaveMultiplier -= 0.1>>
+<</if>>
+
+<<if $activeSlave.vagina is 0>>
+	<<set $slaveMultiplier += 0.1>>
+<</if>>
+<<if $activeSlave.preg lt -1>>
+	<<set $slaveMultiplier -= 0.1>>
+<<elseif $activeSlave.preg gt 10>>
+	<<set $slaveMultiplier -= 0.1>>
+<</if>>
+<<if $activeSlave.intelligence isnot 0>>
+	<<set $slaveMultiplier += 0.05*$activeSlave.intelligence>>
+<</if>>
+<<if $activeSlave.intelligenceImplant is 1>>
+	<<set $slaveMultiplier += 0.05>>
+<</if>>
+
+<<if $activeSlave.prestige gt 0>>
+	<<set $slaveMultiplier += 0.7*$activeSlave.prestige>>
+<</if>>
+
+<<set $slaveMultiplier += $activeSlave.devotion/50>>
+<<set $slaveMultiplier += $activeSlave.trust/50>>
+
+<<if $activeSlave.brand isnot 0>>
+  <<if $rep gt 10000>>
+	<<set $slaveMultiplier += 0.1>>
+  <<elseif $rep lt 5000>>
+	<<set $slaveMultiplier -= 0.1>>
+  <</if>>
+<</if>>
+
+<<set $slaveCost to ($slaveCost*$slaveMultiplier*50)>>
+<<set $slaveCost to 500*Math.trunc($slaveCost/500)>>
+
+<<if $slaveCost lt 2000>>
+	<<set $slaveCost to 2000>>
+<</if>>
+
+<</nobr>>\

@@ -1,0 +1,43 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate XY Slave">>
+<<set $activeSlave.origin to "She offered herself for voluntary enslavement to escape life in an area that disapproved of her sexual tendencies.">>
+<<set $activeSlave.health to random(-2,2)>>
+<<set $activeSlave.devotion to random(3,4)>>
+<<set $activeSlave.trust to random(0,2)>>
+<<set $activeSlave.anus to random(1,2)>>
+<<set $activeSlave.sexualQuirk to "hates women">>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+You receive so many messages, as a noted titan of the new Free Cities world, that your personal assistant has to be quite draconian in culling them. She lets only the most important through to you. One category of message that always gets through regardless of content, though, is requests for voluntary enslavement. As the new world takes shape, they've become less rare than they once were.
+
+This one is from a rather abused individual from one of the more traditionalist areas of the old world. It seems she's heard of the new and interesting way gender is thought of in the Free Cities, and in your arcology in particular. "Being your slave has to be better than being a subhuman here," she says. "Being your sex slave is more accepted in your city than being me is, here."
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	When she arrives, she comes directly to your penthouse for enslavement. She wears an expression of doubt, fear, and wonder as she takes in the sights and sounds of the magnificent beast that is the new society taking shape in your arcology. The enslavement process requires her to be nude, of course, so she doesn't need to strip to offer herself to you when it's over. She doesn't even have to be prompted: she just gets down on the floor in front of your desk and offers you her fuckhole.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

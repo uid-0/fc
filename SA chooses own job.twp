@@ -1,0 +1,322 @@
+<<nobr>>
+
+<<if ($slaves[$i].assignment is "choose her own job")>>
+  You have allowed her this week to select her own job. She watches your other slaves to decide what to do, @@color:hotpink;happy@@ to be permitted a choice and a little more @@color:mediumaquamarine;confident@@ than if you had just given her orders.
+  <<set $slaves[$i].devotion += 0.3>>
+  <<set $slaves[$i].trust += 0.3>>
+<</if>> 
+
+<<if ($slaves[$i].devotion lte 4) and ($slaves[$i].trust gte -4)>>
+  She chooses to rest, taking advantage of your permission to choose her own assignment to @@color:mediumorchid;remain indolent.@@
+  <<set $slaves[$i].assignment to "rest">>
+  <<set $slaves[$i].assignmentVisible to 1>>
+  <<set $slaves[$i].devotion -= 1>>
+
+<<elseif ($slaves[$i].health lt 2)>>
+  <<if $spa gt 0>>
+	Since she's unhealthy, she chooses to visit the spa.
+	<<set $slaves[$i].assignment to "rest in the spa">>
+	<<set $slaves[$i].assignmentVisible to 0>>
+  <<else>>
+	Since she's unhealthy, she chooses to rest.
+	<<set $slaves[$i].assignment to "rest">>
+	<<set $slaves[$i].assignmentVisible to 1>>
+  <</if>>
+
+<<elseif ($slaves[$i].intelligenceImplant isnot 1)>>
+  <<if $classroom gt 0>>
+	Since she's uneducated, she sits herself down in the classroom.
+	<<set $slaves[$i].assignment to "learn in the classroom">>
+	<<set $slaves[$i].assignmentVisible to 0>>
+  <<else>>
+	Since she's uneducated, she sits herself down to learn.
+	<<set $slaves[$i].assignment to "take classes">>
+	<<set $slaves[$i].assignmentVisible to 1>>
+  <</if>>
+
+<<elseif ($slaves[$i].devotion lt 10) and ($slaves[$i].amp is 0)>>
+  <<if $servantsQuarters gt 0>>
+	She's obedient but not devoted, so she chooses to work from the servants' quarters since it's the least sexually demanding job available.
+	<<set $slaves[$i].assignment to "work as a servant">>
+	<<set $slaves[$i].assignmentVisible to 0>>
+  <<else>>
+	She's obedient but not devoted, so she chooses to work as a servant since it's the least sexually demanding job available.
+	<<set $slaves[$i].assignment to "be a subordinate servant">>
+	<<set $slaves[$i].assignmentVisible to 1>>
+  <</if>>
+  
+<<elseif ($slaves[$i].fetishDiscovered is 1)>>
+  <<if ($slaves[$i].fetish is "submissive") and ($slaves[$i].amp is 0)>>
+	<<if $servantsQuarters gt 0>>
+	  Since she thinks she belongs at the bottom of the penthouse hierarchy, she goes to live in the servants' quarters.
+	  <<set $slaves[$i].assignment to "work as a servant">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  Since she thinks she belongs at the bottom of the penthouse hierarchy, she decides she should be a servant.
+	  <<set $slaves[$i].assignment to "be a subordinate servant">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+<<elseif ($slaves[$i].fetish is "dom") or ($slaves[$i].fetish is "sadist")>>
+	<<if $promenade gt 0>>
+	  Since she's self-confident, she decides to work out on the promenade.
+	  <<set $slaves[$i].assignment to "work on the promenade">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  Since she's self-confident, she decides to work as a public servant.
+	  <<set $slaves[$i].assignment to "serve the public">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+<<elseif ($slaves[$i].fetish is "masochist")>>
+	<<if $brothel gt 0>>
+	  Since she enjoys abuse, she hurries down to the brothel.
+	  <<set $slaves[$i].assignment to "work in the brothel">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  Since she enjoys abuse, she decides to become a whore.
+	  <<set $slaves[$i].assignment to "whore">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+<<elseif ($slaves[$i].fetish is "likes girls")>>
+	<<if $promenade gt 0>>
+	  She decides to work out on the promenade so she can hit on girls.
+	  <<set $slaves[$i].assignment to "work on the promenade">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She decides to work as a public servant so she can hit on girls.
+	  <<set $slaves[$i].assignment to "serve the public">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+<<elseif ($slaves[$i].fetish is "cumslut")>>
+	<<if $brothel gt 0>>
+	  She hurries down to the brothel to suck cocks.
+	  <<set $slaves[$i].assignment to "work in the brothel">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She decides to become a whore, mostly to suck cock.
+	  <<set $slaves[$i].assignment to "whore">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+<<elseif ($slaves[$i].fetish is "humiliation")>>
+	<<if $brothel gt 0>>
+	  She chooses the brothel, since it's even more embarrassing than the promenade.
+	  <<set $slaves[$i].assignment to "work in the brothel">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She chooses to whore, since it's even more embarrassing than being a public servant.
+	  <<set $slaves[$i].assignment to "whore">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+<<elseif ($slaves[$i].fetish is "buttslut")>>
+  <<if ($slaves[$i].balls gt 0)>>
+	<<if $collectionFacility gt 0>>
+	  She chooses confinement in the collection facility, since all she'll be expected to do is orgasm to buttsex.
+	  <<set $slaves[$i].assignment to "work in the collection facility">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She chooses to get cockmilked, since all she'll be expected to do is orgasm to buttsex.
+	  <<set $slaves[$i].assignment to "get cockmilked">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <<else>>
+	<<if $brothel gt 0>>
+	  She chooses the brothel, since whores get buttfucked more than anyone else.
+	  <<set $slaves[$i].assignment to "work in the brothel">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She chooses to whore, since whores get buttfucked more than anyone else.
+	  <<set $slaves[$i].assignment to "whore">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <</if>>
+<<elseif ($slaves[$i].fetish is "pregnancy")>>
+  <<if ($slaves[$i].lactation gt 0)>>
+	<<if $dairy gt 0>>
+	  She heads down to the dairy to be around other lactating girls.
+	  <<set $slaves[$i].assignment to "work in the dairy">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She decides to get milked, since she's already lactating.
+	  <<set $slaves[$i].assignment to "get milked">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <<elseif ($slaves[$i].preg gt -2) and ($slaves[$i].preg lt 1)>>
+	<<if $masterSuite gt 0>>
+	  She heads straight to your master suite, in the hope you'll get her pregnant.
+	  <<set $slaves[$i].assignment to "serve in the master suite">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She chooses to be your fucktoy, in the hope you'll get her pregnant.
+	  <<set $slaves[$i].assignment to "please you">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <<elseif ($slaves[$i].preg gt 0)>>
+	<<if $masterSuite gt 0>>
+	  She heads straight to your master suite to share the intimacy of her pregnant body with you.
+	  <<set $slaves[$i].assignment to "serve in the master suite">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She chooses to be your fucktoy to share the intimacy of her pregnant body with you.
+	  <<set $slaves[$i].assignment to "please you">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <<else>>
+	<<if $brothel gt 0>>
+	  Since she can't indulge her fetish by getting pregnant herself, she just heads down to the brothel.
+	  <<set $slaves[$i].assignment to "work in the brothel">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  Since she can't indulge her fetish by getting pregnant herself, she glumly decides to be a whore.
+	  <<set $slaves[$i].assignment to "whore">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <</if>>
+<<elseif ($slaves[$i].fetish is "boobs")>>
+  <<if ($slaves[$i].lactation gt 0)>>
+	<<if $dairy gt 0>>
+	  She heads down to the dairy for all the attention that'll be lavished on her nipples.
+	  <<set $slaves[$i].assignment to "work in the dairy">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She decides to get milked, since she loves getting off to it.
+	  <<set $slaves[$i].assignment to "get milked">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <<else>>
+	<<if $promenade gt 0>>
+	  She decides to work out on the promenade so she can show off her bare breasts.
+	  <<set $slaves[$i].assignment to "work on the promenade">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She decides to work as a public servant so she can show off her bare breasts.
+	  <<set $slaves[$i].assignment to "serve the public">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <</if>>
+<<elseif ($slaves[$i].fetish is "nympho")>>
+	<<if $brothel gt 0>>
+	  She decides to help those of your girls who mind taking dick all day by working in the brothel.
+	  <<set $slaves[$i].assignment to "work in the brothel">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She decides to help those of your girls who mind taking dick all day by working as a whore.
+	  <<set $slaves[$i].assignment to "whore">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+
+<<elseif ($FSChattelReligionist gt 0)>>
+  <<if $brothel gt 0>>
+	As a pure and faithful slave, she sells her body in the holy brothel.
+	<<set $slaves[$i].assignment to "work in the brothel">>
+	<<set $slaves[$i].assignmentVisible to 0>>
+  <<else>>
+	As a pure and faithful slave, she sells her body as a holy prostitute.
+	<<set $slaves[$i].assignment to "whore">>
+	<<set $slaves[$i].assignmentVisible to 1>>
+  <</if>>
+<<elseif ($FSAncientEgyptianRevivalist gt 0)>>
+  <<if $masterSuite gt 0>>
+	As a devoted slave, she immediately joins your harem.
+	<<set $slaves[$i].assignment to "serve in the master suite">>
+	<<set $slaves[$i].assignmentVisible to 0>>
+  <<else>>
+	As a devoted slave, she immediately joins your harem.
+	<<set $slaves[$i].assignment to "please you">>
+	<<set $slaves[$i].assignmentVisible to 1>>
+  <</if>>
+<<elseif ($FSRomanRevivalist gt 0)>>
+  <<if $brothel gt 0>>
+	As a devoted slave, she decides she can best serve the state by raising money for the treasury, by selling her body in the brothel.
+	<<set $slaves[$i].assignment to "work in the brothel">>
+	<<set $slaves[$i].assignmentVisible to 0>>
+  <<else>>
+	As a devoted slave, she decides she can best serve the state by raising money for the treasury, by selling her body as a prostitute.
+	<<set $slaves[$i].assignment to "whore">>
+	<<set $slaves[$i].assignmentVisible to 1>>
+  <</if>>
+<<elseif ($FSPaternalist gt 0)>>
+  <<if $brothel gt 0>>
+	She decides to work in the brothel, a respectable position for a slave in this enlightened arcology.
+	<<set $slaves[$i].assignment to "work in the brothel">>
+	<<set $slaves[$i].assignmentVisible to 0>>
+  <<else>>
+	She decides to be a whore, a respectable position for a slave in this enlightened arcology.
+	<<set $slaves[$i].assignment to "whore">>
+	<<set $slaves[$i].assignmentVisible to 1>>
+  <</if>>
+<<elseif ($FSPastoralist gt 0)>>
+  <<if ($slaves[$i].lactation gt 0)>>
+	<<if $dairy gt 0>>
+	  She hurries to join your herd of dairy cows.
+	  <<set $slaves[$i].assignment to "work in the dairy">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She hurries to join your herd of cows.
+	  <<set $slaves[$i].assignment to "get milked">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <<else>>
+	<<if $brothel gt 0>>
+	  She decides to work in the brothel to help raise money to get more girls lactating properly.
+	  <<set $slaves[$i].assignment to "work in the brothel">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She decides to prostitute herself to help raise money to get more girls lactating properly.
+	  <<set $slaves[$i].assignment to "whore">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <</if>>
+<<else>>
+  <<if ($slaves[$i].whoreSkill gt $slaves[$i].entertainSkill)>>
+	<<if $brothel gt 0>>
+	  She decides to work in the brothel, since she thinks herself a better whore than a public slut.
+	  <<set $slaves[$i].assignment to "work in the brothel">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She decides to whore, since she thinks herself a better whore than a public slut.
+	  <<set $slaves[$i].assignment to "whore">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <<elseif ($slaves[$i].entertainSkill gte $slaves[$i].whoreSkill)>>
+	<<if $promenade gt 0>>
+	  She decides to be a promenade girl, since she thinks herself a better public slut than a whore.
+	  <<set $slaves[$i].assignment to "work on the promenade">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She decides to serve the public, since she thinks herself a better public slut than a whore.
+	  <<set $slaves[$i].assignment to "serve the public">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <<else>>
+	<<if $brothel gt 0>>
+	  She decides to join her sisters and work in the brothel.
+	  <<set $slaves[$i].assignment to "work in the brothel">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  She decides to prostitute herself to help you upgrade the arcology and improve everyone's life.
+	  <<set $slaves[$i].assignment to "whore">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <</if>>
+<</if>>
+
+<</if>>
+
+<<if ($slaves[$i].assignment is "choose her own job")>>
+  <<if ($slaves[$i].amp is 0)>>
+	<<if $servantsQuarters gt 0>>
+	  Since she isn't strongly inclined towards any other assignment, she goes to live in the servants' quarters.
+	  <<set $slaves[$i].assignment to "work as a servant">>
+	  <<set $slaves[$i].assignmentVisible to 0>>
+	<<else>>
+	  Since she isn't strongly inclined towards any other assignment, she decides to work as a servant.
+	  <<set $slaves[$i].assignment to "be a subordinate servant">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+  <<else>>
+	Since she isn't strongly inclined towards an assignment, and can't be a servant without arms and legs, she just rests.
+	<<set $slaves[$i].assignment to "rest">>
+	<<set $slaves[$i].assignmentVisible to 1>>
+  <</if>>
+<</if>>
+
+<</nobr>>

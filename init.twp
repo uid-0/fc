@@ -1,0 +1,532 @@
+<<set $ver = "0.6">>
+
+<<set $slaves = []>>
+<<set $activeSlave to 0>>
+
+<<set $PCName to "Anonymous">>
+<<set $invasionVictory to 0>>
+<<set $daughtersVictory to 0>>
+<<set $startingGirlCommitted to 0>>
+<<set $startingGirlCopied to 0>>
+
+<<set $PC to {title: 1, dick: 1, boobs: 0}>>
+
+<<set $brothelSlaves = 0>>
+<<set $brothelUpgradeDrugs = 0>>
+<<set $brothel = 0>>
+<<set $dairySlaves = 0>>
+<<set $dairyUpgradeFeeders = 0>>
+<<set $dairyUpgradePreg = 0>>
+<<set $dairyUpgradeRestraints = 0>>
+<<set $dairy = 0>>
+<<set $collectionFacilitySlaves = 0>>
+<<set $collectionFacilityUpgradeStimulators = 0>>
+<<set $collectionFacilityUpgradeMilkers = 0>>
+<<set $collectionFacilityUpgradeRestraints = 0>>
+<<set $collectionFacility = 0>>
+<<set $promenadeSlaves = 0>>
+<<set $promenadeUpgradePDAs = 0>>
+<<set $promenade = 0>>
+<<set $servantsQuartersSlaves = 0>>
+<<set $servantsQuartersUpgradeMonitoring = 0>>
+<<set $servantsQuarters = 0>>
+<<set $schoolroomSlaves = 0>>
+<<set $schoolroomUpgradeRemedial = 0>>
+<<set $schoolroom = 0>>
+<<set $spaSlaves = 0>>
+<<set $spa = 0>>
+<<set $spaUpgrade = 0>>
+<<set $arcadeSlaves = 0>>
+<<set $arcadeUpgradeInjectors = 0>>
+<<set $arcadeUpgradeFuckdolls = 0>>
+<<set $arcadeUpgradeCollectors = 0>>
+<<set $arcade = 0>>
+  <<set $fuckdollsSold to 0>>
+  <<set $fuckdollPrice to 3000>>
+<<set $cellblockSlaves = 0>>
+<<set $cellblockUpgrade = 0>>
+<<set $cellblock = 0>>
+<<set $masterSuiteSlaves = 0>>
+<<set $masterSuiteUpgradeLuxury = 0>>
+<<set $masterSuite = 0>>
+<<set $HGSuite = 0>>
+<<set $HGSuiteSlaves = 0>>
+<<set $pitSlaves = 0>>
+<<set $fighterOne = 0>>
+<<set $fighterTwo = 0>>
+<<set $pitAudience = "none">>
+<<set $pitLethal = 0>>
+<<set $pitFought = 0>>
+<<set $pit = 0>>
+<<set $dojo = 0>>
+<<set $feeder = 0>>
+<<set $legendaryWhoreID to 0>>
+<<set $legendaryEntertainerID to 0>>
+<<set $legendaryCowID to 0>>
+<<set $legendaryBallsID to 0>>
+<<set $legendaryAbolitionistID to 0>>
+
+<<set $FSAnnounced to 0>>
+<<set $FSCredits to 0>>
+<<set $FSGotRepCreditOne to 0>>
+<<set $FSGotRepCreditTwo to 0>>
+<<set $FSSingleSlaveRep to 10>>
+<<set $FSSpending to 0>>
+<<set $FSLockinLevel to 100>>
+<<set $FSSupremacist to 0>>
+  <<set $FSSupremacistRace to 0>>
+<<set $FSSubjugationist to 0>>
+  <<set $FSSubjugationistRace to 0>>
+<<set $FSGenderRadicalist to 0>>
+<<set $FSGenderFundamentalist to 0>>
+<<set $FSPaternalist to 0>>
+<<set $FSDegradationist to 0>>
+<<set $FSBodyPurist to 0>>
+<<set $FSTransformationFetishist to 0>>
+<<set $FSSlimnessEnthusiast to 0>>
+<<set $FSAssetExpansionist to 0>>
+<<set $FSPastoralist to 0>>
+<<set $FSPhysicalIdealist to 0>>
+<<set $FSChattelReligionist to 0>>
+<<set $FSRomanRevivalist to 0>>
+<<set $FSAncientEgyptianRevivalist to 0>>
+<<set $FSSupremacistDecoration to 20>>
+<<set $FSSubjugationistDecoration to 20>>
+<<set $FSGenderRadicalistDecoration to 20>>
+<<set $FSGenderFundamentalistDecoration to 20>>
+<<set $FSPaternalistDecoration to 20>>
+<<set $FSDegradationistDecoration to 20>>
+<<set $FSBodyPuristDecoration to 20>>
+<<set $FSTransformationFetishistDecoration to 20>>
+<<set $FSSlimnessEnthusiastDecoration to 20>>
+<<set $FSAssetExpansionistDecoration to 20>>
+<<set $FSPastoralistDecoration to 20>>
+<<set $FSPhysicalIdealistDecoration to 20>>
+<<set $FSChattelReligionistDecoration to 20>>
+<<set $FSRomanRevivalistDecoration to 20>>
+<<set $FSAncientEgyptianRevivalistDecoration to 20>>
+
+<<set $corpAnnounced to 0>>
+<<set $corpIncorporated to 0>>
+<<set $corpPeopleEnslaved to 0>>
+<<set $sharePrice to 0>>
+<<set $personalShares to 0>>
+<<set $publicShares to 0>>
+<<set $corpCash to 0>>
+<<set $generalAssets to 0>>
+<<set $slaveAssets to 0>>
+<<set $entrapmentAssets to 0>>
+<<set $captureAssets to 0>>
+<<set $trainingAssets to 0>>
+<<set $surgicalAssets to 0>>
+<<set $drugAssets to 0>>
+<<set $generalAssetPrice to 10>>
+<<set $slaveAssetPrice to 10>>
+<<set $entrapmentAssetPrice to 10>>
+<<set $captureAssetPrice to 10>>
+<<set $trainingAssetPrice to 10>>
+<<set $surgicalAssetPrice to 10>>
+<<set $drugAssetPrice to 10>>
+
+<<set $defaultRulesSlave to {goodReleaseRules: "no default setting", goodSpeechRules: "no default setting", goodClothes: "no default setting", choosesOwnClothes: 0, badClothes: "no default setting", goodCollar: "no default setting", badCollar: "no default setting", collar: "none", shoes: "no default setting", vaginalAccessory: "no default setting", buttplug: "no default setting", eyes: "no default setting", makeup: "no default setting", nails: "no default setting", hcolor: "no default setting", hlength: "no default setting", pubicHColor: "no default setting", pubicHLength: "no default setting", nipplesPiercing: "no default setting", clitPiercing: "no default setting", vaginaPiercing: "no default setting", dickPiercing: "no default setting", anusPiercing: "no default setting", lipsPiercing: "no default setting", tonguePiercing: "no default setting", earPiercing: "no default setting", nosePiercing: "no default setting", eyebrowPiercing: "no default setting", navelPiercing: "no default setting", boobsTat: "no default setting", buttTat: "no default setting", vaginaTat: "no default setting", dickTat: "no default setting", lipsTat: "no default setting", anusTat: "no default setting", shouldersTat: "no default setting", armsTat: "no default setting", legsTat: "no default setting", stampTat: "no default setting", curatives: "no default setting", goodLivingRules: "spare", badRelationshipRules: "no default setting", goodRelationshipRules: "no default setting", useRulesAssistant: 1, diet: "no default setting", muscles: "no default setting", XY: "no default setting", XX: "no default setting", gelding: "no default setting", preg: "no default setting", growth: "no default setting", autoSurgery: 0, choosesOwnAssignment: 0, lactation: 0}>>
+
+<<set $youngCareers to ["a refugee", "a maid", "a truck driver", "a factory worker", "an office worker", "a farm laborer", "a secretary", "a cook", "a service worker", "a housewife", "a stripper", "a prostitute", "a saleswoman", "a criminal", "a student", "a student", "a student", "a soldier", "a security guard", "unemployed", "unemployed", "unemployed", "unemployed", "unemployed"]>>
+
+<<set $educatedCareers to ["a refugee", "a doctor", "a private detective", "a journalist", "a journalist", "a lawyer", "a teacher", "a business owner", "a classical dancer", "a classical musician", "an investor", "a writer", "a programmer", "a counselor", "a nun", "a criminal"]>>
+
+<<set $uneducatedCareers to ["a refugee", "a maid", "a mail carrier", "a fisherwoman", "a truck driver", "a teacher", "a factory worker", "a dancer", "a musician", "an office worker", "a farm laborer", "a secretary", "a cook", "a nurse", "a service worker", "a housewife", "a stripper", "a prostitute", "a saleswoman", "a criminal", "a student", "a soldier", "a security guard", "a law enforcement officer", "unemployed", "unemployed", "unemployed", "unemployed", "unemployed"]>>
+
+<<set $whiteAmericanSlaveNames to ["Sophia", "Emma", "Olivia", "Ava", "Isabella", "Mia", "Zoe", "Lily", "Emily", "Madelyn", "Madison", "Chloe", "Charlotte", "Aubrey", "Avery", "Abigail", "Kaylee", "Layla", "Harper", "Ella", "Amelia", "Arianna", "Riley", "Aria", "Hailey", "Hannah", "Evelyn", "Addison", "Mackenzie", "Adalyn", "Ellie", "Brooklyn", "Nora", "Scarlett", "Grace", "Anna", "Isabelle", "Natalie", "Kaitlyn", "Lillian", "Sarah", "Audrey", "Elizabeth", "Leah", "Annabelle", "Kylie", "Mila", "Claire", "Victoria", "Maya", "Lila", "Elena", "Lucy", "Savannah", "Gabriella", "Callie", "Alaina", "Sophie", "Makayla", "Kennedy", "Sadie", "Skyler", "Allison", "Caroline", "Penelope", "Alyssa", "Peyton", "Samantha", "Liliana", "Bailey", "Maria", "Reagan", "Violet", "Eliana", "Adeline", "Eva", "Stella", "Keira", "Katherine"]>>
+
+<<set $africanAmericanSlaveNames to ["Madison", "Kayla", "Makayla", "Nevaeh", "Jada", "Brianna", "Chloe", "Destiny", "Alyssa", "Gabrielle", "Imani", "Kimora", "Aaliyah", "Jayla", "Abigail", "Arianna", "Ava", "Fatoumata", "Jade", "London", "Savannah", "Victoria", "Aniyah", "Nyla", "Olivia", "Taylor", "Ashley", "Sarah", "Jasmine", "Laila", "Chelsea", "Heaven"]>>
+
+<<set $asianAmericanSlaveNames to ["Sophia", "Chloe", "Emily", "Tiffany", "Fiona", "Isabella", "Olivia", "Sarah", "Angela", "Vivian", "Nicole", "Rachel", "Michelle", "Ashley", "Grace", "Joyce", "Anna", "Sophie", "Fatima", "Jasmine", "Jenny", "Jessica", "Cindy", "Emma", "Hannah", "Amy", "Angelina", "Mia", ]>>
+
+<<set $latinaSlaveNames to ["Ashley", "Isabella", "Emily", "Brianna", "Mia", "Samantha", "Sophia", "Melanie", "Genesis", "Kimberly", "Angelina", "Madison", "Gabriella", "Camila", "Jennifer", "Alyssa", "Sofia", "Arianna", "Hailey", "Maria", "Kayla", "Abigail", "Gabriela", "Victoria", "Stephanie", "Allison", "Vanessa", "Emma", "Daniela", "Evelyn", "Sofía", "Marti", "Valenti", "Mía", "Isabella", "María", "Zoe", "Catali", "Emma", "Alma", "Sophia", "Alice", "Julia", "Isabella", "Manuela", "Laura", "Luiza", "Valenti", "Maria", "Eduarda", "Sofía", "Emilia", "Isidora", "Florencia", "Antonella", "Marti", "Maite", "Amanda", "Josefa", "Agusti", "Maria", "Valenti", "Isabella", "Sofía", "Valeria", "María", "José", "Gabriela", "Sara", "Salomé", "Daniela", "Xime", "Valenti", "María", "Fernanda", "Sofía", "María", "Marti", "Emilia", "Zoe", "Mia", "Dulce", "María", "María", "Elizabeth", "Beatriz", "Ramo", "Liz", "Concepción", "Caroli", "Mabel", "Raquel", "Noemí", "María", "Camila", "Fernanda", "Milagros", "Luz", "Abigail", "Aria", "Lucia", "Alexandra", "Florencia", "Lucía", "Agusti", "Camila", "Julia", "Julieta", "Sofía", "Abril", "Paula", "Micaela", "Camila", "Isabella", "Sofía", "Victoria", "Valenti", "Valeria", "Nicole", "Samantha", "Maria", "Antonella"]>>
+
+<<set $russianSlaveNames to ["Anastasia", "Nastya", "Dasha", "Anna", "Maria", "Olga", "Alina", "Kate", "Julia", "Irina", "Marina", "Katya", "Liza", "Polina", "Tanya", "Daria", "Natasha", "Alexandra", "Ksenia", "Mary", "Elena", "Victoria", "Masha", "Ekaterina", "Yana", "Arina", "Lera", "Ann", "Svetlana", "Sofia", "Diana", "Kseniya", "Kristina", "Lena", "Helen", "Natalia", "Tatiana", "Sveta", "Anastasiya", "Oksana", "Sasha", "Anya", "Alena", "Darya", "Yulia", "Katerina", "Valeria", "Ksusha", "Sonya", "Helena", "Vitaliya"]>>
+
+<<set $egyptianSlaveNames to ["Shaimaa", "Fatma", "Maha", "Farida", "Aya", "Shahd", "Ashraqat", "Sahar", "Fatin", "Dalal", "Doha", "Suha", "Rowan", "Hosniya", "Hasnaa", "Hosna", "Gamila", "Gamalat", "Habiba", "Aya", "Rania", "Sarah", "Reem", "Hoda", "Marwa", "Fatima", "Eisha", "Nesreen", "Fatoumata", "Mariam", "Aminata", "Hawa", "Awa", "Oumou", "Djeneba", "Bintou", "Fanta", "Kadiatou", "Fatima", "Khadija", "Aicha", "Malika", "Naima", "Rachida", "Nadia", "Karima", "Saida", "Mariam", "Shayma", "Khawla"]>>
+
+<<set $brazilianSlaveNames to ["Ana", "Amanda", "Fernanda", "Julia", "Mariana", "Camila", "leticia", "Larissa", "Beatriz", "Natália", "Thais", "Juliana", "Vitoria", "Jessica", "Luana", "Laura", "Bruna", "Rafaela", "Maria", "Isabela", "Barbara", "Carolina", "Aline", "Anna", "Brenda", "Lívia", "Victória", "Gabrielle", "Andressa", "Maria", "Clara", "Raquel", "Daniela", "Ana", "Clara", "Marcela", "Luiza", "Giovanna", "Stephanie", "Caroline", "Raissa", "Aléxia", "Milena", "Nathalia", "Clara", "Taynara", "Sabrina", "Ana", "Luiza", "Yasmin", "Carla", "Helena"]>>
+
+<<set $chineseSlaveNames to ["Ai", "Bi", "Cai", "Dan", "Fang", "Hong", "Hui", "Juan", "Lan", "Li", "Lian", "Na", "Ni", "Qian", "Qiong", "Shan", "Shu", "Ting", "Xia", "Xian", "Yan", "Yun", "Zhen", "Jing", "Ying", "Yan", "Li", "Xiaoyan", "Xinyi", "Jie", "Lili", "Xiaomei", "Tingting"]>>
+
+<<set $koreanSlaveNames to ["Seo-Yeon", "Seo-Yoon", "Ji-Woo", "Seo-Hyun", "Min-Seo", "Yoon-Seo", "Chae-Won", "Ha-Yoon", "Ji-Ah", "Eun-Seo", "Shu-Fen", "Shu-Hui", "Mei-Ling", "Ya-Ting", "Mei-Hui"]>>
+
+<<set $indianSlaveNames to ["Aadhya", "Ananya", "Saanvi", "Aaradhya", "Anaya", "Aanya", "Anika", "Pari", "Myra", "Shanaya", "Ananya", "Anika", "Aradhya", "Harini", "Navya", "Ridhi", "Rishika", "Sanvi", "Shreya"]>>
+
+<<set $indonesianSlaveNames to ["Annisa", "Sarah", "Maria", "Putri", "Cindy", "Nurul", "Bella", "Dian", "Dina", "Amalia", "Syifa", "Jessica", "Gita", "Dewi", "Abigail", "Nabila", "Jasmine", "Intan", "Sharon", "Hana", "Nadya", "Vania", "Dinda", "Wulan", "Elsa", "Vina", "Karina", "Grace", "Gabriella"]>>
+
+<<set $bangladeshiSlaveNames to ["Megh", "Chandni", "Roslin", "Sreea", "Abida", "Sharina", "Shaily", "Angela", "Nawrin", "Munazza", "Moon", "Sadia", "Amelia", "Lisa", "Nishad", "Joya", "Somebody", "Eider", "Afia", "Saliha", "Eva", "Fahmida", "Fima", "Rimi", "Disha", "Ojana", "Puja", "Zarat", "Crystal", "Farzana", "Anuva", "Sayeda", "Sayed", "Tasnuva", "Jenifar", "Morning", "Sky", "Hannah", "Arpita", "Oporajita", "Tripty", "Alavee", "Tazy", "Farzana", "Swappneel", "Shompa", "Orpa", "Rhiana", "Sumaya", "Khan", "Aurona", "Fariha", "Sanjana", "Farhan", "Mithee"]>>
+
+<<set $japaneseSlaveNames to ["Kana", "Yuki", "Saki", "Yuri", "Haruka", "Shiori", "Rina", "Yui", "Mayu", "Chihiro", "Ayumi", "Natsumi", "Minami", "Miho", "Kaori", "Aya", "Mai", "Ayaka", "Sayaka", "Yumi", "Miyu", "Risa", "Ayano", "Mina", "Nana", "Kanako", "Mari", "Mei", "Anna", "Erika", "Nao", "Rin", "Shiho", "Mika", "Aika", "Mao", "Mio", "Moe", "Aki", "Ai", "Akari", "Saya", "Marina", "Miki", "Misaki", "Hana", "Airi"]>>
+
+<<set $nigerianSlaveNames to ["Esther", "Abigail", "Rose", "Stephanie", "Temitope", "Mary", "Hellen", "Ayomide", "Redeem", "Marie", "Linda", "Wendy", "Kebe", "Kemi", "Mercy", "Maris", "Doris", "Chinelo", "Dorcas", "Hannah", "Promise", "Hadiza", "Stella", "Olabisi", "Habeeba", "Michelle", "Theresa", "Wisfavour"]>>
+
+<<set $pakistaniSlaveNames to ["Noor", "Anam", "Karen", "Ayesha", "Mishael", "Mariam", "Aisha", "Faiza", "Zakia", "Aanya", "Komal", "Hajra", "Ifrah", "Lintah", "Leah", "Tooba", "Asma", "Kheezran", "Sana", "Riasat", "Saima", "Mahrukh", "Haniya", "Mariyam", "Umara", "Zuny", "Sajida", "Rameen", "Unsa", "Neha", "Rabia", "Rida", "Zainnah", "Ameria", "Sarah", "Asmi", "Mizha", "Ruby", "Areeba", "Zainab", "Momna", "Rue", "Eraj", "Sara", "Krishma", "Alayna", "Usmaan", "Kainat", "Imama", "Sana"]>>
+
+<<set $mexicanSlaveNames to ["Daniela", "Fernanda", "Andrea", "Ana", "María", "Alejandra", "Mariana", "Gabriela", "Jazmin", "Adriana", "Karla", "Rosa", "Elizabeth", "Samantha", "Itzel", "Esmeralda", "Laura", "Viridiana", "Melissa", "Sara", "Jessica", "Miriam", "Brenda", "Karen", "Tania", "Michelle", "Alma", "Frida", "Alondra", "Karina", "Ali", "Valeria", "Alexa", "Marian", "Cris", "Carolina", "Sofia", "Areli", "Paula", "Paulina", "Victoria", "Lorna", "Susy", "Benvidez", "Claudia", "Cynthia", "Liz", "Rocio", "Paola", "Rebeca"]>>
+
+<<set $filipinaSlaveNames to ["Kim", "Angelica", "Marie", "Sarah", "Joyce", "Michelle", "Anna", "Bea", "Patricia", "Jessica", "Bianca", "Kate", "Angela", "Jane", "Nikki", "Victoria", "Camille", "Trisha", "Lovely", "Joan", "Joramae", "Emily", "Mae", "Ella", "Grace", "Sam", "Maria", "Jean", "Danica", "Pauline", "Kathleen", "Lorraine", "Cheskka", "Isabel", "Sheila", "Danielle", "Sophia", "Anne", "Tricia", "Kristine", "Alyssa", "Erin", "Nina", "Mio", "Mackenzie", "Marjorie", "Daniella", "Thalia", "Kaye", "Jovilyn"]>>
+
+<<set $ethiopianSlaveNames to ["Rediet", "Beza", "Winta", "Hilina", "Samrawit", "Betty", "Martha", "Kidist", "Tirhas", "Yenu", "Mimi", "Melal", "Yeabsira", "Tinsae", "Helina", "Ferhan", "Sherry", "Lilie", "Niya", "Halim", "Ann", "Sumeya", "Zinash", "Sosen", "Phoebe", "Genet", "Yannet", "Asres", "Bekele", "Betelhem", "Grace", "Meskerem", "Sara", "Afewerk", "Seada", "Meron", "Deborah", "Eldad", "Genet", "Legese", "Anna", "Eyerusalem", "Bebobaby", "Emebet", "Yeshambel", "Emu", "Sinetibeb", "Jerusalem", "Annan", "Samira", "Rita", "Saba", "Loret"]>>
+
+<<set $germanSlaveNames to ["Julia", "Laura", "Lisa", "Anna", "Lea", "Lena", "Sarah", "Katharina", "Sophie", "Marie", "Lara", "Leonie", "Johanna", "Alina", "Michelle", "Annika", "Hannah", "Vanessa", "Jessica", "Sabrina", "Luisa", "Jana", "Jasmin", "Anja", "Christina", "Linda", "Melanie", "Carina", "Nicole", "Nadine", "Maria", "Janine", "Céline", "Sandra", "Anne", "Sophia", "Elena", "Jennifer", "Steffi", "Pia", "Franzi", "Carolin", "Franziska", "Antonia", "Elisa", "Kim", "Nina", "Marina", "Eva", "Sina"]>>
+
+<<set $saudiSlaveNames to ["Myriam", "Bushra", "Noura", "Laila", "Habiba", "Nadia", "Sowsan", "Bayan", "Destiny", "Rana", "Reem", "Nana", "Sarah", "Lamia", "Alsama", "Nada", "Nouf", "May", "Faten", "Salsabyl", "Lizet", "Ghayda", "Ala", "Beatrice", "Ouiam", "Lulu", "Reenad", "Alexandra", "Ola", "Haifa", "Al-Anoud", "Asia", "Mariam", "Fatima", "Marceline", "Nona", "Kefaya", "Raihana", "Abrar", "Ghada", "Arwa", "Hadeel", "Alaa"]>>
+
+<<set $turkishSlaveNames to ["Merve", "Zeynep", "Elif", "Büþra", "Gizem", "Beyza", "Esra", "Irem", "Ezgi", "Ceren", "Gamze", "Ece", "Kübra", "Buse", "Selin", "Burcu", "Hilal", "Betül", "Özge", "Deniz", "Eda", "Sena", "Fatma", "Damla", "Ecem", "Melis", "Melike", "Ýrem", "Nur", "Rabia", "Busra", "Ebru", "Hatice", "Duygu", "Dilara", "Özlem", "Ceyda", "Ilayda", "Þeyma", "Ayþe", "Cansu", "Emine", "Yaren", "Tuðçe", "Yasemin", "Zehra", "Seda", "Pelin", "Yaðmur", "Sude"]>>
+
+<<set $colombianSlaveNames to ["Laura", "Angie", "Maria", "Daniela", "Alejandra", "Diana", "Natalia", "Paula", "Paola", "Camila", "Ana", "Maria", "Valeria", "Valentina", "Luisa", "Karen", "Angelica", "Lorena", "Tatiana", "Andrea", "Sofia", "Gabriela", "Mariana", "Juliana", "Jéssica", "Katherine", "Erika", "Lizeth", "Yessica", "Veronica", "Maria", "Fernanda", "Adriana", "Evelyn", "Yuliza", "Yenni", "Nataly", "Lady", "Angie", "Sofia", "Astrid", "Yeimi", "Maria", "Alejandra", "Gabriella", "Antonia", "Lisseth", "Martinez", "Stefania", "Sandra", "Ingrid", "Allison", "Dania", "Carolina", "Herrera"]>>
+
+<<set $argentinianSlaveNames to ["Agustina", "Rocio", "Camila", "Julieta", "Sofia", "Micaela", "Sara", "Victoria", "Romina", "Abril", "Paula", "Valentina", "Martina", "Paz", "Malena", "Florencia", "Nadia", "Natalia", "Belén", "Magali", "Daniela", "Milagros", "Nayla", "Julia", "Jessica", "Tania", "Tatiana", "Magdalena", "Riffo", "Cami", "Ayelén", "Gaby", "Karen", "Emilia", "Agus", "Antonella", "Maria", "Carla", "Nani", "Sol", "Rosario", "Virginia", "Clara", "Marlene", "Melisa", "Agostina", "Anto", "Marti", "Carolina", "Candelaria", "Andrea"]>>
+
+<<set $vietnameseSlaveNames to ["Linh", "Phuong", "Thu", "Trang", "Minh", "Ngọc", "Anh", "Thuy", "Ngan", "Nguyen", "Ngoc", "Lan", "Uyên", "Thao", "Nga", "Chi", "Nhung", "Huyen", "Tiên", "Bui", "Oanh", "Do", "Rose", "An", "Thảo", "Annie", "Huong", "Hong", "Loan", "Natalie", "Van", "Kim", "Le", "Minh", "Chau", "Kieu", "Phýõng", "Jane", "Nhat", "Nghi", "My", "Huong", "Lan", "Loan", "Thanh", "Jenny", "Truc", "Mai", "Hang", "Hien"]>>
+
+<<set $iranianSlaveNames to ["Maryam", "Fatemeh", "Negin", "Zahra", "Shaghayegh", "Neda", "Niloofar", "Mina", "Poone", "Katy", "Atousa", "Assal", "Soha", "Fatima", "Maria", "Ghazaleh", "Marjan", "Boshra", "Setareaseman", "Sabs", "Sarah", "Angel", "Raheleh", "Parinaz", "Saedeh", "Mehrnaz", "Saye", "Nazi", "Saba", "Rozhin", "Elisa", "Raha", "Mandana", "Sajedeh", "Pani", "Sara", "Mahdie", "Azin", "Haniye", "Aeen", "Mojan", "Nikki", "Donya", "Mania", "Mino", "Somaye", "Romi", "Sima", "Nooshin", "Mari"]>>
+
+<<set $congoleseSlaveNames to ["Belvie", "Divine", "Julie", "Keicha", "Ruth", "Grasnie", "Merveille", "Sarah", "Reine", "Liu", "Peniel", "Junelle", "Japhet", "Belcha", "Stael", "Staelle", "Mayifa", "Rihanna", "Dorsia", "Durcia", "Franchelyn", "Duchel", "Grace", "Jodrey", "Lolie", "Marvine", "Nada", "Nuptia", "Mich", "Isabelle", "Fiavina", "Genicka", "Sabrina", "Clavidia", "Jeanny", "Delande", "Andreche", "Claire", "Ingrid", "Dan", "Aminata", "Lady", "Patrique", "Sereine", "Valentina", "Mholie", "Frichnelle", "Valdinelle", "Sidorelle", "Aicha"]>>
+
+<<set $frenchSlaveNames to ["Marie", "Camille", "Léa", "Manon", "Chloé", "Laura", "Julie", "Mathilde", "Sarah", "Marine", "Pauline", "Marion", "Emma", "Anaïs", "Lucie", "Océane", "Justine", "Morgane", "Charlotte", "Clara", "Juliette", "Emilie", "Mélanie", "Elodie", "Claire", "Lisa", "Audrey", "Margaux", "Amandine", "Noémie", "Alice", "Louise", "Inès", "Clémence", "Melissa", "Maéva", "Amélie", "Caroline", "Eva", "Céline", "Sophie", "Célia", "Fanny", "Elise", "Aurélie", "Margot", "Elisa", "Estelle", "Ophélie", "Jade"]>>
+
+<<set $thaiSlaveNames to ["Ploy", "Nan", "May", "Fern", "Mild", "Nam", "Sudarat", "Noon", "Kanokwan", "Beam", "Jane", "Fah", "Arisa", "Aom", "Pim", "June", "Nutcha", "Bow", "View", "Praew", "Toey", "Natcha", "Natchaya", "Eve", "Janjira", "Yanisa", "Benyapa", "Mind", "Mint", "Pam", "Pat", "Jenny", "Ning", "Nick", "Pang", "Fon", "Kate", "Pop", "New", "Wipada", "Bam", "Fai", "Nat", "Sirada", "Tangmo", "Chanchira", "Jira", "Muk", "Thanchanok", "Sukanya"]>>
+
+<<set $britishSlaveNames to ["Emily", "Chloe", "Megan", "Charlotte", "Emma", "Lauren", "Hannah", "Ellie", "Sophie", "Katie", "Amy", "Lucy", "Olivia", "Jessica", "Georgia", "Rebecca", "Holly", "Sarah", "Caitlin", "Beth", "Bethany", "Molly", "Grace", "Shannon", "Rachel", "Jess", "Alice", "Laura", "Abbie", "Ella", "Amber", "Jade", "Anna", "Jasmine", "Zoe", "Leah", "Rosie", "Mia", "Phoebe", "Lily", "Becky", "Erin", "Courtney", "Niamh", "Kate", "Louise", "Natalie", "Eleanor", "Charlie", "Lydia"]>>
+
+<<set $italianSlaveNames to ["Giulia", "Chiara", "Sara", "Martina", "Francesca", "Silvia", "Elisa", "Federica", "Alessia", "Elèna", "Alice", "Laura", "Valentina", "Giorgia", "Anna", "Claudia", "Sofia", "Eleonora", "Marta", "Arianna", "Ilaria", "Irene", "Beatrice", "Valeria", "Michela", "Roberta", "Gaia", "Alessandra", "Giada", "Simona", "Aurora", "Noemi", "Rebecca", "Cristina", "Veronica", "Maria", "Serena", "Benedetta", "Greta", "Lisa", "Paola", "Elisabetta", "Ludovica", "Lucrezia", "Camilla", "Carlotta", "Caterina", "Jessica", "Miriam", "Annalisa"]>>
+
+<<set $spanishSlaveNames to ["Maria", "Laura", "Paula", "Ana", "Marta", "Sara", "Andrea", "Lucia", "Alba", "Cristina", "Marina", "Carmen", "Irene", "Natalia", "Elena", "Noelia", "Raquel", "Inés", "Nerea", "Angela", "Sandra", "Eva", "Nuria", "Clara", "Clàudia", "Lorena", "Patricia", "Celia", "Miriam", "Carla", "Alicia", "Esther", "Ainhoa", "Julia", "Isabel", "Mireia", "Silvia", "Sofía", "Bea", "Gloria", "Belen", "Mònica", "Verónica", "Daniela", "Carolina", "Beatriz", "Sonia", "Isa", "Judith", "Luna"]>>
+
+<<set $kenyanSlaveNames to ["Faith", "Winnie", "Linda", "Sharon", "Anne", "Isabel", "Pauline", "Kelly", "Esther", "Diana", "Joan", "Olive", "Rose", "Mary", "Christine", "Melanie", "Mercy", "Damaris", "Belinda", "Alice", "Lucy", "Valentine", "Susan", "Lisa", "Beryl", "Vivian", "Angela", "Wendy", "Janet", "Jennifer", "Harriet", "Grace", "Ann", "Annitah", "Judy", "Sandra", "Nicole", "Dorah", "Bethsheba", "Ilthiam", "Cecilia", "Kuki", "Gloria", "Cindy", "Shirley", "Jane", "Saumu", "Rachel", "Fatuma", "Kelsey"]>>
+
+<<set $ukrainianSlaveNames to ["Dasha", "Anna", "Julia", "Anastasia", "Nastya", "Marina", "Ann", "Maria", "Alina", "Kate", "Victoria", "Sasha", "Mary", "Olga", "Liza", "Ilona", "Tanya", "Vika", "Yana", "Irina", "Yulia", "Nastia", "Sveta", "Oksana", "Natasha", "Olya", "Tania", "Polina", "Sophie", "Elena", "Ira", "Lena", "Masha", "Karina", "Arina", "Diana", "Yuliya", "Natalia", "Viktoriya", "Anastasiya", "Daria", "Taya", "Irene", "Tatiana", "Alex", "Katia", "Natalya", "Valeria", "Alexandra", "Zlata"]>>
+
+<<set $canadianSlaveNames to ["Sarah", "Emily", "Emma", "Jessica", "Catherine", "Amy", "Hannah", "Rachel", "Samantha", "Laurence", "Audrey", "Julia", "Camille", "Megan", "Madison", "Gabrielle", "Jade", "Ashley", "Marie", "Kayla", "Vanessa", "Maude", "Laura", "Stephanie", "Alexandra", "Sabrina", "Taylor", "Olivia", "Laurie", "Mélissa", "Morgan", "Émilie", "Chloe", "Andrea", "Jenna", "Caroline", "Alyssa", "Julie", "Rebecca", "Amanda", "Elizabeth", "Chelsea", "Bianca", "Sydney", "Justine", "Roxanne", "Charlotte", "Sophie", "Ànna", "Frédérique"]>>
+
+<<set $peruvianSlaveNames to ["Andrea", "Maria", "Veronica", "Daniela", "Gabriela", "Karen", "Liz", "Sara", "Cristina", "Gaby", "Abigail", "Luz", "Sandra", "Carito", "Melisa", "Lesli", "Alessandra", "Sofia", "Yessica", "Fiorella", "Maricielo", "Naida", "Mayra", "Rosemary", "Paola", "Beatriz", "Katherin", "Estefani", "Xio", "Evy", "Evelyn", "Anell", "Rout", "Alessa", "Cynthia", "Vallya", "Corali", "Berenisse", "Lisbeth", "Dayana", "Gabriela", "Cala", "Claudia", "Cruz", "Amarilis", "Darly", "Arely", "Eskarlee", "Dayna", "Ariel", "Rosangela", "Treysi", "Soledad", "Mänon", "Laka"]>>
+
+<<set $venezuelanSlaveNames to ["Noely", "Patricia", "Genesis", "Maria Alejandra", "Alejandra", "Claudia", "Aury", "Yaneth", "Nicel", "Pauled", "Isabell", "Keybell", "Gab", "Karelys", "Rossi", "Lis", "Fiora", "Sharai", "Marilyn", "Marian", "Zenahir", "Euclarissa", "Lucero", "Molina", "Zuleibis", "Jashiel", "Dayan", "Ambar", "Canónicco", "Rossybell", "Gliosmar", "Aurismar", "Fabiana", "Desireez", "Dayana", "Iris", "Loli", "Andrea", "Kattye", "Martha", "Denise", "Keysha", "Montes", "De", "Oca", "Exis", "Nana", "Fabiola", "Carolina", "Astrid", "Nathaly", "Steffany", "Juliana", "Belkis", "La", "Junca", "Orii"]>>
+
+<<set $irishSlaveNames to ["Emily", "Sophie", "Emma", "Grace", "Ella", "Aoife", "Amelia", "Lily", "Ava", "Sarah", "Hannah", "Lucy", "Sophia", "Mia", "Anna", "Olivia", "Ruby", "Saoirse", "Caoimhe", "Kate", "Chloe", "Katie", "Holly", "Lauren", "Erin", "Ellie", "Cara", "Niamh", "Leah", "Molly", "Jessica", "Isabelle", "Ciara", "Amy", "Julia", "Zoe", "Eva", "Isabella", "Robyn", "Sofia", "Laura", "Freya", "Kayla", "Aisling", "Abigail", "Charlotte", "Ellen", "Eve", "Róisín", "Millie", "Faye", "Rachel"]>>
+
+<<set $icelandicSlaveNames to ["Guðrún", "Anna", "Kristín", "Sigríður", "Margrjet", "Helga", "Sigrún", "Ingibjörg", "María", "Jóhanna", "Elín", "Katrín", "Hildur", "Ragnheiður", "Ásta", "Guðbjörg","Lilja", "Eva", "Erla", "Elísabet", "Guðný", "Ólöf", "Steinunn", "Sara", "Auður", "Hulda", "Sólveig", "Kolbrún", "Bryndís", "Inga", "Ásdís", "Þórunn", "Berglind", "Unnur", "Íris", "Þóra", "Hrafnhildur", "Rakel", "Birna", "Jóna", "Þórdís", "Halldóra", "Erna", "Linda", "Karen", "Edda", "Hanna", "Valgerður", "Jónína", "Thelma"]>>
+
+<<set $finnishSlaveNames to ["Maria", "Sofia", "Emilia", "Olivia", "Amanda", "Aurora", "Aino", "Helmi", "Matilda", "Ilona", "Linnea", "Aada", "Ella", "Iida", "Eveliina", "Emma", "Aleksandra", "Helena", "Ellen", "Katariina", "Kristiina", "Elina", "Lilja", "Anna", "Johanna", "Anni", "Elli", "Venla", "Enni", "Inkeri", "Elsa", "Alexandra", "Alina", "Sara", "Kerttu", "Kaarina", "Lumi", "Eevi", "Alisa", "Karoliina", "Isla", "Siiri", "Josefiina", "Aava", "Julia", "Pihla", "Vilhelmiina", "Elisabet", "Vilma", "Alma"]>>
+
+<<set $newZealanderSlaveNames to ["Charlotte", "Olivia", "Isla", "Emily", "Sophie", "Amelia", "Ella", "Harper", "Sophia", "Ruby", "Isabella", "Ava", "Grace", "Mia", "Chloe", "Mila", "Lily", "Zoe", "Lucy", "Emma", "Hannah", "Georgia", "Eva", "Paige", "Aria", "Sienna", "Bella", "Willow", "Evelyn", "Indie", "Madison", "Scarlett", "Abigail", "Hazel", "Maddison", "Jessica", "Mackenzie", "Eden", "Elizabeth", "Alexis", "Isabelle", "Ivy", "Alice", "Holly", "Zara", "Maia", "Evie", "Millie", "Olive", "Aaliyah" ]>>
+
+<<set $polishSlaveNames to ["Ada", "Agnieszka", "Alicja", "Ania", "Asia", "Bianka", "Dominika", "Emilia", "Gabriela", "Gosia", "Hanna", "Helena", "Joanna", "Julia", "Karolina", "Kasia", "Klaudia", "Kornelia", "Lena", "Lena", "Magda", "Maja", "Maria", "Marta", "Monika", "Monika", "Nadzieja", "Natalia", "Ola", "Paulina", "Sara", "Sylwia", "Weronika", "Wiktoria", "Wiola", "Zuzanna", 
+"Małgorzata", "Róża"]>>
+
+<<set $greekSlaveNames to ["Maria", "Eleni", "Helen", "Aiketerine", "Baslikike", "Vasiliki", "Sofia", "Aggeliki", "Georgia", "Anastasia", "Evangelia", "Demetra", "Eirene", "Anna", "Panagiota", "Ioanna", "Konstantina", "Despoina", "Calliope", "Alexandra", "Kyriake", "Dominique", "Paraskevi"]>>
+
+<<set $israeliSlaveNames to ["Noa", "Shira", "Maya", "Tamar", "Yael", "Talia", "Roni", "Sarah", "Noya", "Michal", "Hila", "Tahel", "Adi", "Ayala", "Hodaya", "Maayan", "Lian", "Ella", "Avigayil", "Rivka"]>>
+
+<<set $armenianSlaveNames to ["Mane", "Milena", "Mari", "Elen", "Nare", "Annie", "Anna", "Anahit", "Mariam", "Merry", "Maria", "Gayane", "Lilit", "Eva", "Angelina", "Hasmik", "Susanna", "Sona", "Gohar", "Karine", "Marianna", "Viktoria", "Ruzanna", "Anush", "Nataly", "Lusine", "Liana", "Syuzana", "Diana", "Yana", "Arevik", "Marina", "Syuzi", "Monika", "Tamara", "Armine", "Elina", "Marina", "Svetlana", "Narine", "Seda", "Nelly", "Margarita", "Astghik", "Sofi", "Karina", "Emma", "Lina"]>>
+
+<<set $moroccanSlaveNames to ["Fatima", "Khadija", "Aicha", "Malika", "Naima", "Rachida", "Nadia", "Karima", "Amina", "Saida", "Zohra", "Samira", "Latifa", "Fatiha", "Hafida", "Najat", "Bouchra", "Rahma", "Hanane", "Jamila", "Souad", "Hanan", "Laila", "Fatima Zohra", "Fatna", "Sara", "Hayat", "Habiba", "Yamina", "Siham", "Mariam", "Zahra", "Ikram", "Fadma", "Halima", "Salma", "Amal", "Farida", "Loubna", "Iman", "Aziza", "Hajar", "Rabia", "Mina", "Sanae", "Mimount", "Hakima", "Yasmina", "Imane"]>>
+
+<<set $romanianSlaveNames to ["Sofia", "Daria", "Alexandra", "Olivia", "Ilinca", "Ioana", "Mara", "Julia", "Raluca", "Elena", "Ana", "Maria", "Sara", "Isaura", "Mercedesa", "Cristina", "Rosalinda", "Teodora", "Iuliana", "Andreea"]>>
+
+<<set $swedishSlaveNames to ["Elsa", "Alice", "Maja", "Agnes", "Lilly", "Olivia", "Julia", "Ebba", "Linnea", "Molly", "Ella", "Wilma", "Klara", "Stella", "Freja", "Alicia", "Alva", "Alma", "Isabelle", "Ellen", "Saga", "Ellie", "Astrid", "Emma", "Nellie", "Emilia", "Vera", "Signe", "Elvira", "Nova", "Selma", "Ester", "Leah", "Felicia", "Sara", "Sofia", "Elise", "Ines", "Tyra", "Amanda", "Elin", "Ida", "Moa", "Meja", "Isabella", "Tuva", "Nora", "Siri", "Matilda", "Sigrid"]>>
+
+<<set $lithuanianSlaveNames to ["Austėja", "Emilija", "Gabija", "Vilte", "Kamilė", "Ugne", "Leja", "Urtė", "Gabriele", "Ieva", "Viktorija", "Zivile", "Ruta", "Laima", "Vaira", "Audra", "Aukse", "Ausra", "Gintare", "Sniega"]>>
+
+<<set $bolivianSlaveNames to ["Maria", "Ana Maria", "Patricia", "Paula", "Claudia", "Alejandra", "Viviana", "Juana", "Jimena", "Ximena", "Carla", "Isabela", "Sandra", "Marisol", "Daniela", "Rocio", "Pilar", "Urpi", "Illary", "Tica", "Saywa", "Illa", "Killa", "K'antu", "Kusi", "Mayu", "Chaska", "Q'orianka"]>>
+
+<<set $haitianSlaveNames to ["Stéphanie", "Fabiola", "Esther", "Tamara", "Roseline", "Cassandra", "Farah", "Lovelie", "Darline", "Samentha", "Vanessa", "Nadège", "Rachelle", "Judith", "Manoucheca", "Mardochée", "Beatrice", "Fabienne", "Mirlande", "Natacha", "Wideline", "Johanne", "Madeleine", "Islande", "Judeline", "Angeline", "Chedeline", "Jessica", "Rose-Merline", "Rose", "Medjine", "Esterline", "Nephtalie", "Jesula", "Fredeline", "Guerlande", "Marie", "Gaelle", "Jenniflore", "Lourdes-Gina", "Anaïca", "Nadia", "Kimberly"]>>
+
+<<set $cubanSlaveNames to ["Armena", "Belgis", "Chamayra", "Cheena", "Dayami", "Estelle", "JaJuan", "Javier", "Judith", "Laline", "Maela", "Magalys", "Maria", "Marisa", "Norma", "Vionaika", "Yaineris", "Yanire", "Yelina", "Yonaidys", "Yosdalkis", "Yuricema"]>>
+
+<<set $whiteSouthAfricanSlaveNames to ["Alletta", "Aneke", "Anje", "Behati", "Brunelda", "Charlize", "Corli", "Diani", "Elani", "Elize", "Emmarentia", "Gidea", "Hanneleen", "Hentie", "Imka", "Isabeau", "Kriszanne", "Liani", "Marlize", "Meriska", "Noeline", "Riana", "Saartjie", "Sonique", "Susara", "Tilana", "Trudene", "Wilona", "Yolandi", "Zandre"]>>
+
+<<set $blackSouthAfricanSlaveNames to ["Iminathi", "Minenhle", "Rethabile", "Bokamoso", "Karabo", "Amogelang", "Tshegofatso", "Lesedi", "Amahle", "Thandolwethu", "Andile", "Ayanda", "Ayize", "Busisiwe", "Duduzile", "Dumisile", "Hlengiwe", "Khethiwe", "Lindiwe", "Mbali", "Mlungisi", "Mthandeni", "Nandi", "Nobesuthu", "Nomathemba", "Nomzamo", "Sinenhlanhla", "Siphephelo", "Thenjiwe", "Xolisile", "Zandile", "Zanele", "Zimkhitha", "Zintle", "Ziyanda", "Zodwa", "Zukelwa", "Yandiswa", "Yonela", "Unathi", "Vathiswa", "Veliswa", "Vuyokazi", "Weziwe", "Sibongiseni", "Sisipho", "Thotyelwa", "Thozama", "Thumeka", "Qaqamba"]>>
+
+<<set $chileanSlaveNames to ["Martina", "Sofía", "Constanza", "Antonia", "Catalina", "Valentina", "Isidora", "Javiera", "Fernanda", "María", "Antonella", "Francisca", "Emilia", "Josefa", "Agustina", "Camila", "Florencia", "Ignacia", "Trinidad", "Belén", "Anaís", "Pía", "Amanda", "Maite", "Rocío", "Daniela", "Victoria", "Monserrat", "Magdalena", "Laura", "Paz", "Gabriela", "Matilda", "Renata", "Barbara", "Millaray", "Carolina", "Emily", "Josefina", "Mia", "Paula", "Genesis", "Katalina", "Krishna", "Carla", "Paloma"]>>
+
+<<set $belgianSlaveNames to ["Elise", "Emma", "Louise", "Elena", "Fleur", "Hanne", "Lotte", "Marie", "Laura", "Mila", "Lore", "Camille", "Fien", "Janne", "Kato", "Sara", "Charlotte", "Lena", "Nina", "Amélie", "Bo", "Julie", "Lisa", "Amber", "Eline", "Femke", "Lina", "Oona", "Rania", "Zoë", "Anna", "Axelle", "Hannah", "Juliette", "Kaat", "Lara", "Lily", "Nore", "Enora", "Eva", "Fran", "Linde", "Liv", "Noor", "Pauline", "Tess", "Amelia", "Aya", "Elisa", "Ella"]>>
+
+<<set $danishSlaveNames to ["Mathilde", "Emma", "Laura", "Freja", "Sofie", "Anna", "Caroline", "Ida", "Sarah", "Maja", "Lærke", "Emilie", "Clara", "Julie", "Victoria", "Isabella", "Amalie", "Josefine", "Cecilie", "Marie", "Signe", "Katrine", "Sofia", "Frida", "Alberte", "Nanna", "Frederikke", "Alma", "Liva", "Nicoline", "Malou", "Olivia", "Mille", "Maria", "Jasmin", "Astrid", "Johanne", "Andrea", "Karla", "Rebecca", "Camilla", "Ella", "Tilde", "Sille", "Filippa", "Asta", "Thea", "Hannah", "Silje", "Anne"]>>
+
+<<set $norwegianSlaveNames to ["Anne", "Inger", "Kari", "Marit", "Liv", "Ingrid", "Solveig", "Astrid", "Eva", "Bjørg", "Berit", "Randi", "Hilde", "Gerd", "Marianne", "Nina", "Elisabeth", "Kristin", "Bente", "Anna", "Ragnhild", "Heidi", "Ida", "Tove", "Hanne", "Tone", "Else", "Linda", "Wenche", "Silje", "Elin", "Anita", "Ellen", "Maria", "Karin", "Aud", "Camilla", "Hege", "Ann", "Mona", "Marie", "Reidun", "Turid", "Laila", "Åse", "Monica", "Ruth", "Kristine", "Jorunn", "Stine"]>>
+
+<<set $hungarianSlaveNames to ["Hanna", "Anna", "Jázmin", "Lili", "Zsófia", "Emma", "Luca", "Boglárka", "Zoé", "Nóra", "Csenge", "Dorina", "Dóra", "Viktória", "Fanni", "Lilla", "Réka", "Laura", "Léna", "Eszter", "Petra", "Gréta", "Noémi", "Vivien", "Izabella", "Sára", "Zselyke", "Flóra", "Dorka", "Bianka", "Liliána", "Maja", "Adél", "Rebeka", "Mira", "Regina", "Lara", "Amira", "Panna", "Natasa", "Kamilla", "Alexandra", "Janka", "Emília", "Blanka", "Lilien", "Natália", "Mirella", "Kinga", "Liza"]>>
+
+<<set $estonianSlaveNames to ["Sofia", "Eliise", "Maria", "Mia", "Lisandra", "Mirtel", "Sandra", "Emma", "Laura", "Darja", "Arina", "Milana", "Alisa", "Anastasia", "Lenna", "Liisa", "Anna", "Viktoria", "Elisabeth", "Polina", "Marta", "Aleksandra", "Marleen", "Hanna", "Nora"]>>
+
+<<set $slovakSlaveNames to ["Sofia", "Nina", "Natália", "Nela", "Viktória", "Ema", "Laura", "Michaela", "Kristína", "Simona", "Mária", "Anna", "Zuzana", "Katarína", "Helena", "Eva", "Jana", "Alžbeta", "Margita", "Marta"]>>
+
+<<set $kazakhSlaveNames to ["Ayzere", "Inzhu", "Ayaru", "Kausar", "Aisha", "Aruzhan", "Amina", "Ayaulym", "Sezim", "Іnkar", "Diana", "Alina", "Madina", "Sofia", "Ayana", "Darya", "Victoria", "Ayala", "Zhanerke", "Nurai" ]>>
+
+<<set $zimbabweanSlaveNames to ["Anokosha", "Aneni", "Anodiwa", "Batsirai", "Chenesai", "Chiedza", "Chiratidzo", "Chishamiso", "Dadisai", "Edzai", "Fadzai", "Haruperi", "Hazvinei", "Idai", "Ipaishe", "Kunashe", "Kundai", "Maitaishe", "Mawanda", "Mukudzei", "Mutsa", "Ndafadzwa", "Ngonidzashe", "Nyararai", "Paidamoyo", "Pamhidzai", "Panashe", "Ropafadzo", "Ruponeso", "Ruramisai", "Ruvarashe", "Ruwadzano", "Sarudzai", "Tanatswa", "Tanyaradzwa", "Tapiwanashe", "Tinaye", "Ropafadzo", "Timukudzei", "Tsungirirai", "Varaidzo", "Chivaraidzo", "Vhenekerayi", "Vongai", "Wadzanai", "Watinoda", "Yananiso", "Yemurai", "Zviedzo", "Zvinodaishe"]>>
+
+<<set $ugandanSlaveNames to ["Jesca", "Christine", "Joy", "Sarah", "Lilly", "Lucy", "Judith", "Rose", "Alice", "Margaret", "Rebecca", "Jessica", "Caroline", "Susan", "Jacquiline", "Betty", "Cecilia", "Beatrice", "Juliana", "Anne", "Veronica", "Anifa", "Jalia", "Emma", "Victoria", "Mary", "Tophace", "Lydia", "Florence", "Flavia", "Evelyn", "Peace", "Naome", "Justine", "Lyndah", "Femiar", "Huda", "Idah", "Ruth", "Dorothy", "Rita", "Harriet", "Barbara", "Annet", "Rosemary", "Angelline", "Sylivia", "Lukia", "Nabilah", "Kyabangi"]>>
+
+<<set $tanzanianSlaveNames to ["Anna", "Maida", "Bahati", "Khadija", "Fatma", "Aziza", "Nuru", "Faida", "Elizabeth", "Batilda", "Hazara", "Ania", "Diana", "Maua", "Meryce", "Josephine", "Zuleikha", "Maria", "Asha", "Riziki", "Gaudentia", "Mgeni", "Janet", "Mariam", "Mwajuma", "Aisha", "Halima", "Mkiwa", "Rosemary", "Grace", "Devota", "Susan", "Joyce", "Mwanatumu", "Stella", "Janeth", "Kiumbwa", "Mwanne", "Lediana", "Amina", "Bernadeta", "Shamsa", "Savelina", "Mwanawetu", "Mhonga", "Sijapata", "Lucy", "Eliatta", "Zaynab", "Kidawa"]>>
+
+<<set $dutchSlaveNames to ["Tess", "Sophie", "Julia", "Emma", "Lisa", "Fenna", "Mila", "Sara", "Lotte", "Zoë", "Eva", "Anna", "Fleur", "Isa", "Lynn", "Evi", "Lieke", "Saar", "Noa", "Sanne", "Roos", "Sarah", "Maud", "Olivia", "Elin", "Esmee", "Femke", "Sofie", "Anne", "Liv", "Nina", "Noor", "Nora", "Amy", "Jasmijn", "Iris", "Naomi", "Floor", "Yara", "Feline", "Tessa", "Elise", "Isabella", "Milou", "Eline", "Lana", "Evy", "Benthe", "Nova", "Liz"]>>
+
+<<set $austrianSlaveNames to ["Lena", "Leonie", "Sarah", "Anna", "Julia", "Katharina", "Hannah", "Sophie", "Laura", "Lisa", "Lea", "Lara", "Viktoria", "Selina", "Vanessa", "Sophia", "Elena", "Nina", "Johanna", "Magdalena", "Jana", "Emma", "Marie", "Theresa", "Alina", "Jasmin", "Valentina", "Angelina", "Emily", "Christina", "Chiara", "Melanie", "Michelle", "Clara", "Amelie", "Marlene", "Anja", "Natalie", "Helena", "Nadine", "Stefanie", "Miriam", "Anna-Lena", "Eva", "Elisa", "Larissa", "Maria", "Carina", "Emely", "Annika"]>>
+
+<<set $swissSlaveNames to ["Emma", "Eva", "Léa", "Camille", "Zoé", "Alice", "Chloé", "Alicia", "Olivia", "Sofia", "Giulia", "Emily", "Mia", "Aurora", "Noemi", "Martina", "Nicole", "Luana", "Leonie", "Iris", "Laura", "Lia"]>>
+
+<<set $puertoRicanSlaveNames to ["Mia", "Kamila", "Camila", "Alondra", "Valeria", "Amanda", "Gabriela", "Andrea", "Adriana", "Sofia", "Paola", "Victoria", "Isabella", "Alanis", "Ariana", "Genesis", "Natalia", "Fabiola", "Alejandra", "Alana", "Sophia", "Daniela", "Valentina", "Ana", "Alanys", "Mariana", "Alexandra", "Maria", "Nayelis", "Amaia", "Brianna", "Arianna", "Angelica", "Emily", "Kiara", "Karla", "Yarielis", "Kamyla", "Karina", "Carolina", "Melanie", "Angelique", "Paula", "Gabriella", "Mya", "Karelys", "Layla", "Amaya", "Gianna", "Kimberly"]>>
+
+<<set $czechSlaveNames to ["Eliška", "Tereza", "Anna", "Adéla", "Natálie", "Sofie", "Kristýna", "Karolína", "Viktorie", "Barbora", "Nela", "Veronika", "Lucie", "Kateřina", "Klára", "Marie", "Laura", "Aneta", "Zuzana", "Amálie"]>>
+
+<<set $portugueseSlaveNames to ["Maria", "Sofia", "Leonor", "Matilde", "Beatriz", "Ines", "Carolina", "Mariana", "Filipa", "Margarida", "Ana", "Francisca", "Lara", "Alexandra", "Clara", "Isabel", "Joana", "Rita", "Laura", "Madalena"]>>
+
+<<set $jamaicanSlaveNames to ["Brianna", "Rihanna", "Gabrielle", "Ashley", "Jada", "Tiana", "Abigail", "Amelia", "Kayla", "Danielle", "Nadia", "Reta", "Rahima", "Sadiki", "Samiha", "Serafina", "Tamasha", "Tisha", "Zalika", "Zawadi", "Abigail", "Anah", "Asenath", "Atarah", "Athalia", "Candace", "Chloe", "Damaris", "Deborah", "Eden", "Dominique", "Emily", "Farrah", "Felicia", "Fiona", "Gale", "Haley", "Jade", "Jessica", "Jillian"]>>
+
+<<set $malaysianSlaveNames to ["Nur", "Zara", "Hannah", "Damia", "Sophia", "Alicia", "Aishah", "Humaira", "Batrisyia", "Safiyyah", "Sarah", "Iris", "Alya", "Adriana", "Amani", "Keisha", "Arissa", "Balqis", "Qistina", "Arianna", "Qaisara", "Khalisha", "Chloe", "Marissa", "Mia"]>>
+
+<<set $guatemalanSlaveNames to ["Arabella", "María", "Irma", "Josefa", "Alcina", "Myrna", "Gabriela", "Rigoberta", "Elisa", "Luz", "Soluna", "Shery", "Daphne", "Cristina", "Leonora", "Julia", "Lillian", "Mercedes", "Petrona", "Zury", "Itzel", "Akna", "Sacniete", "Xoc", "Chimalmat", "Ixazaluoh", "Xmucane", "Xpiayoc", "Colel"]>>
+
+<<set $ghananSlaveNames to ["Adwoa", "Abénaa", "Akúá", "Akuba", "Yaa", "Afua", "Ám̀ma", "Akosua", "Ataá Pánin", "Ataá Kúmaa", "Táwia", "Nyankómàgó", "Píèsíe", "Máanu", "Mánsã", "Anané", "Anúm", "Nsĩã́", "Nsṍwaa", "Bótwe", "Nkróma", "Badúwaa", "Dúkũ", "Dúnu", "Kaakyire", "Afúom", "Ɔkwán", "Bedíàkṍ", "Afiríyie", "Agyenim", "Nyamékyε", "Nyaméama", "Kumi", "Antó", "Obím̀pέ", "Yεmpέw"]>>
+
+<<set $serbianSlaveNames to ["Dunja", "Milica", "Ana", "Anastasija", "Anđela", "Nađa", "Lena", "Lara", "Lana", "Una", "Tara", "Jovana", "Sara", "Mia", "Teodora", "Marija", "Katarina", "Aleksandra", "Jelena", "Radmila", "Ljiljana", "Snežana"]>>
+
+<<set $australianSlaveNames to ["Olivia", "Charlotte", "Mia", "Ava", "Amelia", "Emily", "Sophia", "Sophie", "Chloe", "Ruby", "Lily", "Grace", "Ella", "Isabella", "Isla", "Maddison", "Sienna", "Zoe", "Scarlett", "Matilda"]>>
+
+<<set $burmeseSlaveNames to ["Aung", "U", "May", "Khaing", "Ei", "Khin", "Myat", "Phyu", "Mon", "Aye", "Htet", "Htun", "Thu", "Su", "Hsu", "Win", "Yi", "Hnin", "Kyaw", "Le", "Zin", "Nwe", "Thiri", "Thin", "Kay", "Naing", "Phyo", "Hnin", "Yin", "Thet", "Cho", "Nway"]>>
+
+<<set $algerianSlaveNames to ["Narimène", "Fatma-Zohra", "Faïza", "Sérine", "Lydia", "Nawel", "Mouni", "Melinda", "Nassima", "Tassadit", "Raouia", "Safia", "Zohra", "Yassmine", "Salima", "Silya", "Fatima", "Aicha", "Amel", "Sehryne", "Celia", "Dallal", "Sarra", "Manel", "Sihem", "Amina", "Nadira", "Kahina", "Souhila", "Nadia", "Ratiba", "Souad", "Samia", "Rekia", "Lamia", "Fatiha", "Nabila", "Rima"]>>
+
+<<set $sudaneseSlaveNames to ["Yamilé", "Amina", "Muna", "Nawal", "Bakhita", "Fatima", "Nahid", "Hawa", "Mariam", "Jalila", "Leila", "Halima", "Zina", "Malkat", "Mhadsin", "Awmima", "Tasabih", "Muram", "Safa", "Widad"]>>
+
+<<set $iraqiSlaveNames to ["Noor", "Raghad", "Gulustan", "Dunya", "Rana", "Alaa", "Maysar", "Inam", "Danah", "Sundus", "Shatha", "Bedia", "Suaad", "Alia", "Eaman", "Samira", "Thumal", "Sajida", "Bahija", "Wasma'a", "Yanar", "Houzan", "Nahla", "Awatef", "Naziha", "Betool", "Haifa", "Thura", "Sahar", "Aida", "Huda", "Zainab", "Nuha", "Nazik", "Kenza", "Zaha", "Leila", "Sondul", "Basimah", "Rihab", "Lihadh", "Atika", "Sajida", "Farida", "Rahma", "Affifa", "Salima", "Amal", "Toba", "Maysoon"]>>
+
+<<set $uzbekSlaveNames to ["Durdona", "Feruza", "Firuza", "Gulnora", "Shahnoza", "Umida", "Yulduz", "Anora", "Chinara", "Elnura", "Guli", "Guldasta", "Gulnara", "Indira", "Nargiza", "Olma", "Ona", "Parizoda", "Shahlo", "Tahmina", "Zarina", "Zeb"]>>
+
+<<set $nepaleseSlaveNames to ["Rubina", "Mamta", "Sobta", "Kajal", "Indu", "Saraswoti", "Anjali", "Trishna", "Sarita", "Sita", "Nary", "Sonu", "Rekha", "Binu", "Jyoti", "Namita", "Chandra", "Anjila", "Mana", "Menuka", "Ghim", "Punam", "Sajana", "Laxmi", "Dipa", "Yasodha", "Bhujunga", "Renuka", "Anita", "Anu", "Krishna", "Sabitra", "Niru", "Maya", "Bhawana", "Gyanu", "Sneba", "Luniva", "Sujata", "Sherya", "Anusha", "Sadina", "Alisha", "Alina", "Sirjana"]>>
+
+<<set $afghanSlaveNames to ["Apana", "Ariana", "Barsala", "Behnaz", "Benazira", "Gabina", "Gulalai", "Heela", "Helai", "Heley", "Hosai", "Kashmala", "Kubra", "Lalzari", "Lawanga", "Malala", "Malghalara", "Marjan", "Mina", "Muska", "Naghma", "Nazaneen", "Nigina", "Noushin", "Orbala", "Orzala", "Panra", "Parghunda", "Sanga", "Satara", "Selai", "Senzala", "Shahlalai", "Shaperai", "Shastai", "Sooraya", "Tahmina", "Tanima", "Wajia", "Zaib", "Zarbaha", "Zarghuna", "Zarka", "Zarsanga", "Zartaj"]>>
+
+<<set $yemeniSlaveNames to ["Fatima", "Waseelah", "Hana", "Jamala", "Zana", "Nadia", "Reem", "Hoda", "Shada", "Nujood", "Boushra", "Raufa", "Amal", "Tawakkol", "Anisah", "Eshraq", "Entesar", "Hakimah", "Khadejah", "Safa", "Sumaya", "Zahra", "Wahiba", "Amat"]>>
+
+<<set $lebaneseSlaveNames to ["Darine", "Nathaline", "Sahar", "Jouana", "Marwa", "Tagrid", "Afaf", "Aya", "Nadia", "Assile", "Nadine", "Saria", "Yara", "Fatima", "Lara", "Nada", "Souad", "Rayane", "Aida", "Narine", "Tamara", "Nathalie", "Nayla", "Farah", "Rebecca", "Marie", "Reem", "Karen", "Lama", "Myriam", "Randa", "Iman", "Layla", "Najwa", "Rima", "Raghida", "Mirna", "Amal", "Haifa", "Dina", "Saloua", "Lidya", "Zena", "Nawal", "Elissar", "Warda", "Salwa", "Fadwa", "Aline", "Majida"]>>
+
+<<set $tunisianSlaveNames to ["Nesrine", "Elhem", "Saida", "Raja", "Boutheïna", "Echraf", "Fatma", "Mouna", "Rakia", "Chaïma", "Oumayma", "Amal", "Manel", "Meriem", "Nihel", "Rahma", "Kaouthar", "Maïssa", "Maroua", "Meserra", "Marwa", "Wafa", "Henda", "Wajdi", "Nour", "Khadija", "Habiba", "Amira", "Leila", "Azza", "Chahnez", "Nesria", "Houda", "Khaoula", "Selima", "Marwa", "Aida", "Insaf", "Mounira", "Hayet", "Fadhila", "Awatef", "Hajer", "Sonia", "Senda", "Faten", "Abir", "Salma", "Ameni", "Dora"]>>
+
+<<set $emiratiSlaveNames to ["Maitha", "Dina", "Muna", "Sara", "Noura", "Asmaa", "Ala'a", "Moza", "Raja", "Fatma", "Ebtisam", "Najat", "Maisoon", "Noor", "Wafa", "Hind", "Haya", "Reem", "Manal", "Nayla", "Nujoom", "Ahlam", "Ruwaida", "Lubna", "Maryam", "Hassa", "Shamsa", "Alia"]>>
+
+<<set $libyanSlaveNames to ["Entisar", "Saddeka", "Alaa", "Kholoud", "Najat", "Nadia", "Salsabil", "Khalifa", "Haneen", "Salwa", "Huda", "Nagia", "Fatima", "Ghada", "Amira", "Asmahan", "Hala", "Asia", "Ayesha", "Safia", "Iman", "Maryam", "Fatiha", "Zuhra"]>>
+
+<<set $jordanianSlaveNames to ["Zina", "Haya", "Zean", "Luna", "Anfal", "Razan", "Yasmeen", "Abeer", "Shatha", "Maysa", "Tareiza", "Ala'a", "Enshirah", "Aida", "Shahenaz", "Sama'a", "Hebah", "Ayah", "Shorooq", "Sherin", "Rima", "Nada", "Dana", "Samah", "Toujan", "Ina'am", "Haya", "Zein", "Aisha", "Alia", "Iman", "Salma", "Basma", "Ghida", "Badiya", "Firyal", "Noor", "Nejla", "Rahma", "Raiyah", "Salha", "Sana", "Sarah", "Sumaya"]>>
+
+<<set $omaniSlaveNames to ["Shinoona", "Buthaina", "Mazoon", "Samira", "Rawya", "Fatma", "Sneha", "Nitya", "Jokha", "Kamila", "Shawana", "Salma", "Latifah", "Hunaina", "Khwala", "Asila", "Salsabeel", "Mazan", "Noora", "Sharifa"]>>
+
+<<set $malianSlaveNames to ["Kadiatou", "Nassira", "Mariatou", "Hamchétou", "Diéné", "Fatoumata", "Naîgnouma", "Meiya", "Aminata", "Djenebou", "Sidibé", "Nare", "Touty", "Astan", "Aïda", "Aoua", "Mariam", "Bako", "Oumou", "Inna", "Adame", "Rahamatou", "Fatalmoudou"]>>
+
+<<set $romanSlaveNames to ["Aconia", "Aelia", "Agrippina", "Antistia", "Antonia", "Arria", "Atia", "Aurela", "Baebiana", "Caecilia", "Caesonia", "Calpurnia", "Claudia", "Cornelia", "Crispina", "Domitia", "Domitilla", "Drusilla", "Diana", "Euphemia", "Eutropia", "Fabia", "Faustina", "Flavia", "Galeria", "Galla", "Gnaea", "Gratidia", "Helena", "Helvia", "Herennia", "Honoria", "Hostia", "Julia", "Junia", "Justina", "Leontia", "Lepida", "Licinia", "Livia", "Livilla", "Lollia", "Lucilla", "Maecia", "Magia", "Manlia", "Marcella", "Marcia", "Messalina", "Minervina", "Mellisa", "Metella", "Munatia", "Octavia", "Ocellina", "Orbiana", "Otacilia", "Paccia", "Papianilla", "Paulina", "Placiaida", "Plautia", "Plautilla", "Plotina", "Pompeia", "Popilla", "Poppaea", "Porcia", "Risca", "Pulcheria", "Sabina", "Salonina", "Sempronia", "Servilia", "Severa", "Statilia", "Sulpicia", "Terentia", "Theodora", "Titania", "Tranquillina", "Tullia", "Ulpia", "Urgulania", "Valeria", "Verina", "Vesta", "Vibia", "Violentilla", "Vipsania", "Vistilla", "Gaia", "Lucia", "Marca", "Publia", "Quinta", "Tita", "Tiberia", "Sexta", "Aula", "Decima", "Gnaea", "Spuria", "Mania", "Servia", "Appia", "Numeria", "Vibia", "Agricola", "Agrippa", "Ahala", "Ahenobarba", "Albina", "Alba", "Ambusta", "Annalis", "Aquila", "Aquilina", "Arvina", "Asina", "Atella", "Avita", "Balba", "Barba", "Barbata", "Bassa", "Bestia", "Bibacula", "Bibula", "Blaesa", "Broccha", "Bruta", "Bubulca", "Bulba", "Caeca", "Calida", "Calvina", "Calva", "Camilla", "Canina", "Cana", "Catilina", "Catula", "Celeris", "Celsa", "Cethega", "Cicurina", "Cincinnata", "Cinna", "Corda", "Cornicen", "Cornuta", "Corvina", "Corva", "Cossa", "Costa", "Cotta", "Crassipes", "Crassa", "Crispina", "Crispa", "Curva", "Dentata", "Dentra", "Dives", "Dolabella", "Drusa", "Figula", "Fimbria", "Flacca", "Flava", "Flora", "Fusa", "Gemella", "Graccha", "Gurges", "Habita", "Helva", "Imperiosa", "Iulla", "Lactuca", "Laenas", "Lanata", "Laevina", "Laterensis", "Lentula", "Lepida", "Licina", "Longa", "Luculla", "Lupa", "Macra", "Macula", "Malleola", "Mamerca", "Marcella", "Merenda", "Merga", "Merula", "Messalla", "Metella", "Murena", "Mus", "Musca", "Nasica", "Natta", "Nepos", "Nerva", "Nigra", "Novella", "Ocella", "Pacila", "Paeta", "Pansa", "Papa", "Patercula", "Paulla", "Pera", "Pictrix", "Planca", "Plauta", "Poplicola", "Postuma", "Potita", "Praeconina", "Praetextata", "Prisca", "Procula", "Publicola", "Pulchra", "Pulla", "Pulvilla", "Quadrata", "Ralla", "Regilla", "Regula", "Rufa", "Ruga", "Rulla", "Rutila", "Salinatrix", "Saturnina", "Scaeva", "Scaevola", "Scapula", "Scaura", "Scrofa", "Seneca", "Severa", "Silana", "Sila", "Structa", "Sulla", "Sura", "Taura", "Triaria", "Trigemina", "Tuberta", "Tubula", "Tuditana", "Tulla", "Turda", "Vara", "Vatia", "Verres", "Vetus", "Vitula", "Volusa"]>>
+
+<<set $ancientEgyptianSlaveNames to ["A'at", "Ahhotep", "Ahmose", "Ahmose", "Hentempet", "Ahmose", "Hent-Tenemu", "Ahmose", "Henuttimehu", "Ahmose", "Inhapi", "Ahmose", "Meryetamun", "Ahmose", "Meryt-Amon", "Ahmose-Nefertari", "Ahmose", "Nefertiry", "Ahmose", "Sitkamose", "Ahmose", "Tumerisy", "Ahset", "Amtes", "Amunet", "Ana", "Aneksi", "Ankhesenamon", "Ankhesenpaaten", "Ankhesenpaaten-ta-sherit", "Ankhes-Pepi", " ", "Ankhetitat", "Ankhnesmery-Re", "Ankhnes-Pepi", "Aoh", "Ashait", "Ast", "Atet", "Baketamon", "Bakt", "Baktwerel", "Beketaten", "Berenib", "Betresh", "Betrest", "Bint-Anath", "Bunefer", "Dedyet", "Fent-Ankhet", "Gilukhipa", "Hapynma'at", "Hedjhekenu", "Henhenet", "Henite", "Hent", "Hentaneb", "Hentmereb", "Hentmire", "Hent-Temehu", "Henutmire", "Henutsen", "Henuttawy", "Herit", "Herneith", "Hetepheres", "Hetephernebty", "Heterphenebty", "Huy", "Imi", "Inhapi", "Intakaes", "Iput", "Ipwet", "Ipy ", "Isetnofret", "Isis", "Istnofret", "Itekuyet", "Itet", "Kasmut", "Kawit", "Kemanub", "Kemanut", "Kemsit", "Kentetenka", "Khama'at", "Khamerernebty", "Khemut", "Khentikus", "Khentkawes", "Khenut", "Khumit", "Khuit", "Kiya", "Ma'at", "Hornefrure'", "Maatkare-Nefertari", "Meket-Aten", "Maia", "Menhet", "Menwi", "Mereneith", "Mereryet", "Meresankh", "Meritites", "Merneith", "Merseger", "Merti", "Meryetamun", "Meryetre", "Merysankh", "Merytamon", "Merit-Amon", "Meritaten", "Merytaten-tasherit", "Meryt-Re-Hatshepsut", "Mutemwiya", "Mutnodjme", "Mutnofret", "Muyet", "Nebet", "Nebettawy", "Nebt", "Nebt-tawya", "Neferhent", "Neferhetep", "Neferhetepes", "Neferkent", "Neferneferure", "Nefertari", "Nefertiti", "Nefertkau,", "Nefertkaw", "Neferu", "Neferu", "Neferukhayt", "Neferukhebt", "Neferu-Re", "Nefret", "Nefru", "Nefru-Ptah", "Nefrusheri", "Nefru-Sobek", "Nefru-totenen", "Neith", "Neithotep", "Nemathap", "Nenseddjedet", "Neshkons", "Nestanebtishru", "Nit", "Nitemat", "Nithotep", "Nodjmet", "Nofret", "Nofret", "Nubkhas", "Nubkhesed", "Rai", "Raia", "Redji", "Reputneb", "Sadeh", "Sadek", "Sebek-shedty-Neferu", "Senebsen", "Senisonbe", "Sennuwy", "Seshseshet", "Sitamun", "Sit-Hathor-Yunet", "Sitre", "Sobekemsaf", "Sotepenre", "Ta-Opet", "Tadukhipa", "Takhaet", "Tarset", "Taweret", "Tem", "Tener", "Teo", "Tetisheri", "Tey", "Thent", "Hep", "Tia", "Tiy", "Tiye", "Tjepu", "Tuia", "Tuya", "Tuyu ", "Twosre", "Weret-Imtes"]>>
+
+<<set $badWords to ["fuck", "shit", "ass", "cock", "piss", "dick", "slut", "cum", "whore", "butt", "boob", "cunt", "cunny", "pussy", "junk", "trash", "slave"]>>
+
+<<set $niceWeather = []>>
+<<set $weatherToday to {name: "Sunny", severity: 1}>>
+<<set $niceWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Cloudy", severity: 1}>>
+<<set $niceWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Partly Cloudy", severity: 1}>>
+<<set $niceWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Overcast", severity: 1}>>
+<<set $niceWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Light Wind", severity: 1}>>
+<<set $niceWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Clear and Calm", severity: 1}>>
+<<set $niceWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Light Rain", severity: 1}>>
+<<set $niceWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Heavy Rain", severity: 1}>>
+<<set $niceWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Smoke warning", severity: 1}>>
+<<set $niceWeather.push($weatherToday)>>
+
+<<set $lightWeather = []>>
+<<set $weatherToday to {name: "High Winds", severity: 2}>>
+<<set $lightWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Acid Rain", severity: 2}>>
+<<set $lightWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "T-Storm Warning", severity: 2}>>
+<<set $lightWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Flood Warning", severity: 2}>>
+<<set $lightWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Tornado Warning", severity: 2}>>
+<<set $lightWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Light Sandstorm", severity: 2}>>
+<<set $lightWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "High Heat", severity: 2}>>
+<<set $lightWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Smoky", severity: 2}>>
+<<set $lightWeather.push($weatherToday)>>
+
+<<set $heavyWeather = []>>
+<<set $weatherToday to {name: "Extreme Winds", severity: 3}>>
+<<set $heavyWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Heavy Acid Rain", severity: 3}>>
+<<set $heavyWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Extreme T-storm", severity: 3}>>
+<<set $heavyWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Flooding", severity: 3}>>
+<<set $heavyWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Tornadoes", severity: 3}>>
+<<set $heavyWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Sandstorm", severity: 3}>>
+<<set $heavyWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Extreme Heat", severity: 3}>>
+<<set $heavyWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Dense Smoke", severity: 3}>>
+<<set $heavyWeather.push($weatherToday)>>
+
+<<set $extremeWeather = []>>
+<<set $weatherToday to {name: "Solar Flare", severity: 4}>>
+<<set $extremeWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Ion Storm", severity: 4}>>
+<<set $extremeWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Cataclysmic Rains", severity: 4}>>
+<<set $extremeWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Cat 6 Hurricane", severity: 4}>>
+<<set $extremeWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Abrasive Sandstorm", severity: 4}>>
+<<set $extremeWeather.push($weatherToday)>>
+<<set $weatherToday to {name: "Radiological Warning", severity: 4}>>
+<<set $extremeWeather.push($weatherToday)>>
+
+<<set $weatherToday to $niceWeather.random()>>
+
+<<set $IDNumber to 0>>
+
+<<set $week to 1>>
+
+<<set $personalAttention to 0>>
+<<set $trainingRegimen to "break her will">>
+<<set $HeadGirl to 0>>
+<<set $headGirlTrainsSkills to 1>>
+<<set $headGirlTrainsHealth to 1>>
+<<set $headGirlTrainsObedience to 1>>
+<<set $headGirlTrainsQuirks to 1>>
+<<set $Recruiter to 0>>
+<<set $recruiterTarget to "desperate whores">>
+<<set $recruiterProgress to 0>>
+<<set $Bodyguard to 0>>
+<<set $Madam to 0>>
+<<set $Concierge to 0>>
+<<set $Milkmaid to 0>>
+<<set $Collectrix to 0>>
+<<set $Stewardess to 0>>
+<<set $Schoolteacher to 0>>
+<<set $Attendant to 0>>
+<<set $Wardeness to 0>>
+<<set $Concubine to 0>>
+<<set $assistant to 0>>
+<<set $HGEnergy to 0>>
+
+<<set $slaveDealJustice to 0>>
+<<set $slaveTrainingJustice to 0>>
+<<set $majorityDealJustice to 0>>
+<<set $indentureDealJustice to 0>>    
+<<set $virginityDealJustice to 0>>
+
+<<set $startingGirlsNationality to 0>>
+<<set $ui to "start">>
+<<set $normalizedEvents to 0>>
+<<set $autosave to 1>>
+<<set $useFSNames to 1>>
+<<set $seeDetails to 1>>
+<<set $seeDesk to 1>>
+<<set $seeFCNN to 1>>
+<<set $seeBuy to 1>>
+<<set $seeArcology to 1>>
+<<set $seeDicks to 1>>
+<<set $seeRace to 1>>
+<<set $seeNationality to 1>>
+<<set $showSexualHistory to 1>>
+<<set $showBodyMods to 1>>
+<<set $showImplantEffects to 1>>
+<<set $showClothing to 1>>
+<<set $showBoobCCs to 1>>
+<<set $sortSlavesBy to "devotion">>
+<<set $sortSlavesOrder to "descending">>
+<<set $sortSlavesMain to 1>>
+<<set $rulesAssistantMain to 1>>
+<<set $rulesAssistantAuto to 0>>
+<<set $abbreviateDevotion to 2>>
+<<set $abbreviateRules to 2>>
+<<set $abbreviateClothes to 2>>
+<<set $abbreviateHealth to 2>>
+<<set $abbreviateDiet to 2>>
+<<set $abbreviateDrugs to 2>>
+<<set $abbreviateRace to 2>>
+<<set $abbreviateGenitalia to 2>>
+<<set $abbreviatePhysicals to 2>>
+<<set $abbreviateSkills to 2>>
+<<set $abbreviateMental to 2>>
+
+<<set $nicknamesAllowed to 1>>
+<<set $plot to 1>>
+<<set $continent to "North America">>
+<<set $oralTotal to 0>>
+<<set $vaginalTotal to 0>>
+<<set $analTotal to 0>>
+<<set $mammaryTotal to 0>>
+<<set $penetrativeTotal to 0>>
+<<set $milkTotal to 0>>
+<<set $cumTotal to 0>>
+<<set $birthsTotal to 0>>
+<<set $pitKillsTotal to 0>>
+
+<<set $rivalOwner to 0>>
+<<set $rivalryPower to 0>>
+
+<<set $dispensary to 0>>
+<<set $injectionUpgrade to 0>>
+<<set $curativeUpgrade to 0>>
+<<set $aphrodisiacUpgrade to 0>>
+<<set $surgeryUpgrade to 0>>
+<<set $mercenaries to 0>>
+<<set $personalArms to 0>>
+
+<<set $brandTarget to "buttocks">>
+<<set $brandDesign to "your initials">>
+
+<<set $saleDescription to 0>>
+<<set $surgeryDescription to 0>>
+<<set $encyclopedia to "How to Play">>
+
+<<set $SPcost to 1000>>
+
+<<set $preOwnedViewed to 0>>
+
+<<set $debtWarned to 0>>
+<<set $economy to 1>>
+<<set $internationalTrade to 1>>
+<<set $internationalVariety to 0>>
+<<set $slaveCostFactor to 0.9>>
+<<set $facilityCost to 500>>
+<<set $rep to 0>>
+<<set $repGain to 0>>
+<<set $repLoss to 0>>
+<<set $cash to 1000>>
+<<set $AProsperityCap to 60>>
+<<set $AProsperity to 50>>
+<<set $AGrowth to 2>>
+<<set $prestigeAuctioned to 0>>
+<<set $slaveMarketLimit to 20>>
+<<set $slavesSeen to 0>>
+
+<<set $returnTo to "Main">>
+<<set $nextButton to "END WEEK">>
+<<set $nextLink to "EW Slaves">>
+
+<<set $customSlaveOrdered to 0>>
+<<set $customSlave to {slaveName: "custom", birthName: "custom", weekAcquired: 1, origin: 0, career: 0, ID: 0, prestige: 0, prestigeDesc: 0, recruiter: 0, relation: 0, relationTarget: 0, relationship: 0, relationshipTarget: 0, rivalry: 0, rivalryTarget: 0, subTarget: 0, choosesOwnAssignment: 0, assignment: "rest", assignmentVisible: 1, sentence: 0, toyHole: "all her holes", age: 18, ageImplant: 0, health: 0, minorInjury: 0, trust: 0, oldTrust: 0, devotion: 0, oldDevotion: 0, weight: 0, muscles: 0, height: 0, heightImplant: 0, nationality: 0, race:"white", eyes: "brown", hcolor: 0, pubicHColor: "brown", skin: 0, hlength: 0, pubicHLength: "neat", waist: 0, amp: 0, heels:0, mute: 0, boobs: 500, boobsImplant: 0, nipples: 0,  nipplesPiercing: 0, areolae: 0, boobsTat: 0, lactation: 0, milk: 0, cum: 0, butt: 2, buttImplant: 0, buttTat: 0, face: 0, faceImplant: 0, lips: 0, lipsImplant: 0, lipsPiercing: 0, lipsTat: 0, teeth:0, tonguePiercing: 0, vagina: 1, vaginaPiercing: 0, vaginaTat: 0, preg: -1, births: 0, labia: 0, clit: 0, clitPiercing: 0, clitSetting: "vanilla", anus: 1, dick: 0, dickPiercing: 0, dickTat: 0, balls: 0, ovaries: 1, anusPiercing: 0, anusTat: 0, makeup: 0, nails: 0, brand: 0, brandLocation: 0, earPiercing: 0, nosePiercing: 0, eyebrowPiercing: 0, navelPiercing: 0, cosmeticPiercings: 0, shouldersTat: 0, armsTat: 0, legsTat: 0, stampTat: 0, vaginalSkill: 0, oralSkill: 0, analSkill: 0, whoreSkill: 0, entertainSkill: 0, combatSkill: 0, livingRules: "spare", speechRules: "restrictive", releaseRules:"restrictive", relationshipRules: "restrictive", useRulesAssistant: 1, diet: "healthy", tired: 0, hormones: 0, drugs: "no drugs", addict: 0, choosesOwnClothes: 0, clothes: "no clothing", collar: "none", shoes: "none", vaginalAccessory: "none", buttplug: "none", intelligence: 0,  intelligenceImplant: 0, fetish: "none", fetishDiscovered: 0, behavioralQuirk: "none", sexualQuirk: "none", oralCount: 0, vaginalCount: 0, analCount: 0, mammaryCount: 0, penetrativeCount: 0, pitKills: 0, customTat:" ", customLabel: " ", customDesc:" "}>>
+
+<<set $cheatMode to 0>>
+
+/*HACKY EVENT WORKAROUNDS*/
+<<set $eventID to -1>>
+
+<<goto "Alpha disclaimer">>

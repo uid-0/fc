@@ -1,0 +1,400 @@
+<<nobr>>
+
+<<if ($slaves[$i].anus gt 0) and ($slaves[$i].devotion gt 10)>>
+	<<set $bedSlaves += 1>>
+<</if>>
+
+<<if ($slaves[$i].toyHole is "pussy")>>
+<<if ($slaves[$i].vagina is 0)>>
+  <<set $slaves[$i].toyHole to "all her holes">>
+<</if>>
+<</if>>
+	
+<<if ($slaves[$i].toyHole isnot "all her holes")>>
+	<<if ($slaves[$i].toyHole is "pussy")>>
+		<<set $seed to random(5,10)>>
+		<<set $slaves[$i].vaginalCount += $seed>>
+		<<set $vaginalTotal += $seed>>
+		
+		<<if ($slaves[$i].trust lt -4)>>
+			She spends the week in terrified compliance with your use of her pussy.
+		<<elseif ($slaves[$i].devotion lt -4)>>
+			She spends the week alternately struggling and lying corpselike as you use her pussy.
+		<<elseif ($slaves[$i].devotion lte 4)>>
+			She spends the week reluctantly accepting your use of her pussy.
+		<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "submissive")>>
+			She spends the week as your adoring submissive, seeing to your pleasure with her womanhood.
+		<<elseif ($slaves[$i].devotion lte 10)>>
+			She spends the week obediently serving you in the classical way, taking you into her womanhood.
+		<<else>>
+			She spends the week serving you in the classical way,  warming your bed and lovingly taking you into her womanhood.
+		<</if>>
+
+		<<if ($slaves[$i].devotion lt -4)>>
+			The constant rape fills her with @@color:mediumorchid;revulsion@@ and @@color:gold;fear.@@
+			<<set $slaves[$i].devotion -= 1>>
+			<<set $slaves[$i].trust -= 1>>
+		<<elseif ($slaves[$i].devotion lte 4)>>
+			Submitting to your use @@color:hotpink;habituates her@@ to being your sex slave.
+			<<set $slaves[$i].devotion += 0.3>>
+		<<elseif ($slaves[$i].devotion gte 4)>>
+			The pleasant loving @@color:hotpink;draws her closer to you.@@
+			<<set $slaves[$i].devotion += 0.7>>
+		<</if>>
+		
+		<<if ($slaves[$i].sexualQuirk is "hates penetration") and ($slaves[$i].devotion gt 10)>>
+			The emotional closeness @@color:green;resolves her hatred of penetration.@@
+			<<set $slaves[$i].sexualQuirk to "none">>
+		<</if>>		
+
+		<<if ($slaves[$i].vaginalSkill lt 3) and (random(1,100) lt 20+$slaves[$i].devotion)>>
+			<<set $slaves[$i].vaginalSkill += 1>>
+			After a lot of time spent having sex, @@color:green;her vaginal skill improves.@@
+		<</if>>
+
+		<<if ($slaves[$i].fetish is "none") and (random(1,100) lt 20+$slaves[$i].devotion)>>
+			<<set $slaves[$i].fetish to "submissive">>
+			She climaxes with your strong hands holding her and your cock spreading heat through her core, teaching her that @@color:pink;a girl's role is to please a man.@@
+		<</if>>
+		
+	<<elseif ($slaves[$i].toyHole is "ass")>>
+		<<set $seed to random(5,10)>>
+		<<set $slaves[$i].analCount += $seed>>
+		<<set $analTotal += $seed>>
+
+		<<if ($slaves[$i].trust lt -4)>>
+			She spends the week in terrified compliance with your use of her anus.
+		<<elseif ($slaves[$i].devotion lt -4)>>
+			She spends the week struggling and screaming as you sodomize her.
+		<<elseif ($slaves[$i].devotion lte 4)>>
+			She spends the week writhing in pain as you sodomize her.
+		<<elseif ($slaves[$i].devotion lte 10)>>
+			She spends the week obediently submitting to your use of her butthole.
+		<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "buttslut")>>
+			She spends the week as your adoring anal slave, orgasming to the feel of you shooting your seed into her ass.
+		<<else>>
+			She spends the week warming your bed and devotedly serving your sexual needs with her anus.
+		<</if>>	
+
+		<<if ($slaves[$i].devotion lt -4)>>
+			The constant assrape fills her with @@color:mediumorchid;revulsion@@ and @@color:gold;fear.@@
+			<<set $slaves[$i].devotion -= 1>>
+			<<set $slaves[$i].trust -= 1>>
+		<<elseif ($slaves[$i].devotion lte 4)>>
+			Submitting to your use of her butt @@color:hotpink;habituates her@@ to being your anal slave.
+			<<set $slaves[$i].devotion += 0.3>>
+		<<elseif ($slaves[$i].devotion gte 4)>>
+			The pleasant backdoor loving @@color:hotpink;draws her closer to you.@@
+			<<set $slaves[$i].devotion += 0.7>>
+		<</if>>
+		
+		<<if ($slaves[$i].sexualQuirk is "hates anal") and ($slaves[$i].devotion gt 10)>>
+			She's devoted enough to derive emotional closeness from buttsex, which @@color:green;resolves her hatred of the act.@@
+			<<set $slaves[$i].sexualQuirk to "none">>
+		<</if>>			
+
+		<<if ($slaves[$i].analSkill lt 3) and (random(1,100) lt 20+$slaves[$i].devotion)>>
+			<<set $slaves[$i].analSkill += 1>>
+			After a lot of time spent getting buttfucked, @@color:green;her anal skill improves.@@
+		<</if>>
+
+		<<if ($slaves[$i].fetish is "none") and (random(1,100) lt 20+$slaves[$i].devotion)>>
+			<<set $slaves[$i].fetish to "buttslut">>
+			After repeated anal orgasms, @@color:pink;she begins to crave her next buttfuck.@@
+		<</if>>
+		
+	<<elseif ($slaves[$i].toyHole is "mouth")>>
+		<<set $seed to random(5,10)>>
+		<<set $slaves[$i].oralCount += $seed>>
+		<<set $oralTotal += $seed>>
+
+		<<if ($slaves[$i].trust lt -4)>>
+			She spends the week in terrified compliance with your use of her throat.
+		<<elseif ($slaves[$i].devotion lt -4)>>
+			She spends the week struggling and gagging as you throatfuck her.
+		<<elseif ($slaves[$i].devotion lte 4)>>
+			She spends the week reluctantly servicing your cock with her mouth.
+		<<elseif ($slaves[$i].devotion lte 10)>>
+			She spends the week obediently sucking your cock.
+		<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "cumslut")>>
+			She spends the week as your adoring oral slave, orgasming to the feel of you shooting your seed down her throat.
+		<<else>>
+			She spends the week warming your bed and lavishing devoted attention on your cock with her loving mouth.
+		<</if>>
+
+		<<if ($slaves[$i].devotion lt -4)>>
+			The constant oral abuse fills her with @@color:mediumorchid;revulsion@@ and @@color:gold;fear.@@
+			<<set $slaves[$i].devotion -= 1>>
+			<<set $slaves[$i].trust -= 1>>
+		<<elseif ($slaves[$i].devotion lte 4)>>
+			Submitting to your desires @@color:hotpink;habituates her@@ to being your oral slave.
+			<<set $slaves[$i].devotion += 0.3>>
+		<<elseif ($slaves[$i].devotion gte 4)>>
+			The pleasant oral loving @@color:hotpink;draws her closer to you.@@
+			<<set $slaves[$i].devotion += 0.7>>
+		<</if>>
+		
+		<<if ($slaves[$i].sexualQuirk is "hates oral") and ($slaves[$i].devotion gt 10)>>
+			She's devoted enough to derive emotional closeness from giving you oral, which @@color:green;resolves her hatred of the act.@@
+			<<set $slaves[$i].sexualQuirk to "none">>
+		<</if>>
+
+		<<if ($slaves[$i].sexualQuirk is "hates men") and ($slaves[$i].devotion gt 4)>>
+			Spending so much time in close proximity to your masculinity @@color:green;reconciles her to serving the male gender.@@
+			<<set $slaves[$i].sexualQuirk to "none">>
+		<</if>>		
+
+		<<if ($slaves[$i].oralSkill lt 3) and (random(1,100) lt 20+$slaves[$i].devotion)>>
+			<<set $slaves[$i].oralSkill += 1>>
+			After a lot of time spent sucking you off, @@color:green;her oral skill improves.@@
+		<</if>>
+
+		<<if ($slaves[$i].fetish is "none") and (random(1,100) lt 20+$slaves[$i].devotion)>>
+			<<set $slaves[$i].fetish to "cumslut">>
+			She climaxes with your dick in her mouth, learning that giving @@color:pink;blowjobs is a lot of fun.@@
+		<</if>>
+
+	<<elseif $slaves[$i].toyHole is "boobs">>
+		<<set $seed to random(5,10)>>
+		<<set $slaves[$i].mammaryCount += $seed>>
+		<<set $mammaryTotal += $seed>>
+
+		<<if ($slaves[$i].trust lt -4)>>
+			She spends the week in terrified compliance with your use of her breasts.
+		<<elseif ($slaves[$i].devotion lt -4)>>
+			She spends the week trying to keep her tits away from your grasping hands.
+		<<elseif ($slaves[$i].devotion lte 4)>>
+			She spends the week reluctantly presenting her tits for your use.
+		<<elseif ($slaves[$i].devotion lte 10)>>
+			She spends the week obediently offering her tits for your use.
+		<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "boobs")>>
+			She spends the week moaning and shivering as you give it to her where she likes it best: her tits.
+		<<else>>
+			She spends the week keeping her tits in constant contact with you, giving you titjobs, resting them against you as you work, and serving as a comfortable pillow at bedtime.
+		<</if>>
+
+		<<if ($slaves[$i].devotion lt -4)>>
+			The constant molestation fills her with @@color:mediumorchid;revulsion@@ and @@color:gold;fear.@@
+			<<set $slaves[$i].devotion -= 1>>
+			<<set $slaves[$i].trust -= 1>>
+		<<elseif ($slaves[$i].devotion lte 4)>>
+			Submitting to your groping @@color:hotpink;habituates her@@ to being your sex slave.
+			<<set $slaves[$i].devotion += 0.3>>
+		<<elseif ($slaves[$i].devotion gte 4)>>
+			The pleasant massaging @@color:hotpink;draws her closer to you.@@
+			<<set $slaves[$i].devotion += 0.7>>
+		<</if>>
+
+		<<if ($slaves[$i].sexualQuirk is "hates oral") and ($slaves[$i].devotion gt 10)>>
+			She's devoted enough to derive emotional closeness from giving you oral, which @@color:green;resolves her hatred of the act.@@
+			<<set $slaves[$i].sexualQuirk to "none">>
+		<</if>>
+
+		<<if ($slaves[$i].sexualQuirk is "hates men") and ($slaves[$i].devotion gt 4)>>
+			Spending so much time in close proximity to your masculinity @@color:green;reconciles her to serving the male gender.@@
+			<<set $slaves[$i].sexualQuirk to "none">>
+		<</if>>		
+		
+		<<if ($slaves[$i].fetish is "none") and (random(1,100) lt 20+$slaves[$i].devotion)>>
+			<<set $slaves[$i].fetish to "boobs">>
+			She climaxes to nipple stimulation alone, and starts acting as though she has @@color:pink;three pleasure buttons@@ rather than just one.
+		<</if>>
+	<</if>>
+	
+<<else>>
+	<<if ($slaves[$i].anus is 0) and ($slaves[$i].vagina is 0)>>
+		Since you haven't yet decided to sell or take her virginity or her tight little anus, you let her please you with her mouth. She is @@color:mediumaquamarine;duly grateful@@ you let her keep her innocence for another week, though her throat gets a little sore doing the work of three holes.
+		<<set $slaves[$i].trust += 0.3>>
+		<<set $seed to random(5,10)>>
+		<<set $slaves[$i].oralCount += $seed>>
+		<<set $oralTotal += $seed>>
+		
+	<<elseif ($slaves[$i].vagina is 0)>>
+		Since you haven't yet decided to sell or take her virginity, but she's taken it up the ass, you let her be your anal whore. She is @@color:mediumaquamarine;duly grateful@@ you let her keep her innocence for another week, though her butt gets a little sore.
+		<<set $slaves[$i].trust += 0.3>>
+		<<set $seed to random(5,10)>>
+		<<set $slaves[$i].analCount += $seed>>
+		<<set $analTotal += $seed>>
+		
+	<<elseif ($slaves[$i].anus is 0)>>
+		Since you haven't yet decided to sell or take her tight little anus, you let her confine her efforts to her <<if ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>pussy and <</if>>mouth. She is @@color:mediumaquamarine;duly grateful@@ you let her put off taking it up the butt another week.
+		<<set $slaves[$i].trust += 0.3>>
+		<<set $seed to random(5,10)>>
+		<<set $slaves[$i].oralCount += $seed>>
+		<<set $oralTotal += $seed>>
+		<<if ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+			<<set $slaves[$i].vaginalCount += $seed>>
+			<<set $vaginalTotal += $seed>>
+		<</if>>	
+		
+	<<elseif ($slaves[$i].amp is 1)>>
+		You carry her around with you all week, using her as your personal sex toy and bedwarmer. Without arms and legs, she is your @@color:hotpink;helpless sexual appliance@@ and is @@color:mediumaquamarine;forced to trust you.@@
+		<<set $slaves[$i].trust += 1>>
+		<<set $seed to random(3,5)>>
+		<<set $slaves[$i].oralCount += $seed>>
+		<<set $oralTotal += $seed>>	
+		<<set $slaves[$i].analCount += $seed>>
+		<<set $analTotal += $seed>>
+		
+	<<elseif ($slaves[$i].devotion gt 10)>>
+		She devotedly accompanies you all week, keeping her
+		<<if ($slaves[$i].vagina is -1)>>
+			mouth and asshole
+		<<elseif ($slaves[$i].vaginalAccessory is "chastity belt")>>
+			mouth and, since her pussy is covered by her chastity belt, asshole
+		<<else>>
+			mouth, pussy, and asshole
+		<</if>>
+		available for you at all times. 
+		<<if ($slaves[$i].dick isnot 0) and ($slaves[$i].hormones lt 1) and ($slaves[$i].balls isnot 0)>>
+			Every time her beloved <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> fucks her she gets a hardon. 
+		<<elseif ($slaves[$i].dick isnot 0)>>
+			She doesn't get a hardon as you use her, but she comes from the prostate stimulation when her beloved <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> uses her butt. 
+		<<else>>
+			She comes indecently hard whenever her beloved <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> uses her body.
+		<</if>>
+		Constant sex makes her @@color:hotpink;feel closer to you@@ and @@color:mediumaquamarine;become more trusting of you.@@
+		<<set $slaves[$i].devotion += 1>>
+		<<set $slaves[$i].trust += 0.3>>
+		<<set $seed to random(3,5)>>
+		<<set $slaves[$i].oralCount += $seed>>
+		<<set $oralTotal += $seed>>	
+		<<set $slaves[$i].analCount += $seed>>
+		<<set $analTotal += $seed>>
+		<<if ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+			<<set $slaves[$i].vaginalCount += $seed>>
+			<<set $vaginalTotal += $seed>>
+		<</if>>
+		
+	<<elseif ($slaves[$i].devotion gte 4)>>
+		Whenever you feel the need, you use whichever of her
+		<<if ($slaves[$i].vagina is -1)>>
+			mouth and asshole
+		<<elseif ($slaves[$i].vaginalAccessory is "chastity belt")>>
+			mouth and, since her pussy is covered by her chastity belt, asshole
+		<<else>>
+			mouth, pussy, and asshole
+		<</if>>
+		seem most appealing at the moment. At the start of the week she is hesitant but by the end she @@color:hotpink;knows to let you fuck her@@.
+		<<if ($slaves[$i].dick isnot 0) and ($slaves[$i].hormones lt 1) and ($slaves[$i].balls isnot 0)>>
+			By the end of the week she gets a hardon when you use her.
+		<</if>>
+		<<set $slaves[$i].devotion += 1>>
+		<<set $seed to random(3,5)>>
+		<<set $slaves[$i].oralCount += $seed>>
+		<<set $oralTotal += $seed>>	
+		<<set $slaves[$i].analCount += $seed>>
+		<<set $analTotal += $seed>>
+		<<if ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+			<<set $slaves[$i].vaginalCount += $seed>>
+			<<set $vaginalTotal += $seed>>
+		<</if>>
+		
+	<<elseif ($slaves[$i].trust lt -4)>>
+		She is afraid of you and does her best to offer you her
+		<<if ($slaves[$i].vagina is -1)>>
+			mouth and asshole
+		<<elseif ($slaves[$i].vaginalAccessory is "chastity belt")>>
+			mouth and, since her pussy is covered by her chastity belt, asshole
+		<<else>>
+			mouth, pussy, and asshole
+		<</if>>
+		to keep you happy. The habit of submission @@color:hotpink;accustoms her to following your will.@@
+		<<if ($slaves[$i].dick isnot 0) and ($slaves[$i].hormones lt 1) and ($slaves[$i].balls isnot 0)>>
+			By the end of the week she gets a hardon when you use her.
+		<</if>>
+		<<set $slaves[$i].devotion += 0.7>>
+		<<set $seed to random(3,5)>>
+		<<set $slaves[$i].oralCount += $seed>>
+		<<set $oralTotal += $seed>>	
+		<<set $slaves[$i].analCount += $seed>>
+		<<set $analTotal += $seed>>
+		<<if ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+			<<set $slaves[$i].vaginalCount += $seed>>
+			<<set $vaginalTotal += $seed>>
+		<</if>>
+		
+	<<else>>
+		Whenever you feel the need, you grab her and use whichever of her
+		<<if ($slaves[$i].vagina is -1)>>
+			mouth and asshole
+		<<elseif ($slaves[$i].vaginalAccessory is "chastity belt")>>
+			mouth and, since her pussy is covered by her chastity belt, asshole
+		<<else>>
+			mouth, pussy, and asshole
+		<</if>>
+		seem most appealing at the moment.
+		<<if ($slaves[$i].dick isnot 0)>>
+			Her dick stays limp as you rape her.
+		<</if>>
+		A week of rape from <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> increases her @@color:mediumorchid;hatred@@ and @@color:mediumaquamarine;fear@@ of you.
+		<<set $slaves[$i].trust -= 1>>
+		<<set $slaves[$i].devotion -= 0.7>>
+		<<set $seed to random(3,5)>>
+		<<set $slaves[$i].oralCount += $seed>>
+		<<set $oralTotal += $seed>>	
+		<<set $slaves[$i].analCount += $seed>>
+		<<set $analTotal += $seed>>
+		<<if ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+			<<set $slaves[$i].vaginalCount += $seed>>
+			<<set $vaginalTotal += $seed>>
+		<</if>>	
+	<</if>>
+
+	<<if ($slaves[$i].health lt 0) and (random(1,100) gt 50)>>
+		Under your personal supervision, @@color:green;her health improves@@.
+		<<set $slaves[$i].health += 1>>
+	<</if>>
+
+	<<if (random(1,100) lt 20+$slaves[$i].devotion)>>
+		<<if ($slaves[$i].oralSkill lt 3)>>
+			<<set $slaves[$i].oralSkill += 1>>
+			After a lot of time spent with your dick in her mouth, @@color:green;her oral skill improves@@.
+		<<elseif ($slaves[$i].vaginalSkill lt 3) and ($slaves[$i].vagina gt 0) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+			<<set $slaves[$i].vaginalSkill += 1>>
+			After a lot of time spent getting fucked, @@color:green;her vaginal skill improves@@.
+		<<elseif ($slaves[$i].analSkill lt 3) and ($slaves[$i].anus isnot 0)>>
+			<<set $slaves[$i].analSkill += 1>>
+			After a lot of time spent taking it up the ass, @@color:green;her anal skill improves@@.
+		<</if>>
+	<</if>>
+<</if>>
+
+<<display "FResult">>
+<<display "Beauty">>
+
+<<if ($slaves[$i].relation isnot 0)>>
+	<<for $j to 0; $j lt $slaves.length; $j++>>
+		<<if ($slaves[$j].ID is $slaves[$i].relationTarget)>>
+			<<if ($slaves[$j].assignment is "please you")>>
+				Since you are also keeping her $slaves[$j].relation as a sexual servant, you often use them together, which leaves quite a public impression.
+			<</if>>
+			<<break>>
+		<</if>>
+	<</for>>
+<</if>>
+
+<<if ($slaves[$i].ID is $Concubine.ID)>>
+	<<set $repGain += Math.trunc(($beauty*$FResult)*0.5)>>
+<<else>>
+	<<set $repGain += Math.trunc(($beauty*$FResult)*0.1)>>
+<</if>>
+
+Keeping her as nothing but your personal 
+<<if ($slaves[$i].toyHole is "pussy")>>
+	pussy toy
+<<elseif ($slaves[$i].toyHole is "ass")>>
+	anal toy
+<<elseif ($slaves[$i].toyHole is "mouth")>>
+	oral toy
+<<else>>
+	fucktoy
+<</if>>
+<<if ($slaves[$i].prestige gt 0)>>
+	@@color:green;adds considerably to your reputation,@@ since she's prestigious.
+	<<set $repGain += ($slaves[$i].prestige*Math.trunc(($beauty*$FResult)/10))>>
+<<else>>
+	@@color:green;adds slightly to your reputation@@ as a prosperous citizen.
+<</if>>
+
+<</nobr>>\

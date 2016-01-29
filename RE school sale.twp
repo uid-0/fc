@@ -1,0 +1,62 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Slave Schools">>
+
+<<display "Generate XX Slave">>
+<<set $activeSlave.origin to "She was raised in a radical slave school that treated her with drugs and surgery from a very young age.">>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.devotion to random(5,9)>>
+<<set $activeSlave.trust to random(5,9)>>
+<<set $activeSlave.health to random(5,6)>>
+<<set $activeSlave.weight to 0>>
+<<set $activeSlave.lips to 1>>
+<<set $activeSlave.face to 1>>
+<<set $activeSlave.butt to random(4,5)>>
+<<set $activeSlave.buttImplant to 1>>
+<<set $activeSlave.boobsImplant to 400>>
+<<set $activeSlave.boobs to random(8,10)*100>>
+<<set $activeSlave.lipsImplant to 1>>
+<<set $activeSlave.anus to 0>>
+<<set $activeSlave.vagina to 0>>
+<<set $activeSlave.vaginalSkill to 0>>
+<<set $activeSlave.oralSkill to 0>>
+<<set $activeSlave.analSkill to 0>>
+<<set $activeSlave.age to 18>>
+<<set $activeSlave.hlength to "long and in twin schoolgirl tails">>
+
+<<display "Slave Cost">>
+
+<</nobr>>\
+\
+A young slave is going door to door offering herself for sale on behalf of her owner. It's rare to see a slave obedient enough to be entrusted with her own sale, and she's interesting, so you let her up. She stands in front of your desk and waits for instructions. She's wearing a very skimpy schoolgirl skirt and a white blouse so tight and brief that the tops of her areolae are visible. The badge on her blouse identifies her as a product of one of the Free Cities' legal slave orphanages. You instruct her to tell you about herself.
+
+"I was raised and trained by a slave orphanage, Sir. It is not legal to own children, but it is legal to charge an orphan for the costs of raising her when she reaches 18, and those debts are always high enough to enslave her. My 18th birthday was yesterday, so I am a slave and for sale now."
+
+"I have been trained for obedience since I came to the orphanage. At 14 they put me on drugs to make sure I'd grow nice T&A. On my 16th birthday I got my first set of implants. Every time my boobs got used to the implants, I got sent in for a bigger set. I'm on my second set." She unbuttons her blouse and displays a pair of big fake tits. "I've also had my lips done." She blows you a wet kiss.
+
+She hikes up her skirt and spins around slowly. "The drugs also made my butt bigger, and I've had my butt done too. Since it wasn't okay to fuck me before I had turned 18 and been made a slave, I'm a virgin and my anus has never had anything up it, Sir." She pulls her buttocks apart to prove it.
+
+"I cost ¤$slaveCost, Sir."
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $slaveCost>>\
+<<click "Buy her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $slaveCost>>
+	<<set $nextLink to "AS Dump">>
+	<<replace "#result">>
+	She thanks you profusely for purchasing her, and she means it. She's happy to have been bought by a real master, and to go by the hardness of her nipples, looking forward to finally losing her virginity.
+	<<set $nextLink to "AS Dump">>\
+	<<set $returnTo to "RIE Eligibility Check">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to buy her.//
+<</if>>\
+</span>

@@ -1,0 +1,369 @@
+<<nobr>>
+
+<<if ($showClothing is 1) and ($saleDescription is 0)>>
+
+<<if $surgeryDescription is 0>>
+<<if ($activeSlave.clothes is "a very tight corset")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's tits spill over the top of her corset, so huge that the bottom of it is scarcely visible beneath them.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's big tits spill over the top of her corset.
+  <<else>>
+	$activeSlave.slaveName's corset ends beneath her breasts, pushing them up and presenting them.
+  <</if>>
+<<elseif ($activeSlave.clothes is "conservative clothing")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's blouse is professional, but can't conceal the gigantic dimensions of her tits.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's blouse is professional, but can't conceal how big her tits are.
+  <<else>>
+	$activeSlave.slaveName's blouse is professional and includes a pleated front over her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "chains")>>
+  <<if ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName has a length of chain painfully tightened around the base of each breast, forcing them out.
+  <<else>>
+	$activeSlave.slaveName has a length of chain painfully looped under her chest, forcing her breasts up.
+  <</if>>
+<<elseif ($activeSlave.clothes is "Western clothing")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's flannel shirt can't begin to contain her tits, so she's just tied it under them for support.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's flannel shirt can't close over her tits, so she's just buttoned it up to where they start and let them fill it out above that.
+  <<else>>
+	$activeSlave.slaveName's flannel shirt rests comfortably over her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "body oil")>>
+  $activeSlave.slaveName's breasts are covered in a sexy sheen of body oil.
+<<elseif ($activeSlave.clothes is "a toga")>>
+  $activeSlave.slaveName is wearing her toga so as to leave one breast bare.
+<<elseif ($activeSlave.clothes is "a slutty quipao")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's quipao demurely covers her breasts, though it cannot conceal their absurd size.
+  <<else>>
+	$activeSlave.slaveName's quipao demurely covers her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "uncomfortable straps")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's slave outfit has special straps for her massive boobs: one strap down the front of each with steel rings to let her nipples through, and a strap around the base of each, painfully squeezing her breasts out to make them seem even bigger.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's slave outfit's straining straps restrain the flesh of her tits like a string bikini, with steel rings to let her nipples through.
+  <<else>>
+	$activeSlave.slaveName's slave outfit's straps pass over her breasts like a string bikini, with steel rings to let her nipples through.
+  <</if>>
+<<elseif ($activeSlave.clothes is "restrictive latex")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's breasts protrude through holes in her latex suit, which are too small for them, painfully constricting her and making them seem even bigger.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's breasts protrude through holes in her latex suit.
+  <<else>>
+	$activeSlave.slaveName's latex suit leaves her chest bare.
+  <</if>>
+<<elseif ($activeSlave.clothes is "attractive lingerie")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's lace bra cannot cover the whole breast; its cups are half-moon shaped, and designed to offer what support they can to the bottom of them.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's sturdy lace bra supports her huge breasts.
+  <<else>>
+	$activeSlave.slaveName's pretty lace bra accentuates her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's maid dress stops below her breasts, but the outfit includes a thin white blouse that covers them to just over her nipples when she pulls it up over them. It's pulled down by her huge chest whenever she moves.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's maid dress stops below her breasts, but the outfit includes a thin white blouse that covers them to just over her nipples, leaving a large area of deliciously unsupported and jiggling cleavage.
+  <<else>>
+	$activeSlave.slaveName's maid dress stops below her breasts, but the outfit includes a thin white blouse to cover them.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a nice maid outfit")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's maid dress front is almost conservative, covering her breasts, though it cannot conceal their enormous mass.
+  <<else>>
+	$activeSlave.slaveName's maid dress front is almost conservative, covering her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a fallen nun's habit")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's latex habit includes a half-corset, but only the bottom edge is visible: the rest is swallowed up under her gigantic tits.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's latex habit includes a half-corset to force her big boobs up and forward, forming a log of cleavage even though they're bare.
+  <<else>>
+	$activeSlave.slaveName's latex habit includes a half-corset to force her boobs up and forward.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a penitent nun's habit")>>
+	If she fails to hold her torso totally still, the coarse cloth of her top agonizingly scrapes across her nipples, bare under her habit.
+<<elseif ($activeSlave.clothes is "string lingerie")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	With even the slightest movement, $activeSlave.slaveName's huge breasts pull her nipples out from under the tiny scrap of cloth that her string bikini affords them.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's big breasts threaten to break out of her straining string bikini top.
+  <<else>>
+	$activeSlave.slaveName's string bikini top barely covers anything, affording only a tiny scrap of cloth for each nipple.
+  <</if>>
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's tits are so big that her t-shirt barely comes down over her nipples, leaving a lot of underboob hanging out.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's t-shirt is held out and away from her midriff by her big breasts.
+  <<else>>
+	$activeSlave.slaveName's t-shirt is tied up to bare her midriff.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a slutty outfit")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName has to be careful choosing slutty outfits that can restrain her massive breasts.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName has to be careful choosing slutty outfits that can handle her big breasts.
+  <<else>>
+	$activeSlave.slaveName chooses slutty outfits that accentuate her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a slave gown")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's slave gown is carefully engineered and is somehow able to cover the enormous mass of her breasts.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's slave gown is carefully tailored, tastefully covering yet enhancing her big breasts.
+  <<else>>
+	$activeSlave.slaveName's slave gown subtly accentuates her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "slutty business attire") and ($activeSlave.boobs gt 800)>>
+<<elseif ($activeSlave.clothes is "slutty business attire")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's suit jacket and blouse are both open in front, leaving her boobs bare, since there's no way she could close them.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's suit jacket is open in front, and her straining blouse barely restrains her tits.
+  <<else>>
+	$activeSlave.slaveName's suit jacket is open in front, and her blouse barely covers her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "nice business attire")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's tits are so big that they strain even her specially tailored blouse and jacket.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's big tits strain against her tailored blouse and jacket.
+  <<else>>
+	$activeSlave.slaveName's suit jacket conceals a flattering bra that lifts and presents her bosom.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a comfortable bodysuit")>>
+	$activeSlave.slaveName's bodysuit is so tightly form-fitting that her breasts are individually hugged and supported by the material.
+<<elseif ($activeSlave.clothes is "harem gauze")>>
+  <<if ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's harem girl outfit lets her breasts swing free beneath a thin film of gauze.
+  <<else>>
+	$activeSlave.slaveName's harem girl outfit only covers her breasts with a thin film of gauze.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a nurse outfit")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's jacket barely closes beneath her tits, leaving almost everything visible.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's jacket pushes her tits together to form some great cleavage.
+  <<else>>
+	$activeSlave.slaveName's jacket pushes her tits together to form as much cleavage as possible.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's breasts are too big for her blouse, so she's tied it under them; they're so huge that the blouse disappears entirely beneath them.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's breasts are too big for her blouse, so she's tied it under them and left them totally bare.
+  <<else>>
+	$activeSlave.slaveName's blouse only barely covers her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a kimono")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's kimono demurely covers her breasts, though it cannot conceal their absurd size.
+  <<else>>
+	$activeSlave.slaveName's kimono demurely covers her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "battledress")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's huge breasts are supported by a specially engineered, space-age sports bra under her tank top.
+  <<else>>
+	$activeSlave.slaveName's breasts are supported by a sports bra under her tank top.
+  <</if>>
+<<elseif ($activeSlave.clothes is "slutty jewelry") and ($activeSlave.boobs gt 800)>>
+<<elseif ($activeSlave.clothes is "slutty jewelry")>>
+  <<if ($activeSlave.boobs gt 2000)>>
+	$activeSlave.slaveName's bangles include a thin chain that runs under her breasts, disappearing entirely.
+  <<elseif ($activeSlave.boobs gt 800)>>
+	$activeSlave.slaveName's bangles include a thin chain that runs under her breasts, appearing and disappearing enticingly when she moves.
+  <<else>>
+	$activeSlave.slaveName's bangles include a light chain that loops under her breasts.
+  <</if>>
+<<elseif ($activeSlave.clothes is "no clothing")>>
+<</if>>
+<<else>>
+	$activeSlave.slaveName's breasts are bare and ready for surgery.
+<</if>>
+
+<</if>>
+
+Her
+<<if $activeSlave.boobs lt 300>><<print either("androgynous", "flat")>> chest is barely there.
+<<elseif $activeSlave.boobs lt 400>><<print either("pointy", "tiny")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> chest only fills an A-cup.
+<<elseif $activeSlave.boobs lt 500>><<print either("perky", "small")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "boobs", "bosom")>> would fill a B-cup. 
+<<elseif $activeSlave.boobs lt 650>><<print either("healthy", "curved")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "boobs", "bust", "bosom")>> would fill a C-cup. 
+<<elseif $activeSlave.boobs lt 800>><<print either("big", "sizeable")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "boobs", "bust", "bosom")>> would fill a D-cup. 
+<<elseif $activeSlave.boobs lt 1000>><<print either("large", "big")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "boobs", "bust", "bosom")>> would fill a DD-cup. 
+<<elseif $activeSlave.boobs lt 1200>><<print either("proud", "hefty")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders", "boobs")>> would fill an F-cup. 
+<<elseif $activeSlave.boobs lt 1400>><<print either("hefty", "huge")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill a G-cup. 
+<<elseif $activeSlave.boobs lt 1600>><<print either("massive", "huge")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill an H-cup.
+<<elseif $activeSlave.boobs lt 1800>><<print either("enormous", "massive")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill an I-cup.
+<<elseif $activeSlave.boobs lt 2050>><<print either("titanic", "enormous")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill a J-cup.
+<<elseif $activeSlave.boobs lt 2300>><<print either("stupendous", "titanic")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill a K-cup.
+<<elseif $activeSlave.boobs lt 2600>><<print either("magnificent", "stupendous")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill an L-cup.
+<<elseif $activeSlave.boobs lt 2900>><<print either("tremendous", "magnificent")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill an M-cup.
+<<elseif $activeSlave.boobs lt 3250>><<print either("awe-inspiring", "tremendous")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill an N-cup.
+<<elseif $activeSlave.boobs lt 3600>><<print either("absurd", "awe-inspiring")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill an O-cup.
+<<elseif $activeSlave.boobs lt 3950>><<print either("disproportionate", "attention-grabbing")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill a P-cup.
+<<elseif $activeSlave.boobs lt 4300>><<print either("shocking", "massive")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill a Q-cup.
+<<elseif $activeSlave.boobs lt 4700>><<print either("unreal", "jaw-dropping")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill an R-cup.
+<<elseif $activeSlave.boobs lt 5100>><<print either("tremendous", "astounding")>><<if $showBoobCCs is 1>>, <<print $activeSlave.boobs>>cc<</if>> <<print either("tits", "breasts", "mammaries", "udders")>> would fill an S-cup.
+<<elseif ($activeSlave.amp is 1)>><<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> fill out an enormous custom bra, and are so large that she might not be able to walk, if she still had legs. Her tits dominate her entire frame.
+<<else>><<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> fill out an enormous custom bra, and are so large that she can barely stand. Her tits dominate her entire frame.
+<</if>>
+
+<<if $showImplantEffects is 1>>
+
+<<if ($activeSlave.boobsImplant is 0) and ($activeSlave.boobs gt 1200)>>
+	They are soft and sag massively from her chest.
+<<elseif ($activeSlave.boobsImplant is 0) and ($activeSlave.boobs gt 800)>>
+	They are soft and hang naturally from her chest.
+<<elseif ($activeSlave.boobsImplant is 0) and ($activeSlave.boobs gt 500)>>
+	Her breasts are soft and rest naturally against her chest.
+<<elseif ($activeSlave.boobsImplant is 0) and ($activeSlave.boobs gt 250)>>
+	Her breasts are perky and rest naturally.
+<<elseif ($activeSlave.boobsImplant is 0)>>
+<<elseif ($activeSlave.boobsImplant lte 400) and ($activeSlave.boobs gt 800)>>
+	She has <<print $activeSlave.boobsImplant>>cc breast implants. Her tits look fairly natural, but defy gravity more than could be expected given their size.
+<<elseif ($activeSlave.boobsImplant lte 400) and ($activeSlave.boobs gt 30)>>
+	She has <<print $activeSlave.boobsImplant>>cc breast implants. Her tits look fairly natural, but are perkier than could be expected given their size.
+<<elseif ($activeSlave.boobsImplant lte 400)>>
+	She has <<print $activeSlave.boobsImplant>>cc breast implants. Her tits look fairly natural, mostly because they're so small.
+<<elseif ($activeSlave.boobsImplant lte 600) and ($activeSlave.boobs gte 800)>>
+	She has <<print $activeSlave.boobsImplant>>cc breast implants. Her implants are well done, but her breasts are so perfect and gravity-defying that they are clearly artificial.
+<<elseif ($activeSlave.boobsImplant lte 600)>>
+	She has <<print $activeSlave.boobsImplant>>cc breast implants. Her implants are well done, but her breasts are so rounded and high that they are clearly artificial.
+<<elseif ($activeSlave.boobs lte 1600)>>
+	She has <<print $activeSlave.boobsImplant>>cc fillable breast implants, which is obvious from the roundness of her fake tits.
+<<else>>
+	She has <<print $activeSlave.boobsImplant>>cc fillable breast implants, which is obvious from the unnatural size of her boobs.
+<</if>>
+
+<</if>>
+
+<<if $activeSlave.boobs gt 7500>>
+<<if $activeSlave.amp is 0>>
+  Her breasts are so massive that it is difficult for her to move.
+  <<if $activeSlave.muscles gt 2>>
+	However, she is so powerfully built that she can manage it with effort, using her arms to support them.
+  <<elseif $activeSlave.muscles gt 1>>
+	She can barely manage to get to her feet unaided, and uses a wheeled stand to support them when she must walk more than a short distance.
+  <<elseif $activeSlave.muscles gt 0>>
+	She requires assistance to get to her feet, and uses a wheeled stand to support them when she must walk anywhere or remain upright for more than a short time.
+  <<else>>
+	She cannot get to her feet unaided, and uses a wheeled stand to support them when she must walk or remain upright.
+  <</if>>
+<<else>>
+  Together they are nearly the same size as her torso, making her about half boob.
+<</if>>
+<</if>>
+
+<<if $activeSlave.nipples is 1>>
+	Her nipples are nice and large.
+<<elseif $activeSlave.nipples is 2>>
+	Her nipples are huge and puffy, sticking out a long way when they're erect.
+<<elseif $activeSlave.nipples gt 2>>
+	Her nipples are enormous, the size of the last joint of her thumbs when erect.
+<</if>>
+
+<<if ($showClothing is 1) and ($saleDescription is 0)>>
+<<if $activeSlave.nipples gt 1>>
+<<if ($activeSlave.clothes is "cutoffs and a t-shirt")>>
+	Since she isn't wearing a bra, they tent the front of her t-shirt.
+<</if>>
+<</if>>
+<</if>>
+
+<<if $activeSlave.areolae is 1>>
+	Her areolae form large, lovely circles of darker skin around each nipple.
+<<elseif $activeSlave.areolae is 2>>
+	Her areolae are unusually wide, eye-catching circles of darker skin around each nipple.
+<<elseif $activeSlave.areolae is 3>>
+	Her areolae are unnaturally broad, covering much of the front of each breast.
+<<elseif $activeSlave.areolae is 4>>
+	Her huge areolae are heart-shaped, an obvious surgical alteration.
+<<elseif $activeSlave.areolae is 5>>
+	Her huge areolae are star-shaped, an obvious surgical alteration.
+<</if>>
+
+<<if $activeSlave.lactation is 1>>
+	Her motherly breasts are full of milk.
+<<elseif $activeSlave.lactation is 2>>
+	Her engorged nipples are dripping milk. The lactation drugs are so powerful that if she hasn't been milked in the past hour or so, she leaves a mess wherever she goes.
+<</if>>
+
+<<if ($showClothing is 1) and ($saleDescription is 0)>>
+<<if $activeSlave.areolae gt 1>>
+<<if ($activeSlave.clothes is "string lingerie")>>
+	Her string bikini covers only her nipples, with the rest of her areolae lewdly visible around them.
+<<elseif ($activeSlave.clothes is "slutty business attire")>>
+	The upper half of each of them is visible above the the top of her blouse.
+<</if>>
+<</if>>
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if $activeSlave.nipplesPiercing is 1>>
+	Her nipples have a simple piercing, which keeps them a little harder than they would normally be.
+<<elseif $activeSlave.nipplesPiercing is 2>>
+	Her nipples are heavily pierced with several rings and studs, and there is a chain between them. The constant tugging keeps her nipples erect.
+<</if>>     
+
+<<if $activeSlave.nipplesPiercing gt 0>>
+  <<if ($activeSlave.clothes is "attractive lingerie")>>
+	The piercings are a girly color, to complement her lingerie.
+  <<elseif ($activeSlave.clothes is "uncomfortable straps")>>
+	Each nipple bears a horizontal bar that is held forward of the steel ring that's part of her outfit, constantly tugging them outward.
+  <<elseif ($activeSlave.clothes is "a very tight corset")>>
+	The piercings are cold steel, to accentuate the corset's Gothic style.
+  <<elseif ($activeSlave.clothes is "restrictive latex")>>
+	The piercings are tantalizingly visible under the latex.
+  <<elseif ($activeSlave.clothes is "a fallen nun's habit")>>
+	A tiny ebon cross on a short chain dangles from each piercing.
+  <<elseif ($activeSlave.clothes is "string lingerie")>>
+	The piercings are a pastel color, to complement her bikini.
+  <<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+	The piercings are tantalizingly visible under the thin material.
+  <<elseif ($activeSlave.clothes is "battledress")>>
+	The piercings are tantalizingly visible under her tank top.
+  <<elseif ($activeSlave.clothes is "slutty business attire")>>
+	One side of each piercing peeks over the edge of her blouse.
+  <<elseif ($activeSlave.clothes is "a comfortable bodysuit")>>
+	The piercings are tantalizingly visible under the tight bodysuit.
+  <<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+	One side of each piercing peeks over the edge of her lacy top.
+  <<elseif ($activeSlave.clothes is "harem gauze")>>
+	The piercings are tantalizingly visible under the gauze.
+  <</if>>
+<</if>>     
+
+<<if ($activeSlave.brand isnot 0) and ($activeSlave.brandLocation is "breasts")>>
+	She has $activeSlave.brand branded into the flesh of one of her $activeSlave.brandLocation.
+<</if>>
+
+<<if $activeSlave.boobsTat is "tribal patterns">>
+	Her chest and breasts are tattooed with tribal patterns that focus attention on her nipples.
+<<elseif $activeSlave.boobsTat is "floral designs">>
+	Her chest is tattooed with a pattern of flowering vines that delicately outlines her breasts.
+<<elseif $activeSlave.boobsTat is "slutty advertisements">>
+	'Fuck Me!' is tattooed across her chest in such large letters that the word is visible a long way off.
+<<elseif $activeSlave.boobsTat is "demeaning inscriptions">>
+	'Fuckslave' is tattooed across her chest in such large letters that the word is visible a long way off.
+<<elseif $activeSlave.boobsTat is "lewd scenes">>
+	Her chest is tattooed with lewd scenes; each of her breasts shows a phallus receiving a titfuck while each of her collarbones shows a woman deepthroating a large phallus.
+<<elseif $activeSlave.boobsTat is "degrading language">>
+	Her chest is tattooed with degrading language; the inscriptions on her breasts advertise her sluttiness while the inscriptions on her collarbones state her sexual slavery.
+<<elseif $activeSlave.boobsTat is "bovine patterns">>
+	Her chest is tattooed to look like a Holstein cow's, with her udders left bare to draw attention to them.
+<</if>>
+
+<</if>>
+
+<</nobr>>

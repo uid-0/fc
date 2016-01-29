@@ -1,0 +1,58 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+
+<</nobr>>\
+\
+$youngerSister.slaveName, whose older sister tried to sell her to you, is up for inspection. As usual, you pepper your inspection with questions about her duties, her feelings about her physical condition, and experiences. More information about one's property is never a bad thing. When the inspection reaches $youngerSister.slaveName's asshole, you ask whether she enjoyed having her older sister sell her butt.
+
+"No, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>," she says.
+\
+<span id="result">
+<<click "Turnabout is fair play">>
+	<<replace "#result">>
+	$olderSister.slaveName is brought in. You gag her, throw the resisting bitch down on the couch, and hold her there. Then, you peremptorily order the wide-eyed $youngerSister.slaveName to sodomize her sister. She stares open mouthed for a moment, but comes over obediently. Her face is a strange mix of vengeful eagerness, revulsion, and even a little lust. She shoves herself into the frantically struggling girl's butt without mercy. Her cock is pathetically small, but by how $olderSister.slaveName reacts it might as well be a baseball bat. $youngerSister.slaveName rarely gets to penetrate anything, mostly serving as an oral slut and anal cocksleeve, so she comes in no time and takes a turn holding $olderSister.slaveName down so you can claim sloppy seconds on her spasming butthole.
+    @@color:hotpink;$youngerSister.slaveName has become more devoted to you,@@ while $olderSister.slaveName @@color:mediumorchid;hates you@@ and has become @@color:mediumorchid;more afraid of you,@@ and @@color:lime;$olderSister.slaveName has lost her anal virginity.@@
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $olderSister.ID == $slaves[$i].ID>>
+		<<set $slaves[$i].trust -= 1>>
+		<<set $slaves[$i].devotion -= 0.7>>
+		<<set $slaves[$i].anus to 1>>
+		<<set $slaves[$i].analCount += 1>>
+		<<set $analTotal += 1>>
+	<</if>>
+	<</for>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $youngerSister.ID == $slaves[$i].ID>>
+		<<set $slaves[$i].devotion += 1>>
+		<<set $slaves[$i].penetrativeCount += 1>>
+		<<set $penetrativeTotal += 1>>
+	<</if>>
+	<</for>>
+    <</replace>>
+<</click>>
+<<click "Let her have her revenge, but remind her of her place">>
+	<<replace "#result">>
+	$olderSister.slaveName is brought in. You gag her, throw the resisting bitch down on the couch, and hold her there. Then, you peremptorily order the wide-eyed $youngerSister.slaveName to put her cock up her sister's ass, and then hold it there. She stares open mouthed for a moment, but comes over obediently. Her face is a strange mix of vengeful eagerness, revulsion, and even a little lust. She shoves herself into the frantically struggling girl's butt without mercy. Her cock is pathetically small, but by how $youngerSister.slaveName reacts it might as well be a baseball bat. $youngerSister.slaveName obeys your orders and holds still after inserting herself. You<<if ($PC.dick is 0)>> don a strap-on,<</if>> move around behind her and start assfucking her in turn, slowly permitting her to find a rhythm where she can fuck and get fucked at the same time. She's getting it much harder than she's giving it but she's experienced enough that she comes quickly.
+    @@color:hotpink;$youngerSister.slaveName has become more devoted to you,@@ while @@color:mediumorchid;$olderSister.slaveName has become more rebellious,@@ and @@color:lime;$olderSister.slaveName has lost her anal virginity.@@
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $olderSister.ID == $slaves[$i].ID>>
+		<<set $slaves[$i].devotion -= 1>>
+		<<set $slaves[$i].anus to 1>>
+		<<set $slaves[$i].analCount += 2>>
+		<<set $analTotal += 2>>
+	<</if>>
+	<</for>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $youngerSister.ID == $slaves[$i].ID>>
+		<<set $slaves[$i].devotion += 1>>
+		<<set $slaves[$i].analCount += 1>>
+		<<set $analTotal += 1>>
+		<<set $slaves[$i].penetrativeCount += 1>>
+		<<set $penetrativeTotal += 1>>
+	<</if>>
+	<</for>>
+    <</replace>>
+<</click>>
+</span>

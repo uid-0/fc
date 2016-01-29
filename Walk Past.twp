@@ -1,0 +1,266 @@
+<<nobr>>
+//
+  <<set $partner to 0>>
+<<if ($activeSlave.relation isnot 0) and (random(1,100) gt 80)>>
+  <<set $seed to 110>>
+  <<set $partner to "relation">>
+<<elseif ($activeSlave.relationship isnot 0) and (random(1,100) gt 70)>>
+  <<set $seed to 120>>
+  <<set $partner to "relationship">>
+<<elseif ($activeSlave.rivalry isnot 0) and ($activeSlave.amp isnot 1) and (random(1,100) gt 70)>>
+  <<set $seed to 130>>
+  <<set $partner to "rivalry">>
+<<else>>
+  <<set $seed to random(1,100)>>
+<</if>>
+
+<span id="walk">
+
+<<if ($partner isnot "relationship") or ($activeSlave.relationship lt 3) or ($activeSlave.releaseRules is "restrictive")>>
+
+<<print $activeSlave.slaveName>>
+
+<<if $activeSlave.assignment is "stay confined">>
+	is confined, but you have a fine view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feed from her cell.
+<<elseif $activeSlave.assignment is "live with your Head Girl">>
+	is getting the Head Girl's suite cleaned up while $HeadGirl.slaveName is out working.
+<<elseif $activeSlave.assignment is "work independently">>
+	is working from her apartment, but you have a fine view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+<<elseif ($activeSlave.assignment is "work in the brothel")>>
+  <<if ($seed gt 80)>>
+	is working in the brothel, and is riding a customer's dick. You have a voyeuristic view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <<elseif ($seed gt 60)>>
+	is working in the brothel, and is sucking a customer's cock. You have a voyeuristic view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <<elseif ($seed gt 40)>>
+	is working in the brothel, and is pleasuring a customer's cunt. You have a voyeuristic view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+<<elseif ($seed gt 20)>>
+	is working in the brothel, and is getting pounded by a woman wearing a strap-on. You have a voyeuristic view of your slave's <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <<else>>
+	is working in the brothel, and is being held down and buttfucked by a customer. You have a voyeuristic view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <</if>>
+<<elseif ($activeSlave.assignment is "be confined in the arcade")>>
+  <<if ($seed gt 80)>>
+	is confined in the arcade; her ass is held out at cock height, and a customer is using her fuckhole.
+  <<elseif ($seed gt 60)>>
+	is confined in the arcade; her mouth is held open at cock height, and a customer is fucking her throat.
+  <<elseif ($seed gt 40)>>
+	is confined in the arcade; a woman is abusing her with a couple of dildoes.
+  <<elseif ($seed gt 20)>>
+	is confined in the arcade; a customer is cruelly spanking her helpless butt.
+  <<else>>
+	is confined in the arcade; a customer is harshly using her defenseless anus.
+  <</if>>
+<<elseif ($activeSlave.assignment is "serve the public")>>
+  <<if ($seed gt 80)>>
+	is serving the public, and is riding a citizen's dick. You have a voyeuristic view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <<elseif ($seed gt 60)>>
+	is serving the public, and is sucking a citizen's cock. You have a voyeuristic view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <<elseif ($seed gt 40)>>
+	is serving the public, and is pleasuring a citizen's cunt. You have a voyeuristic view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <<elseif ($seed gt 20)>>
+	is serving the public, and is getting pounded by a citizen wearing a strap-on. You have a voyeuristic view of your slave's <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <<else>>
+	is serving the public, and is being held down and buttfucked by a citizen. You have a voyeuristic view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <</if>>
+<<elseif ($activeSlave.assignment is "work in the dairy")>>
+  <<if ($seed gt 50)>>
+	is working in the dairy, and is having her tits milked, but you have a good view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <<else>>
+	is working in the dairy, and is massaging her sore tits, but you have a good view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+  <</if>>
+<<elseif ($activeSlave.assignment is "work in the collection facility")>>
+	is working in the collection facility, and is massaging her sore shaft, but you have a good view of her <<if $seeRace is 1>>$activeSlave.race body <</if>>on the feeds.
+<<elseif ($activeSlave.assignment is "work on the promenade")>>
+  <<if ($seed gt 50)>>
+	is working on the promenade, displaying her <<if $seeRace is 1>>$activeSlave.race <</if>>body, keeping citizens company, and flirting with anyone who shows interest.
+  <<else>>
+	is working on the promenade, or rather just off it, having taken a prominent citizen back to a discreet room <<if $seeRace is 1>> so he can use her $activeSlave.race body<</if>>.
+  <</if>>
+<<elseif ($activeSlave.assignment is "work as a servant")>>
+  <<if ($seed gt 50)>>
+	was scrubbing the penthouse floor, until another slave requested oral service.
+  <<else>>
+	is scrubbing the penthouse floor.
+  <</if>>
+<<elseif ($activeSlave.assignment is "guard you")>>
+	is standing discreetly behind your left shoulder, watching for threats. She has a straight ceramic sword strapped to her back and a machine pistol at her hip.
+<<elseif ($activeSlave.assignment is "be the Madam")>>
+	is managing the brothel: she is making sure all the customers are satisfied and all the whores are working hard.
+<<elseif ($activeSlave.assignment is "be the Wardeness") and ($seed gt 50)>>
+	is looking after the cells: she is forcing a resistant slave to orally service her.
+<<elseif ($activeSlave.assignment is "be the Wardeness")>>
+	is looking after the cells: she is beating a rebellious slave across the buttocks.
+<<elseif ($activeSlave.assignment is "be confined in the cellblock")>>
+	is confined in the cells, and is staring fixedly at her cell door.
+<<elseif ($activeSlave.assignment is "be your Concubine")>>
+	is checking over the appearance of your harem, making sure everyone looks perfect.
+<<elseif ($activeSlave.assignment is "serve in the master suite")>>
+  <<if ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "nympho")>>
+	is having enthusiastic sex with all of your other toys while waiting for your cock.
+  <<else>>
+	is having idle sex with several of your other toys while they await your pleasure.
+	<<if ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "buttslut")>>
+	  She's happily taking a strap-on up her asspussy.
+	<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "cumslut")>>
+	  She's happily performing oral on another slave.
+	<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "dom")>>
+	  She's holding another slave down while she fucks her.
+	<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "submissive")>>
+	  She's letting another slave hold her down as she fucks her.
+	<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "sadist")>>
+	  She's spanking another slave with one hand and giving her a handjob with the other.
+	<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "masochist")>>
+	  Another slave is spanking her and and giving her a handjob at the same time.
+	<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "boobs")>>
+	  She has a slave sucking on each of her nipples while she gives each a handjob.
+	<</if>>
+  <</if>>
+<<elseif ($activeSlave.assignment is "be the Stewardess")>>
+	is managing the house servants: she overseeing the laboring house slaves and punishing any that step out of line.
+<<elseif ($activeSlave.assignment is "be the Schoolteacher")>>
+	is teaching classes: she is leading the slave students in rote recitation.
+<<elseif ($activeSlave.assignment is "be the Concierge")>>
+	is taking the lead on the promenade: she greets new arrivals, flirts with them prettily, and subtly guides them towards choice sluts.
+<<elseif ($activeSlave.assignment is "be the Milkmaid")>>
+	is working in the dairy, looking after your stock.
+<<elseif ($activeSlave.assignment is "be the Collectrix")>>
+	is working in the collection facility, looking after your stock.
+<<else>> /* WALKPASTS START HERE */
+
+<<if ($activeSlave.heels is 1) and ($activeSlave.shoes isnot "flats") and ($activeSlave.shoes isnot "none")>>
+	walks past your desk with the tiny swaying steps she must take in order to walk on her surgically altered legs. She is on her way to
+<<elseif ($activeSlave.shoes is "heels")>>
+	walks past your desk with the swaying steps she must take in her high heels. She is on her way to
+<<elseif ($activeSlave.shoes is "boots")>>
+	walks past your desk with the confident gait encouraged by her high heeled boots. She is on her way to
+<<elseif ($activeSlave.shoes is "extreme heels")>>
+	walks past your desk with the tiny swaying steps she must take in her ridiculous heels. She is on her way to
+<<elseif ($activeSlave.heels is 1)>>
+	crawls past your desk on all fours, since she has not been allowed the heels she needs to walk upright. She is on her way to
+<<elseif ($activeSlave.amp is 1)>>
+	is carried past your desk by one of your other slaves. She is on her way to
+<<else>>
+	walks past your desk on her way to
+<</if>>
+
+<<if ($seed gt 50) and ($activeSlave.assignment is "whore")>>
+	whore;
+<<elseif ($activeSlave.assignment is "whore")>>
+	sell her <<if $seeRace is 1>>$activeSlave.race <</if>>body;
+<<elseif ($seed gt 50) and ($activeSlave.assignment is "serve the public")>>
+	serve the public;
+<<elseif ($activeSlave.assignment is "serve the public")>>
+	be a public slut;
+<<elseif ($seed gt 50) and ($activeSlave.assignment is "train another slave")>>
+	help one of your other slaves;
+<<elseif ($activeSlave.assignment is "train another slave")>>
+	train your other slaves;
+<<elseif ($seed gt 50) and ($activeSlave.assignment is "rest")>>
+	eat;
+<<elseif ($activeSlave.assignment is "rest")>>
+	bed;
+<<elseif ($activeSlave.assignment is "rest in the spa")>>
+	relax in the spa;
+<<elseif ($activeSlave.assignment is "be the Attendant")>>
+	look after the girls in the spa;
+<<elseif ($seed gt 50) and ($activeSlave.assignment is "submit to surgery")>>
+	prepare herself for surgery;
+<<elseif ($activeSlave.assignment is "submit to surgery")>>
+	the remote surgery;
+<<elseif ($seed gt 50) and ($activeSlave.assignment is "submit to body modification")>>
+	prepare herself for body modification;
+<<elseif ($activeSlave.assignment is "submit to body modification")>>
+	the body modification studio;
+<<elseif ($seed gt 50) and ($activeSlave.assignment is "train slaves")>>
+	do contract slave training;
+<<elseif ($activeSlave.assignment is "train slaves")>>
+	offer public slave training.
+<<elseif ($seed gt 50) and ($activeSlave.assignment is "get milked")>>
+	milk her overfull <<if $seeRace is 1>>$activeSlave.race <</if>>tits;
+<<elseif ($activeSlave.assignment is "get milked")>>
+	drain her milky <<if $seeRace is 1>>$activeSlave.race <</if>>udders;
+<<elseif ($activeSlave.assignment is "get cockmilked")>>
+	drain her $activeSlave.skin balls;
+<<elseif ($activeSlave.assignment is "learn in the schoolroom") or ($activeSlave.assignment is "take classes")>>
+	attend classes;
+<<elseif ($seed gt 50) and ($activeSlave.assignment is "please you")>>
+	sit next to you and wait for you to fuck her;
+<<elseif ($activeSlave.assignment is "please you")>>
+	sit next to you and wait for her Master to use her<<if $seeRace is 1>> $activeSlave.race body<</if>>;
+<<elseif ($activeSlave.assignment is "be a subordinate sex slave")>>
+	service your other slaves;
+<<elseif ($activeSlave.assignment is "be a subordinate servant")>>
+	clean up after your other slaves;
+<<elseif ($activeSlave.assignment is "be your Head Girl")>>
+	oversee your other slaves;
+<<elseif ($activeSlave.assignment is "be your Recruiter")>>
+	use her connections to recruit slaves;
+<</if>>
+
+<<if ($activeSlave.amp is 1)>>
+	she is carried by on her way to her next task.
+<<elseif $activeSlave.fetish is "mindbroken">>
+	she does not even glance at you as she goes mindlessly to her next task.
+<<elseif $activeSlave.devotion lt -20>>
+	she directs a look of pure hatred at where you sit as she passes.
+<<elseif $activeSlave.devotion lt -10>>
+	she cannot keep the loathing from her face as she passes.
+<<elseif $activeSlave.devotion lt -4>>
+	she passes quickly, obviously hoping to avoid you.
+<<elseif $activeSlave.devotion lte 10>>
+	she rushes by, hurrying to her next task.
+<<else>>
+	as she passes she gives you a look of adoration.
+<</if>>
+
+<</if>> /* WALKPASTS END */
+
+<</if>> /* TIME TOGETHER EXCEPTION ENDS */
+
+<<if ($partner is "rivalry")>>
+	<<display "WP rival">>
+	<<set $target to "FRival">>
+<<elseif ($partner is "relationship") and ($activeSlave.relationship gte 3) and ($activeSlave.releaseRules isnot "restrictive")>>
+	<<display "WP relationship">>
+	<<set $target to "FRelation">>
+<<elseif ($partner is "relationship") or ($partner is "relation")>>
+	<<display "WP relation">>
+	<<set $target to "FRelation">>
+<<elseif ($seed gt 80)>>
+	<<display "WP boobs">>
+	<<display "Boobs Description">>
+	<<set $target to "FBoobs">>
+<<elseif ($seed gt 60)>>
+	<<display "WP butt">>
+	<<display "Butt Description">>
+	<<set $target to "FButt">>
+<<elseif ($seed gt 40)>>
+	<<display "WP vagina">>
+	<<display "Vagina Description">>
+	<<set $target to "FVagina">>
+<<elseif ($seed gt 20)>>
+	<<display "WP anus">>
+	<<display "Anus Description">>
+	<<set $target to "FAnus">>
+<<elseif ($seed gt 0)>>
+	<<display "WP lips">>
+	<<display "Lips Description">>
+	<<set $target to "FLips">>
+<</if>>
+
+<<if ($seed lte 80) and ($seed gt 40) and ($activeSlave.vaginalAccessory is "chastity belt")>>
+	//If you wish to have vanilla intercourse with her you must order her to remove her chastity belt.//
+<<elseif $seed gt 100>>
+  <span id="walkpast"><<click "Summon them both">><<replace "#walk">><<display $target>><<set $analTotal += 1>><</replace>><</click>></span>
+<<elseif $activeSlave.assignment is "stay confined">>
+  <span id="walkpast"><<click "Have her brought out of her cell">><<replace "#walk">><<display $target>><<set $analTotal += 1>><</replace>><</click>></span>
+<<elseif ($activeSlave.assignmentVisible is 0)>>
+  <span id="walkpast"><<click "Have her take a break and come up">><<replace "#walk">><<display $target>><<set $analTotal += 1>><</replace>><</click>></span>
+<<else>>
+  <span id="walkpast"><<click "Call her over">><<replace "#walk">><<display $target>><<set $analTotal += 1>><</replace>><</click>></span>
+<</if>>
+
+</span>
+
+//
+<</nobr>>\

@@ -1,0 +1,115 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+<<set $encyclopedia to "The Ejaculate Market">>\
+\
+<<nobr>>
+
+<<set $collectionFacilitySlaves to 0>>
+<<set $notcollectionFacilitySlaves to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if $slaves[$i].assignment is "work in the collection facility">>
+	<<set $collectionFacilitySlaves += 1>>
+  <<else>>
+	<<set $notcollectionFacilitySlaves += 1>>
+  <</if>>
+<</for>>
+  
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $collectionFacilitySlaves gt 2>>
+	The Collection Facility is bustling with activity. Numerous slaves look after their parts, eat, and relax in a crowd between milkings. The row of milking machines is producing the hisses of working hydraulics and the moans of relieved slaves.
+<<elseif $collectionFacilitySlaves gt 0>>
+	The Collection Facility is working steadily. Slaves look after their parts, eat, and relax between milkings. Occasionally a slave moves over to the machines to get her balls emptied.
+<<elseif $Collectrix isnot 0>>
+	$Collectrix.slaveName is alone in the dairy, and has nothing to do but clean and maintain the equipment.
+<<else>>
+	The Collection Facility is empty and desolate. [[Decomission the collection facility|Main][$collectionFacility to 0, $collectionFacilityUpgradeStimulators to 0, $collectionFacilityUpgradeMilkers to 0]]
+<</if>>
+
+<br>
+It can support <<print $collectionFacility*5>> milkers.
+<<if $collectionFacility*5 lt $collectionFacilitySlaves>>
+  @@color:red;The Collection Facility is overcrowded.@@
+<</if>>
+[[Expand the semen Collection Facility|Collection Facility][$cash -= 5000, $collectionFacility += 1]]
+//Costs ¤5000 and will increase upkeep costs//
+	
+<br>
+<<if $collectionFacilityUpgradeStimulators is 1>>
+	The cockmilking machines mount reciprocating dildoes that sodomize the slaves until they ejaculate, ensuring prompt production and, incidentally, encouraging anal fixation.
+<<else>>
+	The collection facility does not automatically sodomize.
+	[[Upgrade the cockmilking machines with sodomizers|Collection Facility][$cash -= 10000, $collectionFacilityUpgradeStimulators to 1]]
+	//Costs ¤10000 and will increase upkeep costs//
+<</if>>
+	
+<br>
+<<if $collectionFacilityUpgradeMilkers is 1>>
+	The cockmilking machines have a secondary milking function to drain lactating breasts. It's not nearly as efficient as the dairy, but it does successfully milk the slaves at both ends.
+<<else>>
+	The collection facility cannot milk lactating slaves.
+	[[Upgrade the cockmilking machines to milk breasts|Collection Facility][$cash -= 10000, $collectionFacilityUpgradeMilkers to 1]]
+	//Costs ¤10000 and will increase upkeep costs//
+<</if>>
+	
+<br>
+<<if $collectionFacilityUpgradeRestraints is 1>>
+	The collection facility is equipped to restrain recalcitrant slaves so that they can be cockmilked without pause.
+<<else>>
+	The collection facility is not equipped with restraints, so only obedient slaves can be cockmilked here.
+	[[Equip the collection facility with restraint racks|Collection Facility][$cash -= 5000, $collectionFacilityUpgradeRestraints to 1]]
+	//Costs ¤5000//
+<</if>>
+
+<br>
+//Sir, slaves assigned here will use drugs to maintain and even improve their health, and will slowly reach a state of obedience out of habit if they are not yet there.//
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $Collectrix isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $slaves[$i].ID is $Collectrix.ID>>
+	  <<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>
+	  <<display "Slave Summary">>
+	  | <<print "[[Change or remove Collectrix|Collectrix Select]]">>\
+	<</if>>
+  <</for>>
+<<else>>
+	You do not have a slave serving as a Collectrix. [[Appoint one|Collectrix Select]]
+<</if>>
+
+<</nobr>>
+
+<<if $collectionFacilitySlaves gt 0>>\
+__Bring a slave out of the Collection Facility:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "work in the collection facility">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Release her from the collection facility|Retrieve from Collection Facility][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notcollectionFacilitySlaves gt 1>>\
+__Send a slave to the Collection Facility:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+  <<if ($slaves[$i].dick gt 0) and ($slaves[$i].balls gt 0)>>\
+	<<if ($slaves[$i].devotion gt 4) or ($slaves[$i].trust lt -4) or ($slaves[$i].amp is 1) or ($collectionFacilityUpgradeRestraints is 1)>>\
+	  <br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+	  <<display "Slave Summary">>\
+	  | <<print "[[Assign her to the collection facility|Assign to Collection Facility][$activeSlave to $slaves[" + $i + "]]]">>\
+	<<else>>\
+	  <br>//$slaves[$i].slaveName must be either more fearful of you or more devoted to you//\
+	<</if>>\
+  <<else>>\
+	<br>//$slaves[$i].slaveName cannot produce cum//\
+  <</if>>\
+<</if>>\
+<</for>>
+<</if>>\

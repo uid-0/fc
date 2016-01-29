@@ -1,0 +1,155 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Slave Interact">>
+
+<<set $encyclopedia to "The Auto Salon">>
+
+<</nobr>>\
+\
+$activeSlave.slaveName is seated in the auto salon. She is awaiting your artistic pleasure.
+
+<<nobr>>
+
+Her eyes are $activeSlave.eyes.
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+Give her cosmetic contact lenses:
+	[[Blue|Salon][$activeSlave.eyes to "blue",$cash -= $modCost]]
+	 | [[Black|Salon][$activeSlave.eyes to "black",$cash -= $modCost]]
+	 | [[Brown|Salon][$activeSlave.eyes to "brown",$cash -= $modCost]]
+	 | [[Green|Salon][$activeSlave.eyes to "green",$cash -= $modCost]]
+	 | [[White|Salon][$activeSlave.eyes to "white",$cash -= $modCost]]
+	 | [[Catlike|Salon][$activeSlave.eyes to "catlike",$cash -= $modCost]]
+     
+<</nobr>>
+
+<<nobr>>
+
+<<if $activeSlave.makeup is 1>>
+	She's wearing minimal makeup.
+<<elseif $activeSlave.makeup is 2>>
+	Her makeup is color-coordinated with her $activeSlave.hcolor hair.
+<<elseif $activeSlave.makeup is 3>>
+	Her face is covered with stereotypical garish streetwalker makeup.
+<<elseif $activeSlave.lipsTat is "permanent makeup">>
+	Her face appears to bear very heavy, slutty makeup, but on closer inspection, the makeup is actually tattooed on.
+<<else>>
+	Her face is makeup-free.
+<</if>>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+[[Makeup-free|Salon][$activeSlave.makeup to 0,$cash -= $modCost]]
+| [[Nice makeup|Salon][$activeSlave.makeup to 1,$cash -= $modCost]]
+| [[Color-coordinate her makeup with her hair|Salon][$activeSlave.makeup to 2,$cash -= $modCost]]
+| [[Slutty makeup|Salon][$activeSlave.makeup to 3,$cash -= $modCost]]
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.amp is 1>>
+	She has no hands, and thus, no nails.
+<<elseif $activeSlave.nails is 1>>
+	Her nails are long and elegant.
+<<elseif $activeSlave.nails is 2>>
+	Her nails are color-coordinated with her $activeSlave.hcolor hair.
+<<elseif $activeSlave.nails is 3>>
+	She has the classic long, garish streetwalker nails.
+<<else>>
+	Her nails are neatly clipped.
+<</if>>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<<if $activeSlave.amp isnot 1>>
+[[Clip her nails|Salon][$activeSlave.nails to 0,$cash -= $modCost]]
+| [[Extend her nails|Salon][$activeSlave.nails to 1,$cash -= $modCost]]
+| [[Color-coordinate her nails with her hair|Salon][$activeSlave.nails to 2,$cash -= $modCost]]
+| [[Give her long hooker nails|Salon][$activeSlave.nails to 3,$cash -= $modCost]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<set $tannableSkin to ["lightened", "white", "fair", "pale", "light"]>>
+<<set $lightenableSkin to ["dark", "olive", "black", "brown", "light brown", "tanned"]>>
+<<set $bleachableSkin to ["lightened", "white", "fair", "light"]>>
+
+Her skin is $activeSlave.skin.
+
+<<if ($tannableSkin.indexOf($activeSlave.skin) isnot -1)>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    [[Tan her|Salon][$activeSlave.skin to "tanned",$cash -= $modCost]]
+<<elseif ($lightenableSkin.indexOf($activeSlave.skin) isnot -1)>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Lighten her skin|Salon][$activeSlave.skin to "lightened",$cash -= $modCost]]
+<</if>>
+<<if ($bleachableSkin.indexOf($activeSlave.skin) isnot -1)>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Bleach her skin|Salon][$activeSlave.skin to "pale",$cash -= $modCost]]
+<</if>>
+<<if $activeSlave.skin isnot "black">>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Darken her skin|Salon][$activeSlave.skin to "dark",$cash -= $modCost]]
+<</if>>
+
+<</nobr>>
+
+<<nobr>>
+
+Her hair is $activeSlave.hcolor.
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+Dye her hair:
+	[[Blonde|Salon][$activeSlave.hcolor to "blonde",$cash -= $modCost]]
+	 | [[Black|Salon][$activeSlave.hcolor to "black",$cash -= $modCost]]
+	 | [[Brown|Salon][$activeSlave.hcolor to "brown",$cash -= $modCost]]
+	 | [[Red|Salon][$activeSlave.hcolor to "red",$cash -= $modCost]]
+	 | [[White|Salon][$activeSlave.hcolor to "white",$cash -= $modCost]]
+     
+<</nobr>>
+<<nobr>>
+
+Her hair is $activeSlave.hlength.
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+Style her hair:
+	[[Long|Salon][$activeSlave.hlength to "long",$cash -= $modCost]]
+	 | [[Shoulder-length|Salon][$activeSlave.hlength to "shoulder-length",$cash -= $modCost]]
+	 | [[Short|Salon][$activeSlave.hlength to "short",$cash -= $modCost]]
+	 | [[Very short|Salon][$activeSlave.hlength to "very short",$cash -= $modCost]]
+	 | [[Shaved|Salon][$activeSlave.hlength to "shaved bald",$cash -= $modCost]]
+
+<</nobr>>
+
+<<nobr>>
+
+Her pubic hair, if present, is $activeSlave.pubicHColor.
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+Dye her pubic hair:
+	[[Blonde|Salon][$activeSlave.pubicHColor to "blonde",$cash -= $modCost]]
+	 | [[Black|Salon][$activeSlave.pubicHColor to "black",$cash -= $modCost]]
+	 | [[Brown|Salon][$activeSlave.pubicHColor to "brown",$cash -= $modCost]]
+	 | [[Red|Salon][$activeSlave.pubicHColor to "red",$cash -= $modCost]]
+	 | [[White|Salon][$activeSlave.pubicHColor to "white",$cash -= $modCost]]
+     
+<</nobr>>
+<<nobr>>
+
+Her pubic hair is $activeSlave.pubicHLength.
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+Style her pubic hair:
+	[[Waxed|Salon][$activeSlave.pubicHLength to "waxed",$cash -= $modCost]]
+	 | [[Landing strip|Salon][$activeSlave.pubicHLength to "in a strip",$cash -= $modCost]]
+	 | [[Neat|Salon][$activeSlave.pubicHLength to "neat",$cash -= $modCost]]
+	 | [[Bushy|Salon][$activeSlave.pubicHLength to "bushy",$cash -= $modCost]]
+
+<</nobr>>

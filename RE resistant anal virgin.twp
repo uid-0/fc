@@ -1,0 +1,41 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> has never had anything significant up her ass. Living in your arcology, she can't have missed that anal sex is a part of most slaves' lives. She witnesses sodomy several times a day, at least.
+
+Lately, you've noticed that she reacts to these sights with a well-concealed flash of apprehension. It seems she's figured out that she will probably be required to take it up her little <<if $seeRace is 1>>$activeSlave.race <</if>>butt someday, and isn't enthusiastic about the prospect. You could probably exploit this.
+\
+<span id="result">
+<<click "Let her earn continued anal virginity">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You tell her she's a sex slave, and that she needs to learn how to take a dick up the ass. <<if ($activeSlave.mute is 1) and ($activeSlave.amp isnot 1)>>She frantically begs with gestures, pleading on her knees.<<elseif ($activeSlave.mute is 1)>>She frantically mouths pleas that you leave her butt alone.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She slurs, "Pleese no, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, pleese don rape my ass, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>!"<<else>>She begs, "Please no, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, please don't rape me in my ass, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!"<</if>> You make a show of considering, and then tell her that if she's extra obedient, you might let her keep her butt - for now. You tell her to <<if ($PC.dick is 0)>>lick your pussy<<else>>blow you<</if>>, and she does with unusual obedience. When she's done, you bend down and whisper in her ear that if she shows any sign of rebelliousness, you'll ruin her little asshole. @@color:hotpink;She's terrified.@@
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.oralCount += 1>>
+    <<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+<<if ($activeSlave.amp isnot 1)>>\
+<<click "Force her to degrade herself">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Suction cup dildoes are terribly useful. You place a moderate-sized one on a low table in your office, and order her to squat down on it and fuck her own asshole. She hesitates, incredulous, and finds herself bound to the couch and thoroughly whipped. It isn't a sexual whipping, either, but a methodical and scientific administration of pain right up to the border of damage. When she's been reduced to a state of abject, sobbing surrender, you free her and repeat your orders as though nothing had happened. Still crying, she hobbles over and up onto the table, and fucks her little ass open on the dildo. You keep her up there until her legs give out, and then let her lie down on the couch, telling her to keep working the dildo with her hands or suffer another whipping. After she's had her ass filled for a good while, she has no trouble taking a <<if ($PC.dick is 0)>>strap-on<<else>>real dick<</if>> for the first time, and is by this point too exhausted to do anything but lie there and be a good little anal slave. @@color:hotpink;She fears you,@@ and @@color:lime;her butthole has been broken in.@@
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.anus to 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<</if>>\
+</span>

@@ -1,0 +1,56 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $cumslutInterestTargetName == $slaves[$i].ID>>
+<<set $activeSlave to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $subName == $slaves[$i].slaveName>>
+          <<set $slaves[$i].oralCount += 1>>
+          <<set $oralTotal += 1>>
+<</if>>
+<</for>>
+
+<</nobr>>\
+\
+You wake up to the sensation of $cumslutName eagerly sucking your dick. She's industriously pumping her mouth up and down on your member. In truth, $cumslutName doesn't give the perfect blowjob: she loves cum so much that she mostly enjoys oral sex in an anticipatory way, and usually works to make the recipient cum as soon as possible so as to get her favorite treat into her mouth quicker. Still, her enthusiasm is nice and she does have permission to wake you at your usual time in this way. As you get up after finishing, you notice <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> at the door to your bedroom. You call her in.
+
+$activeSlave.slaveName hesitates before explaining herself, and she's obviously aroused: <<if ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0)>>though her hormone-filled body can't get her dick hard any more, she's got a string of precum coming off her member<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>though her gelded body can't get her dick hard any more, she's got a string of precum coming off her limp member<<elseif $activeSlave.dick gt 4>>her gigantic cock is standing out like a mast<<elseif $activeSlave.dick gt 2>>she's sporting an impressive erection<<elseif $activeSlave.dick gt 0>>her little penis is rock hard<<elseif $activeSlave.clit gt 0>>her large clit is visibly engorged<<else>>her nipples are hard and there's a sheen on her pussylips<</if>>. It seems she passed by while $cumslutName was blowing you. She swallows painfully at the sight of the satisfied cumslut swirling your ejaculate around her mouth. It should be possible to either encourage this fascination or steer her away from it for now.
+\
+<span id="result">
+<<click "Turn her into a cumslut too">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Focusing a slave's sexuality on cum isn't as easy as some other manipulations, for the simple reason that even you have a limited supply of the stuff. So, you take another approach; you instruct $activeSlave.slaveName to accompany $cumslutName, and vice versa, whenever their duties permit. They're to act as sexual partners, and share cum whenever there's any forthcoming. They spend the week giving blowjobs whenever they can, and making out to swap the cum back and forth afterwards. If someone insists on penetrating them instead, that just means that the other has to suck it out of her before they can share it. Most importantly, $activeSlave.slaveName is punished if she ever orgasms without cum in her mouth. Soon, she gets aroused by the mere scent of the stuff. @@color:hotpink;She has become more submissive to you,@@ and @@color:pink;her sexuality now focuses on cum.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 50>>
+    <<set $oralTotal += 50>>
+	<<set $activeSlave.fetish to "cumslut">>
+    <</replace>>
+<</click>>
+<<click "Steer her away from cum obsession for the moment">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Good slaves get aroused according to their masters' whim, not their own silly tendencies. You call $activeSlave.slaveName over before she can give voice to her interest in cum, and fuck her until she orgasms, but you are careful to keep your cum well away from her. You'll keep an eye on her, and with this correction @@color:hotpink;she'll become more submissive to you.@@
+    <<if ($activeSlave.vagina isnot -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>><<display "Vaginal VCheck">><<else>><<display "Anal VCheck">><</if>>
+	<<set $activeSlave.devotion += 1>>
+    <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+</span>

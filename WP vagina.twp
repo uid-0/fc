@@ -1,0 +1,135 @@
+<<nobr>>
+
+<<if ($activeSlave.clothes is "a very tight corset") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	Her corset leaves her hermaphroditic genitals completely bare.
+<<elseif ($activeSlave.clothes is "a very tight corset") and ($activeSlave.dick isnot 0)>>
+	Her corset leaves her cock completely bare.
+<<elseif ($activeSlave.clothes is "a very tight corset")>>
+	Her corset leaves her pussy completely bare.
+<<elseif ($activeSlave.clothes is "uncomfortable straps") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	A strap passes between her legs, and the big ring over her hermaphroditic genitalia gleams from between them.
+<<elseif ($activeSlave.clothes is "uncomfortable straps") and ($activeSlave.dick isnot 0)>>
+	A strap passes between her legs, and the ring around the base of her cock gleams from between them.
+<<elseif ($activeSlave.clothes is "uncomfortable straps")>>
+	A strap passes between her legs, and the ring over her pussy gleams from between them.
+<<elseif ($activeSlave.clothes is "restrictive latex") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	Her cock and pussy stick out through a big hole in the latex.
+<<elseif ($activeSlave.clothes is "restrictive latex") and ($activeSlave.dick isnot 0)>>
+	Her cock sticks out through a hole in the latex.
+<<elseif ($activeSlave.clothes is "restrictive latex")>>
+	As one of the only islands in the sea of black latex, her pussy is eyecatching.
+<<elseif ($activeSlave.clothes is "attractive lingerie") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	As she moves, her pretty white g-string struggles to restrain her hermaphroditic genitalia.
+<<elseif ($activeSlave.clothes is "attractive lingerie") and ($activeSlave.dick gt 4) and ($activeSlave.balls gt 3)>>
+	As she moves, her pretty white g-string totally fails to restrain her huge cock and balls, which bounce around lewdly in mockery of her lovely appearance.
+<<elseif ($activeSlave.clothes is "attractive lingerie") and ($activeSlave.dick gt 4)>>
+	As she moves, her pretty white g-string totally fails to restrain her huge penis, which flops around lewdly in mockery of her lovely appearance.
+<<elseif ($activeSlave.clothes is "attractive lingerie") and ($activeSlave.dick isnot 0)>>
+	As she moves, her pretty white g-string struggles to restrain her penis.
+<<elseif ($activeSlave.clothes is "attractive lingerie")>>
+	As she moves, her pretty white g-string daintily covers her womanhood.
+<<elseif ($activeSlave.clothes is "a slutty maid outfit") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	Her apron is cut very short in front, revealing frequent glimpses of her dangling cock, and occasional hints of something more.
+<<elseif ($activeSlave.clothes is "a slutty maid outfit") and ($activeSlave.dick gt 4) and ($activeSlave.balls gt 3)>>
+	Her apron is cut very short in front. Her cock and balls are so big that she hangs out beyond the hem of her apron.
+<<elseif ($activeSlave.clothes is "a slutty maid outfit") and ($activeSlave.dick gt 4)>>
+	Her apron is cut very short in front. Her dick is so big that its lower half dangles out of her clothing.
+<<elseif ($activeSlave.clothes is "a slutty maid outfit") and ($activeSlave.dick isnot 0)>>
+	Her apron is cut very short in front, revealing frequent glimpses of her dangling cock.
+<<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+	Her apron is cut very short in front, revealing occasional glimpses of her womanhood.
+<<elseif ($activeSlave.clothes is "a nice maid outfit") and ($activeSlave.dick gt 4)>>
+	As she moves, something massive bulges against the front of her apron.
+<<elseif ($activeSlave.clothes is "a nice maid outfit") and ($activeSlave.dick gt 1)>>
+	As she moves, something presses against the front of her apron.
+<<elseif ($activeSlave.clothes is "a nice maid outfit")>>
+	Her apron gives no hint of what's behind it.
+<<elseif ($activeSlave.clothes is "string lingerie") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	As she moves, her g-string struggles to restrain her hermaphroditic genitalia.
+<<elseif ($activeSlave.clothes is "string lingerie") and ($activeSlave.dick gt 4) and ($activeSlave.balls gt 3)>>
+	As she moves, her g-string totally fails to restrain her huge penis, and occasionally gives her huge scrotum a painful pinch.
+<<elseif ($activeSlave.clothes is "string lingerie") and ($activeSlave.dick gt 4)>>
+	As she moves, her g-string totally fails to restrain her huge penis.
+<<elseif ($activeSlave.clothes is "string lingerie") and ($activeSlave.dick isnot 0)>>
+	As she moves, her pretty white g-string struggles to restrain her penis, which adds to her sluttiness as it escapes.
+<<elseif ($activeSlave.clothes is "string lingerie")>>
+	As she moves, her g-string rides up between her pussylips.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.dick gt 4) and ($activeSlave.balls gt 3)>>
+	There's a huge bulge in the front of her cutoffs.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.dick gt 1)>>
+	There's a bulge in the front of her cutoffs.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt")>>
+	Her cutoffs conceal her front enticingly.
+<<elseif ($activeSlave.clothes is "a slutty outfit") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	For today's slutty outfit she's chosen ripped jean shorts whose holes tantalizingly hint that she's very unusual between the legs.
+<<elseif ($activeSlave.clothes is "a slutty outfit") and ($activeSlave.dick gt 2)>>
+	For today's slutty outfit she's chosen ripped jean shorts so brief that her huge dick occasionally escapes and flops free.
+<<elseif ($activeSlave.clothes is "a slutty outfit") and ($activeSlave.dick isnot 0)>>
+	For today's slutty outfit she's chosen ripped jean shorts whose holes tantalizingly hint that she's got something other than a pussy between her legs.
+<<elseif ($activeSlave.clothes is "a slutty outfit")>>
+	For today's slutty outfit she's chosen ripped jean shorts so tight that she sports a raging cameltoe.
+<<elseif ($activeSlave.clothes is "a slave gown") and ($activeSlave.amp is 1) and ($activeSlave.vagina isnot -1)>>
+	She's wearing a lovely 'dress' designed specifically for an amputee.
+<<elseif ($activeSlave.clothes is "a slave gown") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	Her gorgeous dress leaves little to the imagination; there's little doubt her pussy is bare beneath it, and her cock tents the fabric as she moves.
+<<elseif ($activeSlave.clothes is "a slave gown") and ($activeSlave.dick isnot 0)>>
+	Her gorgeous dress leaves little to the imagination; her cock tents the fabric as she moves.
+<<elseif ($activeSlave.clothes is "a slave gown")>>
+	Her gorgeous dress leaves little to the imagination; there's little doubt her pussy is bare beneath it.
+<<elseif ($activeSlave.clothes is "slutty business attire") and ($activeSlave.dick gt 4)>>
+	As she moves, something massive tents the front of her short skirt.
+<<elseif ($activeSlave.clothes is "slutty business attire") and ($activeSlave.dick gt 1)>>
+	As she moves, something presses against the front of her short skirt.
+<<elseif ($activeSlave.clothes is "slutty business attire")>>
+	Her short skirt gives no hint of what's behind it.
+<<elseif ($activeSlave.clothes is "a fallen nun's habit") and ($activeSlave.dick gt 0)>>
+	Her slutty nun outfit leaves her cock to swing sacrilegiously.
+<<elseif ($activeSlave.clothes is "a fallen nun's habit")>>
+	Her slutty nun outfit leaves her pussy totally and sacrilegiously bare.
+<<elseif ($activeSlave.clothes is "a penitent nun's habit") and ($activeSlave.dick gt 0)>>
+	She moves with painful caution, desperately trying to keep her coarse habit from chafing her dick raw.
+<<elseif ($activeSlave.clothes is "a penitent nun's habit")>>
+	She moves with painful caution, desperately trying to keep her coarse habit from chafing her pussy raw.
+<<elseif ($activeSlave.clothes is "nice business attire") and ($activeSlave.dick gt 4)>>
+	As she moves, something massive tents the front of her skirt.
+<<elseif ($activeSlave.clothes is "nice business attire") and ($activeSlave.dick gt 1)>>
+	As she moves, something presses against the front of her skirt.
+<<elseif ($activeSlave.clothes is "nice business attire")>>
+	Unusually, her businesslike skirt gives no hint of what's behind it.
+<<elseif ($activeSlave.clothes is "a nurse outfit")>>
+	Her tight skirt constantly threatens to ride up in front.
+<<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+	Her schoolgirl skirt is so short that it constantly threatens to ride up in front.
+<<elseif ($activeSlave.clothes is "a kimono")>>
+	Her obi demurely covers her front.
+<<elseif ($activeSlave.clothes is "a hijab")>>
+	Her hijab billows somewhat as she moves.
+<<elseif ($activeSlave.clothes is "battledress")>>
+	Her fatigue trousers are utilitarian and unflattering.
+<<elseif ($activeSlave.clothes is "a comfortable bodysuit") and ($activeSlave.dick isnot 0)>>
+	Her bodysuit displays every inch of her member as she moves.
+<<elseif ($activeSlave.clothes is "a comfortable bodysuit")>>
+	Her bodysuit shows off her womanhood as she moves.
+<<elseif ($activeSlave.clothes is "harem gauze") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	Her hermaphroditic genitals are clearly visible through the thin gauze that covers them.
+<<elseif ($activeSlave.clothes is "harem gauze") and ($activeSlave.dick isnot 0)>>
+	Her dick is clearly visible through the thin gauze that covers it.
+<<elseif ($activeSlave.clothes is "harem gauze")>>
+	Her pussy is clearly visible through the thin gauze that covers it.
+<<elseif ($activeSlave.clothes is "slutty jewelry") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	Her belt of light chain has a lewd bauble over her stomach; its weight pulls it down towards her hermaphroditic genitalia with each step.
+<<elseif ($activeSlave.clothes is "slutty jewelry") and ($activeSlave.dick isnot 0)>>
+	Her belt of light chain has a lewd bauble over her stomach; its weight pulls it down towards the base of her penis with each step.
+<<elseif ($activeSlave.clothes is "slutty jewelry")>>
+	Her belt of light chain has a lewd bauble over her stomach; its weight pulls it down towards her mons with each step.
+<<elseif ($activeSlave.vaginalAccessory is "chastity belt")>>
+	Her chastity belt protects her from vanilla intercourse.
+<<elseif ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	You get a good view of her cock and pussy: a marvel of modern surgery.
+<<elseif ($activeSlave.dick isnot 0)>>
+	You get a good view of her cock.
+<<else>>
+	You get a good view of her pussy.
+<</if>>
+
+<</nobr>>

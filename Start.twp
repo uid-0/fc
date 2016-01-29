@@ -1,0 +1,176 @@
+<<display "FCNN">>\
+\
+You may review your settings before selecting a starting option to begin.
+
+<<nobr>>
+
+__''World Settings''__
+
+<<if ($economy isnot 1) or ($seeDicks isnot 1) or ($continent isnot "North America") or ($seeRace isnot 1) or ($plot isnot 1)>>
+	//[[restore defaults|Start][$seeDicks to 1,$economy to 1,$continent to "North America",$seeRace to 1,$plot to 1]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $economy is 1>>
+	The world economy is in ''doubtful'' shape.
+    [[Easier|Start][$economy to 0.5]] | [[Harder|Start][$economy to 1.5]]
+<<elseif $economy lt 1>>
+	The world economy is still in ''good'' shape.
+    [[Harder|Start][$economy to 1]]
+<<else>>
+	The world economy is in ''terrible'' shape.
+    [[Easier|Start][$economy to 1]]
+<</if>>
+
+<<set $drugsCost to Math.trunc(100*$economy)>>
+<<set $rulesCost to Math.trunc(100*$economy)>>
+<<set $modCost to Math.trunc(50*$economy)>>
+<<set $surgeryCost to Math.trunc(300*$economy)>>
+
+<</nobr>>
+<<nobr>>
+
+The arcology is located in ''$continent''.
+
+[[North America|Start][$continent to "North America"]] | [[South America|Start][$continent to "South America"]] | [[Europe|Start][$continent to "Europe"]] | [[the Middle East|Start][$continent to "the Middle East"]] | [[Africa|Start][$continent to "Africa"]] | [[Asia|Start][$continent to "Asia"]] | [[Australia|Start][$continent to "Australia"]]
+
+<</nobr>>
+<<nobr>>
+
+<<if $internationalTrade is 0>>
+	The slave trade is ''continental,'' so a narrower variety of slaves will be available.
+    [[Allow intercontinental trade|Start][$internationalTrade to 1]]
+<<else>>
+	The slave trade is ''international,'' so a wider variety of slaves will be available.
+    [[Restrict the trade to continental|Start][$internationalTrade to 0]]
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $internationalTrade is 1>>
+<br>
+<<if $internationalVariety is 0>>
+	International slave variety is ''semi-realistic,'' so more populous nations will be more common.
+    [[Normalized national variety|Start][$internationalVariety to 1]]
+<<else>>
+	International slave variety is ''normalized,'' so small nations will appear nearly as much as large ones.
+    [[Semi-realistic national variety|Start][$internationalVariety to 0]]
+<</if>>
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $seeRace is 1>>
+	Ethnicity will ''occasionally'' be mentioned.
+    [[Disable most mentions of race|Start][$seeRace to 0]]
+<<else>>
+	Ethnicity will ''almost never'' be mentioned.
+    [[Enable mentions of race|Start][$seeRace to 1]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $seeNationality is 1>>
+	Nationality will ''occasionally'' be mentioned.
+    [[Disable most mentions of nationality|Start][$seeNationality to 0]]
+<<else>>
+	Nationality will ''almost never'' be mentioned.
+    [[Enable mentions of nationality|Start][$seeNationality to 1]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<set $heroSlaves = []>>
+<<if $seeDicks is 1>>
+	<<display "D Slaves Database">>
+	<<display "DD Slaves Database">>
+	<<display "DF Slaves Database">>
+<<elseif $seeDicks is 2>>
+	<<display "DD Slaves Database">>
+<<else>>
+	<<display "D Slaves Database">>
+	<<display "DF Slaves Database">>
+<</if>>
+<<set $activeSlave to 0>>
+
+<<if $seeDicks is 2>>
+	Slave girls will ''almost always'' have been born male.
+    [[Hide most of this content|Start][$seeDicks to 0]]
+     | [[Moderate this content|Start][$seeDicks to 1]]
+<<elseif $seeDicks is 1>>
+	Slave girls will ''occasionally'' have been born male.
+    [[Hide most of this content|Start][$seeDicks to 0]]
+     | [[Make this content nearly universal|Start][$seeDicks to 2]]
+<<else>>
+	Slave girls will ''almost never'' have been born male.
+    [[Show more of this content|Start][$seeDicks to 1]]
+     | [[Make this content nearly universal|Start][$seeDicks to 2]]
+<</if>>
+<</nobr>>
+<<nobr>>
+<<if $plot is 1>>
+	Game mode: ''two-handed''. Includes non-erotic events concerning the changing world.
+    [[Disable non-erotic events|Start][$plot to 0]]
+<<else>>
+	Game mode: ''one-handed''. No non-erotic events concerning the changing world.
+    [[Enable non-erotic events|Start][$plot to 1]]
+<</if>>
+<</nobr>>
+/*<<nobr>>
+<<if $normalizedEvents is 1>>
+	Random events distribution: ''normalized''. Random events will happen with equal frequency.
+    [[Realistic|Start][$normalizedEvents to 0]]
+<<else>>
+	Random events distribution: ''realistic''. Events will happen more frequently if more slaves qualify for them.
+    [[Normalize|Start][$normalizedEvents to 1]]
+<</if>>
+<</nobr>>*/\
+
+__Player Character__
+<<nobr>>
+<<if $PC.title gt 0>>
+	Conversational title: ''Master''.
+    [[Switch to Mistress|Start][$PC.title to 0]]
+<<else>>
+	Conversational title: ''Mistress''.
+    [[Switch to Master|Start][$PC.title to 1]]
+<</if>>
+<</nobr>>
+<<nobr>>
+<<if $PC.dick gt 0>>
+	Genitalia: ''penis''. Standard sex scenes; easier reputation maintenance.
+    [[Switch to vagina|Start][$PC.dick to 0]]
+<<else>>
+	Genitalia: ''vagina''. Sex scene variations; more difficult reputation maintenance.
+    [[Switch to penis|Start][$PC.dick to 1]]
+<</if>>
+<</nobr>>
+<<nobr>>
+<<if $PC.boobs gt 0>>
+	Chest: ''breasts''. Sex scene variations; more difficult reputation maintenance.
+    [[Remove breasts|Start][$PC.boobs to 0]]
+<<else>>
+	Chest: ''masculine''. Standard sex scenes; easier reputation maintenance.
+    [[Add breasts|Start][$PC.boobs to 1]]
+<</if>>
+<</nobr>>
+Name your character: <<textbox "$PCName" $PCName "Start">>
+
+//Congratulations. I am a personal assistant program, and it is my pleasure to assist you, $PCName, the new owner of Arcology X-4. I understand that is you. May I ask how you came to acquire the arcology from its previous owner?//
+
+__''Select a Starting Option to begin''__
+<<if $PC.title gt 0>>\
+  [[I'm a businessman, and it was business. I won, he lost.|init Nationalities][$cash to 25000,$rep += 3000,$girls to 1,$startingOption to "tycoon"]] | //Wealthy start//
+<<else>>\
+  [[I'm a businesswoman, and it was business. I won, he lost.|init Nationalities][$cash to 25000,$rep += 3000,$girls to 1,$startingOption to "tycoon"]] | //Wealthy start//
+<</if>>\
+[[I'm a retired private military contractor, and it was... business. I won, he lost.|init Nationalities][$cash to 10000,$rep += 1500,$girls to 1,$startingOption to "PMC"]] | //Normal start//
+[[Card game between friends, would you believe that? Not business! I won, he lost.|init Nationalities][$cash to 5000,$girls to 1,$startingOption to "lucky"]] | //Poor start//
+
+[[I'm just playtesting, enable Cheat Mode|init Nationalities][$cash += 1000000,$girls to 1,$rep += 10000,$dojo += 1,$cheatMode to 1,$seeDesk to 0, $seeFCNN to 0, $sortSlavesBy to "devotion",$sortSlavesOrder to "descending",$sortSlavesMain to 0,$rulesAssistantMain to 1,$abbreviateDevotion to 1,$abbreviateRules to 1,$abbreviateClothes to 2,$abbreviateHealth to 1,$abbreviateDiet to 1,$abbreviateDrugs to 1,$abbreviateRace to 1,$abbreviateGenitalia to 1,$abbreviatePhysicals to 1,$abbreviateSkills to 1,$abbreviateMental to 2]] | //Intended for debugging: may have unexpected effects//

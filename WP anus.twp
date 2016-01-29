@@ -1,0 +1,67 @@
+<<nobr>>
+
+<<if ($activeSlave.clothes is "a very tight corset") and ($activeSlave.amp is 1)>>
+	Her corset makes her stick her ass out.
+<<elseif ($activeSlave.clothes is "a very tight corset")>>
+	Her corset makes her move with her ass sticking out.
+<<elseif ($activeSlave.clothes is "uncomfortable straps")>>
+	A strap passes between her buttocks, and the ring over her asshole beckons.
+<<elseif ($activeSlave.clothes is "restrictive latex")>>
+	As one of the only islands in the sea of black latex, her asshole is eyecatching.
+<<elseif ($activeSlave.clothes is "a fallen nun's habit")>>
+	Her slutty nun outfit leaves her anus bare and available for anal sin.	
+<<elseif ($activeSlave.clothes is "a penitent nun's habit")>>
+	Her habit chafes her rear end so cruelly that it would probably be a relief to her to have it pulled up for a rough buttfuck.
+<<elseif ($activeSlave.clothes is "attractive lingerie") and ($activeSlave.anus gt 1) and ($activeSlave.amp is 1)>>
+	Her pretty g-string frequently fails to cover her big butthole.
+<<elseif ($activeSlave.clothes is "attractive lingerie") and ($activeSlave.anus gt 1)>>
+	As she moves, her pretty g-string frequently fails to cover her big butthole.
+<<elseif ($activeSlave.clothes is "attractive lingerie")>>
+	As she moves, her pretty g-string draws your attention to her ass.
+<<elseif ($activeSlave.clothes is "a nice maid outfit")>>
+	Her long maid's skirt will have to be gotten out of the way to permit access to her ass.
+<<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+	Her short maid's skirt can be lifted to reveal her bare buttocks.
+<<elseif ($activeSlave.clothes is "a nurse outfit")>>
+	Her tight skirt flatters her ass.
+<<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+	Her schoolgirl skirt is so short that her asshole is bare for use.
+<<elseif ($activeSlave.clothes is "a kimono") and ($activeSlave.butt gt 5)>>
+	Her kimono demurely covers her behind, though it cannot conceal its massive shape.
+<<elseif ($activeSlave.clothes is "a kimono")>>
+	Her kimono demurely covers her behind.
+<<elseif ($activeSlave.clothes is "a hijab") and ($activeSlave.butt gt 5)>>
+	Her hijab totally covers her behind, though it cannot conceal its massive shape.
+<<elseif ($activeSlave.clothes is "a hijab")>>
+	Her hijab totally conceals her behind.
+<<elseif ($activeSlave.clothes is "battledress")>>
+	Her fatigue trousers are not particularly flattering to her butt.
+<<elseif ($activeSlave.clothes is "string lingerie") and ($activeSlave.anus gt 1)>>
+	As she moves, her big butthole is clearly visible behind her tiny g-string.
+<<elseif ($activeSlave.clothes is "string lingerie")>>
+	As she moves, her tiny g-string draws your attention to her ass.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt")>>
+	As she moves, her tight cutoffs flatter her butt.
+<<elseif ($activeSlave.clothes is "a slutty outfit") and (random(1,100) gt 50)>>
+	For today's slutty outfit she's chosen a leather skirt with zippers that permit ready access to her butt.
+<<elseif ($activeSlave.clothes is "a slutty outfit")>>
+	For today's slutty outfit she's chosen fishnets with a hole cut over her asshole so she can be sodomized without removing or damaging her clothing.
+<<elseif ($activeSlave.clothes is "a slave gown")>>
+	Her gorgeous dress leaves little to the imagination; there's little doubt her butt is bare beneath it.
+<<elseif ($activeSlave.clothes is "nice business attire")>>
+	Her attractive skirt is nevertheless tight enough to show off her derriere.
+<<elseif ($activeSlave.clothes is "slutty business attire")>>
+	Her short skirt will easily slide up to bare her asshole.
+<<elseif ($activeSlave.clothes is "a comfortable bodysuit")>>
+	Her bodysuit displays every curve of her butt.
+<<elseif ($activeSlave.clothes is "harem gauze")>>
+	Her ass is clearly visible through the thin gauze that covers it.
+<<elseif ($activeSlave.clothes is "slutty jewelry")>>
+	Her belt of light chain threatens to dip into her asscrack with each step.
+<<elseif ($activeSlave.vaginalAccessory is "chastity belt")>>
+	Her chastity belt leaves her ass available.
+<<else>>
+	You run your eye over her naked ass.
+<</if>>
+
+<</nobr>>

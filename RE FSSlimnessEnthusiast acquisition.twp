@@ -1,0 +1,53 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 3000>>
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She offered herself to you for enslavement because she felt your arcology was the best place for a woman of her appearance.">>
+<<set $activeSlave.boobs to random(4,6)*50>>
+<<set $activeSlave.weight to -1>>
+<<set $activeSlave.height to random(1,2)>>
+<<set $activeSlave.face to random(1,2)>>
+<<set $activeSlave.butt to random(1,2)>>
+<<set $activeSlave.lips to 0>>
+<<set $activeSlave.devotion to random(5,7)>>
+<<set $activeSlave.trust to random(5,7)>>
+<<set $activeSlave.age to random(35,44)>>
+<<set $activeSlave.career to $educatedCareers.random()>>
+<<set $activeSlave.health to random(-6,-5)>>
+<<set $activeSlave.intelligence to 2>>
+<<set $activeSlave.intelligenceImplant to 1>>
+<<set $activeSlave.pubicHLength to "waxed">>
+<<set $activeSlave.behavioralQuirk to "arrogant">>
+<<display "Slave Cost">>
+<<set $slaveCost -= 3000>>
+
+<</nobr>>\
+\
+You receive so many messages, as a noted titan of the new Free Cities world, that your personal assistant has to be quite draconian in culling them. She lets only the most important through to you. One category of message that always gets through regardless of content, though, is requests for voluntary enslavement. As the new world takes shape, they've become less rare than they once were.
+
+The call comes in from an unusually well-to-do area. It appears that the aristocratic-looking woman placing the call has fallen on hard times, and is doing the intelligent thing and staying ahead of her creditors by offering herself into slavery. Enslaving her will be costlier than usual, but it seems likely to be worth it. She's well-spoken and seems both educated and intelligent. Even better, despite being middle-aged, she's extremely well-preserved, a tall, slim and graceful beauty with a face that must be the envy of girls half her age. She knows all this herself, and says, "I hear you appreciate a slender woman; if I'm going down into slavery, Sir, I'd be happy to avoid too many implants. I understand your arcology is a fine place for someone in my situation."
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	She arrives apologizing for her fine clothing. "I'm sorry," she apologizes sadly, "but I wanted to wear my best one last time." She sighs, squares her shoulders, and visibly steels herself. "I'll say as a free woman, since it's my last chance to say anything as a free woman, you're good-looking, for an evil slaveholding oligarch." She delivers this last with a little smile on her lips and rich turn of humor in her voice. "If we'd met at a nice party last week I might have made a pass at you. I suppose that's beside the point now."
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

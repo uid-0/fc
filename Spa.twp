@@ -1,0 +1,116 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $spaSlaves to 0>>
+<<set $notSpaSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "rest in the spa">>
+      <<set $spaSlaves += 1>>
+    <<else>>
+	  <<set $notSpaSlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $FSRomanRevivalistDecoration gte 60>>
+  The Roman baths' flooring is pleasantly warm due to a modernized version of hypocaust heating, and is covered in mosaic depicting slaves enjoying sex.
+<<elseif $FSAncientEgyptianRevivalistDecoration gte 60>>
+  The spa is decorated like an Egyptian water garden. All but the hottest pools include acquatic plants around their edges, and the atmosphere is heavy with perfume.
+<<elseif $FSChattelReligionistDecoration gte 60>>
+  The spa is dedicated to the purification of the body and the spirit. The pools are arranged for the completion of self-purification procedures which include ritual masturbation.
+<<elseif $FSDegradationistDecoration gte 60>>
+  The spa is utilitarian. There are waterproof cameras positioned throughout the spa so that anyone who wants to can watch the nude slaves. One wall has a screen showing the current viewer count to keep the slaves aware of this.
+<<elseif $FSAssetExpansionistDecoration gte 60>>
+  The spa is utilitarian. It is equipped with all sorts of devices to help slaves care for huge assets, including lifts to help them in and out of the water, and all around showers to help clean and moisturize difficult to reach spots.
+<<elseif $FSTransformationFetishistDecoration gte 60>>
+  The spa is utilitarian. It is equipped with special devices to help speed surgical recovery, including a series of baths designed to prevent scarring.
+<<elseif $FSGenderRadicalistDecoration gte 60>>
+  The spa is comfortable, with waterproof cushions lining the pools. There are screens on the walls showing slave girls with all different varieities of genitalia orgasming from penetration, to keep the idea at the forefront of the slaves' minds.
+<<elseif $FSGenderFundamentalistDecoration gte 60>>
+  The spa is comfortable, with waterproof cushions lining the pools. There are screens on the walls showing light entertainment featuring a lot of beautiful women and handsome men for the slaves' edification.
+<<elseif $FSPhysicalIdealistDecoration gte 60>>
+  Though the spa is not the gym, it does have some workout equipment, mostly low-impact machines designed to speed recovery. There are special hot baths to ease sore muscles.
+<<elseif $FSSupremacistDecoration gte 60>>
+  The spa is comfortable, with waterproof cushions lining the pools. There are screens on the walls showing light entertainment featuring $FSSupremacistRace main characters.
+<<elseif $FSSubjugationistDecoration gte 60>>
+  The spa is comfortable, with waterproof cushions lining the pools. There are screens on the walls showing light entertainment featuring $FSSubjugationistRace characters in comic relief roles.
+<<elseif $FSPaternalistDecoration gte 60>>
+  The spa is comfortable, with waterproof cushions lining the pools. There are screens on the walls showing light entertainment written by and intended for smart, loyal slaves.
+<<elseif $FSPastoralistDecoration gte 60>>
+  The spa is utilitarian. It is equipped with all sorts of devices to help slaves care for huge assets, including lifts to help them in and out of the water, and all around showers to help clean and moisturize difficult to reach spots.
+<<elseif $FSBodyPuristDecoration gte 60>>
+  The spa is comfortable, with waterproof cushions lining the pools. Everything is designed for the slaves' comfort; there are even special mud baths to perfect skin clarity.
+<<elseif $FSSlimnessEnthusiastDecoration gte 60>>
+  The spa is comfortable, with waterproof cushions lining the pools. Everything is designed for the slaves' comfort; there are even special mud baths to perfect skin clarity.
+<</if>>
+
+<<if $spaSlaves gt 2>>
+	The spa is busy. Slaves are relaxing in the warm water, splashing around or just floating. Here and there some of the more sex-starved are in the early stages of intercourse, but most prefer to take time off from it all.
+<<elseif $spaSlaves gt 0>>
+	The spa is sparsely populated; though the few slaves here have little company they like having the water to themselves.
+<<elseif $Attendant isnot 0>>
+	$Attendant.slaveName is alone in the spa, and has nothing to do but keep the place (and her own soft, wet body) spotlessly clean.
+<<else>>
+	The spa is empty and quiet. [[Decomission the Spa|Main][$spa to 0]]
+<</if>>
+	
+<br>
+<<if $spaUpgrade is 1>>
+	It has been upgraded with state of the art temperature treatment options, from hot and cold mineral water pools to baking saunas and dense steam rooms.
+<<else>>
+	It is a standard spa.
+	[[Upgrade the spa with saunas, steam rooms, and mineral water baths|Spa][$cash -= 10000, $spaUpgrade to 1]]
+	//Costs ¤10000//
+<</if>>
+
+<br>
+//Sir, slaves assigned here will be treated and looked after to improve their health as quickly as possible. They will be required to follow basic rules, but nothing more.//
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $Attendant isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $slaves[$i].ID is $Attendant.ID>>
+	  <<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>
+	  <<display "Slave Summary">>
+	  | <<print "[[Change or remove Attendant|Attendant Select]]">>
+	<</if>>
+  <</for>>
+<<else>>
+	You do not have a slave serving as a spa Attendant. [[Appoint one|Attendant Select]]
+<</if>>
+
+<</nobr>>
+
+<<if $spaSlaves gt 0>>\
+__Prise a slave out of the spa:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "rest in the spa">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Remove her from the Spa|Retrieve from Spa][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notSpaSlaves gt 1>>\
+__Let a slave rest in the spa:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+<<if $slaves[$i].devotion gte -10>>\
+  <br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+  <<display "Slave Summary">>\
+  | <<print "[[Send her to the Spa|Assign to Spa][$activeSlave to $slaves[" + $i + "]]]">>\
+<<else>>\
+  <br>//$slaves[$i].slaveName cannot be trusted in the spa//\
+<</if>>\
+<</if>>\
+<</for>>
+<</if>>\

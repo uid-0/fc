@@ -1,0 +1,44 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She was voluntarily enslaved after she decided that your paternalistic arcology was a better place for advancement than the old world.">>
+<<set $activeSlave.career to $educatedCareers.random()>>
+<<set $activeSlave.health to random(4,6)>>
+<<set $activeSlave.devotion to random(5,7)>>
+<<set $activeSlave.trust to random(5,7)>>
+<<set $activeSlave.intelligence to 2>>
+<<set $activeSlave.intelligenceImplant to 1>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+You receive so many messages, as a noted titan of the new Free Cities world, that your personal assistant has to be quite draconian in culling them. She lets only the most important through to you. One category of message that always gets through regardless of content, though, is requests for voluntary enslavement. As the new world takes shape, they've become less rare than they once were.
+
+This one is interesting, even by the standards of messages from people who want to become slaves. The individual is neither sick nor abused, and speaks with intelligence and directness. "I've heard a lot about how your arcology treats slaves," she says. "And, well, I don't know how closely you watch the old world from where you are, but it's pretty bad. Being smart and driven out here doesn't always keep you fed and clothed, or even alive. I'm smart and driven, and I understand that might make me a madam or a concierge or even a head girl in your arcology. I'm not dumb enough to rely on that, but I'll take that chance."
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	She speaks to you as a free woman throughout the enslavement process, but as soon as it is completed, she stops and waits for instruction before talking. She does not look directly at your face, but keeps her gaze lower than that, and stands expectant and ready for commands. You are reminded of her intelligence by her precisely correct behavior for a new slave, even before you give any kind of direction.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

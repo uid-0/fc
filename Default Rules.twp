@@ -1,0 +1,573 @@
+<<nobr>>
+
+<<if $activeSlave.assignmentVisible is 1>>
+<<if ($activeSlave.useRulesAssistant isnot 0)>>
+
+<<if ($defaultRulesSlave.choosesOwnAssignment is 1)>>
+  <<if ($activeSlave.choosesOwnAssignment is 0)>>
+  <<if ($activeSlave.devotion gt 10)>>
+  <<if ($activeSlave.assignment isnot "recruit girls")>>
+  <<if ($activeSlave.assignment isnot "be your Head Girl")>>
+  <<if ($activeSlave.assignment isnot "guard you")>>
+	<br>Since $activeSlave.slaveName is devoted she has been told to select her own assignments.
+	<<set $activeSlave.choosesOwnAssignment to 1>>
+	<<set $activeSlave.assignment to "choose her own job">>
+  <</if>>
+  <</if>>
+  <</if>>
+  <</if>>
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.devotion gt 4)>>
+
+<<if ($defaultRulesSlave.goodClothes isnot "no default setting")>>
+<<if ($defaultRulesSlave.choosesOwnClothes is 1)>>
+  <<if ($activeSlave.choosesOwnClothes is 0)>>
+	<br>Since $activeSlave.slaveName is obedient or better she is now allowed to choose her own clothes.
+	<<set $activeSlave.choosesOwnClothes to 1>>
+	<<set $activeSlave.clothes to "choosing her own clothes">>
+  <</if>>
+<<elseif ($activeSlave.clothes isnot $defaultRulesSlave.goodClothes)>>
+    <<set  $activeSlave.clothes to $defaultRulesSlave.goodClothes>>
+	<br>Since $activeSlave.slaveName is obedient or better her clothes have been set to $activeSlave.clothes.
+	<<set $activeSlave.choosesOwnClothes to 0>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.goodCollar isnot "no default setting")>>
+<<if ($activeSlave.collar isnot $defaultRulesSlave.goodCollar)>>
+    <<set  $activeSlave.collar to $defaultRulesSlave.goodCollar>>
+	<br>Since $activeSlave.slaveName is obedient or better she has been given a $activeSlave.collar collar.
+<</if>>
+<</if>>
+
+<<else>>
+
+<<if ($defaultRulesSlave.badClothes isnot "no default setting")>>
+<<if ($activeSlave.clothes isnot $defaultRulesSlave.badClothes)>>
+    <<set  $activeSlave.clothes to $defaultRulesSlave.badClothes>>
+	<br>Since $activeSlave.slaveName is fearful or worse her clothes have been set to $activeSlave.clothes.
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.badCollar isnot "no default setting")>>
+<<if ($activeSlave.collar isnot $defaultRulesSlave.badCollar)>>
+    <<set  $activeSlave.collar to $defaultRulesSlave.badCollar>>
+	<br>Since $activeSlave.slaveName is fearful or worse she has been given a $activeSlave.collar collar.
+<</if>>
+<</if>>
+
+<</if>>
+
+<<if ($activeSlave.vagina gt -1)>>
+<<if ($defaultRulesSlave.vaginalAccessory isnot "no default setting")>>
+<<if ($activeSlave.vaginalAccessory isnot $defaultRulesSlave.vaginalAccessory)>>
+    <<set  $activeSlave.vaginalAccessory to $defaultRulesSlave.vaginalAccessory>>
+	<br>$activeSlave.slaveName has been given a $activeSlave.vaginalAccessory for her pussy.
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.buttplug isnot "no default setting")>>
+<<if ($activeSlave.buttplug isnot $defaultRulesSlave.buttplug)>>
+    <<set  $activeSlave.buttplug to $defaultRulesSlave.buttplug>>
+	<br>$activeSlave.slaveName has been given a $activeSlave.buttplug for her asshole.
+<</if>>
+<</if>>
+
+<<if ($activeSlave.devotion gte -4)>>
+<<if ($activeSlave.amp isnot 1)>>
+<<if ($defaultRulesSlave.shoes isnot "no default setting")>>
+<<if ($activeSlave.shoes isnot $defaultRulesSlave.shoes)>>
+    <<set $activeSlave.shoes to $defaultRulesSlave.shoes>>
+	<br>$activeSlave.slaveName's shoes have been set to $activeSlave.shoes.
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.eyes isnot "no default setting")>>
+<<if ($activeSlave.eyes isnot $defaultRulesSlave.eyes)>>
+    <<set $activeSlave.eyes to $defaultRulesSlave.eyes>>
+    <<set $cash -= $modCost>>
+	<br>$activeSlave.slaveName has been given $activeSlave.eyes contact lenses.
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.makeup isnot "no default setting")>>
+<<if ($activeSlave.makeup isnot $defaultRulesSlave.makeup)>>
+    <<set $activeSlave.makeup to $defaultRulesSlave.makeup>>
+    <<set $cash -= $modCost>>
+	<br>$activeSlave.slaveName has been assigned the standard makeup.
+<</if>>
+<</if>>
+
+<<if ($activeSlave.amp isnot 1)>>
+<<if ($defaultRulesSlave.nails isnot "no default setting")>>
+<<if ($activeSlave.nails isnot $defaultRulesSlave.nails)>>
+    <<set $activeSlave.nails to $defaultRulesSlave.nails>>
+    <<set $cash -= $modCost>>
+	<br>$activeSlave.slaveName has been assigned the standard nails.
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.hcolor isnot "no default setting")>>
+<<if ($activeSlave.hcolor isnot $defaultRulesSlave.hcolor)>>
+    <<set $activeSlave.hcolor to $defaultRulesSlave.hcolor>>
+    <<set $cash -= $modCost>>
+	<br>$activeSlave.slaveName's hair has been dyed $defaultRulesSlave.hcolor.
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.hlength isnot "no default setting")>>
+<<if ($activeSlave.hlength isnot $defaultRulesSlave.hlength)>>
+    <<set $activeSlave.hlength to $defaultRulesSlave.hlength>>
+    <<set $cash -= $modCost>>
+	<br>$activeSlave.slaveName's hair has been restyled; it is now $defaultRulesSlave.hlength.
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.pubicHColor isnot "no default setting")>>
+<<if ($activeSlave.pubicHColor isnot $defaultRulesSlave.pubicHColor)>>
+    <<set $activeSlave.pubicHColor to $defaultRulesSlave.pubicHColor>>
+    <<set $cash -= $modCost>>
+	<br>$activeSlave.slaveName's pubic hair, if present, has been dyed $defaultRulesSlave.pubicHColor.
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.pubicHLength isnot "no default setting")>>
+<<if ($activeSlave.pubicHLength isnot $defaultRulesSlave.pubicHLength)>>
+    <<set $activeSlave.pubicHLength to $defaultRulesSlave.pubicHLength>>
+    <<set $cash -= $modCost>>
+	<br>$activeSlave.slaveName's pubic hair has been restyled; it is now $defaultRulesSlave.pubicHLength.
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.curatives isnot "no default setting")>>
+<<if ($activeSlave.health lt 8) and ($defaultRulesSlave.curatives is "imperfect") and ($activeSlave.drugs isnot "curatives")>>
+    <<set  $activeSlave.drugs to "curatives">>
+    <br>$activeSlave.slaveName could be healthier, so she has been put on curatives.
+<<elseif ($activeSlave.health lt -2) and ($defaultRulesSlave.curatives is "unhealthy") and ($activeSlave.drugs isnot "curatives")>>
+    <<set  $activeSlave.drugs to "curatives">>
+    <br>$activeSlave.slaveName is unhealthy, so she has been put on curatives.
+<<elseif ($activeSlave.health gte 8) and ($activeSlave.drugs is "curatives")>>
+    <<set  $activeSlave.drugs to "no drugs">>
+    <br>$activeSlave.slaveName's health has been perfected, so she has been taken off curatives.
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.growth isnot "no default setting")>>
+  <<if ($activeSlave.health gte 8)>>
+	<<if ($defaultRulesSlave.growth is "girlish")>>
+	  <<if ($activeSlave.butt lt 2)>>
+		<<set  $activeSlave.drugs to "butt injections">>
+		<br>$activeSlave.slaveName's butt is tiny, so she's been put on buttock growth drugs.
+	  <<elseif ($activeSlave.boobs lt 350)>>
+		<<set  $activeSlave.drugs to "breast injections">>
+		<br>$activeSlave.slaveName's tits are tiny, so she's been put on breast growth drugs.
+	  <<elseif ($activeSlave.lips lt 1)>>
+		<<set  $activeSlave.drugs to "lip injections">>
+		<br>$activeSlave.slaveName's lips are average, so she's been put on lip growth injections.
+	  <</if>>
+	<<elseif ($defaultRulesSlave.growth is "stacked")>>
+	  <<if ($activeSlave.butt lt 4)>>
+		<<set  $activeSlave.drugs to "butt injections">>
+		<br>$activeSlave.slaveName's butt isn't large, so she's been put on buttock growth drugs.
+	  <<elseif ($activeSlave.boobs lt 1000)>>
+		<<set  $activeSlave.drugs to "breast injections">>
+		<br>$activeSlave.slaveName's tits aren't large, so she's been put on breast growth drugs.
+	  <<elseif ($activeSlave.dick gt 0) and ($activeSlave.dick lt 4)>>
+		<<set  $activeSlave.drugs to "penis enhancement">>
+		<br>$activeSlave.slaveName's dick isn't large, so she's been put on penis enhancement.
+	  <<elseif ($activeSlave.lips lt 2)>>
+		<<set  $activeSlave.drugs to "lip injections">>
+		<br>$activeSlave.slaveName's has been put on lip growth injections.
+	  <<elseif ($activeSlave.balls gt 0) and ($activeSlave.balls lt 4)>>
+		<<set  $activeSlave.drugs to "penis enhancement">>
+		<br>$activeSlave.slaveName's balls aren't large, so she's been put on penis enhancement.
+	  <</if>>
+	<<else>>
+	  <<if ($activeSlave.butt lt 9) and ($activeSlave.butt lt ($activeSlave.boobs/1000))>>
+		<<set  $activeSlave.drugs to "butt injections">>
+		<br>$activeSlave.slaveName's butt could be bigger and is behind her tits, so she's been put on butt injections.
+	  <<elseif ($activeSlave.boobs lt 9000) and ($activeSlave.boobs lt ($activeSlave.butt*1000))>>
+		<<set  $activeSlave.drugs to "breast injections">>
+		<br>$activeSlave.slaveName's boobs could be bigger and are behind her butt, so she's been put on breast injections.
+	  <<elseif ($activeSlave.lips lt 3)>>
+		<<set  $activeSlave.drugs to "lip injections">>
+		<br>$activeSlave.slaveName's has been put on lip growth injections.
+	  <<elseif ($activeSlave.dick gt 0) and ($activeSlave.dick lt 6)>>
+		<<set  $activeSlave.drugs to "penis enhancement">>
+		<br>$activeSlave.slaveName's dick could be bigger, so she's been put on penis enhancement.
+	  <<elseif ($activeSlave.balls gt 0) and ($activeSlave.balls lt 6)>>
+		<<set  $activeSlave.drugs to "penis enhancement">>
+		<br>$activeSlave.slaveName's dick could be bigger, so she's been put on penis enhancement.
+	  <</if>>
+	<</if>>
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>
+<<if ($defaultRulesSlave.gelding isnot "no default setting")>>
+<<if ($activeSlave.hormones isnot $defaultRulesSlave.gelding)>>
+    <<set  $activeSlave.hormones to $defaultRulesSlave.gelding>>
+	<br>$activeSlave.slaveName is a gelding, so she has been put on the appropriate hormones.
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0)>>
+<<if ($defaultRulesSlave.XY isnot "no default setting")>>
+<<if ($activeSlave.hormones isnot $defaultRulesSlave.XY)>>
+<<if ($activeSlave.assignment isnot "recruit girls")>>
+<<if ($activeSlave.assignment isnot "be the Wardeness")>>
+<<if ($activeSlave.assignment isnot "be the Madam")>>
+<<if ($activeSlave.assignment isnot "be the Collectrix")>>
+    <<set  $activeSlave.hormones to $defaultRulesSlave.XY>>
+	<br>$activeSlave.slaveName is a shemale, so she has been put on the appropriate hormones.
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($activeSlave.vagina gt -1)>>
+<<if ($activeSlave.ovaries is 1)>>
+<<if ($activeSlave.preg gt -2)>>
+<<if ($activeSlave.preg lt 1)>>
+<<if ($defaultRulesSlave.preg isnot "no default setting")>>
+<<if ($activeSlave.preg isnot $defaultRulesSlave.preg)>>
+    <<set $activeSlave.preg to $defaultRulesSlave.preg>>
+	<br>$activeSlave.slaveName is a fertile female, so she has been put on the appropriate contraceptive regime.
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($activeSlave.vagina gt -1) and ($activeSlave.dick is 0)>>
+<<if ($defaultRulesSlave.XX isnot "no default setting")>>
+<<if ($activeSlave.hormones isnot $defaultRulesSlave.XX)>>
+    <<set $activeSlave.hormones to $defaultRulesSlave.XX>>
+	<br>$activeSlave.slaveName is a female, so she has been put on the appropriate hormonal regime.
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.goodLivingRules isnot "no default setting")>>
+<<if ($activeSlave.fetish is "mindbroken") and ($activeSlave.livingRules isnot "spare")>>
+    <<set  $activeSlave.livingRules to "spare">>
+    <br>Since $activeSlave.slaveName is mindbroken her living standard has been set to spare.
+<<elseif ($activeSlave.devotion gt 4)>>
+  <<if ($defaultRulesSlave.goodLivingRules is "luxurious") and ($activeSlave.livingRules isnot "luxurious")>>
+    <<set  $activeSlave.livingRules to "luxurious">>
+    <br>Since $activeSlave.slaveName is obedient or better her living standard has been set to luxurious.
+  <<elseif ($defaultRulesSlave.goodLivingRules is "normal") and ($activeSlave.livingRules isnot "normal")>>
+    <<set  $activeSlave.livingRules to "normal">>
+    <br>Since $activeSlave.slaveName is obedient or better her living standard has been set to standard.
+  <<elseif ($defaultRulesSlave.goodLivingRules is "spare") and ($activeSlave.livingRules isnot "spare")>>
+    <<set  $activeSlave.livingRules to "spare">>
+    <br>Since $activeSlave.slaveName is obedient or better her living standard has been set to spare.
+  <</if>>
+<<elseif ($activeSlave.devotion lte 4) and ($activeSlave.livingRules isnot "spare")>>
+    <<set  $activeSlave.livingRules to "spare">>
+    <br>Since $activeSlave.slaveName is not obedient her living standard has been set to spare.
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.goodSpeechRules isnot "no default setting")>>
+<<if ($activeSlave.devotion gt 4) and ($activeSlave.speechRules isnot $defaultRulesSlave.goodSpeechRules)>>
+    <<set  $activeSlave.speechRules to $defaultRulesSlave.goodSpeechRules>>
+    <br>Since $activeSlave.slaveName is obedient or better her speech rules have been set to $defaultRulesSlave.goodSpeechRules.
+<</if>>
+<</if>>
+<<if ($activeSlave.speechRules isnot "restrictive")>>
+<<if ($activeSlave.fetish is "mindbroken")>>
+    <<set  $activeSlave. speechRules to "restrictive">>
+    <br>Since $activeSlave.slaveName is mindbroken her speech rules have been set to restrictive.
+<<elseif ($activeSlave.devotion lte 4)>>
+    <<set  $activeSlave.speechRules to "restrictive">>
+    <br>Since $activeSlave.slaveName is not obedient her speech rules have been set to restrictive.
+<</if>>
+<</if>>
+
+<<if ($activeSlave.fetish isnot "mindbroken")>>
+<<if ($activeSlave.devotion gt 4)>>
+  <<if ($defaultRulesSlave.goodRelationshipRules isnot "no default setting")>>
+  <<if ($activeSlave.relationshipRules isnot $defaultRulesSlave.goodRelationshipRules )>>
+  <<set  $activeSlave.relationshipRules to $defaultRulesSlave.goodRelationshipRules >>
+  <br>Since $activeSlave.slaveName is obedient or better her relationship rules have been set to $defaultRulesSlave.goodRelationshipRules.
+  <</if>>
+  <</if>>
+<<else>>
+  <<if ($defaultRulesSlave.badRelationshipRules isnot "no default setting")>>
+  <<if ($activeSlave.relationshipRules isnot $defaultRulesSlave.badRelationshipRules )>>
+  <<set  $activeSlave.relationshipRules to $defaultRulesSlave.badRelationshipRules >>
+  <br>Since $activeSlave.slaveName is not obedient her relationship rules have been set to $defaultRulesSlave.badRelationshipRules.
+  <</if>>
+  <</if>>
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.goodReleaseRules isnot "no default setting")>>
+<<display "release check">>
+<<if ($activeSlave.fetish is "mindbroken") and ($activeSlave.releaseRules isnot "permissive")>>
+    <<set  $activeSlave.releaseRules to "permissive">>
+    <br>Since $activeSlave.slaveName is mindbroken her masturbation rules have been set to permissive.
+<<elseif ($activeSlave.devotion gt 4) and ($release is 0) and  ($activeSlave.releaseRules is "restrictive")>>
+    <<set  $activeSlave.releaseRules to "permissive">>
+    <br>Since $activeSlave.slaveName is obedient or better and has no sufficient sexual outlet her masturbation rules have been set to permissive.
+<<elseif ($activeSlave.devotion gt 4) and ($release isnot 0) and ($activeSlave.releaseRules isnot $defaultRulesSlave.goodReleaseRules)>>
+    <<set  $activeSlave.releaseRules to $defaultRulesSlave.goodReleaseRules>>
+    <br>Since $activeSlave.slaveName is obedient or better her masturbation rules have been set to $defaultRulesSlave.goodReleaseRules.
+<<elseif ($activeSlave.devotion lte 4) and ($activeSlave.releaseRules isnot "restrictive")>>
+    <<set  $activeSlave.releaseRules to "restrictive">>
+    <br>Since $activeSlave.slaveName is not obedient her masturbation rules have been set to restrictive.
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.diet isnot "no default setting")>>
+<<if ($activeSlave.boobs gte 1600) and ($activeSlave.muscles lt 1) and ($activeSlave.amp is 0) and ($activeSlave.diet isnot "muscle building")>>
+    <<set  $activeSlave.diet to "muscle building">>
+    <br>$activeSlave.slaveName has big tits and no back muscles, so she's been assigned to gain some.
+<<elseif ($activeSlave.boobs gte 1600) and ($activeSlave.muscles gte 1) and ($activeSlave.diet is "muscle building")>>
+    <<set  $activeSlave.diet to "healthy">>
+    <br>$activeSlave.slaveName has huge boobs, but she already has the back muscles to bear them, so she's been assigned to stop working out so hard.
+<<elseif ($activeSlave.boobs lt 1600) or ($activeSlave.muscles gte 1) or ($activeSlave.amp is 1)>>
+  <<if ($defaultRulesSlave.diet is "attractive") and ($activeSlave.weight lt -1) and ($activeSlave.diet isnot "fattening")>>
+	  <<set $activeSlave.diet to "fattening">>
+	  <br>$activeSlave.slaveName is too skinny so her diet has been set to fattening.
+  <<elseif ($activeSlave.weight lt $defaultRulesSlave.diet) and ($activeSlave.diet isnot "fattening")>>
+	  <<set $activeSlave.diet to "fattening">>
+	  <br>$activeSlave.slaveName is too skinny so her diet has been set to fattening.
+  <<elseif ($defaultRulesSlave.diet is "attractive") and($activeSlave.weight gt 1) and ($activeSlave.diet isnot "restricted")>>
+	  <<set $activeSlave.diet to "restricted">>
+	  <br>$activeSlave.slaveName is too fat so her diet has been set to restricted.
+  <<elseif ($activeSlave.weight gt $defaultRulesSlave.diet) and ($activeSlave.diet isnot "restricted")>>
+	  <<set $activeSlave.diet to "restricted">>
+	  <br>$activeSlave.slaveName is too fat so her diet has been set to restricted.
+  <<elseif (Math.abs($activeSlave.weight) lte 1) and($defaultRulesSlave.diet is "attractive") and ($defaultRulesSlave.muscles isnot "no default setting") and ($activeSlave.amp is 0) and ($defaultRulesSlave.muscles gt $activeSlave.muscles)>>
+	  <<set  $activeSlave.diet to "muscle building">>
+	  <br>$activeSlave.slaveName has been put on a muscle building exercise regime.
+  <<elseif ($activeSlave.weight is $defaultRulesSlave.diet) and ($defaultRulesSlave.muscles isnot "no default setting") and ($activeSlave.amp is 0) and ($defaultRulesSlave.muscles gt $activeSlave.muscles)>>
+	  <<set  $activeSlave.diet to "muscle building">>
+	  <br>$activeSlave.slaveName has been put on a muscle building exercise regime.
+  <<elseif ($activeSlave.weight is $defaultRulesSlave.diet) and ($defaultRulesSlave.muscles isnot "no default setting") and ($activeSlave.amp is 0) and ($defaultRulesSlave.muscles lt $activeSlave.muscles)>>
+	  <<set  $activeSlave.diet to "slimming">>
+	  <br>$activeSlave.slaveName has been put on a slimming exercise regime.
+  <<elseif (Math.abs($activeSlave.weight) lte 1) and($defaultRulesSlave.diet is "attractive") and ($defaultRulesSlave.muscles isnot "no default setting") and ($activeSlave.amp is 0) and ($defaultRulesSlave.muscles lt $activeSlave.muscles)>>
+	  <<set  $activeSlave.diet to "slimming">>
+	  <br>$activeSlave.slaveName has been put on a slimming exercise regime.
+  <<elseif ($defaultRulesSlave.diet is 2) and ($activeSlave.diet isnot "cum")>>
+	  <<set  $activeSlave.diet to "cum">>
+	  <br>$activeSlave.slaveName has been put on a diet that includes cum.
+  <<elseif (Math.abs($activeSlave.weight) lte 1) and ($activeSlave.diet isnot "healthy")>>
+	<<if ($activeSlave.boobs lt 1600) or ($activeSlave.muscles gte 1)>>
+	<<if ($defaultRulesSlave.diet is "attractive")>>
+	  <<set  $activeSlave.diet to "healthy">>
+	  <br>$activeSlave.slaveName has reached an attractive weight and has been put on a healthy diet.
+	<<elseif ($activeSlave.weight is $defaultRulesSlave.diet)>>
+	  <<set  $activeSlave.diet to "healthy">>
+	  <br>$activeSlave.slaveName has reached the target weight and has been put on a healthy diet.
+	<</if>>
+	<</if>>
+  <</if>>
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.devotion gt 4)>>
+
+<<if ($defaultRulesSlave.nipplesPiercing isnot "no default setting")>>
+<<if ($defaultRulesSlave.nipplesPiercing isnot "none")>>
+<<if $activeSlave.nipplesPiercing isnot $defaultRulesSlave.nipplesPiercing>>
+	<<set $activeSlave.nipplesPiercing to $defaultRulesSlave.nipplesPiercing>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's nipples have been pierced.
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.clitPiercing isnot "no default setting")>>
+<<if ($activeSlave.clitPiercing isnot 3)>>
+<<if ($defaultRulesSlave.clitPiercing isnot "none")>>
+<<if $activeSlave.clitPiercing isnot $defaultRulesSlave.clitPiercing>>
+	<<set $activeSlave.clitPiercing to $defaultRulesSlave.clitPiercing>>
+    <<if $activeSlave.dick gt 0>>
+    	<br>$activeSlave.slaveName's frenulum has been pierced.
+    <<else>>
+    	<br>$activeSlave.slaveName's clit has been pierced.
+	<</if>>
+    <<if $defaultRulesSlave.clitPiercing is 3>>
+      <<set $cash -= 1000>>
+	  <<set $activeSlave.clitSetting to "all">>
+    <<else>>
+      <<set $cash -= $modCost>>
+	<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<<if $activeSlave.vagina isnot -1>>
+<<if ($defaultRulesSlave.vaginaPiercing isnot "no default setting")>>
+<<if ($defaultRulesSlave.vaginaPiercing isnot "none")>>
+<<if $activeSlave.vaginaPiercing isnot $defaultRulesSlave.vaginaPiercing>>
+	<<set $activeSlave.vaginaPiercing to $defaultRulesSlave.vaginaPiercing>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's pussylips have been pierced.
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<<if $activeSlave.dick gt 0>>
+<<if ($defaultRulesSlave.dickPiercing isnot "no default setting")>>
+<<if ($defaultRulesSlave.dickPiercing isnot "none")>>
+<<if $activeSlave.dickPiercing isnot $defaultRulesSlave.dickPiercing>>
+	<<set $activeSlave.dickPiercing to $defaultRulesSlave.dickPiercing>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's shaft has been pierced.
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.anusPiercing isnot "no default setting")>>
+<<if ($defaultRulesSlave.anusPiercing isnot "none")>>
+<<if $activeSlave.anusPiercing isnot $defaultRulesSlave.anusPiercing>>
+	<<set $activeSlave.anusPiercing to $defaultRulesSlave.anusPiercing>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's asshole has been pierced.
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.lipsPiercing isnot "no default setting")>>
+<<if ($defaultRulesSlave.lipsPiercing isnot "none")>>
+<<if $activeSlave.lipsPiercing isnot $defaultRulesSlave.lipsPiercing>>
+	<<set $activeSlave.lipsPiercing to $defaultRulesSlave.lipsPiercing>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's lips have been pierced.
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.tonguePiercing isnot "no default setting")>>
+<<if ($defaultRulesSlave.tonguePiercing isnot "none")>>
+<<if $activeSlave.tonguePiercing isnot $defaultRulesSlave.tonguePiercing>>
+	<<set $activeSlave.tonguePiercing to $defaultRulesSlave.tonguePiercing>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's tongue has been pierced.
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.earPiercing isnot "no default setting")>>
+<<if ($defaultRulesSlave.earPiercing isnot "none")>>
+<<if $activeSlave.earPiercing isnot $defaultRulesSlave.earPiercing>>
+	<<set $activeSlave.earPiercing to $defaultRulesSlave.earPiercing>>
+	<<set $cash -= $modCost>>
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.nosePiercing isnot "no default setting")>>
+<<if ($defaultRulesSlave.nosePiercing isnot "none")>>
+<<if $activeSlave.nosePiercing isnot $defaultRulesSlave.nosePiercing>>
+	<<set $activeSlave.nosePiercing to $defaultRulesSlave.nosePiercing>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's ears have been pierced.
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.eyebrowPiercing isnot "no default setting")>>
+<<if ($defaultRulesSlave.eyebrowPiercing isnot "none")>>
+<<if $activeSlave.eyebrowPiercing isnot $defaultRulesSlave.eyebrowPiercing>>
+	<<set $activeSlave.eyebrowPiercing to $defaultRulesSlave.eyebrowPiercing>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's eyebrows have been pierced.
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.navelPiercing isnot "no default setting")>>
+<<if ($defaultRulesSlave.navelPiercing isnot "none")>>
+<<if $activeSlave.navelPiercing isnot $defaultRulesSlave.navelPiercing>>
+	<<set $activeSlave.navelPiercing to $defaultRulesSlave.navelPiercing>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's navel has been pierced.
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.boobsTat isnot "no default setting")>>
+<<if ($activeSlave.boobsTat isnot $defaultRulesSlave.boobsTat)>>
+	<<set $activeSlave.boobsTat to $defaultRulesSlave.boobsTat>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's chest has been tattooed.
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.buttTat isnot "no default setting")>>
+<<if ($activeSlave.buttTat isnot $defaultRulesSlave.buttTat)>>
+	<<set $activeSlave.buttTat to $defaultRulesSlave.buttTat>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's butt has been tattooed.
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.vaginaTat isnot "no default setting")>>
+<<if ($activeSlave.vaginaTat isnot $defaultRulesSlave.vaginaTat)>>
+	<<set $activeSlave.vaginaTat to $defaultRulesSlave.vaginaTat>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's abdomen has been tattooed.
+<</if>>
+<</if>>
+<<if ($activeSlave.dick gt 0)>>
+<<if ($defaultRulesSlave.dickTat isnot "no default setting")>>
+<<if ($activeSlave.dickTat isnot $defaultRulesSlave.dickTat)>>
+	<<set $activeSlave.dickTat to $defaultRulesSlave.dickTat>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's dick has been tattooed.
+<</if>>
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.lipsTat isnot "no default setting")>>
+<<if ($activeSlave.lipsTat isnot $defaultRulesSlave.lipstat)>>
+	<<set $activeSlave.lipsTat to $defaultRulesSlave.lipstat>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's face has been tattooed.
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.anusTat isnot "no default setting")>>
+<<if ($activeSlave.anusTat isnot $defaultRulesSlave.anusTat)>>
+	<<set $activeSlave.anusTat to $defaultRulesSlave.anusTat>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's asshole has been modded.
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.shouldersTat isnot "no default setting")>>
+<<if ($activeSlave.shouldersTat isnot $defaultRulesSlave.shouldersTat)>>
+	<<set $activeSlave.shouldersTat to $defaultRulesSlave.shouldersTat>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's shoulders have been tattooed.
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.armsTat isnot "no default setting")>>
+<<if ($activeSlave.armsTat isnot $defaultRulesSlave.armsTat)>>
+	<<set $activeSlave.armsTat to $defaultRulesSlave.armsTat>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's arms have been tattooed.
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.legsTat isnot "no default setting")>>
+<<if ($activeSlave.legsTat isnot $defaultRulesSlave.legsTat)>>
+	<<set $activeSlave.legsTat to $defaultRulesSlave.legsTat>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's legs have been tattooed.
+<</if>>
+<</if>>
+<<if ($defaultRulesSlave.stampTat isnot "no default setting")>>
+<<if ($activeSlave.stampTat isnot $defaultRulesSlave.stampTat)>>
+	<<set $activeSlave.stampTat to $defaultRulesSlave.stampTat>>
+	<<set $cash -= $modCost>>
+    <br>$activeSlave.slaveName's lower back has been tattooed.
+<</if>>
+<</if>>
+
+<</if>>
+
+<</if>>
+<</if>>
+
+<</nobr>>

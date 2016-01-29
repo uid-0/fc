@@ -1,0 +1,421 @@
+<<if ($activeSlave.dick is 0) and ($activeSlave.vagina is -1)>><<set $activeSlave.vagina to 0>><</if>>\
+\
+<<nobr>>
+
+You're no stranger to the Free Cities, which means you're no stranger to slavery. If you wish, you can bring slaves from your past life with you to your arcology. You have ¤$cash; you can spend it on slaves here, or bring it with you to start the game. Slaves created here will be much cheaper than if they were purchased on the market.
+
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.oldTrust to $activeSlave.trust>>
+<<if $startingGirlCopied is 1>>
+  <<display "Nationality to Name">>
+  <<set $activeSlave.slaveName to $activeSlave.birthName>>
+  <<set $activeSlave.ID to $IDNumber>>
+  <<set $IDNumber += 1>>
+  <<set $startingGirlCopied to 0>>
+<</if>>
+
+<<if $slaves.length is 1>>
+  You have one slave already committed.
+<<elseif $slaves.length gt 1>>
+  You have $slaves.length slaves already committed.
+<</if>>
+
+<br><br>
+__You are customizing this slave:__
+<br>
+<<if $activeSlave is 0>>
+  <<display "Starting Girls Workaround">>
+<</if>>
+<<set $saleDescription to 1>><<display "Long Slave Description">><<set $saleDescription to 0>>
+
+<<click "Randomize career">><<if ($activeSlave.age lte 22)>><<set $activeSlave.career to $youngCareers.random()>><<elseif ($activeSlave.intelligenceImplant is 1)>><<set $activeSlave.career to $educatedCareers.random()>><<else>><<set $activeSlave.career to $uneducatedCareers.random()>><</if>><<goto "Starting Girls">><</click>>
+
+| <<click "Randomize name">><<display "Nationality to Name">><<goto "Starting Girls">><<set $activeSlave.slaveName to $activeSlave.birthName>><</click>>
+
+| <<click "Start over with a random slave">><<set $startingGirlsNationality to $nationalities.random()>><<goto "Starting Girls Workaround">><</click>>
+
+<br><br>
+<<display "Slave Cost">>
+At present, this slave will cost ¤<<print $slaveCost>>.
+
+<<if $cash gte $slaveCost>>
+	[[Add this slave|Commit Starting Girl]] | 
+<<else>>
+	//You lack the necessary funds to add this slave.// | 
+<</if>>
+[[Discard this slave and continue to the arcology|Acquisition]]
+
+<</nobr>>
+
+__Modify her:__
+<<nobr>>
+''Devotion:''
+<<if $activeSlave.devotion lt -10>>Hateful.
+<<elseif $activeSlave.devotion lt -4>>Resistant.
+<<elseif $activeSlave.devotion lte 4>>Ambivalent.
+<<elseif $activeSlave.devotion lte 10>>Accepting.
+<<elseif $activeSlave.devotion lt 20>>Devoted.
+<<else>>Worshipful.
+<</if>>
+[[Hateful|Starting Girls][$activeSlave.devotion to random(-15,-12)]] | [[Resistant|Starting Girls][$activeSlave.devotion to random(-9,-5)]] | [[Ambivalent|Starting Girls][$activeSlave.devotion to random(-3,3)]] | [[Accepting|Starting Girls][$activeSlave.devotion to random(5,9)]] | [[Devoted|Starting Girls][$activeSlave.devotion to random(12,15)]] | [[Worshipful|Starting Girls][$activeSlave.devotion to 20]]
+<</nobr>>
+<<nobr>>
+''Trust:''
+<<if $activeSlave.trust lt -10>>Terrified.
+<<elseif $activeSlave.trust lt -4>>Frightened.
+<<elseif $activeSlave.trust lte 4>>Fearful.
+<<elseif $activeSlave.trust lte 10>>Careful.
+<<elseif $activeSlave.trust lt 30>>Trusting.
+<<else>>Absolute trust.
+<</if>>
+[[Terrified|Starting Girls][$activeSlave.trust to random(-15,-12)]] | [[Frightened|Starting Girls][$activeSlave.trust to random(-9,-5)]] | [[Fearful|Starting Girls][$activeSlave.trust to random(-3,3)]] | [[Careful|Starting Girls][$activeSlave.trust to random(5,9)]] | [[Trusting|Starting Girls][$activeSlave.trust to random(12,15)]] | [[Absolute trust|Starting Girls][$activeSlave.trust to 20]]
+<</nobr>>
+<<nobr>>
+''Age:''
+<<if $activeSlave.age lt 20>>18-19 years old.
+<<elseif $activeSlave.age lt 30>>20-29 years old.
+<<elseif $activeSlave.age lt 40>>30-39 years old.
+<<else>>40+ years old.
+<</if>>
+[["18-19"|Starting Girls][$activeSlave.age to random(18,19)]] | [["20-29"|Starting Girls][$activeSlave.age to random(20,29)]] | [["30-39"|Starting Girls][$activeSlave.age to random(30,39)]] | [[40+|Starting Girls][$activeSlave.age to random(40,44)]]
+<</nobr>>
+<<nobr>>
+''Health:''
+<<if $activeSlave.health is -4>>Unhealthy.
+<<elseif $activeSlave.health is 0>>Healthy.
+<<elseif $activeSlave.health is 4>>Very healthy.
+<<else>>Extremely healthy.
+<</if>>
+[[Unhealthy|Starting Girls][$activeSlave.health to -4]] | [[Healthy|Starting Girls][$activeSlave.health to 0]] | [[Very healthy|Starting Girls][$activeSlave.health to 4]] |  [[Extremely healthy|Starting Girls][$activeSlave.health to 8]]
+<</nobr>>
+<<nobr>>
+''Muscles:''
+<<if $activeSlave.muscles is 0>>Normal.
+<<elseif $activeSlave.muscles is 1>>Toned.
+<<else>>Ripped.
+<</if>>
+[[Normal|Starting Girls][$activeSlave.muscles to 0]] | [[Toned|Starting Girls][$activeSlave.muscles to 1]] | [[Ripped|Starting Girls][$activeSlave.muscles to 2]]
+<</nobr>>
+<<nobr>>
+''Lips:''
+<<if $activeSlave.lips is 0>>Normal.
+<<elseif $activeSlave.lips is 1>>Plush.
+<<elseif $activeSlave.lips is 2>>Huge.
+<</if>>
+[[Normal|Starting Girls][$activeSlave.lips to 0]] | [[Plush|Starting Girls][$activeSlave.lips to 1]] | [[Huge|Starting Girls][$activeSlave.lips to 2]]
+<</nobr>>
+<<nobr>>
+''Height:''
+<<if $activeSlave.height lt -1>>Petite.
+<<elseif $activeSlave.height is -1>>Short.
+<<elseif $activeSlave.height is 0>>Average.
+<<elseif $activeSlave.height is 1>>Tall.
+<<elseif $activeSlave.height gt 1>>Very tall.
+<</if>>
+[[Petite|Starting Girls][$activeSlave.height to -2]] | [[Short|Starting Girls][$activeSlave.height to -1]] | [[Average height|Starting Girls][$activeSlave.height to 0]] | [[Tall|Starting Girls][$activeSlave.height to 1]] | [[Very Tall|Starting Girls][$activeSlave.height to 2]]
+<</nobr>>
+<<nobr>>
+''Weight:''
+<<if $activeSlave.weight lt -1>>Skinny.
+<<elseif $activeSlave.weight is -1>>Thin.
+<<elseif $activeSlave.weight is 0>>Average.
+<<elseif $activeSlave.weight is 1>>Plush.
+<<elseif $activeSlave.weight gt 1>>Fat.
+<</if>>
+[[Skinny|Starting Girls][$activeSlave.weight to -2]]|
+[[Thin|Starting Girls][$activeSlave.weight to -1]] | 
+[[Average weight|Starting Girls][$activeSlave.weight to 0]] | [[Plush|Starting Girls][$activeSlave.weight to 1]] | 
+[[Fat|Starting Girls][$activeSlave.weight to 2]]
+<</nobr>>
+<<nobr>>
+''Face:''
+<<if $activeSlave.face lt -1>>Very unattractive.
+<<elseif $activeSlave.face is -1>>Unattractive.
+<<elseif $activeSlave.face is 0>>Average.
+<<elseif $activeSlave.face is 1>>Attractive.
+<<elseif $activeSlave.face gt 1>>Very attractive.
+<</if>>
+[[Very unattractive|Starting Girls][$activeSlave.face to -2]] | [[Unattractive|Starting Girls][$activeSlave.face to -1]] | [[Average|Starting Girls][$activeSlave.face to 0]] | [[Attractive|Starting Girls][$activeSlave.face to 1]] | [[Very attractive|Starting Girls][$activeSlave.face to 2]]
+<</nobr>>
+<<nobr>>
+''Breasts:''
+<<if $activeSlave.boobs is 200>>Flat.
+<<elseif $activeSlave.boobs lte 500>>Healthy.
+<<elseif $activeSlave.boobs lte 800>>Big.
+<<elseif $activeSlave.boobs lte 1200>>Huge.
+<<else>>Gigantic.
+<</if>>
+[[Flat|Starting Girls][$activeSlave.boobs to 200]] | [[Healthy|Starting Girls][$activeSlave.boobs to 500]] | [[Big|Starting Girls][$activeSlave.boobs to 800]] | [[Huge|Starting Girls][$activeSlave.boobs to 1200]] | [[Gigantic|Starting Girls][$activeSlave.boobs to 1600]]
+<</nobr>>
+<<nobr>>
+''Butt:''
+<<if $activeSlave.butt is 1>>Flat.
+<<elseif $activeSlave.butt lt 4>>Healthy.
+<<elseif $activeSlave.butt lt 6>>Huge.
+<<else>>Massive.
+<</if>>
+[[Flat|Starting Girls][$activeSlave.butt to 1]] | [[Healthy|Starting Girls][$activeSlave.butt to 3]] | [[Huge|Starting Girls][$activeSlave.butt to 5]] | [[Massive|Starting Girls][$activeSlave.butt to 7]]
+<</nobr>>
+<<nobr>>
+''Vagina:''
+<<if $activeSlave.vagina is -1>>No vagina.
+<<elseif $activeSlave.vagina is 0>>Vaginal virgin.
+<<elseif $activeSlave.vagina is 1>>Normal vagina.
+<<else>>Veteran vagina.
+<</if>>
+<<if $activeSlave.dick gt 0>>[[No vagina|Starting Girls][$activeSlave.vagina to -1, $activeSlave.preg to -2, $activeSlave.ovaries to 0]]<<else>>//No vagina//<</if>> | [[Vaginal virgin|Starting Girls][$activeSlave.vagina to 0, $activeSlave.preg to -1, $activeSlave.ovaries to 1]] | [[Normal vagina|Starting Girls][$activeSlave.vagina to 1, $activeSlave.preg to -1, $activeSlave.ovaries to 1]] | [[Veteran vagina|Starting Girls][$activeSlave.vagina to 2, $activeSlave.preg to -1, $activeSlave.ovaries to 1]]
+<</nobr>>\
+<<nobr>>
+<<if $activeSlave.vagina gt -1>>
+<br>''Clit:''
+<<if $activeSlave.clit is 0>>Normal.
+<<elseif $activeSlave.clit is 1>>Large.
+<<else>>Huge.
+<</if>>
+[[Normal|Starting Girls][$activeSlave.clit to 0]] | [[Large|Starting Girls][$activeSlave.clit to 1]] | [[Huge|Starting Girls][$activeSlave.clit to 2]]
+<</if>>
+<</nobr>>
+<<if $seeDicks isnot 0>>\
+<<nobr>>
+''Penis:''
+<<if $activeSlave.dick is 0>>None.
+<<elseif $activeSlave.dick is 1>>Tiny.
+<<elseif $activeSlave.dick is 2>>Small.
+<<elseif $activeSlave.dick is 3>>Normal.
+<<else>>Large.
+<</if>>
+[[No penis|Starting Girls][$activeSlave.dick to 0,$activeSlave.balls to 0,$activeSlave.clit to 0]] | 
+[[Tiny|Starting Girls][$activeSlave.dick to 1,$activeSlave.clit to 0]] | 
+[[Small|Starting Girls][$activeSlave.dick to 2,$activeSlave.clit to 0]] | 
+[[Normal|Starting Girls][$activeSlave.dick to 3,$activeSlave.clit to 0]] | 
+[[Large|Starting Girls][$activeSlave.dick to 4,$activeSlave.clit to 0]]
+<</nobr>>\
+<<nobr>>
+<<if $activeSlave.dick gt 0>>
+<br>
+''Testicles:''
+<<if $activeSlave.balls is 0>>None.
+<<elseif $activeSlave.balls is 1>>Vestigial.
+<<elseif $activeSlave.balls is 2>>Small.
+<<elseif $activeSlave.balls is 3>>Normal.
+<<else>>Large.<</if>>
+[[No testicles|Starting Girls][$activeSlave.balls to 0,$activeSlave.clit to 0]] | 
+[[Vestigial|Starting Girls][$activeSlave.balls to 1,$activeSlave.clit to 0]] | 
+[[Small|Starting Girls][$activeSlave.balls to 2,$activeSlave.clit to 0]] | 
+[[Normal|Starting Girls][$activeSlave.balls to 3,$activeSlave.clit to 0]] | 
+[[Large|Starting Girls][$activeSlave.balls to 4,$activeSlave.clit to 0]]
+<</if>>
+<</nobr>>
+<</if>>\
+<<nobr>>
+''Anus:''
+<<if $activeSlave.anus is 0>>Virgin.
+<<elseif $activeSlave.anus is 1>>Normal.
+<<else>>Veteran.
+<</if>>
+[[Anal virgin|Starting Girls][$activeSlave.anus to 0]] | 
+[[Normal|Starting Girls][$activeSlave.anus to 1]] | 
+[[Veteran|Starting Girls][$activeSlave.anus to 2]]
+<</nobr>>
+<<nobr>>
+''Oral sex skills:''
+<<if $activeSlave.oralSkill is 0>>Unskilled.
+<<elseif $activeSlave.oralSkill is 1>>Skilled.
+<<else>>Expert.
+<</if>>
+[[Unskilled|Starting Girls][$activeSlave.oralSkill to 0]] | [[Skilled|Starting Girls][$activeSlave.oralSkill to 1]] | [[Expert|Starting Girls][$activeSlave.oralSkill to 2]]
+<</nobr>>
+<<nobr>>
+<<if $activeSlave.vagina is 0>>
+//Virgins cannot be given vaginal skills//
+<<elseif $activeSlave.vagina is -1>>
+//Must have a vagina to have vaginal skills//
+<<else>>
+''Vaginal sex skills:''
+<<if $activeSlave.vaginalSkill is 0>>Unskilled.
+<<elseif $activeSlave.vaginalSkill is 1>>Skilled.
+<<else>>Expert.
+<</if>>
+[[Unskilled|Starting Girls][$activeSlave.vaginalSkill to 0]] | [[Skilled|Starting Girls][$activeSlave.vaginalSkill to 1]] | [[Expert|Starting Girls][$activeSlave.vaginalSkill to 2]]
+<</if>>
+<</nobr>>
+<<nobr>>
+<<if $activeSlave.anus is 0>>
+//Anal virgins cannot be given anal skills//
+<<else>>
+''Anal sex skills:''
+<<if $activeSlave.analSkill is 0>>Unskilled.
+<<elseif $activeSlave.analSkill is 1>>Skilled.
+<<else>>Expert.
+<</if>>
+[[Unskilled|Starting Girls][$activeSlave.analSkill to 0]] | [[Skilled|Starting Girls][$activeSlave.analSkill to 1]] | [[Expert|Starting Girls][$activeSlave.analSkill to 2]]
+<</if>>
+<</nobr>>
+<<nobr>>
+''Prostitution skills:''
+<<if $activeSlave.whoreSkill is 0>>Unskilled.
+<<elseif $activeSlave.whoreSkill is 1>>Skilled.
+<<else>>Expert.
+<</if>>
+[[Unskilled|Starting Girls][$activeSlave.whoreSkill to 0]] | [[Skilled|Starting Girls][$activeSlave.whoreSkill to 1]] | [[Expert|Starting Girls][$activeSlave.whoreSkill to 2]]
+<</nobr>>
+<<nobr>>
+''Entertainment skills:''
+<<if $activeSlave.entertainSkill is 0>>Unskilled.
+<<elseif $activeSlave.entertainSkill is 1>>Skilled.
+<<else>>Expert.
+<</if>>
+[[Unskilled|Starting Girls][$activeSlave.entertainSkill to 0]] | [[Skilled|Starting Girls][$activeSlave.entertainSkill to 1]] | [[Expert|Starting Girls][$activeSlave.entertainSkill to 2]]
+<</nobr>>
+<<nobr>>
+''Combat skill:''
+<<if $activeSlave.combatSkill is 0>>Unskilled at combat.
+<<else>>Skilled at combat.
+<</if>>
+[[Unskilled|Starting Girls][$activeSlave.combatSkill to 0]] | [[Skilled|Starting Girls][$activeSlave.combatSkill to 1]]
+<</nobr>>
+<<nobr>>
+''Intelligence:''
+<<if $activeSlave.intelligence is 2>>Brilliant.
+<<elseif $activeSlave.intelligence is 1>>Smart.
+<<elseif $activeSlave.intelligence is 0>>Average intelligence.
+<<elseif $activeSlave.intelligence is -1>>Stupid.
+<<else>>Moronic.
+<</if>>
+[[Brilliant|Starting Girls][$activeSlave.intelligence to 2]] | [[Smart|Starting Girls][$activeSlave.intelligence to 1]] | [[Average intelligence|Starting Girls][$activeSlave.intelligence to 0]] | [[Stupid|Starting Girls][$activeSlave.intelligence to -1]] | [[Moronic|Starting Girls][$activeSlave.intelligence to -2]]
+<</nobr>>
+<<nobr>>
+''Education:''
+<<if $activeSlave.intelligenceImplant is 1>>Educated.
+<<else>>Uneducated.
+<</if>>
+[[Educated|Starting Girls][$activeSlave.intelligenceImplant to 1]] | [[Uneducated|Starting Girls][$activeSlave.intelligenceImplant to 0]]
+<</nobr>>
+<<nobr>>
+<<if $activeSlave.fetishDiscovered is 1>>
+  ''Fetish:'' $activeSlave.fetish.
+<<else>>
+  ''Fetish:'' not known.
+<</if>>
+[[Unknown|Starting Girls][$activeSlave.fetish to either("none", "none", "none", "none", "none", "none", "submissive", "likes girls", "cumslut", "humiliation", "buttslut", "boobs", "pregnancy", "dom", "sadist", "masochist"), $activeSlave.fetishDiscovered to 0]] | 
+[[None|Starting Girls][$activeSlave.fetish to "none", $activeSlave.fetishDiscovered to 1]] | 
+[[Submissive|Starting Girls][$activeSlave.fetish to "submissive", $activeSlave.fetishDiscovered to 1]] | 
+[[Dominance|Starting Girls][$activeSlave.fetish to "dom", $activeSlave.fetishDiscovered to 1]] | 
+[[Likes girls|Starting Girls][$activeSlave.fetish to "likes girls", $activeSlave.fetishDiscovered to 1]] | 
+[[Cumslut|Starting Girls][$activeSlave.fetish to "cumslut", $activeSlave.fetishDiscovered to 1]] | 
+[[Humiliation|Starting Girls][$activeSlave.fetish to "humiliation", $activeSlave.fetishDiscovered to 1]] | 
+[[Buttslut|Starting Girls][$activeSlave.fetish to "buttslut", $activeSlave.fetishDiscovered to 1]] | 
+[[Breasts|Starting Girls][$activeSlave.fetish to "boobs", $activeSlave.fetishDiscovered to 1]] | 
+[[Pregnancy|Starting Girls][$activeSlave.fetish to "pregnancy", $activeSlave.fetishDiscovered to 1]] | 
+[[Sadism|Starting Girls][$activeSlave.fetish to "sadist", $activeSlave.fetishDiscovered to 1]] | 
+[[Masochism|Starting Girls][$activeSlave.fetish to "masochist", $activeSlave.fetishDiscovered to 1]] | 
+[[Nympho|Starting Girls][$activeSlave.fetish to "nympho", $activeSlave.fetishDiscovered to 1]]
+<</nobr>>
+<<nobr>>
+''Behavioral Quirk:'' $activeSlave.behavioralQuirk.
+[[None|Starting Girls][$activeSlave.behavioralQuirk to "none"]] | 
+[[Arrogant|Starting Girls][$activeSlave.behavioralQuirk to "arrogant"]] | 
+[[Bitchy|Starting Girls][$activeSlave.behavioralQuirk to "bitchy"]] | 
+[[Quirky|Starting Girls][$activeSlave.behavioralQuirk to "quirky"]] | 
+[[Anorexic|Starting Girls][$activeSlave.behavioralQuirk to "anorexic"]]
+<</nobr>>
+<<nobr>>
+''Sexual Quirk:'' $activeSlave.sexualQuirk.
+[[None|Starting Girls][$activeSlave.sexualQuirk to "none"]] | 
+[[Hates oral|Starting Girls][$activeSlave.sexualQuirk to "hates oral"]] | 
+[[Hates anal|Starting Girls][$activeSlave.sexualQuirk to "hates anal"]] | 
+[[Hates penetration|Starting Girls][$activeSlave.sexualQuirk to "hates penetration"]] | 
+[[Hates men|Starting Girls][$activeSlave.sexualQuirk to "hates men"]] | 
+[[Hates women|Starting Girls][$activeSlave.sexualQuirk to "hates women"]]
+<</nobr>>
+
+__Start over by selecting a nationality:__
+<<nobr>>
+[[American|Starting Girls Workaround][$startingGirlsNationality to "American"]] | 
+[[Afghan|Starting Girls Workaround][$startingGirlsNationality to "Afghan"]] | 
+[[Algerian|Starting Girls Workaround][$startingGirlsNationality to "Algerian"]] | 
+[[Argentinian|Starting Girls Workaround][$startingGirlsNationality to "Argentinian"]] | 
+[[Armenian|Starting Girls Workaround][$startingGirlsNationality to "Armenian"]] | 
+[[Australian|Starting Girls Workaround][$startingGirlsNationality to "Australian"]] | 
+[[Austrian|Starting Girls Workaround][$startingGirlsNationality to "Austrian"]] | 
+[[Bangladeshi|Starting Girls Workaround][$startingGirlsNationality to "Bangladeshi"]] | 
+[[Belgian|Starting Girls Workaround][$startingGirlsNationality to "Belgian"]] | 
+[[Bolivian|Starting Girls Workaround][$startingGirlsNationality to "Bolivian"]] | 
+[[Brazilian|Starting Girls Workaround][$startingGirlsNationality to "Brazilian"]] | 
+[[British|Starting Girls Workaround][$startingGirlsNationality to "British"]] | 
+[[Burmese|Starting Girls Workaround][$startingGirlsNationality to "Burmese"]] | 
+[[Canadian|Starting Girls Workaround][$startingGirlsNationality to "Canadian"]] | 
+[[Chilean|Starting Girls Workaround][$startingGirlsNationality to "Chilean"]] | 
+[[Chinese|Starting Girls Workaround][$startingGirlsNationality to "Chinese"]] | 
+[[Czech|Starting Girls Workaround][$startingGirlsNationality to "Czech"]] | 
+[[Colombian|Starting Girls Workaround][$startingGirlsNationality to "Colombian"]] | 
+[[Congolese|Starting Girls Workaround][$startingGirlsNationality to "Congolese"]] | 
+[[Cuban|Starting Girls Workaround][$startingGirlsNationality to "Cuban"]] | 
+[[Danish|Starting Girls Workaround][$startingGirlsNationality to "Danish"]] | 
+[[Dutch|Starting Girls Workaround][$startingGirlsNationality to "Dutch"]] | 
+[[Egyptian|Starting Girls Workaround][$startingGirlsNationality to "Egyptian"]] | 
+[[Emirati|Starting Girls Workaround][$startingGirlsNationality to "Emirati"]] | 
+[[Estonian|Starting Girls Workaround][$startingGirlsNationality to "Estonian"]] | 
+[[Ethiopian|Starting Girls Workaround][$startingGirlsNationality to "Ethiopian"]] | 
+[[Filipina|Starting Girls Workaround][$startingGirlsNationality to "Filipina"]] | 
+[[Finnish|Starting Girls Workaround][$startingGirlsNationality to "Finnish"]] | 
+[[French|Starting Girls Workaround][$startingGirlsNationality to "French"]] | 
+[[German|Starting Girls Workaround][$startingGirlsNationality to "German"]] | 
+[[Ghanan|Starting Girls Workaround][$startingGirlsNationality to "Ghanan"]] | 
+[[Greek|Starting Girls Workaround][$startingGirlsNationality to "Greek"]] | 
+[[Guatemalan|Starting Girls Workaround][$startingGirlsNationality to "Guatemalan"]] | 
+[[Haitian|Starting Girls Workaround][$startingGirlsNationality to "Haitian"]] | 
+[[Hungarian|Starting Girls Workaround][$startingGirlsNationality to "Hungarian"]] | 
+[[Icelandic|Starting Girls Workaround][$startingGirlsNationality to "Icelandic"]] | 
+[[Indonesian|Starting Girls Workaround][$startingGirlsNationality to "Indonesian"]] | 
+[[Indian|Starting Girls Workaround][$startingGirlsNationality to "Indian"]] | 
+[[Iranian|Starting Girls Workaround][$startingGirlsNationality to "Iranian"]] | 
+[[Iraqi|Starting Girls Workaround][$startingGirlsNationality to "Iraqi"]] | 
+[[Italian|Starting Girls Workaround][$startingGirlsNationality to "Italian"]] | 
+[[Irish|Starting Girls Workaround][$startingGirlsNationality to "Irish"]] | 
+[[Israeli|Starting Girls Workaround][$startingGirlsNationality to "Israeli"]] | 
+[[Jamaican|Starting Girls Workaround][$startingGirlsNationality to "Jamaican"]] | 
+[[Japanese|Starting Girls Workaround][$startingGirlsNationality to "Japanese"]] | 
+[[Jordanian|Starting Girls Workaround][$startingGirlsNationality to "Jordanian"]] | 
+[[Kazakh|Starting Girls Workaround][$startingGirlsNationality to "Kazakh"]] | 
+[[Kenyan|Starting Girls Workaround][$startingGirlsNationality to "Kenyan"]] | 
+[[Korean|Starting Girls Workaround][$startingGirlsNationality to "Korean"]] | 
+[[Lebanese|Starting Girls Workaround][$startingGirlsNationality to "Lebanese"]] | 
+[[Libyan|Starting Girls Workaround][$startingGirlsNationality to "Libyan"]] | 
+[[Lithuanian|Starting Girls Workaround][$startingGirlsNationality to "Lithuanian"]] | 
+[[Malaysian|Starting Girls Workaround][$startingGirlsNationality to "Malaysian"]] | 
+[[Malian|Starting Girls Workaround][$startingGirlsNationality to "Malian"]] | 
+[[Mexican|Starting Girls Workaround][$startingGirlsNationality to "Mexican"]] | 
+[[Moroccan|Starting Girls Workaround][$startingGirlsNationality to "Moroccan"]] | 
+[[Nepalese|Starting Girls Workaround][$startingGirlsNationality to "Nepalese"]] | 
+[[New Zealander|Starting Girls Workaround][$startingGirlsNationality to "a New Zealander"]] | 
+[[Nigerian|Starting Girls Workaround][$startingGirlsNationality to "Nigerian"]] | 
+[[Norwegian|Starting Girls Workaround][$startingGirlsNationality to "Norwegian"]] | 
+[[Omani|Starting Girls Workaround][$startingGirlsNationality to "Omani"]] | 
+[[Pakistani|Starting Girls Workaround][$startingGirlsNationality to "Pakistani"]] | 
+[[Peruvian|Starting Girls Workaround][$startingGirlsNationality to "Peruvian"]] | 
+[[Polish|Starting Girls Workaround][$startingGirlsNationality to "Polish"]] | 
+[[Portuguese|Starting Girls Workaround][$startingGirlsNationality to "Portuguese"]] | 
+[[Puerto Rican|Starting Girls Workaround][$startingGirlsNationality to "Puerto Rican"]] | 
+[[Romanian|Starting Girls Workaround][$startingGirlsNationality to "Romanian"]] | 
+[[Russian|Starting Girls Workaround][$startingGirlsNationality to "Russian"]] | 
+[[Saudi|Starting Girls Workaround][$startingGirlsNationality to "Saudi"]] | 
+[[Serbian|Starting Girls Workaround][$startingGirlsNationality to "Serbian"]] | 
+[[Slovak|Starting Girls Workaround][$startingGirlsNationality to "Slovak"]] | 
+[[South African|Starting Girls Workaround][$startingGirlsNationality to "South African"]] | 
+[[Spanish|Starting Girls Workaround][$startingGirlsNationality to "Spanish"]] | 
+[[Sudanese|Starting Girls Workaround][$startingGirlsNationality to "Sudanese"]] | 
+[[Swedish|Starting Girls Workaround][$startingGirlsNationality to "Swedish"]] | 
+[[Swiss|Starting Girls Workaround][$startingGirlsNationality to "Swiss"]] | 
+[[Tanzanian|Starting Girls Workaround][$startingGirlsNationality to "Tanzanian"]] | 
+[[Thai|Starting Girls Workaround][$startingGirlsNationality to "Thai"]] | 
+[[Tunisian|Starting Girls Workaround][$startingGirlsNationality to "Tunisian"]] | 
+[[Turkish|Starting Girls Workaround][$startingGirlsNationality to "Turkish"]] | 
+[[Ugandan|Starting Girls Workaround][$startingGirlsNationality to "Ugandan"]] | 
+[[Ukrainian|Starting Girls Workaround][$startingGirlsNationality to "Ukrainian"]] | 
+[[Uzbek|Starting Girls Workaround][$startingGirlsNationality to "Uzbek"]] | 
+[[Venezuelan|Starting Girls Workaround][$startingGirlsNationality to "Venezuelan"]] | 
+[[Vietnamese|Starting Girls Workaround][$startingGirlsNationality to "Vietnamese"]] | 
+[[Yemeni|Starting Girls Workaround][$startingGirlsNationality to "Yemeni"]] | 
+[[Zimbabwean|Starting Girls Workaround][$startingGirlsNationality to "Zimbabwean"]]
+<</nobr>>

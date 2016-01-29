@@ -1,0 +1,37 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>'s daily routine includes frequent application of special skin care to her $activeSlave.skin, hugely swollen belly to prevent her pregnancy from ruining her appearance with unsightly stretch marks. Several times a day, she visits the bathroom to <<if ($activeSlave.amp is 1)>>have another slave coat her entire stomach in the stuff.<<else>>carefully coat her entire stomach in the stuff.<</if>> She's so pregnant that it's hard to reach the underside. The chore keeps her occupied and stationary for quite a while; there's no need to leave her sexually idle while she completes it.
+\
+<span id="result">
+<<click "Gently fuck her while helping her apply lotion">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She's absorbed enough with her application that she starts with surprise when you gently encircle her from behind with a hug. When you take the lotion and begin to lovingly massage it into her harder to reach areas, she sighs with pleasure and leans back into you. She feels your erection hard against her, so she <<if ($activeSlave.amp is 1)>>wriggles her limbless form around on the floor so as to offer herself to you<<else>>slowly kneels down with you into a comfortable lotus position on the bathroom floor<</if>>. Coupling like this, you can't fuck her all that hard, but that's just fine given her condition. She snuggles back into you as you have gentle sex while looking after her drum-taut skin. <<if ($activeSlave.mute is 1)>>She looks like she would love to thank you, were she not mute.<<elseif ($activeSlave.lips gt 2)>>She murmurs through her huge lips, "Dat feelth good, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She murmurs through her piercings, "Dat feelth good, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<else>>She murmurs, "That feels really nice, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."<</if>> @@color:mediumaquamarine;She has become more trusting of you.@@
+	<<set $activeSlave.trust += 1>>
+	<<set $activeSlave.vaginalCount += 1>>
+	<<set $vaginalTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Her backdoor isn't pregnant">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She's absorbed enough with her application that she starts with surprise when you seize her hips and bend her over the sink for a quick assfuck. <<if ($activeSlave.amp isnot 1)>>She does her best to brace herself against the sink, but her hands are slick from the lotion and she slides around for a while before she gives up and accepts that she's in for an uncomfortable time. <</if>>Taking it up the ass while hugely pregnant isn't the most comfortable way to have sex, but such is the life of a sex slave.<<if ($activeSlave.lactation is 1)>> As you pound her her breasts, sore from lactation, give her quite a bit of discomfort.<<elseif ($activeSlave.boobs gt 1000)>> As you pound her, her huge breasts compound the discomfort.<</if>> When you finally finish and withdraw your <<if ($PC.dick is 0)>>vibrating strap-on<<else>>cock<</if>>, she groans with relief. @@color:hotpink;She has become more submissive.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+	<<display "Anal VCheck">>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+</span>

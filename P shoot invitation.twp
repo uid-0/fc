@@ -1,0 +1,27 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Random Nonindividual Event">>
+
+<<set $PShoot to 0>>
+
+<</nobr>>\
+\
+Your personal assistant usually delays message delivery when you're relieving your sexual needs with your property, but messages from other arcology owners have a special priority. This one is a brief but rather well-spoken audio invitation from one of your more notoriously wealthy peers.
+
+"A week from today, I will be hosting a novel sporting event for the well-to-do. A new tradition, if it's as diverting as I hope. If you wish to take part in a very exclusive contest of marksmanship, exhibitionism, and grace under pressure, buy in. Five thousand. And, believe me, you have a fine chance to come out ahead."
+\
+<span id="result">
+<<click "Buy in">>
+	<<replace "#result">>
+	You receive a brief but elegant confirmation. It looks like you've RSVP'd.
+	<<set $cash -= 5000>>
+	<<set $PShoot to 1>>
+    <</replace>>
+<</click>>
+<<click "Politely decline">>
+	<<replace "#result">>
+	You decline the invitation.
+    <</replace>>
+<</click>>
+</span>

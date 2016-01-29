@@ -1,0 +1,173 @@
+<<nobr>>
+
+<<set $dairySlaves to 0>>
+<<set $legendaryCowID to 0>>
+<<set $milkmaidFetish to 0>>
+<<set $milkmaidHealthBonus to 0>>
+<<set $profits to 0>>
+
+<<if ($Milkmaid isnot 0)>>		
+  <<if ($Milkmaid.health gte 1) and ($Milkmaid.health lt 8)>>
+	<<set $milkmaidHealthBonus += 0.2>>
+  <<elseif ($Milkmaid.health gte 8)>>
+	<<set $milkmaidHealthBonus += 0.3>>
+  <</if>>
+  <<if ($Milkmaid.age lt 21)>>
+	<<set $milkmaidHealthBonus += 0.2>>
+  <</if>>
+  <<if ($Milkmaid.muscles gt 1)>>
+	<<set $milkmaidHealthBonus += 0.2>>
+  <</if>>
+<</if>>
+	
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].assignment is "work in the dairy")>>
+  <<set $dairySlaves += 1>>
+  <<if ($legendaryCowID is 0) and ($slaves[$i].lactation gt 0) and (($slaves[$i].boobs-$slaves[$i].boobsImplant) gt 6000) and ($slaves[$i].devotion gt 10) and ($slaves[$i].prestige is 0)>>
+	<<set $legendaryCowID to $slaves[$i].ID>>
+  <</if>>	
+  <<silently>>
+  <<set $oldCash to $cash>>
+  <<display [[SA get milked]]>>
+  <<set $profits += $cash-$oldCash>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if ($slaves[$i].devotion lt 4)>>
+	<<if ($slaves[$i].trust gt -4)>>
+	  <<set $slaves[$i].devotion -= 1>>
+	  <<set $slaves[$i].trust -= 1>>
+	<</if>>
+  <<elseif ($slaves[$i].devotion lt 9)>>
+	<<set $slaves[$i].devotion += 0.3>>
+  <<elseif ($slaves[$i].devotion gt 9)>>
+	<<set $slaves[$i].devotion -= 0.3>>
+  <</if>>
+  <<if ($slaves[$i].health lt -4)>>
+	<<set $slaves[$i].health += 1>>
+  <<elseif ($slaves[$i].health lt 0)>>
+	<<set $slaves[$i].health += 0.7>>
+  <<elseif ($slaves[$i].health lt 9)>>
+	<<set $slaves[$i].health += 0.3>>
+  <</if>>
+  <<if ($slaves[$i].boobs lt 2000)>>
+	<<set $slaves[$i].boobs += 100>>
+  <<elseif ($slaves[$i].boobs lt 5000)>>
+	<<set $slaves[$i].boobs += 50>>
+  <<elseif ($slaves[$i].boobs lt 10000)>>
+	<<set $slaves[$i].boobs += 25>>
+  <</if>>
+  <<if ($dairyUpgradeFeeders is 1)>>
+	<<set $slaves[$i].anus to 3>>
+	<<if ($slaves[$i].boobs lt 10000)>>
+	  <<set $slaves[$i].boobs += 50>>
+	<</if>>
+  <</if>>
+  <<if ($Milkmaid isnot 0) and ($slaves[$i].health lt 10)>>
+	<<set $slaves[$i].health += $milkmaidHealthBonus>>
+  <</if>>
+  <<if ($dairyUpgradePreg is 1)>>
+	<<if ($slaves[$i].ovaries is 1)>>
+	  <<if ($slaves[$i].preg gt -2)>>
+		/* <<silently>>
+		<<display "SA pregnancy and fertility">>
+		<</silently>> */
+		<<set $cash += 25>>
+		<<if ($slaves[$i].preg lt 1)>>
+		  <<set $slaves[$i].preg to 1>>
+		  <<if ($slaves[$i].vagina is 0)>>
+			<<set $slaves[$i].vagina to 1>>
+		  <</if>>
+		<</if>>
+	  <</if>>
+	<</if>>
+  <</if>>
+
+<<elseif ($Milkmaid isnot 0) and ($slaves[$i].ID is $Milkmaid.ID)>>
+  <<silently>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if ($slaves[$i].health lt -4)>>
+	<<set $slaves[$i].health += 1.3>>
+  <<elseif ($slaves[$i].health lt 0)>>
+	<<set $slaves[$i].health += 1>>
+  <<elseif ($slaves[$i].health lt 9)>>
+	<<set $slaves[$i].health += 0.7>>
+  <</if>>
+  <<if $slaves[$i].devotion lt 12>>
+	<<set $slaves[$i].devotion += 0.3>>
+  <</if>>
+  <<if $slaves[$i].trust lt 12>>
+	<<set $slaves[$i].trust += 0.3>>
+  <</if>>
+  <<if (($slaves[$i].fetish isnot "boobs") and ($slaves[$i].fetish isnot "nympho")) or ($slaves[$i].fetishDiscovered is 0)>>
+	<<if ($slaves[$i].clitSetting is "boobs") or ($slaves[$i].clitPiercing lt 3)>>
+	  <<if random(1,100) lt $slaves[$i].devotion>>
+		<<set $milkmaidFetish to 1>>
+		<<set $slaves[$i].fetish to "boobs">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+  <</if>>
+  
+<</if>>
+<</for>>
+
+<<if ($dairySlaves gt 0)>>	
+
+  <<if ($dairySlaves is 1)>>
+	''There is 1 cow in your dairy.''
+  <<else>>
+	''There are $dairySlaves cows in your dairy.''
+  <</if>>
+  <<if ($Milkmaid isnot 0)>>
+	$Milkmaid.slaveName is serving as your milkmaid.
+	<<set $oldCash to $cash>>
+	<<if ($milkmaidFetish is 1)>>
+	  In her line of work, she touches more breasts than even you do. She lives in an atmosphere of quivering, heaving, milky breastflesh; of girls who shudder and moan when she touches their creamy nipples. She has @@color:pink;become a breast girl.@@
+	<</if>>
+	<<if ($Milkmaid.health lt 1)>>
+	  Though $Milkmaid.slaveName does her best to help the cows, her lack of good health herself inhibits her.
+	<<elseif ($Milkmaid.health lt 8)>>
+	  $Milkmaid.slaveName's good health allows her to work hard and @@color:green;improve@@ your cows' health.
+	<<else>>
+	  $Milkmaid.slaveName's perfect health allows her to work extremely hard and significantly @@color:green;improve@@ your cows' health.
+	<</if>>
+	<<if ($Milkmaid.age lt 21)>>
+	  Her youth gives her a useful energy when working with stock.
+	<</if>>
+	<<if ($Milkmaid.muscles gt 1)>>
+	  Her muscles help her shift the fattest or most reluctant cow.
+	<</if>>
+	<<if ($Milkmaid.oralSkill gt 0)>>
+	  Her talented tongue keeps her girls happy and productive.
+	  <<set $cash += Math.trunc($profits*0.05*$Milkmaid.oralSkill)>>
+	<</if>>
+	<<set $profits += $cash-$oldCash>>
+  <</if>>
+
+<<if ($dairyUpgradePreg is 1)>>
+  The pregnant cows make you a small profit through contract pregnancies.
+<</if>>
+
+  The dairy makes you @@color:yellowgreen;¤$profits@@ this week.
+
+<<if ($dairy*5 lt $dairySlaves)>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if ($slaves[$i].assignment is "work in the dairy")>>
+	<<set $slaves[$i].health -= 1>>
+  <</if>>
+  <</for>>
+  There are too many cows crammed into the dairy. Living this way is @@color:red;bad for their health.@@
+  <br>
+<</if>>
+  
+<<else>>
+  ''Your dairy is empty.''
+<</if>>
+<br>
+
+<</nobr>>

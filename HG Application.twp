@@ -1,0 +1,15 @@
+<<nobr>>
+
+<<set $activeSlave.tired to 1>>
+<<set $HGEnergy -= 1>>
+
+<<display $HGtraining>>
+
+<<for $I to 0; $I lt $slaves.length; $I++>>
+<<if $activeSlave.ID == $slaves[$I].ID>>
+<<set $slaves[$I] to $activeSlave>>
+<<set $activeSlave to {}>>
+<</if>>
+<</for>>
+
+<</nobr>>\

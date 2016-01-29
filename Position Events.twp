@@ -1,0 +1,143 @@
+<<if ($Headgirl isnot 0)>>
+
+  <<if ($HeadGirl.devotion gt 10)>>
+  <<if ($HeadGirl.dick gt 0)>>
+  <<if ($HeadGirl.hormones lt 1)>>
+  <<if ($slaves[$slaves.length-1].devotion lte 4)>>
+	  <<set $events.push("PE headgirl dickgirl")>>
+  <</if>>
+  <</if>>
+  <</if>>
+  <</if>>
+
+  <<if ($HeadGirl.devotion gt 20)>>
+  <<if ($slaves.length gt 4)>>
+	  <<set $events.push("PE loving headgirl")>>
+  <</if>>
+  <</if>>
+
+<</if>>
+
+<<if ($Bodyguard isnot 0)>>
+
+  <<set $events.push("PE pit fight invite")>>
+
+  <<if ($Bodyguard.combatSkill isnot 0)>>
+	  <<set $events.push("PE bodyguard bedtime")>>
+  <</if>>
+
+  <<if ($Bodyguard.relationship is 0)>>
+  <<if ($Bodyguard.relationshipRules isnot "restrictive")>>
+  <<if ($Bodyguard.fetish isnot "mindbroken")>>
+  <<set $seed to 0>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+	<<if ($slaves[$j].relationship is 0)>>
+	  <<set $seed to 1>>
+	<</if>>
+  <</for>>
+  <<if ($seed is 0)>>
+	  <<set $events.push("PE lonely bodyguard")>>
+  <</if>>
+  <</if>>
+  <</if>>
+  <</if>>
+
+  <<if ($Bodyguard.combatSkill is 0)>>
+	  <<set $events.push("PE combat training")>>
+	  <<set $events.push("PE combat training")>>
+	  <<set $events.push("PE combat training")>>
+  <</if>>
+
+<</if>>
+
+<<if ($Collectrix isnot 0)>>
+
+  <<if ($collectionFacilitySlaves gte 5)>>
+  <<if ($Collectrix.dick gt 1)>>
+  <<if ($Collectrix.balls gt 0)>>
+  <<if ($Collectrix.anus gt 0)>>
+	  <<set $events.push("PE tired collectrix")>>
+  <</if>>
+  <</if>>
+  <</if>>
+  <</if>>
+
+<</if>>
+
+<<if ($Milkmaid isnot 0)>>
+
+  <<if ($dairySlaves gte 5)>>
+  <<if ($Milkmaid.health gte 7)>>
+  <<if ($Milkmaid.muscles gte 1)>>
+	  <<set $events.push("PE tired milkmaid")>>
+  <</if>>
+  <</if>>
+  <</if>>
+
+<</if>>
+
+<<if ($Stewardess isnot 0)>>
+
+  <<if ($servantsQuartersSlaves gte 1)>>
+  <<if ($Stewardess.age gte 35)>>
+	  <<set $events.push("PE stewardess beating")>>
+  <</if>>
+  <</if>>
+
+<</if>>
+
+<<if ($Madam isnot 0)>>
+
+  <<if ($brothelSlaves gte 5)>>
+  <<if ($Madam.age gte 35)>>
+  <<if ($Madam.whoreSkill gte 2)>>
+	  <<set $events.push("PE madam strategy")>>
+  <</if>>
+  <</if>>
+  <</if>>
+
+<</if>>
+
+<<if ($Concierge isnot 0)>>
+
+  <<if ($promenadeSlaves gte 5)>>
+  <<if ($Concierge.face gte 2)>>
+  <<if ($Concierge.entertainSkill gte 2)>>
+	  <<set $events.push("PE concierge publicity")>>
+  <</if>>
+  <</if>>
+  <</if>>
+
+<</if>>
+
+<<if ($Schoolteacher isnot 0)>>
+  <<if ($schoolroomSlaves gte 1)>>
+  <<if ($Schoolteacher.intelligence gte 1)>>
+  <<if ($Schoolteacher.age gte 35)>>
+	  <<set $events.push("PE aggressive schoolteacher")>>
+  <</if>>
+  <</if>>
+  <</if>>
+<</if>>
+
+<<if ($Wardeness isnot 0)>>
+  <<if ($cellblockSlaves gt 0)>>
+  <<if ($Wardeness.mute is 0)>>
+	  <<set $events.push("PE abusive wardeness")>>
+  <</if>>
+  <</if>>
+<</if>>
+
+<<if ($Attendant isnot 0)>>
+  <<if ($spaSlaves gt 0)>>
+  <<if ($Attendant.mute is 0)>>
+	  <<set $events.push("PE comforting attendant")>>
+  <</if>>
+  <</if>>
+<</if>>
+
+<<if ($Concubine isnot 0)>>
+  <<if ($Concubine.amp is 0)>>
+	  <<set $events.push("PE loving concubine")>>
+  <</if>>
+<</if>>

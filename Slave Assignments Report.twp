@@ -1,0 +1,177 @@
+<<set $nextLink to "Economics">>\
+<<set $nextButton to "Continue">>\
+\
+<<nobr>>
+<<if $HeadGirl.fetish is "mindbroken">>
+	''__@@color:pink;$HeadGirl.slaveName@@__'' is mindbroken @@color:yellow;and cannot serve as your head girl any more.@@
+	<<set $HeadGirl to 0>>
+<<elseif $HeadGirl.mute is 1>>
+	''__@@color:pink;$HeadGirl.slaveName@@__'' is mute @@color:yellow;and cannot serve as your head girl any more.@@
+	<<set $HeadGirl to 0>>
+<<elseif $HeadGirl.amp is 1>>
+	''__@@color:pink;$HeadGirl.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot serve as your head girl any more.@@
+	<<set $HeadGirl to 0>>
+<</if>>
+
+<<if $Recruiter.fetish is "mindbroken">>
+	''__@@color:pink;$Recruiter.slaveName@@__'' is mindbroken @@color:yellow;and cannot serve as your recruiter any more.@@
+	<<set $Recruiter to 0>>
+<<elseif $Recruiter.mute is 1>>
+	''__@@color:pink;$Recruiter.slaveName@@__'' is mute @@color:yellow;and cannot serve as your recruiter any more.@@
+	<<set $Recruiter to 0>>
+<<elseif $Recruiter.amp is 1>>
+	''__@@color:pink;$Recruiter.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot serve as your recruiter any more.@@
+	<<set $Recruiter to 0>>
+<</if>>
+    
+<<if $Madam.mute is 1>>
+	''__@@color:pink;$Madam.slaveName@@__'' is mute @@color:yellow;and cannot serve as your Madam any more.@@
+	<<set $Madam to 0>>
+<<elseif $Madam.fetish is "mindbroken">>
+	''__@@color:pink;$Madam.slaveName@@__'' is mindbroken @@color:yellow;and cannot serve as your Madam any more.@@
+	<<set $Madam to 0>>  
+<<elseif $Madam.amp is 1>>
+	''__@@color:pink;$Madam.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot serve as your Madam any more.@@
+	<<set $Madam to 0>>
+<</if>>
+    
+<<if $Concierge.mute is 1>>
+	''__@@color:pink;$Concierge.slaveName@@__'' is mute @@color:yellow;and cannot serve as your Concierge any more.@@
+	<<set $Concierge to 0>>
+<<elseif $Concierge.fetish is "mindbroken">>
+	''__@@color:pink;$Concierge.slaveName@@__'' is mindbroken @@color:yellow;and cannot serve as your Concierge any more.@@
+	<<set $Concierge to 0>>
+<<elseif $Concierge.amp is 1>>
+	''__@@color:pink;$Concierge.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot serve as your Concierge any more.@@
+	<<set $Concierge to 0>>
+<</if>>
+
+<<if $Milkmaid.fetish is "mindbroken">>
+	''__@@color:pink;$Milkmaid.slaveName@@__'' is mindbroken @@color:yellow;and cannot serve as your Milkmaid any more.@@
+	<<set $Milkmaid to 0>>
+<<elseif $Milkmaid.amp is 1>>
+	''__@@color:pink;$Milkmaid.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot serve as your Milkmaid any more.@@
+	<<set $Milkmaid to 0>>
+<</if>>
+
+<<if $Collectrix.fetish is "mindbroken">>
+	''__@@color:pink;$Collectrix.slaveName@@__'' is mindbroken @@color:yellow;and cannot serve as your Collectrix any more.@@
+	<<set $Collectrix to 0>>
+<<elseif $Collectrix.amp is 1>>
+	''__@@color:pink;$Collectrix.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot serve as your Collectrix any more.@@
+	<<set $Collectrix to 0>>
+<</if>>
+    
+<<if $Stewardess.mute is 1>>
+	''__@@color:pink;$Stewardess.slaveName@@__'' is mute @@color:yellow;and cannot serve as your Stewardess any more.@@
+	<<set $Stewardess to 0>>
+<<elseif $Stewardess.fetish is "mindbroken">>
+	''__@@color:pink;$Stewardess.slaveName@@__'' is mindbroken @@color:yellow;and cannot serve as your Stewardess any more.@@
+	<<set $Stewardess to 0>>  
+<<elseif $Stewardess.amp is 1>>
+	''__@@color:pink;$Stewardess.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot serve as your Stewardess any more.@@
+	<<set $Stewardess to 0>>
+<</if>>
+    
+<<if $Schoolteacher.mute is 1>>
+	''__@@color:pink;$Schoolteacher.slaveName@@__'' is mute @@color:yellow;and cannot serve as your Schoolteacher any more.@@
+	<<set $Schoolteacher to 0>>
+<<elseif $Schoolteacher.fetish is "mindbroken">>
+	''__@@color:pink;$Schoolteacher.slaveName@@__'' is mindbroken @@color:yellow;and cannot serve as your Schoolteacher any more.@@
+	<<set $Schoolteacher to 0>>  
+<</if>>
+    
+<<if $Attendant.fetish is "mindbroken">>
+	''__@@color:pink;$Attendant.slaveName@@__'' is mindbroken @@color:yellow;and cannot serve as your Attendant any more.@@
+	<<set $Attendant to 0>>  
+<<elseif $Attendant.amp is 1>>
+	''__@@color:pink;$Attendant.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot serve as your Attendant any more.@@
+	<<set $Attendant to 0>>
+<</if>>
+
+<<if $Wardeness.amp is 1>>
+	''__@@color:pink;$Wardeness.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot serve as your Wardeness any more.@@
+	<<set $Attendant to 0>>
+<</if>>
+    
+<<if $Bodyguard.amp is 1>>
+	''__@@color:pink;$Bodyguard.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot serve as your bodyguard any more.@@
+	<<set $Bodyguard to 0>>
+<</if>>
+    
+<<if $fighterOne.amp is 1>>
+	''__@@color:pink;$fighterOne.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot fight any more.@@
+	<<set $fighterOne to 0>>
+<</if>>
+<<if $fighterOne.heels is 1>>
+<<if ($fighterOne.shoes is "none") or ($fighterOne.shoes is "flats")>>
+	''__@@color:pink;$fighterOne.slaveName@@__'' is crawling @@color:yellow;and cannot fight any more.@@
+	<<set $fighterOne to 0>>
+<</if>>
+<</if>>
+<<if $fighterTwo.amp is 1>>
+	''__@@color:pink;$fighterTwo.slaveName@@__'' is no longer independently mobile @@color:yellow;and cannot fight any more.@@
+	<<set $fighterTwo to 0>>
+<</if>>
+<<if $fighterTwo.heels is 1>>
+<<if ($fighterTwo.shoes is "none") or ($fighterTwo.shoes is "flats")>>
+	''__@@color:pink;$fighterTwo.slaveName@@__'' is crawling @@color:yellow;and cannot fight any more.@@
+	<<set $fighterTwo to 0>>
+<</if>>
+<</if>>
+
+<</nobr>>\
+\
+<<if ($brothel gt 0)>>\
+  <<display "Brothel Report">>\
+<</if>>\
+<<if ($promenade gt 0)>>\
+<<display "Promenade Report">>\
+<</if>>\
+<<if ($arcade gt 0)>>\
+<<display "Arcade Report">>
+<</if>>\
+<<if ($dairy gt 0)>>\
+<<display "Dairy Report">>\
+<</if>>\
+<<if ($collectionFacility gt 0)>>\
+<<display "Collection Facility Report">>\
+<</if>>\
+<<if ($servantsQuarters gt 0)>>\
+<<display "Servants' Quarters Report">>\
+<</if>>\
+<<if ($masterSuite gt 0)>>\
+<<display "Master Suite Report">>\
+<</if>>\
+<<if ($schoolroom gt 0)>>\
+<<display "Schoolroom Report">>\
+<</if>>\
+<<if ($spa gt 0)>>\
+<<display "Spa Report">>\
+<</if>>\
+<<if ($cellblock gt 0)>>\
+<<display "Cellblock Report">>\
+<</if>>\
+\
+<<if $brothel+$promenade+$dairy+$servantsQuarters+$collectionFacility+$arcade+$schoolroom+$spa+$masterSuite+$cellblock gt 0>><br><</if>>\
+\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<nobr>>
+  
+<<if $slaves[$i].assignment is "work independently">>
+  <<display "SA work independently">><br><br>
+<<elseif $slaves[$i].assignment is "be your Head Girl">>
+  <<display "Full Report">><br><br>
+  <<set $I to $i>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $slaves[$i].assignment is "live with your Head Girl">>
+		<<display "SA live with HG">><br><br>
+	  <</if>>
+	<</for>>
+  <<set $i to $I>>
+<<elseif $slaves[$i].assignmentVisible is 1>>
+  <<display "Full Report">><br><br>
+<</if>>
+
+<</nobr>>
+<</for>>\

@@ -1,0 +1,124 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $promenadeSlaves to 0>>
+<<set $notPromenadeSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "work on the promenade">>
+      <<set $promenadeSlaves += 1>>
+    <<else>>
+	  <<set $notPromenadeSlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $FSRomanRevivalistDecoration gte 60>>
+  The promenade is decorated like an upper-class street in a  Roman city. There is a lot of white stone, plaster, and terracotta.
+<<elseif $FSAncientEgyptianRevivalistDecoration gte 60>>
+  The promenade is decorated like a gallery in an ancient Egyptian palace. There are columns of warm stone and pools of clear water full of acquatic plants.
+<<elseif $FSChattelReligionistDecoration gte 60>>
+  The promenade has a holy and clean appearance. Somber bunting and banners decorate the shops, and the skylights have been shaped to project beams of sunlight onto religious symbols.
+<<elseif $FSDegradationistDecoration gte 60>>
+  The promenade has a perverted, debauched appearance. The decor is utilitarian so it can be cleaned easily, and the reason is obvious. Slaves are being used in public all up and down the promenade.
+<<elseif $FSAssetExpansionistDecoration gte 60>>
+  The promenade has a gaudy appearance. There are a lot of neon lights and screens showing off big tits and plush asses.
+<<elseif $FSTransformationFetishistDecoration gte 60>>
+  The promenade has a gaudy appearance. There are a lot of neon lights and screens showing off huge fake tits and plastic dick sucking lips.
+<<elseif $FSGenderRadicalistDecoration gte 60>>
+  The promenade looks like a handsome boulevard. It's impossible to tell which of the pretty ladies flirting with passersby retain cocks.
+<<elseif $FSGenderFundamentalistDecoration gte 60>>
+  The promenade looks like a street in a red light district. There is a heavy atmosphere of sex, and slaves in various states of undress are strutting up and down.
+<<elseif $FSPhysicalIdealistDecoration gte 60>>
+  The promenade is carefully designed to feel like a beach. The sunlight is shining brightly from above, there's a volleyball game underway, and lifting in public is encouraged.
+<<elseif $FSSupremacistDecoration gte 60>>
+  The promenade is decorated like an upper-class street in the old countries of $FSSupremacistRace people.
+<<elseif $FSSubjugationistDecoration gte 60>>
+  The promenade is decorated like an upper-class street in the old countries which favored $FSSubjugationistRace slaves.
+<<elseif $FSPaternalistDecoration gte 60>>
+  The promenade looks like a handsome boulevard. It's occasionally difficult to tell who is a slave here, since everyone is respectful, even to their inferiors.
+<<elseif $FSBodyPuristDecoration gte 60>>
+  The promenade looks like a handsome boulevard. The sun is shining, the halls are decorated with banners and bunting, and the atmosphere is fresh and clean.
+<<elseif $FSSlimnessEnthusiastDecoration gte 60>>
+  The promenade looks like a parkway. Turf has been laid wherever possible, there is a watercourse to stroll alongside, and cheerful music is playing.
+<<elseif $FSPastoralistDecoration gte 60>>
+  The promenade looks like a rural town. There are hitching posts for slaves outside every establishment, and there is an auction stand being set up in the middle of the way.
+<</if>>
+
+<<if $promenadeSlaves gt 2>>
+	The promenade is dotted with pretty, flirtatious slaves, entertaining citizens and enticing them back to little rooms for assignations. The atmosphere is that of a sexually libertine holiday.
+<<elseif $promenadeSlaves gt 0>>
+	There are a few pretty, flirtatious slaves on the promenade entertaining citizens and enticing them back to little rooms for assignations. The atmosphere is cheerful and open.
+<<elseif $Concierge isnot 0>>
+	$Concierge.slaveName is alone out on the promenade, and can accomplish little by herself.
+<<else>>
+	Business on the promenade is normal; there are no slaves pleasing the crowd. [[Decomission the rooms|Main][$promenade to 0]]
+<</if>>
+
+<br>
+There are rooms off the promenade to support slaves as they please citizens. They can support <<print $promenade*5>> sluts.
+<<if $promenade*5 lt $promenadeSlaves>>
+  @@color:red;The rooms are overcrowded.@@
+<</if>>
+[[Improve the promenade|Promenade][$cash -= 5000, $promenade += 1]]
+//Costs ¤5000 and will increase upkeep costs//
+	
+<br>
+<<if $promenadeUpgradePDAs is 1>>
+	They have been upgraded with unobtrusive personal data assistants to let your courtesans pass tips about enslaveable people to your recruiter.
+<<else>>
+	The rooms are standard.
+	[[Upgrade them with PDAs to help your recruiter|Promenade][$cash -= 10000, $promenadeUpgradePDAs to 1]]
+	//Costs ¤10000 and will increase upkeep costs//
+<</if>>
+
+<br>
+//Sir, slaves assigned here will use drugs to maintain and even improve their health. They will gradually become obedient if they aren't already, but they'll lose devotion since they'll see you less.//
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $Concierge isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $slaves[$i].ID is $Concierge.ID>>
+	  <<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>
+	  <<display "Slave Summary">>
+	  | <<print "[[Change or remove Concierge|Concierge Select]]">>
+	<</if>>
+  <</for>>
+<<else>>
+	You do not have a slave serving as a Concierge. [[Appoint one|Concierge Select]]
+<</if>>
+
+<</nobr>>
+
+<<if $promenadeSlaves gt 0>>\
+__Bring a slave off the promenade:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "work on the promenade">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Remove her from the Promenade|Retrieve from promenade][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notPromenadeSlaves gt 1>>\
+__Send a slave out onto the promenade:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+<<if ($slaves[$i].devotion gt 10) or ($slaves[$i].trust lt -4)>>\
+  <br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+  <<display "Slave Summary">>\
+  | <<print "[[Send her to the Promenade|Assign to promenade][$activeSlave to $slaves[" + $i + "]]]">>\
+<<else>>\
+  <br>//$slaves[$i].slaveName must be either more fearful of you or more devoted to you//\
+<</if>>\
+<</if>>\
+<</for>>
+<</if>>\

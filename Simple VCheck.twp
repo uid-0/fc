@@ -1,0 +1,43 @@
+<<nobr>>
+  <<if ($activeSlave.vagina is 0) and ($activeSlave.anus is 0) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+      @@color:lime;This breaks in $activeSlave.slaveName's virgin holes.@@
+      <<set $activeSlave.vagina to 1>>
+      <<set $activeSlave.anus to 1>>
+      <<if ($activeSlave.devotion gt 10)>>
+      	@@color:hotpink;She's so devoted she enjoys being fucked in both holes for the first time.@@
+    	<<set  $activeSlave.devotion += 1>>
+      <<elseif ($activeSlave.devotion lte 4)>>
+      	She @@color:mediumorchid;hates@@ losing her virginity and anal virginity in one @@color:gold;brutal@@ incident.
+    	<<set  $activeSlave.devotion -= 1>>
+    	<<set  $activeSlave.trust -= 1>>
+      <<else>>
+      	She accepts being fucked in both holes for the first time.
+ 	  <</if>>      	
+  <<elseif ($activeSlave.vagina is 0) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+      @@color:lime;This breaks in $activeSlave.slaveName's virgin pussy.@@
+      <<set $activeSlave.vagina to 1>>
+      <<if ($activeSlave.devotion gt 4)>>
+      	@@color:hotpink;She enjoys losing her cherry to you.@@
+    	<<set  $activeSlave.devotion += 1>>
+      <<elseif ($activeSlave.devotion lt -4)>>
+      	She @@color:mediumorchid;hates@@ and @@color:gold;fears@@ you for taking her virginity.
+    	<<set $activeSlave.devotion -= 1>>
+    	<<set $activeSlave.trust -= 1>>
+      <<else>>
+      	She accepts losing her virginity to her owner.
+ 	  <</if>>
+  <<elseif ($activeSlave.anus is 0)>>
+      @@color:lime;This breaks in $activeSlave.slaveName's virgin ass.@@
+      <<set $activeSlave.anus to 1>>
+      <<if ($activeSlave.devotion gt 4)>>
+      	@@color:hotpink;She enjoys losing her butt cherry to you.@@
+    	<<set  $activeSlave.devotion += 1>>
+      <<elseif ($activeSlave.devotion lt -4)>>
+      	She @@color:mediumorchid;hates@@ and @@color:gold;fears@@ you for violating her virgin butt.
+    	<<set $activeSlave.devotion -= 1>>
+    	<<set $activeSlave.trust -= 1>>
+      <<else>>
+      	She accepts losing her anal virginity.
+ 	  <</if>>    
+  <</if>>
+<</nobr>>\

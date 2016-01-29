@@ -1,0 +1,58 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She sold herself into slavery to escape addiction debts.">>
+<<set $activeSlave.career to "drug addict">>
+<<set $activeSlave.devotion to random(-3,3)>>
+<<set $activeSlave.trust to random(-3,3)>>
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.addict to 8>>
+<<set $activeSlave.boobs += 100>>
+<<set $activeSlave.face to -1>>
+<<set $activeSlave.butt += 1>>
+<<if $activeSlave.vagina gt -1>><<set $activeSlave.vagina += 1>><</if>>
+<<set $activeSlave.anus += 1>>
+<<set $activeSlave.age to random(35,40)>>
+<<set $activeSlave.health to random(-6,-2)>>
+
+<<set $activeSlave.relation to "mother">>
+<<set $activeSlave.relationTarget to $activeSlave.ID + 1000>>
+
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+A matronly woman comes to your penthouse in tears. It seems she is a tenant of yours, and has fallen deeply into debt as a result of aphrodisiac addiction. She offers to sell herself into slavery if you will pay off her debts. She is strangely eager about this, and after some probing it becomes apparent that she is living with her daughter and wants to avoid having her daughter involved in this debt.
+
+//Enslaving her will cost ¤<<print $contractCost>>. Alternatively, you could sell your rights to her. Less costs, this will bring in  ¤<<print $slaveCost>>. As a third option, for ¤<<print ($contractCost*2)>> you could manipulate her to bind both mother and daughter, but you wouldn't be able to examine the daughter first.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Accept her proposal and enslave her">>
+	<<set $activeSlave.relation to 0>>
+	<<set $activeSlave.relationTarget to 0>>
+      <<set $activeSlave.oralCount += 1>>
+      <<set $oralTotal += 1>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	Despite herself, she sobs with relief when you agree. She offers to suck you while you complete the necessary legalities, so you work away with a pair of motherly lips wrapped around your dick as she pumps away eagerly under the desk. She's definitely on aphrodisiacs. She masturbates while she sucks.
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+<<if $cash gte ($contractCost*2)>>\
+[[Manipulate her to enslave both mother and daughter|RE addict mother daughter workaround][$mother to $activeSlave, $mother.devotion -= 10, $slaves.push($mother), $cash -= ($contractCost*2)]]
+<<else>>\
+	//You lack the necessary funds to enslave both of them.//
+<</if>>\
+</span>

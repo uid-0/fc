@@ -1,0 +1,83 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $pitSlaves to 0>>
+<<set $notPitSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].ID is $fighterOne.ID>>
+      <<set $pitSlaves += 1>>
+    <<elseif $slaves[$i].ID is $fighterTwo.ID>>
+      <<set $pitSlaves += 1>>
+    <<else>>
+	  <<set $notPitSlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $pitSlaves gt 1>>
+	The pit is clean and ready, with two slaves assigned to the week's bout.
+<<elseif $pitSlaves gt 0>>
+	The pit is clean and ready, but only one slave is assigned to the week's bout.
+<<else>>
+	The pit is clean and ready, but no slaves are assigned fight.
+<</if>>
+
+//Sir, slaves assigned here can continue their usual duties.//
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $pitAudience is "none">>
+	Fights here are strictly private. [[Open them for free|Pit][$pitAudience to "free"]] | [[Open them and charge admission|Pit][$pitAudience to "paid"]]
+<<elseif $pitAudience is "free">>
+	Fights here are free and open to the public. [[Close them|Pit][$pitAudience to "none"]] | [[Charge admission|Pit][$pitAudience to "paid"]]
+<<else>>
+	Admission is charged to the fights here. [[Close them|Pit][$pitAudience to "none"]] | [[Stop charging|Pit][$pitAudience to "free"]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $pitLethal is 1>>
+	Fighters will be armed with swords, and fights will be to the death. [[Nonlethal|Pit][$pitLethal to 0]]
+<<else>>
+	Fighters will use their fists and feet, and fights will be to submission. [[Lethal|Pit][$pitLethal to 1]]
+<</if>>
+
+<</nobr>>\
+
+<<if $pitSlaves gt 0>>\
+<br>__Cancel a slave's fight:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+  <<if $slaves[$i].ID is $fighterOne.ID>>\
+    <br><<print "[[$slaves[$i].slaveName|Retrieve from pit][$activeSlave to $slaves[" + $i + "]]]">>\
+    <<display "Slave Summary">>\
+  <</if>>\
+  <<if $slaves[$i].ID is $fighterTwo.ID>>\
+    <br><<print "[[$slaves[$i].slaveName|Retrieve from pit][$activeSlave to $slaves[" + $i + "]]]">>\
+    <<display "Slave Summary">>\
+  <</if>>\
+<</for>>
+<</if>>\
+
+<<if ($notPitSlaves gt 1) and ($pitSlaves lt 2)>>\
+__Select a slave to fight:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+  <<if $slaves[$i].amp isnot 1>>\
+  <<if ($slaves[$i].heels isnot 1) or (($slaves[$i].shoes isnot "none") or ($slaves[$i].shoes isnot "flats"))>>\
+  <<if $slaves[$i].ID isnot $fighterOne.ID>>\
+  <<if $slaves[$i].ID isnot $fighterTwo.ID>>\
+    <br><<print "[[$slaves[$i].slaveName|Assign to pit][$activeSlave to $slaves[" + $i + "]]]">>\
+    <<display "Slave Summary">>\
+  <</if>>\
+  <</if>>\
+  <</if>>\
+  <</if>>\
+<</for>>
+<</if>>\

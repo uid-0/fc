@@ -1,0 +1,70 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Nonrandom Event">>
+<<set $returnTo to "Nonrandom Event">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $recruiterProgress to 0>>
+
+<<set $contractCost to 1000>>
+
+<<display "Generate XY Slave">>
+<<set $activeSlave.origin to "She submitted to enslavement out of a misguided desire to join a sexually libertine society.">>
+<<set $activeSlave.devotion to random(-3,1)>>
+<<set $activeSlave.trust to random(-2,2)>>
+<<set $activeSlave.health to random(-4,2)>>
+<<set $activeSlave.anus to random(1,3)>>
+<<if $activeSlave.balls is 0>>
+  <<set $activeSlave.balls to random(1,3)>>
+<</if>>
+<<set $activeSlave.oralSkill to random(1,2)>>
+<<set $activeSlave.analSkill to random(1,2)>>
+<<set $activeSlave.faceImplant to random(0,1)>>
+<<set $activeSlave.face += $activeSlave.faceImplant>>
+<<set $activeSlave.lipsPiercing to random(0,1)>>
+<<set $activeSlave.tonguePiercing to random(0,1)>>
+<<set $activeSlave.earPiercing to random(0,1)>>
+<<set $activeSlave.nosePiercing to random(0,1)>>
+<<set $activeSlave.eyebrowPiercing to random(0,1)>>
+<<set $activeSlave.navelPiercing to random(0,1)>>
+<<set $activeSlave.nipplesPiercing to random(0,1)>>
+<<set $activeSlave.clitPiercing to random(0,1)>>
+<<set $activeSlave.sexualQuirk to "hates women">>
+
+<<display "Slave Cost">>
+<<set $slaveCost -= $contractCost>>
+
+<</nobr>>\
+\
+Your recruiter $Recruiter.slaveName has succeeded; she's convinced an old world sissy that she'd be better off as a slave in a society that is so totally sexually libertine as to accept as female and respectable anyone who takes cock.
+
+//Enslaving her will cost ¤$contractCost. Alternatively, you could sell her. Less costs, this will bring in ¤$slaveCost.//
+
+<<set $saleDescription to 1>>\
+<<display "Long Slave Description">>\
+<<set $saleDescription to 0>>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	<<set $nextLink to "AS Dump">>\
+	<<set $returnTo to "Nonrandom Event">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<click "Sell her immediately">>
+	<<set $cash += $slaveCost>>
+    <<display "Remove activeSlave">>
+	<<replace "#result">>
+    $activeSlave.slaveName realizes her mistake as she's dragged away. She whines and sobs as she goes, knowing that her new owners are unlikely to give her the life of sexual liberty she imagined and will probably just rent out her asshole.
+    <</replace>>
+<</click>> //This will bring in ¤$slaveCost.//
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+	<<set $recruiterProgress to 7>>
+<</if>>\
+</span>

@@ -1,0 +1,59 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+At the end of a long week, <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> moves past your office toward bed. This is completely normal part of the arcology routine, but you notice as she passes that she's wearing a preoccupied, almost sad expression. You call her over, and she makes a visible effort to brighten up as she comes before you and asks your pleasure. You ask her what's the matter, and her face falls.
+
+<<if ($activeSlave.lips gt 2)>>"<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I'm tho thorry you notithed," she lisps through her dick-sucking lips. "I'm feeling a little thtiff and tired, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I with I wath a little younger, that'th all."<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I'm tho thorry you notithed," she lisps through her ridiculous piercings. "I'm feeling a little thtiff and tired, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I with I wath a little younger, that'th all."<<else>>"<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I'm so sorry you noticed," she says penitently. "I'm feeling a little stiff and tired, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I wish I was a little younger so I could serve you better."<</if>>
+\
+<span id="result">
+<<click "Cheer her up">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You close in on her, and she starts to present herself with the force of long habit. However, you take her by the hand and draw her in close, running your fingertips along her cheekbone, looking into her $activeSlave.eyes eyes. She only holds your gaze for a brief moment before blushing and looking down again, muttering another apology. You raise her chin again with a gentle hand and give her a deep kiss. After a moment she hugs you with almost painful fierceness, and you can feel a heat radiating from her. She makes to get down on her knees to serve you again, but instead, you scoop her up and carry her to bed, laying the bemused girl down before cuddling up behind her. The two of you make languid love, with you murmuring reassuringly into her ear, nibbling her neck, cupping her breasts, and massaging her shoulders by turns. After a lovely climax together in her pussy she coquettishly shifts herself to line your recovering cock up with her ass, looking with @@color:hotpink;adoration@@ and new @@color:mediumaquamarine;confidence@@ into your eyes.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.trust += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+	<<set $activeSlave.vaginalCount += 1>>
+	<<set $vaginalTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Perform a health exam personally">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She gets a weekly health exam from the automated systems, which also do their best to monitor her well-being, but she does not protest as you take her to the surgery and give her a thorough examination. There's nothing the matter other than that she hasn't been 18 for a long time. She looks a little sad at some of the results, but whenever she does, you place a hand on her cheek and give her a kiss. She gets the idea. <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"I underthtand, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can thtill therve you," she lisps.<<else>>"I understand, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can still serve you," she says.<</if>> You adjust her diet and exercise a little, which should @@color:green;slightly improve@@ her health. As she gets up from the chair and makes to resume her duties, you give her a light swat across the buttocks. She squeaks and turns to @@color;lightyellow;giggle at you,@@ giving you a broad wink and shaking her tits a little for you.
+	<<set $activeSlave.health += 1>>
+	<<set $activeSlave.trust += 1>>
+    <</replace>>
+<</click>>
+<<if ($HeadGirl isnot 0) and ($HeadGirl.ID isnot $activeSlave.ID)>>\
+<<click "Give her an afternoon off for some quality time with your Head Girl">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	$HeadGirl.slaveName understands the situation immediately. She gets herself and $activeSlave.slaveName dressed for a nice, non-sexual 'date' out on the promenade, and leads her out by the hand with a wink over her shoulder to you. Your Head Girl understands just what kind of break from sexual servitude $activeSlave.slaveName really needs. They enjoy a nice meal, take a stroll and talk as friends, and get some inconsequential but relaxing beauty treatments together. They both @@color:hotpink;enjoy the relaxation,@@ and $activeSlave.slaveName @@color:green;feels much better@@ after the rest, too.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.health += 1>>
+    <<set $cash -= 500>>
+	<<set $HeadGirl.devotion += 1>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $HeadGirl == $slaves[$i].ID>>
+		<<set $slaves[$i] to $HeadGirl>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>> //This option will cost ¤500//
+<</if>>
+</span>	

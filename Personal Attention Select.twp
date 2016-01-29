@@ -1,0 +1,51 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<if ($personalAttentionChanged is 1)>>
+<<if ($activeSlave.health lt -2)>>
+	<<set $trainingRegimen to "look after her">>
+    <<set $personalAttentionChanged to 0>>
+<<elseif ($activeSlave.sexualQuirk isnot "none") or ($activeSlave.behavioralQuirk isnot "none")>>
+	<<set $trainingRegimen to "fix her quirks">>
+    <<set $personalAttentionChanged to 0>>
+<<elseif ($activeSlave.fetishDiscovered isnot 1)>>
+	<<set $trainingRegimen to "explore her sexuality">>
+    <<set $personalAttentionChanged to 0>>
+<<elseif ($activeSlave.devotion lte 4) and ($activeSlave.trust lt -4)>>
+	<<set $trainingRegimen to "break her will">>
+    <<set $personalAttentionChanged to 0>>
+<<elseif ($personalAttentionChanged is 1)>>
+	<<set $trainingRegimen to "build her devotion">>
+    <<set $personalAttentionChanged to 0>>
+<</if>>
+<</if>>
+
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $personalAttention == $slaves[$i].ID>>
+	You will give ''__@@color:pink;$slaves[$i].slaveName@@__'' your personal attention this week.
+	<<set $activeSlave to $slaves[$i]>>
+    <<set $assignment to 1>>
+<</if>>
+<</for>>
+<<if $assignment is 0>>
+	You have not selected a slave for your personal attention.
+<</if>>
+
+<<if $assignment isnot 0>>
+	<<display "Personal Attention Display">>
+<</if>>
+
+<</nobr>>
+
+__Select a slave to train:__
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+<<print "[[$slaves[$i].slaveName|Personal Attention Select][$personalAttention to $slaves[" + $i + "].ID, $activeSlave to $slaves[" + $i + "], $personalAttentionChanged to 1]]">>\
+<<display "Slave Summary">>
+<</if>>\
+<</for>>
+
+[[None|Main][$personalAttention to -1, $personalAttentionChanged to 1]]

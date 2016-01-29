@@ -1,0 +1,46 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+One morning, you see <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> <<if ($activeSlave.heels is 1) and ($activeSlave.shoes isnot "heels") and ($activeSlave.shoes isnot "boots") and ($activeSlave.shoes isnot "extreme heels")>>crawls<<elseif ($activeSlave.shoes is "heels") or ($activeSlave.shoes is "boots") or ($activeSlave.shoes is "extreme heels")>>totters<<else>>walks<</if>> hurriedly past your door, as though she doesn't want you to notice her. Of course, this only makes you notice her, and you order her in. As she reluctantly obeys, you notice something off about her gait. She should be quite uncomfortable from the big buttplug she is required to wear, but she doesn't seem to be.
+
+Your order her to turn around and present her anus for inspection. She doesn't refuse, exactly, but neither does she obey. She keeps her butt pointed resolutely away from you, and backs away a little. You cover the distance between you in three steps and run a clinical hand between the terrified slave's buttocks. As you suspected, she isn't wearing her buttplug. <<if ($activeSlave.mute is 1)>>She gestures pitifully, complaining that the plug hurts.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She lisps pitifully, "It hurth, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. Ith too big for my athhole. Pleathe don't make me wear it."<<else>>She whines pitifully, "That thing hurts, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's too big for my asshole. Please don't make me wear it."<</if>>
+\
+<span id="result">
+<<click "It's her role to hurt">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Without a word, you<<if ($PC.dick is 0)>> don a cruelly knobby strap-on,<</if>> throw her onto the couch, take both her ankles in one hand, and force them back over her head so her poor, doomed asshole is completely defenseless. You then spit on her hole, seize your <<if ($PC.dick is 0)>>instrument<<else>>rock-hard dick<</if>>, and shove it up the wriggling slave girl's spasming rectum. You've got the necessary skill to judge exactly where the line between anal pain and anal injury is, and you take her right up to it. Halfway through the long anal rape she gives up struggling and just goes limp, sobbing. She @@color:hotpink;fears you,@@ and has also begun to @@color:red;hate buttsex.@@
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.sexualQuirk to "hates anal">>	
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Punish her for disobedience, but address her anal pain">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You patiently and calmly explain to her that disobeying orders isn't acceptable, but that too much pain from her buttplug is a sign that something isn't right. First, you inform her, she will have to be punished for the disobedience, since she should have brought her trouble to you instead of disobeying. She's almost willing as you bend her over the desk and spank her buttocks severely, unsure whether to resent the corporal punishment or appreciate your measured response. When you're done tanning her ass, she's surprised to feel a cool, lubricated digit working its way into her anus. She stiffens a little but eventually relaxes enough to take the finger, then two, and finally three, before you gently and slowly emplace her plug. You instruct her kindly on how to relax in the future when she inserts it on her own. She @@color:hotpink;appreciates@@ your approach.
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+<<click "Address her worrisome anal pain">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You kindly explain how to relax and prepare one's asshole for such insertions. She's been told already, but you make her fetch her plug and go through the steps in front of you so you can check her approach. She leaves reminded how to wear her plug, but @@color:mediumaquamarine;secretly relieved@@ she got away with disobedience with nothing more than a lecture.
+	<<set $activeSlave.trust += 1>>
+    <</replace>>
+<</click>>
+</span>

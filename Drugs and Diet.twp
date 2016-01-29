@@ -1,0 +1,106 @@
+<<nobr>>
+
+<<if $activeSlave.assignmentVisible is 0>>
+//Her drugs are managed by the facility she's assigned to//
+<<else>>
+__Drug regime__: <span id="drugs"><strong><<print $activeSlave.drugs>></strong></span>.
+<<click "None">><<set $activeSlave.drugs to "no drugs">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+ | <<click "Curatives">><<set $activeSlave.drugs to "curatives">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+ | <<click "Prevention">><<set $activeSlave.drugs to "preventatives">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+ | <<click "Aphrodisiacs">><<set $activeSlave.drugs to "aphrodisiacs">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+ | <<click "Aphrodisiacs ++">><<set $activeSlave.drugs to "extreme aphrodisiacs">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+<<if ($activeSlave.intelligence gt -2)>>
+ | <<click "Psychosuppressants">><<set $activeSlave.drugs to "psychosuppressants">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+<<else>>
+ | Psychosuppressants
+<</if>>
+<<if ($activeSlave.boobs lt 9000)>>
+ | <<click "Breasts">><<set $activeSlave.drugs to "breast injections">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+<<else>>
+ | Breasts
+<</if>>
+<<if ($activeSlave.butt lt 9)>>
+ | <<click "Buttocks">><<set $activeSlave.drugs to "butt injections">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+<<else>>
+ | Buttocks
+<</if>>
+<<if ($activeSlave.lips lt 3)>>
+ | <<click "Lips">><<set $activeSlave.drugs to "lip injections">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+<<else>>
+ | Lips
+<</if>>
+<<if ($activeSlave.dick gt 0)>>
+<<if ($activeSlave.dick lt 6) or ($activeSlave.balls lt 6)>>
+ | <<click "Penis enhancement">><<set $activeSlave.drugs to "penis enhancement">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+<<elseif ($activeSlave.dick is 6) and ($activeSlave.balls is 6)>>
+ | Penis enhancement
+<</if>>
+<</if>>
+ | <<click "Steroids">><<set $activeSlave.drugs to "steroids">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+ | <<click "Hormone enhancers">><<set $activeSlave.drugs to "hormone enhancers">><<replace "#drugs">><strong><<print $activeSlave.drugs>></strong><</replace>><</click>>
+<</if>>
+
+<</nobr>>
+\
+<<nobr>>
+
+<<if ($activeSlave.preg lt -1) or ($activeSlave.ovaries is 0)>>
+	//She is sterile//
+<<elseif ($activeSlave.preg gte -1) and ($activeSlave.ovaries isnot 0)>>
+__Fertility__: <span id="fertility"><strong><<if $activeSlave.preg is -1>><<print "using contraceptives">><<elseif $activeSlave.preg is 0>><<print "fertile">><<elseif $activeSlave.preg lt 4>><<print "may be pregnant">><<else>><<print $activeSlave.preg>><<print " weeks pregnant">><</if>></strong></span>.
+<<if ($activeSlave.preg is 0)>>
+	[[Use contraceptives|Slave Interact][$activeSlave.preg to -1]]
+<<elseif ($activeSlave.preg is -1)>>
+	[[Let her get pregnant|Slave Interact][$activeSlave.preg to 0]]
+<<elseif ($activeSlave.preg gt 0)>>
+	[[Abort her pregnancy|Abort]]
+<</if>>
+
+<</if>>
+<</nobr>>&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+__Hormones__: <strong><<if $activeSlave.hormones is -2>><<print "intensive male">><<elseif $activeSlave.hormones is -1>><<print "male">><<elseif $activeSlave.hormones is 2>><<print "intensive female">><<elseif $activeSlave.hormones is 1>><<print "female">><<else>><<print "none">><</if>></strong>.
+<<if ($activeSlave.hormones gt 0)>>
+	[[Stop treatment|Slave Interact][$activeSlave.hormones to 0]] | [[Male|Slave Interact][$activeSlave.hormones to -1]]
+<<elseif ($activeSlave.hormones lt 0)>>
+	[[Stop treatment|Slave Interact][$activeSlave.hormones to 0]] | [[Female|Slave Interact][$activeSlave.hormones to 1]]
+<<else>>
+	[[Female|Slave Interact][$activeSlave.hormones to 1]] | [[Male|Slave Interact][$activeSlave.hormones to -1]]
+<</if>>
+<<if ($activeSlave.hormones gt 1)>>
+	 | [[Reduce dosage|Slave Interact][$activeSlave.hormones to 1]]
+<<elseif ($activeSlave.hormones gt 0)>>
+	 | [[Increase dosage|Slave Interact][$activeSlave.hormones to 2]]
+<<elseif ($activeSlave.hormones lt -1)>>
+	 | [[Reduce dosage|Slave Interact][$activeSlave.hormones to -1]]
+<<elseif ($activeSlave.hormones lt 0)>>
+	 | [[Increase dosage|Slave Interact][$activeSlave.hormones to -2]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+__Diet__: <strong><span id="diet"><<print $activeSlave.diet>></span></strong>.
+<<click "Healthy">><<set $activeSlave.diet to "healthy">><<replace "#diet">><<print $activeSlave.diet>><</replace>><</click>>
+ | <<click "Cum-based">><<set $activeSlave.diet to "cum">><<replace "#diet">><<print $activeSlave.diet>><</replace>><</click>>
+<<if ($activeSlave.weight gt -3)>>
+ | <<click "Lose weight">><<set $activeSlave.diet to "restricted">><<replace "#diet">><<print $activeSlave.diet>><</replace>><</click>>
+<<else>>
+ | //She is already thin//
+<</if>>
+<<if $activeSlave.weight lt 3>>
+ | <<click "Fatten">><<set $activeSlave.diet to "fattening">><<replace "#diet">><<print $activeSlave.diet>><</replace>><</click>>
+<<else>>
+ | //She is already overweight//
+<</if>>
+<<if ($activeSlave.muscles lt 3) and ($activeSlave.amp isnot 1)>>
+ | <<click "Build muscle">><<set $activeSlave.diet to "muscle building">><<replace "#diet">><<print $activeSlave.diet>><</replace>><</click>>
+<<elseif ($activeSlave.amp is 1)>>
+ | //Amputees cannot gain muscle//
+<<else>>
+ | //She is maintaining her enormous musculature//
+<</if>>
+<<if $activeSlave.muscles gt 0.5>>
+ | <<click "Slim down">><<set $activeSlave.diet to "slimming">><<replace "#diet">><<print $activeSlave.diet>><</replace>><</click>>
+<</if>>
+<</nobr>>

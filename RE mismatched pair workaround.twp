@@ -1,0 +1,47 @@
+	The poor sissy isn't happy to become a slave, but she's clearly relieved to be away from her sister. The bitch isn't likely to have an easy time; the sale didn't clear her from debt. $activeSlave.slaveName describes her basic sexual experience, which includes a lot of sucking and anal whoring. Without more ado she moves from practical sexual slavery at the hands of her sister to actual sexual slavery.
+    
+    Her sister-pimp walks in angrily demanding to know why you called her here. She sees her sissy sister kneeling naked next to you, hears the hiss-click of the door closing and locking behind her, and makes the connection far too late to run. She begins to scream at both you and her sister at the top of her lungs, and manages to keep up an impressive volume until you get her gagged. Her sister does not move to interfere as you strip and bind the struggling body. In fact, as you get the gag in place, she begins to laugh a girly, high-pitched laugh.
+    
+<<display "Nationality to Name">>
+
+<<if $useFSNames is 0>>
+  <<set $activeSlave.slaveName to $activeSlave.birthName>>
+<<elseif $FSRomanRevivalist gt 20>>
+  <<set $activeSlave.slaveName to $romanSlaveNames.random()>>
+<<elseif $FSAncientEgyptianRevivalist gt 20>>
+  <<set $activeSlave.slaveName to $ancientEgyptianSlaveNames.random()>>
+<<elseif $FSDegradationist gt 0>>
+  <<display "Degrading Name">>
+<<else>>
+  <<set $activeSlave.slaveName to $activeSlave.birthName>>
+<</if>>
+    
+<<set $secondSlave.origin to "You acquired her along with her sissy sister due to her inexperience as a madam.">>
+<<set $secondSlave.career to "her sister's pimp">>
+    <<set $secondSlave.slaveName to $activeSlave.birthName>>
+    <<set $secondSlave.ID to $activeSlave.ID + 1000>>
+    <<set $secondSlave.devotion -= 10>>
+    <<set $secondSlave.trust -= 2>>
+    	<<set $secondSlave.oldDevotion to $activeSlave.devotion>>
+  <<set $secondSlave.anus to 0>>
+  <<set $secondSlave.vagina to 1>>
+  <<set $secondSlave.preg to -1>>
+  <<set $secondSlave.dick to 0>>
+  <<set $secondSlave.ovaries to 1>>
+<<set $activeSlave.balls to 0>>
+  <<set $secondSlave.vaginalSkill to 0>>
+  <<set $secondSlave.oralSkill to 0>>
+  <<set $secondSlave.analSkill to 0>>
+<<set $secondSlave.behavioralQuirk to "arrogant">>
+<<set $secondSlave.sexualQuirk to "hates penetration">>
+  <<set $secondSlave.boobs to either(400,500)>>
+  <<set $secondSlave.boobsImplant to 0>>
+  <<set $secondSlave.butt to either(2,3)>>
+  <<set $secondSlave.age to 21>>
+
+<<set $secondSlave.relation to "sister">>
+<<set $secondSlave.relationTarget to $activeSlave.ID - 1000>>
+<<set $secondSlave.rivalry to 3>>
+<<set $secondSlave.rivalryTarget to $activeSlave.ID - 1000>>
+
+	<<set $slaves.push($secondSlave)>>

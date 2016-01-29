@@ -1,0 +1,91 @@
+/* Written and coded by Boney M */
+They arrive hand-in-hand and don't let go of each other until the end of the enslavement process, and even after they break their grip and undress at your instruction, their eyes never stray far from each other. With a closer look at them, their blood relation is as obvious as their infatuation with one another. No wonder they couldn't keep it a secret.
+    
+<<set $secondSlave to $activeSlave>>
+
+<<display "Nationality to Name">>
+
+<<set $secondSlave.slaveName to $activeSlave.birthName>>
+<<set $secondSlave.ID to $activeSlave.ID + 1000>>
+<<set $secondSlave.devotion += random (-1, 1)>>
+<<set $secondSlave.trust += random (-1, 1)>>
+<<set $secondSlave.oldDevotion to $activeSlave.devotion>>
+<<set $secondSlave.age -= random (1, 3)>>
+    
+<<set $secondSlave.relation to "sister">>
+<<set $secondSlave.relationTarget to $activeSlave.ID - 1000>>
+<<set $secondSlave.relationship to 4>>
+<<set $secondSlave.relationshipTarget to $activeSlave.ID - 1000>>
+
+<<if $secondSlave.age lt 18>>
+	<<set $secondSlave.age to 18>>
+<</if>>
+
+<<set $secondSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<<if ($secondSlave.age lte 22)>>
+  <<set $secondSlave.career to $youngCareers.random()>>
+<<elseif ($secondSlave.intelligenceImplant is 1)>>
+  <<set $secondSlave.career to $educatedCareers.random()>>
+<<else>>
+  <<set $secondSlave.career to $uneducatedCareers.random()>>
+<</if>>
+
+<<if (random(1,4) gt 1) and ($seedicks is 1)>>
+
+<<if ($activeSlave.dick gt 0) and ($activeSlave.vagina lt 0)>>
+  <<set $secondSlave.dick to 0>>
+  <<set $secondSlave.balls to 0>>
+  <<set $secondSlave.vagina to 1>>
+  <<set $secondSlave.clit to either(0, 0, 0, 0, 0, 0, 1, 1, 2)>>
+  <<set $secondSlave.labia to either(0, 0, 0, 1, 1, 1, 1, 2, 2, 3)>>
+  <<set $secondSlave.preg to -1>>
+  <<set $secondSlave.ovaries to 1>>
+  <<set $secondSlave.face += either(0, 1, 1)>>
+  <<set $secondSlave.boobs += either(0, 100, 200, 300, 400)>>
+  <<set $secondSlave.butt += either(0, 1, 1, 2)>>
+  <<set $secondSlave.earPiercing to either(0,1)>>
+  <<set $secondSlave.nosePiercing to either(0,0,0,1)>>
+  <<set $secondSlave.eyebrowPiercing to either(0,0,0,0,0,1)>>
+  <<set $secondSlave.clitPiercing to either(0,0,0,0,0,1)>>
+  <<set $secondSlave.lipsPiercing to either(0,0,0,0,0,1)>>
+  <<set $secondSlave.navelPiercing to either(0,0,0,1)>>
+  <<set $secondSlave.nipplesPiercing to either(0,0,0,1)>>
+<<elseif ($activeSlave.dick is 0) and ($activeSlave.vagina gte 0)>>
+  <<set $secondSlave.dick to either(1, 2, 2, 2, 3, 3, 3, 4, 4, 5)>>
+  <<set $secondSlave.balls to either(1, 2, 2, 2, 3, 3, 3, 4, 4, 5)>>
+  <<set $activeSlave.vagina to 1>>
+  <<set $secondSlave.vagina to -1>>
+  <<set $secondSlave.clit to 0>>
+  <<set $secondSlave.labia to 0>>
+  <<set $secondSlave.preg to -2>>
+  <<set $secondSlave.ovaries to 0>>
+
+  <<set $secondSlave.face -= either(0, 1, 1)>>
+  <<set $secondSlave.boobs -= either(0, 100, 200, 300, 400)>>
+  <<set $secondSlave.butt -= either(0, 1, 1, 2)>>
+
+  <<set $secondSlave.earPiercing to either(0,0,0,1)>>
+  <<set $secondSlave.nosePiercing to either(0,0,0,0,1)>>
+  <<set $secondSlave.eyebrowPiercing to either(0,0,0,0,0,1)>>
+  <<set $secondSlave.dickPiercing to either(0,0,0,0,0,1)>>
+  <<set $secondSlave.lipsPiercing to either(0,0,0,0,0,1)>>
+  <<set $secondSlave.navelPiercing to either(0,0,0,0,1)>>
+  <<set $secondSlave.nipplesPiercing to either(0,0,0,0,1)>>
+<<elseif $activeSlave.dick gt 0>>
+  <<if random(1, 3) is 1>>
+  	<<set $secondSlave.anus to 1>>
+  <<else>>
+  	<<set $activeSlave.anus to 1>>
+  <</if>>
+<</if>>
+
+<<if $secondSlave.vagina is 0>>
+  <<set $secondSlave.vagina to 1>>
+<</if>>
+<<if ($secondSlave.dick gt 0) and ($secondSlave.balls is 0)>>
+  <<set $secondSlave.balls to random(1,5)>>
+<</if>>
+
+<</if>>
+
+	<<set $slaves.push($secondSlave)>>

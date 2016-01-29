@@ -1,0 +1,38 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+<<set $encyclopedia to "The Head Girl">>\
+\
+<<nobr>>
+
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $Bodyguard.ID == $slaves[$i].ID>>
+	''__@@color:pink;$slaves[$i].slaveName@@__'' is serving as your bodyguard.
+    <<set $assignment to 1>>
+    <<set $slaves[$i].assignment to "guard you">>
+    <<set $slaves[$i].assignmentVisible to 1>>
+    <br><br>She will remain close to you at all times and guard your person.
+<</if>>
+<<set $encyclopedia to "Slave Bodyguards">>\
+<</for>>
+<<if ($assignment is 0)>>
+	You have not selected a bodyguard.
+<</if>>
+
+<</nobr>>
+
+__Appoint a bodyguard from your devoted slaves:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<nobr>>
+<<if $slaves[$i].assignmentVisible is 1>>
+<<if $slaves[$i].assignment isnot "guard you">>
+<<if ($slaves[$i].devotion gt 10) and ($slaves[$i].amp isnot 1)>>
+  <br><<print "[[$slaves[$i].slaveName|Bodyguard Workaround][$Bodyguard to $slaves[" + $i + "]]]">>
+  <<display "Slave Summary">>
+<</if>>
+<</if>>
+<</if>>
+<</nobr>>\
+<</for>>\
+
+[[None|Bodyguard Workaround][$Bodyguard to 0]]

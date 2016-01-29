@@ -1,0 +1,23 @@
+
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if ($slaves[$i].assignment is "be the Milkmaid") and ($slaves[$i].ID isnot $Milkmaid.ID)>>
+      <<set $slaves[$i].assignment to "rest">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+    <</if>>
+  <</for>>
+
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $Milkmaid.ID == $slaves[$i].ID>>
+		<<if $slaves[$i].ID is $personalAttention>>
+		  <<set $personalAttention to -1>>
+		<</if>>
+        <<set $slaves[$i].assignment to "be the Milkmaid">>
+		<<set $slaves[$i].assignmentVisible to 0>>
+		<<set $slaves[$i].sentence to 0>>
+        <<set $slaves[$i].livingRules to "luxurious">>
+    <</if>>
+  <</for>>
+
+
+
+<<goto "Dairy">>

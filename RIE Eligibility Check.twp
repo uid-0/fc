@@ -1,0 +1,17 @@
+<<silently>>
+
+<<set $eligibleSlaves = []>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if $slaves[$i].assignmentVisible is 1>>
+	  <<set $eligibleSlaves.push($slaves[$i])>>
+  <</if>>
+<</for>>
+
+<<if $eligibleSlaves.length is 0>>
+  <<goto "Next Week">>
+<<else>>
+  <<goto "Random Individual Event">>
+<</if>>
+
+<</silently>>

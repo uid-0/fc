@@ -1,0 +1,126 @@
+<<nobr>>
+
+<<if ($slaves[$i].balls is 0) or ($slaves[$i].dick is 0)>>
+	She no longer has the equipment to give semen; her assignment has defaulted to resting.
+	<<set $slaves[$i].assignment to "rest">>
+	<<set $slaves[$i].assignmentVisible to 1>>
+<<else>>
+	<<set $cum to Math.trunc(($slaves[$i].balls*3) + random(0,2))>>
+
+	$slaves[$i].slaveName's
+	<<if ($slaves[$i].dick gt 5)>>
+		massive
+	<<elseif ($slaves[$i].dick gt 4)>>
+		big
+	<<elseif ($slaves[$i].dick gt 3)>>
+		sizeable
+	<<elseif ($slaves[$i].dick gt 2)>>
+		moderate
+	<<elseif ($slaves[$i].dick gt 1)>>
+		little
+	<<else>>
+		tiny
+	<</if>>
+	
+	prick is machine-milked to extract the cum from her
+	<<if ($slaves[$i].balls gt 5)>>
+		titanic
+	<<elseif ($slaves[$i].balls gt 4)>>
+		enormous
+	<<elseif ($slaves[$i].balls gt 3)>>
+		pendulous
+	<<elseif ($slaves[$i].balls gt 2)>>
+		average
+	<<elseif ($slaves[$i].balls gt 1)>>
+		pathetic
+	<<else>>
+		invisible
+	<</if>>
+	balls.
+
+	<<set $hormones to $slaves[$i].hormones>>
+	<<if $hormones lt -1>>
+		Her internal chemistry is perfectly suited to cum production.
+	<<elseif $hormones lt 0>>
+		Her hormonal balance favors cum production.
+	<<elseif $hormones gt 0>>
+		Her hormonal balance impedes cum production.
+	<<elseif $hormones gt 1>>
+		Her internal chemistry is poorly suited to cum production.
+	<</if>>
+	<<set $cum to Math.trunc($cum*(1-($hormones*0.1)))>>
+
+	<<if ($slaves[$i].devotion gt 10)>>
+		She's so happy that her mental state has a positive impact on her semen production.
+		<<set $cum += Math.trunc($cum*($slaves[$i].devotion/100))>>
+	<<elseif ($slaves[$i].devotion lt -10)>>
+		She's so unhappy that her mental state has a negative impact on her semen production.
+		<<set $cum += Math.trunc($cum*($slaves[$i].devotion/100))>>
+	<</if>>	
+
+	<<if ($slaves[$i].health gt 5)>>
+		Her shining health helps her really produce.
+		<<set $cum += Math.trunc($cum*($slaves[$i].health/50))>>
+	<<elseif ($slaves[$i].health lt -5)>>
+		Her poor health impedes semen production.
+		<<set $cum += Math.trunc($cum*($slaves[$i].health/50))>>
+	<</if>>
+
+	<<if ($collectionFacilityUpgradeStimulators is 1)>>
+		<<set $cum to Math.trunc($cum*1.5)>>
+	<</if>>
+
+<<if ($slaves[$i].assignment is "be confined in the arcade")>>
+	<<set $cum to Math.trunc($cum*0.5)>>
+<</if>>
+
+	<<set $cum to Math.trunc($cum)>>
+	<<set $slaves[$i].cum += $cum>>
+	<<set $cumTotal += $cum>>
+
+	<<if ($FSPastoralist is 0)>>
+		<<set $seed to ($cum*random(25,35))>>
+		She produces <<print $cum>> deciliters of cum over the week; the fresh ejaculate is sold for @@color:yellowgreen;¤<<print $seed>>.@@
+	<<else>>
+		<<set $seed to ($cum*(random(25,35)+Math.trunc($FSPastoralist/10)))>>
+		She produces <<print $cum>> deciliters of cum over the week; the fresh ejaculate, which is in extremely high demand given the new cultural preference for slave products, is sold for @@color:yellowgreen;¤<<print $seed>>.@@
+	<</if>>
+	<<set $cash += $seed>>
+
+	<<if ($slaves[$i].fetish is "nympho")>>
+		Getting her dick constantly milked is almost as good as getting constant blowjobs as far as she's concerned. @@color:hotpink;She is happy@@ to have her member receive so much attention.
+		<<set $slaves[$i].devotion += 0.3>>
+	<</if>>
+
+	<<if ($slaves[$i].hormones gt 0)>>
+		Since she cannot maintain an erection, she requires @@color:gold;painful@@ and @@color:mediumorchid;degrading@@ anal electrostimulation to produce.
+		<<set $slaves[$i].devotion -= 0.3>>
+		<<set $slaves[$i].trust -= 0.3>>
+		<<if ($slaves[$i].anus is 0)>>
+			The electrostimulator @@color:lime;breaks in her virgin asshole.@@
+			<<set $slaves[$i].anus to 1>>
+		<</if>>
+	<<elseif ($slaves[$i].devotion lte 4)>>
+		Since she's unaroused by her situation, she requires @@color:gold;painful@@ and @@color:mediumorchid;degrading@@ anal electrostimulation to produce.
+		<<set $slaves[$i].devotion -= 0.3>>
+		<<set $slaves[$i].trust -= 0.3>>
+		<<if ($slaves[$i].anus is 0)>>
+			The electrostimulator @@color:lime;breaks in her virgin asshole.@@
+			<<set $slaves[$i].anus to 1>>
+		<</if>>
+	<</if>>
+
+	<<if ($slaves[$i].balls lt 3)>>
+		<<if ($slaves[$i].balls lt 2)>>
+			<<if (random(1,100) gt 70)>>
+				Constant semen production and continual emptying and refilling @@color:lime;increases the size of her tiny testicles.@@
+				<<set $slaves[$i].balls += 1>>
+			<</if>>
+		<<elseif (random(1,100) gt 90)>>
+			Constant semen production and continual emptying and refilling @@color:lime;increases the size of her small testicles.@@
+			<<set $slaves[$i].balls += 1>>
+		<</if>>
+	<</if>>
+<</if>>
+
+<</nobr>>\

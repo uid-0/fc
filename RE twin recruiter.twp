@@ -1,0 +1,116 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<set $activeSlave to $recruiterTwin>>
+<<if $seeDicks is 1>>
+  <<display "Recruiter Genderflip">>
+<</if>>
+<<set $activeSlave.origin to "She was recruited into your service by her twin sister.">>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.weekAcquired to $week>>
+<<set $activeSlave.devotion to random(5,9)>>
+<<set $activeSlave.trust to random(-3,3)>>
+<<set $activeSlave.preg to -1>>
+
+<<display "Slave Cost">>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $recruiterTwin.ID == $slaves[$i].ID>>
+<<set $recruiterTwin to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<<display "Nationality to Name">>
+
+<<set $activeSlave.assignment to "rest">>
+<<set $activeSlave.assignmentVisible to 1>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+<<set $activeSlave.slaveName to $activeSlave.birthName>>
+<<set $activeSlave.ID to ($recruiterTwin.ID + 1000)>>
+<<set $activeSlave.relation to "twin">>
+<<set $activeSlave.relationTarget to ($activeSlave.ID - 1000)>>
+
+<</nobr>>\
+\
+$recruiterTwin.slaveName requests an interview with you. She's a devoted slave, and you grant it, and are happy you did when you see the troubled expression on her face. She explains that she had a twin sister once, who was still free the last $recruiterTwin.slaveName knew of her. She's heard a rumor through other slaves that her sister has finally been enslaved, and will soon go up for sale.
+
+<<if $recruiterTwin.mute is 1>>She urgently gestures for permission to write. It's unusual, but she seems quite serious, so you grant it. She writes, 
+<</if>>"You've been so good to me, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. She just like me, and I'm sure she could serve you just as well. Please, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, will you buy her like you bought me? I'm afraid she'll go to a cruel <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>." She bites her lip. "And, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I'm sure she'd learn to love<<nobr>>
+<<if $recruiterTwin.fetish is "cumslut">>
+	the taste of your cum
+<<elseif $recruiterTwin.fetish is "submissive">>
+	submission
+<<elseif $recruiterTwin.fetish is "humiliation">>
+	being treated like a dirty slut
+<<elseif $recruiterTwin.fetish is "buttslut">>
+	the feeling of your cock in her butt
+<<elseif $recruiterTwin.fetish is "nympho">>
+	being a good nympho slut
+<<elseif $recruiterTwin.fetish is "likes girls">>
+	men and women
+<<elseif $recruiterTwin.fetish is "sadist">>
+	hurting your other slaves
+<<elseif $recruiterTwin.fetish is "masochist">>
+	being beaten
+<<elseif $recruiterTwin.fetish is "dom">>
+	fucking your other slaves
+<<elseif $recruiterTwin.addict gt 2>>
+	being a druggie whore
+<<elseif $recruiterTwin.anus gt 2>>
+	getting her butt stretched out
+<<elseif $recruiterTwin.boobsImplant gt 20>>
+	getting turned into a bimbo slut
+<<else>>
+	the feeling of your cock in her
+<</if>>
+<</nobr>>as much as I do.<<nobr>>
+<<if $recruiterTwin.fetish is "cumslut">>
+	We could blow you at the same time, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>! And share cum!
+<<elseif $recruiterTwin.fetish is "submissive">>
+	You could use us together, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterTwin.fetish is "humiliation">>
+	You could make us fuck each other in public, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterTwin.fetish is "buttslut">>
+	You could fuck our butts right next to each other, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterTwin.fetish is "nympho">>
+	I'm sure she'd love to have threesomes, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterTwin.fetish is "likes girls">>
+	I'm sure she'd love to have orgies, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterTwin.fetish is "sadist">>
+	I'm sure she'd love to help me, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterTwin.fetish is "masochist">>
+	You could whip us both, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterTwin.fetish is "dom">>
+	I'm sure she'd love to help me use other slaves, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<else>>
+	You could fuck us together, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<</if>>
+<</nobr>>And, I'd love to have my twin close by me." She blushes and waits anxiously for your decision.
+
+You look up the sister. She costs ¤$slaveCost, a bargain, but you won't be able to inspect her beyond her obvious close resemblance to $recruiterTwin.slaveName.
+
+<span id="result">
+<<if $cash gte $slaveCost>>\
+<<click "Buy her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $slaveCost>>
+	<<replace "#result">>
+    $activeSlave.slaveName arrives shortly. You complete the legalities and biometric scanning quickly and without fuss. The two slaves don't remember each other very well but they embrace. The slave sister explains the situation and encourages her twin to be a good slave to you. $activeSlave.slaveName looks a little fearful but clearly realizes that she's lucky to be here.
+	<<set $nextLink to "AS Dump">>\
+    <<for $i to 0; $i lt $slaves.length; $i++>>\
+      <<if $recruiterTwin.ID is $slaves[$i].ID>>\
+        <<set $slaves[$i].recruiter to 0>>\
+        <<set $slaves[$i].relation to "twin">>\
+        <<set $slaves[$i].relationTarget to $activeSlave.ID>>\
+      <</if>>\
+    <</for>>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

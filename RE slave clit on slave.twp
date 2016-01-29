@@ -1,0 +1,55 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+Through the glass walls of your office, you see <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> fucking another slave. Odd, since she doesn't have a penis: it seems the other slave likes her enough to try to make clitoral penetration work. $activeSlave.slaveName's <<if $seeRace is 1>>$activeSlave.race <</if>>clit is certainly big enough to make it possible. Since you gave her orders that permit her to fuck your other slaves, she's been having as much sex with them as she can. The other slave is enjoying herself even though the clit in her pussy is a little disappointing compared to a real cock.
+\
+<span id="result">
+<<click "The slave taking it has a free anus, use that">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Since the other slave is riding $activeSlave.slaveName's huge clit, it's a trivial matter to<<if ($PC.dick is 0)>> don a strap-on,<</if>> come up behind the fucking slaves, stop the other slave's riding for a moment, and insert yourself into her anus. The other slave gasps as your <<if ($PC.dick is 0)>>strap-on complements the clit<<else>>big dick complements the clit<</if>> in her pussy. The poor slave rides out the sexual storm as you and $activeSlave.slaveName fuck her. $activeSlave.slaveName flirts outrageously with you over the other slave's shoulder whenever she can. @@color:mediumaquamarine;She has become more trusting of you.@@
+	<<set $activeSlave.trust += 1>>
+	<<set $activeSlave.penetrativeCount += 1>>
+	<<set $penetrativeTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "The slave giving it has a free anus, use that">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Since $activeSlave.slaveName is on top, it's a trivial matter to<<if ($PC.dick is 0)>> don a strap-on,<</if>> come up behind the fucking slaves, stop her thrusting for a moment, and insert yourself into her anus. <<if ($activeSlave.fetish is "buttslut") and ($activeSlave.fetishDiscovered) is 1>>She shivers with delight as she feels her anal ring stretch to accommodate your <<if ($PC.dick is 0)>>strap-on<<else>>dick<</if>>. <<set $activeSlave.devotion += 0.3>><</if>>Fucking a slave with stimulation from your <<if ($PC.dick is 0)>>phallus<<else>>cock<</if>> in her ass makes her cum with indecent speed. You let her slide down so she can finish the other slave with her mouth while you continue using her anus. The other slave definitely enjoys $activeSlave.slaveName's moaning into her pussy as you use $activeSlave.slaveName's ass. The hard buttfucking $activeSlave.slaveName is getting keeps her clit hard all the way through. @@color:hotpink;Her submission to you has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.penetrativeCount += 1>>
+	<<set $penetrativeTotal += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <<display "Anal VCheck">>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take anal virginity//<</if>>
+<<if $activeSlave.vaginalAccessory isnot "chastity belt">>
+<<click "The slave giving it has a free pussy, use that">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Since $activeSlave.slaveName is on top, it's a trivial matter to<<if ($PC.dick is 0)>> don a strap-on,<</if>> come up behind the fucking slaves, stop her thrusting for a moment, and insert yourself into her pussy. She obediently stops fucking so you can maneuver into her. Having a <<if ($PC.dick is 0)>>strap-on<<else>>dick<</if>> in her pussy reduces her ability to use her engorged clit like a penis a little, so the slave beneath her helps her penetration as much as she can. It's not the most convenient of fucks, but that's to be expected when a <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> and two slaves successfully have two separate instances of vaginal intercourse running at once. Her orgasm is general and intense. @@color:hotpink;Her devotion to you has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.penetrativeCount += 1>>
+	<<set $penetrativeTotal += 1>>
+	<<set $activeSlave.vaginalCount += 1>>
+	<<set $vaginalTotal += 1>>
+    <<display "Vaginal VCheck">>
+    <</replace>>
+<</click>><<if ($activeSlave.vagina is 0)>> //This option will take vaginal virginity//<</if>>
+<</if>>
+</span>

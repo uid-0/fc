@@ -1,0 +1,55 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+Through the glass walls of your office, you see <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> fucking another slave with her <<if $activeSlave.dick lte 2>>small penis<<elseif $activeSlave.dick lte 4>>long cock<<elseif $activeSlave.dick gt 4>>huge, horselike phallus<</if>>. Since you gave her orders that permit her to fuck your other slaves, she's been fucking them whenever she can. The other slave is <<if $activeSlave.dick lte 2>>enjoying herself even though the <<if $seeRace is 1>>$activeSlave.race <</if>>dick in her pussy is a little disappointing<<elseif $activeSlave.dick lte 4>>enjoying the sex<<else>>enjoying the big <<if $seeRace is 1>>$activeSlave.race <</if>>dick, even if she does wince from time to time<</if>>. <<if $activeSlave.balls gt 3>>As $activeSlave.slaveName pounds, her big balls slap against her partner.<<elseif $activeSlave.balls gt 1>>As $activeSlave.slaveName pounds, her balls tighten, preparing to empty themselves.<</if>>
+\
+<span id="result">
+<<click "Fuck the bottom">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Since the other slave is riding $activeSlave.slaveName's <<if $seeRace is 1>>$activeSlave.race <</if>>dick, it's a trivial matter to<<if ($PC.dick is 0)>> don a strap-on,<</if>> come up behind the fucking slaves, stop the other slave's riding for a moment, and insert yourself into her anus. The other slave <<if $activeSlave.dick lte 2>>gasps as your <<if ($PC.dick is 0)>>strap-on complements the small dick<<else>>big dick complements the small one<</if>> in her pussy<<elseif $activeSlave.dick lt 4>>shrieks as she feels her holes stretched by <<if ($PC.dick is 0)>>a strap-on and a cock<<else>>two cocks<</if>><<else>>struggles and begs for mercy as her holes are brutally stretched<</if>>. The poor slave rides out the sexual storm as you and $activeSlave.slaveName fuck her. $activeSlave.slaveName flirts outrageously with you over the other slave's shoulder whenever she can. @@color:mediumaquamarine;She has become more trusting of you.@@
+	<<set $activeSlave.trust += 1>>
+	<<set $activeSlave.penetrativeCount += 1>>
+	<<set $penetrativeTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Fuck the top">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Since $activeSlave.slaveName is on top, it's a trivial matter to<<if ($PC.dick is 0)>> don a strap-on,<</if>> come up behind the fucking slaves, stop her thrusting for a moment, and penetrate her butthole. <<if ($activeSlave.fetish is "buttslut") and ($activeSlave.fetishDiscovered) is 1>>She shivers with delight as she feels her anal ring stretch to accommodate your <<if ($PC.dick is 0)>>strap-on<<else>>dick<</if>>.<<set $activeSlave.devotion += 0.3>><</if>>Fucking a slave with prostate stimulation from your <<if ($PC.dick is 0)>>phallus<<else>>cock<</if>> in her <<if $seeRace is 1>>$activeSlave.race <</if>>ass makes her cum with indecent speed. You let her slide down so she can finish the other slave with her mouth while you continue using her anus. The other slave definitely enjoys $activeSlave.slaveName's moaning into her pussy as you use $activeSlave.slaveName's ass. The hard buttfucking $activeSlave.slaveName is getting keeps her dick stiff all the way through. @@color:hotpink;Her submission to you has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+	<<set $activeSlave.penetrativeCount += 1>>
+	<<set $penetrativeTotal += 1>>
+    <<display "Anal VCheck">>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take virginity//<</if>>
+<<if $activeSlave.vagina isnot -1>>\
+<<click "The slave giving it has a free pussy, use that">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	$activeSlave.slaveName's hermaphroditic genitalia is a little crammed together; it's busy down there. She obediently stops fucking so you can maneuver into her. Having a <<if ($PC.dick is 0)>>strap-on<<else>>dick<</if>> in her pussy reduces her erection a little, so the slave beneath her helps her penetration as much as she can. It's not the most convenient of fucks, but that's to be expected when a <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> and two slaves successfully have two separate instances of vaginal intercourse running at once. Her orgasm is general and intense. @@color:hotpink;Her devotion to you has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.vaginalCount += 1>>
+	<<set $vaginalTotal += 1>>
+	<<set $activeSlave.penetrativeCount += 1>>
+	<<set $penetrativeTotal += 1>>
+    <<display "Vaginal VCheck">>
+    <</replace>>
+<</click>><<if ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<</if>>\
+</span>

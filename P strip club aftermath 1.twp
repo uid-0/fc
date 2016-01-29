@@ -1,0 +1,53 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Random Nonindividual Event">>
+<<set $returnTo to "Random Nonindividual Event">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate New Slave">>
+    
+<<set $activeSlave.origin to "She offered herself to you as a slave to escape the hard life of a free whore.">>
+<<set $activeSlave.career to "prostitute">>
+
+<<set $activeSlave.devotion to 5>>
+<<set $activeSlave.trust to $activeSlave.devotion-4>>
+<<set $activeSlave.health -= 5>>
+<<set $activeSlave.anus to 2>>
+<<if $activeSlave.dick is 0>>
+	<<set $activeSlave.vagina to 2>>
+	<<set $activeSlave.vaginalSkill to 1>>
+<</if>>
+<<set $activeSlave.oralSkill to 1>>
+<<set $activeSlave.analSkill to 1>>
+<<set $activeSlave.whoreSkill to 1>>
+<<set $activeSlave.addict to 2>>
+<<display "Slave Cost">>
+
+<</nobr>>\
+\
+One day, you walk by the commercial space where the strip club that closed was located. It's now advertised as a massage parlor, but the real merchandise on offer is obvious. You can see a bored-looking, half-dressed masseuse rubbing a client, but the sounds of someone having hard sex are filtering out from the back room, and the pricing sheet lists more orifices than massage options.
+
+As you pass, a tired-looking streetwalker walking by wearing ripped jeans and a torn top offers herself to you. She's halfway through her clumsy come-on before she curses and rushes over to kneel at your feet. As she does, she shrieks, "You own this arcology! You - you offered to enslave us strippers when the old place closed down! Please, please, can I accept? I'm sorry I didn't earlier. I'm sorry. I'll fucking do anything! Please!"
+
+//Enslaving her will cost ¤<<print $contractCost>>. Alternatively, you could sell her. Less costs, this will bring in  ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    She sobs with gratitude as the biometric scanners scrupulously record her every particular as belonging not to a person but to a piece of human property. The medical scan discloses that her aphrodisiac addiction is very new: she will probably be able to kick the habit in short order if you decide to withhold further doses.
+	<<set $nextLink to "AS Dump">>\
+	<<set $returnTo to "Main">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

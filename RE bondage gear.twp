@@ -1,0 +1,56 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+One day, you catch sight of <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> <<if ($activeSlave.heels is 1) and ($activeSlave.shoes isnot "heels") and ($activeSlave.shoes isnot "boots") and ($activeSlave.shoes isnot "extreme heels")>>crawling<<elseif ($activeSlave.shoes is "heels") or ($activeSlave.shoes is "boots") or ($activeSlave.shoes is "extreme heels")>>tottering<<else>>walking<</if>> around stark naked. This is unacceptable, as she has been ordered to wear humiliating and uncomfortable bondage gear. When confronted, <<if ($activeSlave.mute is 1)>>she uses gestures to communicate her embarrassment with her clothing, covering her nipples, crotch and anus with her hands one after the other and begging for clothes that do the same.<<elseif ($activeSlave.lips gt 2)>>she says fearfully through her huge lips, "Ahm thorry, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, but thothe thinth are juth so emarrathin!"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>she says fearfully through her piercings, "Ahm thorry, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, but thothe thinth are juth so emarrathin!"<<else>>she says fearfully, "I'm sorry, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, but those things are just so embarrassing!"<</if>>
+\
+<span id="result">
+<<click "Let her go naked">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<if $activeSlave.amp isnot 1>>She skips away happily,<<else>>She wriggles her stumps with pleasure,<</if>> overjoyed to be free of the clothing you ordered her to wear. Her obedience to you @@color:mediumorchid;has decreased,@@ as has @@color:mediumaquamarine;her fear@@ of you.
+	<<set $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust += 1>>
+    <</replace>>
+<</click>>
+<<click "Force her to choose between her straps and public nudity">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You tell her that you understand, and that she can go naked; she looks thrilled until you tell her she'll be walking every hallway in the arcology today, nude. Before she can protest, you add that her only other option is to put her proper clothes back on and be a good little bitch. She shudders and @@color:gold;hurries to get her straps back on.@@
+	<<set $activeSlave.trust -= 1>>
+    <</replace>>
+<</click>>
+<<click "Add dildoes to her gear">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You tell her that you understand, and that you will get her some new clothing. She is thrilled, but her pleasure turns to horror when she sees that the new clothes are a version of the same slave bondage gear, just with inward-facing dildoes for her <<if $activeSlave.vagina gt -1>>pussy and <</if>> asshole. For the rest of the week, she walks around awkwardly, unable to find a comfortable position since her <<if $seeRace is 1>>$activeSlave.race <</if>>body is being penetrated by her own clothing. @@color:hotpink;She has become more submissive.@@
+    <<display "Simple VCheck">>
+    <</replace>>
+	<<set $activeSlave.devotion += 1>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<<if $arcade gt 0>>
+<<click "Sentence her to a month in the arcade">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+    $activeSlave.slaveName screams and begs when she realizes what her punishment is, but you are obdurate. <<if ($activeSlave.muscles gt 1)>>Her powerful form has to be sedated for immurement in the arcade.<<elseif ($activeSlave.weight gt -1)>>Her desperate struggles make immuring her in the arcade difficult.<<else>>Her thin form makes immuring her in the arcade pathetically easy.<</if>> After she's properly confined, the only sign of her discomfiture is a slight movement of her $activeSlave.skin butt as she wriggles desperately against her restraints.
+	<<set $activeSlave.assignment to "be confined in the arcade">><<set $activeSlave.assignmentVisible to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+	<<set $activeSlave.sentence to 4>>
+    <</replace>>
+<</click>>
+<</if>>\
+</span>

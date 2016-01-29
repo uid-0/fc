@@ -1,0 +1,400 @@
+<<nobr>>
+
+
+__Society__
+<br>
+
+<<if $FSCredits gt 0>>
+	@@color:yellow;Your arcology's society is ready to begin accepting a new societal direction.@@
+<</if>>
+
+<<if ($FSGotRepCreditOne is 0) and ($rep gt 7000)>>
+  @@color:yellow;Your reputation is so solid that your arcology's society is ready to begin accepting a second societal direction.@@
+  <<set $FSGotRepCreditOne to 1>>
+  <<set $FSCredits += 1>>
+<<elseif ($FSGotRepCreditTwo is 0) and ($rep gt 12000)>>
+  @@color:yellow;Your reputation is so high that your arcology's society is ready to begin accepting a third and final societal direction.@@
+  <<set $FSGotRepCreditTwo to 1>>
+  <<set $FSCredits += 1>>
+<</if>>
+
+<<if $FSSupremacist lt 0>>
+  <<set $FSSupremacist to 0>><<set $FSCredits += 1>>
+<<elseif $FSSupremacist gt $FSSupremacistDecoration>>
+  <<set $FSSupremacist to $FSSupremacistDecoration>>
+<</if>>
+<<if $FSSupremacist gte $FSLockinLevel>>
+  Your arcology believes implicitly in $FSSupremacistRace superiority.
+<<elseif $FSSupremacist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with $FSSupremacistRace superiority.
+<<elseif $FSSupremacist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to $FSSupremacistRace superiority.
+<<elseif $FSSupremacist gt 0>>
+  Your arcology is unconvinced of $FSSupremacistRace superiority.
+<</if>>
+<<if $FSSupremacistDecoration lt $FSLockinLevel>>
+<<if $FSSupremacist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSSubjugationist lt 0>>
+  <<set $FSSubjugationist to 0>><<set $FSCredits += 1>>
+<<elseif $FSSubjugationist gt $FSSubjugationistDecoration>>
+  <<set $FSSubjugationist to $FSSubjugationistDecoration>>
+<</if>>
+<<if $FSSubjugationist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the inferiority of $FSSubjugationistRace people.
+<<elseif $FSSubjugationist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the inferiority of $FSSubjugationistRace people.
+<<elseif $FSSubjugationist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the inferiority of $FSSubjugationistRace people.
+<<elseif $FSSubjugationist gt 0>>
+  Your arcology is unconvinced of the inferiority of $FSSubjugationistRace people.
+<</if>>
+<<if $FSSubjugationistRaceDecoration lt $FSLockinLevel>>
+<<if $FSSubjugationistRace is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSGenderRadicalist lt 0>>
+  <<set $FSGenderRadicalist to 0>><<set $FSCredits += 1>>
+<<elseif $FSGenderRadicalist gt $FSGenderRadicalistDecoration>>
+  <<set $FSGenderRadicalist to $FSGenderRadicalistDecoration>>
+<</if>>
+<<if $FSGenderRadicalist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the need to redefine gender around power.
+<<elseif $FSGenderRadicalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the need to redefine gender around power.
+<<elseif $FSGenderRadicalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the need to redefine gender around power.
+<<elseif $FSGenderRadicalist gt 0>>
+  Your arcology is unconvinced of the need to redefine gender around power.
+<</if>>
+<<if $FSGenderRadicalistDecoration lt $FSLockinLevel>>
+<<if $FSGenderRadicalist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSGenderFundamentalist lt 0>>
+  <<set $FSGenderFundamentalist to 0>><<set $FSCredits += 1>>
+<<elseif $FSGenderFundamentalist gt $FSGenderFundamentalistDecoration>>
+  <<set $FSGenderFundamentalist to $FSGenderFundamentalistDecoration>>
+<</if>>
+<<if $FSGenderFundamentalist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the need to preserve traditional gender roles.
+<<elseif $FSGenderFundamentalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the need to preserve traditional gender roles.
+<<elseif $FSGenderFundamentalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the need to preserve traditional gender roles.
+<<elseif $FSGenderFundamentalist gt 0>>
+  Your arcology is unconvinced of the need to preserve traditional gender roles.
+<</if>>
+<<if $FSGenderFundamentalistDecoration lt $FSLockinLevel>>
+<<if $FSGenderFundamentalist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSPaternalist lt 0>>
+  <<set $FSPaternalist to 0>><<set $FSCredits += 1>>
+<<elseif $FSPaternalist gt $FSPaternalistDecoration>>
+  <<set $FSPaternalist to $FSPaternalistDecoration>>
+<</if>>
+<<if $FSPaternalist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the vision of a well-bred race of slaves.
+<<elseif $FSPaternalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the vision of a well-bred race of slaves.
+<<elseif $FSPaternalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the vision of a well-bred race of slaves.
+<<elseif $FSPaternalist gt 0>>
+  Your arcology is unconvinced of the vision of a well-bred race of slaves.
+<</if>>
+<<if $FSPaternalistDecoration lt $FSLockinLevel>>
+<<if $FSPaternalist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSDegradationist lt 0>>
+  <<set $FSDegradationist to 0>><<set $FSCredits += 1>>
+<<elseif $FSDegradationist gt $FSDegradationistDecoration>>
+  <<set $FSDegradationist to $FSDegradationistDecoration>>
+<</if>>
+<<if $FSDegradationist gte $FSLockinLevel>>
+  Your arcology believes implicitly that slaves are not human and should be thoroughly degraded.
+<<elseif $FSDegradationist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that slaves are not human and should be thoroughly degraded.
+<<elseif $FSDegradationist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the proposition that slaves are not human and should be thoroughly degraded.
+<<elseif $FSDegradationist gt 0>>
+  Your arcology is unconvinced that slaves are not human and should be thoroughly degraded.
+<</if>>
+<<if $FSDegradationistDecoration lt $FSLockinLevel>>
+<<if $FSDegradationist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSBodyPurist lt 0>>
+  <<set $FSBodyPurist to 0>><<set $FSCredits += 1>>
+<<elseif $FSBodyPurist gt $FSBodyPuristDecoration>>
+  <<set $FSBodyPurist to $FSBodyPuristDecoration>>
+<</if>>
+<<if $FSBodyPurist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the unattractive nature of implants.
+<<elseif $FSBodyPurist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the unattractive nature of implants.
+<<elseif $FSBodyPurist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the unattractive nature of implants.
+<<elseif $FSBodyPurist gt 0>>
+  Your arcology is unconvinced of the unattractive nature of implants.
+<</if>>
+<<if $FSBodyPuristDecoration lt $FSLockinLevel>>
+<<if $FSBodyPurist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSTransformationFetishist lt 0>>
+  <<set $FSTransformationFetishist to 0>><<set $FSCredits += 1>>
+<<elseif $FSTransformationFetishist gt $FSTransformationFetishistDecoration>>
+  <<set $FSTransformationFetishist to $FSTransformationFetishistDecoration>>
+<</if>>
+<<if $FSTransformationFetishist gte $FSLockinLevel>>
+  Your arcology passionately fetishizes implants.
+<<elseif $FSTransformationFetishist gte $FSLockinLevel*0.6>>
+  Your arcology strongly fetishizes implants.
+<<elseif $FSTransformationFetishist gte $FSLockinLevel*0.3>>
+  Your arcology fetishizes implants.
+<<elseif $FSTransformationFetishist gt 0>>
+  Your arcology is beginning to fetishize implants.
+<</if>>
+<<if $FSTransformationFetishistDecoration lt $FSLockinLevel>>
+<<if $FSTransformationFetishist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSSlimnessEnthusiast lt 0>>
+  <<set $FSSlimnessEnthusiast to 0>><<set $FSCredits += 1>>
+<<elseif $FSSlimnessEnthusiast gt $FSSlimnessEnthusiastDecoration>>
+  <<set $FSSlimnessEnthusiast to $FSTransformationFetishistDecoration>>
+<</if>>
+<<if $FSSlimnessEnthusiast gte $FSLockinLevel>>
+  Your arcology is passionately enthusiastic about slim slaves with girlish figures.
+<<elseif $FSSlimnessEnthusiast gte $FSLockinLevel*0.6>>
+  Your arcology is very enthusiastic about slim slaves with girlish figures.
+<<elseif $FSSlimnessEnthusiast gte $FSLockinLevel*0.3>>
+  Your arcology is enthusiastic about slim slaves with girlish figures.
+<<elseif $FSSlimnessEnthusiast gt 0>>
+  Your arcology is beginning to be enthusiastic about slim slaves with girlish figures.
+<</if>>
+<<if $FSSlimnessEnthusiastDecoration lt $FSLockinLevel>>
+<<if $FSSlimnessEnthusiast is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSAssetExpansionist lt 0>>
+  <<set $FSAssetExpansionist to 0>><<set $FSCredits += 1>>
+<<elseif $FSAssetExpansionist gt $FSAssetExpansionistDecoration>>
+  <<set $FSAssetExpansionist to $FSAssetExpansionistDecoration>>
+<</if>>
+<<if $FSAssetExpansionist gte $FSLockinLevel>>
+  Your arcology believes implicitly that all tits and asses should be bigger.
+<<elseif $FSAssetExpansionist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that all tits and asses should be bigger.
+<<elseif $FSAssetExpansionist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the idea that all tits and asses should be bigger.
+<<elseif $FSAssetExpansionist gt 0>>
+  Your arcology is unconvinced that all tits and asses should be bigger.
+<</if>>
+<<if $FSAssetExpansionistDecoration lt $FSLockinLevel>>
+<<if $FSAssetExpansionist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSPastoralist lt 0>>
+  <<set $FSPastoralist to 0>><<set $FSCredits += 1>>
+<<elseif $FSPastoralist gt $FSPastoralistDecoration>>
+  <<set $FSPastoralist to $FSPastoralistDecoration>>
+<</if>>
+<<if $FSPastoralist gte $FSLockinLevel>>
+  Your arcology believes implicitly that slaves should be milked.
+<<elseif $FSPastoralist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that slaves should be milked.
+<<elseif $FSPastoralist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the idea that slaves should be milked.
+<<elseif $FSPastoralist gt 0>>
+  Your arcology is unconvinced that slaves should be milked.
+<</if>>
+<<if $FSPastoralistDecoration lt $FSLockinLevel>>
+<<if $FSPastoralist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSPhysicalIdealist lt 0>>
+  <<set $FSPhysicalIdealist to 0>><<set $FSCredits += 1>>
+<<elseif $FSPhysicalIdealist gt $FSPhysicalIdealistDecoration>>
+  <<set $FSPhysicalIdealist to $FSPhysicalIdealistDecoration>>
+<</if>>
+<<if $FSPhysicalIdealist gte $FSLockinLevel>>
+  Your arcology believes implicitly that all slaves should be tall and strong.
+<<elseif $FSPhysicalIdealist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that all slaves should be tall and strong.
+<<elseif $FSPhysicalIdealist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the idea that all slaves should be tall and strong.
+<<elseif $FSPhysicalIdealist gt 0>>
+  Your arcology is unconvinced that all slaves should be tall and strong.
+<</if>>
+<<if $FSPhysicalIdealistDecoration lt $FSLockinLevel>>
+<<if $FSPhysicalIdealist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSChattelReligionist lt 0>>
+  <<set $FSChattelReligionist to 0>><<set $FSCredits += 1>>
+<<elseif $FSChattelReligionist gt $FSChattelReligionistDecoration>>
+  <<set $FSChattelReligionist to $FSChattelReligionistDecoration>>
+<</if>>
+<<if $FSChattelReligionist gte $FSLockinLevel>>
+  Your arcology believes implicitly in a version of religion that emphasizes slaveholding traditions.
+<<elseif $FSChattelReligionist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with a version of religion that emphasizes slaveholding traditions.
+<<elseif $FSChattelReligionist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to a version of religion that emphasizes slaveholding traditions.
+<<elseif $FSChattelReligionist gt 0>>
+  Your arcology is unconvinced of a version of religion that emphasizes slaveholding traditions.
+<</if>>
+<<if $FSChattelReligionistDecoration lt $FSLockinLevel>>
+<<if $FSChattelReligionist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSRomanRevivalist lt 0>>
+  <<set $FSRomanRevivalist to 0>><<set $FSCredits += 1>>
+<<elseif $FSRomanRevivalist gt $FSRomanRevivalistDecoration>>
+  <<set $FSRomanRevivalist to $FSRomanRevivalistDecoration>>
+<</if>>
+<<if $FSRomanRevivalist gte $FSLockinLevel>>
+  Your arcology believes implicitly that it is the new Rome.
+<<elseif $FSRomanRevivalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with your project to build the new Rome.
+<<elseif $FSRomanRevivalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to your project to build the new Rome.
+<<elseif $FSRomanRevivalist gt 0>>
+  Your arcology is unconvinced of the wisdom of your project to build the new Rome.
+<</if>>
+<<if $FSRomanRevivalistDecoration lt $FSLockinLevel>>
+<<if $FSRomanRevivalist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSAncientEgyptianRevivalist lt 0>>
+  <<set $FSAncientEgyptianRevivalist to 0>><<set $FSCredits += 1>>
+<<elseif $FSAncientEgyptianRevivalist gt $FSAncientEgyptianRevivalistDecoration>>
+  <<set $FSAncientEgyptianRevivalist to $FSAncientEgyptianRevivalistDecoration>>
+<</if>>
+<<if $FSAncientEgyptianRevivalist gte $FSLockinLevel>>
+  Your arcology believes implicitly that it is the land of the Pharaohs, reborn.
+<<elseif $FSAncientEgyptianRevivalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with your project to build a new land of the Pharaohs.
+<<elseif $FSAncientEgyptianRevivalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to your project to build a new land of the Pharaohs.
+<<elseif $FSAncientEgyptianRevivalist gt 0>>
+  Your arcology is unconvinced of the wisdom of your project to build a new land of the Pharaohs.
+<</if>>
+<<if $FSAncientEgyptianRevivalistDecoration lt $FSLockinLevel>>
+<<if $FSAncientEgyptianRevivalist is $FSSupremacistDecoration>>
+  @@color:yellow;Your societal development in this direction is being limited by your arcology's lack of customization to support it.@@
+<</if>>
+<</if>>
+
+<<if $FSSpending gt 1>>
+  Your @@color:yellowgreen;societal spending@@ helps forward your goals for the arcology's future.
+  <<if $FSSupremacist gte $FSLockinLevel>>
+	<<set $FSSupremacist to $FSLockinLevel>>
+  <<elseif $FSSupremacist gt 0>>
+	<<set $FSSupremacist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSSubjugationist gte $FSLockinLevel>>
+	<<set $FSSubjugationist to $FSLockinLevel>>
+  <<elseif $FSSubjugationist gt 0>>
+	<<set $FSSubjugationist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSGenderRadicalist gte $FSLockinLevel>>
+	<<set $FSGenderRadicalist to $FSLockinLevel>>
+  <<elseif $FSGenderRadicalist gt 0>>
+	<<set $FSGenderRadicalist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSGenderFundamentalist gte $FSLockinLevel>>
+	<<set $FSGenderFundamentalist to $FSLockinLevel>>
+  <<elseif $FSGenderFundamentalist gt 0>>
+	<<set $FSGenderFundamentalist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSPaternalist gte $FSLockinLevel>>
+	<<set $FSPaternalist to $FSLockinLevel>>
+  <<elseif $FSPaternalist gt 0>>
+	<<set $FSPaternalist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSDegradationist gte $FSLockinLevel>>
+	<<set $FSDegradationist to $FSLockinLevel>>
+  <<elseif $FSDegradationist gt 0>>
+	<<set $FSDegradationist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSBodyPurist gte $FSLockinLevel>>
+	<<set $FSBodyPurist to $FSLockinLevel>>
+  <<elseif $FSBodyPurist gt 0>>
+	<<set $FSBodyPurist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSPastoralist gte $FSLockinLevel>>
+	<<set $FSPastoralist to $FSLockinLevel>>
+  <<elseif $FSPastoralist gt 0>>
+	<<set $FSPastoralist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSAssetExpansionist gte $FSLockinLevel>>
+	<<set $FSAssetExpansionist to $FSLockinLevel>>
+  <<elseif $FSAssetExpansionist gt 0>>
+	<<set $FSAssetExpansionist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSTransformationFetishist gte $FSLockinLevel>>
+	<<set $FSTransformationFetishist to $FSLockinLevel>>
+  <<elseif $FSTransformationFetishist gt 0>>
+	<<set $FSTransformationFetishist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSSlimnessEnthusiast gte $FSLockinLevel>>
+	<<set $FSSlimnessEnthusiast to $FSLockinLevel>>
+  <<elseif $FSSlimnessEnthusiast gt 0>>
+	<<set $FSSlimnessEnthusiast += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSPhysicalIdealist gte $FSLockinLevel>>
+	<<set $FSPhysicalIdealist to $FSLockinLevel>>
+  <<elseif $FSPhysicalIdealist gt 0>>
+	<<set $FSPhysicalIdealist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSChattelReligionist gte $FSLockinLevel>>
+	<<set $FSChattelReligionist to $FSLockinLevel>>
+  <<elseif $FSChattelReligionist gt 0>>
+	<<set $FSChattelReligionist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSRomanRevivalist gte $FSLockinLevel>>
+	<<set $FSRomanRevivalist to $FSLockinLevel>>
+  <<elseif $FSRomanRevivalist gt 0>>
+	<<set $FSRomanRevivalist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+  <<if $FSAncientEgyptianRevivalist gte $FSLockinLevel>>
+	<<set $FSAncientEgyptianRevivalist to $FSLockinLevel>>
+  <<elseif $FSAncientEgyptianRevivalist gt 0>>
+	<<set $FSAncientEgyptianRevivalist += Math.trunc($FSSpending/1000)>>
+  <</if>>
+<</if>>
+
+<</nobr>>

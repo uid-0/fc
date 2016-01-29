@@ -1,0 +1,70 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is kicked out of bed early in the morning. She's not yet obedient, but she has to earn her keep anyway. This means selling her body, or in her particular case, having her unwilling body sold. She knows the score and allows herself to be stuffed into a special latex public whore suit. She's learned the hard way that resisting being suited up just means she'll be painfully punished before being suited up.
+
+The suit is quite special. It is made of thick, durable latex with temperature regulation and anchor points for restraint. It has a hole at her mouth that holds her jaws well open, with a plug to fill it completely when not in use. She breathes through a port at her nose that muffles all noise, in and out.<<if ($activeSlave.dick gt 0)>> Her cock is neglected inside the latex, with no means of access.<</if>><<if ($activeSlave.vagina isnot -1)>> There's a hole over her pussy, of course.<</if>> Finally, there's a hole over her anus.
+
+She will spend the day restrained in public, with your other slaves periodically stopping by to hydrate her and wash out her holes.
+\
+<span id="result">
+<<click "Increase her assignment to 24 hours a day">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You give $activeSlave.slaveName no indication that her public use assignment is about to change. Late in the day, when her shift would normally end, another of your slaves simply maintains her as usual and then leaves her be. $activeSlave.slaveName is so deprived of any way to tell time that she doesn't realize she's been left for some time. The first indication she gets that something's different is when liquid food is squirted down her throat the next morning. When she's finally stripped out of the suit at the end of the week, she's pale and wan and her holes are puffy and red. @@color:red;Her health was damaged.@@ However, her permanent presence became quite noted. @@color:green;Your reputation has increased.@@ And when she's out of the suit, she instantly begs you to allow her to do anything to save herself from more of that. @@color:gold;Her fear of you has increased.@@
+    <</replace>>
+    <<set $rep += 100>>
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.health -= 1>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 10>>
+		<<set $vaginalTotal += 10>>
+    	<<set $activeSlave.analCount += 10>>
+		<<set $analTotal += 10>>
+    <<else>>
+    	<<set $activeSlave.analCount += 20>>
+		<<set $analTotal += 20>>
+    <</if>>
+<</click>>
+<<click "Take the first and last every day">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	When $activeSlave.slaveName feels a cock entering her mouth right after she's suited up, she knows it's you and wriggles as best she can in the suit. It doesn't help much, and her struggles don't prevent you from moving from her mouth to her ass, either. At the end of the day, on the other hand, the female-shaped latex form is completely still and quiescent as you <<if ($PC.dick is 0)>>use a couple of fingers to brutally molest<<else>>molest<</if>> each of its holes. It takes viciously hard anal penetration to elicit any response at all, and even then, it's just the slightest hint of a moan. @@color:gold;Her fear of you has increased.@@
+    <</replace>>
+    <<set $activeSlave.trust -= 1>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 5>>
+		<<set $vaginalTotal += 5>>
+    	<<set $activeSlave.analCount += 5>>
+		<<set $analTotal += 5>>
+    <<else>>
+    	<<set $activeSlave.analCount += 10>>
+		<<set $analTotal += 10>>
+    <</if>>
+<</click>>
+<<if $arcade gt 0>>\
+<<click "Sentence her to a month in the arcade">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+    $activeSlave.slaveName screams and begs when she realizes what her punishment is, but you are obdurate. <<if ($activeSlave.muscles gt 1)>>Her powerful form has to be sedated for immurement in the arcade.<<elseif ($activeSlave.weight gt -1)>>Her desperate struggles make immuring her in the arcade difficult.<<else>>Her thin form makes immuring her in the arcade pathetically easy.<</if>> After she's properly confined, the only sign of her discomfiture is a slight movement of her butt as she wriggles desperately against her restraints.
+	<<set $activeSlave.assignment to "be confined in the arcade">><<set $activeSlave.assignmentVisible to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+	<<set $activeSlave.sentence to 4>>
+    <</replace>>
+<</click>>
+<</if>>\
+</span>

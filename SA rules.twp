@@ -1,0 +1,212 @@
+<<nobr>>
+
+<<if ($slaves[$i].fetish is "mindbroken")>>
+	is mentally broken so none of the rules have any impact.
+<<else>>
+
+<<if ($slaves[$i].releaseRules is "sapphic") and ($slaves[$i].fetish is "likes girls")>>
+	needs no encouragement to have sex with your other slaves. She @@color:hotpink;loves being able@@ to have lesbian sex whenever she wants it, and these rules @@color:mediumaquamarine;build trust.@@ 
+    <<set $activeSlave.oralCount += 5>>
+    <<set $oralTotal += 5>>
+    <<set $slaves[$i].devotion += 0.3>><<set $slaves[$i].trust += 0.3>>
+<<elseif ($slaves[$i].releaseRules is "sapphic") and ($slaves[$i].drugs is "extreme aphrodisiacs") and ($slaves[$i].fetish isnot "likes girls")>>
+	isn't naturally attracted to women, but since she's on an extreme dose of aphrodisiacs she forgets to care; it's all sex to her and she needs it constantly. She has become @@color:pink;bisexual!@@ Having her sexuality forcibly molded @@color:hotpink;increases her devotion@@ and @@color:mediumaquamarine;builds trust.@@ 
+    <<set $activeSlave.oralCount += 5>>
+    <<set $oralTotal += 5>>
+    <<set $slaves[$i].devotion += 0.3>><<set $slaves[$i].trust += 0.3>>
+    <<set $slaves[$i].fetish to "likes girls">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].releaseRules is "sapphic") and ($slaves[$i].drugs is "aphrodisiacs") and ($slaves[$i].fetish isnot "likes girls") and (random(1,100) gt 70)>>
+	isn't naturally attracted to women, but since she's on aphrodisiacs and can't masturbate she has lesbian sex several times a day. Subsuming her own sexuality to your rules @@color:hotpink;increases her obedience@@ and @@color:mediumaquamarine;builds trust.@@ She has become @@color:pink;bisexual!@@
+    <<set $activeSlave.oralCount += 5>>
+    <<set $oralTotal += 5>>
+    <<set $slaves[$i].devotion += 0.3>><<set $slaves[$i].trust += 0.3>>
+    <<set $slaves[$i].fetish to "likes girls">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].releaseRules is "sapphic") and ($slaves[$i].drugs is "aphrodisiacs")>>
+	isn't naturally attracted to women, but since she's on aphrodisiacs and can't masturbate she has lesbian sex many times a day. Subsuming her own sexuality to your rules @@color:hotpink;increases her obedience@@ and @@color:mediumaquamarine;builds trust.@@ She is becoming confused about her sexual identity.
+    <<set $activeSlave.oralCount += 5>>
+    <<set $oralTotal += 5>>
+    <<set $slaves[$i].devotion += 0.3>><<set $slaves[$i].trust += 0.3>>
+    
+<<elseif ($slaves[$i].devotion lt -4) and ($slaves[$i].releaseRules is "sapphic")>>
+	manages to contain her sex drive and doesn't masturbate or have sex with your other slaves. Her @@color:mediumaquamarine;independence rises.@@
+    <<set $slaves[$i].trust += 1>>    
+<<elseif ($slaves[$i].devotion lt 10) and ($slaves[$i].releaseRules is "sapphic")>>
+	has sex with your other slaves a few times. Being forced to overcome her reluctance to fuck other women in order to find release @@color:hotpink;increases her devotion.@@
+    <<set $activeSlave.oralCount += 5>>
+    <<set $oralTotal += 5>>
+    <<set $slaves[$i].devotion += 0.3>>
+<<elseif ($slaves[$i].releaseRules is "sapphic") and (random(1,100) gt 20)>>
+	obeys your rules that encourage lesbian sex. Obeying your sexual direction @@color:hotpink;increases her devotion.@@ She is becoming confused about her sexual identity.
+    <<set $activeSlave.oralCount += 5>>
+    <<set $oralTotal += 5>>
+    <<set $slaves[$i].devotion += 0.3>>
+<<elseif ($slaves[$i].releaseRules is "sapphic") and ($slaves[$i].fetish isnot "nympho") and ($slaves[$i].clitSetting isnot $slaves[$i].fetish)>>
+	obeys your rules that encourage lesbian sex. She has become @@color:pink;bisexual!@@ Having her sexuality forcibly molded @@color:hotpink;increases her obedience@@ and @@color:mediumaquamarine;builds trust.@@
+    <<set $activeSlave.oralCount += 5>>
+    <<set $oralTotal += 5>>
+    <<set $slaves[$i].devotion += 0.3>><<set $slaves[$i].trust += 0.3>>
+    <<set $slaves[$i].fetish to "likes girls">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+    
+<<elseif ($slaves[$i].devotion lt -4) and ($slaves[$i].releaseRules is "restrictive")>>
+	<<set $activeSlave to $slaves[$i]>><<display "release check">>
+	<<if $release is 0>>
+      finds little sexual release in her duties, and is @@color:gold;punished@@ for illicit masturbation.
+      <<set $slaves[$i].trust -= 0.3>>
+    <<else>>
+      finds little sexual enjoyment in her duties, and is @@color:gold;punished@@ for illicit masturbation.
+      <<set $slaves[$i].trust -= 0.3>>
+    <</if>>
+<<elseif ($slaves[$i].devotion lte 10) and ($slaves[$i].releaseRules is "restrictive")>>
+	<<set $activeSlave to $slaves[$i]>><<display "release check">>
+	<<if $release is 0>>
+    	finds little sexual release in her duties, and @@color:hotpink;obeys@@ the masturbation restriction to avoid being punished.
+    	<<set $slaves[$i].devotion += 0.3>>
+    <<else>>
+    	finds @@color:hotpink;sexual release@@ in her duties.
+    	<<set $slaves[$i].devotion += 0.3>>
+    <</if>>
+<<elseif ($slaves[$i].releaseRules is "restrictive")>>
+	<<set $activeSlave to $slaves[$i]>><<display "release check">>
+	<<if $release is 0>>
+    	finds little sexual release in her duties and obeys the masturbation prohibition, causing serious @@color:mediumorchid;sexual frustration.@@
+    	<<set $slaves[$i].devotion -= 0.3>>
+    <<else>>
+    	finds @@color:hotpink;sexual release@@ in her duties.
+    	<<set $slaves[$i].devotion += 0.3>>
+    <</if>>
+    
+<<elseif ($slaves[$i].devotion lt -4) and ($slaves[$i].releaseRules is "permissive")>>
+	uses your permission to masturbate to @@color:mediumaquamarine;maintain her sexual independence.@@
+    <<set $slaves[$i].trust += 1>>
+<<else>>
+	<<set $activeSlave to $slaves[$i]>><<display "release check">>
+	<<if $release is 0>>
+    	finds little sexual release in her duties, so she's @@color:mediumaquamarine;grateful@@ you allow her to get herself off.
+    	<<set $slaves[$i].trust += 0.3>>
+    <<else>>
+    	finds @@color:hotpink;sexual release@@ in her duties.
+    	<<set $slaves[$i].devotion += 0.3>>
+    <</if>>
+<</if>>
+
+<<if ($slaves[$i].releaseRules isnot "restrictive")>>
+<<if ($slaves[$i].fetishDiscovered is 0)>>
+<<if ($AProsperityCap gte 140) or (random(1,100) gte 90)>>
+  <<set $slaves[$i].fetishDiscovered to 1>>
+  Since the rules
+  <<if ($slaves[$i].releaseRules is "permissive")>>
+	permit her to masturbate openly,
+  <<else>>
+	encourage her to openly fuck other slaves,
+  <</if>>
+  <<if ($AProsperityCap gte 140)>>
+	your upgraded personal assistant completes a profile of her sexuality.
+  <<else>>
+	your personal assistant manages to complete a profile of her sexuality.
+  <</if>>
+  <<if ($slaves[$i].fetish is "submissive")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She often touches herself after being ordered around: she's a @@color:pink;submissive.@@
+	<<else>>
+	  She enjoys being used by other slaves: she's a @@color:pink;submissive.@@
+	<</if>>
+  <<elseif ($slaves[$i].fetish is "likes girls")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She often touches herself while watching the other girls in the shower: she @@color:pink;likes girls.@@
+	<<else>>
+	  She needs no encouragement to have sex with other slaves: she @@color:pink;likes girls.@@
+	<</if>>
+  <<elseif ($slaves[$i].fetish is "cumslut")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She often touches herself after she sucks someone off: she's a @@color:pink;cumslut.@@
+	<<else>>
+	  She seems to really enjoy blowing your other slaves: she's a @@color:pink;cumslut.@@
+	<</if>>
+  <<elseif ($slaves[$i].fetish is "humiliation")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She often touches herself in public: she's a @@color:pink;humiliation@@ fetishist.
+	<<else>>
+	  She often instigates public sex with your other girls: she's a @@color:pink;humiliation@@ fetishist.
+	<</if>>
+  <<elseif ($slaves[$i].fetish is "buttslut")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She often fingers her asshole while touching herself: she's a @@color:pink;buttslut.@@
+	<<else>>
+	  She loves it when other slaves grope her asshole: she's a @@color:pink;buttslut.@@
+	<</if>>
+  <<elseif ($slaves[$i].fetish is "boobs")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She often pinches her nipples while touching herself: she's a @@color:pink;breast@@ fetishist.
+	<<else>>
+	  She loves it when other slaves grope her boobs: she's a @@color:pink;breast@@ fetishist.
+	<</if>>
+  <<elseif ($slaves[$i].fetish is "sadist")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She often touches herself to the sight of other slaves being punished: she's a @@color:pink;sadist.@@
+	<<else>>
+	  She molests your other slaves, often forcing them to fuck: she's a @@color:pink;sadist.@@
+	<</if>>
+  <<elseif ($slaves[$i].fetish is "masochist")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She often touches herself while being punished: she's a @@color:pink;masochist.@@
+	<<else>>
+	  She occasionally acts out just to get punished: she's a @@color:pink;masochist.@@
+	<</if>>
+  <<elseif ($slaves[$i].fetish is "dom")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She often touches herself after getting her way over rival slaves: she's sexually @@color:pink;dominant.@@
+	<<else>>
+	  She fucks your other slaves, and rarely accepts a fucking from them: she's sexually @@color:pink;dominant.@@
+	<</if>>
+  <<elseif ($slaves[$i].fetish is "pregnancy")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She often touches herself while ogling pregnant slaves: she's a @@color:pink;pregnancy@@ fetishist.
+	<<else>>
+	  She lavishes attention on the bellies of pregnant slaves: she's a @@color:pink;pregnancy@@ fetishist.
+	<</if>>
+  <<elseif ($slaves[$i].fetish is "nympho")>>
+	<<if ($slaves[$i].releaseRules is "permissive")>>
+	  She does nothing but work, sleep and touch herself: she's a @@color:pink;nympho!@@
+	<<else>>
+	  She does nothing but work, sleep and have sex with other slaves: she's a @@color:pink;nympho!@@
+	<</if>>
+  <</if>>
+<</if>>
+<</if>>
+<</if>>
+    
+<<if ($slaves[$i].devotion lte 4) and ($slaves[$i].speechRules is "restrictive")>>
+    	Living under enforced silence @@color:hotpink;molds her@@ to your will.
+    	<<set $slaves[$i].devotion += 0.3>>
+<</if>>
+
+<<if ($slaves[$i].devotion lte 4)>>
+  <<if ($slaves[$i].livingRules is "spare")>>
+    The spare living conditions @@color:hotpink;get her used@@ to the routine of slavery.
+    <<set $slaves[$i].devotion += 0.3>>
+  <<elseif ($slaves[$i].livingRules is "normal")>>
+    The reasonable living conditions allow her to @@color:mediumaquamarine;feel self-reliant.@@
+    <<set $slaves[$i].trust += 0.3>>
+  <<else>>
+    The luxurious living conditions encourage her to @@color:mediumaquamarine;feel respectable.@@
+    <<set $slaves[$i].trust += 0.7>>
+  <</if>>
+<<else>>
+  <<if ($slaves[$i].ID is $HeadGirl.ID) and ($HGSuite is 1)>>
+    She is @@color:hotpink;very happy@@ with her suite and @@color:mediumaquamarine;trusts@@ you a bit more for providing it.
+    <<set $slaves[$i].devotion += 0.3>><<set $slaves[$i].trust += 0.3>>
+  <<elseif ($slaves[$i].livingRules is "luxurious")>>
+    She is @@color:hotpink;very happy@@ with her little room and @@color:mediumaquamarine;trusts@@ you a bit more for providing it.
+    <<set $slaves[$i].devotion += 0.3>><<set $slaves[$i].trust += 0.3>>
+  <<elseif ($slaves[$i].livingRules is "normal")>>
+    She is likes her personal space in the dormitory and @@color:mediumaquamarine;trusts@@ you a bit more for providing it.
+    <<set $slaves[$i].trust += 0.3>>
+  <</if>>
+<</if>>
+
+<</if>> /*Closes mindbreak exemption*/
+
+<</nobr>>\

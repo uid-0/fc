@@ -1,0 +1,67 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is on a diet, and she needs it. That doesn't make it any easier for her. Your slaves are not permitted time to waste over meals. They enter the simple kitchen, drink their allotted portion of slave food out of a cup, and get on with their duties. Your personal assistant catches $activeSlave.slaveName, whose cup is always filled less than halfway, skulking around in the hope that one of the others will take her eyes off her cup, or even leave leftovers.
+\
+<span id="result">
+<<click "Catch her at it and punish her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	It's childishly easy to catch her at it. You simply call a slave eating her breakfast away over the arcology's audio system, and then enter the kitchen by a different door. $activeSlave.slaveName has the departed slave's cup in her hand and halfway to her mouth when she's caught in the act. You relieve her of her prize, and finding that she has not started her own proper portion, pour it out onto the floor. You tell her to lap it up without using her hands, and begin counting down from ten. She obeys, but slowly and hesitantly. When you reach zero you order her to get to all fours and administer a stinging slap across her thieving <<if $seeRace is 1>>$activeSlave.race <</if>> ass. She alternates ten seconds of desperate lapping with being beaten across the buttocks until she's done, by which time she is @@color:gold;desperate to obey and avoid further punishment.@@
+	<<set $activeSlave.trust -= 1>>
+    <</replace>>
+<</click>>
+<<click "Make her eat in your office and keep her busy while she does">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She knows what it means when she's informed that her meals will now be available in your office only. You not only supervise her intake strictly, but set up a bowl for her on a little stand so the chubby bitch can lap up her food hands free on all fours, leaving her free for use from behind. You're careful to avoid associating pleasure with misbehavior by taking her cruelly every time she eats, pinching her nipples, and slapping her <<if $seeRace is 1>>$activeSlave.race <</if>> ass as you ride her. This is so effective that  @@color:gold;she learns to obey@@ and @@color:orange;loses weight@@ both.
+	<<set $activeSlave.trust -= 1>>
+  <<set $activeSlave.weight -= 1>>
+  <<set $activeSlave.diet to "healthy">>
+      <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+          <<set $activeSlave.vaginalCount += 3>>
+          <<set $vaginalTotal += 3>>
+          <<set $activeSlave.analCount += 3>>
+          <<set $analTotal += 3>>
+  		  <<display "Simple VCheck">>
+      <<else>>
+          <<set $activeSlave.analCount += 6>>
+          <<set $analTotal += 6>>
+  		  <<display "Anal VCheck">>
+      <</if>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<<click "Fill her up with water as punishment">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You meet her in time for her next meal and tell her that you're aware of her stealing. You indicate a table full of cups, and tell her that she can drink as much as she wants from them if she'll tell you the truth. She confesses, and is horrified to find they're full of water, not food. You add casually that she can choose not to 'eat' the contents... but that she'll get no real food until she finishes every one. Torn between hunger and reluctance, she spends the next hour struggling with so much water that you have to check her for water intoxication. She finishes with a bulging stomach and a @@color:gold;sincere desire to avoid further punishment.@@
+	<<set $activeSlave.trust -= 1>>
+    <</replace>>
+<</click>>
+<<if ($collectionFacilitySlaves gte 5) and ($activeSlave.fetish isnot "cumslut")>>
+  <<click "Restrict her to nothing but fresh cum from the Collection Facility">>
+	  <<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	  You meet her in time for her next meal and tell her that you're aware of her stealing. You tell her that you understand her need to eat, and that for the rest of the week you'll mercifully be allowing her to try a new diet on which she can eat as much as she wants. She's overjoyed to hear it, though this pleasure is replaced with extreme disgust when she learns that her only culinary options are limited to cum. It's just nutritionally augmented enough to prevent starvation. Disgust is defeated by hunger pangs, and she spends most of the week going around with a @@color:hotpink;preoccupied@@ look on her face and a slightly distended belly. By the end, she's starting to @@color:pink;salivate@@ at the mere scent of ejaculate.
+	  <<set $activeSlave.devotion += 1>>
+	  <<set $activeSlave.fetish to "cumslut">>
+	  <<set $activeSlave.fetishDiscovered to 1>>
+	  <</replace>>
+  <</click>>
+<</if>>
+</span>

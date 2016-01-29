@@ -1,0 +1,60 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<</nobr>>\
+\
+Your rivalry with the arcology owner behind the Daughters of Liberty continues. The tone of your arcology is a bit more somber than usual. You have enhanced security in place, and the populace has caught the mood.
+
+Your personal assistant collates several options for attacking your rival. This is a corporate war, not a military one; your peers would not tolerate a direct attack on <<if $seeDicks is 2>>him.<<else>>her.<</if>> You must bankrupt your opponent so they are no longer able to hide within the physical and intangible fortress that is their arcology.
+
+Your rival <<if $rivalryPower/$rivalOwner gt 0.6>>is in a bad financial state, well on the way to final dissolution and defeat.<<elseif $rivalryPower/$rivalOwner gt 0.3>>has taken some hard corporate blows but is still standing.<<else>>is essentially undamaged; you have hard work ahead of you.<</if>>
+\
+<span id="result">
+<<click "Apply ¤10000 in standard corporate warfare">>
+	<<if random(1,100) gt 50>>
+      <<replace "#result">>
+      Money is your infantry, your weapon, your ammunition in one. Last century, your soldiers would have died taking the enemy's positions. Today, your ¤ die @@color:green;taking@@ <<if $seeDicks is 2>>his<<else>>her<</if>> holdings. Once more unto the breach.
+      <<set $cash -= 10000>>
+	  <<set $rivalryPower += 1>>
+      <</replace>>
+    <<else>>
+      <<replace "#result">>
+      Money is your infantry, your weapon, your ammunition in one. Last century, your soldiers would have died before the enemy's machine guns. Today, your ¤ die @@color:red;failing to take@@ <<if $seeDicks is 2>>his<<else>>her<</if>> holdings. Once more unto the breach.
+      <<set $cash -= 10000>>
+      <</replace>>
+    <</if>>
+<</click>>
+<<click "Spend ¤10000 funding sabotage">>
+	<<if random(1,100) gt 70>>
+      <<replace "#result">>
+      Since you are not so uncouth as to, for example, help fund a coup attempt, you fund traditional acts of corporate sabotage, including hacking, slander, and actual, physical thievery. There are some @@color:red;minor rumors@@ that you are to blame, but they're outweighed by the @@color:green;great pressure@@ these incidents put on your enemy.
+      <<set $cash -= 10000>>
+      <<set $rep -= 100>>
+	  <<set $rivalryPower += 2>>
+      <</replace>>
+    <<else>>
+      <<replace "#result">>
+      Since you are not so uncouth as to, for example, help fund a coup attempt, you fund traditional acts of corporate sabotage, including hacking, slander, and actual, physical thievery. Unfortunately, you seem to be a step behind this week. Your enemy @@color:red;prevents@@ many of your attacks, and even manages to turn a few minor players into public confessions that @@color:red;damage@@ your reputation.
+      <<set $cash -= 25000>>
+      <<set $rep -= 500>>
+      <</replace>>
+    <</if>>
+<</click>>
+<<click "Use ¤25000 creating local shortages">>
+      <<replace "#result">>
+      With enough money, it's entirely possible to temporarily overwhelm even the advanced free market of the Free Cities. You choose a few critical items - Pharmaceutical materials, electronic components, and other physical items - and purchase shipments intended for your rival's arcology. <<if $seeDicks is 2>>His<<else>>Her<</if>> tenants are @@color:green;seriously inconvenienced@@ and blame their difficulties on their hapless landlord.
+      <<set $cash -= 25000>>
+	  <<set $rivalryPower += 1>>
+      <</replace>>
+<</click>>
+<<click "Devote ¤50000 to purchasing the support of your peers">>
+      <<replace "#result">>
+      Your fellow arcology owners have an interest in seeing the funder of the Daughters' attempt on you destroyed, but few of them are willing to spend any money or real effort on the matter. You do a few of them the favor of making the money and effort spent yours. Your rival finds <<if $seeDicks is 2>>his<<else>>her<</if>> dealings with your mutual peers becoming @@color:green;strangely difficult.@@ Market opinion is swinging your way.
+      <<set $cash -= 50000>>
+	  <<set $rivalryPower += 2>>
+      <</replace>>
+<</click>>
+</span>

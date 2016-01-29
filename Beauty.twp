@@ -1,0 +1,145 @@
+<<nobr>>
+
+<<if $useActiveSlave is 1>>
+	<<set $assayedSlave to $activeSlave>>
+<<else>>
+	<<set $assayedSlave to $slaves[$i]>>
+<</if>>
+
+<<set $beauty to 0>>
+
+<<set $beauty += ((60-$assayedSlave.age) + (5*$assayedSlave.ageImplant) + ($assayedSlave.health)  + (2*$assayedSlave.waist) - ($assayedSlave.muscles) +(2*$assayedSlave.lips) + (4*$assayedSlave.face) +  (0.015*$assayedSlave.boobs) +(1.5*$assayedSlave.butt) - (2*$assayedSlave.dick) - $assayedSlave.clit + 2*$assayedSlave.height+ 2*$assayedSlave.nipples + (3*$assayedSlave.entertainSkill) + (3*$assayedSlave.whoreSkill))>>
+
+<<if Math.abs($assayedSlave.weight) gt 1>>
+	<<set $beauty -= (2*Math.abs($assayedSlave.weight))>>
+<</if>>
+
+<<if $assayedSlave.brand isnot 0>>
+  <<if $rep gt 10000>>
+	<<set $beauty += 1>>
+  <<elseif $rep lt 5000>>
+	<<set $beauty -= 1>>
+  <</if>>
+<</if>>
+
+<<if $assayedSlave.minorInjury isnot 0>>
+	<<set $beauty -= 1>>
+<</if>>
+
+<<if $assayedSlave.nipplesPiercing gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.lipsPiercing gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.vaginaPiercing gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.dickPiercing gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.clitPiercing gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.anusPiercing gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+
+<<if $assayedSlave.earPiercing + $assayedSlave.eyebrowPiercing + $assayedSlave.nosePiercing + $assayedSlave.navelPiercing gt 2>>
+	<<set $beauty += 1>>
+<</if>>
+
+<<if $assayedSlave.nails gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.makeup gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+
+<<if $assayedSlave.lipsTat gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.buttTat gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.anusTat gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.vaginaTat gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.dickTat gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.boobsTat gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.armsTat gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.legsTat gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.shouldersTat gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+<<if $assayedSlave.stampTat gt 0>>
+	<<set $beauty += 1>>
+<</if>>
+
+<<if $assayedSlave.preg gt 10>>
+<<if $FSGenderFundamentalist is 0>>
+	<<set $beauty to Math.trunc($beauty*0.8)>>
+<</if>>
+<</if>>
+<<if $FSGenderFundamentalist gt 0>>
+<<if $assayedSlave.dick gt 0>>
+  <<set $beauty += Math.trunc($FSGenderFundamentalist/30)>>
+<</if>>
+<</if>>
+
+<<if $FSPhysicalIdealist gt 0>>
+<<if $assayedSlave.muscles gt 1>>
+  <<set $beauty += Math.trunc($assayedSlave.muscles*($FSPhysicalIdealist/40))>>
+<</if>>
+<</if>>
+
+<<if $assayedSlave.race is "white">>
+	<<set $beauty += 4>>
+<<elseif $assayedSlave.race is "surgically altered to look white">>
+	<<set $beauty += 2>>
+<</if>>
+<<if $FSSupremacist gt 0>>
+<<if $assayedSlave.race isnot $FSSupremacistRace>>
+  <<set $beauty += Math.trunc($FSSupremacist/30)>>
+<</if>>
+<</if>>
+<<if $FSSubjugationist gt 0>>
+<<if $assayedSlave.race is $FSSubjugationistRace>>
+  <<set $beauty += Math.trunc($FSSubjugationist/20)>>
+<</if>>
+<</if>>
+
+<<if $assayedSlave.prestige gt 0>>
+	<<set $beauty to $beauty+Math.trunc($beauty*$assayedSlave.prestige*0.1)>>
+<</if>>
+
+<<if (($assayedSlave.lipsPiercing + $assayedSlave.nipplesPiercing + $assayedSlave.vaginaPiercing + $assayedSlave.clitPiercing + $assayedSlave.anusPiercing + $assayedSlave.earPiercing + $assayedSlave.eyebrowPiercing + $assayedSlave.nosePiercing + $assayedSlave.navelPiercing) gt 8) and ($assayedSlave.lipsTat isnot 0) and ($assayedSlave.buttTat isnot 0) and ($assayedSlave.anusTat isnot 0) and ($assayedSlave.vaginaTat isnot 0) and ($assayedSlave.boobsTat isnot 0)>>
+	<<set $modded += 1>>
+<<else>>
+	<<set $unmodded += 1>>
+<</if>>
+<<if $assayedSlave.vagina is -1>>
+	<<set $XY += 1>>
+<<else>>
+	<<set $XX += 1>>
+<</if>>
+<<if $assayedSlave.age gte 30>>
+	<<set $old += 1>>
+<<else>>
+	<<set $young += 1>>
+<</if>>
+
+<<set $beauty to Math.trunc($beauty*0.5)>>
+
+<</nobr>>\

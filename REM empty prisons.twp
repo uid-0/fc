@@ -1,0 +1,14 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+
+<<set $slaveCostFactor -= 0.3>>
+
+<</nobr>>\
+\
+One morning, you awake to find a non-urgent alert from your personal assistant program, which is set up to alert you to any developments that may affect your business pursuits.
+
+A small, impoverished old world country defaulted on its currency today. Its beleaguered government is taking every available step to raise funds. Among other things, it has sold every inmate in its prisons who would fetch a price worth the trouble of sale into Free Cities slavery. Though most of the influx is going to be of abominably low quality, the sudden addition of so much new meat is going to have a big impact on the slave economy. Projections show a short-term price drop of up to thirty percent.
+
+There will be no immediate impact on you or your slaves, but the coming weeks will be a fine time to buy new stock, and a poor time to sell. @@color:yellow;The market price of slaves has dropped precipitously.@@

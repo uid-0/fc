@@ -1,0 +1,34 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+The steamy air and hot water of the spa aren't only for slaves assigned to rest there full-time. When you head in to soak the day's stress away one evening, you see the back of <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>'s head resting against the edge of the warm pool; she's clearly come in after work. She doesn't hear you come in and stays fully relaxed. By the time you've showered<<if $Attendant isnot 0>>, fucked the compliant $Attendant.slaveName,<</if>> and gotten ready to enter the pool, she's reached such a state of blissful relaxation that she slides her body off the ledge around the side of the pool and floats faceup with her eyes closed.
+
+The sight is comical. Three things break the surface of the water: her $activeSlave.skin face, and two enormous breasts.<<if ($activeSlave.nipples gt 1)>> Each is capped by a gigantic nipple, soft with relaxation and the heat of the spa, but hugely puffy.<</if>><<if ($activeSlave.areolae gt 1)>> Her areolae spread widely around each nipple.<</if>><<if ($activeSlave.boobsImplant gt 1000)>> Her implants keep her tits shaped in exactly the same way regardless of currents in the water, betraying their fake nature.<</if>><<if ($activeSlave.boobsImplant is 0)>> Her all-natural boobs move gently with currents in the water.<</if>> In any case, she's completely lost in the warmth and comfort of the water - and the relief of having the weight taken off her chest for a brief moment.
+\
+<span id="result">
+<<click "Sit against the side of the pool with her in your lap">>
+	<<replace "#result">>
+	You<<if ($PC.dick is 0)>> don a waterproof, vibrating strap-on and<</if>> step into the pool and lift her half-out of the water in a bridal carry, your arms behind her shoulders and the backs of her knees. Her eyes open sleepily and she says <<if ($activeSlave.lips gt 2)>>through her huge lips, "Hi, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>through her piercings, "Hi, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<else>>quietly, "Hi, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."<</if>> You sit against the side of the pool, letting her <<if ($activeSlave.butt gt 5)>>huge<<elseif ($activeSlave.butt gt 2)>>healthy<<else>>trim<</if>> bottom sink down into your lap. She shimmies herself atop your <<if ($PC.dick is 0)>>phallus<<else>>dick<</if>>, gently seating it between her buttocks, and cranes her neck back to kiss the bottom of your chin. She gradually comes out of her heat stupor, riding herself back and forth more and more until the <<if ($activeSlave.anus gt 2)>>slit of her asspussy<<elseif ($activeSlave.anus gt 1)>>opening of her anus<<else>>pucker of her butt<</if>> rests against your <<if ($PC.dick is 0)>>strongly vibrating strap-on<<else>>cock<</if>>. You take her hips and firmly thrust into her rectum, eliciting a little whimper, but she begins to bounce gently in the water, sodomizing herself, her gigantic breasts moving up and down and making concentric ripples spread outward. She's still very relaxed and her first orgasm takes her by surprise, <<if ($activeSlave.vagina lt 0)>>her cum floating to the surface; she points at it and giggles before getting<<else>>making her twitch and shudder with aftershocks as she gets<</if>> her feet up on the ledge to ride you harder.  When you're done you let her float again, but curiosity about how her fucked butt feels under the water leads you to reach a hand between her legs and grope her anus. Her warm, relaxed <<if ($activeSlave.anus gt 2)>>asspussy<<elseif ($activeSlave.anus gt 1)>>backdoor<<else>>tightness<</if>> is so enticing you push her to her feet and take her a second time, standing in the shoulder-depth water. By the time you're done she's so @@color:hotpink;sexually exhausted@@ that you carry her to the shower.
+    <<display "Anal VCheck">>
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 2>>
+	<<set $analTotal += 2>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take virginity//<</if>>
+<<click "Fuck her under the water">>
+	<<replace "#result">>
+	You gather some necessary items into a pool bag and step stealthily into the water, taking her by an ankle and towing her toward the deep end. <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Hi, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>,"<<else>>"Hi, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>,"<</if>> comes a sleepy greeting from the slave as you pull her through the water, her boobs making twin bow waves. She manages a shocked squeal as you quickly secure a weight belt around her middle and drop her, letting her sink so swiftly that <<if ($activeSlave.butt gt 5)>>her massive bottom pads her against a painful thump on<<elseif ($activeSlave.butt gt 2)>>her healthy bottom pads her against a painful thump on<<else>>her bottom receives a painful thump against<</if>> the bottom of the pool. Before she can panic, she feels your mouth against her<<if ($activeSlave.lips gt 2)>> dick sucking<<elseif ($activeSlave.lips gt 0)>> lovely<</if>> lips, breathing for her. You have two long, flexible snorkels designed for exactly this, but you keep hers away from her and breathe her air into her for a short time, and she @@color:mediumaquamarine;trusts@@ you enough to rely on you. When you finally give her her snorkel she laughs, bubbles rising from around the mouthpiece, and then hugs you impulsively, intentionally giving you a huge faceful of boob. You pull her weight belt down and tighten it around her ankles so she's pinned standing on the bottom, and then <<if ($PC.dick is 0)>>spread her knees so you can scissor your pussy against her in the near-zero gravity, the tangle of limbs and breasts swaying gently as you grind.<<else>>insert yourself into the <<if ($activeSlave.anus gt 2)>>loose slit of her asspussy<<elseif ($activeSlave.anus gt 1)>>welcoming pucker of her anus<<else>>tight pucker of her butt<</if>>. She exaggerates her discomfort, wriggling against her weighted feet and squealing through her snorkel as you gently sodomize her under water. Her enormous breasts quiver in near-zero gravity with each thrust, until you notice the delicious motion and take one in each hand.<</if>>
+    <<display "Anal VCheck">>
+	<<set $activeSlave.trust += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take virginity//<</if>>
+</span>

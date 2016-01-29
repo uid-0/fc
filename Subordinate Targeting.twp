@@ -1,0 +1,30 @@
+<<set $nextButton to "Back">>\
+<<set $nextLink to "Slave Interact">>\
+<<nobr>>
+
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $activeSlave.subTarget == $slaves[$i].ID>>
+	$activeSlave.slaveName will submit to ''__@@color:pink;$slaves[$i].slaveName@@__'' this week.
+    <<set $assignment to 1>>
+<</if>>
+<</for>>
+<<if $assignment is 0>>
+	$activeSlave.slaveName has not been given to any particular slave, so she will have to offer herself to everyone this week.
+	<<set $activeSlave.subTarget to 0>>
+<</if>>
+
+<</nobr>>
+
+__Select a slave for her to submit to, sexually:__
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if ($activeSlave.ID isnot $slaves[$i].ID)>>\
+  <<if ($slaves[$i].devotion gte -4)>>\
+	<br><<print "[[$slaves[$i].slaveName|Subordinate Targeting][$activeSlave.subTarget to $slaves[" + $i + "].ID]]">>\
+	<<display "Slave Summary">>\
+  <<else>>\
+  <</if>>\
+<</if>>\
+<</for>>
+
+[[None|Subordinate Targeting][$activeSlave.subTarget to 0]]

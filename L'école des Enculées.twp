@@ -1,0 +1,59 @@
+<<set $nextButton to "Back">>\
+<<set $nextLink to "Main">>\
+<<set $returnTo to "Main">>\
+<<set $encyclopedia to "Slave Schools">>\
+\
+//L'école des Enculées is one of the oldest networks of slave schools, but because its training must be started at a young age, it is only now beginning to produce and show a return on its investors' stakes. It aims to produce graduates more feminine than the average naturally born female, in spite of their having been born male. The school is a global leader in intensive hormone treatments, which allows it to produce curvier slaves than many schools that focus on natural females. It also retains its graduates for a year after their majority and their enslavement, so as to be able to legally subject them to intensive sexual conditioning that focuses on their prostates as their main remaining locus of arousal.//
+
+L'école des Enculées offers a fresh graduate for inspection via video call.
+
+<<nobr>>
+<<display "Generate XY Slave">>
+<<set $activeSlave.origin to "You bought her from the innovative École des Enculées right after her graduation.">>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.intelligenceImplant to 0>>
+<<set $activeSlave.devotion to random(12,15)>>
+<<set $activeSlave.trust to random(11,12)>>
+<<set $activeSlave.health to random(6,8)>>
+<<set $activeSlave.muscles to 0>>
+<<set $activeSlave.butt to either(4,5)>>
+<<set $activeSlave.face to either(1,2)>>
+<<set $activeSlave.boobs to either(500,650,800)>>
+<<set $activeSlave.waist to 1>>
+<<set $activeSlave.lips to 1>>
+<<set $activeSlave.dick to either(1,1,1,2)>>
+<<set $activeSlave.balls to either(1,1,1,2)>>
+<<set $activeSlave.anus to 2>>
+<<set $activeSlave.vagina to -1>>
+<<set $activeSlave.preg to 0>>
+<<set $activeSlave.weight to random(0,1)>>
+<<set $activeSlave.vaginalSkill to 0>>
+<<set $activeSlave.oralSkill to 1>>
+<<set $activeSlave.analSkill to 3>>
+<<set $activeSlave.whoreSkill to 1>>
+<<set $activeSlave.entertainSkill to 1>>
+<<set $activeSlave.combatSkill to 0>>
+<<set $activeSlave.pubicHLength to "waxed">>
+<<set $activeSlave.age to 19>>
+<<set $activeSlave.sexualQuirk to either("none", "none", "hates women")>>
+<<set $activeSlave.behavioralQuirk to either("none", "quirky")>>
+<<set $activeSlave.fetish to "buttslut">>
+<<set $activeSlave.fetishDiscovered to 1>>
+<<set $activeSlave.hlength to "long">>
+<<set $activeSlave.customTat to "She has the buttock-shaped symbol of the École des Enculées that created her tattooed on her left cheek.">>
+<<display "Slave Cost">>
+<<if $slavesSeen gt $slaveMarketLimit>><<set $slaveCost += Math.trunc($slaveCost*(($slavesSeen-$slaveMarketLimit)*0.1))>><</if>>
+<</nobr>>\
+\
+The price is ¤<<print $slaveCost>>.<<if $slavesSeen gt $slaveMarketLimit>> You have cast such a wide net for slaves this week that it is becoming more expensive to find more for sale. Your reputation helps determine your reach within the slave market.<</if>>
+\
+<<nobr>>
+<<if $cash gte $slaveCost>>
+	[[Buy her slave contract|New Slave Intro][$cash -= $slaveCost,$nextButton to "Continue",$nextLink to "AS Dump",$returnTo to "Main"]]
+<<else>>
+	//You lack the necessary funds to buy this slave.//
+<</if>>
+<</nobr>>
+[[Request to see a different graduate of the same school|L'école des Enculées][$slavesSeen += 1]]
+
+<<set $saleDescription to 1>><<display "Long Slave Description">><<set $saleDescription to 0>>

@@ -1,0 +1,61 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $contractCost to 1500>>
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She was enslaved after you called in her business debts.">>
+<<set $activeSlave.career to "businesswoman">>
+<<set $activeSlave.devotion to random(-3,3)>>
+<<set $activeSlave.trust to random(-3,3)>>
+    <<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.vagina to 2>>
+<<set $activeSlave.preg to -2>>
+<<set $activeSlave.ovaries to 1>>
+<<set $activeSlave.dick to 0>>
+<<set $activeSlave.balls to 0>>
+<<set $activeSlave.face to 1>>
+<<set $activeSlave.vaginalSkill to 1>>
+<<set $activeSlave.anus to 0>>
+<<set $activeSlave.boobs += 400>>
+<<set $activeSlave.boobsImplant to 400>>
+<<set $activeSlave.butt += 1>>
+<<set $activeSlave.buttImplant to 1>>
+<<set $activeSlave.clothes to "nice business attire">>
+<<set $activeSlave.age to random(35,40)>>
+<<set $activeSlave.health to random(2,4)>>
+
+<<set $activeSlave.relation to "mother">>
+<<set $activeSlave.relationTarget to $activeSlave.ID + 1000>>
+
+<<display "Slave Cost">>
+<<set $slaveCost -= 1500>>
+
+<</nobr>>\
+\
+An older woman comes to see you representing her family business. She's pretty enough, but extremely unpleasant to deal with. She pushes hard for a deal that strongly favors her, and is not above leaning over your desk to give you an eyeful of probably-enhanced cleavage behind her business attire. As you argue, a discreet alert appears on your desk: her family business is actually on the verge of bankruptcy. With a press of your thumb you could acquire enough of her debts to be able to enslave her. And what's more, her daughter just came of age and became a partner in the business. She's in play, too. Based on the desk report, she's likely to be a spoiled little bitch.
+
+//Enslaving the mother will cost ¤<<print $contractCost>>. Alternatively, you could sell your rights to her. Less costs, this will bring in  ¤<<print $slaveCost>>. As a third option, for ¤<<print ($contractCost*2)>> you could enslave both mother and daughter, but you wouldn't be able to examine the daughter first.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave the mother">>
+	<<set $activeSlave.relation to 0>>
+	<<set $activeSlave.relationTarget to 0>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	You press your thumb down on your desk interface and then tell her to read the display, strip, and show you her body. She knits her brow in confusion and begins to curse at you but reads anyway. Comprehension dawns on her and she stares you in the eye for a long moment - and then drops her gaze. She knows the Free Cities well enough to understand. She stands and sadly strips off her blouse and slacks. Following orders, she rotates slowly for you. Then, she bends over facing away from you and spreads her buttocks to display her holes. Unsurprisingly, she's got a well-used pussy but has clearly never taken it up the ass. That will change.
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+<<if $cash gte ($contractCost*2)>>\
+[[Enslave both mother and daughter|RE posh mother daughter workaround][$mother to $activeSlave, $mother.devotion -= 5, $slaves.push($mother), $cash -= ($contractCost*2)]]
+<<else>>\
+	//You lack the necessary funds to enslave both of them.//
+<</if>>\
+</span>

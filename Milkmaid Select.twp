@@ -1,0 +1,37 @@
+<<set $nextButton to "Back">>\
+<<set $nextLink to "Dairy">>\
+<<set $encyclopedia to "Milkmaids">>\
+\
+<<nobr>>
+
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $Milkmaid.ID == $slaves[$i].ID>>
+	''__@@color:pink;$slaves[$i].slaveName@@__'' is serving as your Milkmaid.
+    <<set $assignment to 1>>
+    <<set $slaves[$i].assignment to "be the Milkmaid">>
+    <<set $slaves[$i].assignmentVisible to 0>>
+    <br><br>She will help look after your livestock.
+<</if>>
+<</for>>
+<<if ($assignment is 0)>>
+	You have not selected a Milkmaid.
+<</if>>
+
+<</nobr>>
+
+__Appoint a Milkmaid from your obedient slaves:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<nobr>>
+<<if ($slaves[$i].devotion gt 4)>>
+<<if $slaves[$i].assignmentVisible is 1>>
+<<if ($slaves[$i].amp isnot 1)>>
+  <br><<print "[[$slaves[$i].slaveName|Milkmaid Workaround][$Milkmaid to $slaves[" + $i + "]]]">>
+  <<display "Slave Summary">>
+<</if>>
+<</if>>
+<</if>>
+<</nobr>>\
+<</for>>\
+
+[[None|Milkmaid Workaround][$Milkmaid to 0]]

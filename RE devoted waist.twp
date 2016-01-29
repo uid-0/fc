@@ -1,0 +1,42 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is a real work of surgical art. As she showers, carefully soaping and then moisturizing every inch of her $activeSlave.skin skin, you notice the undeniable eroticism created by the unnatural narrowness of her middle. Though her hands are by no means large, when she washes her sides, her hands span almost the entire circumference of her waist. <<if $activeSlave.dick gt 0>>Though she's not sexually aroused, her cock is visible as she bathes herself; her member and her narrow waist work together to create a real melange of gender traits.<<elseif ($activeSlave.boobs gt 800) and ($activeSlave.butt gt 4)>>Her massive bust and hips work together to create a spectacular hourglass effect; she's a fantasy woman made flesh.<<else>>The narrowness of her waist accentuates her feminine features.<</if>>
+\
+<span id="result">
+<<click "Join her and see if your hands can span her waist">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	By the time you reach the shower, $activeSlave.slaveName is toweling herself. She notices your approach and folds the towel neatly before performing a little naked pirouette that shows off her artificial curviness while displaying <<if $activeSlave.vagina is -1>>her slutty asshole.<<else>>each of her delectable holes.<</if>> You take her about the waist and find that, indeed, you can make your thumbs and fingertips meet around it if you press, which elicits a squeak. This can be applied during sex many ways. First, she sits on the bathroom counter and bends herself almost double for anal. Your control over the pace is perfected by your grip around her tiny middle. Finally, she goes down on all fours for a hard buttfuck doggy style, losing herself in the intense anal as you use your hold around her to give it to her even harder. By the end she's tired but @@color:mediumaquamarine;confident in her sexual uniqueness.@@
+	<<set $activeSlave.trust += 1>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Such a lovely work of art must be displayed">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	There is a polite soiree tonight at one of the arcology's more upscale eating establishments. Many couples are there to enjoy themselves and preen, but even so, you make a stir as you enter wearing the latest in men's eveningwear. $activeSlave.slaveName is a confection on your arm, displayed in a silk gown of strips and cuts that accentuates her artificial figure while leaving her breasts, <<if $activeSlave.dick gt 0>>cock,<<else>>pussy,<</if>> and butt lusciously bare. Your appearance together with your living accessory @@color:green;increases your reputation.@@ After a refined meal and some sedate dancing, the maitre d' announces that the establishment has become (the Free Cities definition of) a salon for the evening. After the more prudish couples file out, those who remain engage in public sexual congress; $activeSlave.slaveName's gown allows you to take her in a close lotus position on the cleared table, face to face. @@color:hotpink;She has become more devoted to you.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $rep += 100>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+    <</replace>>
+<</click>>
+</span>

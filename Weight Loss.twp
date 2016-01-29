@@ -1,0 +1,31 @@
+<<nobr>>
+<<if ($slaves[$i].behavioralQuirk is "anorexic") and ($slaves[$i].devotion gte -4)>>
+	As an anorexic, @@color:hotpink;she derives perverse enjoyment from being underfed.@@
+	<<set $slaves[$i].devotion += 1>>
+<<elseif ($slaves[$i].behavioralQuirk is "anorexic")>>
+	As an anorexic, she accepts being underfed.
+<<elseif ($slaves[$i].devotion lte 4)>>
+	@@color:mediumorchid;She resents being underfed.@@
+	<<set $slaves[$i].devotion -= 1>>
+<</if>>
+<<if random(1,100) gt (50-($feeder*20))>>
+She loses weight.
+<<set $slaves[$i].weight -= 1>>
+
+<<if ($slaves[$i].boobs-$slaves[$i].boobsImplant gte 200)>>
+	@@color:orange;Her breasts get a little smaller.@@
+	<<set $slaves[$i].boobs -= 50>>
+<<elseif ($slaves[$i].butt gt 1)>>
+	@@color:orange;Her butt gets a little smaller.@@
+	<<set $slaves[$i].butt -= 1>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].diet isnot "cum")>>
+<<if ($slaves[$i].weight lt -2)>>
+	She is now quite skinny, so her diet @@color:yellow;has defaulted to maintenance of this weight.@@
+	<<set $slaves[$i].diet to "healthy">>
+<</if>>
+<</if>>
+
+<</nobr>>\

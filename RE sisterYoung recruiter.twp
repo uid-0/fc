@@ -1,0 +1,138 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<set $activeSlave to $recruiterSisterYoung>>
+<<if $seeDicks is 1>>
+  <<display "Recruiter Genderflip">>
+<</if>>
+<<set $activeSlave.origin to "She was recruited into your service by her older sister.">>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.weekAcquired to $week>>
+<<set $activeSlave.devotion to random(5,9)>>
+<<set $activeSlave.trust to random(-3,3)>>
+<<set $activeSlave.anus to 0>>
+<<if  $activeSlave.vagina gt -1>><<set $activeSlave.vagina to 0>><</if>>
+<<set $activeSlave.preg to -1>>
+<<set $activeSlave.oralSkill to 0>>
+<<set $activeSlave.vaginalSkill to 0>>
+<<set $activeSlave.analSkill to 0>>
+<<set $activeSlave.entertainSkill to 0>>
+<<set $activeSlave.whoreSkill to 0>>
+<<set $activeSlave.lactation to 0>>
+<<if $activeSlave.weight is 2>>
+  <<set $activeSlave.weight -= random(0,1)>>
+<<elseif $activeSlave.weight is -2>>
+  <<set $activeSlave.weight += random(0,1)>>
+<<else>>
+  <<set $activeSlave.weight += random(-1,1)>>
+<</if>>
+<<set $activeSlave.fetish to either("none", "none", "none", "none", "none", "none", "submissive", "likes girls", "cumslut", "humiliation", "buttslut", "boobs","pregnancy")>>
+<<set $activeSlave.sexualQuirk to either("none", "none", "none", "none", "hates oral", "hates anal", "hates penetration", "hates men", "hates women", "hates women")>>
+<<set $activeSlave.behavioralQuirk to either("none", "none", "none", "arrogant", "bitchy", "quirky", "anorexic")>>
+<<set $activeSlave.age to $recruiterSisterYoung.age-2>>
+
+<<display "Slave Cost">>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $recruiterSisterYoung.ID == $slaves[$i].ID>>
+<<set $recruiterSisterYoung to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<<display "Nationality to Name">>
+
+<<set $activeSlave.assignment to "rest">>
+<<set $activeSlave.assignmentVisible to 1>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+<<set $activeSlave.slaveName to $activeSlave.birthName>>
+<<set $activeSlave.ID to ($recruiterSisterYoung.ID + 1000)>>
+<<set $activeSlave.relation to "sister">>
+<<set $activeSlave.relationTarget to ($activeSlave.ID - 1000)>>
+
+<</nobr>>\
+\
+$recruiterSisterYoung.slaveName requests an interview with you. She's a devoted slave, and you grant it, and are happy you did when you see the troubled expression on her face. She explains<<if $recruiterSisterYoung.mute is 1>> with desperate gestures
+<</if>> that she had a sister who was sent to the slave orphanages. Today will be the sister's 18th birthday, which means she'll go up for sale.
+
+<<if $recruiterSisterYoung.mute is 1>>She urgently gestures for permission to write. It's unusual, but she seems quite serious, so you grant it. She writes, 
+<</if>>"You've been so good to me, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I'm sure she looks like I did when you bought me. Please, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, will you buy her like you bought me? I'm afraid she'll go to a cruel <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>." She bites her lip. "And, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I'm sure she'd learn to love<<nobr>>
+<<if $recruiterSisterYoung.fetish is "cumslut">>
+	the taste of your cum
+<<elseif $recruiterSisterYoung.fetish is "submissive">>
+	submission
+<<elseif $recruiterSisterYoung.fetish is "humiliation">>
+	being treated like a dirty slut
+<<elseif $recruiterSisterYoung.fetish is "buttslut">>
+	the feeling of your cock in her butt
+<<elseif $recruiterSisterYoung.fetish is "nympho">>
+	being a good nympho slut
+<<elseif $recruiterSisterYoung.fetish is "likes girls">>
+	men and women
+<<elseif $recruiterSisterOlder.fetish is "sadist">>
+	hurting your other slaves
+<<elseif $recruiterSisterOlder.fetish is "masochist">>
+	being beaten
+<<elseif $recruiterSisterOlder.fetish is "dom">>
+	fucking your other slaves
+<<elseif $recruiterSisterYoung.addict gt 2>>
+	being a druggie whore
+<<elseif $recruiterSisterYoung.anus gt 2>>
+	getting her butt stretched out
+<<elseif $recruiterSisterYoung.boobsImplant gt 20>>
+	getting turned into a bimbo slut
+<<else>>
+	the feeling of your cock in her
+<</if>>
+<</nobr>>as much as I do.<<nobr>>
+<<if $recruiterSisterYoung.fetish is "cumslut">>
+	We could blow you at the same time, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>! And share cum!
+<<elseif $recruiterSisterYoung.fetish is "submissive">>
+	You could use us together, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterSisterYoung.fetish is "humiliation">>
+	You could make us fuck each other in public, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterSisterYoung.fetish is "buttslut">>
+	You could fuck our butts right next to each other, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterSisterYoung.fetish is "nympho">>
+	I'm sure she'd love to have threesomes, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterSisterYoung.fetish is "likes girls">>
+	I'm sure she'd love to have orgies, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterSisterYoung.fetish is "sadist">>
+	I'm sure she'd love to help me, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterSisterYoung.fetish is "masochist">>
+	You could whip us both, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<elseif $recruiterSisterYoung.fetish is "dom">>
+	I'm sure she'd love to help me use other slaves, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<<else>>
+	You could fuck us together, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!
+<</if>>
+<</nobr>>And, I'd love to have my sister close by me." She blushes and waits anxiously for your decision.
+
+You look up the sister. She costs ¤$slaveCost, a bargain, but you won't be able to inspect her beyond her likely resemblance to $recruiterSisterYoung.slaveName.
+
+\
+<span id="result">
+<<if $cash gte $slaveCost>>\
+<<click "Buy her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $slaveCost>>
+	<<replace "#result">>
+    You complete the legalities and biometric scanning quickly and without fuss. $activeSlave.slaveName arrives shortly. The two slaves don't remember each other very well but they embrace. The older sister explains the situation and encourages her sibling to be a good slave to you. $activeSlave.slaveName looks a little fearful but clearly realizes that she's lucky to be here.
+	<<set $nextLink to "AS Dump">>\
+    <<for $i to 0; $i lt $slaves.length; $i++>>\
+      <<if $recruiterSisterYoung.ID is $slaves[$i].ID>>\
+        <<set $slaves[$i].recruiter to 0>>\
+        <<set $slaves[$i].relation to "sister">>\
+        <<set $slaves[$i].relationTarget to $activeSlave.ID>>\
+      <</if>>\
+    <</for>>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

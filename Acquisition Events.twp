@@ -1,0 +1,118 @@
+<<if $seeDicks isnot 2>> /*XX ACQUISITIONS*/
+
+<<if ($rep/100) gt random(1,100)>>
+	<<set $events.push("RE female debtor")>>
+<</if>>
+
+<<if ($rep/120) gt random(1,100)>>
+	<<set $events.push("RE school sale")>>
+<</if>>
+
+<<if ($rep/100) gt random(1,100)>>
+	<<set $events.push("RE desperate milf")>>
+<</if>>
+
+<<if ($rep/100) gt random(1,100)>>
+	<<set $events.push("RE desperate preg")>>
+<</if>>
+
+<<if ($rep/80) gt random(1,100) and ($HeadGirl.devotion gt 10) and ($HeadGirl.entertainSkill gt 2)>>
+	<<set $events.push("RE female recruit")>>
+<</if>>
+
+<<if ($rep/100) gt random(1,100) and ($HeadGirl.devotion gt 15)>>
+	<<set $events.push("RE whore recruit")>>
+<</if>>
+
+<<if ($AProsperityCap gt 60)>>
+  <<if ($rep/80) gt random(1,100)>>
+	  <<set $events.push("RE liberator malefactor")>>
+  <</if>>
+  <<if ($rep/80) gt random(1,100)>>
+	  <<set $events.push("RE whore malefactor")>>
+  <</if>>
+  <<if ($rep/80) gt random(1,100)>>
+	  <<set $events.push("RE businesswoman malefactor")>>
+  <</if>>
+  <<if ($rep/80) gt random(1,100)>>
+	  <<set $events.push("RE addict malefactor")>>
+  <</if>>
+  <<if ($rep/80) gt random(1,100)>>
+	  <<set $events.push("RE escapee malefactor")>>
+  <</if>>
+<</if>>
+
+<</if>>
+
+<<if $seeDicks isnot 0>> /*XY ACQUISITIONS*/
+
+<<if ($rep/100) gt random(1,100)>>
+	<<set $events.push("RE male debtor")>>
+<</if>>
+
+<<if ($rep/100) gt random(1,100)>>
+	<<set $events.push("RE tg addict")>>
+<</if>>
+
+<<if ($rep/120) gt random(1,100)>>
+	<<set $events.push("RE school trap")>>
+<</if>>
+
+<<if ($rep/120) gt random(1,100)>>
+	<<set $events.push("RE matched pair")>>
+<</if>>
+
+<<if ($rep/80) gt random(1,100) and ($HeadGirl.devotion gt 10) and ($HeadGirl.dick gt 0)>>
+	<<set $events.push("RE male recruit")>>
+<</if>>
+
+<<if ($rep/80) gt random(1,100) and ($HeadGirl.devotion gt 10)>>
+	<<set $events.push("RE mismatched pair")>>
+<</if>>
+
+<<if ($rep/80) gt random(1,100) and ($AProsperityCap gt 60)>>
+	<<set $events.push("RE rapist malefactor")>>
+<</if>>
+
+<</if>>
+
+<<if ($rep/100) gt random(1,100)>>
+	<<set $events.push("RE addict mother daughter")>>
+<</if>>
+
+<<if ($rep/100) gt random(1,100)>>
+	<<set $events.push("RE posh mother daughter")>>
+<</if>>
+
+<<if ($rep/100) gt random(1,100)>>
+	<<set $events.push("RE immigrant")>>
+<</if>>
+
+<<for $i to $slaves[$i]; $i lt $slaves.length; $i++>>
+
+<<if ($slaves[$i].devotion gt 10)>>
+<<if ($rep/80) gt random(1,100)>>
+<<if ($slaves[$i].relation is 0)>>
+<<if ($slaves[$i].amp isnot 1)>>
+<<if ($slaves[$i].recruiter is "mother")>>
+  <<set $events.push("RE mother recruiter")>>
+  <<set $recruiterMother to $slaves[$i]>>
+<<elseif ($slaves[$i].recruiter is "daughter")>>
+  <<set $events.push("RE daughter recruiter")>>
+  <<set $recruiterDaughter to $slaves[$i]>>
+<<elseif ($slaves[$i].recruiter is "older sister")>>
+  <<set $events.push("RE sisterOlder recruiter")>>
+  <<set $recruiterSisterOlder to $slaves[$i]>>
+<<elseif ($slaves[$i].recruiter is "young sister")>>
+  <<set $events.push("RE sisterYoung recruiter")>>
+  <<set $recruiterSisterYoung to $slaves[$i]>>
+<<elseif ($slaves[$i].recruiter is "twin")>>
+  <<set $events.push("RE twin recruiter")>>
+  <<set $recruiterTwin to $slaves[$i]>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<</for>>

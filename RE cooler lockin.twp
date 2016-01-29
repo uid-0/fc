@@ -1,0 +1,45 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+You're circulating out on the promenade, looking over your holdings but mostly just letting yourself be seen, when your personal assistant quietly alerts you. <<if $assistant is 0>>"Sir,"<<else>>"Baby,"<</if>> she says, "<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> can't get out of the refrigerator." <<if $assistant is 0>>The personal assistant explains the absurd statement: "She's been assigned to get some items out of the walk-in refrigerator. She accidentally let the door shut behind her, didn't notice, took too long in there, and is now too chilled to figure out the emergency release. I can unlock it remotely, or you can let her out yourself."<<else>>Chuckling, your personal assistant explains the absurd statement: "The silly girl's been assigned to get some things out of the walk-in refrigerator. She accidentally let the door shut behind her, didn't notice, took too long in there, and is now too chilled to figure out the emergency release. I can unlock it remotely, or you can head over and have some fun with her."<</if>>
+
+The walk-in cooling unit is designed for the refrigeration of food for you and guests only, since the slaves drink a nutritive fluid that doesn't require it. Only servants ever have any reason to be in there, but she was indeed instructed to fetch out some beverages necessary for an entertainment you have planned. It's cool in there, but not freezing, so she's in no immediate danger.
+\
+<span id="result">
+<<click "Just direct your personal assistant to let her out">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Your personal assistant unlatches the cooler door remotely, and admonishes $activeSlave.slaveName. The chilled slave scampers out of the cold air, rubbing her $activeSlave.skin skin to get some warmth back into it. She's too cold to do much more than nod dumbly at your personal assistant's review of how to operate the release, but she's much more careful the next time she's sent in there.
+    <</replace>>
+<</click>>
+<<click "Let her out yourself">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You're not close to the penthouse kitchen area, so it takes you some time to make your way there. By the time you get there, the poor girl is pounding weakly against the refrigerator door to try to get someone's attention. Your personal assistant was right, she must be too cold to think straight; if she weren't she might notice the prominent release button right next to where she's striking the door. Her desperate $activeSlave.skin face is visible in the window. You hit the exterior release and the door swings open quickly, dumping her into your arms. Despite not being devoted to you, she clings to you like a long lost love, her <<if ($activeSlave.height gt 1)>>big cold<<elseif  ($activeSlave.height gt -1)>>cold<<else>>cold little<</if>> body shaking convulsively. She tries to burrow even <<if ($PC.boobs gt 0)>>deeper between your breasts<<else>>closer to you<</if>>, soaking up your warmth. <<if ($activeSlave.mute is 1)>>She gestures her thanks shakily.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"T-t-thank y-you, M-master. I d-don't know what would have hap-p-pened if you hadn't come by," she lisps, teeth chattering.<<else>>"T-t-thank y-you, M-master. I d-don't know what would have hap-p-pened if you hadn't come by," she says, teeth chattering.<</if>> She clearly has no idea whatsoever that your personal assistant could have let her out at any time. You rub your hands up and down her <<if ($activeSlave.muscles gt 1)>>muscular<<elseif  ($activeSlave.muscles gt 0)>>toned<<else>>soft<</if>> back, helping her get warm. You point out the release handle and she apologizes hastily for forgetting. Once she's warm you gently tell her to get back to it, and give her a gentle shove on her <<if ($activeSlave.butt gt 5)>>massive ass<<elseif  ($activeSlave.butt gt 2)>>big butt<<else>>nice little butt<</if>>. She @@color:mediumaquamarine;smiles gratefully@@ at you before heading back to get those drinks.
+	<<set $activeSlave.trust += 1>>
+    <</replace>>
+<</click>>
+<<click "Punish her for her forgetfulness">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You're not close to the penthouse kitchen area, so it takes you some time to make your way there. By the time you<<if ($PC.dick is 0)>> don a strap-on and<</if>> get there, the poor girl is pounding weakly against the refrigerator door to try to get someone's attention. She looks relieved when you open the door, but her relief turns to ashes when you shut the door behind you. She shivers with cold and fear as you sternly point out the release, high up on the door, and then demand her hands. You bind them together and loop them over the release before hoisting her legs off the ground so that her back is against the cold metal door and all her weight is hanging off the release by her arms. She doesn't struggle until you tell her she can leave - if she can get the release open like this. She tries, but she can't get enough leverage; her spastic efforts get weaker as you pull her <<if ($activeSlave.butt gt 5)>>massive ass<<elseif  ($activeSlave.butt gt 2)>>big butt<<else>>nice little butt<</if>> away from the door and line <<if ($PC.dick is 0)>>the strap-on<<else>>your cock<</if>> up with her <<if ($activeSlave.anus gt 2)>>loose asspussy<<elseif  ($activeSlave.anus gt 1)>>asshole<<else>>tight little asshole<</if>>. Teeth chattering, legs shaking with cold, she takes a buttfuck in the cold cooler, hanging from what she should have used to let herself out. When you finish, you hit it yourself and drop her legs, letting her unhook herself and flee to the warmth outside. She @@color:gold;begs your pardon@@ abjectly as she rubs her $activeSlave.skin shoulders to warm herself up<<if ($PC.dick is 0)>><<else>>, ignoring the cum <<if ($activeSlave.anus gt 2)>>leaking out of her fucked-out anus<<elseif  ($activeSlave.anus gt 1)>>leaking out of her now-gaped backdoor<<else>>filling her still-tight anus<</if>><</if>>.
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+	<<display "Anal VCheck">>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take virginity//<</if>>
+</span>

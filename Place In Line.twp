@@ -1,0 +1,17 @@
+<<silently>>
+
+<<set $slavesInLine to []>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if ($slaves[$i].assignmentVisible is 1)>>
+    <<set $slavesInLine.push($slaves[$i])>>
+  <</if>>
+<</for>>
+
+<<for $i to 0; $i lt $slavesInLine.length; $i++>>
+  <<if ($slavesInLine[$i].ID is $activeSlave.ID)>>
+    <<set $place to $i>>
+  <</if>>
+<</for>>
+
+<</silently>>

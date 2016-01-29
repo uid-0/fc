@@ -1,0 +1,102 @@
+<<set $buttslutName to 0>>
+<<set $cumslutName to 0>>
+<<set $humiliationName to 0>>
+<<set $subName to 0>>
+<<set $bisexualName to 0>>
+<<set $pregnancyName to 0>>
+<<set $masochistName to 0>>
+<<set $boobsName to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].fetishDiscovered is 1)>>
+<<if ($slaves[$i].fetish is "buttslut")>>
+  <<if ($slaves[$i].anus gt 0)>>
+	<<if ($buttslutName is 0)>>
+		<<set $buttslutName to $slaves[$i].slaveName>>
+	<</if>>
+  <</if>>
+<<elseif ($slaves[$i].fetish is "cumslut")>>
+  <<if ($cumslutName is 0)>>
+	  <<set $cumslutName to $slaves[$i].slaveName>>
+  <</if>>
+<<elseif ($slaves[$i].fetish is "submissive")>>
+  <<if ($slaves[$i].anus gt 0)>>
+	<<if ($subName is 0)>>
+		<<set $subName to $slaves[$i].slaveName>>
+	<</if>>
+  <</if>>
+<<elseif ($slaves[$i].fetish is "humiliation")>>
+  <<if ($slaves[$i].anus gt 0)>>
+	<<if ($humiliationName is 0)>>
+		<<set $humiliationName to $slaves[$i].slaveName>>
+	<</if>>
+  <</if>>
+<<elseif ($slaves[$i].fetish is "likes girls")>>
+  <<if ($bisexualName is 0)>>
+	  <<set $bisexualName to $slaves[$i].slaveName>>
+  <</if>>
+<<elseif ($slaves[$i].fetish is "boobs")>>
+  <<if ($slaves[$i].lactation gt 0)>>
+	<<if ($boobsName is 0)>>
+		<<set $boobsName to $slaves[$i].slaveName>>
+	<</if>>
+  <</if>>
+<<elseif ($slaves[$i].fetish is "pregnancy")>>
+  <<if ($slaves[$i].preg gt 15)>>
+	<<if ($pregnancyName is 0)>>
+		<<set $pregnancyName to $slaves[$i].slaveName>>
+	<</if>>
+  <</if>>
+<<elseif ($slaves[$i].fetish is "masochist")>>
+  <<if ($slaves[$i].anus isnot 0)>>
+	<<if ($masochistName is 0)>>
+		<<set $masochistName to $slaves[$i].slaveName>>
+	<</if>>
+  <</if>>
+<</if>>
+<</if>>
+<</for>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].speechRules isnot "restrictive")>>
+<<if ($slaves[$i].fetish is "none")>>
+  <<if ($buttslutName isnot 0)>>
+	<<if ($slaves[$i].anus isnot 0)>>
+      <<set $events.push("RE buttslut interest")>>
+      <<set $buttslutInterestTargetName to $slaves[$i].ID>>
+	<</if>>  
+  <</if>>  
+  <<if ($cumslutName isnot 0)>>
+      <<set $events.push("RE cumslut interest")>>
+      <<set $cumslutInterestTargetName to $slaves[$i].ID>>
+  <</if>>  
+  <<if ($subName isnot 0)>>
+      <<set $events.push("RE submissive interest")>>
+      <<set $submissiveInterestTargetName to $slaves[$i].ID>>
+  <</if>>  
+  <<if ($humiliationName isnot 0)>>
+      <<set $events.push("RE humiliation interest")>>
+      <<set $humiliationInterestTargetName to $slaves[$i].ID>>
+  <</if>>
+  <<if ($bisexualName isnot 0)>>
+      <<set $events.push("RE bisexual interest")>>
+      <<set $bisexualInterestTargetName to $slaves[$i].ID>>
+  <</if>>
+  <<if ($boobsName isnot 0)>>
+      <<set $events.push("RE boobs interest")>>
+      <<set $boobsInterestTargetName to $slaves[$i].ID>>
+  <</if>>
+  <<if ($pregnancyName isnot 0)>>
+	<<if ($slaves[$i].anus isnot 0)>>
+      <<set $events.push("RE pregnancy interest")>>
+      <<set $pregnancyInterestTargetName to $slaves[$i].ID>>
+	<</if>>
+  <</if>>
+  <<if ($masochistName isnot 0)>>
+	<<if ($slaves[$i].anus isnot 0)>>
+      <<set $events.push("RE masochist interest")>>
+      <<set $masochistInterestTargetName to $slaves[$i].ID>>
+	<</if>>
+  <</if>>
+<</if>>
+<</if>>
+<</for>>

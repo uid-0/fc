@@ -1,0 +1,181 @@
+<<nobr>>
+
+<<set $activeSlave to {slaveName: "blank", birthName: "blank", weekAcquired: 0, origin: 0, career: 0, ID: 0, prestige: 0, prestigeDesc: 0, recruiter: 0, relation: 0, relationTarget: 0, relationship: 0, relationshipTarget: 0, rivalry: 0, rivalryTarget: 0, subTarget: 0, choosesOwnAssignment: 0, assignment: "rest", assignmentVisible: 1, sentence: 0, toyHole: "all her holes", age: 18, ageImplant: 0, health: 0, minorInjury: 0, trust: 0, oldTrust: 0, devotion: 0, oldDevotion: 0, weight: 0, muscles: 0, height: 0, heightImplant: 0, nationality: 0, race:"white", eyes: "brown", hcolor: "brown", pubicHColor: "brown", skin: 0, hlength: "short", pubicHLength: "neat", waist: 0, amp: 0, heels:0, mute: 0, boobs: 0, boobsImplant: 0, nipples: 0,  nipplesPiercing: 0, areolae: 0, boobsTat: 0, lactation: 0, milk: 0, cum: 0, butt: 0, buttImplant: 0, buttTat: 0, face: 0, faceImplant: 0, lips: 0, lipsImplant: 0, lipsPiercing: 0, lipsTat: 0, teeth:0, tonguePiercing: 0, vagina: 0, vaginaPiercing: 0, vaginaTat: 0, preg: -1, births: 0, labia: 0, clit: 0, clitPiercing: 0, clitSetting: "vanilla", anus: 0, dick: 0, dickPiercing: 0, dickTat: 0, balls: 0, ovaries: 1, anusPiercing: 0, anusTat: 0, makeup: 0, nails: 0, brand: 0, brandLocation: 0, earPiercing: 0, nosePiercing: 0, eyebrowPiercing: 0, navelPiercing: 0, cosmeticPiercings: 0, shouldersTat: 0, armsTat: 0, legsTat: 0, stampTat: 0, vaginalSkill: 0, oralSkill: 0, analSkill: 0, whoreSkill: 0, entertainSkill: 0, combatSkill: 0, livingRules: "spare", speechRules: "restrictive", releaseRules:"restrictive", relationshipRules: "restrictive", useRulesAssistant: 1, diet: "healthy", tired: 0, hormones: 0, drugs: "no drugs", addict: 0, choosesOwnClothes: 0, clothes: "no clothing", collar: "none", shoes: "none", vaginalAccessory: "none", buttplug: "none", intelligence: 0,  intelligenceImplant: 0, fetish: "none", fetishDiscovered: 0, behavioralQuirk: "none", sexualQuirk: "none", oralCount: 0, vaginalCount: 0, analCount: 0, mammaryCount: 0, penetrativeCount: 0, pitKills: 0, customTat:" ", customLabel: " ", customDesc:" "}>>
+
+<<set $activeSlave.weekAcquired to $week>>
+
+<<set $activeSlave.ID to $IDNumber>>
+<<set $IDNumber += 1>>
+
+<<set $activeSlave.age to random(18,44)>>
+
+<<set $activeSlave.intelligence to either(-2, -1, -1, 0, 0, 0, 1, 1, 2)>>
+<<if random(1,100) lt 50+(20*$activeSlave.intelligence)>>
+  <<set $activeSlave.intelligenceImplant to 1>>
+<</if>>
+<<if ($activeSlave.age lte 22)>>
+  <<set $activeSlave.career to $youngCareers.random()>>
+<<elseif ($activeSlave.intelligenceImplant is 1)>>
+  <<set $activeSlave.career to $educatedCareers.random()>>
+<<else>>
+  <<set $activeSlave.career to $uneducatedCareers.random()>>
+<</if>>
+
+<<set $activeSlave.vaginalSkill to either(0, 0, 1)>>
+<<set $activeSlave.analSkill to either(0, 0, 1)>>
+<<set $activeSlave.oralSkill to either(0, 0, 1)>>
+<<set $activeSlave.entertainSkill to either(0, 0, 1)>>
+<<set $activeSlave.whoreSkill to either(0, 0, 1)>>
+
+<<set $activeSlave.fetish to either("none", "none", "none", "none", "none", "none", "submissive", "likes girls", "cumslut", "humiliation", "buttslut", "boobs", "pregnancy", "dom", "sadist", "masochist")>>
+
+<<set $activeSlave.sexualQuirk to either("none", "none", "none", "none", "hates oral", "hates anal", "hates penetration", "hates men", "hates women", "hates women")>>
+<<set $activeSlave.behavioralQuirk to either("none", "none", "none", "arrogant", "bitchy", "quirky", "anorexic")>>
+
+<<set $activeSlave.health to random(-5,5)>>
+
+<<set $activeSlave.devotion to random(-18,-12)>>
+<<set $activeSlave.trust to random(-9,-5)>>
+
+<<set $activeSlave.height to either(-2, -1, -1, 0, 0, 0, 1, 1, 2)>>
+
+<<set $activeSlave.weight to either(-3, -2, -2, -1, -1, 0, 0, 0, 1, 1, 2, 2, 3)>>
+<<if ($activeSlave.weight lt 0)>>
+	<<set $activeSlave.waist to either(0,0,1)>>
+<</if>>
+
+<<if $startingGirlsNationality is 0>>
+  <<set $activeSlave.nationality to $nationalities.random()>>
+<<else>>
+  <<set $activeSlave.nationality to $startingGirlsNationality>>
+<</if>>
+<<display "New Slave Race Nationality and Name">>
+
+<<if $activeSlave.race is "black">>
+	<<set $activeSlave.butt to either(1, 2, 2, 3, 3, 4, 4)>>
+	<<set $activeSlave.boobs to either(200, 300, 400, 400, 500, 500, 650, 800)>>
+	<<set $activeSlave.lips to either(0, 1, 2)>>
+	<<set $activeSlave.skin to either("black", "brown", "light brown")>>
+	<<set $activeSlave.hcolor to either("black", "black", "black", "brown")>>
+    <<set $activeSlave.hlength to either("shoulder-length", "short", "very short", "shaved bald", "crinkled")>>
+<<elseif $activeSlave.race is "white">>
+	<<set $activeSlave.butt to either(1, 2, 2, 3, 3, 4)>>
+	<<set $activeSlave.boobs to either(200, 300, 400, 400, 500, 500, 650, 800)>>
+	<<set $activeSlave.lips to either(0, 0, 1)>>
+	<<if $activeSlave.nationality is "German">>
+      <<set $activeSlave.skin to either("pale", "tanned", "fair")>>
+      <<set $activeSlave.eyes to either("blue", "blue", "blue", "brown", "green")>>  
+      <<set $activeSlave.hcolor to either("black", "blonde", "blonde", "blonde", "red", "brown")>>
+    <<elseif $activeSlave.nationality is "Icelandic">>
+      <<set $activeSlave.skin to either("pale", "pale", "tanned", "fair")>>
+      <<set $activeSlave.eyes to either("blue", "blue", "blue", "brown", "green")>>  
+      <<set $activeSlave.hcolor to either("black", "blonde", "blonde", "blonde", "red", "brown")>>
+    <<elseif $activeSlave.nationality is "Irish">>
+      <<set $activeSlave.skin to either("pale", "pale", "tanned", "fair")>>
+      <<set $activeSlave.eyes to either("blue", "brown", "green", "green", "green")>>  
+      <<set $activeSlave.hcolor to either("black", "blonde", "red", "red", "red", "brown")>>
+    <<else>>
+      <<set $activeSlave.skin to either("pale", "tanned", "fair")>>
+      <<set $activeSlave.eyes to either("blue", "brown", "green")>>  
+      <<set $activeSlave.hcolor to either("black", "blonde", "red", "brown")>>
+    <</if>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<<elseif $activeSlave.race is "latina">>
+	<<set $activeSlave.butt to either(1, 2, 2, 3, 3, 4)>>
+	<<set $activeSlave.boobs to either(200, 300, 400, 400, 500, 500, 650, 800)>>
+	<<set $activeSlave.lips to either(0, 0, 1)>>
+	<<set $activeSlave.skin to either("olive", "brown", "light brown")>>
+	<<set $activeSlave.hcolor to either("black", "black", "brown", "brown")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<<elseif ($activeSlave.race is "indo-aryan") or ($activeSlave.race is "malay") or ($activeSlave.race is "pacific islander") or ($activeSlave.race is "amerindian")>>
+	<<set $activeSlave.butt to either(1, 2, 2, 3, 3)>>
+	<<set $activeSlave.boobs to either(200, 300, 400, 400, 500, 650)>>
+	<<set $activeSlave.lips to either(0, 0, 1)>>
+	<<set $activeSlave.skin to either("dark", "light")>>
+	<<set $activeSlave.hcolor to either("black")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<<elseif $activeSlave.race is "asian">>
+	<<set $activeSlave.butt to either(1, 2, 2, 3, 3)>>
+	<<set $activeSlave.boobs to either(200, 300, 400, 400, 500, 650)>>
+	<<set $activeSlave.lips to either(0, 0, 1)>>
+	<<set $activeSlave.skin to either("pale", "dark", "light")>>
+	<<set $activeSlave.hcolor to either("black")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<<elseif ($activeSlave.race is "middle eastern") or ($activeSlave.race is "semitic") or ($activeSlave.race is "southern European")>>
+	<<set $activeSlave.butt to either(1, 2, 2, 3, 3)>>
+	<<set $activeSlave.boobs to either(200, 300, 400, 400, 500, 650)>>
+	<<set $activeSlave.lips to either(0, 0, 1)>>
+	<<set $activeSlave.skin to either("pale", "dark", "light")>>
+	<<set $activeSlave.hcolor to either("black")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<<else>>
+	<<set $activeSlave.butt to either(1, 2, 2, 3, 3, 4)>>
+	<<set $activeSlave.boobs to either(200, 300, 400, 400, 500, 500, 650, 800)>>
+	<<set $activeSlave.lips to either(0, 0, 1)>>
+	<<set $activeSlave.skin to either("pale", "dark", "light")>>
+	<<set $activeSlave.hcolor to either("black", "black", "black", "black", "brown", "brown", "blonde", "red")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<</if>>
+
+<<set $activeSlave.pubicHColor to $activeSlave.hcolor>>
+<<set $activeSlave.pubicHLength to either("waxed","in a strip","neat","bushy")>>
+
+<<set $activeSlave.earPiercing to either(0,1)>>
+<<set $activeSlave.nosePiercing to either(0,0,0,1)>>
+<<set $activeSlave.eyebrowPiercing to either(0,0,0,0,0,1)>>
+<<set $activeSlave.clitPiercing to either(0,0,0,0,0,1)>>
+<<set $activeSlave.lipsPiercing to either(0,0,0,0,0,1)>>
+<<set $activeSlave.navelPiercing to either(0,0,0,1)>>
+<<set $activeSlave.nipplesPiercing to either(0,0,0,1)>>
+
+<<if $activeSlave.age gt 35>>
+	<<set $activeSlave.face to either(-1, -1, -1, 0, 0, 1)>>
+<<elseif $activeSlave.age gt 25>>
+	<<set $activeSlave.face to either(-1, 0, 0, 1)>>
+<<else>>
+	<<set $activeSlave.face to either(-1, 0, 0, 1, 1)>>
+<</if>>
+
+<<if $useFSNames is 0>>
+  <<set $activeSlave.slaveName to $activeSlave.birthName>>
+<<elseif $FSRomanRevivalist gt 20>>
+  <<set $activeSlave.slaveName to $romanSlaveNames.random()>>
+<<elseif $FSAncientEgyptianRevivalist gt 20>>
+  <<set $activeSlave.slaveName to $ancientEgyptianSlaveNames.random()>>
+<<elseif $FSDegradationist gt 0>>
+  <<display "Degrading Name">>
+<<else>>
+  <<set $activeSlave.slaveName to $activeSlave.birthName>>
+<</if>>
+
+<<if $activeSlave.weight lt 0 and $activeSlave.butt gt 1>>
+	<<set $activeSlave.butt -= 1>>
+<<elseif $activeSlave.weight gt 0 and $activeSlave.butt lt 4>>
+	<<set $activeSlave.butt += 1>>
+<</if>>
+
+<<if $activeSlave.weight lt 0 and $activeSlave.boobs gt 200>>
+	<<set $activeSlave.boobs -= 100>>
+<</if>>
+
+<<set $activeSlave.vagina to either(0, 1)>>
+<<if $activeSlave.age lt 20>>
+	<<set $activeSlave.vagina to either(0, 0, 1, 1, 1)>>
+<</if>>
+<<if $activeSlave.age gt 30>>
+	<<set $activeSlave.vagina to either(1, 1, 1, 1, 2)>>
+<</if>>
+<<if $activeSlave.vagina is 0>>
+	<<set $activeSlave.vaginalSkill to 0>>
+<</if>>
+
+<<set $activeSlave.clit to either(0, 0, 0, 0, 0, 0, 1, 1, 2)>>
+<<set $activeSlave.labia to either(0, 0, 0, 1, 1, 1, 1, 2, 2, 3)>>
+
+<<set $activeSlave.anus to either(0, 1)>>
+
+<<if $activeSlave.anus is 0>>
+	<<set $activeSlave.analSkill to 0>>
+<</if>>
+
+<</nobr>>\

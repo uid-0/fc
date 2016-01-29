@@ -1,0 +1,595 @@
+<<nobr>>
+
+<<if ($showClothing is 1) and ($saleDescription is 0)>>
+
+<<if ($activeSlave.clothes is "a very tight corset")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's corset leaves her hermaphroditic genitalia totally bare and available.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's corset leaves her dick totally bare and vulnerable.
+  <<else>>
+	$activeSlave.slaveName's corset leaves her pussy totally bare and available.
+  <</if>>
+<<elseif ($activeSlave.clothes is "conservative clothing")>>
+  <<if ($activeSlave.dick gt 3)>>
+	There is a distinct bulge at the crotch of $activeSlave.slaveName's pants.
+  <<elseif ($activeSlave.dick gt 1)>>
+	There is a modest bulge at the crotch of $activeSlave.slaveName's pants.
+  <<elseif ($activeSlave.vagina gt -1)>>
+	There is a modest bulge at the crotch of $activeSlave.slaveName's pants.
+  <</if>>
+<<elseif ($activeSlave.clothes is "chains")>>
+  <<if ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName has chain dangling from around her waist to end next to her cock, so that when she moves, it occasionally strikes her in the penis.
+  <<else>>
+	$activeSlave.slaveName's pussy has a chain running tightly between her pussylips.
+  <</if>>
+<<elseif ($activeSlave.clothes is "Western clothing")>>
+  <<if ($activeSlave.dick gt 2)>>
+	$activeSlave.slaveName's chaps have no crotch, so her dick dangles bare.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's chaps have no crotch, so her little dick is bare.
+  <<else>>
+	$activeSlave.slaveName's chaps have no crotch, so her pussy is bare.
+  <</if>>
+<<elseif ($activeSlave.clothes is "body oil")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	Every surface of $activeSlave.slaveName's hermaphroditic genitalia have been carefully oiled.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's dick has been lovingly oiled.
+  <<else>>
+	$activeSlave.slaveName's pussy has been lovingly oiled.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a toga")>>
+<<elseif ($activeSlave.clothes is "a slutty quipao")>>
+  <<if ($activeSlave.dick gt 3)>>
+	$activeSlave.slaveName's dick is long enough that its head dangles down below the front of her short quipao.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's quipao occasionally tents in front when she moves.
+  <<else>>
+	$activeSlave.slaveName's quipao barely comes down far enough to cover her pussy.
+  <</if>>
+<<elseif ($activeSlave.clothes is "uncomfortable straps")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's strap between her legs has a steel ring around the base of her dick, letting it pass through, and a ring over her pussy.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's strap between her legs has a steel ring around the base of her dick, letting it pass through.
+  <<else>>
+	$activeSlave.slaveName's strap between her legs has a steel ring over her pussy.
+  <</if>>
+<<elseif ($activeSlave.clothes is "restrictive latex")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's hermaphroditic genitalia are visible through a special hole in the latex.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's latex has a hole to leave her dick bare and vulnerable.
+  <<else>>
+	$activeSlave.slaveName's latex has a hole to leave her pussy bare and vulnerable.
+  <</if>>
+<<elseif ($activeSlave.clothes is "attractive lingerie")>>
+  <<if ($activeSlave.dick gt 3) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's lace g-string cannot cover hermaphroditic genitalia due to the size of her cock. She's simply pulled it to one side, leaving her pussy bare as well.
+  <<elseif ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's lace g-string demurely covers her hermaphroditic genitalia as long as she doesn't move too much, but her dick has a way of slipping out and uncovering her pussy.
+  <<elseif ($activeSlave.dick gt 3)>>
+	$activeSlave.slaveName's lace g-string cannot cover her cock. She's simply pulled it to one side.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's lace g-string demurely covers her dick as long as she doesn't move too much, but it has a way of slipping out.
+  <<else>>
+	$activeSlave.slaveName's lace g-string demurely covers her pussy.
+  <</if>>
+<<elseif ($activeSlave.clothes is "string lingerie")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's just given up and pushed her bikini bottom to one side, since the bikini bottom that fits a hermaphrodite has not yet been designed.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's string bikini bottom is more of a banana hammock, in front.
+  <<else>>
+	$activeSlave.slaveName's string bikini passes tightly over her pussy, hinting lewdly at penetration.
+  <</if>>
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's jean cutoffs are pretty brief, but decently cover her cock and pussy.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's jean cutoffs are pretty brief, but decently cover her cock.
+  <<else>>
+	$activeSlave.slaveName's jean cutoffs are pretty brief, but still cover her pussy decently in front.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a slave gown")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's hermaphroditic genitalia are hidden by her lovely gown.
+  <<elseif ($activeSlave.dick gt 3)>>
+	$activeSlave.slaveName's cock tents the front of her lovely gown.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's cock is hidden by her lovely gown.
+  <<else>>
+	$activeSlave.slaveName's pussy is concealed by her lovely gown.
+  <</if>>
+<<elseif ($activeSlave.clothes is "slutty business attire")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's hermaphroditic genitalia are barely hidden by her skirt.
+  <<elseif ($activeSlave.dick gt 3)>>
+	$activeSlave.slaveName's dickhead dangles down beneath the hem of her short skirt.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's cock is barely hidden by her skirt.
+  <<else>>
+	$activeSlave.slaveName's pussy is barely concealed by her skirt.
+  <</if>>
+<<elseif ($activeSlave.clothes is "nice business attire") and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's conservative skirt gives no hint of the pussy behind it.
+<<elseif ($activeSlave.clothes is "nice business attire")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's hermaphroditic genitalia are decently hidden by her skirt.
+  <<elseif ($activeSlave.dick gt 3)>>
+	$activeSlave.slaveName's conservative skirt bulges forward in front.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's conservative skirt gives no hint of the cock behind it.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a comfortable bodysuit")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's hermaphroditic genitalia are a bit crowded by her tight bodysuit.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's cock is quite visible under the tight material of her bodysuit.
+  <<else>>
+	$activeSlave.slaveName's bodysuit forms a perfect cameltoe against her pussy.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's hermaphroditic genitalia are poorly concealed by her short apron.
+  <<elseif ($activeSlave.dick gt 3)>>
+	$activeSlave.slaveName's cockhead dangles down beneath the hem of her short apron.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's cock is barely concealed by her short apron.
+  <<else>>
+	$activeSlave.slaveName's pussy is barely covered by her short apron.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a nice maid outfit")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's hermaphroditic genitalia are protected by her functional apron.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's dick is protected by her functional apron.
+  <<else>>
+	$activeSlave.slaveName's pussy is protected by her functional apron.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a nurse outfit")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's skirt is tight enough to reveal the outline of the hermaphroditic genitalia behind it.
+  <<elseif ($activeSlave.dick gt 3)>>
+	$activeSlave.slaveName's skirt is tight enough to reveal the massive outline of her dick behind it.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's skirt is tight enough to reveal the outline of her dick behind it.
+  <<elseif ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's skirt is barely long enough to cover her pussy.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+  <<if ($activeSlave.dick gt 3)>>
+	$activeSlave.slaveName's dickhead is visible, swinging below the hem of her skirt.
+  <<elseif ($activeSlave.dick gt 0)>>
+	Something is pushing against the front of $activeSlave.slaveName's plaid skirt.
+  <<else>>
+	$activeSlave.slaveName's plaid skirt lifts to show off her pussy with the slightest provocation.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a kimono")>>
+  <<if ($activeSlave.dick gt 2)>>
+	Despite the quality tailoring of $activeSlave.slaveName's kimono, it is clear that she has something between her legs.
+  <<elseif ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's kimono demurely conceals her pussy.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a hijab")>>
+  <<if ($activeSlave.dick gt 2)>>
+	When she moves, something occasionally tents the front of her hijab.
+  <<elseif ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's hijab properly conceals her pussy.
+  <</if>>
+<<elseif ($activeSlave.clothes is "battledress")>>
+  <<if ($activeSlave.dick gt 2)>>
+	$activeSlave.slaveName's fatigue pants bulge in front.
+  <<elseif ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's fatigue pants protect her pussy.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a fallen nun's habit")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	The ludicrously short skirt of $activeSlave.slaveName's habit parts below her navel, leaving her hermaphroditic genitalia bare.
+  <<elseif ($activeSlave.dick gt 0)>>
+	The ludicrously short skirt of $activeSlave.slaveName's habit parts below her navel, leaving her cock bare.
+  <<else>>
+	The ludicrously short skirt of $activeSlave.slaveName's habit parts below her navel, leaving her pussy bare.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a penitent nun's habit")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's sackcloth undergarments chafe and torture her poor hermaphrodite's genitalia, keeping her aware that she is an abomination.
+  <<elseif ($activeSlave.dick gt 0)>>
+	She's wearing a painful metal cilice around the base of her cock, making her shift constantly in search of comfort that will not come.
+  <<else>>
+	$activeSlave.slaveName's sackcloth undergarments chafe and torture her poor womanhood.
+  <</if>>
+<<elseif ($activeSlave.clothes is "harem gauze")>>
+  <<if ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	$activeSlave.slaveName's hermaphroditic genitalia are obscured by a covering of sheer gauze. Her pussy is barely discernible.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's cock is obscured by a covering of sheer gauze.
+  <<else>>
+	$activeSlave.slaveName's pussy is obscured by a covering of sheer gauze.
+  <</if>>
+<<elseif ($activeSlave.dick gt 0) and ($activeSlave.vagina isnot -1)>>
+	$activeSlave.slaveName's hermaphroditic genitalia are bare and available.
+<<elseif ($activeSlave.hormones lt 1) and ($activeSlave.balls isnot 0)>>
+  <<if ($activeSlave.dick gt 5)>>
+	$activeSlave.slaveName's gigantic cock hangs naked.
+  <<elseif ($activeSlave.dick gt 4)>>
+	$activeSlave.slaveName's huge cock swings naked.
+  <<elseif ($activeSlave.dick gt 3)>>
+	$activeSlave.slaveName's big cock dangles naked.
+  <<elseif ($activeSlave.dick gt 2)>>
+	$activeSlave.slaveName's cock dangles bare.
+  <<elseif ($activeSlave.dick gt 1)>>
+	$activeSlave.slaveName's little dick is bare.
+  <<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's tiny dick is bare.
+  <</if>>
+<<elseif ($activeSlave.dick gt 5)>>
+	$activeSlave.slaveName's gigantic, flaccid cock hangs naked.
+<<elseif ($activeSlave.dick gt 4)>>
+	$activeSlave.slaveName's huge flaccid cock dangles naked.
+<<elseif ($activeSlave.dick gt 3)>>
+	$activeSlave.slaveName's big flaccid cock dangles naked.
+<<elseif ($activeSlave.dick gt 2)>>
+	$activeSlave.slaveName's flaccid cock dangles bare.
+<<elseif ($activeSlave.dick gt 1)>>
+	$activeSlave.slaveName's flaccid little dick dangles bare.
+<<elseif ($activeSlave.dick gt 0)>>
+	$activeSlave.slaveName's flaccid, tiny dick is bare.
+<<else>>
+	$activeSlave.slaveName's pussy is bare.
+<</if>>
+
+<<if  $activeSlave.dick gt 0>>
+<<if  $activeSlave.vagina gt -1>>
+  Her artificial vagina is located beneath her dick.
+<</if>>
+<</if>>
+
+<<if  $activeSlave.vagina lt 0>>
+<<elseif  $activeSlave.vagina is 0>>
+	She is a @@color:lime;virgin.@@ Her pussy is fresh,
+<<elseif  $activeSlave.vagina lte 1>>
+	It's tight and appealing,
+<<elseif  $activeSlave.vagina lte 2>>
+	It's reasonably tight,
+<<elseif  $activeSlave.vagina gt 2>>
+	It's loose,
+<</if>>
+
+<<else>>
+
+<<if  $activeSlave.vagina is 0>>
+	She is a @@color:lime;virgin.@@ Her pussy is fresh,
+<<elseif  $activeSlave.vagina is 1>>
+	Her pussy is tight and appealing,
+<<elseif  $activeSlave.vagina is 2>>
+	Her pussy is reasonably tight,
+<<elseif  $activeSlave.vagina is 3>>
+	Her pussy is loose,
+<</if>>
+
+<</if>>
+
+<<if ($activeSlave.vagina gt -1)>>
+<<if $activeSlave.labia is 0>>
+	with minimal
+<<elseif $activeSlave.labia is 1>>
+	with big puffy
+<<elseif $activeSlave.labia is 2>>
+	with huge
+<<else>>
+	with huge dangling
+<</if>>
+<</if>>
+
+<<if ($seeRace is 1) and ($activeSlave.vagina gt -1)>>
+<<if $activeSlave.race is "white">>
+	pink pussylips.
+<<elseif $activeSlave.race is "asian">>
+	dark $activeSlave.race pussylips.
+<<elseif $activeSlave.race is "middle eastern">>
+	dark $activeSlave.race pussylips.
+<<elseif $activeSlave.race is "latina">>
+	dark $activeSlave.race pussylips.
+<<elseif $activeSlave.race is "black">>
+	dark $activeSlave.race pussylips.
+<<else>>
+	$activeSlave.skin pussylips.
+<</if>>
+<<elseif ($activeSlave.vagina gt -1)>>
+	$activeSlave.skin pussylips.
+<</if>>
+
+<<if ($activeSlave.vagina gt -1) and ($activeSlave.drugs is "extreme aphrodisiacs")>>
+	The aphrodisiacs have them sopping wet.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.drugs is "aphrodisiacs")>>
+	The aphrodisiacs have them wet.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.fetish is "nympho") and ($activeSlave.fetishDiscovered is 1)>>
+	As a nympho, she's almost constantly wet.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.fetish is "buttslut") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how wet she is, she's probably fantasizing about being buttfucked.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.fetish is "cumslut") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how wet she is, she's probably fantasizing about being facefucked.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.fetish is "humiliation") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how wet she is, she's probably fantasizing about being humiliated.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.fetish is "submissive") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how wet she is, she's probably fantasizing about submission.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.fetish is "dom") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how wet she is, she's probably fantasizing about dominating someone.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.fetish is "sadist") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how wet she is, she's probably fantasizing about hurting someone.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.fetish is "masochist") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how wet she is, she's probably fantasizing about pain.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.fetish is "pregnancy") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how wet she is, she's probably fantasizing about getting pregnant.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.fetish is "boobs") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how wet she is, she's probably fantasizing about boobs.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.devotion gt 10)>>
+	As a devoted sex slave, she has no trouble keeping herself wet for her <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+<<elseif ($activeSlave.vagina gt -1) and ($activeSlave.devotion gt 4)>>
+	As an obedient sex slave, she does her best to keep herself wet for her <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+<</if>>
+
+<<if  $activeSlave.vagina gt -1>>
+<<if ($activeSlave.vaginalAccessory is "chastity belt") and ($activeSlave.clothes is "no clothing")>>
+	Her pussy is protected by a chastity belt.
+<<elseif ($activeSlave.vaginalAccessory is "chastity belt")>>
+	Her pussy is protected by a chastity belt worn under her clothing.
+<<elseif ($activeSlave.vaginalAccessory is "dildo")>>
+	Her pussy is filled by a dildo held in place by a strap, which she can remove for vaginal intercourse.
+<<elseif ($activeSlave.vaginalAccessory is "huge dildo") and ($activeSlave.vagina lt 2)>>
+	Her pussy is painfully stretched by a huge dildo held in place by a strap, which she can remove for vaginal intercourse.
+<<elseif ($activeSlave.vaginalAccessory is "huge dildo") and ($activeSlave.vagina lt 3)>>
+	Her pussy is uncomfortably filled by a huge dildo held in place by a strap, which she can remove for vaginal intercourse.
+<<elseif ($activeSlave.vaginalAccessory is "huge dildo")>>
+	Her pussy is comfortably filled by a huge dildo held in place by a strap, which she can remove for vaginal intercourse.
+<</if>>
+<</if>>
+
+<<if ($activeSlave.pubicHLength is "waxed")>>
+	She's waxed and smooth.
+<<elseif ($activeSlave.pubicHLength is "in a strip")>>
+	Her $activeSlave.pubicHColor pubic hair is waxed into a narrow strip above her <<if ($activeSlave.dick gt 0)>>cock<<else>>pussy<</if>>.
+<<elseif ($activeSlave.pubicHLength is "neat")>>
+	Her $activeSlave.pubicHColor pubic hair is waxed into a neat patch above her <<if ($activeSlave.dick gt 0)>>cock<<else>>pussy<</if>>.
+<<elseif ($activeSlave.pubicHLength is "bushy")>>
+	Her $activeSlave.pubicHColor pubic hair forms a natural bush above her <<if ($activeSlave.dick gt 0)>>cock<<else>>pussy<</if>>.
+<</if>>
+
+<<if $activeSlave.vaginalSkill is 3>>She is a @@color:aquamarine;vanilla sex master@@.
+<<elseif $activeSlave.vaginalSkill is 2>>She is a @@color:aquamarine;vanilla sex expert@@.
+<<elseif $activeSlave.vaginalSkill is 1>>She is @@color:aquamarine;skilled at vanilla sex@@. 
+<<elseif $activeSlave.vagina is -1>>Since she lacks a vagina she takes it up <<if $seeRace is 1>>her $activeSlave.race<<else>>the<</if>> ass instead.
+<<else>>She is unskilled at vaginal sex.
+<</if>>
+
+<<if ($activeSlave.dick gt 5)>>
+	 She has a gigantic penis, an obvious product of extreme hormonal treatment.
+<<elseif ($activeSlave.dick gt 4)>>
+	 She has a huge penis, so large as to be sexually inconvenient.
+<<elseif ($activeSlave.dick gt 3)>>
+	 She has a large penis, big enough to be a source of pride on a male.
+<<elseif ($activeSlave.dick gt 2)>>
+	 She has an average-sized penis.
+<<elseif ($activeSlave.dick gt 1)>>
+	 She has a small penis, little enough to be a source of embarrassment on a male.
+<<elseif ($activeSlave.dick gt 0)>>
+	 She has a tiny penis, so small it's not easy to tell whether it's erect.
+<</if>>
+
+<<if ($activeSlave.dick gt 1) and ($activeSlave.balls is 0)>>
+	Since she has been gelded, it's soft.
+	<<if ($activeSlave.devotion gt 15)>>
+	  Despite this, she's so devoted to you that being near you has her horny. Her soft cock is dripping a stream of thin precum.
+	<</if>>
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.hormones gt 0)>>
+	Since she's on an intense regimen of female hormones, it's soft.
+	<<if ($activeSlave.devotion gt 15)>>
+	  Despite this, she's so devoted to you that being near you has her horny. Her soft cock is dripping a stream of precum.
+	<</if>>
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.drugs is "extreme aphrodisiacs")>>
+	The aphrodisiacs have her painfully hard.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.drugs is "aphrodisiacs")>>
+	The aphrodisiacs have her hard.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.fetish is "nympho") and ($activeSlave.fetishDiscovered is 1)>>
+	As a nympho, she's almost constantly hard.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.fetish is "buttslut") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how hard she is, she's probably fantasizing about being buttfucked.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.fetish is "cumslut") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how hard she is, she's probably fantasizing about being facefucked.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.fetish is "humiliation") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how hard she is, she's probably fantasizing about being humiliated.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.fetish is "submissive") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how hard she is, she's probably fantasizing about submission.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.fetish is "dom") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how hard she is, she's probably fantasizing about dominating someone.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.fetish is "masochist") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how hard she is, she's probably fantasizing about pain.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.fetish is "sadist") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how hard she is, she's probably fantasizing about hurting someone.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.fetish is "pregnancy") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how hard she is, she's probably fantasizing about getting someone pregnant.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.fetish is "boobs") and ($activeSlave.fetishDiscovered is 1)>>
+	Judging by how hard she is, she's probably fantasizing about boobs.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.devotion gt 10)>>
+	As a devoted sex slave, she has no trouble keeping herself hard for her <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+<<elseif ($activeSlave.dick gt 1) and ($activeSlave.devotion gt 4)>>
+	As an obedient sex slave, she does her best to keep herself hard for her <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+<<elseif ($activeSlave.dick gt 1)>>
+	Judging by the softness of her dick, she doesn't find her situation arousing.
+<</if>>
+
+<<if  ($activeSlave.dick is 1) and ($activeSlave.balls is 0)>>
+	Adding injury to insult, she's been gelded.
+<<elseif  ($activeSlave.balls gt 4)>>
+	She has a gigantic pair of testicles in a dangling scrotum.
+<<elseif  ($activeSlave.balls gt 3)>>
+	She has a big pair of testicles in a well-filled scrotum.
+<<elseif  ($activeSlave.balls gt 2)>>
+	She has an average pair of testicles in a tight scrotum.
+<<elseif  ($activeSlave.balls gt 1)>>
+	She has a small pair of testicles in a minimal scrotum.
+<<elseif  ($activeSlave.balls gt 0)>>
+	Her testicles are so small they have retreated up into her abdomen, leaving only a trace of scrotum.
+<</if>>
+
+<<if  ($activeSlave.clit is 1) and ($activeSlave.devotion gt 10)>>
+	Her clit is quite large and visibly hard.
+<<elseif  ($activeSlave.clit is 1)>>
+	Her clit is quite large.
+<<elseif  ($activeSlave.clit gt 2) and ($activeSlave.devotion gt 10)>>
+	Her clit is enormous, and since it's erect with arousal, it juts out proudly.
+<<elseif  ($activeSlave.clit gt 2)>>
+	Her clit is enormous, almost a pseudophallus.
+<<elseif  ($activeSlave.clit gt 1) and ($activeSlave.devotion gt 10)>>
+	Her clit is huge and visibly erect.
+<<elseif  ($activeSlave.clit gt 1)>>
+	Her clit is huge.
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if ($activeSlave.vagina isnot -1)>>
+<<if ($activeSlave.vaginaPiercing is 1)>>
+	She has a simple row of studs down her labia.
+<<elseif ($activeSlave.vaginaPiercing is 2)>>
+	She has a row of big rings down her labia.
+<</if>>
+<</if>>
+
+<<if ($activeSlave.clitPiercing is 1) and ($activeSlave.vagina isnot -1)>>
+	She has a simple clitoral stud.
+<<elseif ($activeSlave.clitPiercing is 2) and ($activeSlave.vagina isnot -1)>>
+	She has a big ring in her clit.
+    <<if ($activeSlave.clothes is "slutty jewelry")>>
+    	Since she's wearing slutty bangles she has a a short length of light chain dangling from her clit ring; it constantly stimulates her pussylips.
+	<</if>>
+<<elseif ($activeSlave.clitPiercing gt 2) and ($activeSlave.vagina isnot -1)>>
+	She has a smart piercing in her clit.
+<<elseif ($activeSlave.clitPiercing is 1)>>
+	She has a simple dickhead stud.
+<<elseif ($activeSlave.clitPiercing is 2)>>
+	She has a big ring in her dickhead.
+    <<if ($activeSlave.clothes is "slutty jewelry")>>
+    	Since she's wearing slutty bangles she has a a short length of light chain dangling from her dickhead piercing; as she moves it tugs lightly at her cock.
+	<</if>>
+<<elseif ($activeSlave.clitPiercing gt 2)>>
+	She has a smart frenulum piercing.
+<</if>>
+
+<</if>>
+
+<<if ($activeSlave.drugs is "extreme aphrodisiacs") and ($activeSlave.vagina isnot -1)>>
+	The extreme dose of aphrodisiacs has her pussy dripping.
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.vagina isnot -1)>>
+	The aphrodisiacs have her pussy soaking wet.
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if ($activeSlave.vaginaTat is "tribal patterns") and ($activeSlave.dick isnot 0)>>
+	Her abdomen is tattooed with tribal patterns that draw the eye down toward her genitals.
+<<elseif ($activeSlave.vaginaTat is "floral designs") and ($activeSlave.dick isnot 0)>>
+	Her abdomen bears a tasteful tattoo of a lily with a large stamen.
+<<elseif ($activeSlave.vaginaTat is "slutty advertisements") and ($activeSlave.dick isnot 0)>>
+	Her abdomen reads 'Rear Entrance Other Side.'
+<<elseif ($activeSlave.vaginaTat is "demeaning inscriptions") and ($activeSlave.dick isnot 0)>>
+	Her abdomen reads 'Useless, Rape Ass Instead' with an arrow pointing downward.	
+<<elseif ($activeSlave.vaginaTat is "lewd scenes") and ($activeSlave.dick isnot 0) and ($activeSlave.balls isnot 0)>>
+	Her abdomen is tattooed with a lewd scene. It entices with a depiction of sodomy of a shemale.
+<<elseif ($activeSlave.vaginaTat is "lewd scenes") and ($activeSlave.dick isnot 0)>>
+	Her abdomen is tattooed with a lewd scene. It entices with a depiction of sodomy of a gelding.
+<<elseif ($activeSlave.vaginaTat is "degrading language") and ($activeSlave.dick isnot 0)>>
+	The tattoo on her abdomen invites the reader to fuck her and there is an arrow helpfully pointing down to indicate her genitals.
+<<elseif $activeSlave.vaginaTat is "tribal patterns">>
+	Her abdomen is tattooed with tribal patterns that draw the eye down toward her vagina.
+<<elseif ($activeSlave.vaginaTat is "floral designs")>>
+	Her abdomen bears a tasteful tattoo of a blooming flower.
+<<elseif ($activeSlave.vaginaTat is "slutty advertisements")>>
+	Her abdomen reads 'Insert Cock' with an arrow pointing downward.
+<<elseif ($activeSlave.vaginaTat is "demeaning inscriptions")>>
+	Her abdomen reads 'Fucktoy.'
+<<elseif $activeSlave.vaginaTat is "lewd scenes">>
+	Her abdomen is tattooed with a lewd scenes. It entices with a depiction of loving intercourse.
+<<elseif $activeSlave.vaginaTat is "degrading language">>
+	The tattoo on her abdomen invites the reader to fuck her and there is an arrow helpfully pointing down to indicate her vagina.
+<<elseif $activeSlave.vaginaTat is "bovine patterns">>
+	Her abdomen is tattooed in a Holstein cow pattern.
+<</if>>
+
+<<if ($activeSlave.dick isnot 0)>>
+<<if ($activeSlave.dickTat is "tribal patterns")>>
+	Her cock is tattooed with tribal patterns.
+<<elseif ($activeSlave.dickTat is "floral designs")>>
+	Her cock is tattooed with a vine that wraps around its shaft.
+<<elseif ($activeSlave.dickTat is "slutty advertisements")>>
+	Her cock reads 'Sissy Slut.'
+<<elseif ($activeSlave.dickTat is "demeaning inscriptions")>>
+	Her cock reads 'Bitchstick.'
+<<elseif ($activeSlave.dickTat is "degrading language") and ($activeSlave.anus is 0)>>
+	The inscription on her cock states that her butthole is virgin and unspoiled.
+<<elseif ($activeSlave.dickTat is "degrading language")>>
+	The inscription on her cock gives the date she first took a dick up her ass, and the name of its owner.
+<<elseif $activeSlave.dickTat is "bovine patterns">>
+	Her cock is tattooed to make it look a little like a bulls'.
+<</if>>
+<</if>>
+
+<</if>>
+
+<<if ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0) and ($activeSlave.balls is 0)>>
+	Between the hormones and her lack of testicles, she is totally incapable of getting hard.
+<<elseif ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0)>>
+	She's on such a heavy dose of female hormones that she's losing the ability to independently maintain an erection.
+<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>
+	Without testicles, she's losing the ability to independently maintain an erection.
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if ($activeSlave.dick isnot 0)>>
+<<if ($activeSlave.dickPiercing is 1)>>
+	She has a row of studs down her shaft.
+<<elseif ($activeSlave.dickPiercing is 2)>>
+	She has a row of heavy rings down her shaft.
+<</if>>
+<</if>>
+<<if ($activeSlave.balls isnot 0)>>
+<<if ($activeSlave.dickPiercing is 1)>>
+	She has a couple of studs in her ballsack.
+<<elseif ($activeSlave.dickPiercing is 2)>>
+	She has a row of rings down the center of her ballsack, all the way from the base of her shaft to her perineum.
+<</if>>
+<</if>>
+
+<</if>>
+
+<<if ($activeSlave.drugs is "extreme aphrodisiacs")>>
+<<if ($activeSlave.releaseRules is "permissive")>>
+<<if ($activeSlave.dick isnot 0) and ($activeSlave.hormones gt 0) and ($activeSlave.amp is 1)>>
+	The extreme dose of aphrodisiacs combined with the hormones that keep her flaccid have her in a state of extreme sexual frustration; she's unconsciously humping her ass against whatever's next to her for anal stimulation and humping her dick against whatever she can manage to mount without limbs.
+<<elseif ($activeSlave.drugs is "extreme aphrodisiacs") and ($activeSlave.dick isnot 0) and ($activeSlave.balls is 0) and ($activeSlave.amp is 1)>>
+	The extreme dose of aphrodisiacs combined with the lack of balls that keeps her flaccid have her in a state of extreme sexual frustration; she's unconsciously humping her ass against whatever's next to her for anal stimulation and humping her limp dick against whatever she can manage to mount without limbs.
+<<elseif ($activeSlave.drugs is "extreme aphrodisiacs") and ($activeSlave.dick isnot 0) and ($activeSlave.hormones gt 0)>>
+	The extreme dose of aphrodisiacs combined with the hormones that keep her flaccid have her in a state of extreme sexual frustration; she's rubbing her limp dick distractedly and unconsciously humping her ass against whatever's next to her for anal stimulation.
+<<elseif ($activeSlave.dick isnot 0)
+ and ($activeSlave.balls is 0)>>
+	The extreme dose of aphrodisiacs combined with the lack of balls that keeps her flaccid have her in a state of extreme sexual frustration; she's rubbing her limp dick distractedly and unconsciously humping her ass against whatever's next to her for anal stimulation.
+<<elseif ($activeSlave.drugs is "extreme aphrodisiacs") and ($activeSlave.dick isnot 0)>>
+	The extreme dose of aphrodisiacs has her cock painfully erect, and precum drips from its head.
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.dick isnot 0) and ($activeSlave.hormones gt 0) and ($activeSlave.amp is 1)>>
+	The aphrodisiacs combined with the hormones that keep her flaccid have her sexually frustrated; she's unconsciously rubbing her ass against whatever's next to her, and humping her dick against whatever she can manage to mount without limbs.
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.dick isnot 0)
+ and ($activeSlave.balls is 0) and ($activeSlave.amp is 1)>>
+	The aphrodisiacs combined with the lack of balls that keeps her flaccid have her sexually frustrated; she's unconsciously rubbing her ass against whatever's next to her, and humping her dick against whatever she can manage to mount without limbs.
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.dick isnot 0) and ($activeSlave.hormones gt 0)>>
+	The aphrodisiacs combined with the hormones that keep her flaccid have her sexually frustrated; she's touching her limp dick distractedly and unconsciously rubbing her ass against whatever's next to her.
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.dick isnot 0) and ($activeSlave.balls is 0)>>
+	The aphrodisiacs combined with the lack of balls that keeps her flaccid have her sexually frustrated; she's touching her limp dick distractedly and unconsciously rubbing her ass against whatever's next to her.
+<</if>>
+<</if>>
+<</if>>
+
+<</nobr>>

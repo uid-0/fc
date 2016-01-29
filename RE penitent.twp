@@ -1,0 +1,55 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+As <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> comes before you for routine inspection, it is obvious that her penitent's habit is having an effect. She moves with exquisite care, desperate to minimize the chafing. She seems totally concentrated on obedience: the constant discomfort often has the effect of forcing a slave to marshal all her mental faculties in the service of pain avoidance.
+
+Her responses to your routine questions are so mechanical and honest that you make an impromptu confession of it. You require her to tell the full tale of all her minor infractions against the rules, and even order her to confess her resistant thoughts to you as well. Past the ability to resist, she pours out a stream of her inner fears, hopes, and feelings about her life as a sex slave.
+\
+<span id="result">
+<<click "Require her to self-flagellate">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+    <<nobr>>
+	You tell her that you will offer her a method of expiating her deep and troubling sin. She looks almost hopeful at this, until you lead her out onto a balcony and order her to strip before handing her a simple length of hempen rope. She already knows what's coming next, but she breaks down as she obeys your orders to kneel. She sobs abjectly, but you don't even have to give the next order: she's already flogging the rope against her own back in the hope of earning a reprieve by obedience. You count the strokes aloud, stopping at one in disapproval of how light she's hitting herself. She flogs herself harder and harder, screaming a little and crying in pain and fear as you obstinately refuse to say "two." When she strikes so hard that she draws a little blood, you finally say the terrible word. When you're finally satisfied with her self-torture, she's so exhausted that you carry her limp, bloody, vaguely urine-scented form into the shower, wash her, and apply curatives, @@color:red;though she's still quite injured.@@ She wakes to find herself curled up in your lap, and she stiffens for a brief moment before @@color:hotpink;relaxing against your chest,@@ weeping softly.
+    <<if ($activeSlave.fetish isnot "submissive") and ($activeSlave.fetish isnot "nympho") and (random(1,100) gt 50)>>
+      <<set $activeSlave.fetish to "submissive">>
+      <<set $activeSlave.fetishDiscovered to 1>>
+      She has come to associate @@color:pink;submission@@ with sexual fulfillment.
+	<</if>>
+    <<if ($activeSlave.behavioralQuirk isnot "quirky") and (random(1,100) gt 50)>>
+      <<set $activeSlave.behavioralQuirk to "quirky">>
+      The terrible experience has left her with @@color:red;unpleasant nervous tics.@@
+	<</if>>
+	<<set $activeSlave.devotion += 2>>	
+	<<set $activeSlave.health -= 1>>
+    <</nobr>>
+    <</replace>>
+<</click>>
+<<click "Sodomize her while she prays to her <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+    <<nobr>>
+	$activeSlave.slaveName finds herself standing in front of you, feeling you roughly probe her ass with two fingers. She gasps out: <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Oh <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, owner and protector, forgive my thinth, jutht ath you forgave my thithterth in thlavery before me. Count not my tranthgrethionth againtht your ruleth, but, rather, my tearth of anal thervice. Remember not my iniquitieth but my willingneth to be athraped by you. I long to therve your <<if ($PC.dick is 0)>>puthy<<else>>dick<</if>>, and beg that you will uthe me and make your dwelling place within my butthole. I promithe to thubmit to you ath your anal thlut all the dayth of my thervitude."<<else>>"Oh <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, owner and protector, forgive my sins, just as you forgave my sisters in slavery before me. Count not my transgressions against your rules, but, rather, my tears of anal service. Remember not my iniquities but my willingness to be assraped by you. I long to serve your <<if ($PC.dick is 0)>>pussy<<else>>dick<</if>>, and beg that you will use me and make your dwelling place within my butthole. I promise to submit to you as your anal slut all the days of my servitude."<</if>> She moans with relief when she feels you withdraw your penetrating digits partway through her recitation, but by the time she's finished, you've shoved <<if ($PC.dick is 0)>>a strap-on<<else>>your dick<</if>> up her loosened ass. She @@color:hotpink;does her best@@ to relax and resumes, <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Oh <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>..."<<else>>"Oh <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>..."<</if>>
+    <<if ($activeSlave.fetish isnot "humiliation") and ($activeSlave.fetish isnot "nympho") and (random(1,100) gt 50)>>
+      <<set $activeSlave.fetish to "humiliation">>
+      <<set $activeSlave.fetishDiscovered to 1>>
+      She has come to associate @@color:pink;humiliation@@ with sexual fulfillment.
+	<</if>>
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <</nobr>>
+    <</replace>>
+<</click>>
+</span>

@@ -1,0 +1,49 @@
+<<nobr>>
+
+<<set $assayedSlave to $activeSlave>>
+
+<<set $deadliness to 2>>
+
+<<if $assayedSlave.combatSkill gt 0>>
+	<<set $deadliness += 2>>
+<</if>>
+
+<<if ($assayedSlave.muscles gt 1) and ($assayedSlave.muscles lt 3)>>
+	<<set $deadliness += 1>>
+<</if>>
+
+<<if $assayedSlave.height gt 0>>
+	<<set $deadliness += 1>>
+<</if>>
+
+<<if $assayedSlave.health gt 5>>
+	<<set $deadliness += 1>>
+<</if>>
+
+<<if $assayedSlave.boobs gt 4000>>
+	<<set $deadliness -= 2>>
+<<elseif $assayedSlave.boobs gt 2000>>
+	<<set $deadliness -= 1>>
+<</if>>
+
+<<if $assayedSlave.butt gt 6>>
+	<<set $deadliness -= 1>>
+<</if>>
+
+<<if $assayedSlave.weight isnot 0>>
+	<<set $deadliness -= 1>>
+<</if>>
+
+<<if $assayedSlave.health lt -5>>
+	<<set $deadliness -= 1>>
+<</if>>
+
+<<if $assayedSlave.preg gt 10>>
+	<<set $deadliness -= 1>>
+<</if>>
+
+<<if $deadliness lt 1>>
+	<<set $deadliness to 1>>
+<</if>>
+
+<</nobr>>\

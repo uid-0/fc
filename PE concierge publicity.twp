@@ -1,0 +1,64 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<set $activeSlave to $Concierge>>
+
+<</nobr>>\
+\
+Your concierge <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is a terribly pretty girl. Very few of your tenants, male or female, would turn down an afternoon of conversation, flirtation, and lovemaking with her. Demand is such that she must carefully confine herself to the most important, leaving the lesser of your citizens with a kind word and a smoky look. A few of them are so smitten as to consider earning her favors the primary benefit of advancement, looking forward to the day when $activeSlave.slaveName will deign to mark their success in life by giving them her time. In many ways, $activeSlave.slaveName's face is the face of your arcology.
+\
+<span id="result">
+<<click "Make her the face of an ad campaign">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You bring her out to a pretty balcony and put her through an extended photoshoot. She has no idea what you're planning, but she's skilled enough not to need to. She dons different outfits, changes makeup, and even shifts personas for the camera, producing hundreds of elegant, sensual and eye-catching images. You dismiss her back to the promenade when you're done, and she clearly thinks little of it. The next day, however, you walk her out onto the promenade in the morning. When the two of you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> and concierge, reach the main promenade, she stops short when she catches sight of the main billboard screen. There she is, resplendent and opulent, ten meters tall, giving the viewer a sultry look. She only breaks down for a single moment, but it's quite a moment: she cries rather inelegantly, <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>lisping, "I love you <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>" into your ear<<else>>sobbing "I love you <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>" into your ear<</if>> before giving you a @@color:hotpink;wet kiss.@@ Then she runs over to stand under the screen, looking back at you to give you a @@color:green;picture-perfect@@ imitation of the billboard she's standing under before laughing at herself a little.
+	<<set $cash -= 1000>>
+	<<set $rep += 500>>
+	<<set $activeSlave.devotion += 1>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $activeSlave.ID == $slaves[$i].ID>>
+		<<set $slaves[$i] to $activeSlave>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>> //This option will cost ¤1000//
+<<click "Keep her to yourself for a week">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Exclusivity and slavery interact in ways more than merely complex. $activeSlave.slaveName's most passionate devotees are devastated to find her nowhere but by your side for the whole week. Their reaction is mixed: awe, envy, resentment; but mostly @@color:green;renewed respect@@ that she is your creature, and yours alone. A lesser slave might show off the particularity you show her, bringing shame on you by giving the impression that you care for her as more than a slave. She is no lesser slave, though, and thoroughly understands the fine line the two of you must walk as <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> and slave. She makes @@color:hotpink;painstakingly@@ clear, through every public glance and gesture, that she is yours as a matter of @@lightyellow;trust@@ rather than as a matter of love.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.trust += 1>>
+	<<set $rep += 100>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $activeSlave.ID == $slaves[$i].ID>>
+		<<set $slaves[$i] to $activeSlave>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>>
+<<if $activeSlave.prestige is 0>>
+<<click "Put public emphasis on her with the objective of making her famous">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	For the coming week, she does the publicity rounds. It's a little different than an free celebrity might do, but the mere act of letting her be interviewed is enough of a display of your confidence in her loyalty that people @@color:green;take notice.@@ She will be @@color:green;forever remembered@@ as one of the first slaves to go before the press and articulately explain why she loves being your property. She looks good doing it, too.
+	<<set $cash -= 10000>>
+	<<set $rep += 500>>
+	<<set $activeSlave.prestige to 1>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $activeSlave.ID == $slaves[$i].ID>>
+		<<set $slaves[$i] to $activeSlave>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>> //This option will cost ¤10000//
+<</if>>
+</span>

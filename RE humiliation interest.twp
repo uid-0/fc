@@ -1,0 +1,67 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $humiliationInterestTargetName == $slaves[$i].ID>>
+<<set $activeSlave to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $subName == $slaves[$i].slaveName>>
+      <<if ($slaves[$i].vagina gt -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+          <<set $slaves[$i].vaginalCount += 1>>
+          <<set $vaginalTotal += 1>>
+      <<else>>
+          <<set $slaves[$i].analCount += 1>>
+          <<set $analTotal += 1>>
+      <</if>>
+<</if>>
+<</for>>
+
+<</nobr>>\
+\
+You have $humiliationName pinned up against a railing on a balcony that overlooks a public atrium. Passersby below cannot see you, but they can certainly see $humiliationName's upper body as she takes your dick. She's blushing furiously with the sex and with her trademark mixed arousal and embarrassment at having an audience. She makes a show of trying to disguise the fact that she's getting railed, but it's obvious. When you finish, you pull her off the railing so she can clean up. <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> saw the denoument of this exhibitionist fun, and seems intrigued.
+
+$activeSlave.slaveName hesitates before explaining herself, and she's obviously aroused: <<if ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0)>>though her hormone-filled body can't get her dick hard any more, she's got a string of precum coming off her member<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>though her gelded body can't get her dick hard any more, she's got a string of precum coming off her limp member<<elseif $activeSlave.dick gt 4>>her gigantic cock is standing out like a mast<<elseif $activeSlave.dick gt 2>>she's sporting an impressive erection<<elseif $activeSlave.dick gt 0>>her little penis is rock hard<<elseif $activeSlave.clit gt 0>>her large clit is visibly engorged<<else>>her nipples are hard and there's a sheen on her pussylips<</if>>. There was a glint of envy in her eyes when she saw $humiliationName's satisfaction at being publicly used. It should be possible to either encourage this fascination with humiliation or steer her away from it for now.
+\
+<span id="result">
+<<click "Turn her into a humiliation fetishist too">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You bring $activeSlave.slaveName to the railing $humiliationName just left. For a long while, you just play with her naked breasts, requiring her to look any member of the public below that stares at her right in the eyes. She sobs and shakes with abject embarrassment as she locks eyes with person after person. After enough of this, she's so sexually primed that she orgasms convulsively almost immediately after you enter her from behind. @@color:hotpink;She has become more obedient,@@ and @@color:pink;her sexuality now focuses on public humiliation.@@
+    <<if ($activeSlave.vagina isnot -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>><<display "Vaginal VCheck">><<else>><<display "Anal VCheck">><</if>>
+    <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+	<<set $activeSlave.fetish to "humiliation">>
+	<<set $activeSlave.fetishDiscovered to 1>>
+    <</replace>>
+<</click>>
+<<click "Steer her away from humiliation fetishism for the moment">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Good slaves get aroused according to their masters' whim, not their own silly tendencies. You call $activeSlave.slaveName over before she can give voice to her interest in humiliation and fuck her privately in your office. You'll keep an eye on her, and with this correction @@color:hotpink;she'll become more obedient.@@
+    <<if ($activeSlave.vagina isnot -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>><<display "Vaginal VCheck">><<else>><<display "Anal VCheck">><</if>>
+	<<set $activeSlave.devotion += 1>>
+    <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+    <</replace>>
+<</click>>
+</span>

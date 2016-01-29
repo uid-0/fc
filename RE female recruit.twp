@@ -1,0 +1,58 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+
+<<display "Generate XX Slave">>
+<<set $activeSlave.origin to "She offered herself to you as a slave to escape a life of boredom.">>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.devotion to random(5,9)>>
+<<set $activeSlave.trust to random(5,9)>>
+<<set $activeSlave.health to random(0,2)>>
+<<set $activeSlave.anus to 1>>
+<<set $activeSlave.vagina to 1>>
+<<set $activeSlave.vaginalSkill to 1>>
+<<set $activeSlave.oralSkill to 1>>
+<<set $activeSlave.analSkill to 0>>
+<<set $activeSlave.earPiercing to 1>>
+<<set $activeSlave.nosePiercing to 1>>
+<<set $activeSlave.eyebrowPiercing to 1>>
+<<set $activeSlave.navelPiercing to 1>>
+<<set $activeSlave.age to 18>>
+<<set $activeSlave.behavioralQuirk to "arrogant">>
+<<set $activeSlave.hlength to "fashionable for a Free Cities girl, long, with the left half shaved">>
+
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+Your head girl sends you a discreet message that she may have found a slave for you. $HeadGirl.slaveName duly ushers a girl into your office. She looks very young, like a dissolute party girl. She bites her lip nervously when she sees you, and looks to $HeadGirl.slaveName for guidance. $HeadGirl.slaveName nods at her reassuringly, so she explains herself.
+
+"Sir, my name is $activeSlave.slaveName. I'm, um, bored, I guess. I go to clubs and get drunk and fuck guys and it's just kinda boring. I thought it would be different when I turned 18, but that was a couple months ago and, well, nothing's different. I saw $HeadGirl.slaveName and she was just so graceful and beautiful and she seemed so confident in what she was doing and who she was and I talked to her and she said she was your head girl and... I want to be like her. Can I be your slave? I'd be good, I'm good at sucking dicks and stuff." She seems to be a little naive about sexual slavery, but there's no need to tell her that.
+
+//Enslaving her will cost ¤$contractCost. Selling her immediately will bring in ¤$slaveCost.//
+
+<<set $saleDescription to 1>>\
+<<display "Long Slave Description">>\
+<<set $saleDescription to 0>>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You complete the legalities and biometric scanning quickly and without fuss. $activeSlave.slaveName bounces nervously on her heels. Finally she works up her courage and asks, <<if $HeadGirl.clothes isnot "no clothing">>"Can I have <<if $HeadGirl.clothes is "choosing her own clothes">>a cute outfit<<else>>$HeadGirl.clothes<</if>> like $HeadGirl.slaveName?"<<else>>"Can I work with $HeadGirl.slaveName?"<</if>> Your sternly tell her to call you <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, to ask questions only with permission, and to strip. She looks at $HeadGirl.slaveName, but $HeadGirl.slaveName returns her look with no compassion at all and tells her to do what you say. Looking suddenly fearful, $activeSlave.slaveName strips.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

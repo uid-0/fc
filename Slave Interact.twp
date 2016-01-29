@@ -1,0 +1,174 @@
+<<nobr>>
+<<set $nextButton to "Confirm changes">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Main">>
+
+<<if ($activeSlave.assignmentVisible is 0)>>
+<<if ($activeSlave.assignment is "work in the brothel") or ($activeSlave.assignment is "be the Madam")>>
+  <<set $returnTo to "Brothel">>
+<<elseif ($activeSlave.assignment is "be confined in the arcade")>>
+  <<set $returnTo to "Arcade">>
+<<elseif ($activeSlave.assignment is "work on the promenade") or ($activeSlave.assignment is "be the Concierge")>>
+  <<set $returnTo to "Promenade">>
+<<elseif ($activeSlave.assignment is "work in the dairy") or ($activeSlave.assignment is "be the Milkmaid")>>
+  <<set $returnTo to "Dairy">>
+<<elseif ($activeSlave.assignment is "work in the collection facility") or ($activeSlave.assignment is "be the Collectrix")>>
+  <<set $returnTo to "Collection Facility">>
+<<elseif ($activeSlave.assignment is "rest in the spa") or ($activeSlave.assignment is "be the Attendant")>>
+  <<set $returnTo to "Spa">>
+<<elseif ($activeSlave.assignment is "learn in the schoolroom") or ($activeSlave.assignment is "be the Schoolteacher")>>
+  <<set $returnTo to "Schoolroom">>
+<<elseif ($activeSlave.assignment is "work as a servant") or ($activeSlave.assignment is "be the Stewardess")>>
+  <<set $returnTo to "Servants' Quarters">>
+<<elseif ($activeSlave.assignment is "serve in the master suite") or ($activeSlave.assignment is "be your Concubine")>>
+  <<set $returnTo to "Master Suite">>
+<<elseif ($activeSlave.assignment is "be confined in the cellblock") or ($activeSlave.assignment is "be the Wardeness")>>
+  <<set $returnTo to "Cellblock">>
+<</if>>
+<</if>>
+
+<<set $encyclopedia to either("Drugs and Their Effects", "From Rebellious to Devoted", "Costs Summary", "Disease in the Free Cities", "Slave Couture", "Nymphomania", "Gender", "Independent Slaves", "Modern Anal")>>
+<<if $activeSlave.dick gt 0>><<set $encyclopedia to "Gender">><</if>>
+<</nobr>>\
+\
+<center>\
+<<display "Place In Line">>\
+<span id="prevSlave"><strong><<click "<< Prev">><<goto "Previous Slave In Line">><</click>></strong></span>&nbsp;&nbsp;&nbsp;&nbsp;''__@@color:pink;$activeSlave.slaveName@@__''&nbsp;&nbsp;&nbsp;&nbsp;<span id="nextSlave"><strong><<click "Next >>">><<goto "Next Slave In Line">><</click>></strong></span>\
+</center>\
+<<nobr>>
+<<if $seeDetails is 1>>
+	<<display "Long Slave Description">>
+    //[[Description Options]] | [[Hide Descriptions|Slave Interact][$seeDetails to 0]] | [[Customize her description|Add custom descriptors]]//
+<<else>>
+    //[[Show descriptions|Slave Interact][$seeDetails to 1]]//
+<</if>>
+<<if ($activeSlave.assignmentVisible is 1) and ($rulesAssistantAuto is 0)>>
+  | //<<click "Apply Rules Assistant to this slave">><<silently>><<display "Default Rules">><</silently>><<goto "Slave Interact">><</click>>//
+<</if>>
+<</nobr>>
+<<nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span id="miniscene"></span>
+<<if ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+<<click "Fuck her">><<replace "#miniscene">><<display "FVagina">><</replace>><</click>>
+ | <<click "Use her mouth">><<replace "#miniscene">><<display "FLips">><</replace>><</click>>
+ | <<click "Play with her tits">><<replace "#miniscene">><<display "FBoobs">><</replace>><</click>>
+ | <<click "Fuck her ass">><<replace "#miniscene">><<display "FAnus">><</replace>><</click>>
+ | <<click "Use her holes">><<replace "#miniscene">><<display "FButt">><</replace>><</click>>
+<<else>>
+//Remove her chastity belt if you wish to fuck her//
+ | <<click "Use her mouth">><<replace "#miniscene">><<display "FLips">><</replace>><</click>>
+ | <<click "Play with her tits">><<replace "#miniscene">><<display "FBoobs">><</replace>><</click>>
+ | <<click "Fuck her ass">><<replace "#miniscene">><<display "FAnus">><</replace>><</click>>
+<</if>>
+<<if ($activeSlave.preg is 0)>>
+  <<if ($activeSlave.ovaries isnot 0)>>
+	<<if ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+	  <<if ($PC.dick isnot 0)>>
+	   | <<click "Impregnate her yourself">><<replace "#miniscene">><<display "FPCImpreg">><</replace>><</click>>
+	  <</if>>
+	 | [[Use another slave to impregnate her|FSlaveImpreg]]
+	<</if>>
+  <</if>>
+<</if>>
+ | <<click "Abuse her">><<replace "#miniscene">><<display "FAbuse">><</replace>><</click>>
+<<if ($activeSlave.relation isnot 0)>>
+<<if ($activeSlave.relation is "mother")>>
+ | <<click "Fuck her with her daughter">><<replace "#miniscene">><<set $partner to "relation">><<display "FRelation">><</replace>><</click>>
+<<elseif ($activeSlave.relation is "daughter")>>
+ | <<click "Fuck her with her mother">><<replace "#miniscene">><<set $partner to "relation">><<display "FRelation">><</replace>><</click>>
+<<elseif ($activeSlave.relation is "sister")>>
+ | <<click "Fuck her with her sister">><<replace "#miniscene">><<set $partner to "relation">><<display "FRelation">><</replace>><</click>>
+<<elseif ($activeSlave.relation is "twin")>>
+ | <<click "Fuck her with her twin">><<replace "#miniscene">><<set $partner to "relation">><<display "FRelation">><</replace>><</click>>
+<</if>>
+<</if>>
+<<if ($activeSlave.relationship isnot 0)>>
+<<if ($activeSlave.relationship lte 1)>>
+ | <<click "Fuck her with her friend">><<replace "#miniscene">><<set $partner to "relationship">><<display "FRelation">><</replace>><</click>>
+<<elseif ($activeSlave.relationship lte 2)>>
+ | <<click "Fuck her with her best friend">><<replace "#miniscene">><<set $partner to "relationship">><<display "FRelation">><</replace>><</click>>
+<<elseif ($activeSlave.relationship lte 3)>>
+ | <<click "Fuck her with her FWB">><<replace "#miniscene">><<set $partner to "relationship">><<display "FRelation">><</replace>><</click>>
+<<elseif ($activeSlave.relationship lte 4)>>
+ | <<click "Fuck her with her lover">><<replace "#miniscene">><<set $partner to "relationship">><<display "FRelation">><</replace>><</click>>
+<<else>>
+ | <<click "Fuck her with her slave wife">><<replace "#miniscene">><<set $partner to "relationship">><<display "FRelation">><</replace>><</click>>
+<</if>>
+<</if>>
+<<if ($activeSlave.rivalry isnot 0)>>
+<<if ($activeSlave.amp isnot 1)>>
+ | <<click "Abuse her rival with her">><<replace "#miniscene">><<display "FRival">><</replace>><</click>>
+<</if>>
+<</if>>
+<<if ($activeSlave.fetish isnot "mindbroken")>>
+<<if ($activeSlave.amp isnot 1) or ($activeSlave.mute isnot 1)>>
+ | <<click "Ask her about her feelings">><<replace "#miniscene">><<display "FFeelings">><</replace>><</click>>
+<</if>>
+<</if>>
+<</nobr>>
+
+<<nobr>>
+
+<<if $activeSlave.assignment is "recover from surgery">>
+	//She is recovering from surgery this week//
+<<elseif $activeSlave.assignment is "guard you">>
+	//She is your bodyguard and is not available for other work//
+<<elseif $activeSlave.assignment is "be the Madam">>
+	//She is the Madam and is not available for other work//
+<<elseif $activeSlave.assignment is "be the Concierge">>
+	//She is the Concierge and is not available for other work//
+<<elseif $activeSlave.assignment is "be the Milkmaid">>
+	//She is the Milkmaid and is not available for other work//
+<<elseif $activeSlave.assignment is "be the Stewardess">>
+	//She is the Stewardess and is not available for other work//
+<<elseif $activeSlave.assignment is "be your Head Girl">>
+	//She is your Head Girl and is not available for other work//
+<<elseif $activeSlave.assignment is "recruit girls">>
+	//She is recruiting girls and is not available for other work//
+<<else>>
+
+<<display "not recovering">>
+
+<</if>>
+
+<</nobr>>
+\
+<<nobr>>
+
+__Body modification__: 
+[[Use remote surgery|Remote Surgery][$degradation to 0]]
+ | [[Use body mod studio|Body Modification][$degradation to 0]]
+ | [[Use auto salon|Salon][$degradation to 0]]
+ 
+<</nobr>>\
+
+<<if $activeSlave.assignment isnot "work independently">>\
+	<<display "Drugs and Diet">>
+<<else>>\
+	//She's working independently, so she's looking after her drugs and diet to maintain herself and improve her health//
+<</if>>\
+\
+<<if $activeSlave.assignment isnot "work independently">>\
+	<<display "Rules and Clothes">>
+<<else>>\
+	//She's also loyally following your interests and selecting her own clothes//
+<</if>>\
+
+<<nobr>>
+
+<<if ($slaveCostFactor gt 1)>>
+	@@color:yellow;The slave market is bullish; the price of slaves is high.@@
+<<elseif ($slaveCostFactor lt 1)>>
+	@@color:yellow;The slave market is bearish; the price of slaves is low.@@
+<</if>>
+
+<<if  ($slaves.length gt 1)>>
+[[Sell her|Sell Slave]] | [[Discard her|Discard Confirm]]
+<<else>>
+	//You cannot sell or discard your last slave.//
+<</if>>
+
+| [[Upload her|Upload Slave]]
+
+<</nobr>>

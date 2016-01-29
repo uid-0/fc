@@ -1,0 +1,38 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+One night, you see <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> <<if ($activeSlave.amp is 1)>>scooting herself from side to side uncomfortably<<elseif ($activeSlave.heels is 1) and ($activeSlave.shoes isnot "heels") and ($activeSlave.shoes isnot "boots") and ($activeSlave.shoes isnot "extreme heels")>>crawling gingerly<<elseif ($activeSlave.shoes is "heels") or ($activeSlave.shoes is "boots") or ($activeSlave.shoes is "extreme heels")
+>>tottering along painfully<<else>>walking a little funny<</if>>, as though she has a sore butt. You call her over to inspect her backdoor to see if she needs care, <<if ($activeSlave.amp is 1)>>and set her helpless body down, spreading her buttocks to examine her anus.<<else>>and order her to spread her buttocks for you so you can examine her anus.<</if>> Her asshole is fine, just a little sore from hard buttfucks. She complies with you, but as you probe her gently with a finger, <<if ($activeSlave.mute is 1) and ($activeSlave.amp is 1)>>she wriggles desperately and turns to mouth "it hurts <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> please don't assrape me" at you.<<elseif ($activeSlave.mute is 1)>>she gestures desperately, telling you her butt hurts and asking you not to assfuck her.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>she bursts out, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, mah butt ith thore! Pleathe don't athfuck me <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. Pleathe."<<else>>she bursts out, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, my butt is so sore! Please don't use my ass, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. Please."<</if>>
+\
+<span id="result">
+<<click "Punish her ass for insolence">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You inform her sternly that you will ensure that she is not permanently damaged, and that otherwise, she is to take anal pain like a good buttslave. She starts to beg and whine as you lean back in your chair and <<if ($PC.dick is 0)>>hold her upside down on your chest so she can lick your pussy while you use a dildo on her ass.<<else>>set her on your chest before reaching around to line your cock up with her sore hole. She shudders and writhes when you start pushing yourself inside.<</if>> You use hard pinches to her nipples to punish her whining, forcing her to take a long, painful buttfuck in silence. @@color:gold;She has become more afraid of you.@@
+    <<if ($activeSlave.anus lt 3)>>Her week of tough anal experience has @@color:lime;permanently loosened her anus.@@<<set $activeSlave.anus += 1>><</if>>
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Give her some care">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She's filled with anxiety as you lay her face down on your desk, but is surprised and reassured when she's penetrated not by a <<if ($PC.dick is 0)>>strap-on<<else>>turgid cock<</if>> but by a single gentle finger coated with something healing and cool. The mixed analgesic and anti-inflammatory takes the sharpness off the sore feeling, and will help get her butt back into fucking shape. @@color:mediumaquamarine;She has become more accepting of anal slavery,@@ and @@color:green;her asshole feels better.@@
+    <<if ($activeSlave.anus gt 2)>>Your expert care has @@color:orange;allowed her loose asspussy to recover a little of its natural shape and size.@@<<set $activeSlave.anus -= 1>><</if>>
+	<<set $activeSlave.trust += 1>>
+	<<set $activeSlave.minorInjury to 0>>
+    <</replace>>
+<</click>>
+</span>

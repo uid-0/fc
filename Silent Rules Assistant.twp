@@ -1,0 +1,8 @@
+<<silently>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<set $activeSlave to $slaves[$i]>>
+<<display "Default Rules">>
+<<set $slaves[$i] to $activeSlave>>
+<</for>>
+<</silently>>\
+<<goto "Main">>

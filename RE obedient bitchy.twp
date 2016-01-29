@@ -1,0 +1,53 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is a decent slave, pretty well broken to your will and generally obedient. However, she retains a cutting tongue. Though she's learned to her considerable cost not to direct her cheek at you, she still insults your other slaves, and worse, will be sarcastic to members of the public she encounters. You've worked on it, but it remains unsolved. Today, however, she crossed the line. You were doing business in your office with a respected female slave drug wholesaler. The woman is in her late forties, and though she's something of a plastic surgery addict she has permitted her hair to go a becoming steel grey. Passing your office, $activeSlave.slaveName audibly commented on how old she looked to another slave. Anger flashes in the businesswoman's eyes.
+\
+<span id="result">
+<<click "Beg her pardon and offer to loan the bitch to her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	The businesswoman's anger turns to malicious anticipation as you call $activeSlave.slaveName over and inform her that you and the businesswoman have decided $activeSlave.slaveName will be spending the night with her. Now that you look at your business partner, she has certain signs of a sadist. $activeSlave.slaveName notices too, and begins to cry as the businesswoman promises that there will be "no permanent damage." $activeSlave.slaveName is unceremoniously returned in the early hours of the morning. Her back and buttocks have been meticulously flogged right up to the very edge of damage, leaving angry marks across her $activeSlave.skin skin. Her mouth lolls open, as though she's been doing little but give cunnilingus. <<if $activeSlave.dick is 0>>Her pussy,<<else>>Her dick,<</if>> anus, and even her nipples show signs of torture. Whenever she thinks of a sharp remark in the future,  @@color:hotpink;she'll remember the pain and keep her mouth shut.@@
+	<<set $activeSlave.behavioralQuirk to "none">>
+	<<set $activeSlave.oralCount += 5>>
+    <<set $oralTotal += 5>>
+    <</replace>>
+<</click>>
+<<click "Offer to spitroast the bitch between the two of you">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	The businesswoman grins slowly and reaches into her purse as you inform $activeSlave.slaveName that you and the businesswoman will punish her together. $activeSlave.slaveName's eyes widen as the businesswoman fishes a massive strap on out of her bag. The surprise turns to fear as the businesswoman begins to slap it against $activeSlave.slaveName's buttocks as you <<if $activeSlave.amp is 0>>pull her down on all fours<<else>>arrange your bitchy little sex toy between you and your guest<</if>>. The businesswoman clearly wants her ass, so you <<if ($PC.dick is 0)>>ride $activeSlave.slaveName's face<<else>>facefuck $activeSlave.slaveName<</if>> roughly as $activeSlave.slaveName takes a painful anal raping from the huge dildo. The businesswoman winks at you companionably and extracts squeals from $activeSlave.slaveName that feel especially delicious along your dick. $activeSlave.slaveName <<if $activeSlave.amp is 0>>collapses after a long punishment fuck<<else>>ends the day a sore toy<</if>>; her @@color:hotpink;submission@@ to you and @@color:gold;fear of you@@ have both increased.
+    <<display "Anal VCheck">>
+	<<set $activeSlave.devotion += 0.5>>
+	<<set $activeSlave.trust -= 0.5>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+	<<set $activeSlave.oralCount += 1>>
+    <<set $oralTotal += 1>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take anal virginity//<</if>>
+<<if $arcade gt 0>>\
+<<click "Sentence her to a month in the arcade">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+    $activeSlave.slaveName screams and begs when she realizes what her punishment is, but you are obdurate. <<if ($activeSlave.muscles gt 1)>>Her powerful form has to be sedated for immurement in the arcade.<<elseif ($activeSlave.weight gt -1)>>Her desperate struggles make immuring her in the arcade difficult.<<else>>Her thin form makes immuring her in the arcade pathetically easy.<</if>> After she's properly confined, the only sign of her discomfiture is a slight movement of her $activeSlave.skin butt as she wriggles desperately against her restraints.
+	<<set $activeSlave.assignment to "be confined in the arcade">><<set $activeSlave.assignmentVisible to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+	<<set $activeSlave.sentence to 4>>
+    <</replace>>
+<</click>>
+<</if>>\
+</span>

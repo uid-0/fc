@@ -1,0 +1,18 @@
+<<nobr>>
+
+<<if $events.length is 0>>
+	<<set $events.push("RE no event")>>
+<</if>>
+
+<<if $eventSlave isnot 0>>
+	$eventSlave.slaveName has been randomly selected for an event this week.
+<</if>>
+
+<</nobr>>
+
+''A random event would have been selected from the following:''
+<<for $i to 0; $i lt $events.length; $i++>>
+	[[$events[$i]]]
+<</for>>
+DEBUG: 
+	[[RE no event]]

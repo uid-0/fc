@@ -1,0 +1,50 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+During a routine inspection, <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> respectfully asks a question. <<if ($activeSlave.mute is 1)>>She uses amusingly lewd gestures to depict how frequently she gets fucked, and then points to her virgin pussy. She communicates that she wants another hole to help share the work.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She lisps, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I take a loht of dick. I try mah best, but mah butt hurth thometimes and my throath thore. Can I get fucked in the puthy, to thpread it out a liddle?"<<else>>She says, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I take a lot of dick. I try my best, but my butt really hurts sometimes and my throat's sore, too. Can I get fucked in the pussy, to spread it out a little?"<</if>>
+\
+<span id="result">
+<<click "No, and her role is to suck dick and take it in the ass">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You patiently explain that you've decided to use her as an oral and anal slave, and leave her pussy unfucked. She's unsurprised, but she understands your decision. You usually fuck slaves during your inspection, and you don't exempt her from this, but you do let her take it easy. Rather than facefucking her you let her suckle you gently. Rather that a hard buttfuck, you take her to the couch and gently spoon her with your <<if ($PC.dick is 0)>>strap-on<<else>>dick<</if>> up her ass while making out with her and playing with her nipples. She understands your forbearance and @@color:hotpink;appreciates how kind <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> is.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "No, and she shouldn't have asked">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Despite being allowed to ask questions she should not question <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>>'s choices about her sexual duties. To communicate the point, you<<if ($PC.dick is 0)>> don a strap-on and<</if>> order her to lie on the desk, on her back, with her throat slack for penetration. After a good long throatfuck that leaves her gasping and moaning, you flip her over and fuck her ass until she's squealing with each thrust. As she leaves, sore all over, she's @@color:mediumorchid;badly confused@@ that she was apparently punished for asking questions.
+	<<set $activeSlave.devotion -= 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+	<<set $activeSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Yes, the time has come">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She framed her desire to lose her virginity in businesslike terms, but her reaction to your assent suggests that she also wouldn't mind having vanilla sex with <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>>. You're already quite <<if ($PC.dick is 0)>>turned on by the idea, so you pull on a strap-on, pull her over to the couch,<<else>>hard, so you just lie down with her on the couch<</if>> and have gentle vaginal sex in the missionary position. She gasps at the first penetration, but you take it slowly and lavish attention on her lips, breasts, and nipples. Soon she's shamelessly enjoying herself. Her first vaginal sex is crowned with an abdominal-clenching orgasm. She @@color:hotpink;adores her kind master.@@
+	<<set $activeSlave.devotion += 2>>
+	<<set $activeSlave.vaginalCount += 1>>
+    <<set $vaginalTotal += 1>>
+	<<set $activeSlave.vagina to 1>>
+    <</replace>>
+<</click>>
+</span>

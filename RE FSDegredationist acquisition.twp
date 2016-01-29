@@ -1,0 +1,67 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 2000>>
+<<display "Generate XX Slave">>
+<<set $activeSlave.origin to "She was sold to you by an anonymous person who wanted her to suffer.">>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.boobsImplant += random(4,6)*200>>
+<<set $activeSlave.boobs += $activeSlave.boobsImplant>>
+<<set $activeSlave.nipples to 1>>
+<<set $activeSlave.areolae to 1>>
+<<set $activeSlave.butt += 1>>
+<<set $activeSlave.buttImplant += 1>>
+<<set $activeSlave.lips += 1>>
+<<set $activeSlave.lipsImplant += 1>>
+<<set $activeSlave.face += 1>>
+<<set $activeSlave.faceImplant += 1>>
+<<set $activeSlave.devotion to random(-9,-5)>>
+<<set $activeSlave.trust to random(-9,-5)>>
+<<set $activeSlave.health to random(2,4)>>
+<<set $activeSlave.anus to 2>>
+<<set $activeSlave.vagina to 2>>
+<<set $activeSlave.weight to 0>>
+<<set $activeSlave.clitPiercing to 1>>
+<<set $activeSlave.tonguePiercing to 1>>
+<<set $activeSlave.nipplesPiercing to 1>>
+<<set $activeSlave.nosePiercing to 1>>
+<<set $activeSlave.earPiercing to 1>>
+<<set $activeSlave.vaginalSkill to random(2,3)>>
+<<set $activeSlave.oralSkill to random(2,3)>>
+<<set $activeSlave.analSkill to random(2,3)>>
+<<set $activeSlave.whoreSkill to random(2,3)>>
+<<set $activeSlave.entertainSkill to random(2,3)>>
+<<set $activeSlave.pubicHLength to "waxed">>
+<<set $activeSlave.behavioralQuirk to either("arrogant", "bitchy", "anorexic")>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 2000>>
+
+<</nobr>>\
+\
+Your personal assistant does not typically permit anonymous messages through to you. If someone wishes to speak to you, they can do so under their own name and with their own face. She makes an exception, however, for a message offering you a slave so long as you pay the costs of enslavement, nothing else.
+
+The face and voice are obscured by a petty anonymization program, the sort that can be obtained with five minutes' work in the shadier parts of the net. Your personal assistant could crack it nearly instantaneously, but you hold her back a moment to avoid spooking your correspondent. You are rewarded with video of the subject of the proposed enslavement, and the simple statement "I hate this fucking bitch, and I want her to suffer. Can't do it myself. You seem like the right guy to break the cunt."
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	When she arrives as part of the anonymous slave transfers that make up a good part of the inter-arcology commerce, she has clearly had some time to mull over her situation. As soon as she sees you, she blurts out, "Whatever that fucker told you, it isn't true. I'll be your little bitch bimbo, whatever you want. Just don't - just don't fucking hurt me." She sticks out her chest in a clear attempt to entice you with her fake tits.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

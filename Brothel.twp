@@ -1,0 +1,124 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $brothelSlaves to 0>>
+<<set $notBrothelSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "work in the brothel">>
+      <<set $brothelSlaves += 1>>
+    <<else>>
+	  <<set $notBrothelSlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $FSRomanRevivalistDecoration gte 60>>
+  The brothel is decorated as a Roman whorehouse. Refreshments are served at a bar, and someone is playing pipes in the back.
+<<elseif $FSAncientEgyptianRevivalistDecoration gte 60>>
+  The brothel is decorated as an ancient Egyptian fertility temple. Customers are bade relax on couches next to running water so that slaves may dance to entice them.
+<<elseif $FSChattelReligionistDecoration gte 60>>
+  The brothel is decorated as a place of worship. The air is scented by censers, and the slaves here maintain an air of holiness even when being sodomized in public.
+<<elseif $FSDegradationistDecoration gte 60>>
+  The brothel is decorated to look like a dungeon. The decor involves a lot of black leather and burnished steel, and the slaves on offer are mostly chained to beds and walls.
+<<elseif $FSAssetExpansionistDecoration gte 60>>
+  The brothel is decorated to look like a club. Loud music is playing, and the whores that aren't with customers are stripping and poledancing on a stage.
+<<elseif $FSTransformationFetishistDecoration gte 60>>
+  The brothel is sterile and clean. Interactive screens on the walls list the whores and their modifications in clinical detail.
+<<elseif $FSGenderRadicalistDecoration gte 60>>
+  The brothel is decorated to look like an old world bordello. The rich decor includes erotic photography and pornographic statuary, depicting every possible combination of human sexual congress.
+<<elseif $FSGenderFundamentalistDecoration gte 60>>
+  The brothel is decorated to look like an old world whorehouse. Screens on the walls are showing pornography starring the whores, with prices flashing after each sex act.
+<<elseif $FSPhysicalIdealistDecoration gte 60>>
+  The brothel is decorated to look like a club. Loud music is playing, and the whores that aren't with customers are stripping on a stage. There is a distinct smell of sweat, and there is as much emphasis on the strippers' muscles as their breasts.
+<<elseif $FSSubjugationistDecoration gte 60>>
+  The brothel is decorated to celebrate the degradation of $FSSubjugationistRace whores. The whores greet customers in stereotypical $FSSubjugationistRace accents.
+<<elseif $FSSupremacistDecoration gte 60>>
+  The brothel is decorated like an old world gentleman's club. The pictures on the wall depict degredation of every race on earth, except $FSSupremacistRace people.
+<<elseif $FSPaternalistDecoration gte 60>>
+  The brothel is decorated to look like a normal bar. Whores are encouraged to meet customers for a drink and get to know them a little before heading back into a private room.
+<<elseif $FSBodyPuristDecoration gte 60>>
+  The brothel is decorated to look like an old world bordello. The rich decor includes erotic photography and pornographic statuary, depicting idealized human forms in the act of love.
+<<elseif $FSSlimnessEnthusiastDecoration gte 60>>
+  The brothel is decorated to look like an old world bordello. The rich decor includes erotic photography and pornographic statuary, depicting slim, girlish figures playing, dancing, and loving.
+<<elseif $FSPastoralistDecoration gte 60>>
+  The brothel is decorated to look like a dairy. Though it isn't one, there is an intense sexual focus on boobs and lactation, and all the whores have their sizes proudly posted.
+<</if>>
+
+<<if $brothelSlaves gt 2>>
+	The brothel is bustling with activity. Customers are coming and going and slave girls are displaying themselves. When a slave catches a customer's eye, he leads her back into a little cubicle.
+<<elseif $brothelSlaves gt 0>>
+	The brothel is working steadily. Customers are present and slave girls are on offer. When a slave catches a customer's eye, he leads her back into a little cubicle.
+<<elseif $Madam isnot 0>>
+	$Madam.slaveName is alone in the brothel, and has nothing to do but keep the place clean and plan future sales efforts.
+<<else>>
+	The brothel is empty and desolate. [[Decomission the brothel|Main][$brothel to 0, $brothelUpgradeDrugs to 0]]
+<</if>>
+
+<br>
+It can support <<print $brothel*5>> whores.
+<<if $brothel*5 lt $brothelSlaves>>
+  @@color:red;The brothel is overcrowded.@@
+<</if>>
+[[Expand the brothel|Brothel][$cash -= 5000, $brothel += 1]]
+//Costs ¤5000 and will increase upkeep costs//
+	
+<br>
+<<if $brothelUpgradeDrugs is 1>>
+	It has been upgraded with aphrodisiac injection systems that monitor the whores and adjust dosage to keep them healthy but desperately horny and hopelessly addicted.
+<<else>>
+	It is a standard brothel.
+	[[Upgrade the brothel with aphrodisiac injection systems|Brothel][$cash -= 10000, $brothelUpgradeDrugs to 1]]
+	//Costs ¤10000 and will increase upkeep costs//
+<</if>>
+
+<br>
+//Sir, slaves assigned here will use drugs to maintain and even improve their health. They will gradually become obedient if they aren't already, but they'll lose devotion since they'll see you less.//
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $Madam isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $slaves[$i].ID is $Madam.ID>>
+	  <<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>
+	  <<display "Slave Summary">>
+	  | <<print "[[Change or remove Madam|Madam Select]]">>
+	<</if>>
+  <</for>>
+<<else>>
+	You do not have a slave serving as a Madam. [[Appoint one|Madam Select]]
+<</if>>
+
+<</nobr>>
+
+<<if $brothelSlaves gt 0>>\
+__Bring a slave out of the brothel:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "work in the brothel">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Release her from the Brothel|Retrieve from Brothel][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notBrothelSlaves gt 1>>\
+__Send a slave to the brothel:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+<<if ($slaves[$i].devotion gt 10) or ($slaves[$i].trust lt -4)>>\
+  <br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+  <<display "Slave Summary">>\
+  | <<print "[[Send her to the Brothel|Assign to Brothel][$activeSlave to $slaves[" + $i + "]]]">>\
+<<else>>\
+  <br>//$slaves[$i].slaveName must be either more fearful of you or more devoted to you//\
+<</if>>\
+<</if>>\
+<</for>>
+<</if>>\

@@ -1,0 +1,43 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+The arcology is well fitted with automated cleaning systems. However, <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is acting as a servant to your other slaves, so whenever she has nothing else to do the cleaners are deactivated and she is made to clean by hand. After all, there is no sense in leaving her idle, when she could be scrubbing floors.
+
+Which, incidentally, is what she's doing now. She has standing orders to change into a sturdy apron when doing such work, which she is not pleased to follow, since the apron has no back at all. She's working diligently on the floor, though, down on all fours to use both hands to work a scrub-brush back and forth. Her bare ass bobs back and forth as though she were doing it doggy style with an invisible man.
+\
+<span id="result">
+<<click "Use her butt to help her scrub">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	In accordance with the rules, she scrambles hurriedly to her feet when you enter and asks <<if ($activeSlave.mute is 1)>>in gestures how she can serve you.<<elseif ($activeSlave.lips gt 2)>>meekly through her massive dick-sucking lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, how may Ah therve you?"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>meekly through her inconvenient oral piercings, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, how may Ah therve you?"<<else>>meekly, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, how may I serve you?"<</if>> You instruct her to go back to what she was doing. She gets back to her $activeSlave.skin knees, puzzled, and then gasps when she finds <<if ($PC.dick is 0)>>your fingers<<else>>your cockhead<</if>> pressing against her rosebud. You instruct her imperiously to get on with it, and she soon understands your intent. She scrubs back and forth, panting and moaning, as you buttfuck her in time with her labors<<if ($PC.dick is 0)>>, using your other hand to look after yourself<</if>>. You even carefully scoot along with her when she needs to reach new spots. By the time she's done her arms and her anus are very tired. Her submission to you @@color:hotpink;has increased.@@
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+        <<display "Anal VCheck">>
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take anal virginity//<</if>>
+<<click "Give her a bigger mess to deal with">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	In accordance with the rules, she scrambles hurriedly to her feet when you enter and asks <<if ($activeSlave.mute is 1)>>in gestures how she can serve you.<<elseif ($activeSlave.lips gt 2)>>meekly through her massive dick-sucking lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, how may Ah therve you?"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>meekly through her inconvenient oral piercings, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, how may Ah therve you?"<<else>>meekly, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, how may I serve you?"<</if>> You instruct her to strip off her apron and lay her $activeSlave.skin back against the ground. She does, and you empty a bottle of lubricant across her entire body. She gasps from the cold fluid. You slide around on the floor with her, playfully scrubbing her <<if $seeRace is 1>>$activeSlave.race <</if>>body around in the pool of lube, playing with her wet breasts and her lubricated thighs before <<if ($PC.dick is 0)>>wrestling the slick slave onto her back so you can ride her face while reaching down to spread her legs and molest her ass<<else>>sinking your cock into her <<if $activeSlave.vaginalAccessory is "chastity belt">>now-slick butthole<<elseif $activeSlave.vagina is -1>>now-slick butthole<<else>>now-slick pussy and then her relaxing butthole<</if>><</if>>. She had fun, though, and her @@color:hotpink;trust in youhas increased.@@
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+        <<display "Simple VCheck">>
+	<<set $activeSlave.trust += 1>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+</span>
+
+
+	

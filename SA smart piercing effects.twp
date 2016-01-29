@@ -1,0 +1,86 @@
+<<nobr>>
+
+<<if ($slaves[$i].clitPiercing is 3)>>
+<<if ($slaves[$i].fetish is "mindbroken")>>
+	The effects of her smart clit piercing cannot reach her shattered mind.
+<<elseif ($slaves[$i].fetish is "mindbroken")>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "vanilla") and ($slaves[$i].fetish isnot "none") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms during straightforward sex, @@color:pink;her sexuality returns to normal.@@
+    <<set $slaves[$i].fetish to "none">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "oral") and ($slaves[$i].fetish isnot "cumslut") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms as she performs oral sex, @@color:pink;she develops a fetish for cum.@@
+    <<set $slaves[$i].fetish to "cumslut">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "anal") and ($slaves[$i].fetish isnot "buttslut") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms when her ass is being stimulated, @@color:pink;she develops a fetish for being an anal bottom.@@
+    <<set $slaves[$i].fetish to "buttslut">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "boobs") and ($slaves[$i].fetish isnot "boobs") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms when her nipples are being stimulated, @@color:pink;she develops a fetish for her tits.@@
+    <<set $slaves[$i].fetish to "boobs">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "submissive") and ($slaves[$i].fetish isnot "submissive") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms when she is restrained, @@color:pink;she develops a fetish for submission.@@
+    <<set $slaves[$i].fetish to "submissive">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "humiliation") and ($slaves[$i].fetish isnot "humiliation") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms when she is being humiliated, @@color:pink;she develops a fetish for humiliation.@@
+    <<set $slaves[$i].fetish to "humiliation">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "lesbian") and ($slaves[$i].fetish isnot "likes girls") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms when she is having sex with other women, @@color:pink;she no longer cares about the gender of her sexual partners.@@
+    <<set $slaves[$i].fetish to "likes girls">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "pregnancy") and ($slaves[$i].fetish isnot "pregnancy") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms during unprotected sex, @@color:pink;she begins to fantasize about pregnancy.@@
+    <<set $slaves[$i].fetish to "pregnancy">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "dom") and ($slaves[$i].fetish isnot "dom") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms while she's taking an active, dominant sexual role, @@color:pink;she begins to enjoy dominance.@@
+    <<set $slaves[$i].fetish to "dom">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "masochist") and ($slaves[$i].fetish isnot "masochist") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms while she's being beaten, @@color:pink;she begins to enjoy pain.@@
+    <<set $slaves[$i].fetish to "masochist">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "sadist") and ($slaves[$i].fetish isnot "sadist") and (random(1,100) gt (70-10*$assistant))>>
+	After her smart clit piercing encourages many orgasms while she's involved in the abuse of other slaves, @@color:pink;she begins to develop a sadistic streak.@@
+    <<set $slaves[$i].fetish to "sadist">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].clitPiercing is 3) and ($slaves[$i].clitSetting is "all") and ($slaves[$i].fetish isnot "nympho") and (random(1,100) gt 90)>>
+	After her smart clit piercing encourages sex of all kinds, @@color:pink;she develops true nymphomania.@@
+    <<set $slaves[$i].fetish to "nympho">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].clitPiercing isnot 3)>>
+<<if ($slaves[$i].fetish isnot "mindbroken")>>
+<<if ($slaves[$i].fetish isnot "nympho")>>
+<<if ($slaves[$i].oralCount+$slaves[$i].vaginalCount+$slaves[$i].analCount gt 1000) and (random(1,100) gt 95) and (($slaves[$i].vaginalSkill + $slaves[$i].analSkill + $slaves[$i].oralSkill) gt 5) and ($slaves[$i].clitSetting isnot $slaves[$i].fetish)>>
+	She has been fucked so many times a day for so long as a sex slave that she accepts sex as her sole purpose @@color:pink;and becomes indistinguishable from a true nymphomaniac.@@
+    <<set $slaves[$i].fetish to "nympho">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].assignment is "serve the public") and ($slaves[$i].vaginalAccessory is "chastity belt") and ($slaves[$i].fetish isnot "buttslut") and ($slaves[$i].clitSetting isnot $slaves[$i].fetish) and (random(1,100) gt 80)>>
+	With so much sexual attention focused on her anus, @@color:pink;she comes to view buttsex as the centerpiece of her sexuality.@@
+    <<set $slaves[$i].fetish to "buttslut">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].assignment is "whore") and ($slaves[$i].vaginalAccessory is "chastity belt") and ($slaves[$i].fetish isnot "buttslut") and ($slaves[$i].clitSetting isnot $slaves[$i].fetish) and (random(1,100) gt 80)>>
+	With her anus constantly sold for use, @@color:pink;she comes to view buttsex as the centerpiece of her sexuality.@@
+    <<set $slaves[$i].fetish to "buttslut">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].assignment is "serve the public") and ($slaves[$i].vagina is -1) and ($slaves[$i].fetish isnot "buttslut") and ($slaves[$i].clitSetting isnot $slaves[$i].fetish) and (random(1,100) gt 80)>>
+	Relying on her ass to serve the public, @@color:pink;she comes to view buttsex as the centerpiece of her sexuality.@@
+    <<set $slaves[$i].fetish to "buttslut">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<<elseif ($slaves[$i].assignment is "whore") and ($slaves[$i].vagina is -1) and ($slaves[$i].fetish isnot "buttslut") and ($slaves[$i].clitSetting isnot $slaves[$i].fetish) and (random(1,100) gt 80)>>
+	Relying on her ass as the only hole she has to be fucked in, @@color:pink;she comes to view buttsex as the centerpiece of her sexuality.@@
+    <<set $slaves[$i].fetish to "buttslut">>
+    <<set $slaves[$i].fetishDiscovered to 1>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<</nobr>>

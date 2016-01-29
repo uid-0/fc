@@ -1,0 +1,107 @@
+<<nobr>>
+
+<<set $legendaryAbolitionistID to 0>>
+<<set $masterSuiteSlaves to 0>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].assignment is "serve in the master suite")>>
+  <<set $masterSuiteSlaves += 1>>
+  <<if ($legendaryAbolitionistID is 0) and ($slaves[$i].devotion gt 18) and ($slaves[$i].prestige is 0)>>
+	<<if ($slaves[$i].origin is "You sentenced her to enslavement as a punishment for attempted theft of a slave.") or ($slaves[$i].origin is "She is an enslaved Daughter of Liberty.")>>
+	  <<set $legendaryAbolitionistID to $slaves[$i].ID>>
+	<</if>>
+  <</if>>
+  <<silently>>
+  <<display [[SA please you]]>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if ($masterSuiteUpgradeLuxury is 1)>>
+	<<if ($slaves[$i].devotion lt 19)>>
+	  <<set $slaves[$i].devotion += 1>>
+	<</if>>
+	<<if ($slaves[$i].health lt 10)>>
+	  <<set $slaves[$i].health += 1.3>>
+	<</if>>
+  <<else>>
+  <<if ($slaves[$i].devotion lt 4) and ($slaves[$i].trust gt -4)>>
+	<<set $slaves[$i].devotion -= 1>>
+	<<set $slaves[$i].trust -= 1>>
+  <<elseif ($slaves[$i].devotion lt 12)>>
+	<<set $slaves[$i].devotion += 0.7>>
+  <<elseif ($slaves[$i].devotion gt 12)>>
+	<<set $slaves[$i].devotion -= 0.3>>
+  <</if>>
+	<<if ($slaves[$i].health lt 10)>>
+	  <<set $slaves[$i].health += 1>>
+	<</if>>
+  <</if>>
+
+<<elseif ($Concubine isnot 0) and ($slaves[$i].ID is $Concubine.ID)>>
+  <<silently>>
+  <<display "SA please you">>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if $slaves[$i].health lt 8>>
+	<<if $masterSuiteUpgradeLuxury is 1>>
+	  <<set $slaves[$i].health += 2>>
+	<<else>>
+	  <<set $slaves[$i].health += 1>>
+	<</if>>
+  <</if>>
+  <<if $slaves[$i].devotion lt 30>>
+	<<if $masterSuiteUpgradeLuxury is 1>>
+	  <<set $slaves[$i].devotion += 1>>
+	  <<set $slaves[$i].trust += 1>>
+	<<else>>
+	  <<set $slaves[$i].devotion += 0.7>>
+	  <<set $slaves[$i].trust += 0.7>>
+	<</if>>
+  <</if>>
+<</if>>
+<</for>>
+
+<<if ($masterSuiteSlaves gt 0)>>
+  <<if ($masterSuiteSlaves is 1)>>
+	''There is one slave seeing to your pleasure in the master suite.'' Such sexual opulence @@color:green;improves@@ your reputation.
+  <<else>>
+	''There are $masterSuiteSlaves slaves seeing to your pleasure in the master suite.'' Such sexual opulence @@color:green;improves@@ your reputation.
+  <</if>>
+  <<if ($FSAncientEgyptianRevivalist gt 0) and ($masterSuiteSlaves gte 5)>>
+	Society @@color:green;approves@@ of your keeping a large number of women, which advances the Egyptian revivalist ideal of multiple concubinage.
+	<<set $repGain += 0.2*$masterSuiteSlaves*$FSSingleSlaveRep*($FSAncientEgyptianRevivalist/$FSLockinLevel)>>
+	<<set $FSAncientEgyptianRevivalist += 0.01*$masterSuiteSlaves*$FSSingleSlaveRep>>
+  <</if>>
+
+  <<if ($Concubine isnot 0)>>
+	$Concubine.slaveName is serving as your concubine. More than any other slave, her sexual brilliance and physical appeal are @@color:green;critical@@ to your reputation.
+	<<if ($Concubine.prestige gt 0)>>
+	  Keeping such a prestigious slave as your concubine @@color:green;adds to your fame.@@
+	  <<set $repGain += 25*$Concubine.prestige>>
+	<</if>>
+	<<if ($Concubine.oralCount + $Concubine.analCount + $Concubine.vaginalCount + $Concubine.mammaryCount + $Concubine.penetrativeCount gt 1000)>>
+	  Many citizens remember having had her themselves, and @@color:green;respectfully@@ envy you her exclusive company.
+	  <<set $repGain += 25>>
+	<</if>>
+  <</if>>
+  
+<<elseif ($Concubine isnot 0)>>
+  ''Your concubine $Concubine.slaveName is alone in the master suite.'' More than any other slave, her sexual brilliance and physical appeal are @@color:green;critical@@ to your reputation.
+  <<if ($Concubine.prestige gt 0)>>
+	Keeping such a prestigious slave as your concubine @@color:green;adds to your fame.@@
+	<<set $repGain += 25*$slaves[$i].prestige>>
+  <</if>>
+  <<if ($Concubine.oralCount + $Concubine.analCount + $Concubine.vaginalCount + $Concubine.mammaryCount + $Concubine.penetrativeCount gt 1000)>>
+	Many citizens remember having had her themselves, and @@color:green;respectfully@@ envy you her exclusive company.
+	<<set $repGain += 25>>
+  <</if>>
+
+<<else>>
+  ''The master suite is empty.''
+<</if>>
+<br>
+
+<</nobr>>

@@ -1,0 +1,50 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Random Nonindividual Event">>
+<<set $activeSlave to 0>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if $slaves[$i].drugs is "curatives">>
+    <<set $slaves[$i].health -= random(1,2)>>
+	<<set $activeSlave to $slaves[$i]>>
+  <</if>>
+<</for>>
+
+<<if $activeSlave is 0>>
+  <<goto "Random Nonindividual Event">>
+<</if>>
+
+<<set $cash += 500*$slaves.length>>
+
+<</nobr>>\
+\
+Early one morning, you hear convulsive dry heaving coming from one of the bathrooms. On investigation, it seems that $activeSlave.slaveName woke up feeling terribly nauseous. She's in no danger, but you've hardly checked her over before more slaves stagger in. Every one of your slaves on curatives has been struck by the mysterious malady and has @@color:red;sickened.@@
+
+It doesn't take much investigation before you find other slaveowners reporting the same thing. Elementary detective work fingers a particular drug supplier as the culprit, and before long the unfortunate Pharmaceutical concern is drowning under a rain of harsh public comment and harsher private contract warfare. As the day wears on, the poor slaves feel a bit better, but begin to report discomfort in their breasts. Apparently the problem has to do with contamination of the curative production line with A-HGH production reactants.
+
+The firm promptly pays @@color:yellowgreen;fair compensation@@ for the minor damage to your slaves' health. However, you're left with the matter of the boobs to deal with. Over the week, all your slaves on curatives experience at least a little @@color:lime;breast growth,@@ and some gain several cup sizes.
+\
+<span id="result">
+<<click "Free breast growth is acceptable">>
+	<<replace "#result">>
+	Since you're not displeased with the breast expansion, you accept the health compensation and even make discreet inquiries to see of the effect can perhaps be replicated. Unfortunately, it seems that the result that occurred was as much due to luck as anything else. The process cannot be safely marketed.
+    <<for $i to 0; $i lt $slaves.length; $i++>>
+      <<if $slaves[$i].drugs is "curatives">>
+        <<set $slaves[$i].boobs += 100*random(1,10)>>
+      <</if>>
+    <</for>>
+    <</replace>>
+<</click>>
+<<click "Demand further compensation">>
+	<<replace "#result">>
+	You muster all the contractual remedies available to you and join the crowd of slaveowners laying into the hapless manufacturer. Of course, with so many attackers, there is as much infighting between them as conflict with the helpless enemy, since everyone knows the business will go bankrupt before everyone gets paid. Nevertheless you @@color:yellowgreen;approximately double@@ the money you make out of the situation.
+	<<set $cash += 500*$slaves.length>>
+    <</replace>>
+<</click>>
+<<click "Force surgical repairs">>
+	<<replace "#result">>
+	The hapless manufacturer eventually goes bankrupt. However, you do manage to force surgical repair of the breast expansion before they do. At the manager's expense, your slaves move through a top-flight surgeon's care and are reduced to their former sizes.
+    <</replace>>
+<</click>>
+</span>

@@ -1,0 +1,162 @@
+<<nobr>>
+
+<<if $useActiveSlave is 1>>
+	<<set $assayedSlave to $activeSlave>>
+<<else>>
+	<<set $assayedSlave to $slaves[$i]>>
+<</if>>
+
+<<set $FResult to ($assayedSlave.intelligence+($assayedSlave.vaginalSkill*2)+($assayedSlave.analSkill*2)+($assayedSlave.oralSkill*2)+(3-$assayedSlave.vagina)+(3-$assayedSlave.anus)+$assayedSlave.dick+$assayedSlave.muscles+$assayedSlave.clit)>>
+
+<<if $FSGenderFundamentalist gt 0>>
+<<if $assayedSlave.dick gt 0>>
+	<<set $FResult += Math.trunc($FSGenderFundamentalist/40)>>
+<</if>>
+<</if>>
+
+<<if $assayedSlave.devotion gt 18>>
+	<<set $FResult += 3>>
+<<elseif $assayedSlave.devotion gt 10>>
+	<<set $FResult += 2>>
+<<elseif $assayedSlave.trust lt -4>>
+	<<set $FResult += 1>>
+<<else>>
+	<<set $FResult -= 2>>
+<</if>>
+
+<<if $assayedSlave.relation isnot 0>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $assayedSlave.relationTarget>>
+      <<if $slaves[$j].assignment is $assayedSlave.assignment>>
+		<<set $FResult += 2>>
+		<<if $FSAncientEgyptianRevivalist gt 20>>
+		  <<set $FResult += 2>>
+		<</if>>
+      <</if>>
+    <</if>>
+  <</for>>
+<</if>>
+<<if $assayedSlave.relationship isnot 0>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $assayedSlave.relationshipTarget>>
+      <<if $slaves[$j].assignment is $assayedSlave.assignment>>
+		<<set $FResult += 1>>
+      <</if>>
+    <</if>>
+  <</for>>
+<</if>>
+<<if $assayedSlave.rivalry isnot 0>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $assayedSlave.rivalryTarget>>
+      <<if $slaves[$j].assignment is $assayedSlave.assignment>>
+		<<set $FResult -= 1>>
+      <</if>>
+    <</if>>
+  <</for>>
+<</if>>
+
+<<if $assayedSlave.drugs is "extreme aphrodisiacs">>
+	<<set $FResult += 1>>
+<</if>>
+
+<<if $assayedSlave.drugs is "aphrodisiacs">>
+	<<set $FResult += 1>>
+<</if>>
+
+<<if ($assayedSlave.butt gt 4) and ($assayedSlave.boobs gt 800)>>
+  <<if $FSSlimnessEnthusiast lt 20>>
+	<<set $FResult += 1>>
+  <</if>>
+  <<set $stacked += 1>>
+  <<if $FSGenderRadicalist gt 0>>
+  <<if $assayedSlave.dick gt 0>>
+	<<set $FResult += Math.trunc($FSGenderRadicalist/20)>>
+  <</if>>
+  <</if>>
+  <<if $FSAssetExpansionist gt 0>>
+	<<set $FResult += Math.trunc($FSAssetExpansionist/20)>>
+  <</if>>
+<</if>>
+
+<<if ($assayedSlave.boobs lt 500) and ($assayedSlave.butt lt 3) and ($assayedSlave.weight lt 1) and ($assayedSlave.muscles lt 3)>>
+  <<set $FResult += 3>>
+  <<set $slim += 1>>
+  <<if $FSSlimnessEnthusiast gt 20>>
+	<<set $FResult += Math.trunc($FSSlimnessEnthusiast/20)>>
+  <</if>>
+<</if>>
+
+<<if ($assayedSlave.boobsImplant is 0) and ($assayedSlave.buttImplant is 0) and ($assayedSlave.waist lt 2) and ($assayedSlave.lipsImplant is 0) and ($assayedSlave.faceImplant lt 2)>>
+  <<set $pure += 1>>
+  <<if $FSBodyPurist gt 0>>
+	<<set $FResult += Math.trunc($FSBodyPurist/20)>>
+  <</if>>
+  <<if $FSTransformationFetishist lt 20>>
+	<<set $FResult += 2>>
+  <</if>>
+<<else>>
+  <<set $implanted += 1>>
+  <<if $FSTransformationFetishist gt 0>>
+	<<set $FResult += Math.trunc($FSTransformationFetishist/40)>>
+  <</if>>
+<</if>>
+
+<<if ($assayedSlave.clitPiercing gt 2)>>
+	<<set $FResult += 1>>
+<</if>>
+
+<<if ($assayedSlave.fetishDiscovered is 1)>>
+<<if ($assayedSlave.fetish is "submissive")>>
+	<<set $FResult += 2>>
+<<elseif ($assayedSlave.fetish is "likes girls")>>
+	<<set $FResult += 1>>
+<<elseif ($assayedSlave.fetish is "pregnancy")>>
+	<<set $FResult += 1>>
+<<elseif ($assayedSlave.fetish is "dom")>>
+	<<set $FResult += 1>>
+<<elseif ($assayedSlave.fetish is "masochist")>>
+	<<set $FResult += 1>>
+<<elseif ($assayedSlave.fetish is "sadist")>>
+	<<set $FResult += 1>>
+<<elseif ($assayedSlave.fetish is "cumslut")>>
+	<<set $FResult += 2>>
+<<elseif ($assayedSlave.fetish is "humiliation")>>
+	<<set $FResult += 2>>
+<<elseif ($assayedSlave.fetish is "buttslut")>>
+	<<set $FResult += 2>>
+<<elseif ($assayedSlave.fetish is "boobs")>>
+	<<set $FResult += 2>>
+<<elseif ($assayedSlave.fetish is "nympho")>>
+	<<set $FResult += 3>>
+<</if>>
+<</if>>
+<<if ($assayedSlave.fetish is "mindbroken")>>
+	<<set $FResult -= 3>>
+<</if>>
+
+<<if ($assayedSlave.sexualQuirk isnot "none")>>
+	<<set $FResult -= 2>>
+<</if>>
+<<if ($assayedSlave.behavioralQuirk isnot "none")>>
+	<<set $FResult -= 2>>
+<</if>>
+
+<<if $FResult lt 2>>
+	<<set $FResult to 2>>
+<</if>>
+
+<<set $FResult to Math.trunc($FResult)>>
+
+<<if $FSAncientEgyptianRevivalist gt 0>>
+  <<set $seed to 0>>
+  <<for $j to 0; $j lt $racialVarieties.length; $j++>>
+	<<if $assayedSlave.race is $racialVarieties[$j]>>
+	  <<set $seed to 1>>
+	<</if>>
+  <</for>>
+  <<if $seed is 0>>
+	<<set $racialVarieties.push($assayedSlave.race)>>
+  <</if>>
+<</if>>
+
+<</nobr>>\

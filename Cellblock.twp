@@ -1,0 +1,73 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $cellblockSlaves to 0>>
+<<set $notCellblockSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "be confined in the cellblock">>
+      <<set $cellblockSlaves += 1>>
+    <<else>>
+	  <<set $notCellblockSlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $cellblockSlaves gt 2>>
+	The cellblock is full of slaves, though it's difficult to tell at first. The row of cell doors is closed as always, and the soundproofed little rooms let no noise escape. Through each little window, though, a scene of loneliness and misery may be witnessed.
+<<elseif $cellblockSlaves gt 0>>
+	The cellblock holds a few slaves, though it's difficult to tell at first. The row of cell doors is closed as always, and the soundproofed little rooms let no noise escape. Through several of the little windows, though, a scene of loneliness and misery may be witnessed.
+<<elseif $Wardeness isnot 0>>
+	$Wardeness.slaveName is alone in the cellblock, and seems rather lonely without anyone to oppress.
+<<else>>
+	None of your slaves are confined in the cellblock.[[Decomission the cellblock|Main][$cellblock to 0]]
+<</if>>
+
+<br>
+//Sir, slaves assigned here will be given drugs to maintain their health against the stress of their confinement. They will gradually be broken to slavery, and will be released once they're willing to follow commands.//
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $Wardeness isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $slaves[$i].ID is $Wardeness.ID>>
+	  <<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>
+	  <<display "Slave Summary">>
+	  | <<print "[[Change or remove Wardeness|Wardeness Select]]">>\
+	<</if>>
+  <</for>>
+<<else>>
+	You do not have a slave serving as a Wardeness. [[Appoint one|Wardeness Select]]
+<</if>>
+
+<</nobr>>
+
+<<if $cellblockSlaves gt 0>>\
+__Let a slave out of the cellblock:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "be confined in the cellblock">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Release her from the cellblock|Retrieve from Cellblock][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notCellblockSlaves gt 1>>\
+__Send a resistant slave to be broken in the cellblock:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+<<if $slaves[$i].devotion lt -4>>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Confine her in the cellblock|Assign to Cellblock][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</if>>\
+<</for>>
+<</if>>\

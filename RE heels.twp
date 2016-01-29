@@ -1,0 +1,48 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+Since you shortened <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>'s tendons to force her to wear heels, she's permanently subject to your whims in shoe selection. She walks carefully into your office, the sway of her hips greatly exaggerated. <<if $activeSlave.dick isnot 0>>The modification certainly forces her to walk more like someone without a cock.<</if>> She sits on the couch next to your desk, takes off her heels, and opens the shoebox you've left there, to find:
+\
+<span id="result">
+<<click "Nothing, she'll crawl for the rest of the week">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She is surprised to see that the box is empty. By the time she realizes what this means, you've confiscated her old heels and seated yourself at your desk. Ordered to suck, she comes gingerly over on all fours and gets you off with her whore's mouth. The rest of the week is a trying experience for her. The most comfortable posture for her to walk along in on all fours displays her anus nicely, so she gets it up her <<if $seeRace is 1>>$activeSlave.race <</if>>ass a lot. <<if $activeSlave.dick isnot 0>>The effort it takes to move usually keeps her dick soft as she does, so it flops around beneath her all week. <</if>>@@color:hotpink;She has become more submissive to you.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.shoes to "none">>
+	<<set $activeSlave.analCount += 10>>
+	<<set $analTotal += 10>>
+    <</replace>>
+<</click>>
+<<click "Pretty heels, we're going out">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You have an appointment, and $activeSlave.slaveName gets to be your arm candy. She's almost beside herself with pride when you leave the arcology and head out into the warm sun. You have to walk slowly so she can keep her feet and still keep up, since you've taken the unusual step of rewarding her by letting her walk under your arm. To avoid giving the impression that the girl on your arm isn't a slave, she's naked except for her lovely heels. As she minces along her breasts sway freely and draw the respectful admiration of onlookers. <<if $activeSlave.dick isnot 0>>Most of the female onlookers and some of the men also spare an eye for her swinging dick. <</if>>@@color:mediumaquamarine;Her trust in you has increased.@@
+	<<set $activeSlave.trust += 1>>
+    <</replace>>
+<</click>>
+<<if $activeSlave.vagina isnot -1>>\
+<<click "Heels for an anal slut">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	$activeSlave.slaveName is a little perplexed to find that the heels look quite normal, though they're very tall. When she tries them on, however, standing requires her to splay her hips slightly so that her <<if $seeRace is 1>>$activeSlave.race <</if>>butt is a little spread even when she stands upright. What's more, the heels are tall to raise her butt to the exact level <<if ($PC.dick is 0)>>a strap-on is at when you wear one and<<else>>your cock is at<</if>> when you stand behind her. When you start demonstrating the advantages of this to her, the heels detect that the wearer is being fucked, begin to play a light show, and start playing a heavy beat in time with your thrusts. She would laugh if she weren't concentrating on the buttsex. @@color:hotpink;Her submission to you has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<</if>>
+</span>

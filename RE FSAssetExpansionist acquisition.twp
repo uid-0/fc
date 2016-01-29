@@ -1,0 +1,52 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She offered herself to you for enslavement after following a dangerous, illegal growth hormone regimen.">>
+<<set $activeSlave.boobs += random(10,20)*200>>
+<<set $activeSlave.nipples to 3>>
+<<set $activeSlave.areolae to 3>>
+<<set $activeSlave.weight to 2>>
+<<set $activeSlave.butt += random(2,4)>>
+<<set $activeSlave.lips to 1>>
+<<set $activeSlave.devotion to random(-3,3)>>
+<<set $activeSlave.trust to random(-3,3)>>
+<<set $activeSlave.age to 19>>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.health to random(-6,-5)>>
+<<set $activeSlave.intelligence to random(0,2)>>
+<<set $activeSlave.pubicHLength to "waxed">>
+<<set $activeSlave.behavioralQuirk to either("anorexic", "quirky")>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+You receive so many messages, as a noted titan of the new Free Cities world, that your personal assistant has to be quite draconian in culling them. She lets only the most important through to you. One category of message that always gets through regardless of content, though, is requests for voluntary enslavement. As the new world takes shape, they've become less rare than they once were.
+
+The person placing the call is physically quite unusual, to the point of looking distinctly unnatural. She has absolutely enormous tits, an ass to match, and is generally plush all over; yet despite being able to compete with the lushest mother in the curves department, she appears to be very young. She explains herself quickly. "Sir, I just turned 19. Where I'm from, that means I'm very likely to be enslaved one way or another. So, I've been taking off-market hormones for a couple of years to raise myself out of the gutter as far as who might take me. I hear life is better if you're a valuable slave." She leans into the camera, displaying a solid acre of cleavage. "Can I be your valuable slave?"
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	When she arrives, it's clear she's nobody's fool. She comes without personal effects of any kind, and is wearing cheap, sturdy clothes to travel in, since she knows she'll be taking them off immediately. She does, without being told, just as soon as the enslavement formalities are out of the way. Her breasts are capped by titanic, puffy nipples; she notices you appreciating them and gives you a hesitant little smile, swaying her shoulders back and forth a little to set her flesh deliciously into motion. 
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

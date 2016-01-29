@@ -1,0 +1,14 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+
+<<set $slaveCostFactor -= 0.3>>
+
+<</nobr>>\
+\
+One morning, you awake to find a non-urgent alert from your personal assistant program, which is set up to alert you to any developments that may affect your business pursuits.
+
+The old world outside the Free Cities took another step towards its final decline today. A relatively prosperous third world city fell to a regional warlord, and it seems the remaining great powers lack either the money or the will to do anything about it. The victors seem to be following the standard procedure for modern conquerors. Anything valuable, they steal. Among the population, they recruit the willing, shoot the unwilling, and enslave everyone else. The slave markets are going to be glutted with new stock soon. Projections show a short-term price drop of up to thirty percent.
+
+There will be no immediate impact on you or your slaves, but the coming weeks will be a fine time to buy new stock, and a poor time to sell. @@color:yellow;The market price of slaves has dropped precipitously.@@

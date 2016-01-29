@@ -1,0 +1,48 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<<set $activeSlave.devotion += 1>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is a queen of the whorehouse: never surprised, never squeamish, and always on the prowl for her next customer. She has mastered the transactionalization of sex. When she's selling herself by the hole, a customer who purchases her skilled oral services will often find himself upsold to a more expensive anal experience. When she's doing it by the orgasm, customers find themselves climaxing rather more quickly than they intended.
+
+And perhaps most importantly, she always has an ear to the ground, even when one of them is being shoved against the the sheets. Customers say the most interesting things when they've got themselves buried in her. Today, she's got an especially delightful morsel of information for you: one of your commercial tenants is shortchanging you on rent, concealing profits to reduce your share.
+\
+<span id="result">
+<<click "Require double repayment">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Your tenant knows that abject surrender is his only hope once you make it clear to him that his scheme is known to you. He complies all too eagerly with your demand that he @@color:yellowgreen;repay double what he owes.@@
+    <<set $cash += 2000>>
+    <</replace>>
+<</click>>
+<<click "Require double repayment and spend it on her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Your tenant knows that abject surrender is his only hope once you make it clear to him that his scheme is known to you. He complies all too eagerly with your demand that he repay double what he owes. Slaves are not permitted to keep possessions, especially money, so you spend it on $activeSlave.slaveName directly. She spends the day being massaged, beautified, and pampered. You then take her out for a lovely meal, allowing her to wear clothing that's almost conservative by Free Cities standards, and take a nice walk around the arcology's promenade, talking on light subjects. She's @@color:hotpink;deeply touched@@ by an evening of affection without sex.
+    <<set $activeSlave.devotion += 2>>
+    <</replace>>
+<</click>>
+<<click "Leverage the situation and reward her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Archimedes might have his lever, but give you a place to set such information as this, and you can move a mountain of money. Before he knows what has beset him, your tenant is bustled out of the arcology and replaced by favored and hopefully more honest competitor, who @@color:green;is well aware of the score here.@@ $activeSlave.slaveName, who made this possible, spends the day being massaged, beautified, and pampered. You then take her out for a lovely meal, allowing her to wear clothing that's almost conservative by Free Cities standards, and take a nice walk around the arcology's promenade, talking on light subjects. She's @@color:hotpink;deeply touched@@ by an evening of affection without sex, and she @@color;lightyellow;trusts you@@ with all sorts of amusing whorehouse rumors.
+    <<set $activeSlave.devotion += 0.5>>
+    <<set $activeSlave.trust += 0.5>>
+    <<set $cash -= 2000>>
+    <<set $AProsperity += 1>>
+    <</replace>>
+<</click>> //This will cost ¤2000//
+</span>

@@ -1,0 +1,28 @@
+<<display "Generate New Slave">>
+  <<set $startingGirlCopied to 0>>
+  <<set $activeSlave.health to 0>>
+  <<set $activeSlave.devotion to 0>>
+  <<set $activeSlave.trust to 0>>
+  <<set $activeSlave.fetishDiscovered to 1>>
+  <<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+  <<set $activeSlave.oldTrust to $activeSlave.trust>>
+  <<if $startingOption is "tycoon">>
+	<<set $activeSlave.origin to "You acquired her in the last stages of your career as a successful businessman.">>
+	<<set $activeSlave.customTat to "She has a small tattoo of a major corporation's logo on the nape of her neck.">>
+  <<elseif $startingOption is "PMC">>
+	<<set $activeSlave.origin to "You acquired her in the last stages of your career as a noted private military contractor.">>
+	<<set $activeSlave.customTat to "She has a small tattoo of a private military company's coat of arms on the nape of her neck.">>
+  <<else>>
+	<<set $activeSlave.origin to "You won her at cards, in a successful game before the life-changing game that won you the arcology.">>
+	<<set $activeSlave.customTat to "She has a small tattoo of a winning hand of cards on the nape of her neck.">>
+  <</if>>
+  <<if $activeSlave.vagina lt 1>>
+	<<set $activeSlave.vaginalSkill to 0>>
+  <</if>>
+  <<if $activeSlave.anus lt 1>>
+	<<set $activeSlave.analSkill to 0>>
+  <</if>>
+  <<if $activeSlave.dick gt 0>>
+	<<set $activeSlave.ovaries to 0>>
+  <</if>>
+<<goto "Starting Girls">>

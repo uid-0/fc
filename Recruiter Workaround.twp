@@ -1,0 +1,19 @@
+
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if ($slaves[$i].assignment is "recruit girls") and ($slaves[$i].ID isnot $Recruiter.ID)>>
+      <<set $slaves[$i].assignment to "rest">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+    <</if>>
+  <</for>>
+
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $Recruiter.ID == $slaves[$i].ID>>
+        <<set $slaves[$i].assignment to "recruit girls">>
+		<<set $slaves[$i].assignmentVisible to 1>>
+		<<set $slaves[$i].choosesOwnAssignment to 0>>
+    <</if>>
+  <</for>>
+
+
+
+<<goto "Main">>

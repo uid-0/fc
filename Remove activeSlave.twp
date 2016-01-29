@@ -1,0 +1,71 @@
+<<silently>>
+
+<<for $k to 0; $k lt $slaves.length; $k++>>
+<<if $activeSlave.ID == $slaves[$k].ID>>
+	<<if $activeSlave.relation isnot 0>>
+		<<for $j to 0; $j lt $slaves.length; $j++>>
+			<<if $slaves[$j].ID is $activeSlave.relationTarget>>
+        		<<set $slaves[$j].relation to 0>>
+        		<<set $slaves[$j].relationTarget to 0>>
+			<</if>>
+		<</for>>
+	<</if>>
+	<<if $activeSlave.relationship isnot 0>>
+		<<for $j to 0; $j lt $slaves.length; $j++>>
+			<<if $slaves[$j].ID is $activeSlave.relationshipTarget>>
+        		<<set $slaves[$j].relationship to 0>>
+        		<<set $slaves[$j].relationshipTarget to 0>>
+			<</if>>
+		<</for>>
+	<</if>>
+	<<if $activeSlave.rivalry isnot 0>>
+		<<for $j to 0; $j lt $slaves.length; $j++>>
+			<<if $slaves[$j].ID is $activeSlave.rivalryTarget>>
+        		<<set $slaves[$j].rivalry to 0>>
+        		<<set $slaves[$j].rivalryTarget to 0>>
+			<</if>>
+		<</for>>
+	<</if>>
+    <<if $activeSlave.ID is $Recruiter.ID>>
+		<<set $Recruiter to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $HeadGirl.ID>>
+		<<set $HeadGirl to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $Bodyguard.ID>>
+		<<set $Bodyguard to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $fighterOne.ID>>
+		<<set $fighterOne to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $fighterTwo.ID>>
+		<<set $fighterTwo to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $Madam.ID>>
+		<<set $Madam to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $Concierge.ID>>
+		<<set $Concierge to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $Milkmaid.ID>>
+		<<set $Milkmaid to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $Schoolteacher.ID>>
+		<<set $Schoolteacher to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $Attendant.ID>>
+		<<set $Attendant to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $Collectrix.ID>>
+		<<set $Collectrix to 0>>
+	<</if>>
+    <<if $activeSlave.ID is $Stewardess.ID>>
+		<<set $Stewardess to 0>>
+	<</if>>
+    
+	<<set $dump to $slaves.pluck([$k], [$k])>>
+	<<set $k -= 1>>
+<</if>>
+<</for>>
+
+<</silently>>

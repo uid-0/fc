@@ -1,0 +1,44 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<set $activeSlave to $Milkmaid>>
+
+<</nobr>>\
+\
+Your milkmaid <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> worked hard today. The cows have it much easier than she does, in many ways: all they have to do is give milk, while her life is one of hard labor. Long after they're asleep, she's cleaning the dairy and getting ready for the next day. At long last she's done, and even though she's exhausted, she takes a few minutes to thoroughly stretch her aching body. She's a big girl, and the play of her muscles across her back as she works out the kinks is quite eye-catching.
+\
+<span id="result">
+<<click "Give her a businesslike massage">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	When she hears you enter the dairy, she turns to you for instructions, but you wordlessly dismiss her back to her stretching. She gets back to it, but is surprised to find her shoulders seized by your powerful hands. She shivers helplessly as you knead her knotted muscles, whimpering with near-orgasmic delight as she feels the day's aches ground away under your grip. When you're done with her, she touches her toes and then smoothly rises to stretch with her hands over her head, groaning with sheer pleasure at the feeling. <<if ($activeSlave.mute is 1)>>She thanks you profusely with gestures, and then hesitantly asks if you'd like to use her body.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Thank you <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she lisps. "Would - would you like to uthe me now?"<<else>>"Thank you <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>," she murmurs. "Would - would you like to use my body, now?"<</if>> You shake your head kindly and place a kiss on her forehead before continuing with your evening. As she watches you go, she suppresses @@color:hotpink;another shiver.@@
+	<<set $activeSlave.devotion += 1>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $activeSlave.ID == $slaves[$i].ID>>
+		<<set $slaves[$i] to $activeSlave>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>>
+<<click "Share a milk bath with her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	When she hears you enter the dairy, she turns to you for instructions, but you wordlessly dismiss her back to her stretching. She gets back to it, but is mystified as she watches you out of the corner of her eye. The milk is held in a large tank before being filtered, Pasteurized, and sold. You remove the lid from the tank and climb in. She watches with incomprehension, but understanding dawns when you splash a little, demonstratively, and crook a finger at her. She gives you a deliciously naughty look and hurries to join you in the warm milk, giggling when you pull her in with a slosh of creamy whiteness. She doesn't break the surface after climbing in, kneeling under the milk to suck you off. She has to surface periodically for breath, but the grin she gives you each time makes up for it. She manages to drag her breasts <<if ($PC.boobs gt 0)>>against yours<<else>>up your front<</if>> each time she rises for air. When you climax, she carefully swallows every drop to keep the filters from getting clogged. When she surfaces for good, she looks you in the eyes briefly before blushing and @@color:mediumaquamarine;giving you a muscular hug.@@
+	<<set $activeSlave.trust += 1>>
+	<<set $activeSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $activeSlave.ID == $slaves[$i].ID>>
+		<<set $slaves[$i] to $activeSlave>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>>
+</span>

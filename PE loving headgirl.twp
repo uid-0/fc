@@ -1,0 +1,57 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $HeadGirl.ID == $slaves[$i].ID>>
+<<set $activeSlave to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<<set $j to $slaves.length-1>>
+
+<</nobr>>\
+\
+You and <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> see one another less than one might expect, for a slaveowner and his Head Girl. You both lead very busy lives, for one. Furthermore, $activeSlave.slaveName often functions as a second set of eyes, ears, and castigating hands for you, so it would be a waste for the two of you to be in the same place at the same time. Today, the two of you saw almost nothing of one another, so she comes to your office for a quick review of the day before she turns in for the night.
+
+The business is brief and inconsequential, but it's good to speak with her. When you're done, she gets halfway to the door before coming quickly back to give you a light kiss on the cheek. <<if ($activeSlave.lips gt 2)>>"Ah love you, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she lisps, huge lips grazing your ear<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Ah love you, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she lisps, oral piercings grazing your ear<<else>>"I love you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>," she whispers into your ear<</if>>, her breasts brushing against your shoulder as she does.
+\
+<span id="result">
+<<click "Spend a night as equals">>
+	<<replace "#result">>
+	You instruct $activeSlave.slaveName to put on her best dress and meet you at the door. You spend a nice night out with her, walking along the promenade to a nice restaurant and then seeing a show before returning home for loving sex in your master bed. She nestles under your arm, falling to sleep well before you, a @@color:hotpink;contented@@ smile on her face. There's a reason she gets to sleep much quicker than you do. You lie awake for some time, remembering the @@color:red;doubting and disapproving@@ faces of other prosperous citizens whenever they realized that you were treating a slave as an equal this evening.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+	<<set $rep -= 100>>
+    <</replace>>
+<</click>>
+<<click "Pull her in to keep you company as you work">>
+	<<replace "#result">>
+	She giggles happily as you seize her $activeSlave.skin wrist and pull her down to the floor. She nestles under your desk, between your legs to serve you with her mouth for a while, gently playing with her <<if ($slaves[$j].vagina gt -1) and ($slaves[$j].dick gt 0)>>wonderfully strange bits<<elseif ($slaves[$j].preg lt -2) and ($slaves[$j].dick gt 0)>>limp dick<<elseif ($slaves[$j].dick gt 0)>>dick<<elseif ($slaves[$j].clit gt 0)>>big clit<<else>>cunt<</if>> and moaning into you. She's down there for a long time, so long that you climax twice. The third time she softly sucks you <<if ($PC.dick is 0)>>to full arousal<<else>>hard<</if>>, it naturally takes a bit longer. When done, she slithers up into your lap without obscuring your work, stroking you lightly with a hand the whole time - a miracle of dexterity. She gently runs her hips over your crotch a few times, giving <<if ($PC.dick is 0)>>you<<else>>your dickhead<</if>> a nice tactile tour of everything she has to offer, <<if ($PC.dick is 0)>>before gently turning around to wrap her legs around you and rub herself against you until you climax a third time.<<else>>before gently lowering her butt onto your cock with a sigh. Her devoted ass brings you to orgasm a third time, and instead of getting up and off your softening dick, she just relaxes into you and bends herself backward so she can nibble your neck and whisper her adoration into your ear.<</if>> It would be hard for her to get much more devoted to you, @@color:hotpink;but she does.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<if $slaves[$j].anus gt 0>>\
+<<click "Victimize something together">>
+	<<replace "#result">>
+	She giggles happily as you seize her $activeSlave.skin wrist and pull her towards where your other slaves are mostly already asleep. She jokingly points out $slaves[$j].slaveName, fast asleep. You nod, and $activeSlave.slaveName pounces. $slaves[$j].slaveName wakes in terror and confusion to find her head and neck pinned in a leg-lock that holds her mouth hard against $activeSlave.slaveName's <<if ($activeSlave.vagina gt -1) and ($activeSlave.dick gt 0)>>cock and cunt<<elseif ($activeSlave.balls lt 1) and ($activeSlave.dick gt 0)>>limp cock<<elseif ($activeSlave.preg lt -2) and ($activeSlave.dick gt 0)>>limp cock and useless balls<<elseif ($activeSlave.dick gt 0)>>cock and balls<<elseif ($activeSlave.clit gt 0)>>huge, hard clit<<else>>soaking-wet cunt<</if>>. $slaves[$j].slaveName only manages one kick of her legs before you pin them and ram yourself up her butt. Her howl of protest, directed against $activeSlave.slaveName's privates, sends a shiver through your Head Girl. <<if ($activeSlave.lips gt 2)>>"Oh pleathe make her moan, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she lisps through her huge lips.<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Oh pleathe make her moan, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she lisps through her face full of piercings.<<else>>"I love it when you make her moan, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>," she groans.<</if>> Poor $slaves[$j].slaveName's asshole takes quite a beating before $activeSlave.slaveName finally convulses with @@color:hotpink;naughty pleasure.@@ Meanwhile, all around the nighttime rape, slaves have been woken by $slaves[$j].slaveName's struggles. They realize how completely your Head Girl has @@color:hotpink;involved herself in your sexual pursuits@@ and lie as still as they can.
+	<<set $activeSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+	<<set $slaves[$j].analCount += 1>>
+	<<set $analTotal += 1>>
+    <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<set $slaves[$i].devotion += 1>>
+    <</for>>
+    <</replace>>
+<</click>>
+<</if>>\
+</span>

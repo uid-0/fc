@@ -1,0 +1,110 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Free Cities Justice">>
+
+<<set $contractCost to 1000>>
+
+<<display "Generate XY Slave">>
+<<set $activeSlave.origin to "You sentenced her to enslavement as a punishment for rape of a free woman.">>
+<<set $activeSlave.devotion to random(-15,-11)>>
+<<set $activeSlave.trust to random(-3,0)>>
+    <<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.health to random(0,2)>>
+<<set $activeSlave.anus to 0>>
+<<set $activeSlave.balls to random(2,4)>>
+<<set $activeSlave.oralSkill to 0>>
+<<set $activeSlave.analSkill to 0>>
+<<set $activeSlave.behavioralQuirk to "arrogant">>
+<<set $activeSlave.sexualQuirk to "hates men">>
+
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+Your personal assistant alerts you that a criminal has been detected by your security systems and detained by the drones. Crime is extremely uncommon in your arcology, since nothing can escape the notice of the omnipresent monitoring systems. Nevertheless, it seems one of your tenants saw fit to rape a free woman. Within ten minutes, the inhuman efficiency of your personal assistant has compiled video recordings, physical evidence, and even the victim's testimony, which is quite consistent with the first two.
+
+Your wretched tenant signed a contract with you that included provisions forbidding this kind of thing. He is entirely at your mercy.
+
+//Applying enslavement as punishment will cost ¤$contractCost. Doing so and then selling her immediately will bring in approximately ¤$slaveCost.//
+
+<<set $saleDescription to 1>>\
+<<display "Long Slave Description">>\
+<<set $saleDescription to 0>>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave the wretch">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You complete the legalities and biometric scanning quickly and without fuss. The condemned sobs and begs throughout the process until you grow tired of the whining and apply punishment. Then it's off to the penthouse for basic slave induction.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<click "Sentence her to a day in the stocks, then enslave her">>
+	<<set $activeSlave.health -= 1>>
+	<<set $activeSlave.behavioralQuirk to "quirky">>
+	<<set $activeSlave.sexualQuirk to "hates men">>
+	<<set $activeSlave.anus to 2>>
+	<<if $activeSlave.vagina gt -1>>
+	  <<set $activeSlave.vagina to 2>>
+	  <<if random(1,100) gt 60>>
+		<<set $activeSlave.preg to 1>>
+	  <</if>>
+	<</if>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You declare her holes fair game for the entire arcology. She spends a torturous day in the stocks before being hauled in for enslavement, somewhat @@color:red;the worse for wear@@ and @@color:red;acting oddly@@ due to her ordeal, bruises all over her body, cum leaking from her @@color:lime;loosened@@ anus<<if $activeSlave.vagina gt -1>> and @@color:lime;fucked-out@@ pussy<</if>>. The public @@color:green;enjoys the fun.@@
+	<<set $rep += 100>>
+	<<set $nextLink to "AS Dump">>
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<if $arcade gt 0>>\
+<<click "Enslave the criminal and sentence her to a month in the arcade">>
+	<<set $activeSlave.assignment to "be confined in the arcade">>
+	<<set $activeSlave.assignmentVisible to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+	<<set $activeSlave.sentence to 4>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You complete the legalities and biometric scanning quickly and cautiously. The condemned sobs and begs throughout the process until you grow tired of the whining and sedate her for immurement in the arcade. The public @@color:green;looks forward@@ to seeing her there.
+	<<set $rep += 50>>
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<</if>>\
+<<click "Publicly geld and then enslave the criminal">>
+	<<set $activeSlave.devotion to random(-15,-20)>>
+    <<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+	<<set $activeSlave.behavioralQuirk to "quirky">>
+	<<set $activeSlave.balls to 0>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    Video feeds from your remote surgery are made public as the protesting criminal is strapped down and gelded. She is so utterly broken by this turn of events that you complete the legalities and biometric scanning without fuss. The condemned sobs weakly throughout the process until you grow tired of the whining and apply punishment. Then it's off to the penthouse for basic slave induction. The public @@color:green;approves of this harshness,@@ which increases your arcology's prosperity by @@color:green;giving it a reputation for swift and terrible justice.@@
+	<<set $AProsperity += 2>>
+	<<set $rep += 100>>
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+<<click "Publicly flog the criminal">>
+	<<replace "#result">>
+    Naturally, the wretch will be thrown out of the arcology: but an example must first be made. Free people must understand that criminals who commit outrages against them will be severely punished. The protesting malefactor is stripped and flogged on the main promenade before being escorted bleeding from the arcology. The public @@color:green;approves of this harshness.@@
+	<<set $rep += 100>>
+	<<set $nextLink to "RIE Eligibility Check">>\
+    <</replace>>
+<</click>>
+</span>

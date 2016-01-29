@@ -1,0 +1,49 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+Early one morning, <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> <<if ($activeSlave.heels is 1) and ($activeSlave.shoes isnot "heels") and ($activeSlave.shoes isnot "boots") and ($activeSlave.shoes isnot "extreme heels")>>crawls<<elseif ($activeSlave.shoes is "heels") or ($activeSlave.shoes is "boots") or ($activeSlave.shoes is "extreme heels")>>totters<<else>>walks<</if>> past your door stark naked, with a towel thrown over her shoulder. She's clearly moving from the gym to the showers after a hard workout; she's quite the iron pumper and gets up before anyone to protect her gains. She notices your gaze, so she subtly flexes for your benefit. Cords of muscle ripple along her massive thighs, washboard abs, ripped biceps, and strapping lats. <<if $activeSlave.dick gt 2>>Her massive cock completes the picture.<</if>>
+\
+<span id="result">
+<<click "Reward her for her gains">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You tell her to spread her towel on the floor and lie face down on it. You run your hands across her sweaty <<if $seeRace is 1>>$activeSlave.race <</if>>muscles before giving her a thorough, skillful and very intense massage. She moans and grunts as you work the lactose out of her muscles, slowly reducing her to a puddle of ripped sex slave. As you're rubbing her down to finish the massage, she meekly begs you to fuck her. As she lies still, <<if ($PC.dick is 0)>>you lift one of her legs and straddle yourself in to bring your groin against hers.<<else>>you slowly push your cock into her ass; she's so relaxed from the massage that it slides in easily.<</if>> It's a strange sensation, this mass of muscle lying quietly still beneath you, whimpering with delight as you gently <<if ($PC.dick is 0)>>scissor yourself against her<<else>>take her ass.<</if>> She comes in no time at all. When she does <<if ($PC.dick is 0)>>she squeezes you between vicelike thighs, bringing you to climax, too.<<else>>you happen to be halfway inside her; her sphincter mercilessly squeezes your head while her muscular buttocks clench your shaft between them. You explode into her.<</if>> <<if $activeSlave.dick isnot 0>>As she stands, her now-softening penis drips cum. <</if>>@@color:hotpink;Her love for you has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Take advantage of her gains with a powerfuck">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	It's time to see if she's got anything left in those sore <<if $seeRace is 1>>$activeSlave.race <</if>>muscles. You push the towel off her shoulder, take a lick of the delicious salty sweat along her collarbone, and get to work. For the next hour, you put her through a series of sexual positions that require her to balance and support herself in difficult positions. She hangs from the ceiling, goes up on one tiptoe, and fucks in a handstand. She's as muscular inside as she is outside. <<if ($PC.dick is 0)>>You climax repeatedly, mixing your pussy juice with her sweat all across her body.<<else>><<if $activeSlave.vagina is -1>>You come repeatedly, and before long cum is dripping out of her ass as you continue.<<else>>You come repeatedly, and before long cum is dripping out of her pussy as you continue.<</if>><</if>> <<if $activeSlave.dick isnot 0>>From position to position, her erection adds its own fluids to the mess on the floor. <</if>>By the end, she's shaking from muscle fatigue and panting her gratitude. @@color:mediumaquamarine;Her confidence in her place has increased.@@
+	<<set $activeSlave.trust += 1>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+    <</replace>>
+<</click>>
+<<click "Compliment her gains and send her on her way">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She finishes posing with an impressive display of her obliques. She walks powerfully to the shower, her ripped buttocks delineating each step. The shower is glass-walled. As she washes, several of your other slaves are waking up and starting their days. They can't help but stare as $activeSlave.slaveName soaps herself. $activeSlave.slaveName enjoys the attention.
+    <</replace>>
+<</click>>
+</span>

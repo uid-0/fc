@@ -1,0 +1,32 @@
+<<nobr>>
+
+<<if ($slaves[$i].devotion lt -10)>>
+	Whenever she is not being forced to do something else, $slaves[$i].slaveName is kept in solitary confinement. She still hates her place in the world, but being forced to rely on slave life as her only human contact @@color:hotpink;grinds down her resistance.@@
+	<<set $slaves[$i].devotion += 0.7>>
+<<elseif ($slaves[$i].devotion lte 4)>>
+	Whenever she is not doing something else, $slaves[$i].slaveName is kept in solitary confinement. With nothing to do but look forward to the next time she's let out to serve, @@color:hotpink;she begins to rely on servitude.@@
+	<<set $slaves[$i].devotion += 0.3>>
+<<elseif ($slaves[$i].devotion lte 10)>>
+	Whenever she is not doing something else, $slaves[$i].slaveName accepts solitary confinement. Since she is obedient, the mental torture neither breaks her further nor causes her to hate you.
+<<else>>
+	Whenever she is not doing something else, $slaves[$i].slaveName accepts solitary confinement. She spends her time wondering hopelessly how she has failed you, @@color:mediumorchid;damaging her devotion to you.@@
+	<<set $slaves[$i].devotion -= 0.3>>
+<</if>>
+
+<<if ($slaves[$i].trust lt -10)>>
+	She is so terrified of you that this confinement does not make her fear you any more.
+<<elseif ($slaves[$i].trust lt -4)>>
+	She is already afraid of you, but this confinement makes her @@color:gold;fear you even more.@@
+	<<set $slaves[$i].trust -= 0.3>>
+<<elseif ($slaves[$i].trust lte 4)>>
+	This confinement makes her @@color:gold;fear your power@@ over her.
+	<<set $slaves[$i].trust -= 0.7>>
+<<else>>
+	This confinement makes her @@color:gold;trust you less,@@ and fear you more.
+	<<set $slaves[$i].trust -= 1>>
+<</if>>
+
+The stress of confinement @@color:red;damages her health@@.
+<<set $slaves[$i].health -= 1>>
+
+<</nobr>>\

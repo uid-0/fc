@@ -1,0 +1,53 @@
+<<nobr>>
+
+<<if ($activeSlave.clothes is "a very tight corset")>>
+	Her corset forces her breasts up and out.
+<<elseif ($activeSlave.clothes is "uncomfortable straps")>>
+	The strap over her tits presses the soft flesh, and the ring around each nipple forces them to stick out.
+<<elseif ($activeSlave.clothes is "restrictive latex")>>
+	Her tits stick out through her latex outfit.
+<<elseif ($activeSlave.clothes is "attractive lingerie")>>
+	Her pretty white lace bra has thoughtful cuts that tastefully let her nipples stick through.
+<<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+	Her maid outfit covers her breasts with a thin white blouse designed to be easy to pull down.
+<<elseif ($activeSlave.clothes is "a nice maid outfit")>>
+	Her maid outfit covers her breasts demurely, offering the diverting task of pulling it off her.
+<<elseif ($activeSlave.clothes is "string lingerie")>>
+	Her string bikini covers only her nipples, leaving the remainder of her breasts naked.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt")>>
+	Her tits are bare under her t-shirt, so movement gives delicious hints of their motion.
+<<elseif ($activeSlave.clothes is "a slutty outfit") and (random(1,100) gt 50)>>
+	For today's slutty outfit she's chosen a handkerchief top that occasionally comes untied and spills her breasts out naked.
+<<elseif ($activeSlave.clothes is "a slutty outfit")>>
+	For today's slutty outfit she's chosen a halter top cut so low that her breasts occasionally pop out.
+<<elseif ($activeSlave.clothes is "a slave gown")>>
+	Her gorgeous dress has thoughtful cuts that tastefully bares her breasts.
+<<elseif ($activeSlave.clothes is "slutty business attire")>>
+	Her suit jacket and blouse are low enough to show off a lot of boob.
+<<elseif ($activeSlave.clothes is "nice business attire")>>
+	Her suit jacket and blouse are businesslike, but they could be removed easily enough.
+<<elseif ($activeSlave.clothes is "a nurse outfit")>>
+	Her jacket presents her breasts to be ogled.
+<<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+	Her blouse lewdly displays her breasts.
+<<elseif ($activeSlave.clothes is "a kimono")>>
+<<elseif ($activeSlave.clothes is "a hijab")>>
+<<elseif ($activeSlave.clothes is "battledress")>>
+	Her tank top and sports bra support rather than flatter her breasts.
+<<elseif ($activeSlave.clothes is "a fallen nun's habit")>>
+	Her slutty nun outfit leaves her tits sinfully bare.	
+<<elseif ($activeSlave.clothes is "a penitent nun's habit")>>
+	Her habit chafes her nipples so harshly that it would probably be a relief to her to have it stripped off her.
+<<elseif ($activeSlave.clothes is "a comfortable bodysuit")>>
+	Her bodysuit is tight enough to show off every contour of her chest.
+<<elseif ($activeSlave.clothes is "harem gauze")>>
+	Her breasts are clearly visible through the thin gauze that covers them.
+<<elseif ($activeSlave.clothes is "slutty jewelry")>>
+	The light chain under her breasts accentuates their natural movement.
+<<elseif ($activeSlave.vaginalAccessory is "chastity belt")>>
+	Since she's wearing nothing but a chastity belt, her breasts are delightfully naked.
+<<else>>
+	Her naked breasts catch your eye.
+<</if>>
+
+<</nobr>>

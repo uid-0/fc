@@ -1,0 +1,268 @@
+<<nobr>>
+
+/*
+ 
+<<if $slaves[$i].fetish is "mindbroken">>
+	mind is not capable of anything but dull obedience;
+<<elseif $slaves[$i].devotion gte 18>>
+	regard for you is so total it does not degrade;
+	<<set $slaves[$i].devotion to 20>>
+<<elseif ($slaves[$i].devotion gte 17) and ($slaves[$i].assignmentVisible is 0)>>
+	<<set $slaves[$i].devotion to 20>>
+<<elseif $slaves[$i].devotion gte 10>>
+	high regard for you naturally degrades;
+	<<set $slaves[$i].devotion -= 0.3*Math.trunc($slaves[$i].devotion)/3>>
+<<elseif $slaves[$i].devotion gte 0>>
+	regard for you naturally degrades;
+	<<set $slaves[$i].devotion -= 0.3*Math.trunc($slaves[$i].devotion)/3>>
+<<else>>
+	regard for you is still low;
+<</if>>
+
+*/
+
+<<if $slaves[$i].fetish is "mindbroken">>
+	$slaves[$i].slaveName's mind is not capable of anything but dull obedience, and she has forgotten any skill she acquired over the week.
+	<<set $slaves[$i].vaginalSkill to 1>>
+	<<set $slaves[$i].analSkill to 1>>
+	<<set $slaves[$i].oralSkill to 1>>
+	<<set $slaves[$i].whoreSkill to 1>>
+	<<set $slaves[$i].entertainSkill to 1>>
+	<<set $slaves[$i].intelligence to -2>>
+<<else>>
+
+<<if $slaves[$i].devotion gt 19>>
+  <<if $slaves[$i].trust lte 4>>
+  	She loves you, so she finds herself @@color:mediumaquamarine;fearing you a little less.@@
+	<<set $slaves[$i].trust += 0.3>>
+  <<elseif $slaves[$i].trust lte 10>>
+  	She loves you, so she finds herself @@color:mediumaquamarine;trusting you a little more.@@
+	<<set $slaves[$i].trust += 0.3>>
+  <</if>>
+<<elseif $slaves[$i].devotion gt 10>>
+  <<if $slaves[$i].trust lte 4>>
+  	She is devoted to you, so she finds herself @@color:mediumaquamarine;fearing you a little less.@@
+	<<set $slaves[$i].trust += 0.3>>
+  <</if>>
+<<elseif $slaves[$i].devotion lt -10>>
+  <<if $slaves[$i].trust gt 4>>
+  	She hates you, so she finds herself @@color:gold;trusting you a little less.@@
+	<<set $slaves[$i].trust -= 0.3>>
+  <</if>>
+<</if>>
+<<if $slaves[$i].trust gt 19>>
+  <<if $slaves[$i].devotion lte 4>>
+  	She trusts you implicitly, so she finds herself @@color:hotpink;hating you a little less.@@
+	<<set $slaves[$i].devotion += 0.3>>
+  <<elseif $slaves[$i].devotion lte 10>>
+  	She trusts you implicitly, so she finds herself @@color:hotpink;liking you a little more.@@
+	<<set $slaves[$i].devotion += 0.3>>
+  <</if>>
+<<elseif $slaves[$i].trust gt 10>>
+  <<if $slaves[$i].devotion lte 4>>
+  	She is trusts you, so she finds herself @@color:hotpink;hating you a little less.@@
+	<<set $slaves[$i].devotion += 0.3>>
+  <</if>>
+<<elseif $slaves[$i].trust lt -10>>
+  <<if $slaves[$i].devotion gt 4>>
+  	She is terrified of you, so she finds herself @@color:mediumorchid;liking you a little less.@@
+	<<set $slaves[$i].devotion -= 0.3>>
+  <</if>>
+<</if>>
+
+<<if $slaves[$i].devotion lt 19>>
+
+<<if $slaves[$i].devotion lt 4>>
+<<if $slaves[$i].devotion gte -10>>
+<<if $slaves[$i].trust gt 4>>
+  She does not like you and believes that you will not punish her severely, and her @@color:mediumorchid;regard for you is severely reduced@@ by this lack of respect.
+	<<set $slaves[$i].trust -= 0.7>>
+<<elseif $slaves[$i].trust gte -4>>
+  She neither likes nor fears you, and her @@color:mediumorchid;regard for you is reduced@@ by this lack of respect.
+	<<set $slaves[$i].trust -= 0.3>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if $slaves[$i].intelligence gte 2>>
+  <<if $personalAttention == $slaves[$i].ID>>
+	Her @@color:deepskyblue;highly acute mind@@ naturally resists slavery, but since you are giving her personal attention you are able to compensate for her intelligence.
+  <<else>>
+	<<if $slaves[$i].trust lt -4>>
+	  Her @@color:deepskyblue;highly acute mind@@ naturally resists slavery, but she fears you deeply enough that she consciously forces herself to obey out of self-preservation.
+	<<else>>
+	  Her @@color:deepskyblue;highly acute mind@@ naturally @@color:mediumorchid;resists@@ slavery and encourages her to @@color:gold;fear you.@@
+	  <<set $slaves[$i].devotion -= 0.3>>
+	  <<set $slaves[$i].trust -= 0.3>>
+	<</if>>
+  <</if>>
+<<elseif $slaves[$i].intelligence gte 1>>
+  <<if $personalAttention == $slaves[$i].ID>>
+	Her @@color:deepskyblue;intelligent mind@@ naturally resists slavery, but since you are giving her personal attention you are able to compensate for her cleverness.
+  <<else>>
+	<<if $slaves[$i].trust lt -4>>
+	  Her @@color:deepskyblue;intelligent mind@@ naturally resists slavery, but she fears you deeply enough that she consciously forces herself to obey out of self-preservation.
+	<<else>>
+	  Her @@color:deepskyblue;intelligent mind@@ naturally @@color:mediumorchid;resists@@ slavery.
+	  <<set $slaves[$i].devotion -= 0.3>>
+	<</if>>
+  <</if>>
+<<elseif $slaves[$i].intelligence lte -2>>
+	Her @@color:orangered;idiotic mind@@ naturally @@color:hotpink;accepts@@ slavery, and she's stupid enough to instinctively @@color:mediumaquamarine;trust you@@ to know what's best.
+	<<set $slaves[$i].devotion += 0.3>>
+	<<set $slaves[$i].trust += 0.3>>
+<<elseif $slaves[$i].intelligence lte -1>>
+	Her @@color:orangered;unintelligent mind@@ naturally @@color:hotpink;accepts@@ slavery.
+	<<set $slaves[$i].devotion += 0.3>>
+<</if>>
+
+<</if>>
+
+<<if ($FSPaternalist gte random(1,100)) or ($FSChattelReligionist gte random(1,100))>>
+  The culture of your arcology encourages her to @@color:mediumaquamarine;trust you.@@
+  <<set $slaves[$i].trust += 0.3>>
+<</if>>
+
+<<if $slaves[$i].devotion gt -4>>
+
+<<if $slaves[$i].devotion gte ($slaves[$i].oldDevotion+1)>>
+  <<if $FSChattelReligionist gte random(1,100)>>
+	The natural resilience of her mind is overcome by the omnipresent combination of faith and servitude in your arcology, and she does not resist her progress down the path towards total subservience.
+  <<elseif $slaves[$i].devotion lt 19>>
+	So many things served to drive her into subservience this week that her mind @@color:mediumorchid;rebounds a little.@@
+	<<set $slaves[$i].devotion to ($slaves[$i].oldDevotion+1)>>
+  <</if>>
+<</if>>
+
+<<else>>
+
+<<if $slaves[$i].devotion gte ($slaves[$i].oldDevotion+1)>>
+<<if $slaves[$i].behavioralQuirk is "arrogant">>
+	Though she made progress this week, @@color:mediumorchid;it is limited by her arrogance.@@
+	<<set $slaves[$i].devotion to ($slaves[$i].oldDevotion+1)>>
+<<elseif $slaves[$i].behavioralQuirk is "bitchy">>
+	Though she made progress this week, @@color:mediumorchid;it is limited by the independence she regains by making snide comments.@@
+	<<set $slaves[$i].devotion to ($slaves[$i].oldDevotion+1)>>
+<</if>>
+<</if>>
+
+<</if>>
+
+<<if $slaves[$i].trust gt -4>>
+
+<<if $slaves[$i].trust gte ($slaves[$i].oldTrust+1)>>
+  <<if $FSChattelReligionist gte random(1,100)>>
+	Any natural doubts she harbors are overcome by the omnipresent combination of faith and servitude in your arcology, and she does not resist her progress down the path towards total trust in you.
+  <<elseif $slaves[$i].trust lt 19>>
+	She gained so much trust in you this week that she @@color:gold;draws back a little@@ out of self-doubt.
+	<<set $slaves[$i].trust to ($slaves[$i].oldTrust+1)>>
+  <</if>>
+<</if>>
+
+<<else>>
+
+<<if $slaves[$i].trust gte ($slaves[$i].oldTrust+1)>>
+<<if ($slaves[$i].behavioralQuirk is "quirky") and ($slaves[$i].collar isnot "shock punishment")>>
+	Though she made progress this week, @@color:gold;it is limited by her preoccupation with her own oddities.@@
+	<<set $slaves[$i].trust to ($slaves[$i].oldTrust+1)>>
+<</if>>
+<</if>>
+
+<</if>>
+ 
+<<if $slaves[$i].devotion gte 18>>
+	<<set $slaves[$i].devotion to 20>>
+<<elseif ($slaves[$i].devotion gte 17) and ($slaves[$i].assignmentVisible is 0)>>
+	<<set $slaves[$i].devotion to 20>>
+<<elseif ($slaves[$i].devotion lte -19)>>
+	<<set $slaves[$i].devotion to -20>>
+<</if>>
+<<if $slaves[$i].trust gte 18>>
+	<<set $slaves[$i].trust to 20>>
+<<elseif ($slaves[$i].trust gte 17) and ($slaves[$i].assignmentVisible is 0)>>
+	<<set $slaves[$i].trust to 20>>
+<<elseif ($slaves[$i].trust lte -19)>>
+	<<set $slaves[$i].trust to -20>>
+<</if>>
+
+<<if ($slaves[$i].devotion is 20)>>
+	Her @@color:hotpink;worshipfulness is beyond improvement,@@ and her
+<<elseif ($slaves[$i].devotion gt 10) and ($slaves[$i].devotion gt $slaves[$i].oldDevotion)>>
+	Her @@color:hotpink;devotion increased@@ and her
+<<elseif ($slaves[$i].devotion gt 10) and ($slaves[$i].devotion is $slaves[$i].oldDevotion)>>
+	Her @@color:yellow;devotion did not change@@ and her
+<<elseif ($slaves[$i].devotion gt 10)>>
+	Her @@color:mediumorchid;devotion dropped@@ and her
+<<elseif ($slaves[$i].devotion gte -4) and ($slaves[$i].devotion gt $slaves[$i].oldDevotion)>>
+	Her @@color:hotpink;regard for you increased@@ and her
+<<elseif ($slaves[$i].devotion gte -4) and ($slaves[$i].devotion is $slaves[$i].oldDevotion)>>
+	Her @@color:yellow;regard for you did not change@@ and her
+<<elseif ($slaves[$i].devotion gte -4)>>
+	Her @@color:mediumorchid;her regard for you dropped@@ and her
+<<elseif ($slaves[$i].devotion gt $slaves[$i].oldDevotion)>>
+	Her @@color:hotpink;resistance dropped@@ and her
+<<elseif ($slaves[$i].devotion is $slaves[$i].oldDevotion)>>
+	Her @@color:yellow;resistance did not change@@ and her
+<<else>>
+	Her @@color:mediumorchid;resistance increased@@ and her
+<</if>>
+
+<<if ($slaves[$i].trust is 20)>>
+	@@color:hotpink;trust in you is total.@@
+<<elseif ($slaves[$i].trust gt 4) and ($slaves[$i].trust gt $slaves[$i].oldTrust)>>
+	@@color:mediumaquamarine;trust improved@@ this week.
+<<elseif ($slaves[$i].trust gt 4) and ($slaves[$i].trust is $slaves[$i].oldTrust)>>
+	@@color:yellow;trust did not change@@ this week.
+<<elseif ($slaves[$i].trust gt 4)>>
+	@@color:gold;trust dropped@@ this week.
+<<elseif ($slaves[$i].trust gt $slaves[$i].oldTrust)>>
+	@@color:mediumaquamarine;fear dropped@@ this week.
+<<elseif ($slaves[$i].trust is $slaves[$i].oldTrust)>>
+	@@color:yellow;fear did not change@@ this week.
+<<else>>
+	@@color:gold;fear increased@@ this week.
+<</if>>
+
+<<if ($slaves[$i].devotion gt 10) and ($slaves[$i].oldDevotion lte 10)>>
+	@@color:green;She has gone from accepting her position to being devoted to you!@@
+	<<set $slaves[$i].devotion += 0.3>>
+<<elseif ($slaves[$i].devotion gt 4) and ($slaves[$i].oldDevotion lte 4)>>
+	@@color:green;She has gone from being ambivalent toward you to accepting your ownership of her!@@
+	<<set $slaves[$i].devotion += 0.3>>
+<<elseif ($slaves[$i].devotion gte -4) and ($slaves[$i].oldDevotion lt -4)>>
+	@@color:green;She has gone from disliking you to being ambivalent about you!@@
+	<<set $slaves[$i].devotion += 0.3>>
+<<elseif ($slaves[$i].devotion gte -10) and ($slaves[$i].oldDevotion lt -10)>>
+	@@color:green;She has gone from hating you to merely disliking you!@@
+	<<set $slaves[$i].devotion += 0.3>>
+<</if>>
+
+<<if ($slaves[$i].trust gt 10) and ($slaves[$i].oldTrust lte 10)>>
+	@@color:green;She has gone from being careful around you to trusting you!@@
+	<<set $slaves[$i].trust += 0.3>>
+<<elseif ($slaves[$i].trust gt 4) and ($slaves[$i].oldTrust lte 4)>>
+	@@color:green;She has gone from fearing you to merely being careful around you!@@
+	<<set $slaves[$i].trust += 0.3>>
+<<elseif ($slaves[$i].trust gte -4) and ($slaves[$i].oldTrust lt -4)>>
+  <<if ($slaves[$i].devotion gt 4)>>
+	@@color:green;She has gone from being afraid of you to being merely fearful!@@
+	<<set $slaves[$i].trust += 0.3>>
+  <<else>>
+	@@color:red;She has gone from being afraid of you to being merely fearful!@@
+	<<set $slaves[$i].trust += 0.3>>
+  <</if>>
+<<elseif ($slaves[$i].trust gte -10) and ($slaves[$i].oldTrust lt -10)>>
+	@@color:green;She has gone from being terrified to being merely afraid of you!@@
+	<<set $slaves[$i].trust += 0.3>>
+<</if>>
+
+<<if ($slaves[$i].lt -4) and ($slaves[$i].oldTrust gte -4)>>
+  <<if ($slaves[$i].devotion lt 4)>>
+	@@color:green;She has gone from merely fearing you to actively being afraid of you!@@
+	<<set $slaves[$i].trust -= 0.3>>
+  <</if>>
+<</if>>
+
+<</if>>
+
+<</nobr>>\

@@ -1,0 +1,16 @@
+<<nobr>>
+  <<if ($activeSlave.fetish isnot "mindbroken")>>
+	<<if ($activeSlave.trust gt 6)>>
+	  She was so trusting of you that this @@color:gold;badly shakes@@ her faith in you.
+	  <<set $activeSlave.trust -= 3>> 
+	<<elseif ($activeSlave.trust gt 2)>>
+	  She was fairly trusting of you, so this @@color:gold;shakes@@ her faith in you.
+	  <<set $activeSlave.trust -= 2>> 
+	<<elseif ($activeSlave.trust gte -2)>>
+	  She did not expect this from you, so this makes her @@color:gold;fearful@@ of what's next.
+	  <<set $activeSlave.trust -= 1>>   
+	<<else>>
+	  She was already scared of you, so she's not surprised by this.
+	<</if>>
+  <</if>>
+<</nobr>>\

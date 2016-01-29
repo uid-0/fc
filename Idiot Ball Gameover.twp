@@ -1,0 +1,5 @@
+You move to deal $Bodyguard.slaveName a slap across the face. You have an instant to realize the depth of your folly as her combat training kicks into gear: before she realizes what she's doing, she has drawn her sword, blocked your slap (and incidentally, removed your hand in doing so), and buried the sword in your chest on the riposte. Her devotion returns to her as her combat instincts subside. As you fade, you see her eyes cloud with terrible, unhealable guilt; in one sure movement, she draws her weapon, sets it to semi-automatic, places it under her chin, and fires a single round.
+
+''GAME OVER''
+
+<<set $ui to "start">>

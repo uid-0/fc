@@ -1,0 +1,408 @@
+<<nobr>>
+
+<<set $encyclopedia to "">>
+
+<<if $specialSlave is 1>>
+<<for $i to 0; $i lt $heroSlaves.length; $i++>>
+<<if $activeSlave.ID == $heroSlaves[$i].ID>>
+<<set $dump to $heroSlaves.pluck($i)>>
+<<set $specialSlave to 0>>
+<</if>>
+<</for>>
+<</if>>
+
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.oldTrust to $activeSlave.trust>>
+
+<<if $activeSlave.dick gt 0>>
+    <<set $activeSlave.preg to -2>>
+<</if>>
+
+<<if $activeSlave.vagina lt 0>>
+    <<set $activeSlave.vaginalSkill to 0>>
+<</if>>
+
+<<if ($activeSlave.relation is 0)>>
+<<if random(1,100) lte 5>>
+  <<set $activeSlave.recruiter to "twin">>
+<<elseif ($activeSlave.age gt 32) and (random(1,100) lte 41)>>
+  <<set $activeSlave.recruiter to "mother">>
+<<elseif ($activeSlave.age lt 24) and (random(1,100) lte 40)>>
+  <<set $activeSlave.recruiter to "daughter">>
+<<elseif ($activeSlave.age lt 43) and (random(1,100) lte 20)>>
+  <<set $activeSlave.recruiter to "older sister">>
+<<elseif ($activeSlave.age lt 25) and ($activeSlave.age gt 18) and (random(1,100) lte 20)>>
+  <<set $activeSlave.recruiter to "young sister">>
+<</if>>
+<</if>>
+
+The legalities completed, ''__@@color:pink;$activeSlave.slaveName@@__'' <<if ($activeSlave.amp is 0)>>stands before your desk,<<else>>lies helplessly on your desk,<</if>>
+<<if $activeSlave.devotion lt -5>>
+	looking you in the eyes with defiance.
+<<elseif $activeSlave.devotion lt -2>>
+	looking at you sullenly.
+<<elseif $activeSlave.devotion lte 2>>
+	staring at the ground in fear.
+<<elseif $activeSlave.devotion lte 5>>
+	waiting meekly for orders.
+<<elseif $activeSlave.origin is "She submitted to enslavement to escape the hard life of an Old World whore.">>
+	wondering what one of your working girls can expect.
+<<elseif ($activeSlave.origin is "She submitted to enslavement to get access to modern prenatal care.") or ($activeSlave.origin is "She sold herself into slavery out of fear that life on the streets was endangering her pregnancy.")>>
+	hoping you'll give her modern medicine right away.
+<<elseif $activeSlave.origin is "She submitted to enslavement as her only way to obtain surgery to transform her into a woman.">>
+	hoping you'll schedule her reassignment surgery immediately.
+<<elseif $activeSlave.origin is "She submitted to enslavement out of a misguided desire to join a sexually libertine society.">>
+	hoping she's made the right decision, and fantasizing a little, to go by her half-hard dick.
+<<elseif $activeSlave.origin is "She submitted to enslavement for a better chance at survival than she had as a migrant.">>
+	wondering what life as a sex slave will be like.
+<<else>>
+	looking shyly at you and blushing.
+<</if>>
+    
+<</nobr>>
+\
+<<nobr>>
+<span id="rules">
+<<click "Apply default rules">>
+
+<<replace "#rules">>
+	<<display "Default Rules">>
+<</replace>>
+
+<</click>> <<if $activeSlave.devotion lte 4>>//Will not apply many cosmetic and surgical options since she is not obedient//<</if>>
+</span>
+<</nobr>>
+
+<span id="diet">//Now might be a good time to introduce her to life in your stable of sex slaves.//
+<<nobr>>
+
+<<if $activeSlave.origin is "She submitted to enslavement to escape the hard life of an Old World whore.">>
+  <<click "Brand her to introduce her to life as a slave whore">>
+	  <<set $activeSlave.brand to $brandDesign>>
+	  <<set $activeSlave.brandLocation to $brandTarget>>
+	  <<set $activeSlave.devotion -= 1>>
+	  <<set  $activeSlave.trust -= 2>>
+	  <<set $activeSlave.health -= 1>>
+	  <<set $activeSlave.analCount += 1>>
+	  <<set $analTotal += 1>>
+  <<replace "#diet">>
+	  You tell her you'll be marking her as one of your working girls. She looks resigned as she follows you to the body modification studio, and lets you strap her down with her $brandTarget bare. She understands what's coming. You've got her positioned just right, so your cock slides up her experienced asshole easily. You bring the brand in close so she can feel the radiated heat, which breaks through even her jaded exterior and makes her tighten with fear. When you're close, you apply the brand, making the poor whore cinch her sphincter down hard in agony, bringing you to climax. She knows you know how to @@color:gold;apply pain,@@ now, and she @@color:mediumorchid;learns to dislike you@@ even as her @@color:red;wound@@ heals.
+  <</replace>>
+  <</click>>
+  <br>
+<<elseif $activeSlave.origin is "She submitted to enslavement to get access to modern prenatal care.">>
+  <<click "Manipulate her fear for her pregnancy">>
+	  <<set $activeSlave.devotion += 1>>
+	  <<set  $activeSlave.trust -= 2>>
+	  <<set $activeSlave.oralCount += 1>>
+	  <<set $oralTotal += 1>>
+  <<replace "#diet">>
+	  You place a curative injector on your desk, and describe its remarkable medical powers in detail, before mentioning its extreme cost. Her face rises at the first part and falls at the second. You tell her that if she's a perfect sex slave, she'll get as much as she needs, and that she can start by sucking you off. She grunts a little as she hurries to get her pregnant body down to her knees, but works your cock with almost desperate enthusiasm. You stroke her hair comfortingly as she does, and inject the healing dose into her shoulder. She murmurs her @@color:hotpink;gratitude@@ into your dick, but @@color:gold;fears@@ for her pregnancy.
+  <</replace>>
+  <</click>>
+  <br>
+<<elseif $activeSlave.origin is "She submitted to enslavement for a better chance at survival than she had as a migrant.">>
+  <<click "Introduce her to anal service">>
+	  <<set $activeSlave.devotion += 1>>
+	  <<set  $activeSlave.trust += 1>>
+	  <<set $activeSlave.anus += 1>>
+	  <<set $activeSlave.analSkill += 1>>
+	  <<set $activeSlave.analCount += 1>>
+	  <<set $analTotal += 1>>
+  <<replace "#diet">>
+	  You carefully and patiently explain to the fearful anal virgin how skilled Free Cities slaves take dick up the butt. She is allowed to go at her own pace, hesitantly progressing from enemata to a single well-lubricated finger to a little plug. After a long while she's beginning to get aroused, and you bring her over to the couch to spoon. She stiffens with fear but you take your time and just cuddle for a while before gently sodomizing her. She @@color:hotpink;thanks@@ you for being a @@color:mediumaquamarine;kind master,@@ and has @@color:green;learned@@ the basics of taking it up the ass.
+  <</replace>>
+  <</click>>
+   | <<click "Initiate her with anal pain">>
+	  <<set $activeSlave.devotion -= 1>>
+	  <<set  $activeSlave.trust -= 2>>
+	  <<set $activeSlave.anus += 1>>
+	  <<set $activeSlave.analCount += 1>>
+	  <<set $analTotal += 1>>
+  <<replace "#diet">>
+	  You haul her wordlessly into the bathroom. In a few minutes she finds herself standing obediently behind you, waiting for your next command with a clean colon and an uncomfortably large buttplug stretching her virgin ass. Once it's been in long enough to prevent any damage, you push her fearful form over the desk and pull it free. She squeals with more embarrassment than pain at the feeling of her first sodomy, but before long you're pounding her hard enough that all she can do is moan and desperately wonder when you'll be done with her poor little butt. You keep her around all day; by night, her asshole is well broken in and @@color:mediumorchid;so is her spirit.@@ She @@color:gold;fears@@ you now, knowing this is only the beginning.
+  <</replace>>
+  <</click>>
+  <br>
+<<elseif $activeSlave.origin is "She submitted to enslavement as her only way to obtain surgery to transform her into a woman.">>
+  <<click "Give her her surgery">>
+	  <<set $activeSlave.devotion += 3>>
+	  <<set $activeSlave.health -= 1>>
+	  <<set  $activeSlave.trust += 2>>
+	  <<set $activeSlave.vagina to 0>>
+	  <<set $activeSlave.dick to 0>>
+	  <<set $activeSlave.balls to 0>>
+  <<replace "#diet">>
+	  When she hears she'll be heading to surgery immediately, she bursts into @@color:hotpink;tears of gratitude@@ and makes to run around your desk to hug you before checking herself. She clearly doesn't want to put a foot wrong and isn't sure it would be appropriate. You solve her dilemma by meeting her with an embrace. She @@color:mediumaquamarine;cries into your chest@@ and promises to be your best slave. The surgery does affect her @@color:red;health@@ a little.
+  <</replace>>
+  <</click>>
+   | <<click "Use her as she is">>
+	  <<set $activeSlave.devotion += 1>>
+	  <<set $activeSlave.anus += 1>>
+	  <<set $activeSlave.analCount += 1>>
+	  <<set $analTotal += 1>>
+  <<replace "#diet">>
+	  You announce that she'll have to earn her surgery - if she ever gets it at all. She only has time for a moment of shock and betrayal before she finds her face jammed into the cushions of your office couch. She struggles, outraged, but only manages to avoid sodomy for a moment. Her resistance only makes it harder on herself as you take her anus without mercy. By the third time you buttfuck her she's learned to @@color:hotpink;relax and let it happen.@@
+  <</replace>>
+  <</click>>
+  <br>
+<<elseif $activeSlave.origin is "She submitted to enslavement out of a misguided desire to join a sexually libertine society.">>
+  <<click "Disabuse her of her silly ideas">>
+	  <<set $activeSlave.devotion -= 1>>
+	  <<set  $activeSlave.trust -= 2>>
+	  <<set $activeSlave.analCount += 1>>
+	  <<set $analTotal += 1>>
+  <<replace "#diet">>
+	  You rise from your desk and move in close. She turns to face you but you roughly spin her around. You haul her up on tiptoe so you can use her standing. As you get your cock lined up with her sissy ass she starts to struggle and protest, asking you to fuck in a more comfortable position. You tell her to keep her whore mouth shut, and administer an awful slap when she tries to keep talking. Her stupid illusions about life as a sex slave @@color:mediumorchid;melt away@@ with the burning sensation of a dick forcing its way up her ass at an harsh angle. She wilts a little as you abuse her butt, and afterward, she's in tears as she stumbles to the bathroom to wash out her fuckhole. She's regained her composure by the time she gets out but @@color:gold;breaks down@@ when you tell her to present her asshole again.
+  <</replace>>
+  <</click>>
+   | <<click "Cruelly castrate her">>
+	  <<set $activeSlave.devotion -= 2>>
+	  <<set $activeSlave.trust to -7>>
+	  <<set $activeSlave.health -= 1>>
+	  <<set $activeSlave.balls to 0>>
+	  <<set $activeSlave.analCount += 1>>
+	  <<set $analTotal += 1>>
+  <<replace "#diet">>
+	  You rise from your desk and move in close, wordlessly dominating her without touch, tempting and overawing her until she's desperate with desire, her prick stiff as iron. She follows you willingly into the autosurgery and even allows you to strap her in, face down, without comment. Her fuckhole welcomes your cock and she gasps with pleasure. She climaxes with indecent speed, dripping her cum onto the surgery floor. You keep fucking her, but lean forward to whisper to her that that was her last hardon. She's completely confused and says nothing, but gradually realizes what the numb feeling around her ballsack means. She @@color:gold;screams with horror@@ and @@color:mediumorchid;sobs disconsolately@@ as the autosurgery disengages from her clipped genitals and you disengage from her cum-filled butthole. She gingerly stumbles back to your office with you and, without even being ordered to, arranges herself on the couch with her fuckhole ready. The gelding does affect her @@color:red;health@@ somewhat.
+  <</replace>>
+  <</click>>
+  <br>
+  
+/*Written by DrPill, coded by Boney M*/
+<<elseif $activeSlave.origin is "She was recruited into your service by her sister.">>
+  <<click "Use her sister as an example">>
+  <<set $activeSlave.devotion += 1>>
+  <<set $activeSlave.trust += 1>>
+	<<replace "#diet">>
+	  Your new slave appears <<if $activeSlave.devotion lt -2>>reluctant to assume her new duties.<<else>>unsure what her new duties are.<</if>> You gesture towards $recruiterSister.name. She is <<if $recruiterSister.intelligence gt 0>>bright enough<<elseif (($recruiterSister.fuckSkill + $recruiterSister.analSkill + $recruiterSister.oralSkill) gt 2)>>skilled enough<<else>>obedient enough<</if>> to understand you mean a demonstration is in order. $recruiterSister.name starts things off with a <<if $recruiterSister.entertainSkill gt 2>>masterful<<elseif $recruiterSister.entertainSkill gt 0>>skilful<<else>>passable<</if>> striptease, culminating in <<if ($recruiterSister.anus gt 0) and ($recruiterSister.fetish isnot "cumslut")>>bending over<<else>>kneeling<</if>> in front of you. She eagerly moans as you enter her, begging for your seed<<if $recruiterSister.fetish is "nympho">> like the slut she is.<<elseif $recruiterSister.whoreSkill gt 1>> like the whore she is<<elseif ($recruiterSister.assignment is "serve in the master suite") or ($recruiterSister.assignment is "please you")>> like the fucktoy she is<</if>>. As you finish, she <<if $recruiterSister.fetish is "cumslut">>opens her mouth and savors your gift, thanking you once she's swallowed enough to be able to talk again.<<elseif ($recruiterSister.fetish is "buttslut") or ($recruiterSister.fetish is "submissive")>>collapses on the floor with her ass high in the air, thanking you for painting her hole white.<<else>>thanks you.<</if>> Witnissing this display of servitude from her big sister @@color:hotpink;eases $activeslave.name into her new life,@@ and @@color:mediumaquamarine;gives her hope@@ she can find a place here.
+	<</replace>>
+  <</click>>
+  <br>
+<<elseif $activeSlave.origin is $activeSlave.origin is "She was recruited into your service by her mother.">>
+  <<click "Use her mother as an example">>
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.trust += 1>>
+	<<replace "#diet">>
+	  You gesture towards $recruiterMother.name. She is <<if $recruiterMother.intelligence gt 0>>bright enough<<elseif (($recruiterMother.fuckSkill + $recruiterMother.analSkill + $recruiterMother.oralSkill) gt 2)>>skilled enough<<else>>obedient enough<</if>> to understand you mean a demonstration is in order. $recruiterMother.name starts things off with a <<if $recruiterMother.entertainSkill gt 2>>masterful<<elseif $recruiterMother.entertainSkill gt 0>>skilful<<else>>passable<</if>> striptease, culminating in <<if ($recruiterMother.anus gt 0) and ($recruiterMother.fetish isnot "cumslut")>>bending over<<else>>kneeling<</if>> in front of you. She eagerly moans as you enter her, begging for your seed<<if $recruiterMother.fetish is "nympho">> like the slut she is.<<elseif $recruiterMother.whoreSkill gt 1>> like the whore she is<<elseif ($recruiterMother.assignment is "serve in the master suite") or ($recruiterMother.assignment is "please you")>> like the fucktoy she is<</if>>. As you finish, she <<if $recruiterMother.fetish is "cumslut">>opens her mouth and savors your gift, thanking you once she's swallowed enough to be able to talk again.<<elseif ($recruiterMother.fetish is "buttslut") or ($recruiterMother.fetish is "submissive")>>collapses on the floor with her ass high in the air, thanking you for painting her hole white.<<else>>thanks you.<</if>> Witnissing this display of servitude from her mother @@color:hotpink;eases $activeslave.name into her new life,@@ and @@color:mediumaquamarine;gives her hope@@ she can find a place here.
+	<</replace>>
+  <</click>>
+  <br>
+  
+<</if>>
+
+<<click "Brand her">>
+    <<set $activeSlave.brand to $brandDesign>>
+    <<set $activeSlave.brandLocation to $brandTarget>>
+    <<set $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.health -= 1>>
+<<replace "#diet">>
+	You drag her to the body modification studio and strap her down with her $brandTarget clear and defenseless. She doesn't understand what's coming for a while, even as disinfectant is applied to her $brandTarget. She can't see the approaching brand, but eventually she feels the radiated heat on her skin and manages to get one inarticulate, wordless noise of terror out before the dreadful sizzling noise and the sweet smell of burning flesh. If she didn't know she was a slave before, @@color:mediumorchid;she does now,@@ and she's got the @@color:gold;agonizing@@ @@color:red;injury@@ to prove it.
+	<<if ($FSSubjugationistRace is $activeSlave.race) and ($FSSubjugationist gt 0)>>
+	  Society @@color:green;approves@@ of your purchase and branding of a inferior $activeSlave.race person; this advances the idea that $activeSlave.race people ought to be enslaved.
+	  <<set $rep += $FSSingleSlaveRep*($FSSubjugationist/$FSLockinLevel)>>
+	  <<set $Subjugationist += 0.05*$FSSingleSlaveRep>>
+	<<elseif ($FSSupremacistRace is $activeSlave.race) and ($FSSupremacist gt 0)>>
+	  Society @@color:red;disapproves@@ of your purchase and branding of a $activeSlave.race person; this reduces support for the idea that $activeSlave.race people are superior.
+	  <<set $rep -= $FSSingleSlaveRep*($FSSubjugationist/$FSLockinLevel)>>
+	  <<set $Subjugationist -= 0.05*$FSSingleSlaveRep>>
+	<</if>>
+<</replace>>
+<</click>>
+
+<<if $activeSlave.balls gt 0>>
+ | <<click "Geld her">>
+    <<set $activeSlave.balls to 0>>
+    <<set  $activeSlave.health -= 1>>
+	<<set $activeSlave.trust to 7>>
+<<replace "#diet">>
+	You drag her to the remote surgery and strap her face down with her legs spread. She doesn't understand what's happening, since the anaesthetics totally deprive her of any sensation. She's so drugged and drowsy with @@color:red;surgical recovery@@ that it takes a while for her to figure out what's happened. When she does, her poor mind scarcely processes the @@color:gold;horror@@ of what's happened. She numbly carries on, terrified.
+	<<if $FSGenderRadicalist gt 0>>
+	  Society @@color:green;approves@@ of your promptly gelding her; this advances the idea that all societal inferiors can be made female.
+	  <<set $rep += $FSSingleSlaveRep*($FSGenderRadicalist/$FSLockinLevel)>>
+	  <<set $FSGenderRadicalist += 0.05*$FSSingleSlaveRep>>
+	<</if>>
+<</replace>>
+<</click>>
+<<elseif ($activeSlave.ovaries gt 0) and ($activeSlave.preg lt 1) and ($PC.dick gt 0)>>
+ | <<click "Impregnate her">>
+    <<set $activeSlave.preg to 1>>
+<<replace "#diet">>
+	You perform a careful medical examination to verify fertility, and then restrain her in your office with her ass in the air. Whenever you feel able, you drain your balls into her cunt, only releasing her for other duties when scans verify a fertilized ovuum. She didn't properly understand the scans, so she just thought it was bound, forced sex; she won't realize what happened for some weeks at least.
+	<<display "Vaginal VCheck">>
+	<<if $FSGenderFundamentalist gt 0>>
+	  Society @@color:green;approves@@ of your promptly putting a new slave in her; this advances the idea that all slaves should bear their masters' babies.
+	  <<set $rep += $FSSingleSlaveRep*($FSGenderFundamentalist/$FSLockinLevel)>>
+	  <<set $FSGenderFundamentalist += 0.05*$FSSingleSlaveRep>>
+	<</if>>
+<</replace>>
+<</click>>
+<</if>>
+
+<<if $activeSlave.health lt -2>>
+ | <<click "Address her medical issues">>
+    <<set  $activeSlave.health += 1>>
+	<<set $activeSlave.trust += 1>>
+<<replace "#diet">>
+	Since she's in rough shape, you give her a comprehensive medical exam with the help of the remote surgery. You apply care to @@color:green;address@@ some of the most outstanding concerns. Whatever gratitude she might have felt for prompt medical attention is balanced by fear of the remote surgery and the nagging (and accurate) feeling that she's being treated like livestock, but she does @@color:mediumaquamarine;begin to hope@@ she'll be well treated.
+	<<if $FSPaternalist gt 0>>
+	  Society @@color:green;approves@@ of your promptly seeing to your stock's health; this advances the idea that all slave owners should look after their slaves.
+	  <<set $rep += $FSSingleSlaveRep*($FSPaternalist/$FSLockinLevel)>>
+	  <<set $FSPaternalist += 0.05*$FSSingleSlaveRep>>
+	<</if>>
+<</replace>>
+<</click>>
+<</if>>
+
+<<if $activeSlave.amp is 0>>
+ | <<click "Clip her Achilles tendons">>
+    <<set $activeSlave.heels to 1>>
+    <<set  $activeSlave.devotion -= 1>>
+    <<set  $activeSlave.health -= 1>>
+	<<set $activeSlave.trust -= 4>>
+<<replace "#diet">>
+	You drag her to the remote surgery and strap her face down with her legs bare. She doesn't understand what's coming for a while, even as her lower legs are carefully cleaned and disinfected. She can't see the approaching surgical manipulators, but eventually she feels a tugging at her lower legs even through the local anaesthetic. She gets one squeal of protest out before the surgery begins to apply healing agents. She now requires special heels to walk, and will @@color:mediumorchid;remember her status@@ with every @@color:red;painful@@ step she takes. She's barefoot, crawling, and @@color:gold;frightened@@ for now, until you decide to give her heels - if you ever do.
+<</replace>>
+<</click>>
+<</if>>
+
+<<if $activeSlave.dick is 0>>
+ | <<click "Give her a smart clitoral piercing">>
+    <<set  $activeSlave.clitPiercing to 3>>
+    <<set  $cash -= $SPcost>>
+<<replace "#diet">>
+	You take her to the body modification studio, strap her down, pierce her clit, and insert what appears to be a large stainless steel barbell piercing. It actually contains a device that can vibrate to give her sexual stimulation or create subtle pain to suppress pleasure. It is connected wirelessly to the arcology, which can be given instructions to encourage or discourage sexual pleasure in specific situations. You run a quick test. On the oral setting, as soon as she kneels in front of your crotch, she gasps as the stimulation starts. On the anal setting, she whimpers when you run a finger across her asshole.
+<</replace>>
+<</click>>
+ //This option costs ¤$SPcost//
+<<else>>
+ | <<click "Give her a smart frenulum piercing">>
+    <<set  $activeSlave.clitPiercing to 3>>
+    <<set  $cash -= $SPcost>>
+<<replace "#diet">>
+	You take her to the body modification studio, strap her down, pierce her frenulum, and insert what appears to be a large stainless steel barbell piercing. It actually contains a device that can vibrate to give her sexual stimulation or create subtle pain to suppress pleasure. It is connected wirelessly to the arcology, which can be given instructions to encourage or discourage sexual pleasure in specific situations. You run a quick test. On the oral setting, as soon as she kneels in front of your crotch, she gasps as the stimulation starts. On the anal setting, she whimpers and gets rock hard when you run a finger across her asshole.
+<</replace>>
+<</click>>
+ //This option costs ¤$SPcost//
+<</if>>
+
+<<if $activeSlave.amp is 0>>
+ | <<click "Tie her up and give her a good whipping">>
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 2>>
+<<replace "#diet">>
+	You cuff her wrists and tie the cuffs to a hook in the ceiling so she's forced up on tiptoe. Reflecting that sometimes the old ways are best, you take a whip to her. It's soft leather and you have some skill, so her skin isn't broken, but you lash her buttocks and every stroke draws a scream. After a while, the pain grows dull for her and she slumps in her bindings, moaning. You switch to her nipples, bringing her back to howling life as she dances on tiptoe and tries to dodge. <<if $activeSlave.dick isnot 0>>You finish by taking the whip to her penis, leaving her sobbing and begging. <</if>>If she was wondering what kind of master her new master is, now she @@color:gold;knows.@@ She will remember @@color:mediumorchid;what you can do to her@@.
+<</replace>>
+<</click>>
+
+<<set $toSearch to $activeSlave.hlength>>
+<<if ($toSearch.indexOf("shaved") is -1)>>
+ | <<click "Drag her to the auto salon and shave her hair">>
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 2>>
+<<replace "#diet">>
+	You seize her by the hair and drag her to the auto salon. She struggles and thrashes around but soon scrambles to keep up with you to relieve the pain in her scalp as she's dragged. You strap her in and set the auto salon to shave. She looks around frantically as the manipulators with their buzzing shears descend menacingly. As they run quickly back and forth across her head, she begins to sob, obviously @@color:gold;fearing@@ that her new master is @@color:mediumorchid;one to enjoy degradation and abuse.@@ She has a strong indication that obedience is her only hope.
+<</replace>>
+<</click>>
+<</if>>
+ 
+ | <<click "Make her an office ornament for the day">>
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 2>>
+<<replace "#diet">>
+	You cuff her wrists and ankles, bend all four limbs behind her, secure them together, and hoist her up to the ceiling on a rope. She hangs up there like a sex slave chandelier, breasts swaying in a lovely way whenever she struggles. Periodically you let her down to stretch her aching limbs, but whenever you put your decoration back up you add some clips with little bells on them: first the nose, then the nipples, and finally the <<if $activeSlave.dick isnot 0>>dickhead<<else>>pussylips<</if>>. By the end of the day your work is accompanied by the sweet sounds of ringing bells and @@color:gold;agonized female pleas.@@ She will remember @@color:mediumorchid;what you can do to her@@.
+<</replace>>
+<</click>>
+
+<<if  ($activeSlave.devotion lt -2) and ($activeSlave.vagina is 0)>>
+ | <<click "Tie her up and take her virginity">>
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.vagina to 1>>
+<<replace "#diet">>
+	You cuff her wrists and ankles and secure her struggling, screeching body to the couch next to your desk with her legs spread. She wriggles and protests as you take her virginity. She's certainly entered your service in a way that colors her impression of you @@color:mediumorchid;with hatred@@ and @@color:gold;fear.@@ @@color:lime;Her tight little pussy has been broken in.@@
+<</replace>>
+<</click>>
+<<elseif ($activeSlave.vagina is 0)>>
+ | <<click "Tie her up and take her virginity">>
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.vaginalCount += 1>>
+    <<set $vaginalTotal += 1>>
+    <<set $activeSlave.vagina to 1>>
+<<replace "#diet">>
+	You cuff her wrists and ankles and secure her unresisting body to the couch next to your desk with her legs spread. She writhes and moans as you enter her virgin pussy. You might not have even had to restrain her for this, but being tied up and deflowered sends her a message. She's certainly entered your service in a way that colors her impression of you @@color:hotpink;with pain@@ and @@color:gold;fear.@@ @@color:lime;Her tight little pussy has been broken in.@@
+<</replace>>
+<</click>>
+<</if>>
+
+<<if  ($activeSlave.devotion lt -2) and ($activeSlave.anus is 0)>>
+ | <<click "Tie her up and rape her virgin ass">>
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <<set $activeSlave.anus to 1>>
+<<replace "#diet">>
+	You cuff her wrists and ankles and secure her struggling, screeching body to the couch next to your desk so that she's straddling the back of the couch with her butt sticking out. She wriggles and protests until she feels the lubricated head of your cock pushing against her virgin butthole, at which point she desperately tries to break free. She fails, but she never stops writhing and begging you to take your cock out of her asshole. She's certainly entered your service in a way that colors her impression of you @@color:mediumorchid;with hatred@@ and @@color:gold;fear.@@ @@color:lime;Her tight little ass has been broken in.@@
+<</replace>>
+<</click>>
+<<elseif ($activeSlave.anus is 0)>>
+ | <<click "Tie her up and break her ass in">>
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <<set $activeSlave.anus to 1>>
+<<replace "#diet">>
+	You cuff her wrists and ankles and secure her unresisting body to the couch next to your desk so that she's straddling the back of the couch with her butt sticking out. She lies obediently still until she feels the lubricated head of your cock pushing against her virgin butthole, at which point she starts in surprise. When the pain of the buttfuck gets to be too much she begs you to use her <<if $activeSlave.dick is 0>>pussy<<else>>mouth<</if>> instead. She gasps and cries as you slowly push your cock all the way up her tight little butt, and in no time you fill her rectum with cum. She's certainly entered your service in a way that colors her impression of you @@color:mediumorchid;with pain@@ and @@color:gold;fear.@@ @@color:lime;Her tight little ass has been broken in.@@
+<</replace>>
+<</click>>
+<</if>>
+
+<<if ($activeSlave.devotion gt 2)>>
+ | <<click "Give her a chance to impress">>
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust += 1>>
+<<replace "#diet">>
+	She seems reasonably broken, so you give her a chance to impress. You remain seated and offer her your half-erect cock. She comes over obediently and gets on her knees. She works hard and is clearly doing her absolute best to please, so you let her finish you with her mouth. She even swallows your cum without being told. You spend the rest of the day with her kneeling on a cushion next to your chair. She learns obedience, but also learns that you are @@color:mediumaquamarine;fair@@ and @@color:hotpink;reasonable.@@
+<</replace>>
+<</click>>
+<</if>>
+
+<<if ($activeSlave.vagina gt 0) and ($activeSlave.anus isnot 0)>>
+ | <<click "Use a machine on her holes">>
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.vaginalCount += 1>>
+    <<set $vaginalTotal += 1>>
+    <<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <<set $activeSlave.anus += 1>>
+    <<set $activeSlave.vagina += 1>>
+<<replace "#diet">>
+	She's not a virgin anywhere, so you'll have to go more extreme to provide a properly introductory level of sexual torture equivalent to defloration. You  tie your new slave down on hands and knees and bring a fuckmachine up from storage. It fits over her as she whimpers down there on all fours, and you adjust the pistons so that the tip of a dildo rests inside each of her holes. You add lube when necessary, <<if $assistant is 0>>but the rest of the day is monotonous machine rape for her.<<else>>but for her the rest of the day is machine rape controlled by your sultry-voiced personal assistant program. Your assistant is an exquisite sexual torturer, ensuring that the experience is never damaging and always overwhelming. She keeps up a steady stream of degrading verbal abuse while she works.<</if>> Any resistance to you is @@color:mediumorchid;worn down@@ and replaced with a germ of @@color:gold;fear.@@ @@color:lime;The slave's holes are nicely stretched.@@
+<</replace>>
+<</click>>
+<</if>>
+
+<<if ($activeSlave.vagina is -1) and ($activeSlave.anus isnot 0)>>
+ | <<click "Use a machine on her asshole">>
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <<set $activeSlave.anus += 1>>
+<<replace "#diet">>
+	She's not an anal virgin, so you'll have to go more extreme to provide an introductory level of sexual torture equivalent to defloration. You tie your new slave down on hands and knees and bring a fuckmachine up from storage. It fits over her as she whimpers down there on all fours, and you adjust the pistons so that the tip of a dildo rests inside her asshole. You add lube when necessary, <<if $assistant is 0>>but the rest of the day is monotonous machine rape for her.<<else>>but for her the rest of the day is machine rape controlled by your sultry-voiced personal assistant program. Your assistant is an exquisite sexual torturer, ensuring that the experience is never damaging and always overwhelming. She keeps up a steady stream of degrading verbal abuse while she works.<</if>> Any resistance to you is @@color:mediumorchid;worn down@@ and replaced with a germ of @@color:gold;fear.@@ @@color:lime;The slave's asshole is nicely stretched.@@
+<</replace>>
+<</click>>
+<</if>>
+/*Written and coded by Boney M*/
+
+<</if>>
+
+<</nobr>>
+
+</span>

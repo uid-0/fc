@@ -1,0 +1,126 @@
+<<nobr>>
+
+<<set $beauty to random(80,100)+(20*(4-$slaves[$i].anus))+(10*(4-$slaves[$i].vagina))+Math.trunc($FSDegradationist/2)>>
+<<set $FResult to 3>>
+
+$slaves[$i].slaveName's ¤$FResult restrained holes were used by $beauty customers (<<print Math.trunc($beauty/7)>> a day).
+
+<<if ($FSDegradationist gt 0)>>
+	Demand for her holes is strong due to the appetite for degradation rampant in the arcology. 
+<</if>>
+
+<<if ($slaves[$i].drugs is "preventatives")>>
+	The drugs she's on protect her health from the stress of being used as a sexual appliance.
+<<elseif ($slaves[$i].health lt -5)>>
+	The stress of being used while very ill @@color:red;damaged her health.@@
+	<<set $slaves[$i].health -= 1>>
+<<elseif ($slaves[$i].health lt -1)>>
+	<<if (random(1,100) gt 10)>>
+		The stress of being used while weak has @@color:red;damaged her health.@@
+		<<set $slaves[$i].health -= 1>>
+	<</if>>
+<<elseif ($slaves[$i].vagina is -1)>>
+	<<if (random(1,100) gt 70)>>
+		The stress of being used in only two holes has @@color:red;damaged her health.@@
+		<<set $slaves[$i].health -= 1>>
+	<</if>>
+<<elseif (random(1,100) gt 25)>>
+	The stress of being used has @@color:red;damaged her health.@@
+	<<set $slaves[$i].health -= 1>>
+<</if>>
+
+<<if ($slaves[$i].vagina is 0) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+	A glory hole user takes her virginity. He does not notice or care. @@color:lime;Her pussy has been broken in@@ in a @@color:gold;painful@@ and @@color:mediumorchid;degrading@@ way.
+	<<set $slaves[$i].devotion -= 2>>
+	<<set $slaves[$i].trust -= 2>>
+	<<set $slaves[$i].vagina to 1>>
+<<elseif ($slaves[$i].vagina lt 3) and ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt") and (random(1,100) gt 50)>>
+	@@color:lime;Her pussy gets stretched out by the use.@@
+	<<set $slaves[$i].vagina += 1>>
+<</if>>
+
+<<if ($slaves[$i].anus is 0)>>
+	Her anal virginity goes to a glory hole user, who doesn't understand why this particular run at the glory hole is so great. @@color:lime;Her ass has been broken in@@ in a @@color:gold;painful@@ and @@color:mediumorchid;degrading@@ way.
+	<<set $slaves[$i].devotion -= 1>>
+	<<set $slaves[$i].trust -= 1>>
+    <<set $slaves[$i].anus to 1>>
+<<elseif ($slaves[$i].anus lt 3) and (random(1,100) gt 50)>>
+	@@color:lime;Her asshole sees constant use and loosens.@@
+	<<set $slaves[$i].anus += 1>>
+<</if>>
+
+<<if ($slaves[$i].fetish is "mindbroken")>>
+	She serves her role as a mindless set of holes to perfection.
+<<else>>
+	<<if ($slaves[$i].oralSkill lt 1)>>
+		With her throat being brutally used, her gag reflex is suppressed and @@color:green;her oral skills improve.@@
+		<<set $slaves[$i].oralSkill += 1>>
+	<<elseif ($slaves[$i].vaginalSkill lt 1) and ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+		With her pussy being harshly used, @@color:green;her vaginal skills improve.@@
+		<<set $slaves[$i].vaginalSkill += 1>>
+	<<elseif ($slaves[$i].analSkill lt 1)>>
+		With her butt being mercilessly fucked, @@color:green;her anal skills improve.@@
+		<<set $slaves[$i].analSkill += 1>>
+	<</if>>	
+	<<if ($slaves[$i].sentence gt 0)>>
+		<<if ($slaves[$i].behavioralQuirk isnot "quirky") and (random(1,100) gt (100+$slaves[$i].devotion))>>
+			Constant confinement coupled with brutal use has left her with involuntary nervous tics.
+			<<set $slaves[$i].behavioralQuirk to "quirky">>
+		<</if>>		
+		<<set $slaves[$i].devotion -= 1>>
+		<<set $slaves[$i].trust -= 1>>
+		<<if ($slaves[$i].devotion gt 10)>>
+			She does her best to tolerate her sentence to the glory hole, but @@color:mediumorchid;her devotion is hurt@@ and she is @@color:gold;filled with fear@@ she won't be let out.
+		<<elseif ($slaves[$i].devotion gt 4)>>
+			She does not understand why her obedience has earned her a sentence to this torture. @@color:mediumorchid;Her obedience is hurt@@ and she is @@color:gold;filled with fear@@ she won't be let out.
+		<<elseif ($slaves[$i].devotion gte -4)>>
+			Her fear of you turns to desperation during her sentence. @@color:mediumorchid;Her obedience is reduced@@ and she is @@color:gold;filled with fear@@ she won't be let out.
+		<<elseif ($slaves[$i].devotion gte -10)>>
+			Though she is only temporarily sentenced to suffer, @@color:mediumorchid;her resistance is increased@@ and she is @@color:gold;filled with fear@@ she won't be let out.
+		<<else>>
+			She has hope she'll be released after her sentence, but @@color:mediumorchid;her hatred of you is increased@@ and she is @@color:gold;filled with fear@@ she won't be let out.
+		<</if>>
+	<<else>>
+		<<if ($slaves[$i].behavioralQuirk isnot "quirky") and (random(1,100) gt (70+$slaves[$i].devotion))>>
+			Constant confinement coupled with brutal use has left her with involuntary nervous tics.
+			<<set $slaves[$i].behavioralQuirk to "quirky">>
+		<</if>>
+		<<set $slaves[$i].devotion -= 2>>
+		<<set $slaves[$i].trust -= 2>>
+		<<if ($slaves[$i].devotion gt 10)>>
+			She feels starved of personal contact. @@color:mediumorchid;Her devotion is hurt@@ and she is @@color:gold;filled with fear@@ she won't be let out.
+		<<elseif ($slaves[$i].devotion gt 4)>>
+			She does not understand why her obedience has earned her this immurement. @@color:mediumorchid;Her obedience is hurt@@ and she is @@color:gold;filled with fear@@ she won't be let out.
+		<<elseif ($slaves[$i].devotion gte -4)>>
+			Her fear of you has increased into something like a pathology. @@color:mediumorchid;Her obedience is reduced@@ and she is @@color:gold;filled with fear@@ she won't be let out.
+		<<elseif ($slaves[$i].devotion gte -10)>>
+			Her resistance is deepening into hatred. @@color:mediumorchid;Her resistance is increased@@ and she is @@color:gold;filled with fear@@ she won't be let out.
+		<<else>>
+			@@color:mediumorchid;Her helpless hatred of you is increased@@ and she is @@color:gold;filled with fear@@ she won't be let out.
+		<</if>>
+	<</if>>
+<</if>>
+	
+<<if ($slaves[$i].assignment is "be confined in the arcade") and ($arcadeUpgradeInjectors is 1)>>
+	<<set $FResult += 1>>
+<</if>>
+
+Her feelings, skills, and appearance do not matter. She is condemned to a world that consists of a tiny cell, featureless except for the never-ending dicks she is required to service. You were paid @@color:yellowgreen;¤<<print ($beauty*$FResult)>>@@ for the use of $slaves[$i].slaveName's hole this week.
+
+<<if ($slaves[$i].vaginalAccessory isnot "chastity belt") and ($slaves[$i].vagina isnot -1)>>
+	<<set $slaves[$i].oralCount += Math.trunc($beauty/3)>>
+	<<set $oralTotal += Math.trunc($beauty/3)>>
+	<<set $slaves[$i].vaginalCount += Math.trunc($beauty/3)>>
+	<<set $vaginalTotal += Math.trunc($beauty/3)>>
+	<<set $slaves[$i].analCount += Math.trunc($beauty/3)>>
+	<<set $analTotal += Math.trunc($beauty/3)>>
+<<else>>
+	<<set $slaves[$i].oralCount += Math.trunc($beauty/2)>>
+	<<set $oralTotal += Math.trunc($beauty/2)>>
+	<<set $slaves[$i].analCount += Math.trunc($beauty/2)>>
+	<<set $analTotal += Math.trunc($beauty/2)>>
+<</if>>
+
+<<set $cash += ($beauty*$FResult)>>
+
+<</nobr>>\

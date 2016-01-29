@@ -1,0 +1,45 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+Early to bed and early to rise makes an arcology owner healthy, wealty, and wise. It also allows you to enjoy the beautiful sunrises. The degradation of the planet does have its advantages: all the rubbish in the air often paints the morning light a striking color, and this is one such morning. Taken with the grandeur, you step out onto a balcony to take it in, only to find <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> out there already, doing just the same thing. The luxurious rules she enjoys offer her small breaks here and there, and she's obviously come out to enjoy the sight before starting her day's work.
+
+She notices your approach with a start and <<if ($activeSlave.mute is 1)>>asks with a gesture that carries just the right mixture of submission and respect if she can serve you in any way.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>lisps respectfully, "May I therve you in any way, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>?"<<else>>asks respectfully, "May I serve you in any way, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>?"<</if>> You shake your head no, for the moment, and just enjoy the view. After a few minutes of silent mutual enjoyment of the pretty sunrise, she steals a sidelong glance at you, a hesitant, questioning look on her face. You tell her to ask her question, whatever it is, and she <<if ($activeSlave.mute is 1)>>carefully uses her hands to ask if she can hold your hand.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>says, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, may I pleathe hold your hand?"<<else>>>says, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, may I please hold your hand?"<</if>>
+\
+<span id="result">
+<<click "Slaveowners do not hold their slaves' hands">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You shake your head sternly. She looks neither afraid nor crushed, but simply gazes properly at you, clearly waiting for punishment. When none comes, she accepts that it was not culpably wrong of her to ask, but that the answer is no. She leaves the balcony feeling reassured about her place in your arcology - a little more independent of <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> and yet a little more inured to the reality of his control. She is a proper devoted slave and will remain so.
+    <</replace>>
+<</click>>
+<<click "Hold her hand">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You nod without taking your eyes off the blazing horizon. Her <<if $activeSlave.height gt 1>>hand is almost as large as yours<<elseif $activeSlave.height gt 0>>hand fits into yours<<elseif $activeSlave.height gt -1>>small hand fits comfortably into yours<<elseif $activeSlave.height gt -2>>petite hand slides into yours<<else>>tiny hand nestles into yours<</if>>, and <<if $activeSlave.muscles gt 1>>her grip is extremely powerful<<elseif $activeSlave.muscles gt 0>>her grip suprisingly strong<<else>>her grip is soft and feminine<</if>>. Through her hand you feel her give a little shiver and relax. It's not difficult to sense her emotions as the two of you stand there gazing at the rising sun: she's reassessing who she is in light of her @@color:hotpink;growing devotion@@ to you, drawing emotional strength from the strong grip that gently encircles her hand.
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+<<click "Buttfuck her against the railing">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You move quietly over to her and encircle her with your arms, holding both her hands over her belly with both of yours. She relaxes into your <<if ($PC.boobs gt 0)>>breasts<<else>>chest<</if>> for a few moments until she feels your <<if ($PC.dick is 0)>>building warmth<<else>>hardening member<</if>> against <<if $activeSlave.height gt -1>>her ass<<else>>her lower back<</if>>. She automatically begins to rub herself up and down to stimulate you; once she feels you reach <<if ($PC.dick is 0)>>full arousal<<else>>rock hardness<</if>> she <<if $activeSlave.height gt 0>>leans into the rail, bending over it just slightly to offer her asshole at just the right height<<else>>hikes herself up on the rail, up on tiptoe, to bring her asshole to the most comfortable height<</if>>. She moans a little as you<<if ($PC.dick is 0)>> pull on your trusty vibrating strap-on and<</if>> enter her butt, but she keeps her gaze on the fiery horizon. She extricated her hands from yours to stabilize herself against the railing, leaving you free to gently massage her breasts in time with your slow thrusts. She does not climax, but after you do she turns halfway within your arms and kisses you impulsively. She leaves the balcony with a @@color:hotpink;small smile@@ on her face.
+    <<display "Anal VCheck">>
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take virginity//<</if>>
+</span>

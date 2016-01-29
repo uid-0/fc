@@ -1,0 +1,256 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Scheduled Event">>
+
+<<if $cash gt -10000>>
+  <<set $debtWarned to 0>>
+<</if>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $slaves[$i].health lte -10>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<display "Remove activeSlave">>
+<</if>>
+<</for>>
+
+<</nobr>>\
+\
+//FC Markets Report: <<display "Markets Report">>//
+
+__Personal Business__
+<<nobr>>
+
+<<if $cash lt 0>>
+	@@color:red;You are in debt.@@ This week, interest came to ¤<<print (1+Math.trunc(Math.abs($cash)/100))>>.
+    <<set $cash -= (1+Math.trunc(Math.abs($cash)/100))>>
+	<<if $FSRomanRevivalist gt 0>>
+	  Society @@color:red;strongly disapproves@@ of your being in debt; this damages the idea that you model yourself on what a Roman leader should be.
+	  <<set $rep -= 10*$FSSingleSlaveRep*($FSRomanRevivalist/$FSLockinLevel)>>
+	  <<set $FSRomanRevivalist -= 0.2*$FSSingleSlaveRep>>
+	<</if>>
+	<<if $cash lt -9000>>
+	  @@color:red;WARNING: you are dangerously indebted.@@ Immediately acquire more liquid assets or you will be in danger of being enslaved yourself.
+	  <<set $debtWarned += 1>>
+	  <<if $debtWarned gt 1>>
+		<<set $ui to "start">>
+		<<goto "Enslavement Gameover">>
+	  <</if>>
+	<</if>>
+<<elseif ($cash gt 1000) and ($personalAttention is -1)>>
+    <<set $seed to random(500,1000)>>
+	You have some liquid assets and are not personally managing a slave, so you have the time to work at making money. This week, your business endeavors made you @@color:yellowgreen;¤<<print ($seed+Math.trunc(Math.abs($cash)/100))>>.@@
+    <<set $cash += ($seed+Math.trunc(Math.abs($cash)/50))>>
+<<elseif $cash gt 10000>>
+	You have significant assets. This week, your business endeavors made you @@color:yellowgreen;¤<<print (1+Math.trunc(Math.abs($cash)/100))>>.@@
+    <<set $cash += (1+Math.trunc(Math.abs($cash)/50))>>
+	<<if $FSRomanRevivalist gt 0>>
+	  Society @@color:green;approves@@ of your close attention to your own affairs; this advances your image as a well-rounded Roman man.
+	  <<set $rep += $FSSingleSlaveRep*($FSRomanRevivalist/$FSLockinLevel)>>
+	  <<set $FSRomanRevivalist += 0.1*$FSSingleSlaveRep>>
+	<</if>>
+<<else>>
+	You have enough cash to manage your affairs, but not enough to do much business.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+This week upkeep of your demesne costs @@color:yellowgreen;¤$costs.@@
+<<set $cash -= $costs>>
+
+<</nobr>>\
+
+<<nobr>>
+
+<<set $seed to random(1,100)>>
+<<if $FSRomanRevivalist gt random(1,150)>>
+  <<if $slaveCostFactor gt 0.6>>
+	@@color:yellow;Your Roman revivalism is having an effect on the slave market and has driven local prices down@@ by convincing slave traders that this is a staunchly pro-slavery area.<br>
+	<<set $slaveCostFactor -= 0.1>>
+  <<else>>
+	@@color:yellow;Your Roman revivalism is having an effect on the slave market and is holding local prices down@@ by convincing slave traders that this is a staunchly pro-slavery area.<br>
+  <</if>>
+<<elseif ($slaveCostFactor gt 1.3)>>
+  @@color:yellow;Natural market forces drive the very high price of slaves down.@@<br>
+  <<set $slaveCostFactor -= 0.2>>
+<<elseif ($slaveCostFactor lt 0.7)>>
+  @@color:yellow;Natural market forces drive the very low price of slaves up.@@<br>
+  <<set $slaveCostFactor += 0.2>>
+<<elseif ($seed gt 30)>>
+  <<if ($slaveCostFactor gt 1)>>
+      @@color:yellow;Natural market forces drive the high price of slaves slowly down.@@<br>
+	  <<set $slaveCostFactor -= 0.1>>
+  <<elseif ($slaveCostFactor lt 1)>>
+      @@color:yellow;Natural market forces drive the low price of slaves slowly up.@@<br>
+	  <<set $slaveCostFactor += 0.1>>
+  <<else>>
+  	<<if $seed gt 80>>
+      @@color:yellow;The price of slaves has naturally risen slightly.@@<br>
+      <<set $slaveCostFactor += 0.1>>	
+    <<elseif $seed gt 60>>
+      @@color:yellow;The price of slaves has naturally fallen slightly.@@<br>
+      <<set $slaveCostFactor -= 0.1>>
+    <</if>>
+  <</if>>
+<</if>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $corpAnnounced is 1>>
+  <br>
+  <<if $corpIncorporated is 0>>
+	<span id="incorporate">
+	You have not yet committed funds to create a publicly traded slave trading corporation. <<click "Lay the groundwork for incorporation">><<set $corpIncorporated to 1>><<set $sharePrice to 20>>><<set $oldSharePrice to $sharePrice>><<set $personalShares to 1500>><<set $cash -= 30000>><<set $publicShares to 1000>><<set $corpCash to 20000>><<set $generalAssets to 500>><<set $slaveAssets to 1000>><<set $entrapmentAssets to 500>><<set $captureAssets to 500>><<set $trainingAssets to 500>><<set $surgicalAssets to 500>><<set $drugAssets to 500>><<replace "#incorporate">><<print "The groundwork has been laid for the incorporation of a publicly traded slave trading concern. The IPO will involve 1000 shares at ¤20/share.">><</replace>><</click>> //Costs ¤30000//
+	</span>
+  <<else>>
+	<<display "Corporation Developments">>
+  <</if>>
+  <br>
+<</if>>
+
+<</nobr>>\
+
+__Reputation__
+<<nobr>>
+
+<<display "PC Name and Title">>
+
+On formal occasions, you are announced as $PCTitle.
+
+<<if $rep gt 4000>>
+    <<set $repLoss to Math.trunc(($rep-4000)*0.3)>>
+<<else>>
+    <<set $repLoss to 0>>
+<</if>>
+
+<<if ($PC.dick is 0) and ($PC.boobs is 1)>>
+  <<if $rep gt 18000>>
+	Your reputation is so well-established that society has accepted your obviously feminine appearance despite how unusual it is for a prominent slaveowner to look like you do.
+  <<else>>
+	Most prominent slaveowners are male, and your obviously feminine appearance makes it @@color:red;harder for you to maintain your reputation.@@
+	<<set $repLoss += Math.trunc($rep*0.1)>>
+  <</if>>
+<<elseif ($PC.dick is 0) or ($PC.boobs is 1)>>
+  <<if $rep gt 15000>>
+	Your reputation is so strong that society has accepted your somewhat feminine appearance despite how unusual it is for a prominent slaveowner to look like you do.
+  <<else>>
+	Most prominent slaveowners are very masculine, and your somewhat feminine appearance makes it @@color:red;harder for you to maintain your reputation.@@
+	<<set $repLoss += Math.trunc($rep*0.05)>>
+  <</if>>
+<</if>>
+
+<<if $FSRomanRevivalist gt 0>>
+  <<if $mercenaries gt 0>>
+	Society @@color:green;approves@@ of how you are providing for the defense of the state, as should all citizens of the new Rome.
+	<<set $rep += $mercenaries*$FSSingleSlaveRep*($FSRomanRevivalist/$FSLockinLevel)>>
+	<<set $FSRomanRevivalist += $mercenaries*0.05*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves.length gt 20) and ($cash gt 50000)>>
+	Society @@color:green;strongly approves@@ of your wealth and prosperity, fit goals for the new Roman man.
+	<<set $rep += 5*$FSSingleSlaveRep*($FSRomanRevivalist/$FSLockinLevel)>>
+	<<set $FSRomanRevivalist += 0.1*$FSSingleSlaveRep>>
+  <</if>>
+<<elseif $FSAncientEgyptianRevivalist gt 0>>
+  <<if $racialVarieties gt 4>>
+	Society @@color:green;approves@@ of how you own a cornucopia of different races, which advances the ancient Egyptian ideal of cosmopolitan sex slavery.
+	<<set $rep += $racialVarieties.length*$FSSingleSlaveRep*($FSAncientEgyptianRevivalist/$FSLockinLevel)>>
+	<<set $FSAncientEgyptianRevivalist += $racialVarieties.length*0.05*$FSSingleSlaveRep>>
+  <</if>>
+<</if>>
+
+<<set $rep -= $repLoss>>
+<<set $rep += $repGain>>
+
+<<if $repGain gt $repLoss>>
+	@@color:green;Your reputation increased this week.@@
+<<elseif $repGain lt $repLoss>>
+	@@color:red;Your reputation decreased this week.@@
+<</if>>
+
+<<if $rep gt 19000>>
+	Your base rate of reputation loss is very high, and your reputation is capped.
+    <<set $rep to 20000>>
+<<elseif $rep gt 16000>>
+	Your base rate of reputation loss is very high.
+<<elseif $rep gt 12000>>
+	Your base rate of reputation loss is high.
+<<elseif $rep gt 8000>>
+	Your base rate of reputation loss is moderate.
+<<elseif $rep gt 4000>>
+	Your base rate of reputation loss is low.
+<</if>>
+
+<<if $rep lt 19000>>
+  <span id="subRep">
+  <<click "Subsidize your reputation">><<set $rep += 100>><<set $cash -= 1000>><<replace "#subRep">><<print "Reputation subsidized.">><</replace>><</click>> //Costs ¤1000//
+  </span>
+<</if>>
+
+<</nobr>>
+
+__Arcology Management__
+<<nobr>>
+<<set $rents to 0>>
+<<set $rents to Math.trunc(($AProsperity*100)+random(1,100))>>
+
+<<if $rents gt 0>>
+<<set $cash += $rents>>
+<</if>>
+
+This week, rents from your arcology came to @@color:yellowgreen;¤$rents.@@
+
+<<if $economy gt 1>>
+  <<set $rents to ($week*100)+random(-100,100)>>
+	<<if $cash gt 1000>>
+  		<<set $rents += Math.trunc($cash/10)>>
+	<</if>>
+  The @@color:red;degenerating world economy@@ makes supplying and maintaining your arcology extremely difficult. This week, bribes and other costs to keep it running came to @@color:yellowgreen;¤$rents.@@
+  <<set $cash -= $rents>>
+<</if>>
+
+<<set $AWeekGrowth to $AGrowth>>
+
+<<if $AWeekGrowth+$AProsperity gt $AProsperityCap>>
+	@@color:yellow;Your arcology is taxed to capacity by its own prosperity, so your rents will not increase until it is upgraded.@@
+<<elseif (2*$AWeekGrowth)+$AProsperity gte $AProsperityCap>>
+	@@color:yellow;Your arcology is nearly at its maximum prosperity, and your rents will not increase further once it is at maximum capacity.@@
+	<<set $AProsperity += $AWeekGrowth>>
+<<else>>
+	@@color:green;Since your arcology can support more citizens and more activity, its prosperity improved this week.@@
+	<<if $AProsperity lt ($rep/100)>>
+	  Your impressive reputation relative to your arcology's prosperity drives a rapid increase in business.
+	  <<set $AWeekGrowth += 1>>
+	<<elseif $AProsperity gt ($rep/200)>>
+	  Your unimpressive reputation relative to your arcology's prosperity slows business.
+	  <<set $AWeekGrowth -= 1>>
+	<</if>>
+	<<if $personalAttention is -1>>
+	  Your personal attention being on business matters enables you to lead your arcology forward.
+	  <<set $AWeekGrowth += 1>>
+	<</if>>
+	<<if $FSPaternalism gte random(1,100)>>
+	  This week, the careful attention to slave welfare your new society emphasizes has been a driver of prosperity.
+	  <<set $AWeekGrowth += 1>>
+	<</if>>
+	<<if $FSRomanRevivalist gte random(1,100)>>
+	  This week, intense interest in your project to revive Roman values has driven prosperity.
+	  <<set $AWeekGrowth += 1>>
+	<</if>>
+	<<set $AProsperity += $AWeekGrowth>>
+	<span id="accelerate">
+	<<click "Subsidize growth">><<set $AProsperity += 1>><<set $cash -= 1000>><<replace "#accelerate">><<print "Growth subsidized.">><</replace>><</click>> //Costs ¤1000//
+	</span>
+<</if>>
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $FSAnnounced gt 0>>
+  <<display "FS Developments">>
+<</if>>
+
+<</nobr>>\

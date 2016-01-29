@@ -1,0 +1,43 @@
+<<set $encyclopedia to " ">>\
+\
+<<nobr>>
+
+//
+
+<<if ($autosave is 0)>>
+End of week autosaving is currently DISABLED. [[Enable|Options][$autosave to 1]]
+<<else>>
+End of week autosaving is currently ENABLED. [[Disable|Options][$autosave to 0]]
+<</if>>
+
+//
+
+<</nobr>>
+
+<<nobr>>
+
+//
+
+<<if ($useFSNames is 0)>>
+Future society names for new slaves are currently DISABLED. [[Enable|Options][$useFSNames to 1]]
+<<else>>
+Future society names for new slaves are currently ENABLED. [[Disable|Options][$useFSNames to 0]]
+<</if>>
+
+//
+
+<</nobr>>
+
+<<nobr>>
+
+//
+
+<<if ($cheatMode is 1)>>
+Cheatmode is currently ENABLED. [[Disable|Options][$cheatMode to 0]]
+<<else>>
+Cheatmode is currently DISABLED. [[Enable|Options][$cheatMode to 1]]
+<</if>>
+
+//
+
+<</nobr>>

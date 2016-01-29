@@ -1,0 +1,184 @@
+<<nobr>>
+
+<<set $promenadeSlaves to 0>>
+<<set $legendaryEntertainerID to 0>>
+<<set $bonuses to 0>>
+<<set $slim to 0>>
+<<set $stacked to 0>>
+<<set $modded to 0>>
+<<set $unmodded to 0>>
+<<set $pure to 0>>
+<<set $implanted to 0>>
+<<set $XX to 0>>
+<<set $XY to 0>>
+<<set $young to 0>>
+<<set $old to 0>>
+<<set $conciergeFetish to 0>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].assignment is "work on the promenade")>>
+  <<set $promenadeSlaves += 1>>
+  <<if ($legendaryEntertainerID is 0) and ($slaves[$i].prestige is 0) and ($slaves[$i].entertainSkill gte 3) and ($slaves[$i].devotion gt 10)>>
+	<<set $legendaryEntertainerID to $slaves[$i].ID>>
+  <</if>>
+  <<silently>>
+  <<display [[SA serve the public]]>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if ($slaves[$i].devotion lt 4) and ($slaves[$i].trust gt -4)>>
+	<<set $slaves[$i].devotion -= 1>>
+	<<set $slaves[$i].trust -= 1>>
+  <<elseif ($slaves[$i].devotion lt 9)>>
+	<<set $slaves[$i].devotion += 0.3>>
+  <<elseif ($slaves[$i].devotion gt 9)>>
+	<<set $slaves[$i].devotion -= 0.3>>
+  <</if>>
+  <<if ($slaves[$i].health lt -4)>>
+	<<set $slaves[$i].health += 1.3>>
+  <<elseif ($slaves[$i].health lt 0)>>
+	<<set $slaves[$i].health += 1>>
+  <<elseif ($slaves[$i].health lt 9)>>
+	<<set $slaves[$i].health += 0.7>>
+  <</if>>
+
+<<elseif ($Concierge isnot 0) and ($slaves[$i].ID is $Concierge.ID)>>
+  <<silently>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if $slaves[$i].health lt -4>>
+	<<set $slaves[$i].health += 1.3>>
+  <<elseif $slaves[$i].health lt 0>>
+	<<set $slaves[$i].health += 1>>
+  <<elseif $slaves[$i].health lt 9>>
+	<<set $slaves[$i].health += 0.7>>
+  <</if>>
+  <<if $slaves[$i].devotion lt 12>>
+	<<set $slaves[$i].devotion += 0.5>>
+  <</if>>
+  <<if $slaves[$i].trust lt 12>>
+	<<set $slaves[$i].trust += 0.5>>
+  <</if>>
+  <<if (($slaves[$i].fetish isnot "humiliation") and ($slaves[$i].fetish isnot "none")) or ($slaves[$i].fetishDiscovered is 0)>>
+	<<if ($slaves[$i].clitSetting is "humiliation") or ($slaves[$i].clitPiercing lt 3)>>
+	  <<if random(1,100) lt $slaves[$i].devotion>>
+		<<set $conciergeFetish to 1>>
+		<<set $slaves[$i].fetish to "humiliation">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+  <</if>>
+<</if>>
+<</for>>
+
+<<if ($promenadeSlaves gt 0)>>
+<<set $possibleBonuses to 1>>
+  <<if ($promenadeSlaves is 1)>>
+	''The one slave pleasing citizens on the promenade'' worked hard to @@color:green;increase your reputation@@ this week.
+  <<else>>
+	''The $promenadeSlaves slaves pleasing citizens on the promenade'' worked hard to @@color:green;increase your reputation@@ this week.
+  <</if>>
+
+  <<if ($FSAssetExpansionist lt 20) and ($FSSlimnessEnthusiast lt 20)>>
+	<<set $possibleBonuses += 1>>
+	<<if ($slim gt 0) and ($stacked gt 0) and (Math.abs($slim-$stacked) lte ($promenadeSlaves/3))>>
+	  <<set $repGain += $promenadeSlaves*random(5,10)>>
+	  <<set $bonuses += 1>>
+	  There is a @@color:green;wide@@ variety of slim and stacked slaves out on the promenade.
+	<</if>>
+  <</if>>
+  <<if ($FSDegradationist lt 20) and ($FSBodyPurist lt 20)>>
+	<<set $possibleBonuses += 1>>
+	<<if ($modded gt 0) and ($unmodded gt 0) and (Math.abs($modded-$unmodded) lte ($promenadeSlaves/3))>>
+	  <<set $repGain += $promenadeSlaves*random(5,10)>>
+	  <<set $bonuses += 1>>
+	  There are @@color:green;both@@ heavily pierced and tattooed slaves and slaves with more natural bodies on the promenade.
+	<</if>>
+  <</if>>
+  <<if ($FSImplantFetishist lt 20) and ($FSBodyPurist lt 20)>>
+	<<set $possibleBonuses += 1>>
+	<<if ($implanted gt 0) and ($pure gt 0) and (Math.abs($implanted-$pure) lte ($promenadeSlaves/3))>>
+	  <<set $repGain += $promenadeSlaves*random(5,10)>>
+	  <<set $bonuses += 1>>
+	  The promenade offers @@color:yellowgreen;both@@ all-natural girls, and slaves whose beauty has been improved by surgical means.
+	<</if>>
+  <</if>>
+  <<if ($seeDicks isnot 0)>>
+	<<set $possibleBonuses += 1>>
+	<<if ($XX gt 0) and ($XY gt 0) and (Math.abs($XX-$XY) lte ($promenadeSlaves/3))>>
+	  <<set $repGain += $promenadeSlaves*random(5,10)>>
+	  <<set $bonuses += 1>>
+	  The promenade offers a @@color:green;mix@@ of sluts that can appeal to varied tastes in genitalia.
+	<</if>>
+  <</if>>
+  <<if ($young gt 0) and ($old gt 0) and (Math.abs($young-$old) lte ($promenadeSlaves/3))>>
+	<<set $repGain += $promenadeSlaves*random(5,10)>>
+	<<set $bonuses += 1>>
+	There are girls @@color:green;both@@ young and mature on the promenade.
+  <</if>>
+  <<if ($bonuses gte $possibleBonuses)>>
+	<<set $repGain += $promenadeSlaves*random(10,15)>>
+	There is a ''@@color:green;perfect variety@@'' of slaves serving the public on the promenade.
+  <</if>>
+
+  <<if ($Concierge isnot 0)>>
+  $Concierge.slaveName is serving as the concierge.
+	<<if ($conciergeFetish is 1)>>
+	  She's expected to be the perfect, beautiful Concierge one minute, and an abandoned slut the next; she enjoys the interplay, and becomes @@color:pink;addicted to public humiliation.@@
+	<</if>>
+	<<if ($Concierge.entertainSkill lt 1)>>
+	  Though $Concierge.slaveName does her best to lead on the promenade, with her lack of skill she can do little.
+	<<elseif ($Concierge.entertainSkill is 1)>>
+	  $Concierge.slaveName's basic skills marginally @@color:green;improve@@ the atmosphere on the promenade.
+	  <<set $repGain += $promenadeSlaves*5>>
+	<<elseif ($Concierge.entertainSkill is 2)>>
+	  $Concierge.slaveName's skills @@color:green;improve@@ the atmosphere on the promenade.
+	  <<set $repGain += $promenadeSlaves*10>>
+	<<elseif ($Concierge.entertainSkill gt 2)>>
+	  $Concierge.slaveName's skills greatly @@color:green;improve@@ the atmosphere on the promenade.
+	  <<set $repGain += $promenadeSlaves*15>>
+	<</if>>
+	<<if ($Concierge.age gt 35)>>
+	  Her age and experience also contribute.
+	  <<set $repGain += $promenadeSlaves*5>>
+	<</if>>
+	<<if ($Concierge.intelligence gt 0)>>
+	  She is a perceptive head courtesan.
+	  <<set $repGain += $promenadeSlaves*5*$Concierge.intelligence>>
+	<</if>>
+	<<if ($Concierge.face gt 1)>>
+	  Her great beauty is a further draw.
+	  <<set $repGain += $promenadeSlaves*5>>
+	<</if>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if ($slaves[$i].assignment is "work on the promenade")>>
+		<<if ($slaves[$i].sexualQuirk isnot "none") and (random(1,100) gt 90)>>
+		  She manages to @@color:green;break@@ $slaves[$i].slaveName of her sexual quirks, too.
+		  <<set $slaves[$i].sexualQuirk to "none">>
+		<</if>>
+		<<if ($slaves[$i].behavioralQuirk isnot "none") and (random(1,100) gt 90)>>
+		  She manages to @@color:green;break@@ $slaves[$i].slaveName of her quirks, too.
+		  <<set $slaves[$i].behavioralQuirk to "none">>
+		<</if>>
+	  <</if>>
+	<</for>>
+  <</if>>
+
+  <<if ($promenade*5 lt $promenadeSlaves)>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if ($slaves[$i].assignment is "work on the promenade")>>
+		<<set $slaves[$i].devotion -= 1>>
+	  <</if>>
+	<</for>>
+	There are too many sluts crammed into too few rooms out on the promenade. Living this way is @@color:mediumorchid;very stressful.@@
+  <</if>>
+  
+<<else>>
+  ''Business on the promenade is normal.''
+<</if>>
+<br>
+
+<</nobr>>

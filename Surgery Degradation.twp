@@ -1,0 +1,455 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Remote Surgery">>
+
+/*
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Main">>
+*/
+
+<<if ($surgeryType is "boobs")>>
+  <<if ($activeSlave.areolae lt 2)>>
+	<<if (random(1,100) gt 70)>>
+	  The increase in breast size @@color:lime;stretches and broadens her areolae.@@
+	  <<set $activeSlave.areolae += 1>>
+	<</if>>
+  <</if>>
+<</if>>
+
+<<if ($surgeryType is "boobsLoss")>>
+  <<if ($activeSlave.areolae gt 2)>>
+	  The breast reduction surgery also @@color:orange;slighly reduces her massive areolae.@@
+	  <<set $activeSlave.areolae -= 1>>
+  <</if>>
+  <<if ($activeSlave.nipples gt 2)>>
+	  The breast reduction surgery also @@color:orange;slighly reduces her massive nipples.@@
+	  <<set $activeSlave.nipples -= 1>>
+  <</if>>
+<</if>>
+
+<<if (250+($activeSlave.health*25)) lt random(1,100)>>
+  $activeSlave.slaveName @@color:red;has died from complications of surgery.@@
+  <<display "Remove activeSlave">>
+  <<set $nextLink to "Main">>
+	
+<<else>>
+
+As the remote surgery's long recovery cycle completes, $activeSlave.slaveName <<if ($activeSlave.amp isnot 1)>>walks<<else>>is carried<</if>> out of the surgery room and catches sight of herself in the floor-length mirror outside the door.
+
+<<if ($surgeryType is "mindbreak")>>
+	Her gaze is placid and empty. She looks at you, and there is nothing there: no recognition, no fear, no love. Nothing. @@color:red;She will forget this in a few hours. She will forget everything in a few hours.@@
+    <<set $activeSlave.sexualQuirk to "none">>
+    <<set $activeSlave.behavioralQuirk to "none">>
+
+<<elseif ($surgeryType is "boobs") and ($activeSlave.devotion gt 4) and ($activeSlave.fetish is "boobs") and ($activeSlave.fetishDiscovered is 1)>>
+	<<if $activeSlave.amp isnot 1>>She's barely out of the surgery before she's playing with her new assets.<<else>>She's barely out of the surgery before she's rubbing her new assets against anything she can reach.<</if>> She's @@color:hotpink;deliriously happy@@ with your changes to what she thinks of as her primary sexual organs, so much so that she now @@color:mediumaquamarine;trusts@@ your plans for her body. As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.trust += 1>>
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "boobs") and ($activeSlave.devotion gt 10)>>
+	<<if $activeSlave.amp isnot 1>>She hefts her new breasts experimentally and turns to you with a smile to show them off. She's still sore, so she doesn't bounce or squeeze, but she turns from side to side to let you see them from all angles.<<else>>She bounces a little to feel her new breasts move and turns her torso to you with a smile to show them off. She's still sore, so she doesn't move too much, but she wiggles herself a little to make them bounce for you.<</if>> @@color:hotpink;She's happy with your changes to her boobs.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "boobs") and ($activeSlave.devotion gte -4)>>
+	She eyes her new breasts skeptically. <<if $activeSlave.amp isnot 1>>She's still sore, so she doesn't touch them.<<else>>She's still sore, so she keeps her torso still.<</if>> She's come to terms with the fact that she's a slave, so she expected something like this when she was sent to the surgery. She isn't much affected mentally. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "boobs")>>
+	She eyes her new breasts with resentment. <<if $activeSlave.amp isnot 1>>She's still sore, so she doesn't touch them, but she glares daggers.<<else>>She's still sore, so she keeps her torso still, but she glares daggers.<</if>> She still thinks of herself as a person, so she isn't used to the idea of being surgically altered to suit your every whim. For now, @@color:mediumorchid;she seems to view these fake breasts as a cruel imposition@@. As with all surgery @@color:red;her health has been slightly affected.@@ She is now @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+
+<<elseif ($surgeryType is "areolae")>>
+  <<if ($activeSlave.devotion gt 4) and ($activeSlave.fetish is "boobs") and ($activeSlave.fetishDiscovered is 1)>>
+	  <<if $activeSlave.amp isnot 1>>She's barely out of the surgery before she's playing with her new nipples despite the pain.<<else>>She's barely out of the surgery before she's rubbing her new nipples against anything she can reach, despite the pain.<</if>> She's @@color:hotpink;deliriously happy@@ with your changes to what she thinks of as her primary sexual organs, so much so that she now @@color:mediumaquamarine;trusts@@ your plans for her body. As with all surgery @@color:red;her health has been slightly affected.@@
+	  <<set $activeSlave.trust += 1>>
+	  <<set $activeSlave.devotion += 1>>
+  <<elseif ($activeSlave.devotion gt 10)>>
+	  <<if $activeSlave.amp isnot 1>>She runs a finger over her new nipples experimentally and turns to you with a smile to show them off. She's still sore, so she doesn't touch them much, but she turns from side to side to let you see them from all angles.<<else>>She bounces a little to feel the new nipples capping her tits turns her torso to you with a smile to show them off. She's still sore, so she doesn't move too violently, but she wiggles herself a little to show off.<</if>> @@color:hotpink;She's happy with your changes to her nipples.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+	  <<set $activeSlave.devotion += 1>>
+  <<elseif ($activeSlave.devotion gte -4)>>
+	  She eyes her new nipples skeptically. <<if $activeSlave.amp isnot 1>>She's still sore, so she doesn't touch them.<<else>>She's still sore, so she keeps her body still.<</if>> She's come to terms with the fact that she's a slave, so she isn't much affected mentally despite the surprise of having her nipples reshaped. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+  <<else>>
+	  She eyes her new nipples with resentment. <<if $activeSlave.amp isnot 1>>She's still sore, so she doesn't touch them, but she glares daggers.<<else>>She's still sore, so she keeps her body still, but she glares daggers.<</if>> She still thinks of herself as a person, so she isn't used to the idea of being surgically altered to suit your every whim. For now, @@color:mediumorchid;she seems to view her altered nipples as a cruel imposition@@. As with all surgery @@color:red;her health has been slightly affected.@@ She is now @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+	  <<set $activeSlave.devotion -= 1>>
+  <</if>>
+
+<<elseif ($surgeryType is "boobsLoss") and ($activeSlave.devotion gt 10)>>
+	<<if $activeSlave.amp isnot 1>>She hefts her new, sleeker breasts experimentally and turns to you with a smile to show off her new, slimmer form. She's still sore, so she doesn't bounce or squeeze, but she turns from side to side to let you see them from all angles.<<else>>She bounces a little to feel her smaller breasts move and turns her torso to you with a smile to show them off. She's still sore, so she doesn't bounce too much.<</if>> @@color:hotpink;She's happy with your changes to her boobs.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "boobsLoss") and ($activeSlave.devotion gte -4)>>
+	She eyes her new, smaller breasts skeptically. <<if $activeSlave.amp isnot 1>>She's still sore, so she doesn't touch them.<<else>>She's still sore, so she keeps her torso still.<</if>> She's come to terms with the fact that she's a slave, but she expected something other than this when she was sent to the surgery. She isn't much affected mentally. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "boobsLoss")>>
+	She eyes her sudden lack of her former breasts with resentment. <<if $activeSlave.amp isnot 1>>She's still sore, so she doesn't touch them, but she glares daggers.<<else>>She's still sore, so she keeps her torso still, but she glares daggers.<</if>> She still thinks of herself as a person, so she isn't used to the idea of being surgically altered to suit your every whim. For now, @@color:mediumorchid;she seems to view this surgical theft as a cruel imposition@@. As with all surgery @@color:red;her health has been slightly affected.@@ She is now @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+
+<<elseif ($surgeryType is "lactation") and ($activeSlave.devotion gt 10)>>
+	<<if $activeSlave.amp isnot 1>>She hefts her swollen breasts experimentally and turns to you with a smile to show them off. As she does, a drop of milk drips from a nipple and she gasps in surprise. She's shocked, but after tasting her own milk experimentally she looks at you shyly and gently teases some more milk out of herself. The resulting stream of cream is bountiful and she giggles happily.<<else>>As you carry her out of the surgery, droplets of milk begin to bud from her nipples, and she giggles giddily.<</if>> @@color:hotpink;She's happy with your changes to her boobs.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "lactation") and ($activeSlave.devotion gte -4)>>
+	<<if $activeSlave.amp isnot 1>>She eyes her swollen breasts skeptically. She's still sore, so she doesn't touch them. Even so, a drop of milk drips from a nipple and she gasps in surprise. She's shocked, but after a few experimental pokes and rubs at herself she seems to understand that she's a lactation slave now, and that's how it is.<<else>>As you carry her out of the surgery, droplets of milk begin to bud from her nipples. She's shocked, but she seems to understand that she's a lactation slave now, and that's how it is.<</if>> She isn't much affected mentally. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "lactation")>>
+	She eyes her swollen breasts with resentment. She still thinks of herself as a person, so she isn't used to the idea of being surgically altered to suit your every whim. When she finally figures out she's lactating, she breaks down in rage and unhappiness, dripping milk and bitter tears. For now, @@color:mediumorchid;she seems to view being a lactation slave as a cruel hardship.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is now @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+    
+<<elseif ($surgeryType is "endlac")>>
+	She notices almost immediately that the soreness that used to tell her she needed to be milked has gone. She bounces her breasts idly; it looks like she doesn't know what to think about having her lactation dry up. As with all surgery @@color:red;her health has been slightly affected.@@
+    <<if $activeSlave.assignment is "get milked">>
+    	@@color:yellow;Her assignment has defaulted to resting.@@
+   		<<set $activeSlave.assignment to "rest">>
+		<<set $activeSlave.assignmentVisible to 1>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+    <</if>>
+
+<<elseif ($surgeryType is "butt") and ($activeSlave.devotion gt 4) and ($activeSlave.fetish is "buttslut") and ($activeSlave.fetishDiscovered is 1)>>
+	She gently flexes her sore buttocks with a sigh of pleasure. She's @@color:hotpink;deliriously happy@@ to have a bigger butt, since she confidently expects that this will mean more cocks being shoved up her asshole. She's so pleased that she now @@color:mediumaquamarine;trusts@@ your plans for her body. As with all surgery @@color:red;her health has been slightly affected.@@
+	  <<set $activeSlave.trust += 1>>
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "butt") and ($activeSlave.devotion gt 10)>>
+	She rubs her new butt experimentally and turns to you with a smile to show it off. She's still sore, so she doesn't bounce or squeeze, but she turns from side to side to let you see it from all angles. @@color:hotpink;She's happy with your changes to her ass.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "butt") and ($activeSlave.devotion gte -4)>>
+	She eyes her new butt skeptically. She's still sore, so she doesn't touch it. She's come to terms with the fact that she's a slave, so she expected something like this when she was sent to the surgery. She isn't much affected mentally. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "butt")>>
+	She eyes her new butt with resentment. She's still sore, so she doesn't touch them, but she glares daggers. She still thinks of herself as a person, so she isn't used to the idea of being surgically altered to suit your every whim. For now, @@color:mediumorchid;she seems to view this fake ass as a cruel imposition@@. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+
+<<elseif ($surgeryType is "buttLoss") and ($activeSlave.devotion gt 10)>>
+	She twists to view her new, sleeker derriere and turns to you with a smile and a flirty little roll of her hips. She's still sore, so she doesn't bounce her tighter buttocks for you, but she seems happy all the same. @@color:hotpink;She's happy with your changes to her buttocks.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "buttLoss") and ($activeSlave.devotion gte -4)>>
+	She twists to view her new, sleeker derriere skeptically. <<if $activeSlave.amp isnot 1>>She's still sore, so she doesn't touch it.<<else>>She's still sore, so she keeps her torso still.<</if>> She's come to terms with the fact that she's a slave, but she expected something other than this when she was sent to the surgery. She isn't much affected mentally. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "buttLoss")>>
+	She shifts her diminished ass with resentment. <<if $activeSlave.amp isnot 1>>She's still sore, so she doesn't touch it, but she glares daggers.<<else>>She's still sore, so she keeps her torso still, but she glares daggers.<</if>> She still thinks of herself as a person, so she isn't used to the idea of being surgically altered to suit your every whim. For now, @@color:mediumorchid;she seems to view this surgical ass theft as a cruel imposition@@. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+
+<<elseif ($surgeryType is "face") and ($activeSlave.devotion gt 10)>>
+	She examines her new self in the mirror with approval. She doesn't recognize herself quite yet, but she hopes you'll like her new face better and use her more frequently as a result. @@color:hotpink;She's happy with your changes to her face.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "face") and ($activeSlave.devotion gte -4)>>
+	She examines her new self in the mirror with hesitation. She doesn't recognize herself quite yet, but she hopes you'll like her new face better and treat her more kindly as a result. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "face")>>
+	She examines her new self in the mirror with revulsion. She doesn't recognize herself quite yet, which she hates, though she hopes you'll like her new face better and punish her less cruelly as a result. For now, @@color:mediumorchid;she seems to view this fake face as a cruel imposition.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+
+<<elseif ($surgeryType is "age") and ($activeSlave.devotion gt 10)>>
+	She examines her younger self in the mirror with approval. She doesn't recognize her youthful yet artificial appearance yet, but she resolves to back her new appearance up with youthful energy and cheer. @@color:hotpink;She's very happy you used surgery to reverse her apparent aging.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 2>>
+<<elseif ($surgeryType is "age") and ($activeSlave.devotion gte -4)>>
+	She examines youthful yet artificial appearance in the mirror with hesitation. The cosmetic surgery is extremely well done, and she eventually decides that being subjected to surgery without her consent is @@color:hotpink;acceptable,@@ if it's being used to make her look so young and pretty. As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "age")>>
+	She examines youthful yet artificial appearance in the mirror with confusion. The cosmetic surgery is extremely well done, and she eventually decides that being subjected to surgery without her consent isn't worth fighting against, if it's being used to make her look younger. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+
+<<elseif ($surgeryType is "race") and ($activeSlave.devotion gt 10)>>
+	She examines her new self in the mirror with approval. She doesn't recognize herself quite yet, but she hopes you'll like her new appearance better and use her more frequently as a result. @@color:hotpink;She's happy with your changes to her racial appearance.@@ As with all invasive surgery @@color:red;her health has been affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "race") and ($activeSlave.devotion gte -4)>>
+	She examines her new self in the mirror with hesitation. She doesn't recognize herself quite yet, but she hopes you'll like her new appearance better and treat her more kindly as a result. As with all invasive surgery @@color:red;her health has been affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "race")>>
+	She examines her new self in the mirror with revulsion. She doesn't recognize herself quite yet, which she hates, though she hopes you'll like her new appearance better and punish her less cruelly as a result. For now, @@color:mediumorchid;she seems to view this fake racial appearance as a cruel imposition.@@ As with all invasive surgery @@color:red;her health has been affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+
+<<elseif ($surgeryType is "lips") and ($activeSlave.devotion gt 4) and ($activeSlave.fetish is "cumslut") and ($activeSlave.fetishDiscovered is 1)>>
+	She licks her new lips experimentally but doesn't lose much time before turning to you with her mouth open and ready. She's still sore, so she's careful, but she runs her wet tongue over her lips, already panting at the thought of sucking dick. If she had much in the way of oral skills, @@color:red;they've likely suffered.@@ @@color:hotpink;She's happy with your changes to her lips,@@ so much so that she now @@color:mediumaquamarine;trusts@@ your plans for her body. As with all surgery @@color:red;her health has been slightly affected.@@
+	  <<set $activeSlave.trust += 1>>
+    <<set $activeSlave.devotion += 1>>
+	<<if $activeSlave.oralSkill gt 0>>
+		<<set $activeSlave.oralSkill -= 1>>
+	<</if>>
+<<elseif ($surgeryType is "lips") and ($activeSlave.devotion gt 10)>>
+	She puckers her new lips experimentally and turns to you with a smile to show them off. She's still sore, so she's careful as she blows you an awkward kiss. If she had much in the way of oral skills, @@color:red;they've likely suffered.@@ @@color:hotpink;She's happy with your changes to her lips.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+	<<if $activeSlave.oralSkill gt 0>>
+		<<set $activeSlave.oralSkill -= 1>>
+	<</if>>
+<<elseif ($surgeryType is "lips") and ($activeSlave.devotion gte -4)>>
+	She eyes her new lips skeptically. She's still sore, so she doesn't touch them. She's come to terms with the fact that she's a slave, so she expected something like this when she was sent to the surgery. She isn't much affected mentally, @@color:red;but if she had much in the way of oral skills, they've likely suffered.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+	<<if $activeSlave.oralSkill gt 0>>
+		<<set $activeSlave.oralSkill -= 1>>
+	<</if>>
+<<elseif ($surgeryType is "lips")>>
+	She eyes her new lips with resentment. She's still sore, so she doesn't touch them, but she glares daggers. She still thinks of herself as a person, so she isn't used to the idea of being surgically altered to suit your every whim. If she had much in the way of oral skills, @@color:red;they've likely suffered.@@ For now, @@color:mediumorchid;she seems to view these fake lips as a cruel imposition.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+	<<if $activeSlave.oralSkill gt 0>>
+		<<set $activeSlave.oralSkill -= 1>>
+	<</if>>
+
+<<elseif ($surgeryType is "lipo") and ($activeSlave.sexualQuirk is "anorexic")>>
+	She looks over her new waist experimentally and turns to you with a smile to show it off. As an anorexic @@color:hotpink;she thinks you have brought her closer to the true ideal.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "lipo") and ($activeSlave.devotion gt 10)>>
+	She looks over her new waist experimentally and turns to you with a smile to show it off. She's still sore, so she doesn't bend or flirt, but she turns around to let you see it from all angles. @@color:hotpink;She's happy with your changes to her waist.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "lipo") and ($activeSlave.devotion gte -4)>>
+	She eyes her new waist skeptically. She's still sore, so she doesn't bend or touch herself. She's come to terms with the fact that she's a slave, so she expected something like this when she was sent to the surgery. She isn't much affected mentally. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "lipo")>>
+	She eyes her new waist with resentment. She's still sore, so she doesn't bend or touch herself, but she glares daggers. She still thinks of herself as a person, so she isn't used to the idea of being surgically altered to suit your every whim. For now, @@color:mediumorchid;she seems to view this fake figure as a cruel imposition@@. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+
+<<elseif ($surgeryType is "ribs") and ($activeSlave.sexualQuirk is "anorexic")>>
+	She's desperately stiff and sore. It takes a good while for her to figure out what has happened, but eventually her careful investigations discern that the cause of her extremely narrow waist is that her ribcage has been shortened. She gasps with shock, and when she looks at you you see awe in her eyes. As an anorexic @@color:hotpink;she thinks you have brought her closer to the true ideal.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "ribs") and ($activeSlave.devotion gt 10)>>
+	She's desperately stiff and sore. It takes a good while for her to figure out what has happened, but eventually her careful investigations discern that the cause of her extremely narrow waist is that her ribcage has been shortened. She gasps with shock, and when she looks at you you see awe and fear in her eyes. @@color:hotpink;She has become more submissive due to your radical reshaping of her body.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "ribs") and ($activeSlave.devotion gt 4)>>
+	She's desperately stiff and sore. It takes a good while for her to figure out what has happened, but eventually her careful investigations discern that the cause of her extremely narrow waist is that her ribcage has been shortened. She gasps with shock, but eventually her shoulders slump and she tries to carry on. She isn't much affected mentally. Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+<<elseif ($surgeryType is "ribs")>>
+	She's desperately stiff and sore. It takes a good while for her to figure out what has happened, but eventually her careful investigations discern that the cause of her extremely narrow waist is that her ribcage has been shortened. She gasps with shock, wobbles a little, gasps with pain at the soreness as she does, and then manages to hold herself upright and still as she sobs. @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 2>>
+
+<<elseif ($surgeryType is "mtf") and ($activeSlave.devotion gt 10)>>
+	Of course, she already realized while exiting that her genitalia was completely reshaped. As a shemale slave she knew this day might come, and her face is a strange mix of hope, happiness, satisfaction, and the tiniest tinge of soul-crushing sadness as she views the vagina that has replaced her penis. @@color:hotpink;She has become more submissive due to your radical reshaping of her body.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "mtf") and ($activeSlave.devotion gt 4)>>
+	Of course, she already realized while exiting that her genitalia was completely reshaped. As a shemale slave she knew this day might come, and her face is a strange mix of fear, hope, and resignation as she views the vagina that has replaced her penis. Eventually her shoulders slump and she tries to carry on. @@color:mediumorchid;She will struggle with feelings of confusion and loss.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+<<elseif ($surgeryType is "mtf")>>
+	Of course, she already realized while exiting that her genitalia was completely reshaped. As a shemale slave she knew this day might come, but expectations and the reality are two different things. She's beside herself, weeping gently. She absently moves a hand to where her penis would have been and snatches it away with a sob. @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;cripplingly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 4>>
+    <<set $activeSlave.devotion -= 4>>
+
+<<elseif ($surgeryType is "herm") and ($activeSlave.devotion gt 10)>>
+	She already realized while exiting that her genitalia has been heavily augmented. She's almost beside herself with joy: she now has three holes for her beloved Master to fuck, and he even allowed her to retain her dick! @@color:hotpink;She has become more submissive due to your radical reshaping of her body.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+    <<set $activeSlave.devotion += 2>>
+<<elseif ($surgeryType is "herm") and ($activeSlave.devotion gt 4)>>
+	She already realized while exiting that her genitalia has been heavily augmented. Her efforts to cope with this radical development are palpable. She retains her penis, to her considerable surprise; and she also has a pussy. She hardly knows what to think or who to be. @@color:hotpink;She has become more submissive due to your radical reshaping of her body.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "herm")>>
+	She already realized while exiting that her genitalia has been heavily augmented. @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ She is not as angry as she might otherwise have been, since you left her her dick, but she has a hole where there was none before. She views it with hatred and revulsion. Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 2>>
+
+<<elseif ($surgeryType is "geld") and ($activeSlave.devotion gt 10)>>
+	Of course, she already realized while exiting that her scrotum was gone. She was already accepting of her role as a female slave, a receptacle for cock, and she now understands that you no longer think it will ever again be necessary for her to be hard. @@color:hotpink;She has become more submissive due to your radical reshaping of her body.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "geld") and ($activeSlave.devotion gt 4)>>
+	Of course, she already realized while exiting that her scrotum was gone. She was already struggling to accept her role as a female slave, a receptacle for cock, and she now understands it better. She has not yet accepted that she will never again fuck, though, that her future is nothing but getting fucked. @@color:mediumorchid;She will struggle with feelings of confusion and loss.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+<<elseif ($surgeryType is "geld")>>
+	Of course, she already realized while exiting that her scrotum was gone. She cannot accept that it is no longer her role to fuck holes, but rather to provide a hole for others to fuck.<<if $activeSlave.amp isnot 1>> She absently moves a hand to where her balls would have been and snatches it away with a sob.<</if>> @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;cripplingly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 4>>
+    <<set $activeSlave.devotion -= 4>>
+
+<<elseif ($surgeryType is "chop") and ($activeSlave.devotion gt 10)>>
+	Of course, she already realized while exiting that her genitalia was radically simplified. As a herm slave she knew this day might come, and her face is a strange mix of hope, happiness, satisfaction, and the tiniest tinge of soul-crushing sadness as she views the vagina that is all that remains of her once-unique hermaphroditic genitalia. @@color:hotpink;She has become more submissive due to your radical reshaping of her body.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "chop") and ($activeSlave.devotion gt 4)>>
+	Of course, she already realized while exiting that her genitalia was radically simplified. As a herm slave she knew this day might come, and her face is a strange mix of fear, hope, and resignation as she views the vagina that is all that remains of her once-unique hermaphroditic genitalia. Eventually her shoulders slump and she tries to carry on. @@color:mediumorchid;She will struggle with feelings of confusion and loss.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+<<elseif ($surgeryType is "chop")>>
+	Of course, she already realized while exiting that her genitalia was radically simplified. As a herm slave she knew this day might come, but expectations and the reality are two different things. She's beside herself, weeping gently.<<if $activeSlave.amp isnot 1>> She absently moves a hand to where her penis would have been and snatches it away with a sob.<</if>> @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;cripplingly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 4>>
+    <<set $activeSlave.devotion -= 4>>
+
+<<elseif ($surgeryType is "teeth") and ($activeSlave.devotion gt 10)>>
+	She clearly feels quite normal except for a vague ache around her jaw. It takes a good while for her to figure out what has happened, but eventually she gets enough sensation in her mouth to realize that she is wearing prosthetic teeth that she can remove. She gasps with shock, but figures out the idea quickly enough by experimentally <<if $activeSlave.amp isnot 1>>sucking on two fingers.<<else>>simulating oral sex with her own tongue.<</if>> @@color:hotpink;She has become more submissive due to your radical reshaping of her body.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "teeth") and ($activeSlave.devotion gt 4)>>
+	She clearly feels quite normal except for a vague ache around her jaw. It takes a good while for her to figure out what has happened, but eventually she gets enough sensation in her mouth to realize that she is wearing prosthetic teeth that she can remove. She gasps with shock, but eventually her shoulders slump and she tries to carry on. She isn't much affected mentally. Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+<<elseif ($surgeryType is "teeth")>>
+	She clearly feels quite normal except for a vague ache around her jaw. It takes a good while for her to figure out what has happened, but eventually she gets enough sensation in her mouth to realize that she is wearing prosthetic teeth that she can remove. She gasps with shock, gags, spits out the prosthetics, looks at herself in the mirror, and sobs. @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 2>>
+
+<<elseif ($surgeryType is "sharp") and ($activeSlave.devotion gt 10)>>
+	She clearly feels quite normal except for a vague ache around her jaw. It takes a good while for her to figure out what has happened, but eventually she gets enough sensation in her mouth to realize that she now has teeth fit for a carnivore. She seems doubtful, but then works up her courage and bares them at a mirror. She menaces herself for a while before laughing quietly. @@color:hotpink;She has become more submissive due to your radical reshaping of her body.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "sharp") and ($activeSlave.devotion gt 4)>>
+	She clearly feels quite normal except for a vague ache around her jaw. It takes a good while for her to figure out what has happened, but eventually she gets enough sensation in her mouth to realize that he now has teeth fit for a carnivore. She gasps with shock, but eventually her shoulders slump and she tries to carry on. She isn't much affected mentally. Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+<<elseif ($surgeryType is "sharp")>>
+	She clearly feels quite normal except for a vague ache around her jaw. It takes a good while for her to figure out what has happened, but eventually she gets enough sensation in her mouth to realize that he now has teeth fit for a carnivore. She gasps with shock, accidentally gets her tongue in the way in her anguish, bites herself, and starts gagging and spitting blood. @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 2>>
+
+<<elseif ($surgeryType is "oral")>>
+	She clearly feels quite normal except for a vague ache around her jaw. She checks herself in the mirror repeatedly before accepting that nothing too unusual has happened, and that she now appears to have a fully functional set of normal teeth. Though she's surprised that nothing outlandish has been done, she carries on as usual. Since the surgery was moderately invasive, @@color:red;her health has been somewhat affected.@@
+
+<<elseif ($surgeryType is "mute") and ($activeSlave.devotion gt 10)>>
+	She clearly feels quite normal except for a vague ache around her larynx. It takes a good while for her to figure out what has happened, but eventually she tries to speak and makes no sound. She panics, but manages to control herself at length and begins to think. Seeing you, she tries to ask you for instruction and realizes she cannot. <<if $activeSlave.amp isnot 1>>After more thought, she simply gets on her knees facing away from you and spreads her buttocks to offer herself to you.<<else>>After more thought, she simply rolls over facing away from you and winks her asshole to offer herself to you.<</if>> @@color:hotpink;She has become more submissive due to your radical reshaping of her being.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "mute") and ($activeSlave.devotion gt 4)>>
+	She clearly feels quite normal except for a vague ache around her larynx. It takes a good while for her to figure out what has happened, but eventually she tries to speak and makes no sound. She panics, trying to scream or protest but only managing to cry. Eventually she pulls herself together. @@color:mediumorchid;She will struggle with her medically created disability.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 2>>
+<<elseif ($surgeryType is "mute")>>
+	She clearly feels quite normal except for a vague ache around her larynx. It takes a good while for her to figure out what has happened, but eventually she tries to speak and makes no sound. She panics, trying to scream or protest but only managing to cry. As long as she remains unbent to your will, she will have a constant, inescapable reminder of who and what you are. @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;cripplingly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 4>>
+    <<set $activeSlave.devotion -= 10>>
+
+<<elseif ($surgeryType is "height") and ($activeSlave.devotion gt 10)>>
+	She exits the surgery very cautiously, since she's terribly sore and isn't yet used to the novel lengths of the legs she walks on. She'll be clumsy and hesitant for some time, but she's happy with her new body. @@color:hotpink;She has become more submissive due to your radical reshaping of her body.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "height") and ($activeSlave.devotion gt 4)>>
+	She exits the surgery very cautiously, since she's terribly sore and isn't yet used to the novel lengths of the legs she walks on. She'll be clumsy and hesitant for some time, but she's accepted her new body. She isn't much affected mentally. As with all surgery @@color:red;her health has been slightly affected.@@
+<<elseif ($surgeryType is "height")>>
+	She exits the surgery very cautiously, since she's terribly sore and isn't yet used to the novel lengths of the legs she walks on. She'll be clumsy and hesitant for some time, and she refuses to accept that this new body is really what she's been condemned to. @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 2>>
+
+<<elseif ($surgeryType is "heels") and ($activeSlave.devotion gt 10)>>
+	She exits the surgery on all fours, unable to stand due to the changes to her legs. She finds a whorish pair of heels waiting for her and eagerly puts them on, gingerly standing to find that she can indeed walk comfortably while wearing them. She struts back and forth experimentally and then offers the mirror her asshole to check to see that her ability to take a standing buttfuck hasn't been affected. @@color:hotpink;She has become more submissive due to your radical reshaping of her body.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "heels") and ($activeSlave.devotion gt 4)>>
+	She exits the surgery on all fours, unable to stand due to the changes to her legs. She finds a whorish pair of heels waiting for her and obediently puts them on, gingerly standing to find that she can indeed walk comfortably while wearing them. After a while she realizes that she'll never walk without looking like a stripper again, but she accepts it. She isn't much affected mentally. As with all surgery @@color:red;her health has been slightly affected.@@
+<<elseif ($surgeryType is "heels")>>
+	She exits the surgery on all fours, unable to stand due to the changes to her legs. She finds a whorish pair of heels waiting for her, but obstinately ignores them. After some time, she realizes that the situation isn't changing and puts them on, gingerly standing to find that she can indeed walk comfortably while wearing them. Her eyes are filled with hatred when she sees her new and permanent appearance in the mirror. @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 2>>
+
+<<elseif ($surgeryType is "heelsRestoration") and ($activeSlave.devotion gte -4)>>
+	She exits the surgery on her own two feet. She's still sore, but the modern surgery is fast and effective, and she can use her restored legs immediately. She gingerly stands on one foot, then the other; and even takes a few little hops. She's grinning like a fool the whole time. @@color:hotpink;She has become more obedient due to gratitude.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "heelsRestoration")>>
+	She exits the surgery on her own two feet. She's still sore, but the modern surgery is fast and effective, and she can use her restored legs immediately. She gingerly stands on one foot, then the other; and even takes a few little hops. She obviously confused, finding it surprising that you would go to the expense and trouble of repairing her. As with all surgery @@color:red;her health has been slightly affected.@@
+
+<<elseif ($surgeryType is "amp") and ($activeSlave.devotion gt 10)>>
+	Of course, she could not walk out of the surgery; you carried her. She knows what a slave's life is, but she did not really expect that it would ever come to this for her. After a long, silent stare at her limbless torso, she squares her shoulders and visibly resolves to carry on being a good slave as best she can. Since the surgery was invasive, @@color:red;her health has been greatly affected.@@
+<<elseif ($surgeryType is "amp") and ($activeSlave.devotion gt 4)>>
+	Of course, she could not walk out of the surgery; you carried her. Despite her obedience, she cries softly the whole time, shoulder and hip stumps moving occasionally as she reflexively tries to stand - to walk - to touch herself - to gesture - all things that she will never do again. @@color:mediumorchid;She will struggle greatly with her medically created disability.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;cripplingly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 4>>
+    <<set $activeSlave.devotion -= 4>>
+<<elseif ($surgeryType is "amp")>>
+	Of course, she could not walk out of the surgery; you carried her. You had a good idea what her reaction would be, so <<if ($activeSlave.teeth is 1)>>you removed her teeth<<else>>she's muzzled<</if>> to prevent her from trying to bite. She sobs convulsively, and her eyes dart desperately from side to side through her tears, hopelessly imploring the mirror to show her something other than this. Anything other than this. @@color:mediumorchid;The surgical invasion has filled her with horror and anger.@@ Since the surgery was invasive, @@color:red;her health has been greatly affected.@@ She is @@color:gold;terrified to the point of insanity@@ of your total power over her body.
+    <<set $activeSlave.trust -= 10>>
+    <<set $activeSlave.devotion -= 10>>
+
+<<elseif ($surgeryType is "ster") and ($activeSlave.fetish is "pregnancy") and ($activeSlave.fetishDiscovered is 1)>>
+	She leaves the surgery with nothing but a nonspecific ache in her lower abdomen, but she knows enough about surgery and sex slaves to know that it means she'll never have a child. She is @@color:mediumorchid;filled with grief@@ whenever she thinks about the fact that feeling a life growing within her is now, finally and forever, beyond her. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her body.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 4>>
+<<elseif ($surgeryType is "ster") and ($activeSlave.fetish is "nympho") and ($activeSlave.fetishDiscovered is 1)>>
+	She leaves the surgery with nothing but a nonspecific ache in her lower abdomen, but she knows enough about surgery and sex slaves to know that it means she'll never have to worry about a pussyfuck getting her pregnant again. As far as she's concerned, easier, less worrisome vaginal intercourse is a @@color:hotpink;good thing;@@ one less thing to keep in mind when a guy blows his load inside her. As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "ster") and ($activeSlave.devotion gt 10)>>
+	She leaves the surgery with nothing but a nonspecific ache in her lower abdomen, but she knows enough about surgery and sex slaves to know that it means she'll never have to worry about a pregnancy, ever again. She has many rules and duties to worry about as a slave, so she's @@color:hotpink;grateful@@ that she has one less thing to worry about as she serves you. As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "ster") and ($activeSlave.devotion gte -4)>>
+	She leaves the surgery with nothing but a nonspecific ache in her lower abdomen, but she knows enough about surgery and sex slaves to know that it means she'll never get pregnant. She understands the realities of her life as a slave, and that a traditional life with a child was never going to happen for her anyway, so it isn't much of a shock. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "ster")>>
+	She leaves the surgery with nothing but a nonspecific ache in her lower abdomen, but she knows enough about surgery and sex slaves to know that it means she'll never get pregnant. She does not understand the realities of her life as a slave at a core level, so despite the fact that she was never going to have a family, fertile or not, she's @@color:mediumorchid;resentful@@ of the surgical invasion. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+    <<set $activeSlave.devotion -= 1>>
+
+<<elseif ($surgeryType is "fert") and ($activeSlave.fetish is "pregnancy") and ($activeSlave.fetishDiscovered is 1)>>
+	She leaves the surgery with nothing but a nonspecific ache in her lower abdomen, but she knows enough about surgery and sex slaves to know that it means she now has a chance to get pregnant. She is @@color:hotpink;filled with joy@@ whenever she thinks about the fact that feeling a life growing within her is now, at last, a possibility. She's so pleased that she now @@color:mediumaquamarine;trusts@@ your plans for her body. As with all surgery @@color:red;her health has been slightly affected.@@
+	  <<set $activeSlave.trust += 1>>
+    <<set $activeSlave.devotion += 4>>
+<<elseif ($surgeryType is "fert") and ($activeSlave.devotion gt 10)>>
+	She leaves the surgery with nothing but a nonspecific ache in her lower abdomen, but she knows enough about surgery and sex slaves to know that it means she now has a chance to get pregnant. She's @@color:hotpink;grateful@@ that you think her worthy of breeding, and even a little nervous about how she'll perform as a breeder. As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "fert") and ($activeSlave.devotion gte -4)>>
+	She leaves the surgery with nothing but a nonspecific ache in her lower abdomen, but she knows enough about surgery and sex slaves to know that it means she may now be impregnated. She understands the realities of her life as a slave, and that being bred was a possibility, so it isn't much of a shock. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "fert")>>
+	She leaves the surgery with nothing but a nonspecific ache in her lower abdomen, but she knows enough about surgery and sex slaves to know that it means she may now be impregnated. She does not understand the realities of her life as a slave at a core level, so she's @@color:mediumorchid;terrified and angry@@ at the potential that she'll be bred. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+    <<set $activeSlave.devotion -= 1>>
+
+<<elseif ($surgeryType is "anus") and ($activeSlave.fetish is "buttslut") and ($activeSlave.fetishDiscovered is 1)>>
+	She leaves the surgery with a terribly sore rear end. She is @@color:hotpink;filled with joy@@ at the prospect of having a tight butt all over again, so much so that she now @@color:mediumaquamarine;trusts@@ your plans for her body. If she had much in the way of anal skills, @@color:red;they've likely suffered.@@  As with all surgery @@color:red;her health has been slightly affected.@@
+	  <<set $activeSlave.trust += 1>>
+    <<set $activeSlave.devotion += 2>>
+	<<if $activeSlave. analSkill gt 0>>
+		<<set $activeSlave.analSkill -= 1>>
+	<</if>>
+<<elseif ($surgeryType is "anus") and ($activeSlave.devotion gt 10)>>
+	She leaves the surgery with a terribly sore rear end. She's a bit anxious at the prospect of the pain having to get back to a loose asshole the hard way, but she's @@color:hotpink;happy@@ that you think her worth the effort of surgical improvement. If she had much in the way of anal skills, @@color:red;they've likely suffered.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+	<<if $activeSlave. analSkill gt 0>>
+		<<set $activeSlave.analSkill -= 1>>
+	<</if>>
+<<elseif ($surgeryType is "anus") and ($activeSlave.devotion gte -4)>>
+	She leaves the surgery with a terribly sore rear end. She knows she'll have to endure the pain of being fucked in a tight asshole again soon enough, but trepidation is nothing new for her. If she had much in the way of anal skills, @@color:red;they've likely suffered.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "anus")>>
+	She leaves the surgery with a terribly sore rear end. She's @@color:mediumorchid;horrified@@ at surgical alteration of her rear end, and knows that this means that she'll have to take the pain of sodomy in a tight ass all over again. If she had much in the way of anal skills, @@color:red;they've likely suffered.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her most intimate parts.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+	<<if $activeSlave. analSkill gt 0>>
+		<<set $activeSlave.analSkill -= 1>>
+	<</if>>
+
+<<elseif ($surgeryType is "labiaplasty") and ($activeSlave.fetish is "nympho") and ($activeSlave.fetishDiscovered is 1)>>
+	She leaves the surgery with a terribly sore pussy. She is @@color:hotpink;filled with joy@@ at the thought that her pussy will now be more appealing to <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>>; she's already anticipating recovering enough to feel your cockhead pressing past her new lips, so much so that she now @@color:mediumaquamarine;trusts@@ your plans for her body. As with all surgery @@color:red;her health has been slightly affected.@@
+	  <<set $activeSlave.trust += 1>>
+    <<set $activeSlave.devotion += 2>>
+<<elseif ($surgeryType is "labiaplasty") and ($activeSlave.devotion gt 10)>>
+	She leaves the surgery with a terribly sore pussy. She's @@color:hotpink;happy@@ that you think her pussy worth the effort of surgical improvement, and a little excited at the idea that she now has what you consider good-looking pussylips. As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($surgeryType is "labiaplasty") and ($activeSlave.devotion gte -4)>>
+	She leaves the surgery with a terribly sore pussy. She's somewhat revolted by the surgery, but as far as she's concerned, the short recovery period will mean a time during which she can be sure no one will use her pussy. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($surgeryType is "labiaplasty")>>
+	She leaves the surgery with a terribly sore pussy. She's @@color:mediumorchid;horrified@@ at surgical alteration of her womanhood; this is probably more of an invasion than she could readily imagine before today. As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her most intimate parts.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+
+<<elseif ($surgeryType is "vagina") and ($activeSlave.fetish is "nympho") and ($activeSlave.fetishDiscovered is 1)>>
+	She leaves the surgery with a terribly sore pussy. She is @@color:hotpink;filled with joy@@ at the prospect of having a tight cunt again, so much so that she now @@color:mediumaquamarine;trusts@@ your plans for her body. If she had much in the way of vanilla sex skills, @@color:red;they've likely suffered.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+	  <<set $activeSlave.trust += 1>>
+    <<set $activeSlave.devotion += 2>>
+	<<if $activeSlave.vaginalSkill gt 0>>
+		<<set $activeSlave.vaginalSkill -= 1>>
+	<</if>>
+<<elseif ($surgeryType is "vagina") and ($activeSlave.devotion gt 10)>>
+	She leaves the surgery with a terribly sore pussy. She's @@color:hotpink;happy@@ that you think her worth the effort of surgical improvement, and a little excited to feel like she's a girl again. If she had much in the way of vanilla sex skills, @@color:red;they've likely suffered.@@ As with all surgery @@color:red;her health has been slightly affected.@@
+    <<set $activeSlave.devotion += 1>>
+	<<if $activeSlave.vaginalSkill gt 0>>
+		<<set $activeSlave.vaginalSkill -= 1>>
+	<</if>>
+<<elseif ($surgeryType is "vagina") and ($activeSlave.devotion gte -4)>>
+	She leaves the surgery with a terribly sore pussy. She's somewhat revolted by the surgery, but as far as she's concerned, the short recovery period will mean a time during which she can be sure no one will use her pussy. If she had much in the way of vanilla sex skills, @@color:red;they've likely suffered.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;sensibly fearful@@ of your total power over her body.
+    <<set $activeSlave.trust -= 1>>
+	<<if $activeSlave.vaginalSkill gt 0>>
+		<<set $activeSlave.vaginalSkill -= 1>>
+	<</if>>
+<<elseif ($surgeryType is "vagina")>>
+	She leaves the surgery with a terribly sore pussy. She's @@color:mediumorchid;horrified@@ at surgical alteration of her womanhood; this is probably more of an invasion than she could readily imagine before today. If she had much in the way of vanilla sex skills, @@color:red;they've likely suffered.@@ As with all surgery @@color:red;her health has been slightly affected.@@ She is @@color:gold;terribly afraid@@ of your total power over her most intimate parts.
+    <<set $activeSlave.trust -= 2>>
+    <<set $activeSlave.devotion -= 1>>
+	<<if $activeSlave.vaginalSkill gt 0>>
+		<<set $activeSlave.vaginalSkill -= 1>>
+	<</if>>
+
+<<else>>
+	ERROR bad/missing surgery descript
+    Surgtyp: $surgeryType
+    Devotion: $activeSlave.devotion
+<</if>>
+
+<<if ($activeSlave.behavioralQuirk is "arrogant") and ($surgeryType is "amp")>>
+	@@color:green;She can hardly be arrogant relying on others to feed, bathe and carry her.@@
+    <<set $activeSlave.sexualQuirk to "none">>
+<<elseif ($activeSlave.behavioralQuirk is "bitchy") and ($surgeryType is "mute")>>
+	@@color:green;She can hardly make sharp remarks without a voice.@@
+    <<set $activeSlave.sexualQuirk to "none">>
+<</if>>
+
+<</if>> /* CLOSES DEATH */
+
+<</nobr>>

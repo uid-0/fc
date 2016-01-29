@@ -1,0 +1,87 @@
+<<nobr>>
+
+$slaves[$i].slaveName carries arms in your defense.
+
+<<set $activeSlave to $slaves[$i]>>
+<<display "Deadliness">>
+
+<<if $slaves[$i].combatSkill gt 0>>
+	Her combat skills greatly increase her deadliness.
+<</if>>
+
+<<if ($slaves[$i].muscles gt 1) and ($slaves[$i].muscles lt 3)>>
+	She is strong and powerful yet quick and flexible.
+<<elseif $slaves[$i].muscles gte 3>>
+	Her huge muscles are an intimidating sight, but are so big that they actually detract from her combat effectiveness.
+<<elseif $slaves[$i].muscles gt 0>>
+	She is reasonably fit, but not enough to significantly affect her combat effectiveness.
+<</if>>
+
+<<if $slaves[$i].height gt 0>>
+	Her height gives her a reach advantage with her sword.
+<</if>>
+
+<<if $slaves[$i].health gt 5>>
+	Her shining health makes her a better combatant.
+<</if>>
+
+<<if $slaves[$i].boobs gt 4000>>
+	Her titanic tits are a terrible hindrance in actual fighting.
+<<elseif $slaves[$i].boobs gt 2000>>
+	Her big breasts get in her way and reduce her efficiency.
+<</if>>
+
+<<if $slaves[$i].butt gt 6>>
+	Her massive ass slows her down and limits her range of motion.
+<</if>>
+
+<<if $slaves[$i].weight gt 0>>
+	Her heavy weight is an impediment as a bodyguard.
+<</if>>
+
+<<if $slaves[$i].weight lt 0>>
+	Her light weight is an impediment as a bodyguard.
+<</if>>
+
+<<if $slaves[$i].health lt -5>>
+	Her poor health makes her a weaker combatant.
+<</if>>
+
+<<if $slaves[$i].preg gt 10>>
+	Her advanced pregnancy makes her less effective.
+<</if>>
+
+<<if $slaves[$i].teeth is 2>>
+	Her sharp teeth add nothing to her actual effectiveness, but they're certainly intimidating.
+<</if>>
+
+<<if ($slaves[$i].combatSkill lt 1) and (random(1,100) lt 50+($slaves[$i].intelligence*20))>>
+	After some experience guarding you, and diligent practice in the armory, @@color:green;her combat skills increase.@@
+	<<set $slaves[$i].combatSkill += 1>>
+<<elseif $slaves[$i].combatSkill gte 1>>
+	She maintains her combat skill with practice in the armory.
+<<else>>
+	Though she practices diligently her basic combat skills do not improve this week.
+<</if>>
+
+Her constant presence is
+<<if $deadliness gt 6>>
+	extremely intimidating, @@color:green;adding much to your reputation.@@
+<<elseif $deadliness gt 3>>
+	intimidating, @@color:green;adding to your reputation.@@
+<<else>>
+	hardly intimidating, @@color:yellow;barely adding to your reputation.@@
+<</if>>
+
+<<set $repGain += $deadliness*10>>
+
+Being continually trusted with your life @@color:hotpink;increases her devotion to you@@ and encourages her to @@color:hotpink;trust you in turn.@@
+  <<set $slaves[$i].devotion += 0.7>>
+  <<set $slaves[$i].trust += 1>>
+
+<<if $dojo gt 1>>
+  She @@color:hotpink;appreciates@@ how special it is that she has a nice room off the armory to rest in.
+  <<set $slaves[$i].devotion += 0.3>>
+<</if>>
+
+<</nobr>>\

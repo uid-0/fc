@@ -1,0 +1,39 @@
+Most Free Cities arcology owners and slaveowners are male. The preexisting power structures of the old world have mostly migrated to the new, and it can often be very hard to be a free woman in the Free Cities. Some manage to make their way, but in many arcologies, men are the owners, and women are the owned. You'll cut a striking figure as the owner and leader of your new arcology, but @@color:orange;what's under your business attire?@@
+
+<<nobr>>
+Under my suit jacket,
+<<if $PC.boobs gt 0>>
+	''feminine breasts''.
+    [[Remove breasts|PC Intro][$PC.boobs to 0]]
+<<else>>
+	''masculine muscles''.
+    [[Add breasts|PC Intro][$PC.boobs to 1]]
+<</if>>
+<</nobr>>
+<<nobr>>
+Behind the front of my tailored
+<<if $PC.dick gt 0>>
+	slacks, a ''penis''.
+    [[Switch to vagina|PC Intro][$PC.dick to 0]]
+<<else>>
+	skirt, a ''vagina''.
+    [[Switch to penis|PC Intro][$PC.dick to 1]]
+<</if>>
+<</nobr>>
+//These options will affect sex scenes. Feminine options will increase difficulty.//
+
+<<nobr>>
+Your slaves will refer to you as
+<<if $PC.title gt 0>>
+	''Master''.
+    [[Switch to Mistress|PC Intro][$PC.title to 0]]
+<<else>>
+	''Mistress''.
+    [[Switch to Master|PC Intro][$PC.title to 1]]
+<</if>>
+<</nobr>>
+
+Name your character: <<textbox "$PCName" $PCName "PC Intro">>
+//As with all text boxes in FC, press the enter key to commit your changes.//
+
+[[Confirm player character customization|Start]]

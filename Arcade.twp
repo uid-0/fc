@@ -1,0 +1,92 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $arcadeSlaves to 0>>
+<<set $notArcadeSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "be confined in the arcade">>
+      <<set $arcadeSlaves += 1>>
+    <<else>>
+	  <<set $notArcadeSlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $arcadeSlaves gt 2>>
+	The arcade is busy. Customers are entering and exiting the partitioned booths, leaving a few ¤ behind in the charge machines and loads of semen behind in the holes.
+<<elseif $arcadeSlaves gt 0>>
+	The arcade is understaffed; there are lines here and there for the partitioned booths that have an inmate within.
+<<else>>
+	The arcade is empty and quiet. [[Decomission the arcade|Main][$arcade to 0, $arcadeUpgradeInjectors to 0, $arcadeUpgradeFuckdolls to 0]]
+<</if>>
+
+<br>
+It can support <<print $arcade*5>> inmates.
+<<if $arcade*5 lt $arcadeSlaves>>
+  <<if $arcadeUpgradeFuckdolls is 1>>
+	@@color:yellow;The arcade is overcrowded;@@ the least popular inmate will be sold as a Fuckdoll this week.
+  <<else>>
+	@@color:red;The arcade is overcrowded.@@
+  <</if>>
+<</if>>
+[[Expand the arcade|Arcade][$cash -= 5000, $arcade += 1]]
+//Costs ¤5000 and will increase upkeep costs//
+	
+<br>
+<<if $arcadeUpgradeInjectors is 1>>
+	It has been upgraded with aphrodisiac injection systems and electroshock applicators. If the aphrodisiacs fail to force an orgasm from an inmate, she is shocked to tighten her holes regardless.
+<<else>>
+	It is a standard arcade.
+	[[Upgrade the arcade with invasive performance-enhancing systems|Arcade][$cash -= 10000, $arcadeUpgradeInjectors to 1]]
+	//Costs ¤10000 and will increase upkeep costs//
+<</if>>
+	
+<br>
+<<if $arcadeUpgradeCollectors is 1>>
+	It has been retrofitted to milk lactating slaves<<if $seeDicks isnot 0>> and cockmilk slaves capable of ejaculating<</if>>, though less efficiently than a dedicated facility.
+<<else>>
+	There is no special provision for lactating<<if $seeDicks isnot 0>> or ejaculating<</if>> slaves.
+	[[Retrofit the arcade to collect useful fluids|Arcade][$cash -= 10000, $arcadeUpgradeCollectors to 1]]
+	//Costs ¤10000 and will increase upkeep costs//
+<</if>>
+	
+<br>
+<<if $arcadeUpgradeFuckdolls is 1>>
+	The arcade is equipped to convert surplus mindbroken inmates into Fuckdolls.
+<<else>>
+	The arcade is not equipped to convert surplus mindbroken inmates into Fuckdolls.
+	[[Upgrade the arcade to create Fuckdolls|Arcade][$cash -= 5000, $arcadeUpgradeFuckdolls to 1]]
+	//Costs ¤5000//
+<</if>>
+
+<br>
+//Sir, slaves assigned here will be given drugs to prevent them from becoming useless. The extreme nature of the use and confinement will have significant mental effects.//
+
+<</nobr>>
+
+<<if $arcadeSlaves gt 0>>\
+__Bring a slave out of the arcade:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "be confined in the arcade">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Release her from the Arcade|Retrieve from Arcade][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notArcadeSlaves gt 1>>\
+__Confine a slave in the arcade:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+  <br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+  <<display "Slave Summary">>\
+  | <<print "[[Confine her in the Arcade|Assign to Arcade][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\

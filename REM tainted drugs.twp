@@ -1,0 +1,14 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+
+<<set $slaveCostFactor += 0.2>>
+
+<</nobr>>\
+\
+//Sir, I have a flagged a news item that may be of business interest.//
+
+The Free Cities are anarcho-capitalist paradises - or 'paradises,' depending on one's station and assets. You can't complain personally, as one of the Free Cities' richest citizens, master of your own arcology and owner of sexual slaves. Unfortunately quite a few slaves in the markets are in a position to complain today, as are their owners. Many slave markets use long-lasting stimulants to pep their wares up for auction; dull-eyed slaves earn low bids. Corner-cutting at one of the major suppliers of these stimulants led to a number of slaves being prepared for auction being damaged today. Relatively few were permanently lost, but slaves are going to be a little scarce for a while, which will drive up the going rate. Projections suggest increases of up to twenty percent.
+
+There will be no immediate impact on you or your slaves, but the coming weeks will be a great time to sell stock, and a bad time to buy. @@color:yellow;The market price of slaves has significantly increased.@@

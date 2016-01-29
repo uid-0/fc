@@ -1,0 +1,927 @@
+<<set $nextButton to "Back">>\
+<<set $nextLink to "Main">>\
+<<set $encyclopedia to "The Future of Society">>\
+\
+<<nobr>>
+
+<<if $FSCredits gt 0>>
+	@@color:yellow;Your arcology's society is ready to begin accepting a new societal direction.@@
+<<elseif $FSGotRepCreditTwo is 1>>
+	Your society is so radically changed that it is starting to take on a life of its own. The major decisions about its direction have been made.
+<<else>>
+	You must develop your reputation further for your arcology's society to be ready for a new societal direction.
+<</if>>
+
+<<if $FSSupremacist gte $FSLockinLevel>>
+  Your arcology believes implicitly in $FSSupremacistRace superiority.
+<<elseif $FSSupremacist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with $FSSupremacistRace superiority.
+<<elseif $FSSupremacist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to $FSSupremacistRace superiority.
+<<elseif $FSSupremacist gt 0>>
+  Your arcology is unconvinced of $FSSupremacistRace superiority.
+<</if>>
+
+<<if $FSSubjugationist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the inferiority of $FSSubjugationistRace people.
+<<elseif $FSSubjugationist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the inferiority of $FSSubjugationistRace people.
+<<elseif $FSSubjugationist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the inferiority of $FSSubjugationistRace people.
+<<elseif $FSSubjugationist gt 0>>
+  Your arcology is unconvinced of the inferiority of $FSSubjugationistRace people.
+<</if>>
+
+<<if $FSGenderRadicalist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the need to redefine gender around power.
+<<elseif $FSGenderRadicalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the need to redefine gender around power.
+<<elseif $FSGenderRadicalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the need to redefine gender around power.
+<<elseif $FSGenderRadicalist gt 0>>
+  Your arcology is unconvinced of the need to redefine gender around power.
+<</if>>
+
+<<if $FSGenderFundamentalist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the need to preserve traditional gender roles.
+<<elseif $FSGenderFundamentalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the need to preserve traditional gender roles.
+<<elseif $FSGenderFundamentalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the need to preserve traditional gender roles.
+<<elseif $FSGenderFundamentalist gt 0>>
+  Your arcology is unconvinced of the need to preserve traditional gender roles.
+<</if>>
+
+<<if $FSPaternalist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the vision of a well-bred race of slaves.
+<<elseif $FSPaternalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the vision of a well-bred race of slaves.
+<<elseif $FSPaternalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the vision of a well-bred race of slaves.
+<<elseif $FSPaternalist gt 0>>
+  Your arcology is unconvinced of the vision of a well-bred race of slaves.
+<</if>>
+
+<<if $FSDegradationist gte $FSLockinLevel>>
+  Your arcology believes implicitly that slaves are not human and should be thoroughly degraded.
+<<elseif $FSDegradationist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that slaves are not human and should be thoroughly degraded.
+<<elseif $FSDegradationist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the proposition that slaves are not human and should be thoroughly degraded.
+<<elseif $FSDegradationist gt 0>>
+  Your arcology is unconvinced that slaves are not human and should be thoroughly degraded.
+<</if>>
+
+<<if $FSBodyPurist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the unattractive nature of implants.
+<<elseif $FSBodyPurist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the unattractive nature of implants.
+<<elseif $FSBodyPurist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the unattractive nature of implants.
+<<elseif $FSBodyPurist gt 0>>
+  Your arcology is unconvinced of the unattractive nature of implants.
+<</if>>
+
+<<if $FSTransformationFetishist gte $FSLockinLevel>>
+  Your arcology passionately fetishizes implants.
+<<elseif $FSTransformationFetishist gte $FSLockinLevel*0.6>>
+  Your arcology strongly fetishizes implants.
+<<elseif $FSTransformationFetishist gte $FSLockinLevel*0.3>>
+  Your arcology fetishizes implants.
+<<elseif $FSTransformationFetishist gt 0>>
+  Your arcology is beginning to fetishize implants.
+<</if>>
+
+<<if $FSSlimnessEnthusiast gte $FSLockinLevel>>
+  Your arcology is passionately enthusiastic about slim slaves with girlish figures.
+<<elseif $FSSlimnessEnthusiast gte $FSLockinLevel*0.6>>
+  Your arcology is very enthusiastic about slim slaves with girlish figures.
+<<elseif $FSSlimnessEnthusiast gte $FSLockinLevel*0.3>>
+  Your arcology is enthusiastic about slim slaves with girlish figures.
+<<elseif $FSSlimnessEnthusiast gt 0>>
+  Your arcology is beginning to be enthusiastic about slim slaves with girlish figures.
+<</if>>
+
+<<if $FSAssetExpansionist gte $FSLockinLevel>>
+  Your arcology believes implicitly that all tits and asses should be bigger.
+<<elseif $FSAssetExpansionist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that all tits and asses should be bigger.
+<<elseif $FSAssetExpansionist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the idea that all tits and asses should be bigger.
+<<elseif $FSAssetExpansionist gt 0>>
+  Your arcology is unconvinced that all tits and asses should be bigger.
+<</if>>
+
+<<if $FSPastoralist gte $FSLockinLevel>>
+  Your arcology believes implicitly that slaves should be milked.
+<<elseif $FSPastoralist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that slaves should be milked.
+<<elseif $FSPastoralist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the idea that slaves should be milked.
+<<elseif $FSPastoralist gt 0>>
+  Your arcology is unconvinced that slaves should be milked.
+<</if>>
+
+<<if $FSPhysicalIdealist gte $FSLockinLevel>>
+  Your arcology believes implicitly that all slaves should be tall and strong.
+<<elseif $FSPhysicalIdealist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that all slaves should be tall and strong.
+<<elseif $FSPhysicalIdealist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the idea that all slaves should be tall and strong.
+<<elseif $FSPhysicalIdealist gt 0>>
+  Your arcology is unconvinced that all slaves should be tall and strong.
+<</if>>
+
+<<if $FSChattelReligionist gte $FSLockinLevel>>
+  Your arcology believes implicitly in a version of religion that emphasizes slaveholding traditions.
+<<elseif $FSChattelReligionist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with a version of religion that emphasizes slaveholding traditions.
+<<elseif $FSChattelReligionist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to a version of religion that emphasizes slaveholding traditions.
+<<elseif $FSChattelReligionist gt 0>>
+  Your arcology is unconvinced of a version of religion that emphasizes slaveholding traditions.
+<</if>>
+
+<<if $FSRomanRevivalist gte $FSLockinLevel>>
+  Your arcology believes implicitly that it is the new Rome.
+<<elseif $FSRomanRevivalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with your project to build the new Rome.
+<<elseif $FSRomanRevivalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to your project to build the new Rome.
+<<elseif $FSRomanRevivalist gt 0>>
+  Your arcology is unconvinced of the wisdom of your project to build the new Rome.
+<</if>>
+
+<<if $FSAncientEgyptianRevivalist gte $FSLockinLevel>>
+  Your arcology believes implicitly that it is the land of the Pharaohs, reborn.
+<<elseif $FSAncientEgyptianRevivalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with your project to build a new land of the Pharaohs.
+<<elseif $FSAncientEgyptianRevivalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to your project to build a new land of the Pharaohs.
+<<elseif $FSAncientEgyptianRevivalist gt 0>>
+  Your arcology is unconvinced of the wisdom of your project to build a new land of the Pharaohs.
+<</if>>
+
+<</nobr>>
+
+<<nobr>>
+
+You are spending ¤$FSSpending each week to support your societal goals.
+
+<<if $FSSpending gt 900>>
+  [[Decrease|Future Society][$FSSpending -= 1000]] |
+<<else>>
+  Decrease |
+<</if>>
+	[[Increase|Future Society][$FSSpending += 1000]]
+
+<</nobr>>
+\
+<<nobr>>
+<span id="mass">
+
+<<if $FSRomanRevivalist gt 0>>
+  <br>
+  <<click "Rename all your slaves according to Roman custom">>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<set $slaves[$i].slaveName to $romanSlaveNames.random()>>
+	<</for>>
+	<<replace "#mass">>
+	  <br>Slaves renamed.<br>
+	<</replace>>
+  <</click>>
+  <br>
+<<elseif $FSAncientEgyptianRevivalist gt 0>>
+  <br>
+  <<click "Rename all your slaves according to ancient Egyptian custom">>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<set $slaves[$i].slaveName to $ancientEgyptianSlaveNames.random()>>
+	<</for>>
+	<<replace "#mass">>
+	  <br>Slaves renamed.<br>
+	<</replace>>
+  <</click>>
+  <br>
+<</if>>
+<<if $FSDegradationist gt 0>>
+  <br>
+  <<click "Rename all your slaves according to degredationist custom">>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<set $activeSlave to $slaves[$i]>>
+	  <<display "Degrading Name">>
+	  <<set $slaves[$i] to $activeSlave>>
+	<</for>>
+	<<replace "#mass">>
+	  <br>Slaves renamed.<br>
+	<</replace>>
+  <</click>>
+  <br>
+<</if>>
+
+</span>
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $FSSupremacist gt 0>>
+  <br>You are pursuing $FSSupremacistRace superiority. [[Abandon this model|Future Society][$FSSupremacist to 0, $FSSupremacistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSSupremacistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSSupremacist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSSupremacistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSupremacistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSSupremacist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSSupremacistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSupremacistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSSupremacist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSSupremacistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSupremacistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSSupremacist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSSupremacistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSupremacistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Racial supremacism'': a belief in $FSSupremacistRace superiority. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSSupremacist to 1, $FSCredits -= 1]]
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;Select race: 
+<<if $FSSupremacistRace isnot "white">>[[White|Future Society][$FSSupremacistRace to "white"]]<<else>>White<</if>> | 
+<<if $FSSupremacistRace isnot "asian">>[[Asian|Future Society][$FSSupremacistRace to "asian"]]<<else>>Asian<</if>> | 
+<<if $FSSupremacistRace isnot "latina">>[[Latino|Future Society][$FSSupremacistRace to "latina"]]<<else>>Latino<</if>> | 
+<<if $FSSupremacistRace isnot "middle eastern">>[[Middle Eastern|Future Society][$FSSupremacistRace to "middle eastern"]]<<else>>Middle Eastern<</if>> | 
+<<if $FSSupremacistRace isnot "black">>[[Black|Future Society][$FSSupremacistRace to "black"]]<<else>>Black<</if>> | 
+<<if $FSSupremacistRace isnot "indo-aryan">>[[Indo-Aryan|Future Society][$FSSupremacistRace to "indo-aryan"]]<<else>>Indo-Aryan<</if>> | 
+<<if $FSSupremacistRace isnot "amerindian">>[[Amerindian|Future Society][$FSSupremacistRace to "amerindian"]]<<else>>Amerindian<</if>> | 
+<<if $FSSupremacistRace isnot "pacific islander">>[[Pacific Islander|Future Society][$FSSupremacistRace to "pacific islander"]]<<else>>Pacific Islander<</if>> | 
+<<if $FSSupremacistRace isnot "southern european">>[[Southern European|Future Society][$FSSupremacistRace to "southern suropean"]]<<else>>Southern European<</if>> | 
+<<if $FSSupremacistRace isnot "semitic">>[[Semitic|Future Society][$FSSupremacistRace to "semitic"]]<<else>>Semitic<</if>>
+  <<else>>
+	/*//''Racial supremacism'': a belief in the superiority of a chosen race.//*/
+  <</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSSubjugationist gt 0>>
+  <br>You are pursuing $FSSubjugationistRace inferiority. [[Abandon this model|Future Society][$FSSubjugationist to 0, $FSSubjugationistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSSubjugationistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSSubjugationist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSSubjugationistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSubjugationistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSSubjugationist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSSubjugationistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSubjugationistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSSubjugationist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSSubjugationistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSubjugationistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSSubjugationist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSSubjugationistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+  <<elseif $FSSubjugationistDecoration is 100>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<else>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Racial subjugationism'': a belief in $FSSubjugationistRace inferiority. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSSubjugationist to 1, $FSCredits -= 1]]
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;Select race: 
+<<if $FSSubjugationistRace isnot "white">>[[White|Future Society][$FSSubjugationistRace to "white"]]<<else>>White<</if>> | 
+<<if $FSSubjugationistRace isnot "asian">>[[Asian|Future Society][$FSSubjugationistRace to "asian"]]<<else>>Asian<</if>> | 
+<<if $FSSubjugationistRace isnot "latina">>[[Latino|Future Society][$FSSubjugationistRace to "latina"]]<<else>>Latino<</if>> | 
+<<if $FSSubjugationistRace isnot "middle eastern">>[[Middle Eastern|Future Society][$FSSubjugationistRace to "middle eastern"]]<<else>>Middle Eastern<</if>> | 
+<<if $FSSubjugationistRace isnot "black">>[[Black|Future Society][$FSSubjugationistRace to "black"]]<<else>>Black<</if>> | 
+<<if $FSSubjugationistRace isnot "indo-aryan">>[[Indo-Aryan|Future Society][$FSSubjugationistRace to "indo-aryan"]]<<else>>Indo-Aryan<</if>> | 
+<<if $FSSubjugationistRace isnot "amerindian">>[[Amerindian|Future Society][$FSSubjugationistRace to "amerindian"]]<<else>>Amerindian<</if>> | 
+<<if $FSSubjugationistRace isnot "pacific islander">>[[Pacific Islander|Future Society][$FSSubjugationistRace to "pacific islander"]]<<else>>Pacific Islander<</if>> | 
+<<if $FSSubjugationistRace isnot "southern european">>[[Southern European|Future Society][$FSSubjugationistRace to "southern suropean"]]<<else>>Southern European<</if>> | 
+<<if $FSSubjugationistRace isnot "semitic">>[[Semitic|Future Society][$FSSubjugationistRace to "semitic"]]<<else>>Semitic<</if>>
+  <<else>>
+	/*//''Racial subjugationism'': a belief in the inferiority of a subject race.//*/
+  <</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $seeDicks isnot 0>>
+<<if $FSGenderFundamentalist is 0>>
+<<if $FSGenderRadicalist gt 0>>
+  <br>You are pursuing a radical redefenition of gender that identifies powerful people as male, and everyone else as female. [[Abandon this model|Future Society][$FSGenderRadicalist to 0, $FSGenderRadicalistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSGenderRadicalistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSGenderRadicalist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSGenderRadicalistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSGenderRadicalistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSGenderRadicalist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSGenderRadicalistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSGenderRadicalistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSGenderRadicalist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSGenderRadicalistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSGenderRadicalistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSGenderRadicalist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSGenderRadicalistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSGenderRadicalistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Gender radicalism'': a radical redefenition of gender that identifies powerful people as male, and everyone else as female. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSGenderRadicalist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Gender radicalism'': a radical redefenition of gender that identifies powerful people as male, and everyone else as female.//*/
+  <</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSGenderRadicalist is 0>>
+<<if $FSGenderFundamentalist gt 0>>
+  <br>You are pursuing gender traditionalism, including a societal preference for feminine slaves and support for slave pregnancy. [[Abandon this model|Future Society][$FSGenderFundamentalist to 0, $FSGenderFundamentalistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSGenderFundamentalistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSGenderFundamentalist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSGenderFundamentalistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSGenderFundamentalistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSGenderFundamentalist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSGenderFundamentalistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSGenderFundamentalistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSGenderFundamentalist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSGenderFundamentalistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSGenderFundamentalistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSGenderFundamentalist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSGenderFundamentalistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSGenderFundamentalistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Gender traditionalism'': a societal preference for feminine slaves and support for slave pregnancy. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSGenderFundamentalist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Gender traditionalism'': a societal preference for feminine slaves and support for slave pregnancy.//*/
+  <</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSDegradationist is 0>>
+<<if $FSPaternalist gt 0>>
+  <br>You are pursuing a vision of slave improvement, including slaves' health, mental well-being, and education. [[Abandon this model|Future Society][$FSPaternalist to 0, $FSPaternalistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSPaternalistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSPaternalist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSPaternalistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPaternalistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSPaternalist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSPaternalistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPaternalistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSPaternalist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSPaternalistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPaternalistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSPaternalist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSPaternalistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPaternalistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Paternalism'': a vision of slave improvement, including slaves' health, mental well-being, and education. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSPaternalist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Paternalism'': a vision of slave improvement, including slaves' health, mental well-being, and education.//*/
+  <</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSPaternalist is 0>>
+<<if $FSDegradationist gt 0>>
+  <br>You are pursuing slave degradation, a belief that slaves are not human and should not be treated decently. [[Abandon this model|Future Society][$FSDegradationist to 0, $FSDegradationistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSDegradationistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSDegradationist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSDegradationistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSDegradationistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSDegradationist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSDegradationistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSDegradationistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSDegradationist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSDegradationistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSDegradationistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSDegradationist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSDegradationistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSDegradationistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Degradation'': a belief that slaves are not human and should not be treated decently. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSDegradationist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Degradation'': a belief that slaves are not human and should not be treated decently.//*/
+  <</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSTransformationFetishist is 0>>
+<<if $FSBodyPurist gt 0>>
+  <br>You are pursuing societal disapproval of implant surgery. [[Abandon this model|Future Society][$FSBodyPurist to 0, $FSBodyPuristDecoration to 20,  $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSBodyPuristDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSBodyPurist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSBodyPuristDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSBodyPuristDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSBodyPurist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSBodyPuristDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSBodyPuristDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSBodyPurist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSBodyPuristDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSBodyPuristDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSBodyPurist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSBodyPuristDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSBodyPuristDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Body Purism'': societal disapproval of implant surgery. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSBodyPurist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Body Purism'': societal disapproval of implant surgery.//*/
+  <</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSBodyPurist is 0>>
+<<if $FSTransformationFetishist gt 0>>
+  <br>You are pursuing societal fetishization of implant surgery. [[Abandon this model|Future Society][$FSTransformationFetishist to 0, $FSTransformationFetishistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSTransformationFetishistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSTransformationFetishist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSTransformationFetishistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSTransformationFetishistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSTransformationFetishist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSTransformationFetishistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSTransformationFetishistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSTransformationFetishist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSTransformationFetishistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSTransformationFetishistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSTransformationFetishist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSTransformationFetishistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSTransformationFetishistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if ($FSCredits gt 0)>>
+	<br>''Transformation Fetishism'': societal fetishization of implant surgery. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSTransformationFetishist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Transformation Fetishism'': societal fetishization of implant surgery.//*/
+  <</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSAssetExpansionist is 0>>
+<<if $FSSlimnessEnthusiast gt 0>>
+  You are supporting enthusiasm for slaves with girlish figures. [[Abandon this model|Future Society][$FSSlimnessEnthusiast to 0, $FSSlimnessEnthusiastDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSSlimnessEnthusiastDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSSlimnessEnthusiast gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSSlimnessEnthusiastDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSlimnessEnthusiastDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSSlimnessEnthusiast gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSSlimnessEnthusiastDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSlimnessEnthusiastDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSSlimnessEnthusiast gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSSlimnessEnthusiastDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSlimnessEnthusiastDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSSlimnessEnthusiast gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSSlimnessEnthusiastDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSSlimnessEnthusiastDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Slimness Enthusiasm'': a fashion for slaves with girlish figures. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSSlimnessEnthusiast to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Slimness Enthusiasm'': a fashion for slaves with girlish figures.//*/
+  <</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSSlimnessEnthusiast is 0>>
+<<if $FSAssetExpansionist gt 0>>
+  <br>You are pursuing societal hunger for huge assets. [[Abandon this model|Future Society][$FSAssetExpansionist to 0, $FSAssetExpansionistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSAssetExpansionistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSAssetExpansionist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSAssetExpansionistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSAssetExpansionistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSAssetExpansionist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSAssetExpansionistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSAssetExpansionistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSAssetExpansionist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSAssetExpansionistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSAssetExpansionistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSAssetExpansionist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSAssetExpansionistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSAssetExpansionistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Asset Expansionism'': societal hunger for huge assets of whatever origin. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSAssetExpansionist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Asset Expansionism'': societal hunger for huge assets of whatever origin.//*/
+  <</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSPastoralist gt 0>>
+  <br>You are pursuing societal normalization of slave milking.[[Abandon this model|Future Society][$FSPastoralist to 0, $FSPastoralistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSPastoralistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSPastoralist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSPastoralistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPastoralistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSPastoralist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSPastoralistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPastoralistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSPastoralist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSPastoralistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPastoralistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSPastoralist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSPastoralistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPastoralistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Slave Pastoralism'': societal acceptance of slave products like milk. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSPastoralist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Slave Pastoralism'': societal acceptance of slave products like milk.//*/
+  <</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSPhysicalIdealist gt 0>>
+  <br>You are pursuing societal reverence for the idealized human form, including height, health and muscle. [[Abandon this model|Future Society][$FSPhysicalIdealist to 0, $FSPhysicalIdealistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSPhysicalIdealistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSPhysicalIdealist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSPhysicalIdealistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPhysicalIdealistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSPhysicalIdealist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSPhysicalIdealistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPhysicalIdealistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSPhysicalIdealist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSPhysicalIdealistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPhysicalIdealistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSPhysicalIdealist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSPhysicalIdealistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSPhysicalIdealistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Physical Idealism'': societal reverence for the idealized human form, including height, health and muscle. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSPhysicalIdealist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Physical Idealism'': societal reverence for the idealized human form, including height, health and muscle.//*/
+  <</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSChattelReligionist gt 0>>
+  <br>You are pursuing a new strain of religion that emphasizes the slaveholding portions of religious history. [[Abandon this model|Future Society][$FSChattelReligionist to 0, $FSChattelReligionistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSChattelReligionistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSChattelReligionist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSChattelReligionistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSChattelReligionistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSChattelReligionist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSChattelReligionistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSChattelReligionistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSChattelReligionist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSChattelReligionistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSChattelReligionistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSChattelReligionist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSChattelReligionistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSChattelReligionistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Chattel Religionism'': a new strain of religion that emphasizes the slaveholding portions of religious history. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSChattelReligionist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Chattel Religionism'': a new strain of religion that emphasizes the slaveholding portions of religious history.//*/
+  <</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSAncientEgyptianRevivalist is 0>>
+<<if $FSRomanRevivalist gt 0>>
+  <br>You are pursuing a vision of a new Rome. [[Abandon this model|Future Society][$FSRomanRevivalist to 0, $FSRomanRevivalistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSRomanRevivalistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSRomanRevivalist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSRomanRevivalistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSRomanRevivalistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSRomanRevivalist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSRomanRevivalistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSRomanRevivalistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSRomanRevivalist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSRomanRevivalistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSRomanRevivalistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSRomanRevivalist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSRomanRevivalistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSRomanRevivalistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Roman Revivalism'': a vision of a new Rome. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSRomanRevivalist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''Roman Revivalism'': a vision of a new Rome.//*/
+  <</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $FSRomanRevivalist is 0>>
+<<if $FSAncientEgyptianRevivalist gt 0>>
+  <br>You are pursuing a vision of Pharaoh's Egypt. [[Abandon this model|Future Society][$FSAncientEgyptianRevivalist to 0, $FSAncientEgyptianRevivalistDecoration to 20, $FSCredits += 1]] <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <<if $FSAncientEgyptianRevivalistDecoration is 20>>
+	Your arcology is not customized to support this goal.
+	<<if $FSAncientEgyptianRevivalist gte 10>>
+	  [[Modify your arcology's internal media to support this goal|Future Society][$FSAncientEgyptianRevivalistDecoration to 40, $cash -= 2500]] //Costs ¤2500//
+	<<else>>
+	  You must advance this goal before customization to support it becomes available.
+	<</if>>
+  <<elseif $FSAncientEgyptianRevivalistDecoration is 40>>
+	Your arcology's media is supporting this goal.
+	<<if $FSAncientEgyptianRevivalist gte 30>>
+	  [[Redecorate your arcology's public spaces to support this goal|Future Society][$FSAncientEgyptianRevivalistDecoration to 60, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSAncientEgyptianRevivalistDecoration is 60>>
+	Your arcology's media is supporting this goal, and your arcology's public spaces are decorated to support it too.
+	<<if $FSAncientEgyptianRevivalist gte 50>>
+	  [[Station slaves in your arcology's public spaces to promote this goal|Future Society][$FSAncientEgyptianRevivalistDecoration to 80, $cash -= 10000]] //Costs ¤10000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSAncientEgyptianRevivalistDecoration is 80>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it too.
+	<<if $FSAncientEgyptianRevivalist gte 70>>
+	  [[Customize the exterior of the arcology to support this goal|Future Society][$FSAncientEgyptianRevivalistDecoration to 100, $cash -= 20000]] //Costs ¤20000//
+	<<else>>
+	  You must advance this goal before further customization to support it becomes available.
+	<</if>>
+  <<elseif $FSAncientEgyptianRevivalistDecoration is 100>>
+	Your arcology's media is supporting this goal; your arcology's public spaces are decorated to support it, and have slaves stationed in them to support it. The exterior of the arcology has been remodeled to support it too, and the arcology is fully customized for this goal.
+  <</if>>
+<<else>>
+  <<if $FSCredits gt 0>>
+	<br>''Ancient Egyptian Revivalism'': a vision of a Pharaoh's Egypt. <br>&nbsp;&nbsp;&nbsp;&nbsp;[[Pursue this goal|Future Society][$FSAncientEgyptianRevivalist to 1, $FSCredits -= 1]]
+  <<else>>
+	/*//''AncientEgyptian Revivalism'': a vision of Pharaoh's Egypt.//*/
+  <</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\

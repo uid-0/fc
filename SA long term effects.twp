@@ -1,0 +1,587 @@
+<<nobr>>
+
+<<if $slaves[$i].fetish is "mindbroken">>
+    <<set $slaves[$i].devotion to 8>>
+    <<set $slaves[$i].trust to -8>>
+    <<set $slaves[$i].vaginalSkill to 0>>
+    <<set $slaves[$i].oralSkill to 0>>
+    <<set $slaves[$i].analSkill to 0>>
+    <<set $slaves[$i].combatSkill to 0>>
+    <<set $slaves[$i].whoreSkill to 0>>
+    <<set $slaves[$i].entertainSkill to 0>>
+    <<set $slaves[$i].intelligence to -2>>
+    <<set $slaves[$i].intelligenceImplant to 0>>
+<</if>>
+
+<<if ($slaves[$i].assignment isnot "serve the public") and ($slaves[$i].assignment isnot "whore") and ($slaves[$i].assignment isnot "work a glory hole") and ($slaves[$i].assignment isnot "work in the brothel") and ($slaves[$i].assignment isnot "work on the promenade")>>
+<<if ($slaves[$i].vagina gt 2) and ($slaves[$i].anus gt 2) and ($slaves[$i].vaginalAccessory isnot "huge dildo") and ($slaves[$i].buttplut isnot "huge plug")>>
+	With a rest from constant sexual slavery, @@color:orange;her holes recover a little.@@
+    <<set $slaves[$i].vagina -= 1>>
+    <<set $slaves[$i].anus -= 1>>
+<<elseif ($slaves[$i].vagina gt 2) and ($slaves[$i].vaginalAccessory isnot "huge dildo")>>
+	With a rest from strenuous use, @@color:orange;her loose vagina recovers a little.@@
+    <<set $slaves[$i].vagina -= 1>>
+<<elseif ($slaves[$i].anus gt 2) and ($slaves[$i].buttplug isnot "huge plug")>>
+	With a rest from continual sodomy, @@color:orange;her distended anus recovers a little.@@
+    <<set $slaves[$i].anus -= 1>>
+<</if>>
+<</if>>
+
+<<display "SA smart piercing effects">>
+
+<<if ($slaves[$i].vaginaPiercing gt 1)>>
+  <<if ($slaves[$i].vagina gt -1) and ($slaves[$i].labia lt 2) and (random(1,100) gt 90)>>
+	The weight of her labial piercings @@color:lime;stretches out her pussylips a bit.@@
+	<<set $slaves[$i].labia += 1>>
+  <</if>>
+<</if>>
+<<if ($slaves[$i].nipplesPiercing is 1)>>
+  <<if ($slaves[$i].nipples lt 1) and (random(1,100) gt 90)>>
+	  Her piercings keep her nipples half-hard all the time, and @@color:lime;her nipples have stretched out a bit.@@
+	  <<set $slaves[$i].nipples += 1>>
+  <</if>>
+<</if>>
+<<if ($slaves[$i].nipplesPiercing is 2)>>
+  <<if ($slaves[$i].nipples lt 2) and (random(1,100) gt 70)>>
+	She's got so much metal in her nipples that the weight @@color:lime;stretches and lengthens them.@@
+	<<set $slaves[$i].nipples += 1>>
+  <</if>>
+<</if>>
+
+<<if ($slaves[$i].boobsImplant gt 1000)>>
+<<if ($slaves[$i]. boobs-$slaves[$i].boobsImplant lt 1000)>>
+<<if (random(1,100) gt 60)>>
+	Her breast tissue has naturally @@color:lime;stretched and grown@@ to accommodate her massive implants a bit better.
+	<<set $slaves[$i].boobs += 50>>
+<</if>>
+<</if>>
+<<elseif ($slaves[$i].boobsImplant gt 600)>>
+<<if ($slaves[$i]. boobs-$slaves[$i].boobsImplant lt 500)>>
+<<if (random(1,100) gt 60)>>
+	Her breast tissue has naturally @@color:lime;stretched and grown@@ to accommodate her large implants a bit better.
+	<<set $slaves[$i].boobs += 50>>
+<</if>>
+<</if>>
+<<elseif ($slaves[$i].boobsImplant gt 0)>>
+<<if ($slaves[$i]. boobs-$slaves[$i].boobsImplant lt 300)>>
+<<if (random(1,100) gt 60)>>
+	Her breast tissue has naturally @@color:lime;stretched and grown@@ to accommodate her implants a bit better.
+	<<set $slaves[$i].boobs += 50>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].muscles gt 2) and (($slaves[$i].face-$slaves[$i].faceImplant) gt 1) and (random(1,100) gt 95)>>
+	All the hormones in her system from her heavy workouts @@color:orange;harden her pretty face a little.@@
+	<<set $slaves[$i].face -= 1>>
+<</if>>
+
+<<if ($slaves[$i].muscles gt 2)>>
+<<if (($slaves[$i].boobs - $slaves[$i].boobsImplant) gt 250)>>
+<<if (random(1,100) gt 95)>>
+	All the hormones in her system from her heavy workouts @@color:orange;shrink her breasts slightly.@@
+	<<set $slaves[$i].boobs -= 50>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].addict gt 2) and ($slaves[$i].dick gt 1) and (random(1,100) gt 70)>>
+	The long-term effects of aphrodisiac use @@color:orange;cause her penis to shrink.@@
+	<<set $slaves[$i].dick -= 1>>
+<<elseif ($slaves[$i].addict gt 2) and ($slaves[$i].balls gt 1) and (random(1,100) gt 70)>>
+	The long-term effects of aphrodisiac use @@color:orange;cause her balls to shrink.@@
+	<<set $slaves[$i].balls -= 1>>
+<<elseif ($slaves[$i].addict gt 2) and ($slaves[$i].clit gt 1) and (random(1,100) gt 70)>>
+	The long-term effects of aphrodisiac use @@color:orange;cause her huge clit to shrink.@@
+	<<set $slaves[$i].clit -= 1>>
+<<elseif ($slaves[$i].addict gt 2) and (($slaves[$i].face-$slaves[$i].faceImplant) lt 1) and (random(1,100) gt 90)>>
+	The hormone-based aphrodisiacs @@color:lime;make her face softer and more feminine.@@
+	<<set $slaves[$i].face += 1>>
+<</if>>
+
+<<display "SA hormone effects">>
+
+<<display "SA pregnancy and fertility">>
+
+<<if ($slaves[$i].oralCount+$slaves[$i].vaginalCount+$slaves[$i].analCount gt 100)>>
+<<if ($slaves[$i].devotion lt -18)>>
+<<if ($slaves[$i].trust lt -18)>>
+<<if (random(1,100) gt 80) and ($slaves[$i].fetish isnot "mindbroken")>>
+	She has been used as a sexual slave for so long, and is so hopeless that her future as a slave will be anything but torment, that her mind finally slips. @@color:red;She has been irretrievably broken.@@
+	<<set $slaves[$i].fetish to "mindbroken">>
+	<<set $slaves[$i].sexualQuirk to "none">>
+	<<set $slaves[$i].behavioralQuirk to "none">>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].mute is 1)>>
+<<if ($slaves[$i].behavioralQuirk is "bitchy")>>
+	If she has anything bitchy to say any more, @@color:green;no one can tell,@@ since she's a mute.
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].fetishDiscovered is 1)>>
+<<if ($slaves[$i].behavioralQuirk isnot "none")>>
+<<if ($slaves[$i].behavioralQuirk is "arrogant")>>
+  <<if ($slaves[$i].fetish is "submissive")>>
+	Her arrogance was probably a reflection of her subconscious need to submit, which is so satisfied by sexual slavery that @@color:green;she no longer needs to act arrogant.@@
+	<<set $slaves[$i].behavioralQuirk to "none">>
+  <</if>>
+<<elseif ($slaves[$i].behavioralQuirk is "bitchy")>>
+  <<if ($slaves[$i].fetish is "humiliation")>>
+	Her bitchiness was probably a reflection of her sexual need to be publicly humiliated, which is so satisfied by sexual slavery that @@color:green;she no longer needs to be insulting@@ to get the degradation she subconciously needs.
+	<<set $slaves[$i].behavioralQuirk to "none">>
+  <</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].fetishDiscovered is 1)>>
+<<if ($slaves[$i].sexualQuirk isnot "none")>>
+<<if ($slaves[$i].sexualQuirk is "hates anal")>>
+  <<if ($slaves[$i].fetish is "buttslut")>>
+	Her sexual fascination with things entering her asshole overcomes her professed hatred of anal, so @@color:green;her previous hesitations about buttsex vanish.@@
+	<<set $slaves[$i].sexualQuirk to "none">>
+  <<elseif ($slaves[$i].fetish is "nympho")>>
+	As a nymphomaniac she doesn't really care which hole she's getting fucked in, so @@color:green;her previous hesitations about buttsex vanish.@@
+	<<set $slaves[$i].sexualQuirk to "none">>
+  <</if>>
+<<elseif ($slaves[$i].sexualQuirk is "hates oral")>>
+  <<if ($slaves[$i].fetish is "cumslut")>>
+	She can't get her beloved cum without sucking, so @@color:green;she forcibly overcomes her strong gag reflex.@@
+	<<set $slaves[$i].sexualQuirk to "none">>
+  <<elseif ($slaves[$i].fetish is "nympho")>>
+	She needs sex so much she often has to encourage her partners orally, so @@color:green;she forcibly overcomes her strong gag reflex.@@
+	<<set $slaves[$i].sexualQuirk to "none">>
+  <</if>>
+<<elseif ($slaves[$i].sexualQuirk is "hates penetration")>>
+  <<if ($slaves[$i].fetish is "buttslut")>>
+	She's fascinated with the perversity of being anally penetrated, so @@color:green;her previous hesitations about getting fucked vanish.@@
+	<<set $slaves[$i].sexualQuirk to "none">>
+  <<elseif ($slaves[$i].fetish is "nympho")>>
+	She needs sex like she needs air, so @@color:green;her previous hesitations about getting fucked vanish.@@
+	<<set $slaves[$i].sexualQuirk to "none">>
+  <</if>>
+<<elseif ($slaves[$i].sexualQuirk is "hates men")>>
+  <<if ($slaves[$i].fetish is "cumslut")>>
+	Nothing addresses her oral fixation like giving attention to a stiff prick, so @@color:green;she gets over her distaste for men@@ to which pricks are attached.
+	<<set $slaves[$i].sexualQuirk to "none">>
+  <<elseif ($slaves[$i].fetish is "nympho")>>
+	She has a pathological need to be fucked, so @@color:green;she gets over her dislike of men.@@
+	<<set $slaves[$i].sexualQuirk to "none">>
+  <</if>>
+<<elseif ($slaves[$i].sexualQuirk is "hates women")>>
+  <<if ($slaves[$i].fetish is "likes girls")>>
+	She likes tits, ass and pussy so much that @@color:green;she can no longer maintain the pretense of disliking women.@@
+	<<set $slaves[$i].sexualQuirk to "none">>
+  <<elseif ($slaves[$i].fetish is "nympho")>>
+	She has such pathological need to fuck that she can't afford to narrow the field, so @@color:green;she gets over her dislike of women.@@
+	<<set $slaves[$i].sexualQuirk to "none">>
+  <</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].assignment is "get milked") or ($slaves[$i].assignment is "work in the dairy")>>
+<<if ($slaves[$i].fetish isnot "nympho") and ($slaves[$i].fetish isnot "boobs") and ($slaves[$i].fetish isnot "mindbroken") and ($slaves[$i].clitSetting isnot $slaves[$i].fetish)>>
+<<if (random(1,100) gt 70)>>
+	Since she has had her lactating nipples constantly caressed by the milkers, @@color:pink;her sexuality now focuses on her breasts.@@
+	<<set $slaves[$i].fetish to "boobs">>
+	<<set $slaves[$i].fetishDiscovered to 1>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].amp is 1) and ($slaves[$i].muscles gt 1.1)>>
+	As an amputee she @@color:orange;loses some muscle definition.@@
+	<<set $slaves[$i].muscles -= 0.2>>
+<</if>>
+
+<<if ($slaves[$i].amp is 1)>>
+<<if ($slaves[$i].combatSkill gt 1)>>
+	@@color:red;She has lost all combat skill@@ due to a signal lack of arms and legs to fight with.
+	<<set $slaves[$i].combatSkill to 0>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].behavioralQuirk is "anorexic")>>
+<<if ($slaves[$i].weight gt -1)>>
+<<if (random(1,100) gt 70)>>
+  She loses weight, probably due to her anorexia.
+  <<set $slaves[$i].weight -= 1>>
+  <<if ($slaves[$i].boobs-$slaves[$i].boobsImplant gt 250)>>
+      @@color:orange;Her breasts get a little smaller.@@
+      <<set $slaves[$i].boobs -= 50>>
+  <<elseif ($slaves[$i].butt-$slaves[$i].buttImplant gt 1)>>
+      @@color:orange;Her butt gets a little smaller.@@
+      <<set $slaves[$i].butt -= 1>>
+  <</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if $slaves[$i].fetish is "nympho">>
+<<if $slaves[$i].fetishDiscovered is 1>>
+<<if ($slaves[$i].devotion lt -4)>>
+	She's having trouble accepting it, but the sex surrounding her @@color:hotpink;is intriguing to a nymphomaniac.@@
+	<<set $slaves[$i].devotion += 0.7>>
+<<elseif ($slaves[$i].devotion lte 10)>>
+	@@color:hotpink;Her acceptance of her life as a sex slave is driven faster@@ by how satisfied she is by the availability of her favorite activity.
+	<<set $slaves[$i].devotion += 0.7>>
+<<else>>
+	She loves being a nympho slut. @@color:hotpink;She loves being your nympho slut.@@
+	<<set $slaves[$i].devotion += 0.7>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if $slaves[$i].fetish isnot "nympho">>
+<<if $slaves[$i].fetish isnot "submissive">>
+<<if $slaves[$i].fetish isnot "mindbroken">>
+<<if ($slaves[$i].clitSetting isnot $slaves[$i].fetish)>>
+<<if ($slaves[$i].heels is 1)>>
+<<if ($slaves[$i].shoes isnot "heels") and ($slaves[$i].shoes isnot "boots") and ($slaves[$i].shoes isnot "extreme heels")>>
+<<if ($slaves[$i].devotion gt 4)>>
+<<if random(1,100) gt 50>>
+	Living as a sex slave on all fours @@color:pink;turns her into a sexual submissive.@@
+	<<set $slaves[$i].fetish to "submissive">>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].brand isnot 0)>>
+  <<if ($slaves[$i].assignment is "serve the public") or ($slaves[$i].assignment is "whore") or ($slaves[$i].assignment is "work in the brothel") or ($slaves[$i].assignment is "work on the promenade") or ($slaves[$i].assignment is "be a milk cow")>>
+	  Since she is in public, $slaves[$i].brand branded into the $slaves[$i].skin skin of her $slaves[$i].brandLocation @@color:green;slightly increases your reputation@@ as a slaveowner.
+	  <<set $repGain += 5>>
+  <</if>>
+  <<if $rep gt 10000>>
+	The brand is considered a minor enhancement to her beauty since you are very well known.
+  <<elseif $rep lt 5000>>
+	The brand is considered a minor blemish on her beauty since you are not well known.
+  <</if>>
+<</if>>
+
+<<if $FSAnnounced gt 0>>
+
+<<if $FSSupremacist gt 0>>
+  <<if ($slaves[$i].race is $FSSupremacistRace)>>
+	<<if $FSSupremacist gte $FSLockinLevel*0.6>>
+	  Society @@color:red;strongly disapproves@@ of your keeping a slave of the $FSSupremacistRace race; this also holds back acceptance of $FSSupremacistRace superiority.
+	<<elseif $FSSupremacist gte $FSLockinLevel*0.3>>
+	  Society @@color:red;disapproves@@ of your keeping a slave of the $FSSupremacistRace race; this also holds back acceptance of $FSSupremacistRace superiority.
+	<<else>>
+	  Society @@color:red;mildly disapproves@@ of your keeping a slave of the $FSSupremacistRace race; this also holds back acceptance of $FSSupremacistRace superiority.
+	<</if>>
+	<<set $repGain -= $FSSingleSlaveRep*2*($FSSupremacist/$FSLockinLevel)>>
+	<<set $FSSupremacist -= 0.1*$FSSingleSlaveRep>>
+  <<else>>
+	<<if $FSSupremacist gte $FSLockinLevel*0.5>>
+	  Society @@color:green;approves@@ of your keeping a slave of an inferior race; this also advances $FSSupremacistRace superiority.
+	<<else>>
+	  Society @@color:green;mildly approves@@ of your keeping a slave of an inferior race; this also advances $FSSupremacistRace superiority.
+	<</if>>
+	<<set $repGain += $FSSingleSlaveRep*($FSSupremacist/$FSLockinLevel)>>
+	<<set $FSSupremacist += 0.05*$FSSingleSlaveRep>>
+  <</if>>
+<</if>>
+
+<<if $FSSubjugationist gt 0>>
+  <<if ($slaves[$i].race is $FSSubjugationistRace)>>
+	<<if $FSSubjugationist gte $FSLockinLevel*0.5>>
+	  Society @@color:green;approves@@ of your keeping a slave of the subject $FSSubjugationistRace race; this also advances $FSSubjugationistRace inferiority.
+	<<else>>
+	  Society @@color:green;mildly approves@@ of your keeping a slave of the subject $FSSubjugationistRace race; this also advances $FSSubjugationistRace inferiority.
+	<</if>>
+	<<set $repGain += $FSSingleSlaveRep*($FSSubjugationist/$FSLockinLevel)>>
+	<<set $FSSubjugationist += 0.05*$FSSingleSlaveRep>>
+  <</if>>
+<</if>>
+
+<<if $FSGenderRadicalist gt 0>>
+  <<if ($slaves[$i].balls gt 0) and ($slaves[$i].hormones gt 0)>>
+	Society @@color:green;mildly approves@@ of your feminization of $slaves[$i].slaveName; this advances the idea that all societal inferiors can be made female.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSGenderRadicalist/$FSLockinLevel)>>
+	<<set $FSGenderRadicalist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].dick gt 0) and ($slaves[$i].balls is 0)>>
+	Society @@color:green;mildly approves@@ of your keeping a gelded slave; this advances the idea that all societal inferiors can be made female.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSGenderRadicalist/$FSLockinLevel)>>
+	<<set $FSGenderRadicalist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+<<elseif $FSGenderFundamentalist gt 0>>
+  <<if ($slaves[$i].preg gt 5)>>
+	Society <<if $FSGenderFundamentalist gte $FSLockinLevel*0.5>>@@color:green;approves@@<<else>>@@color:green;mildly approves@@<</if>> of your keeping a pregnant slave; this also supports the idea that slave women should bear babies.
+	<<set $repGain += $FSSingleSlaveRep*($FSGenderFundamentalist/$FSLockinLevel)>>
+	<<set $FSGenderFundamentalist += 0.05*$FSSingleSlaveRep>>
+  <<elseif ($slaves[$i].preg is 0)>>
+	Society <<if $FSGenderFundamentalist gte $FSLockinLevel*0.5>>@@color:green;approves@@<<else>>@@color:green;mildly approves@@<</if>> of your keeping a slave fertile; this also supports the idea that slave women should bear babies.
+	<<set $repGain += $FSSingleSlaveRep*($FSGenderFundamentalist/$FSLockinLevel)>>
+	<<set $FSGenderFundamentalist += 0.05*$FSSingleSlaveRep>>
+  <<elseif ($slaves[$i].dick gt 1) and ($slaves[$i].balls gt 0)>>
+	Society <<if $FSGenderFundamentalist gte $FSLockinLevel*0.5>>@@color:red;disapproves@@<<else>>@@color:red;mildly disapproves@@<</if>> of your keeping a virile slave; this holds back acceptance of the idea that slaves should be real women.
+	<<set $repGain -= $FSSingleSlaveRep*($FSGenderFundamentalist/$FSLockinLevel)>>
+	<<set $FSGenderFundamentalist -= 0.05*$FSSingleSlaveRep>>
+  <</if>>
+<</if>>
+
+<<if $FSPaternalist gt 0>>
+  <<if ($slaves[$i].intelligenceImplant gt 0) and ($slaves[$i].fetish isnot "mindbroken")>>
+	Society @@color:green;mildly approves@@ of $slaves[$i].slaveName being properly educated; this advances ideas about slave improvement.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSPaternalist/$FSLockinLevel)>>
+	<<set $FSPaternalist += 0.025*$FSSingleSlaveRep>>
+  <<elseif ($slaves[$i].intelligenceImplant is 0) and ($slaves[$i].intelligence lt 0) and ($slaves[$i].fetish isnot "mindbroken")>>
+	Society @@color:red;mildly disapproves@@ of $slaves[$i].slaveName being stupid and uneducated; this holds back ideas about slave improvement.
+	<<set $repGain -= 0.5*$FSSingleSlaveRep*($FSPaternalist/$FSLockinLevel)>>
+	<<set $FSPaternalist -= 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].health gt 8)>>
+	Society @@color:green;mildly approves@@ of her shining health; this advances belief in a slaveowner's duty.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSPaternalist/$FSLockinLevel)>>
+	<<set $FSPaternalist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].devotion gt 18)>>
+	Society @@color:green;mildly approves@@ of her attachment to you; this advances paternalistic ideals.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSPaternalist/$FSLockinLevel)>>
+	<<set $FSPaternalist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].trust gt 18)>>
+	Society @@color:green;mildly approves@@ of her trust in you; this advances paternalistic ideals.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSPaternalist/$FSLockinLevel)>>
+	<<set $FSPaternalist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].choosesOwnAssignment is 1)>>
+	Society @@color:green;mildly approves@@ of $slaves[$i].slaveName being allowed to choose her own job, advancing ideals about slave self-actualization.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSPaternalist/$FSLockinLevel)>>
+	<<set $FSPaternalist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+<<elseif $FSDegradationist gt 0>>
+  <<if ($slaves[$i].intelligenceImplant is 0) and ($slaves[$i].fetish isnot "mindbroken")>>
+	Society @@color:green;mildly approves@@ of $slaves[$i].slaveName being ignorant and uneducated; this advances the ideal of slave degradation.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSDegradationist/$FSLockinLevel)>>
+	<<set $FSDegradationist += 0.025*$FSSingleSlaveRep>>
+  <<elseif ($slaves[$i].intelligenceImplant gt 0) and ($slaves[$i].fetish isnot "mindbroken")>>
+  <<if ($slaves[$i].assignment is "be your Head Girl")>>
+	Society accepts of $slaves[$i].slaveName being educated, since she is your Head Girl.
+  <<elseif ($slaves[$i].assignment is "recruit girls")>>
+	Society accepts of $slaves[$i].slaveName being educated, since she is your Recruiter.
+  <<else>>
+	Society @@color:red;mildly disapproves@@ of $slaves[$i].slaveName being educated; this holds back ideas about slave degradation.
+	<<set $repGain -= 0.5*$FSSingleSlaveRep*($FSDegradationist/$FSLockinLevel)>>
+	<<set $FSDegradationist -= 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <</if>>
+  <<if ($slaves[$i].fetish is "mindbroken")>>
+	Society @@color:green;approves@@ of her broken spirit; she serves as an example of a soulless fuckpuppet.
+	<<set $repGain += $FSSingleSlaveRep*($FSDegradationist/$FSLockinLevel)>>
+	<<set $FSDegradationist += 0.05*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].assignment is "work a glory hole") or ($slaves[$i].assignment is "be confined in the arcade")>>
+	Society @@color:green;mildly approves@@ of how she is restrained for involuntary use, seeing this as the future of sexual relations.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSDegradationist/$FSLockinLevel)>>
+	<<set $FSDegradationist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if (($slaves[$i].lipsPiercing + $slaves[$i].nipplesPiercing + $slaves[$i].vaginaPiercing + $slaves[$i].clitPiercing + $slaves[$i].anusPiercing + $slaves[$i].earPiercing + $slaves[$i].eyebrowPiercing + $slaves[$i].nosePiercing + $slaves[$i].navelPiercing) gt 8) and ($slaves[$i].lipsTat isnot 0) and ($slaves[$i].buttTat isnot 0) and ($slaves[$i].anusTat isnot 0) and ($slaves[$i].vaginaTat isnot 0) and ($slaves[$i].boobsTat isnot 0)>>
+	Society @@color:green;mildly approves@@ of her degrading body modifications, which advances the public taste for such degradation of slave bodies.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSDegradationist/$FSLockinLevel)>>
+	<<set $FSDegradationist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].choosesOwnAssignment is 1)>>
+	Society @@color:red;mildly disapproves@@ of $slaves[$i].slaveName being allowed to choose her own job; this holds back ideas about slave degradation.
+	<<set $repGain -= 0.5*$FSSingleSlaveRep*($FSDegradationist/$FSLockinLevel)>>
+	<<set $FSDegradationist -= 0.025*$FSSingleSlaveRep>>
+  <</if>>
+<</if>>
+
+<<if $FSBodyPurist gt 0>>
+  <<if ($slaves[$i].boobsImplant is 0) and ($slaves[$i].buttImplant is 0) and ($slaves[$i].lipsImplant is 0)>>
+	Society @@color:green;mildly approves@@ of $slaves[$i].slaveName's natural body; this supports the fashion for surgically untouched slaves.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSBodyPurist/$FSLockinLevel)>>
+	<<set $FSBodyPurist += 0.025*$FSSingleSlaveRep>>
+  <<else>>
+	Society <<if $FSBodyPurist gte $FSLockinLevel*0.5>>@@color:red;disapproves@@<<else>>@@color:red;mildly disapproves@@<</if>> of $slaves[$i].slaveName's implants; this holds back acceptance of the idea that slaves should be all-natural.
+	<<set $repGain -= $FSSingleSlaveRep*($FSBodyPurist/$FSLockinLevel)>>
+	<<set $FSBodyPurist -= 0.05*$FSSingleSlaveRep>>
+  <</if>>
+  <<if (($slaves[$i].lipsPiercing + $slaves[$i].nipplesPiercing + $slaves[$i].vaginaPiercing + $slaves[$i].clitPiercing + $slaves[$i].anusPiercing + $slaves[$i].earPiercing + $slaves[$i].eyebrowPiercing + $slaves[$i].nosePiercing + $slaves[$i].navelPiercing) lt 4) and ($slaves[$i].lipsTat is 0) and ($slaves[$i].buttTat is 0) and ($slaves[$i].anusTat is 0) and ($slaves[$i].vaginaTat is 0) and ($slaves[$i].boobsTat is 0)>>
+	Society @@color:green;mildly approves@@ of her unmarked, unblemished skin, advancing the fashion for unspoiled slaves.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSDegradationist/$FSLockinLevel)>>
+	<<set $FSBodyPurist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+<<elseif $FSTransformationFetishist gt 0>>
+  <<if ($slaves[$i].boobsImplant gt 0) and ($slaves[$i].buttImplant gt 0) and ($slaves[$i].lipsImplant gt 0)>>
+	Society @@color:green;mildly approves@@ of $slaves[$i].slaveName's thoroughly modified body; this supports the fashion for surgically upgraded slaves.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSTransformationFetishist/$FSLockinLevel)>>
+	<<set $FSTransformationFetishist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].waist gt 1) or ($slaves[$i].teeth isnot 0) or ($slaves[$i].amp gt 0)>>
+	Society @@color:green;approves@@ of her extreme surgeries; interest in her stirs interest in transformations of all kinds.
+	<<set $repGain += $FSSingleSlaveRep*($FSTransformationFetishist/$FSLockinLevel)>>
+	<<set $FSTransformationFetishist += 0.05*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].boobsImplant is 0) and ($slaves[$i].buttImplant is 0) and ($slaves[$i].lipsImplant is 0)>>
+	Society @@color:red;mildly disapproves@@ of $slaves[$i].slaveName's lack of obvious implants; she does not advance the ideal of body modification.
+	<<set $repGain -= 0.5*$FSSingleSlaveRep*($FSBodyPurist/$FSLockinLevel)>>
+	<<set $FSTransformationFetishist -= 0.025*$FSSingleSlaveRep>>
+  <</if>>
+<</if>>
+
+<<if $FSSlimnessEnthusiast gt 0>>
+  <<if ($slaves[$i].boobs lt 500) and ($slaves[$i].butt lt 3) and ($slaves[$i].weight lt 1) and ($slaves[$i].muscles lt 3)>>
+	Society @@color:green;mildly approves@@ of $slaves[$i].slaveName's graceful, girlish form; she furthers the fashion for slaves like her.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSSlimnessEnthusiast/$FSLockinLevel)>>
+	<<set $FSSlimnessEnthusiast += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].butt gt 4) and ($slaves[$i].boobs gt 800)>>
+	Society @@color:red;mildly disapproves@@ of $slaves[$i].slaveName's boorishly large tits and ass; she damages the fashion for slender slaves.
+	<<set $repGain -= 0.5*$FSSingleSlaveRep*($FSBodyPurist/$FSLockinLevel)>>
+	<<set $FSSlimnessEnthusiast -= 0.025*$FSSingleSlaveRep>>
+  <</if>>
+<<elseif $FSAssetExpansionist gt 0>>
+  <<if ($slaves[$i].boobs gt 2000)>>
+	Society @@color:green;mildly approves@@ of $slaves[$i].slaveName's huge tits; her breasts further the fashion for bouncing boobs on slaves.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSAssetExpansionist/$FSLockinLevel)>>
+	<<set $FSAssetExpansionist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].butt gt 7)>>
+	Society @@color:green;mildly approves@@ of her massive ass; her butt furthers the fashion for big behinds on slaves.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSAssetExpansionist/$FSLockinLevel)>>
+	<<set $FSAssetExpansionist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].balls gt 4)>>
+	Society @@color:green;mildly approves@@ of her swinging balls; her nuts further the fashion for tremendous testicles on slaves.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSAssetExpansionist/$FSLockinLevel)>>
+	<<set $FSAssetExpansionist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].dick gt 4)>>
+	Society @@color:green;mildly approves@@ of her enormous penis; her cock furthers the fashion for dangling dicks on slaves.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSAssetExpansionist/$FSLockinLevel)>>
+	<<set $FSAssetExpansionist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+<</if>>
+
+<<if $FSPastoralist gt 0>>
+  <<if ($slaves[$i].lactation gt 0)>>
+	Society @@color:green;mildly approves@@ of $slaves[$i].slaveName's milky udders; the sight of her creamy milk encourages the public taste for dairy straight from the nipple.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSPastoralist/$FSLockinLevel)>>
+	<<set $FSPastoralist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].assignment is "get cockmilked") or ($slaves[$i].assignment is "work in the collection facility")>>
+	Society @@color:green;mildly approves@@ of how $slaves[$i].slaveName gets cockmilked; the sight of her product encourages experimentation with cum-based concoctions.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSPastoralist/$FSLockinLevel)>>
+	<<set $FSPastoralist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+<</if>>
+
+<<if $FSPhysicalIdealist gt 0>>
+  <<if ($slaves[$i].muscles gte 3)>>
+	Society @@color:green;strongly approves@@ of $slaves[$i].slaveName's glorious muscles; everyone wants to train a slave to look as swole as her.
+	<<set $repGain += 2*$FSSingleSlaveRep*($FSPhysicalIdealist/$FSLockinLevel)>>
+	<<set $FSPhysicalIdealist += 0.1*$FSSingleSlaveRep>>
+  <<elseif ($slaves[$i].muscles gte 2)>>
+	Society @@color:green;approves@@ of $slaves[$i].slaveName's fit body; physical enthusiasts see her as on her way to something great.
+	<<set $repGain += $FSSingleSlaveRep*($FSPhysicalIdealist/$FSLockinLevel)>>
+	<<set $FSPhysicalIdealist += 0.05*$FSSingleSlaveRep>>
+  <<elseif ($slaves[$i].muscles gte 1)>>
+	Society @@color:green;mildly approves@@ of $slaves[$i].slaveName's toned form; the public sees potential in those guns.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSPhysicalIdealist/$FSLockinLevel)>>
+	<<set $FSPhysicalIdealist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].height gte 2)>>
+	Society @@color:green;mildly approves@@ of how tall she is; the sexual advantages of her height are impressed on  the public mind.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSPhysicalIdealist/$FSLockinLevel)>>
+	<<set $FSPhysicalIdealist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].health gt 8)>>
+	Society @@color:green;mildly approves@@ of her health; the expectation that slaves should be kept perfectly healthy grows.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSPhysicalIdealist/$FSLockinLevel)>>
+	<<set $FSPhysicalIdealist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+<</if>>
+
+<<if $FSChattelReligionist gt 0>>
+  <<if ($slaves[$i].collar is "tight steel") or ($slaves[$i].collar is "uncomfortable leather")>>
+	Society @@color:green;mildly approves@@ of $slaves[$i].slaveName's collar as an expression of the old ideal of mortification of the flesh, advancing the combination of religious originalism and modern slavery.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSChattelReligionist/$FSLockinLevel)>>
+	<<set $FSChattelReligionist += 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].clothes is "a fallen nun's habit") or ($slaves[$i].clothes is "a penitent nun's habit") or ($slaves[$i].clothes is "a hijab")>>
+	Society @@color:green;mildly approves@@ of her religious clothing, strengthening the connection between sexual servitude and faith.
+	<<set $repGain += 0.5*$FSSingleSlaveRep*($FSChattelReligionist/$FSLockinLevel)>>
+	<<set $FSChattelReligionist += 0.025*$FSSingleSlaveRep>>
+  <<elseif ($slaves[$i].clothes is "a very tight corset") or ($slaves[$i].clothes is "uncomfortable straps") or ($slaves[$i].clothes is "a nice maid outfit") or ($slaves[$i].clothes is "nice business attire") or ($slaves[$i].clothes is "a kimono") or ($slaves[$i].clothes is "no clothing")>>
+	Society accepts her spartan clothing, seeing it as permissible under the new religious mores.
+  <<else>>
+	Society @@color:red;mildly disapproves@@ of her unnecessarily gaudy attire; this slows acceptance of a link between faith and sexual servitude.
+	<<set $repGain -= 0.5*$FSSingleSlaveRep*($FSDegradationist/$FSLockinLevel)>>
+	<<set $FSChattelReligionist -= 0.025*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].devotion gt 18)>>
+	Society @@color:green;approves@@ of her devotion to you as a companion to religious devotion, seeing both as the model for holy slaves.
+	<<set $repGain += $FSSingleSlaveRep*($FSChattelReligionist/$FSLockinLevel)>>
+	<<set $FSChattelReligionist += 0.005*$FSSingleSlaveRep>>
+  <</if>>
+  <<if ($slaves[$i].trust gt 18)>>
+	Society @@color:green;strongly approves@@ of her faith in you as a companion to faith in God, seeing both as the model for righteous slaves of the future.
+	<<set $repGain += 2*$FSSingleSlaveRep*($FSChattelReligionist/$FSLockinLevel)>>
+	<<set $FSChattelReligionist += 0.01*$FSSingleSlaveRep>>
+  <</if>>
+<</if>>
+
+<</if>>
+
+<<if ($slaves[$i].prestige gt 0)>>
+	Merely owning such a prestigious slave @@color:green;helps your reputation.@@
+	<<set $repGain += (10*$slaves[$i].prestige)>>
+<</if>>
+
+<<if ($slaves[$i].age gt 30)>>
+<<if ($slaves[$i].health gt 2)>>
+<<if ($slaves[$i].age-30) gt random(1,100)>>
+<<if ($slaves[$i].drugs isnot "preventatives")>>
+	The bloom comes off her excellent health a little. It seems her @@color:red;age@@ may be affecting her.
+	<<set $slaves[$i].health -= 1>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($defaultRulesSlave.autoSurgery gt 0)>>
+<<if ($slaves[$i].health gt 4)>>
+<<if ($slaves[$i].devotion gte -4)>>
+<<if ($slaves[$i].assignment isnot "be confined in the arcade")>>
+<<if ($slaves[$i].assignment isnot "work a glory hole")>>
+<<if ($slaves[$i].assignment isnot "guard you")>>
+<<if ($slaves[$i].assignment isnot "live with your Head Girl")>>
+<<if ($cash gt 0)>>
+  <<set $useHGTastes to 0>>
+  <<display "Assistant Autosurgery">>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].boobs gt 6000)>>
+  <<if ($slaves[$i].muscles lt 1)>>
+      Dragging her huge tits around is @@color:mediumorchid;uncomfortable@@ and @@color:red;painful@@ for her slight form.
+      <<set $slaves[$i].devotion -= 0.3>>
+      <<set $slaves[$i].health -= 0.3>>
+  <</if>>
+<<elseif ($slaves[$i].boobs gt 2000)>>
+  <<if ($slaves[$i].muscles lt 1)>>
+      The weight of her big boobs is @@color:mediumorchid;uncomfortable@@ for her slight form.
+      <<set $slaves[$i].devotion -= 0.2>>
+  <</if>>
+<</if>>
+
+<</nobr>>\

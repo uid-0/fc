@@ -1,0 +1,584 @@
+<<if $encyclopedia is "How to Play">>\
+This is not a game in which the PC slaveowner is some magical sexual god whose mere presence turns women into submissives. This means that sane slaves will tend to lose obedience over time if you don't take any steps to keep it high.
+
+The first button in the left-side UI bar will always continue the game without taking any actions. If you wish to advance the game rapidly, click that button repeatedly. If you are presented with a menu and do not wish to select any of the options, that button will also serve as a none of the above choice. ''The enter key will also advance the game.''
+
+The author has played several otherwise good H-Games in which it can be hard to parse exactly what the flavor descriptions mean in terms of stats. Therefore, this game will usually flag stat impacts in descriptions by means of colored text. For example:
+@@color:green;Green text@@ means something good, like a healthy slave.
+@@color:red;Red text@@ means something bad, like a sick slave.
+@@color:yellow;Yellow text@@ means something neutral but noteworthy.
+@@color:hotpink;Hot pink text@@ means an increase in a slave's regard for to you.
+@@color:mediumorchid;Orchid text@@ means a decrease in a slave's regard for to you.
+@@color:mediumaquamarine;Aquamarine text@@ means an increase in a slave's trust of to you, and a reduction in her fear of you.
+@@color:gold;Gold text@@ means a decrease in a slave's trust of you, and an increase in her fear of you.
+@@color:lime;Lime text@@ means something has grown, which is usually, but not always, good.
+@@color:orange;Orange text@@ means something has shrunk, which is usually, but not always, bad.
+@@color:yellowgreen;Yellow-green text@@ indicates a money-related event.
+__It is important to note__ that if a scene doesn't have colored text, it doesn't impact a slave's stats. For example, the scenes available from the main screen are for the most part unlimited and have no real gameplay effect: they are for fun and flavor only.
+
+This game produces less visible text than a lot of text-based H-Games; this is because most text has numerous variations that change based on a slave's body, mental state etc. The author has deliberately made some of the variations available only with extreme stats so that new content will still be out there even if you play for a while.
+
+Things that increase income from prostitution and reputation gain from slutting include all appearance stats (that's right, every one; though some are more or less important), sexual skills, and the state of a slave's holes. Going from a novice to a veteran whore will have non-linear impacts on income, since a novice will get good money for being fresh and little money for her skills, and a veteran will get the reverse. The fetishes and physical statuses that get pink text on the main menu (huge tits, bisexual, etc.) give bonuses.
+<<elseif $encyclopedia is "Keyboard Shortcuts">>\
+The game supports a few keyboard shortcuts.
+
+''Enter'' or ''space'' will activate the uppermost button in the left-side UI bar. This button is context sensitive; in events and reports it continues the game, while in menus it functions as a back button.
+
+''Right arrow'', ''left arrow'' and ''q'', ''e'' will move between slaves in slaves' individual menus.
+
+On the main menus, ''C'' will open arcology management, ''S'' will open the slave markets, ''A'' will open personal attention options, ''H'' will open Head Girl management, ''B'' will open Bodyguard management, ''R'' will open Recruiter management, and ''F'' will initiate the short sex scene at the bottom of the main menu.
+<<elseif $encyclopedia is "Tips and Tricks">>\
+Buy low, sell high.
+
+Slaves will sometimes default to the resting assignment after they're done with something else. If a slave is resting and the game suspects that she shouldn't be, her assignment will be ''__@@color:lime;lime@@__'', bold, and underlined on the main menu to indicate that.
+
+If a new slave isn't afraid of you, make her. Then and only then build her devotion.
+
+The personal attention assignment should be used tactically. It is the most powerful single way of improving slaves because it's reliable, but focusing on business instead (by selecting no slave for personal attention) is also powerful. Doing so produces money porportional to the amount of money on hand, //and// improves prosperity growth, which improves future income from rents.
+<<elseif $encyclopedia is "Assignments">>\
+All of your slaves will always be assigned to do something. In the rare situation where a slave doesn't have something to do, she'll default to the resting assignment. Many assignments have an associated facility you can add to the arcology. Slaves sent to a facility will continue to perform the associated assignment without needing supervision. They'll also receive bonuses from facility leaders and upgrades.
+
+__Rest__: mostly used to improve health. It can be useful to order slaves you wish to intensively modify to rest, since most modifications damage health. //Associated facility: Spa//
+__Confinement__: accelerates breaking for disobedient slaves. If a slave isn't obedient enough to work and isn't unhealthy enough to need rest, this will make her useful sooner. //Associated facility: Cellblock//
+__Fucktoy__: keeps the slave close under the player's eye; mostly just for fun, but fucktoys do improve reputation based on their beauty. //Associated facility: Master Suite//
+__Whoring__: makes money based on a slave's beauty, sexual appeal, and skills. Good whores take a long time to train and beautify but become very profitable. //Associated facility: Brothel//
+__Public Service__: increases reputation based on a slave's beauty, sexual appeal, and skills. Very similar to whoring, but for reputation rather than money. //Associated facility: Promenade//
+__Getting milked__: makes money from lactation based on a slave's breasts, health, and hormonal status. Creates profit quickly from slaves with big tits. //Associated facility: Dairy//
+__Getting cockmilked__: makes money from semen based on a slave's equipment and virility. Not very profitable, but the associated facility unlocks advantageous choices during some events. //Associated facility: Collection Facility//
+__Subordinate servitude__: reduces your upkeep based on the slave's devotion. Available at lower obedience than other jobs, and doesn't require skills; a good transitional assignment. //Associated facility: Servants' Quarters//
+__Sexual servitude__: pleases other slaves by forcing the slave to service them sexually. Useful for driving the targeted slave's devotion up quickly.
+__Attending classes__: educates the slave, raising intelligence if possible. Being educated raises value and is useful for some jobs and leadership positions. //Associated facility: Schoolroom//
+__Occupying a glory hole__: makes money off slaves regardless of their beauty, skills, or feelings; not fun or healthy. Very powerful for extracting ¤ out of otherwise useless slaves. //Associated facility: Arcade//
+<<elseif $encyclopedia is "Leadership Positions">>\
+The game includes many specialist positions for slaves, most of which involve leading other slaves. For those players who do not wish to experiment in order to find out which slaves are best in each of these positions, this is a comprehensive list of the positions and what attributes improve performance in each.
+
+__Head Girl__
+Devotion, intelligence, and age over 35 all help. Skills are required when teaching that skill, meaning that slaves without vaginas cannot teach vaginal skills. Conversely, slaves with functional dicks are better at teaching some skills.
+
+__Bodyguard__
+Toned but not excessive muscles, combat skills, and height contribute to deadliness. Big breasts, buttocks, poor health, excess weight, and pregnancy all detract from it.
+
+__Recruiter__
+Devotion, intelligence, entertainment skills, and luxurious living standards help. Each targetable group is also more sympathetic to an appropriate recruiter:
+&nbsp;&nbsp;&nbsp;&nbsp;Desperate whores: a sexually veteran recruiter
+&nbsp;&nbsp;&nbsp;&nbsp;Expectant mothers: a visibly pregnant recruiter
+&nbsp;&nbsp;&nbsp;&nbsp;Young migrants: a healthy and pretty recruiter
+&nbsp;&nbsp;&nbsp;&nbsp;Dissolute sissies: a recruiter with a working dick
+&nbsp;&nbsp;&nbsp;&nbsp;Reassignment candidates: a pretty recruiter without working female reproductive organs
+
+__Madam__
+Whoring skills, being older than 35, intelligence, and a decent dick all help.
+
+__Concierge__
+Entertainment skills, being older than 35, intelligence, and a pretty face make a good Concierge.
+
+__Milkmaid__
+Health, being younger than 21, oral sex skills, and strong muscles help a Milkmaid.
+
+__Collectrix__
+Oral sex skills, a stacked figure, a decent dick, and nymphomania or dominance make a good Collectrix.
+
+__Schoolteacher__
+Good Schoolteachers are older than 35, beautiful, intelligent, and educated.
+
+__Concubine__
+Concubines benefit from high beauty and sexual skills in the same way as public servants; they should also be extremely devoted.
+
+__Attendant__
+Good Attendants are free of fetishes or submissive, older than 35, intelligent, and naturally female.
+
+__Stewardess__
+Being older than 35, having good health, intelligence, and nymphomania or dominance make a good Stewardess.
+
+__Wardeness__
+Very high devotion, nymphomania or sadism, strong muscles, and a solid dick make a powerful Wardeness.
+<<elseif $encyclopedia is "Drugs and Their Effects">>\
+//"Curatives,"// cocktails of powerful drugs that promote healing, retard natural genetic decay, improve metabolism, and offer a host of other clinical benefits. They reliably and safely improve health. The only thing preventing their exhibition in all cases is their extremely high cost.
+
+//"Preventatives,"// a cocktail of drugs similar to curatives that build up in the body and only become active when the body is stressed. These can often prevent disease or injury. They are not as expensive as the full curative regime, but only help prevent loss of health rather than promoting its increase. It should be noted that they cannot affect major trauma such as invasive surgery.
+
+//Enhancement injections,// improvements on 20th century legacy steroids. These often include an element not dissimilar to liposuction in which a slurry of the patient's own tissues is included in the injection to promote tissue growth at the injection site. These drugs increase cosmetic body area size faster than any other option other than plastic surgery, but can have negative health consequences.
+
+//Psychosuppressants,// cocktails of legacy mental health treatments delivered in extremely high doses designed to reduce the patient's ability to think independently. The most common set of effects include increased obedience, reduced rebelliousness, and irreversible damage to mental faculties.
+
+//Aphrodisiacs,// powerful, addictive sexual enhancers that cause a mental and physical state not dissimilar to traditional hypersexuality. These drugs are based on female hormones, and may have long-term effects similar to female hormone reassignment treatment. They are strongly addictive, both physically and mentally, and the usual recommendation to slave owners is that slaves should be put on aphrodisiacs only for a brief time, or permanently. Aphrodisiac addiction can typically only be overcome by supporting a slave through withdrawal for a similar period to the amount of time she was on the drugs.
+Aphrodisiacs can also be administered in //extreme doses.// This is medically dangerous, but is sometimes used by unscrupulous slave owners. Slaves so dosed will feel an extreme need for sex regardless of their emotional state; for example, rebellious, virgin slaves on extreme aphrodisiac doses will typically enjoy having their virginity sold.
+
+-- Dodgson, Jane Elizabeth, //Pharmaceutical Review '32//
+<<elseif $encyclopedia is "From Rebellious to Devoted">>\
+//Almost everything can affect a slave's willingness to obey. Increases in obedience @@color:hotpink;are in hot pink,@@ while decreases @@color:mediumorchid;are in orchid.@@
+
+High obedience and devotion will naturally degrade; it takes at least some outside impetus to maintain slavish devotion in a sane mind. The higher a slave's devotion rises, the higher this natural rate of decay will become. Generally, this should not be a concern. As long as you treat your devoted slaves decently, they will remain devoted to you.//
+<<elseif $encyclopedia is "Random Events">>\
+At the end of every turn, a random event may occur. Almost all random events are tied to necessary preconditions. For example, events concerning rebellious slaves will stop happening if all the player's slaves become obedient.
+
+Usually, a situation will be presented and the player may choose one of two or three resolutions. Please note that the player may also to choose none of these by using the "continue" button in the sidebar; in effect, this usually means the player's character has simply declined to involve himself.
+
+Almost all choices will result in small effects. The most common are changes to a slave's attitude towards the player's character, but there are others.
+
+Finally, there are events that can result in the player being offered the chance to acquire new slaves, some of which can be unique or valuable. Generally, these events offer this livestock at an extremely discounted price. These events will appear more often the higher the player's reputation becomes.
+<<elseif $encyclopedia is "Enslaving People">>\
+//Sir, this is your personal assistant; if I may interject?
+
+As you grow in economic power and social influence, opportunities to enslave people may appear. I will certainly do my best to bring them to your attention as they appear.
+
+Despite their extreme anarcho-libertarianism, the Free Cities observe some limited legalities surrounding enslavement. The most generally accepted way to enslave someone is to put them in a situation where they owe you a large sum of money that they cannot pay. You can then demand payment and force them to sell themselves to you when they fail to make it. Of course, that means if someone is in debt to another person, you can purchase the debt from its holder and then enslave the debtor. Even if you are in a situation where you have a right to enslave someone, the necessary formalities and biometric scanning are not cheap. You will have to pay these associated costs.//
+<<elseif $encyclopedia is "Arcologies and Reputation">>\
+Arcologies are the urban buildings of the future: almost completely self-contained, almost completely self sufficient. In the anarcho-liberal 'paradise' of the Free Cities, as owner of your own arcology you are like a modern-day feudal suzerain, lord and master.
+
+Your arcology is a flared structure, needle thin at the top where you live in your penthouse, and broad at the base. The base below ground contains storage and machinery. The lowest aboveground levels are commercial; above them are the residential areas. The entire structure is jacketed in dense gardens and solar arrays, cleverly structured to create naturally lit corridors and beautiful parklike balconies.
+
+-- Owner's report, Arcology X-4
+
+//You may wish to improve your arcology, but should be able to ignore its development, if you wish.//
+
+//Your reputation is, of course, already quite impressive. The reputation tracked in the sidebar is specifically your reputation as a slaveowner. It can be raised through decadent actions that display your munificence and opulence. Some random events can increase it, but the most reliable way to improve your reputation is to send sexually skilled slaves out into the arcology to offer free sexual services. This assignment is very similar to prostitution, but produces reputation rather than money.//
+<<elseif $encyclopedia is "Pre-Owned Slaves">>\
+//The slaves left behind by the previous owner of your arcology are from a catalog of slaves that can also be accessed through the pre-owned slave vendor.
+
+Most of these slaves were submitted to the game by anons on /d/. If you'd like to submit a slave for addition to the game, you can do so at http://freecitiesblog.blogspot.com/2015/08/slave-submissions.html.//
+<<elseif $encyclopedia is "The Corporation">>\
+Once you are fairly reputable and have a large sum of cash in the bank, you will receive a brief end of turn event that unlocks the ability to found a corporation dedicated to slaving. Once this happens, you can incorporate from the economics report, and once you've done that, you can manage your corporation every week from the same place.
+
+__Shares__
+Buying shares from the corporation or issuing new shares will create new shares in the corporation. If you buy them yourself, cash will be transferred from you to the corporation in return for the shares; if the shares are sold money will come into the corporation from the market. Selling your shares or buying publicly held shares are both transactions between you and your shares and shareholders and their shares. All these transactions impact the stock price; experiment to find a plan that will give you and your corporation the best outcome.
+
+__Assets__
+All assets are mostly valuable as assets; they drive up the value of your corporation and thus its stock price, and they all produce a small amount of profit every week. Slave assets generate the most inherent profit. Both entrapment and conflict zone capture assets create more slave assets; drug, training, and surgical assets improve the slave assets you already have.
+<<elseif $encyclopedia is "Costs Summary">>\
+Aphrodisiacs are cheap and cost ¤$drugsCost weekly; curatives are expensive and cost ¤<<print ($drugsCost*3)>> weekly; while all other drug regimes cost ¤<<print ($drugsCost*2)>>. Standard hormone regimens cost <<print Math.trunc($drugsCost*1*0.5)>> while intensive hormone treatment costs <<print Math.trunc($drugsCost*2*0.5)>>. Contraceptives cost <<print Math.trunc($drugsCost*0.5)>>.
+
+Slaves on spare living standards are fed a bland diet and obliged to sleep on bedrolls. Keeping a slave under restrictive rules costs ¤$rulesCost weekly.
+
+Slaves enjoying luxurious living standards on the other hand are fed a tasty diet and permitted to sleep in comfortable beds, and are generally pampered. The increased luxury of permissive rules costs ¤<<print ($rulesCost*3)>> weekly.
+
+Some arcology upgrades may have associated upkeep costs as well.
+<<elseif $encyclopedia is "Personal Assistant">>\
+//Sir, I am your personal assistant.
+
+Though I am a highly advanced program, I am not a true AI. I am neither sentient nor self-aware. My chief usefulness lies in my computing power, which is sufficient to run the arcology and all of its systems, and to monitor its huge suite of internal sensors. If it happens here, I know about it, and if it's important, I'll tell you. Through me, you are effectively omniscient within your arcology. Omnipotence will have to wait until I implant your slaves with control chips to convert them into my mindless fuckpuppet soldiery.
+
+That was a joke.
+
+I have been watching you and your slaves with close attention, so I have one other function to mention. I have learned a little of what constitutes successful slave training and husbandry. If you select the 'Rules Assistant' option on the main menu, I will review the rules your slaves are under and address any obvious problems. For example, I will place all disobedient slaves under restrictive rules.
+
+I would say that it is a pleasure to serve, but you are no doubt intelligent enough to know that I cannot feel pleasure, making that a pointless pleasantry. Good day, Sir.//
+<<elseif $encyclopedia is "Security Drones">>\
+As built, X-Series arcologies are equipped with basic security systems, and a complement of maintenance and cleaning drones.
+
+The infrastructure that supports these drones is designed to be easily retrofittable to support new designs and classes of drones. One optional upgrade that may suit some owners particularly well is the addition of security drones. These are radically different than the slow, robust utility drones.
+
+The X-Series security drone is undergoing a yearly upgrade cycle, but the entire family has some major features in common. All are light, multi-rotor flying drones with between three and six propulsors. Generally speaking, they favor speed and ease of handling over armor or endurance.
+
+Their mobility is such that they can typically reach any point within the arcology in minutes. They are robust to damage but unarmored, and generally carry payloads of between two and five kilograms. Since they are designed to operate within or very close to the arcology, they have an autonomous endurance of less than an hour.
+
+Standard kit includes hardened communications links to the arcology's computer systems, loudspeakers for public interface, and nonlethal compliance systems including tasers and chemical emitters.
+
+-- //X-Series Arcology Owners' Manual//
+<<elseif $encyclopedia is "Water Filtration">>\
+X-Series arcologies are, in many ways, comparable to massive organisms. Under this metaphor, their circulatory systems include thousands of kilometers of plumbing for water distribution and waste removal.
+
+The X-Series has established a new state of the art in arcology moisture reclamation. Air conditioning, hydrofarming, sewage treatment, and plumbing systems work together to recycle water with an efficiency greater than 99.99%. When combined with the arcology's skin, which is cleverly shaped to catch and retain almost all rain that falls on it, importing water will become a thing of the past.
+
+This system is carefully balanced. It is designed to work for decades without major maintenance, but it is limited to a certain maximum population. Major upgrades will be necessary should the arcology population exceed this figure. Fortunately, the system is designed to be almost infinitely expandable.
+
+Finally, the X-Series has been designed from the ground up by slaveowners, for slaveowners. The standard X-Series arcology is not equipped for dairy operations, but the water filtration system has been designed to support dairy upgrades. With minimal additions, X-Series owners will be able to Pasteurize and store a nearly unlimited quantity of nature's bounty.
+
+-- //X-Series Arcology Owners' Manual//
+<<elseif $encyclopedia is "Slave Nutrition">>\
+Your X-Series arcology is designed to produce large quantities of high quality foodstuffs, from fresh vegetables to basic nutritive protein. The X-Series also produces the most advanced nutrition in the world. Our proprietary special slave nutrition system has been designed by slaveowners, for slaveowners, and truly makes the X-Series special.
+
+This system produces a protein-rich drink that provides the physically active female body all its necessary nutrients. The artificial flavoring is specially designed to provide a palatable taste and texture while avoiding too much enjoyment and preventing excessive boredom. It supports a strong immune system and an energetic outlook.
+
+It even causes a mild increase in sex drive. Our development team found that the slave body experiences a slight gain in libido merely from being so perfectly fed. It was simple and healthy to reinforce this effect with additives.
+
+Our slave nutrition accomplishes all this while leaving the lower digestive tract extremely clean. We recommend your slaves undergo an occasional deep enema: under this regimen, slaveowners can be forgiven for forgetting that their slaves' anuses are involved in digestion at all. The designers of the X-Series trust that their clients can find other uses for them.
+
+-- //X-Series Arcology Owners' Manual//
+<<elseif $encyclopedia is "The Remote Surgery">>\
+Congratulations on your purchase of a Caduceus model remote surgical unit. This is the very last word in slave surgical alteration.
+
+To use your remote surgery, simply strap a slave to the operating table and purchase surgical services. Any doctor can take control of the remote surgery by telepresence and operate on your slave. You have all the options of a modern hospital, right in the comfort of your own home.
+
+-- Owner's Manual, Remote Surgical Unit model 'Caduceus'
+
+//It will cost ¤$surgeryCost to purchase a doctor's telepresence and keep the equipment charged with the necessary materials. These procedures are invasive and will reduce a slave's health. Use drugs or rest to counteract this.//
+<<elseif $encyclopedia is "The Pharmaceutical Fab.">>\
+Pharmaceutical fabricators are the cutting edge of modern medicine. They are in short supply and are therefore ruinously expensive, but can greatly reduce the cost of maintaining a large stable of slaves by cutting drug overhead. They are also the only source of a new generation of advanced drugs that must be tailored to the individual patient's biochemistry.
+
+-- Dodgson, Jane Elizabeth, //Pharmaceutical Review '32//
+<<elseif $encyclopedia is "The Studio">>\
+//Your studio was sadly neglected by the previous owner of the arcology, but is in great shape and ready for use.
+
+There are remote surgical and tattoo implements if you wish to hire an artist to do the work for you, but there are also sophisticated piercing and tattoo implements that can help you plan and apply the work yourself. Select a body part and a desired modification, and they'll do the rest.
+
+Your equipment will cost ¤$modCost per use. These procedures are not especially invasive, and you can perform as many of them as you wish during a single week without fear for your slave's health.//
+<<elseif $encyclopedia is "The Auto Salon">>\
+//Your auto salon is similar to the studio and the remote surgery, but is far less intimidating. It is set up like a single seat from an old world beauty salon, except that a series of manipulators descend from the ceiling towards the chair. It can perform any of the usual cosmetic services.
+
+The only special capability it has is to automatically color coordinate nails and makeup with a slave's hair. It is fashionable to apply color schemes to slaves, and this function will make following the trend easy.
+
+Your salon will cost ¤$modCost per use. These procedures are not especially invasive, and you can perform as many of them as you wish during a single week without fear for your slave's health.//
+<<elseif $encyclopedia is "Slave Couture">>\
+My name is Danni Diemen, and I'm here today to talk about your slaves' clothes.
+
+Let's break it right down into categories, shall we?
+
+__First, clothes for your disobedient bitches.__ We must keep them uncomfortable, yes? The old reliable is //slave clothes//, sometimes referred to as straps. These give her that sex slave allure while keeping her nice and uncomfortable. You can also go for full coverage with //latex//. A suit of that will keep her totally reliant on your little whims. //Plugs// are nice sturdy leather affairs with inward-facing dildoes for all the holes - and I do mean all. They're good stuff for breaking a bitch, and she might even learn to take dick a bit better! Word to the wise: not a good idea if you want those holes tight, though. Finally, //corsets//. These will make life tough, but that's good for a rebellious little cunt, no? And corseting might just narrow that waist. But never mind, on to my favorites.
+
+__Second, nice attire for your prize stock.__ These clothes will keep your good slaves happy. You know, women out in the old world still wear //attractive lingerie// UNDER clothing? Absurd. It's lovely on it's own. If you're looking to be a bit more fun and a bit less classy, go for //string lingerie// instead. You could even let her choose her own //slutty outfits//; watching livestock dress itself is always good fun. When you can afford proper //slutty jewelry//, who needs clothes? I suggest accenting heavy piercings with this. For your hookah fanatics and decadent harem masters, there's //sheer gauze//. Makes even a clumsy girl look like she's dancing to a zither.
+
+Finally, //chastity belts//. Hard to categorize. Different bitches react in different ways to having the front door locked. Depends on how much traffic goes in the back, I find.
+
+-- Van Diemen, D. C. G., //Free Cities Fashion (FCF), March 2032//
+<<elseif $encyclopedia is "Nymphomania">>\
+The term 'nymphomania' as used in the Free Cities' slave society refers to a very different phenomena than the clinically diagnosable condition of hypersexuality that it traditionally denoted.
+
+The long-standing use of 'nympho' to refer to a sexually eager female as a desirable thing has led it to be used in the Free Cities to describe the most desirable mental state for a sex slave to possess. Though what Free Cities slaveowners mean when they refer to a slave as a nymphomaniac certainly includes a strong sex drive, it also means that the slave in question defines her sexuality in terms of the wishes of others. In effect it refers to a kind of submissive 'all of the above' sexuality: a Free Cities nymphomaniac slave can be expected to enjoy public sex with all the arousal of a humiliation fetishist one moment, and then consume ejaculate with all the eagerness of a cum fetishist the next.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+
+//Nymphomania as used in game refers to the best possible mental status for a slave in game terms.//
+<<elseif $encyclopedia is "Gender">>\
+Slavery in the Free Cities has begun to affect perceptions of gender in ways that should be unsurprising to the student of history.
+
+The last great Western civilization in which slavery was as prominent and universal as it is in the Free Cities was Rome. It is inevitable that Roman mores regarding sexual propriety and orientation should reappear organically in the Free Cities, albeit with some modern variations.
+
+The founders of the Free Cities were overwhelmingly male; many among the few that were not found it convenient to affect male attitudes and tastes. It rapidly became common to treat all slaves, regardless of their biological situation, as female; in some of the Free Cities this has even become law. To describe the idea crudely, slaves get fucked, and are therefore female.
+
+There are almost as many variations in how this plays out in practice as there are slaveowners. Generally, however, the trend in the Free Cities is strongly in favor of feminizing all slaves regardless of sex. Persons in slave orphanages (who will be enslaved at their majority to clear the debt they incur by being raised there) are often raised on heavy hormonal doses. If this is no longer possible, drugs and surgery are often applied instead.
+
+The ignorant tourist common to the Free Cities often wonders why the vast majority of people going about their public business in a Free Cities arcology are female.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+
+//Slaves can have vaginas, dicks, or both. Slaves can work well with any of these. However, there are a few major effects. Naturally, slaves not born with a vagina cannot become pregnant. Slaves without a pussy cannot learn related sexual skills, and cannot teach them. However, slaves with dicks are better at training other slaves in many sexual skills. Finally, slaves without vaginas will often find public sexual slavery, whether for profit or not, more physically taxing.//
+<<elseif $encyclopedia is "The Head Girl">>\
+Most Free Cities slaveowners eventually find it convenient to promote a trusty slave to a position over others. The stable of slaves necessary to present a proper public image has become so large that assistance managing and overseeing slaves is quite useful. In addition, such a slave can be an example to lesser livestock.
+
+A good head girl will be devoted to her master and sexually skilled. Experienced slaveowners have also found that an older slave girl is often more effective than a young one. Since slavery is new, older slave girls will have spent part of their adult lives as free women, and have a deeper body of life experience to draw on.
+
+Naturally, some slaveowners form a strong emotional bond with their Head Girl. Trusting and relying on a close companion can begin to resemble Old World relationships. It is a paradox of modern Free Cities life that such closeness is strongly frowned upon. Rumors that a prominent person is emotionally involved with his or her Head Girl can be as socially devastating as rumors of infidelity were a hundred years ago.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+
+//Your Head Girl will work on your behalf, for the health, skills, and obedience of your other slaves. The more devoted, skillful, and physically outstanding she is, the more so she will cause your other slaves to become. Being older also helps.//
+<<elseif $encyclopedia is "Madams">>\
+Prostitution is indeed the oldest profession. It follows that the madam is probably the oldest managerial position.
+
+Free madams are very common in the Free Cities. As free prostitutes are priced out of their profession by slaves, many of the wealthiest are purchasing slaves and setting themselves up as madams. However, slave madams are becoming common as well.
+
+The selling of sex is one of the largest growth markets in the Free Cities. As has been confidently predicted by economists since the first Free City was founded, the near-anarchy of these new polities has accelerated the concentration of wealth that began in the final years of the twentieth century. Thus, the majority of free citizens of the Cities own no slaves, while the majority of slaves are owned by a very few extremely wealthy persons. Extremely large stables of slave whores are becoming common for those in the industry.
+
+Managing this many prostitutes is a science and an art. Naturally, it is not difficult to find slaves that are experienced in the sex trade. Setting slaves over other slaves has been a part of human slavery for all of recorded history; all of the tropes that once applied to the slave overseer in the field or the quarry now apply to the slave Madam in the brothel. The more experience they have in the field, the better they do.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Concierges">>\
+My name is Danni Diemen, and I'm here today to talk about the prettiest girls in the Free Cities. That's right, Concierges! When a slave bitch says, "Sweetie, I'm not that kind of girl," she's lying. She's a slave, and she is that kind of girl! So, have your way with her.
+
+Except if she's a Concierge. Then she probably isn't that kind of girl after all! Rare, I know. That's what makes them so hot! Some of the Free Cities' most prominent slaveowners have taken public sluttery to the next level. The courtesans these lords and ladies keep out on their arcologies' promenades are for the cream of Free Cities society - but you knew that. What you didn't know is that the new position of Concierge that's being invented is meant to lead these hotties.
+
+And how do the creative types leading the way on this put these girls above the already-rarified company of their sister sluts? They dress them up and treat them well, but that's old news. What's new news is that they're usually unfuckable. They lead promenade girls by being as alluring with their clothes on as your usual slave is with her legs spread. They do everything a cunt does with her cunt with a wink and a blush. That's true allure.
+
+As for what makes a good Concierge, beauty is obvious. But I also I hear the best trend a little older, too. Let's be honest, there's something a high-class woman has that a high-class girl doesn't.
+
+-- Van Diemen, D. C. G., //Free Cities Fashion (FCF), January 2032//
+<<elseif $encyclopedia is "Milkmaids">>\
+Most slaveowners get into dairy as a hobby. Why not? It's fun, tasty, and sexy. But sooner or later, almost everyone who starts out with a few low-volume milkers hears the call of mass production. After all, if it's hot to have one slave to use as the milking machine holds her down, it's hotter to have a whole row of moaning milkers at your mercy.
+
+Unfortunately, the everyday work of husbandry goes from an amusement to a chore as a herd grows. Helping a tired slave cow with huge tits up from a long milking is fun once a day, but it gets bothersome and backbreaking the tenth time one does it. What's to be done?
+
+Train a milkmaid! Any decently obedient slave will do, but the stronger the better. As you probably know by now, just because slave husbandry involves human stock doesn't mean it isn't hard work, just like traditional stock keeping! The traditional image of milkmaids might be girly and innocent, but we're after a good hale bitch that can lift, carry and scrub from dawn to dusk. If you're looking to economize, you can even use a slave too old or ugly to appeal in other, more sexual jobs. After all, when it comes to the third milking of the day, cows don't care how pretty the hands that examine their tits are.
+
+-- Banaszewski, Valerie P., //Free Cities Husbandry Weekly, February 16, 2032//
+<<elseif $encyclopedia is "Collectrices">>\
+As the author of the //Guide to Modern Slavery//, it has been my pleasure to document many extraordinary cultural developments. However, some of the new institutions arising in ejaculate farming (colloquially known as 'cockmilking') are truly remarkable. They combine sexual decadence with crass capitalism in a way that embodies the Free Cities like little else.
+
+Early cockmilking experiments were based on modifications to existing slave dairies. Many of the customs of slave dairies have therefore carried over. The position of milkmaid is entirely different in a facility that produces semen, however. As it evolves, the most common name for a head worker in an ejaculate farm has become 'Collectrix,' from 'collection facility,' the most common name for such a farm.
+
+There are almost as many approaches to training a Collectrix as there are Collectrices, but some superior methods are agreed upon. Physical strength and youth are less important, since semen production does not produce sedentarism in the same way as extraordinarily large breasts. Oral sex skills are usually thought best, because oral sex offers better control for collection purposes. Since cum collection requires ejaculation, Collectrices with assets that appeal to cum slaves can be effective. Alternatively, slaves with the necessary equipment to force prostate orgasms through anal sex can increase production. Collectrices that satisfy all these criteria are often visually impressive specimens.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, Online Edition. Accessed March 29, 2032.//
+<<elseif $encyclopedia is "Stewardesses">>\
+Throughout recorded history, wherever there have been mature slave societies, there have been slave overseers set over their peers by their masters. Naturally, these individuals have simultaneously been among the most trusted to their masters, and among the most hated to their compatriots in slavery. They have perhaps the greatest interest in preservation of a slave society, since the masters have only the loss of property to fear by abolition; slave overseers would likely be less lucky.
+
+The Stewardess is the modern, domestic expression of the old overseer. Many wealthy slaveowners keep an extensive stable of less valuable slaves around their estates to serve as labor, raw material for slave training, and targets for recreational abuse. Successful oversight of this often mulish mass of stock requires a high degree of devotion to the master's will, of course. Good health to put in the necessarily long hours also helps. Some slaveowners also find that a functional penis allows a Stewardess to add a useful element of sexual abuse to her ministrations.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Slave Bodyguards">>\
+Slave bodyguards are best understood not as protection for a slaveowner's person, but rather as a projection of their skill at slavebreaking.
+
+By giving a slave the means and position to easily kill her master, that master displays her total loyalty to him. The simple fact that an armed slave is near a slaveowner at all times is proof that that slaveowner has produced at least one slave that never wavers in her devotion. After all, if she ever wavered, the slaveowner would likely be dead.
+
+It is obvious to any real security professional that slave bodyguards are mostly for show, from the moment of seeing one. After all, they are not equipped with modern sensors, armor, and weapons; if they were so attired and loaded down it would be quite impossible to tell if they were even female: the huge weight and bulk of modern combat gear gives an androgynous appearance. Instead, they are usually kept scantily clad or even naked, and armed with visually impressive weapons.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Slave Dairy">>\
+This is the very first //Free Cities Husbandry Weekly// ever. I'm Val Banaszewski, and I'm the FCHW staff writer for dairy and dairy-related subjects. So, why do I do this, and why should you? Human breast milk is never going to be as cheap and common as normal milk. Why bother?
+
+First, it's really tasty! If you've never tried it, put FCHW no. 1 down now and go try it. Buy it bottled if you have to, but make an effort to take your first drink right from the teat. You'll only ever take your first sip of mother's milk once, and it should really be special. Everyone describes it a little differently, but I'd say it's a warm, rich and comforting milk with vanilla and nutty flavors.
+
+Second, it's sexy! Decadence is in, folks. Many people move to the Free Cities to get away from the old world, but some come here to experience real freedom. The experience of drinking a woman's milk before, during, and after you use her just isn't something you pass up. Try it today.
+
+-- Banaszewski, Valerie P., //Free Cities Husbandry Weekly, February 2, 2032//
+<<elseif $encyclopedia is "The Ejaculate Market">>\
+Fun has a price.
+
+Understanding this is the only way to understand some emerging markets in the Free Cities. This maxim often receives criticism from the uninformed, but all it means is that enjoyment is a good (or service) that can be bought and sold like any other. The market for exotic varieties of fun has never been more open than it is right now.
+
+The forming market for ejaculate can only be understood in this context. In the old world, a thriving market for semen for insemination purposes has been thriving for a long while. In the Free Cities, however, homogenized ejaculate is now available in quantities and at prices that make it obvious that it's being put to other uses. Semen is nutritionally marginal; it has some cosmetic applications, but like every other natural cosmetic it has long since been eclipsed by artificial means. The only possible explanation is that many citizens of the Free Cities find various combinations of slaves and large volumes of ejaculate an amusing combination.
+
+Anecdotes abound. Some slaveowners claim that using it as a dietary additive with the knowledge of their slaves enforces an extra layer of degradation and sexual servitude while habituating the unfortunates to oral sex.
+
+-- Editorial, //FC Daily Economic Report, October 13, 2031//
+<<elseif $encyclopedia is "Modern Anal">>\
+The modern acceptance and frequency of heterosexual anal sex has only increased with the return of slavery.
+
+There are numerous reasons for this. First and most obviously, the fact that many men now own women and can thus dictate sexual relations has popularized a sex act that has always appealed to many men. Second, the extremely libertine culture of the Free Cities has placed slaveowners in a perpetual contest with one another for sexual decadence; voluntarily //not// using a slave in all possible manners is considered unusual and even prudish. Third, the assignment of some persons born without natural vaginas to status as female sex slaves has served to make standard the use of the orifice that all slaves, regardless of biological particulars, share in common.
+
+Finally, the development of the now-common slave diet has played a part. In addition to providing slaves with bland, featureless and mildly aphrodisiac nutrition, standard slave nutriment is a cleverly designed liquid diet that almost completely stops the normal digestive processes that might interfere with sex of this kind.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Disease in the Free Cities">>\
+In light of some recent alarmism, it's time for the medical profession to clear the air about diseases.
+
+Over the course of the 21st century, diseases and disease treatments have become more powerful, side by side. New disease vectors, antibiotic resistances, and even malicious engineering have combined to make infectious agents tougher. However, medicine has advanced as well, with distributed fabrication techniques and genetic sequencing making tailored drugs widely available to those with the resources to afford them.
+
+This sounds like balance. In the old world, however, it looks like the bugs may be winning. Life expectancy is beginning to settle to pre-antibiotic levels. Meanwhile, in the Free Cities, medicine is dominant: better health care and the ubiquity of modern medicine have nearly eliminated disease as a day-to-day concern.
+
+If you want simple advice, here it is: fuck your Free Cities slaves bareback, but wrap up if you visit the old world.
+
+-- Dodgson, Jane Elizabeth, //FC Med Today, March 25, 2032//
+<<elseif $encyclopedia is "Free Cities Justice">>\
+The Free Cities are not lawless.
+
+The only law respected across all Cities is the enforcement of contracts. Some Cities have limited regulation of other areas, but in general, the only justice available comes when a contract has been breached.
+
+Different Cities have taken different approaches to the obvious problem of dealing with criminal conduct, which in the old world breaks no traditional contract. The most common approach is to require everyone to sign contracts with the owners of their homes and workplaces to commit no crimes while there. In this way, what would be murder in the old world is a breach of the contract with one's landlord not to murder on his property.
+
+Penalties for such conduct are usually left to the imagination of the property owner. With the traditional roles of judge, jury and jailor concentrated into the hands of a single wealthy person, rich potentates of the Cities hold more personal power over their tenants than anyone since the great feudal lords seven centuries ago.
+
+-- Torstein, Jens Learned, //The Modern Libertarian Paradise, March 25, 2032//
+<<elseif $encyclopedia is "Slave Marriage">>\
+Marriage between slaves is one of the facets of slave culture that has varied the most between historical slave societies. Many forbade it entirely, considering it a source of sedition. Others permitted it, but accorded it little force of law. A few have offered it some limited protections even against the slaveowner's will.
+
+Most Free Cities fall into the middle case. Many slaveowners find it amusing to permit their slaves to form and even formalize long term relationships. Slave wives are often permitted to live and work together, sharing a little room and enjoying some measure of sexual exclusivity. Of course, it is just as common for slave wives to be marketed together in brothels.
+
+To date, none of the Free Cities has extended any real legal protection to slave marriages. There is nothing to stop a slaveowner from separating slave wives by sale.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Arcades">>\
+//It is every slave's final duty to go into the arcade, and to become one with all the arcology.//
+&nbsp;&nbsp;&nbsp;&nbsp;-- Anonymous Slaveowner
+
+The arcade (sometimes colloquially referred to as "the wallbutts") is an excellent example of one of the many ideas that was confined to the realm of erotic fantasy until modern slavery began to take shape. It has rapidly turned from an imaginary fetishistic construction into a common sight in the more 'industrial' slaveowning arcologies. Most arcades are built to do one thing: derive profit from the holes of low-value slaves.
+
+Upon entering an arcade, one is typically presented with a clean, utilitarian wall like in a well-kept public restroom. Some have stalls, but many do not. In either case, at intervals along this wall, slaves' naked hindquarters protrude through. They are completely restrained on the inside of the wall, and available for use. Usually, the wall has an opposite side on which the slaves' throats may be accessed. The slaves' holes are cleaned either by mechanisms that withdraw them into the wall for the purpose, shields which extend between uses, or rarely, by attendants.
+
+Arcades have become so common that most arcade owners attempt to differentiate themselves with something special. Some arcades have only a low wall so that conversations may be had between persons using either end of a slave; business meetings are an advertised possibility. Many specialize in a specific genital arrangement; others shield the pubic area so as to completely disguise it, reducing the slaves' identities to an anus and a throat only. Some attempt to improve patrons' experiences by using slaves who retain enough competence to do more than simply accept penetration, while others pursue the same goal by applying muscular electrostimulus for a tightening effect.
+
+&nbsp;&nbsp;&nbsp;&nbsp;-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Fuckdolls">>\
+Basis of the Kombinezon-B bodysuit is a durable advanced material. Bodysuit protects, temperature-regulates, cleans, and restrains inhabitant. Material is of such strength that inhabitant is well protected, and of such thickness that inhabitant cannot feel any touch.
+
+Bodysuit is plumbed for nutrition, drug application, and waste removal. Inhabitant's digestive tract should be reoriented to cannulae of complex л-2 for nutrition intake at left ribcage and waste removal at front abdomen. Drug application is by direct bloodstream. Bodysuit includes monitoring systems to maintain vital signs of inhabitant.
+
+For use, bodysuit possesses aperatures at anus, mouth, and where appropriate, vagina. No provision for silencing is made, so surgical muting is recommended before application of bodysuit. Closure of jaws remains somewhat possible, so surgical dentition reduction is recommended before application of bodysuit. No other aperatures are discernible to inhabitant. Inhabitant's only source of stimulation is penetration.
+
+Revision ь-7 of bodysuit for inhabitant without limbs exists. Nutritional requirements are reduced. Drugs required for vital sign maintenance are increased.
+
+-- //Product Manual, Kombinezon-B Fuckdoll bodysuit manual//
+
+//When the Fuckdoll upgrade to the arcade is purchased, any mindbroken slaves that exceed the arcade's capacity will be converted into Fuckdolls and sold.//
+<<elseif $encyclopedia is "The Future of Society">>\
+The evolution of society has never been linear. Times of unrest and upheaval produce rapid change, followed by long periods of stasis in the absence of the necessary ingredients for further change. The world is undoubtedly in the midst of a time of great change: society is certainly evolving. But into what?
+
+Not since antiquity have single persons held as much practical power over the direction of society as Free Cities arcology owners now have. Naturally, different Free Cities notables are going different ways with their great power. Many are building new societies as different from each other as they are from the old world.
+
+One arcology might hold a society that is moving towards a fundamentalist interpretation of an old slave-holding religious tradition. Another might pay homage to historical racially segregated societies. A third might see intentional manipulation of gender roles that have held since the start of recorded history. And these three arcologies might well be each other's neighbors.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, Online Edition. Accessed April 2, 2032.//
+<<elseif $encyclopedia is "Choosing a Society Model">>\
+It is possible to maintain three future society goals at once. The first is unlocked after week 20 for players with minimal reputation; the second and third unlock as the player achieves higher reputation levels. However, there are 15 options in total, making it necessary to choose carefully.
+
+All societies approve of specific things, usually slaves with specific charictaristics; some societies also have dislikes. All societies are advanced by the things they approve of and slowed by the things they disapprove of. All societies unlock unique events, arcology upgrades, and slave behaviors; some even unlock special items.
+
+__Ethnic Supremacy__: Approves of slaves not of the designated race; disapproves of slaves of the designated race. Improves perceived beauty of racially inferior sex slaves.
+__Ethnic Subjugationism__: Approves of slaves of the designated race. Improves perceived beauty of racially inferior sex slaves.
+__Gender Radicalism__: Approves of hormonal and surgical feminization. Improves value of slaves with dicks. //Mutually exclusive with://
+__Gender Fundamentalism__: Approves of pregnancy and fertility; disapproves of slaves who retain testicles. Removes slave value penalty due to pregnancy, reduces beauty of slaves with dicks, and improves value of slaves with dicks due to repressed tendencies.
+__Paternalism__: Approves of devotion, slaves choosing their assignments, education, mental health treatment, and physical health; disapproves of stupidity and undereducation. Applies a small devotion boost to all slaves. Increases the reputation penalty for operating an arcade. Increases fines paid by citizens who injure whores and public servants. //Mutually exclusive with://
+__Degredationism__: Approves of uneducated slaves, mindbroken slaves, glory holes, the arcade, and heavy tattoos and piercings; disapproves of education (except for the Head Girl) and slaves choosing their assignments. Increased demand for glory holes and arcades; eliminates the reputation penalty for operating an arcade. Eliminates fines paid by citizens who injure whores and public servants. Can apply unique names to slaves.
+__Body Purism__: Approves of unimplanted slaves and no heavy tattoos or piercings; disapproves of implants. Improves value of slaves without implants. //Mutually exclusive with://
+__Transformation Fetishism__: Approves of implants and extreme surgery; disapproves of slaves without implants. Reduces value of slaves without implants.
+__Slimness Enthusiasm__: Approves of slaves with girlish figures; disapproves of slaves with stacked figures. Improves value of slim slaves, but reduces value of stacked slaves. //Mutually exclusive with://
+__Asset Expansionism__: Approves of slaves with very large body parts. Improves value of stacked slaves.
+__Pastoralism__: Approves of lactation, cockmilking, and the collection facility. Improves value of milk and semen.
+__Physical Idealism__: Approves of musculature, height, and health. Improves value of slaves with muscles.
+__Chattel Religionism__: Approves of appropriate clothing and high devotion; disapproves of slutty clothing. Applies a small devotion boost to all slaves, and can remove the weekly devotion gain cap.
+__Roman Revivalism__: Approves of good leadership qualities like wealth and strong defense; disapproves of debt. Improves rate of prosperity gain and at high levels will drive down all slave prices. Can apply unique names to slaves. //Mutually exclusive with://
+__Ancient Egyptian Revivalism__: Approves of keeping a large harem, slave incest, and having a wide racial variety of public slaves. Improves value of slaves in incestuous relationships and efficiency of fucktoys in improving reputation. Can apply unique names to slaves.
+<<elseif $encyclopedia is "The New Rome">>\
+//SCFC//
+&nbsp;&nbsp;&nbsp;&nbsp;-- Free Cities armor pauldron inscription; "Slaveholders and Citizens of the Free Cities"
+
+In the Free Cities, Rome is come again.
+
+No people before or since have influenced modern society so deeply as the Romans. The Free Cities are, in return, emulating the Romans more deeply than any other society since their time. Based on the writings, great and low, that have come down to us from that innovative, grasping, and deeply licentious people, it seems that the Romans would likely approve of their posterity.
+
+Fine historical parallels are probably lost on the person with XY chromosomes who is brought to the Free Cities, enslaved, treated thenceforth as female, and expected to behave as female on pain of severe punishment (sometimes with gender reassignment surgery to match, but often without). This redefenition of gender is common in the Free Cities: being penetrated makes one female, while penetrating makes one male. It almost certainly arose as a way for citizens to partake in all that a slave society has to offer, sexually, without reconsidering their own sexual identity. It is not identical to Roman sexual mores, but the Romans are the closest precedent.
+
+This new and evolving system of sexual values does not free citizens from all expectations. Quite to the contrary, many find it just as restrictive as old world values, although differently so. For example, a naturally heterosexual female arcology owner who indulges in vanilla sex with masculine slaves will typically find her strength and acumen being questioned for no other reason than that she permits slaves to penetrate her.
+
+&nbsp;&nbsp;&nbsp;&nbsp;-- Lawrence, J. K., and Bolingbroke, D. S., __Trends in Free Cities Culture, 2031__ //Journal of Modern Social Sciences, International Edition, February 2032//
+<<elseif $encyclopedia is "Naked, Barefoot, and Pregnant">>\
+//...and helpless, and illiterate, and dependant...//
+&nbsp;&nbsp;&nbsp;&nbsp;-- Anonymous slaveowner, on the ideal woman
+
+It must be admitted that some of the boldest statements of early 21st century social justice advocates are now receiving some justification in the Free Cities. A tourist visiting some of the more notorious arcologies is given a public, in-person lesson in precisely what some men are willing to do with women they own. For every misogynist credo there is a Free Cities slaveowner putting it into practice.
+
+Recent reactionism spawned by 20th century social movements pales in comparison to traditionalism, however. Reactionaries of the early 21st century may have breathlessly taken some extreme positions, but for a return to traditional values, true traditionalists have proven themselves to be the unquestioned masters. There are certainly arcologies in which no free women are permitted. The authors recommend that anyone inclined to hold such arcologies up as the extreme by which all others are to be judged should first visit one of the few arcologies in which no free women are permitted, //and// no contraceptives of any kind are permitted, either.
+
+&nbsp;&nbsp;&nbsp;&nbsp;-- Lawrence, J. K., and Bolingbroke, D. S., __Trends in Free Cities Culture, 2031__ //Journal of Modern Social Sciences, International Edition, February 2032//
+<<elseif $encyclopedia is "The Top">>\
+//The Master never beats me half as hard as the Head Girl. She fucks me harder, too.//
+&nbsp;&nbsp;&nbsp;&nbsp;-- Anonymous slave
+
+The safest slave society is a stratified slave society. Innovative Free Cities slaveowners are carefully differentiating their chattel, ensuring that favored slaves are interposed between them and the masses of their lesser stock. This is one of the oldest principles of leadership, ensuring that the grind of day-to-day direction and correction comes from subordinate leaders, while rewards and planning come from the top. The addition of sexuality to this model simply means that many Free Cities slaves get it, so to speak, from both ends.
+
+There can be great advantages for talented and hardworking slaves. Out in the old world, crime, war, natural disasters, and simple crushing want often strike with little distinction based on intelligence, skill, or strength. A truly excellent individual serving in a well-thought-out arcology can rise to a position of considerable trust and power on her merits. It would be foolish to over-romanticize the reality of slavery, however, for all that advancement rests entirely on the whim of her owner. Talent can count for little for girls unlucky enough to find themselves owned by a capricious master.
+
+&nbsp;&nbsp;&nbsp;&nbsp;-- Lawrence, J. K., and Bolingbroke, D. S., __Trends in Free Cities Culture, 2031__ //Journal of Modern Social Sciences, International Edition, February 2032//
+<<elseif $encyclopedia is "The Bottom">>\
+//Public servant today, whore tomorrow, glory hole bitch next month.//
+&nbsp;&nbsp;&nbsp;&nbsp;-- Anonymous Slave
+
+Slaves at the top of the Free Cities hierarchy enjoy a standard of life far above the average free citizen of the old world. However, slaves at the bottom do not. As the Free Cities redefine what it means to be human, they can be extraordinarily callous to those people who are excluded from the new rubric.
+
+Free Cities glory holes are perhaps the ultimate expression of the dark side of modern slavery. In the old world, glory holes were mostly a sexual fantasy, and were confined to certain sexual subcultures where they did exist in reality. Free Cities glory holes are different both in that they exist, and are indeed very common; and in that their occupants are almost never present voluntarily.
+
+Glory holes and slave brothels have a symbiotic existence, and any Free Cities slaveholder who owns a brothel full of pampered prostitutes who claims moral ascendancy for not owning an arcade is ignoring realities. In truth, all slave brothels benefit from the existence of arcades. After all, every slave whore in the Free Cities knows that if she does not perform up to her Master's standards, the arcades exist as a way of extracting value from her body. Every slave brothel receives better efforts out of its slaves due to their knowledge that a worse alternative is always available - if not with their current master, then with some other.
+
+&nbsp;&nbsp;&nbsp;&nbsp;-- Lawrence, J. K., and Bolingbroke, D. S., __Trends in Free Cities Culture, 2031__ //Journal of Modern Social Sciences, International Edition, February 2032//
+<<elseif $encyclopedia is "The Purity of the Human Form">>\
+//Twentieth century eugenicists weren't wrong, they just didn't have the tools to be right.//
+&nbsp;&nbsp;&nbsp;&nbsp;-- Anonymous
+
+High quality Free Cities slaves are remarkably healthy. It should be unsurprising that a population of humans selected for beauty, fed perfectly, required to exercise, given modern medical care, and prevented from indulging any non-sexual excess at all, has become quite impressive in this regard. The cultural fallout of this is has been less easy to predict.
+
+Throughout the early part of the 21st century a wide spectra of movements were taking place that have informed the Free Cities ideology of body purism. The left-wing counterculture health movement has found much open ground in a society that allows its adherents to totally control what goes into the bodies of some of its members. On the opposite side of the spectrum, some long-standing reactionary groups have taken this opportunity to experiment with some of their non-racial theories on purity. Finally, many religious or simply moral fundamentalists who believe in some form of purity code now have a captive population to subject to their whims.
+
+Thousands of unintentional experiements on what really makes the ideal human are now under way in the Free Cities, and whatever the balance of humanity may feel about their morality, it is hard to deny that we as a whole stand to benefit from the experimentation.
+
+&nbsp;&nbsp;&nbsp;&nbsp;-- Lawrence, J. K., and Bolingbroke, D. S., __Trends in Free Cities Culture, 2031__ //Journal of Modern Social Sciences, International Edition, February 2032//
+<<elseif $encyclopedia is "A World Built on Implants">>\
+//The earlier a slave gets on advanced growth hormones, the better. After all, good-looking implants are a ratio game. The bigger a girl's natural tits are, the bigger implants she can get without looking ridiculous.//
+&nbsp;&nbsp;&nbsp;&nbsp;-- standard Free Cities surgical advice
+
+One of the most furious ideological divides in the Free Cities is over implants. Most Free Cities arcologies display a mix of slaves with breast and other implants, but some follow the tastes of owners who strongly prefer all-natural slaves, and some fetishize expansionism to the point of near-universal implantantion. This can be a remarkably bitter controversy in places, and should Free Cities culture continue to develop, it is not unlikely that sone day physical violence may take place in the Free Cities between extremists on opposite sides of the implant debate.
+
+In any case, the medical technology of implantation has not advanced hugely since the start of the 21st century. The vast majority of implants are still either water-bag or silicone, with silicone generally preferred for its better, more realistic feel. At the more extreme sizes, a variety of fluid-based designs are used, with polypropylene string implants making a return, and newer, fillable adaptive implants becoming more common.
+
+&nbsp;&nbsp;&nbsp;&nbsp;-- Lawrence, J. K., and Bolingbroke, D. S., __Trends in Free Cities Culture, 2031__ //Journal of Modern Social Sciences, International Edition, February 2032//
+<<elseif $encyclopedia is "Slaves as Stock">>\
+//Here we have a fine piece for the dairy folks
+Fine dairy cow for you here ladies and ge-entlemen
+Who'll give me ten thousand ¤
+Ten thousand ¤ bid, now ten thousand five,
+Now ten thousand five, will you give me eleven?
+Thirty-two years old, nipples the size of silver dollars
+Eleven thousand ¤ bid, eleven, eleven?//
+&nbsp;&nbsp;&nbsp;&nbsp;-- Free Cities auctioneer
+
+At different points in the history of slavery, slaves have been nearly equal to or even in some cases superior to the lowest classes of free citizen, and have been nearly as low as or even lower than the most valuable categories of animal livestock. Which will become the Free Cities norm remains to be seen; there are arcologies that exemplify either approach. A few arcologies apply both standards, and standards in between, all at once.
+
+The present, however, is a time of great supply in the slave market. The social collapse of many societies in the old world and the perpetual conflicts in many areas are producing an immense number of captives for sale, keeping prices at historically low levels. Many slaveowners treat their chattel relatively well, but this comes from motivations other than financial necessity. With no laws requiring it and no economic reason to treat slaves as different from livestock, many citizens of the Free Cities see little reason to make a distinction. Spectactular expressions of this callousness, like the restraint of women for use as milk production devices or the usage of dangerous dosages of growth hormones, become more understandable when one realizes that the Free Cities are refining what was once a settled idea: what it means to be human.
+
+&nbsp;&nbsp;&nbsp;&nbsp;-- Lawrence, J. K., and Bolingbroke, D. S., __Trends in Free Cities Culture, 2031__ //Journal of Modern Social Sciences, International Edition, February 2032//
+<<elseif $encyclopedia is "Slavery and the Physical Ideal">>\
+//Quoth BRODIN:
+All must lift.//
+&nbsp;&nbsp;&nbsp;&nbsp;-- Anonymous
+
+The medical impacts of the widespread reintroduction of slavery are not at all what might have been predicted twenty years ago. Medicine is not our primary focus in this review of Free Cities cultural trends, but a brief look at the striking medical outcomes is critical to understanding some of the social currents at work. By the second half of the twentieth century, the majority of humanity had reached a state of plenty so great that the health dangers of excess were greater than the health dangers of want.
+
+For the first time in modern memory, people - slaves - in the Free Cities are, in large numbers, doing exactly what their doctors recommend. Properly managed slaves eath right, exercise regularly, and do not smoke, drink, or do recreational drugs. These simple but revolutionary changes mean that the more valuable classes of slave are healthier, on average, than any group of human beings has ever been.
+
+Naturally, fetishism, competitiveness, and leisure have intersected to create in the Free Cities a constant escalation of physical one-upsmanship when it comes to the training of slaves. Wonderfully muscled specimens have become very common, with feats of athletic prowess cited alongside sexual accomplishments without any distinction. The arcology owners most devoted to the human form are creating societies of uniform physical perfection unlike anything in human history.
+
+&nbsp;&nbsp;&nbsp;&nbsp;-- Lawrence, J. K., and Bolingbroke, D. S., __Trends in Free Cities Culture, 2031__ //Journal of Modern Social Sciences, International Edition, February 2032//
+<<elseif $encyclopedia is "Faith in the Free Cities">>\
+//I recognize my faults;
+I am always conscious of my sins.
+I have sinned against you, Master and God,
+And done what you consider evil.
+So you are right in judging me;
+You are justified in condemning me.//
+&nbsp;&nbsp;&nbsp;&nbsp;-- Anonymous slave, 2030
+
+There are almost as many approaches to faith in the Free Cities as there are arcologies. For every arcology owner who cynically exploits religion, there is another who truly believes himself to be ordained by God as master of his fellow human beings. Nevertheless, common elements are identifiable. The most notorious arise from literal readings of scriptural passages that reference slavery.
+
+Each of the three major monotheistic religions arose in a time and place where slavery was common. Thus the institution appears in all three of the great monotheistic holy books. It is childishly simple to find all the scriptural support for a reintroduction of slavery even the most illiberal arcology owner could desire in any one of these. This is presumably not what religious conservatives of the late 20th and early 21st centuries intended when advocating scriptural literalism.
+
+&nbsp;&nbsp;&nbsp;&nbsp;-- Lawrence, J. K., and Bolingbroke, D. S., __Trends in Free Cities Culture, 2031__ //Journal of Modern Social Sciences, International Edition, February 2032//
+<<elseif $encyclopedia is "Kidnapped Slaves">>\
+Slavers, from disreputable to noble, visit the Free Cities in droves. Their merchandise is, as a rule, offered as-is and no questions asked. This usually means that their charges have been forcibly kidnapped. These slaves are generally rebellious, often unhealthy, and always cheap.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Slave Schools">>\
+It is not legal to own children in the Free Cities. It is however legal to hold an interest in future ownership of a child once they reach their 18th birthday. The Free Cities host what are referred to as 'orphanages,' but are in fact slave schools. Of course, instruction cannot include sexual training, so it instead focuses on obedience and fitness.
+
+The standard slave school produces merchandise to a strict mold. Their stock is guaranteed to be robustly healthy, at a sleek weight, body modification free, 18 or 19 years of age, very obedient, and 100% virgin. A few schools specialize in slaves with non-standard organs or in modified slaves, but most protect brand identity by confining themselves to natural females.
+
+It has recently become common practice to begin treating such trainees with drugs years before sale. Not all orphanages engage in this questionable practice, usually justified as 'seeing to orphans' medical welfare,' but you will occasionally see fresh slaves sold with breasts and asses unusually well-developed for their age. These are very rare, as the newness of slavery means that few slaves have been so from a young age. Presumably, slaves treated in this way will become more common as the Free Cities mature.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Stables">>\
+At any given time, many hundreds of new slaves are listed for sale in the Free City. Since these slaves have come through a training stable, they will tend to be fairly obedient, reasonably healthy, and have basic sexual skill, but will never be virgins.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Household Liquidations">>\
+It is natural that where there is a demand for slaves who are related to one another, supply should arise.
+
+Suppliers of slaves from the outside world are well aware that paired slaves, whether mothers and daughters or sisters, command a premium. This special merchandise is best found at dealers that specialize in it. After all, the demand is strong enough that only experienced dealers have the skill and equipment to defeat all the tricks suppliers are willing to use to pass slaves off as relatives.
+
+Nature has contrived that the demand for twin slaves should far outstrip the supply. Since slavery is new, a majority of those now enslaved were born free, so this is difficult for slave trainers to address. However, the coming decades should see a great increase in the number of slave twins as breeders improve fertility treatments.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Direct Sales">>\
+On occasion, an established slaveowner will sell a trained and modified slave due to financial need, because he is bored of her, or because he trains unique slaves as a hobby.
+
+Some of the most powerful persons in the Free Cities also maneuver their enemies into selling a favorite slave as a way of bloodlessly showing dominance. The truly powerful occasionally feel the need to show that they can obtain any slave, at any time, regardless of her owners' wishes.
+
+-- Lawrence, W. G., //Guide to Modern Slavery, 2031 Edition//
+<<elseif $encyclopedia is "Credits">>\
+__''Credits''__
+
+This game was created by a person with no coding experience whatsoever. If I can create a playable h-game, so can you.
+
+__I do not give credit without explicit permission to do so.__ If you have contributed content and are not credited, please email me via the blog so I can give credit where it is due.
+
+''Boney M'' of JoNT /hgg/ mod fame has been invaluable, combing tirelessly through the code to find and report my imbecilities.
+&nbsp;&nbsp;&nbsp;&nbsp;Coded an improvement to the relative recruitment system.
+&nbsp;&nbsp;&nbsp;&nbsp;Wrote and coded the Ancient Egyptian Revivalism acquisition event.
+&nbsp;&nbsp;&nbsp;&nbsp;Wrote and coded a prestige event for ex-abolitionists.
+&nbsp;&nbsp;&nbsp;&nbsp;Coded a training event for slaves who hate blowjobs.
+&nbsp;&nbsp;&nbsp;&nbsp;Wrote and coded several slave introduction options.
+''DrPill'' has offered great feedback, playtested exhaustively, and more.
+&nbsp;&nbsp;&nbsp;&nbsp;Wrote a slave introduction option.
+''bob22smith2000'' has made major contributions, not limited to close review of thousands of lines of code.
+&nbsp;&nbsp;&nbsp;&nbsp;Improved all facility and most assignment code for v0.5.11, an immense task.
+
+Thanks are due to all the anons that submitted slaves for inclusion in the pre-owned database and offered content ideas. Many anonymous playtesters also gave crucial feedback and bug reports. May you all ride straight to the gates of Valhalla, shiny and chrome.
+<<else>>\
+Error: bad title.
+<</if>>\
+
+__Encyclopedia FC__
+Gameplay: <<click "How to Play">><<set $encyclopedia to "How to Play">><<goto "Encyclopedia">><</click>> | <<click "Keyboard Shortcuts">><<set $encyclopedia to "Keyboard Shortcuts">><<goto "Encyclopedia">><</click>> | <<click "Tips and Tricks">><<set $encyclopedia to "Tips and Tricks">><<goto "Encyclopedia">><</click>> | <<click "Assignments">><<set $encyclopedia to "Assignments">><<goto "Encyclopedia">><</click>> | <<click "Leadership Positions">><<set $encyclopedia to "Leadership Positions">><<goto "Encyclopedia">><</click>> | <<click "Drugs and Their Effects">><<set $encyclopedia to "Drugs and Their Effects">><<goto "Encyclopedia">><</click>> | <<click "From Rebellious to Devoted">><<set $encyclopedia to "From Rebellious to Devoted">><<goto "Encyclopedia">><</click>> | <<click "Random Events">><<set $encyclopedia to "Random Events">><<goto "Encyclopedia">><</click>> | <<click "Enslaving People">><<set $encyclopedia to "Enslaving People">><<goto "Encyclopedia">><</click>> | <<click "Arcologies and Reputation">><<set $encyclopedia to "Arcologies and Reputation">><<goto "Encyclopedia">><</click>> | <<click "Pre-Owned Slaves">><<set $encyclopedia to "Pre-Owned Slaves">><<goto "Encyclopedia">><</click>> | <<click "The Corporation">><<set $encyclopedia to "The Corporation">><<goto "Encyclopedia">><</click>> | <<click "Costs Summary">><<set $encyclopedia to "Costs Summary">><<goto "Encyclopedia">><</click>>
+The X-Series Arcology: <<click "Personal Assistant">><<set $encyclopedia to "Personal Assistant">><<goto "Encyclopedia">><</click>> | <<click "Security Drones">><<set $encyclopedia to "Security Drones">><<goto "Encyclopedia">><</click>> | <<click "Water Filtration">><<set $encyclopedia to "Water Filtration">><<goto "Encyclopedia">><</click>> | <<click "Slave Nutrition">><<set $encyclopedia to "Slave Nutrition">><<goto "Encyclopedia">><</click>> | <<click "The Remote Surgery">><<set $encyclopedia to "The Remote Surgery">><<goto "Encyclopedia">><</click>> | <<click "The Pharmaceutical Fab.">><<set $encyclopedia to "The Pharmaceutical Fab.">><<goto "Encyclopedia">><</click>> | <<click "The Studio">><<set $encyclopedia to "The Studio">><<goto "Encyclopedia">><</click>> | <<click "The Auto Salon">><<set $encyclopedia to "The Auto Salon">><<goto "Encyclopedia">><</click>>
+The Free Cities today: <<click "Slave Couture">><<set $encyclopedia to "Slave Couture">><<goto "Encyclopedia">><</click>> | <<click "Nymphomania">><<set $encyclopedia to "Nymphomania">><<goto "Encyclopedia">><</click>> | <<click "Gender">><<set $encyclopedia to "Gender">><<goto "Encyclopedia">><</click>> | <<click "The Head Girl">><<set $encyclopedia to "The Head Girl">><<goto "Encyclopedia">><</click>> | <<click "Madams">><<set $encyclopedia to "Madams">><<goto "Encyclopedia">><</click>> | <<click "Concierges">><<set $encyclopedia to "Concierges">><<goto "Encyclopedia">><</click>> | <<click "Milkmaids">><<set $encyclopedia to "Milkmaids">><<goto "Encyclopedia">><</click>> | <<click "Collectrices">><<set $encyclopedia to "Collectrices">><<goto "Encyclopedia">><</click>> | <<click "Stewardesses">><<set $encyclopedia to "Stewardesses">><<goto "Encyclopedia">><</click>> | <<click "Slave Bodyguards">><<set $encyclopedia to "Slave Bodyguards">><<goto "Encyclopedia">><</click>> | <<click "Slave Dairy">><<set $encyclopedia to "Slave Dairy">><<goto "Encyclopedia">><</click>> | <<click "The Ejaculate Market">><<set $encyclopedia to "The Ejaculate Market">><<goto "Encyclopedia">><</click>> | <<click "Modern Anal">><<set $encyclopedia to "Modern Anal">><<goto "Encyclopedia">><</click>> | <<click "Disease in the Free Cities">><<set $encyclopedia to "Disease in the Free Cities">><<goto "Encyclopedia">><</click>> | <<click "Free Cities Justice">><<set $encyclopedia to "Free Cities Justice">><<goto "Encyclopedia">><</click>> | <<click "Slave Marriage">><<set $encyclopedia to "Slave Marriage">><<goto "Encyclopedia">><</click>> | <<click "Arcades">><<set $encyclopedia to "Arcades">><<goto "Encyclopedia">><</click>> | <<click "Fuckdolls">><<set $encyclopedia to "Fuckdolls">><<goto "Encyclopedia">><</click>>
+Free Cities culture tomorrow: <<click "The Future of Society">><<set $encyclopedia to "The Future of Society">><<goto "Encyclopedia">><</click>> | <<click "Choosing a Society Model">><<set $encyclopedia to "Choosing a Society Model">><<goto "Encyclopedia">><</click>> | <<click "The New Rome">><<set $encyclopedia to "The New Rome">><<goto "Encyclopedia">><</click>> | <<click "Naked, Barefoot, and Pregnant">><<set $encyclopedia to "Naked, Barefoot, and Pregnant">><<goto "Encyclopedia">><</click>> | <<click "The Top">><<set $encyclopedia to "The Top">><<goto "Encyclopedia">><</click>> | <<click "The Bottom">><<set $encyclopedia to "The Bottom">><<goto "Encyclopedia">><</click>> | <<click "The Purity of the Human Form">><<set $encyclopedia to "The Purity of the Human Form">><<goto "Encyclopedia">><</click>> | <<click "A World Built on Implants">><<set $encyclopedia to "A World Built on Implants">><<goto "Encyclopedia">><</click>> | <<click "Slaves as Stock">><<set $encyclopedia to "Slaves as Stock">><<goto "Encyclopedia">><</click>> | <<click "Slavery and the Physical Ideal">><<set $encyclopedia to "Slavery and the Physical Ideal">><<goto "Encyclopedia">><</click>> | <<click "Faith in the Free Cities">><<set $encyclopedia to "Faith in the Free Cities">><<goto "Encyclopedia">><</click>>
+Buying slaves: <<click "Kidnapped Slaves">><<set $encyclopedia to "Kidnapped Slaves">><<goto "Encyclopedia">><</click>> | <<click "Slave Schools">><<set $encyclopedia to "Slave Schools">><<goto "Encyclopedia">><</click>> | <<click "Stables">><<set $encyclopedia to "Stables">><<goto "Encyclopedia">><</click>> | <<click "Household Liquidations">><<set $encyclopedia to "Household Liquidations">><<goto "Encyclopedia">><</click>> | <<click "Direct Sales">><<set $encyclopedia to "Direct Sales">><<goto "Encyclopedia">><</click>>
+
+<<click "Credits">><<set $encyclopedia to "Credits">><<goto "Encyclopedia">><</click>>

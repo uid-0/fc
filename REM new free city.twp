@@ -1,0 +1,14 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+
+<<set $slaveCostFactor += 0.3>>
+
+<</nobr>>\
+\
+//Sir, I have a flagged a news item that may be of business interest.//
+
+New Free Cities arise unpredictably. They require either carving out a slice of the old world, emancipating it from whichever inattentive or corrupt country previously owned the land, or reclaiming new land from barren or uninhabitable areas, efforts which are often kept secret. The unpredictable happened today; the world has a new Free City. As usual, immigration rights are being offered cheaply to deserving persons. Many of the remaining rich and talented of the old world are staking claims in the new city, and they'll be buying slaves when they get to their new home. It's a sellers' market out there; projections show the price of slaves rising as much as thirty percent in the short term.
+
+There will be no immediate impact on you or your slaves, but the coming weeks will be a great time to sell stock, and a bad time to buy. @@color:yellow;The market price of slaves has significantly increased.@@

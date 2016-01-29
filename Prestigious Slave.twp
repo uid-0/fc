@@ -1,0 +1,691 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+<<set $returnTo to "Main">>\
+<<set $encyclopedia to "Slave Schools">>\
+\
+You check to see if any especially prestigious slaves are on auction. <<if $prestigeAuctioned is 1>>There are none available right now, but there probably will be next week.<<else>>
+
+<<nobr>>
+<<set $prestigeAuctioned to 1>>
+<<if $seeDicks gt 1>><<set $seed to random(100,150)>><<elseif $seeDicks gt 0>><<set $seed to random(1,150)>><<else>><<set $seed to random(1,100)>><</if>>
+
+<<if $seed lte 10>>
+  <<display "Generate XX Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 1>>
+  <<set $activeSlave.prestigeDesc to "She was once a noted adult film star, and was sold into slavery by her unscrupulous managers.">>
+  <<set $activeSlave.career to "a porn star">>
+  <<set $activeSlave.boobsImplant += random(4,6)*200>>
+  <<set $activeSlave.boobs += $activeSlave.boobsImplant>>
+  <<set $activeSlave.nipples to 1>>
+  <<set $activeSlave.areolae to 1>>
+  <<set $activeSlave.butt += 1>>
+  <<set $activeSlave.buttImplant += 1>>
+  <<set $activeSlave.lips += 1>>
+  <<set $activeSlave.lipsImplant += 1>>
+  <<set $activeSlave.face += 1>>
+  <<set $activeSlave.faceImplant += 1>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(-4,4)>>
+  <<set $activeSlave.anus to 2>>
+  <<set $activeSlave.vagina to 2>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.clitPiercing to 1>>
+  <<set $activeSlave.tonguePiercing to 1>>
+  <<set $activeSlave.nipplesPiercing to 1>>
+  <<set $activeSlave.nosePiercing to 1>>
+  <<set $activeSlave.earPiercing to 1>>
+  <<set $activeSlave.vaginalSkill to 3>>
+  <<set $activeSlave.oralSkill to 3>>
+  <<set $activeSlave.analSkill to 3>>
+  <<set $activeSlave.whoreSkill to 1>>
+  <<set $activeSlave.entertainSkill to 3>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(24,40)>>
+  <<set $activeSlave.sexualQuirk to either("hates men", "hates women")>>
+  <<set $activeSlave.behavioralQuirk to either("arrogant", "bitchy", "anorexic")>>
+  <<set $activeSlave.fetish to "none">>
+  <<set $activeSlave.fetishDiscovered to 1>>
+  <<set $activeSlave.customDesc to "She has seen and done almost everything sexually possible, on camera.">>
+
+<<elseif $seed lte 20>>
+  <<display "Generate XX Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 1>>
+  <<set $activeSlave.prestigeDesc to "She was once the young trophy wife of a powerful man in the old world, but he sold her into slavery in revenge for her infidelity.">>
+  <<set $activeSlave.career to "a trophy wife">>
+  <<set $activeSlave.boobsImplant += random(1,3)*200>>
+  <<set $activeSlave.boobs += $activeSlave.boobsImplant>>
+  <<set $activeSlave.butt += 1>>
+  <<set $activeSlave.buttImplant += 1>>
+  <<set $activeSlave.lips += 1>>
+  <<set $activeSlave.lipsImplant += 1>>
+  <<set $activeSlave.face += 1>>
+  <<set $activeSlave.faceImplant += 1>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(6,8)>>
+  <<set $activeSlave.anus to 1>>
+  <<set $activeSlave.vagina to 1>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.clitPiercing to 1>>
+  <<set $activeSlave.nipplesPiercing to 1>>
+  <<set $activeSlave.earPiercing to 1>>
+  <<set $activeSlave.vaginalSkill to 2>>
+  <<set $activeSlave.oralSkill to 2>>
+  <<set $activeSlave.analSkill to 1>>
+  <<set $activeSlave.whoreSkill to 2>>
+  <<set $activeSlave.entertainSkill to 1>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(19,22)>>
+  <<set $activeSlave.sexualQuirk to either("hates men")>>
+  <<set $activeSlave.behavioralQuirk to either("arrogant", "bitchy", "anorexic")>>
+  <<set $activeSlave.fetish to "none">>
+  <<set $activeSlave.fetishDiscovered to 1>>
+  <<set $activeSlave.customTat to "Her ex-husband's name is prettily tattooed on her left arm, but a black line has been subsequently tattooed across it.">>
+
+<<elseif $seed lte 30>>
+  <<display "Generate XX Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 1>>
+  <<set $activeSlave.prestigeDesc to "She was once expected to become a major sports star, but flamed out due to injury and was recently enslaved due to debt.">>
+  <<set $activeSlave.career to "an athlete">>
+  <<set $activeSlave.intelligence to random(-2,-1)>>
+  <<set $activeSlave.intelligenceImplant to 0>>
+  <<set $activeSlave.muscles to 2>>
+  <<set $activeSlave.heels to 1>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(8,9)>>
+  <<set $activeSlave.anus to 1>>
+  <<set $activeSlave.vagina to 1>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.earPiercing to 1>>
+  <<set $activeSlave.eyebrowPiercing to random(0,1)>>
+  <<set $activeSlave.nosePiercing to random(0,1)>>
+  <<set $activeSlave.navelPiercing to random(0,1)>>
+  <<set $activeSlave.vaginalSkill to 1>>
+  <<set $activeSlave.oralSkill to 1>>
+  <<set $activeSlave.analSkill to 0>>
+  <<set $activeSlave.whoreSkill to 0>>
+  <<set $activeSlave.entertainSkill to 0>>
+  <<set $activeSlave.combatSkill to 1>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(21,25)>>
+  <<set $activeSlave.sexualQuirk to either("hates oral", "hates anal", "hates penetration", "hates men", "hates women", "hates women")>>
+  <<set $activeSlave.behavioralQuirk to "arrogant">>
+  <<set $activeSlave.customDesc to "She's not particularly bright, and enjoys solving problems with physical force.">>
+
+<<elseif $seed lte 40>>
+  <<display "Generate XX Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 1>>
+  <<set $activeSlave.prestigeDesc to "She was once a rising young model, but apparently someone decided to take a shortcut in cashing in on her great beauty.">>
+  <<set $activeSlave.career to "a model">>
+  <<set $activeSlave.boobs to random(2,4)*100>>
+  <<set $activeSlave.butt to random(1,3)>>
+  <<set $activeSlave.lips to random(0,1)>>
+  <<set $activeSlave.face to 2>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(-2,2)>>
+  <<set $activeSlave.anus to 1>>
+  <<set $activeSlave.vagina to 1>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.earPiercing to 1>>
+  <<set $activeSlave.vaginalSkill to 1>>
+  <<set $activeSlave.oralSkill to 1>>
+  <<set $activeSlave.analSkill to 0>>
+  <<set $activeSlave.whoreSkill to 1>>
+  <<set $activeSlave.entertainSkill to 2>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(18,21)>>
+  <<set $activeSlave.sexualQuirk to either("hates men", "hates men", "hates women")>>
+  <<set $activeSlave.behavioralQuirk to either("arrogant", "anorexic")>>
+  <<set $activeSlave.customDesc to "She moves with the practiced grace of someone who unconsciously still pictures herself on the runway.">>
+
+<<elseif $seed lte 50>>
+  <<display "Generate XX Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 1>>
+  <<set $activeSlave.prestigeDesc to "She is a natural albino, and was quickly enslaved due to the great demand for physically unusual specimens.">>
+  <<set $activeSlave.career to 0>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(4,6)>>
+  <<set $activeSlave.hcolor to "white">>
+  <<set $activeSlave.pubicHColor to "white">>
+  <<set $activeSlave.eyes to "pale">>
+  <<set $activeSlave.skin to "extremely pale">>
+  <<set $activeSlave.age to 18>>
+  <<set $activeSlave.customDesc to "Her eyes are unsettling; though her irises are a pale grey color, in some lights the whole eye takes on a red cast.">>
+
+<<elseif $seed lte 60>>
+  <<display "Generate XX Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 2>>
+  <<set $activeSlave.prestigeDesc to "She is one of the longest legally-enslaved persons in the world, having been a slave for 15 years. She has spent almost all that time working as a slave prostitute, and has been heavily modified to keep her productive.">>
+  <<set $activeSlave.career to 0>>
+  <<set $activeSlave.boobsImplant += random(10,15)*200>>
+  <<set $activeSlave.boobs += $activeSlave.boobsImplant>>
+  <<set $activeSlave.nipples to 1>>
+  <<set $activeSlave.areolae to 2>>
+  <<set $activeSlave.butt += 4>>
+  <<set $activeSlave.buttImplant += 4>>
+  <<set $activeSlave.lips to 3>>
+  <<set $activeSlave.lipsImplant to 3>>
+  <<set $activeSlave.face to 2>>
+  <<set $activeSlave.faceImplant to 2>>
+  <<set $activeSlave.devotion to random(5,9)>>
+  <<set $activeSlave.trust to random(0,3)>>
+  <<set $activeSlave.health to random(2,4)>>
+  <<set $activeSlave.anus to 3>>
+  <<set $activeSlave.vagina to 3>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.clitPiercing to 2>>
+  <<set $activeSlave.tonguePiercing to 2>>
+  <<set $activeSlave.nipplesPiercing to 2>>
+  <<set $activeSlave.nosePiercing to 2>>
+  <<set $activeSlave.lipsPiercing to 2>>
+  <<set $activeSlave.vaginaPiercing to 2>>
+  <<set $activeSlave.anusPiercing to 2>>
+  <<set $activeSlave.navelPiercing to 2>>
+  <<set $activeSlave.eyebrowPiercing to 2>>
+  <<set $activeSlave.earPiercing to 2>>
+  <<set $activeSlave.vaginalSkill to 3>>
+  <<set $activeSlave.oralSkill to 3>>
+  <<set $activeSlave.analSkill to 3>>
+  <<set $activeSlave.whoreSkill to 3>>
+  <<set $activeSlave.entertainSkill to 0>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(33,35)>>
+  <<set $activeSlave.sexualQuirk to "none">>
+  <<set $activeSlave.behavioralQuirk to "none">>
+  <<set $activeSlave.fetish to "nympho">>
+  <<set $activeSlave.fetishDiscovered to 1>>
+  <<set $activeSlave.customDesc to "She has almost no inhibitions left at all.">>
+  <<set $activeSlave.customTat to "'50,000 Served!' is tattooed across her back.">>
+
+<<elseif $seed lte 70>>
+  <<display "Generate XX Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 2>>
+  <<set $activeSlave.prestigeDesc to "She was once a B-list actress, but fell on hard times and drug addiction and was recently enslaved due to debt.">>
+  <<set $activeSlave.career to "an actress">>
+  <<set $activeSlave.boobs += 200>>
+  <<set $activeSlave.boobsImplant += 200>>
+  <<set $activeSlave.butt += 1>>
+  <<set $activeSlave.buttImplant += 1>>
+  <<set $activeSlave.lips += 1>>
+  <<set $activeSlave.lipsImplant += 1>>
+  <<set $activeSlave.face to 2>>
+  <<set $activeSlave.faceImplant += 1>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(-8,-4)>>
+  <<set $activeSlave.anus to 1>>
+  <<set $activeSlave.vagina to 1>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.earPiercing to 1>>
+  <<set $activeSlave.vaginalSkill to 1>>
+  <<set $activeSlave.oralSkill to 1>>
+  <<set $activeSlave.analSkill to 1>>
+  <<set $activeSlave.whoreSkill to 0>>
+  <<set $activeSlave.entertainSkill to 3>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(24,28)>>
+  <<set $activeSlave.addict to 20>>
+  <<set $activeSlave.sexualQuirk to either("hates oral", "hates anal", "hates penetration", "hates men", "hates women", "hates women")>>
+  <<set $activeSlave.behavioralQuirk to either("arrogant", "bitchy", "quirky", "anorexic")>>
+  <<set $activeSlave.customDesc to "She sometimes forgets herself and acts as though she were still a coming celebrity.">>
+
+<<elseif $seed lte 80>>
+  <<display "Generate XX Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 2>>
+  <<set $activeSlave.prestigeDesc to "She was once a rising old world politician, but was forced to flee from the increasingly dangerous politics common in a stressed world, and was subsequently enslaved.">>
+  <<set $activeSlave.career to "a politician">>
+  <<set $activeSlave.boobs += 100>>
+  <<set $activeSlave.butt += 1>>
+  <<set $activeSlave.face += 1>>
+  <<set $activeSlave.faceImplant += 1>>
+  <<set $activeSlave.height += 1>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to 6,8>>
+  <<set $activeSlave.anus to 0>>
+  <<set $activeSlave.vagina to 1>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.vaginalSkill to 1>>
+  <<set $activeSlave.oralSkill to 0>>
+  <<set $activeSlave.analSkill to 0>>
+  <<set $activeSlave.whoreSkill to 0>>
+  <<set $activeSlave.entertainSkill to 2>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(38,44)>>
+  <<set $activeSlave.sexualQuirk to either("hates men")>>
+  <<set $activeSlave.behavioralQuirk to either("arrogant", "bitchy")>>
+  <<set $activeSlave.customTat to "A small, twenty-year-old tattoo of the crest of an old world sorority is visible on her left shoulder blade.">>
+  <<set $activeSlave.customDesc to "Her face is still recognizable as that which once graced a million campaign posters.">>
+
+<<elseif $seed lte 90>>
+  <<display "Generate XX Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 3>>
+  <<set $activeSlave.prestigeDesc to "She was born a daughter of royalty, but her family was overthrown when she was still young. She is a graduate cum laude of the world's most renowned slave school.">>
+  <<set $activeSlave.career to 0>>
+  <<set $activeSlave.boobs += 100>>
+  <<set $activeSlave.butt += 1>>
+  <<set $activeSlave.lips += 1>>
+  <<set $activeSlave.face += 1>>
+  <<set $activeSlave.height += 1>>
+  <<set $activeSlave.devotion to random(15,18)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to 10>>
+  <<set $activeSlave.anus to 0>>
+  <<set $activeSlave.vagina to 0>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.vaginalSkill to 0>>
+  <<set $activeSlave.oralSkill to 3>>
+  <<set $activeSlave.analSkill to 0>>
+  <<set $activeSlave.whoreSkill to 1>>
+  <<set $activeSlave.entertainSkill to 2>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to 18>>
+  <<set $activeSlave.sexualQuirk to "none">>
+  <<set $activeSlave.behavioralQuirk to "none">>
+  <<set $activeSlave.customTat to "Her family crest is tattooed on her cheek.">>
+  <<set $activeSlave.customDesc to "Her recognizable face marks her as a descendant of an overthrown royal family.">>
+
+<<elseif $seed lte 100>>
+  <<display "Generate XX Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 3>>
+  <<set $activeSlave.prestigeDesc to "She was once an arcology owner like you, but lost a Free Cities power struggle and was enslaved. An object lesson in the need to stay vigilant.">>
+  <<set $activeSlave.career to "an arcology owner">>
+  <<set $activeSlave.boobsImplant += random(20,40)*200>>
+  <<set $activeSlave.boobs += $activeSlave.boobsImplant>>
+  <<set $activeSlave.boobs += 1000>>
+  <<set $activeSlave.nipples to 2>>
+  <<set $activeSlave.areolae to 2>>
+  <<set $activeSlave.buttImplant +=  random(6,8)>>
+  <<set $activeSlave.butt += $activeSlave.buttImplant>>
+  <<set $activeSlave.heels to 1>>
+  <<set $activeSlave.mute to 1>>
+  <<set $activeSlave.lips to 3>>
+  <<set $activeSlave.lipsImplant to 3>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(-8,-6)>>
+  <<set $activeSlave.anus to 3>>
+  <<set $activeSlave.vagina to 3>>
+  <<set $activeSlave.weight to -1>>
+	<<set $activeSlave.nipplesPiercing to 2>>
+	<<set $activeSlave.clitPiercing to 2>>
+	<<set $activeSlave.vaginaPiercing to 2>>
+	<<set $activeSlave.dickPiercing to 2>>
+	<<set $activeSlave.anusPiercing to 2>>
+	<<set $activeSlave.lipsPiercing to 2>>
+	<<set $activeSlave.tonguePiercing to 2>>
+	<<set $activeSlave.earPiercing to 2>>
+	<<set $activeSlave.nosePiercing to 2>>
+	<<set $activeSlave.eyebrowPiercing to 2>>
+	<<set $activeSlave.navelPiercing to 2>>
+	<<set $activeSlave.boobsTat to "demeaning inscriptions">>
+	<<set $activeSlave.buttTat to "demeaning inscriptions">>
+	<<set $activeSlave.vaginaTat to "demeaning inscriptions">>
+	<<set $activeSlave.dickTat to "demeaning inscriptions">>
+	<<set $activeSlave.lipsTat to "demeaning inscriptions">>
+	<<set $activeSlave.anusTat to "demeaning inscriptions">>
+	<<set $activeSlave.shouldersTat to "demeaning inscriptions">>
+	<<set $activeSlave.armsTat to "demeaning inscriptions">>
+	<<set $activeSlave.legsTat to "demeaning inscriptions">>
+	<<set $activeSlave.stampTat to "demeaning inscriptions">>
+  <<set $activeSlave.vaginalSkill to 1>>
+  <<set $activeSlave.oralSkill to 1>>
+  <<set $activeSlave.analSkill to 1>>
+  <<set $activeSlave.whoreSkill to 0>>
+  <<set $activeSlave.entertainSkill to 0>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.hlength to "shaved bald">>
+  <<set $activeSlave.age to random(28,44)>>
+  <<set $activeSlave.sexualQuirk to either("hates men")>>
+  <<set $activeSlave.behavioralQuirk to either("quirky")>>
+  <<set $activeSlave.customDesc to "Her back is covered in a fine network of hairline scars, as though she's been repeatedly flogged bloody, healed with curatives, and then flogged again.">>
+  <<set $activeSlave.customTat to "'ARCOLOGY OWNER' is tattooed across her forehead.">>
+
+<<elseif $seed lte 105>>
+  <<display "Generate XY Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 1>>
+  <<set $activeSlave.prestigeDesc to "She was once a noted adult film star, and was sold into slavery by her unscrupulous managers.">>
+  <<set $activeSlave.career to "a porn star">>
+  <<set $activeSlave.boobsImplant += random(4,6)*200>>
+  <<set $activeSlave.boobs += $activeSlave.boobsImplant>>
+  <<set $activeSlave.nipples to 1>>
+  <<set $activeSlave.areolae to 1>>
+  <<set $activeSlave.butt += 1>>
+  <<set $activeSlave.buttImplant += 1>>
+  <<set $activeSlave.lips += 1>>
+  <<set $activeSlave.lipsImplant += 1>>
+  <<set $activeSlave.face += 1>>
+  <<set $activeSlave.faceImplant += 1>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(-4,4)>>
+  <<set $activeSlave.anus to 3>>
+  <<set $activeSlave.dick to 5>>
+  <<set $activeSlave.balls to 5>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.clitPiercing to 1>>
+  <<set $activeSlave.tonguePiercing to 1>>
+  <<set $activeSlave.nipplesPiercing to 1>>
+  <<set $activeSlave.nosePiercing to 1>>
+  <<set $activeSlave.earPiercing to 1>>
+  <<set $activeSlave.oralSkill to 3>>
+  <<set $activeSlave.analSkill to 3>>
+  <<set $activeSlave.whoreSkill to 1>>
+  <<set $activeSlave.entertainSkill to 3>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(24,40)>>
+  <<set $activeSlave.sexualQuirk to either("hates men", "hates women")>>
+  <<set $activeSlave.behavioralQuirk to either("arrogant", "bitchy", "anorexic")>>
+  <<set $activeSlave.fetish to "none">>
+  <<set $activeSlave.fetishDiscovered to 1>>
+  <<set $activeSlave.customDesc to "She has seen and done almost everything sexually possible, on camera.">>
+
+<<elseif $seed lte 110>>
+  <<display "Generate XY Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 1>>
+  <<set $activeSlave.prestigeDesc to "She was once the young trophy husband of a powerful woman in the old world, but she sold her into slavery in revenge for her infidelities.">>
+  <<set $activeSlave.career to "a trophy spouse">>
+  <<set $activeSlave.face += 1>>
+  <<set $activeSlave.faceImplant += 1>>
+  <<set $activeSlave.muscles to random(1,3)>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(6,8)>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.clitPiercing to 1>>
+  <<set $activeSlave.oralSkill to 1>>
+  <<set $activeSlave.analSkill to 0>>
+  <<set $activeSlave.whoreSkill to 1>>
+  <<set $activeSlave.entertainSkill to 1>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(19,22)>>
+  <<set $activeSlave.sexualQuirk to either("hates men")>>
+  <<set $activeSlave.behavioralQuirk to either("arrogant", "bitchy")>>
+  <<set $activeSlave.fetish to "none">>
+  <<set $activeSlave.fetishDiscovered to 1>>
+  <<set $activeSlave.customTat to "Her ex-wife's name is prettily tattooed on her left arm, but a black line has been subsequently tattooed across it.">>
+
+<<elseif $seed lte 115>>
+  <<display "Generate XY Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 1>>
+  <<set $activeSlave.prestigeDesc to "She was once expected to become a major sports star, but flamed out due to injury and was recently enslaved due to debt.">>
+  <<set $activeSlave.career to "an athlete">>
+  <<set $activeSlave.intelligence to random(-2,-1)>>
+  <<set $activeSlave.intelligenceImplant to 0>>
+  <<set $activeSlave.muscles to 2>>
+  <<set $activeSlave.heels to 1>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(8,9)>>
+  <<set $activeSlave.anus to 1>>
+  <<set $activeSlave.dick to random(3,5)>>
+  <<set $activeSlave.balls to random(3,5)>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.oralSkill to 1>>
+  <<set $activeSlave.analSkill to 0>>
+  <<set $activeSlave.whoreSkill to 0>>
+  <<set $activeSlave.entertainSkill to 0>>
+  <<set $activeSlave.combatSkill to 1>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(21,25)>>
+  <<set $activeSlave.sexualQuirk to either("hates oral", "hates anal", "hates penetration", "hates men")>>
+  <<set $activeSlave.behavioralQuirk to "arrogant">>
+  <<set $activeSlave.customDesc to "She's not particularly bright, and enjoys solving problems with physical force.">>
+
+<<elseif $seed lte 120>>
+  <<display "Generate XY Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 1>>
+  <<set $activeSlave.prestigeDesc to "She was once a rising young model, but apparently someone decided to take a shortcut in cashing in on her great beauty.">>
+  <<set $activeSlave.career to "a model">>
+  <<set $activeSlave.boobs to random(1,3)*100>>
+  <<set $activeSlave.butt to random(1,2)>>
+  <<set $activeSlave.muscles to 1>>
+  <<set $activeSlave.lips to random(0,1)>>
+  <<set $activeSlave.face to 2>>
+  <<set $activeSlave.faceImplant to random(1,2)>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(-2,2)>>
+  <<set $activeSlave.anus to 2>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.earPiercing to 1>>
+  <<set $activeSlave.oralSkill to 3>>
+  <<set $activeSlave.analSkill to 0>>
+  <<set $activeSlave.whoreSkill to 1>>
+  <<set $activeSlave.entertainSkill to 2>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(18,21)>>
+  <<set $activeSlave.sexualQuirk to either("hates women")>>
+  <<set $activeSlave.behavioralQuirk to either("arrogant", "anorexic")>>
+  <<set $activeSlave.customDesc to "She moves with the practiced grace of someone who unconsciously still pictures herself on the runway.">>
+
+<<elseif $seed lte 125>>
+  <<display "Generate XY Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 1>>
+  <<set $activeSlave.prestigeDesc to "She is a natural albino, and was quickly enslaved due to the great demand for physically unusual specimens.">>
+  <<set $activeSlave.career to 0>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(4,6)>>
+  <<set $activeSlave.hcolor to "white">>
+  <<set $activeSlave.pubicHColor to "white">>
+  <<set $activeSlave.eyes to "pale">>
+  <<set $activeSlave.skin to "extremely pale">>
+  <<set $activeSlave.age to 18>>
+  <<set $activeSlave.customDesc to "Her eyes are unsettling; though her irises are a pale grey color, in some lights the whole eye takes on a red cast.">>
+
+<<elseif $seed lte 130>>
+  <<display "Generate XY Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 2>>
+  <<set $activeSlave.prestigeDesc to "She is one of the longest legally-enslaved persons in the world, having been a slave for 15 years. She has spent almost all that time working as a slave prostitute, and has been heavily modified to keep her productive.">>
+  <<set $activeSlave.career to 0>>
+  <<set $activeSlave.boobsImplant += random(10,15)*200>>
+  <<set $activeSlave.boobs += $activeSlave.boobsImplant>>
+  <<set $activeSlave.nipples to 1>>
+  <<set $activeSlave.areolae to 2>>
+  <<set $activeSlave.butt += 4>>
+  <<set $activeSlave.buttImplant += 4>>
+  <<set $activeSlave.lips to 2>>
+  <<set $activeSlave.lipsImplant to 2>>
+  <<set $activeSlave.face to 2>>
+  <<set $activeSlave.faceImplant to 2>>
+  <<set $activeSlave.devotion to random(5,9)>>
+  <<set $activeSlave.trust to random(0,3)>>
+  <<set $activeSlave.health to random(2,4)>>
+  <<set $activeSlave.anus to 3>>
+  <<set $activeSlave.dick to 1>>
+  <<set $activeSlave.balls to 0>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.clitPiercing to 2>>
+  <<set $activeSlave.tonguePiercing to 2>>
+  <<set $activeSlave.nipplesPiercing to 2>>
+  <<set $activeSlave.nosePiercing to 2>>
+  <<set $activeSlave.lipsPiercing to 2>>
+  <<set $activeSlave.vaginaPiercing to 2>>
+  <<set $activeSlave.anusPiercing to 2>>
+  <<set $activeSlave.navelPiercing to 2>>
+  <<set $activeSlave.eyebrowPiercing to 2>>
+  <<set $activeSlave.earPiercing to 2>>
+  <<set $activeSlave.oralSkill to 3>>
+  <<set $activeSlave.analSkill to 3>>
+  <<set $activeSlave.whoreSkill to 3>>
+  <<set $activeSlave.entertainSkill to 0>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(33,35)>>
+  <<set $activeSlave.sexualQuirk to "none">>
+  <<set $activeSlave.behavioralQuirk to "none">>
+  <<set $activeSlave.fetish to "nympho">>
+  <<set $activeSlave.fetishDiscovered to 1>>
+  <<set $activeSlave.customDesc to "She has almost no inhibitions left at all.">>
+  <<set $activeSlave.customTat to "'50,000 Served!' is tattooed across her back.">>
+
+<<elseif $seed lte 135>>
+  <<display "Generate XY Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 2>>
+  <<set $activeSlave.prestigeDesc to "She was once a B-list actress, but fell on hard times and drug addiction and was recently enslaved due to debt.">>
+  <<set $activeSlave.career to "a actress">>
+  <<set $activeSlave.boobs += 200>>
+  <<set $activeSlave.boobsImplant += 200>>
+  <<set $activeSlave.butt += 1>>
+  <<set $activeSlave.buttImplant += 1>>
+  <<set $activeSlave.lips += 1>>
+  <<set $activeSlave.lipsImplant += 1>>
+  <<set $activeSlave.face to 2>>
+  <<set $activeSlave.faceImplant += 1>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(-8,-4)>>
+  <<set $activeSlave.anus to 1>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.earPiercing to 1>>
+  <<set $activeSlave.oralSkill to 1>>
+  <<set $activeSlave.analSkill to 1>>
+  <<set $activeSlave.whoreSkill to 0>>
+  <<set $activeSlave.entertainSkill to 3>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to random(24,28)>>
+  <<set $activeSlave.addict to 20>>
+  <<set $activeSlave.sexualQuirk to either("hates oral", "hates anal", "hates penetration", "hates men", "hates women", "hates women")>>
+  <<set $activeSlave.behavioralQuirk to either("arrogant", "bitchy", "quirky", "anorexic")>>
+  <<set $activeSlave.customDesc to "She sometimes forgets herself and acts as though she were still a coming celebrity.">>
+
+<<elseif $seed lte 140>>
+  <<display "Generate XY Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 2>>
+  <<set $activeSlave.prestigeDesc to "She was once a rising old world politician, but was forced to flee from the increasingly dangerous politics common in a stressed world, and was subsequently enslaved.">>
+  <<set $activeSlave.career to "a politician">>
+  <<set $activeSlave.muscles to random(1,2)>>
+  <<set $activeSlave.height to random(1,2)>>
+  <<set $activeSlave.face += 1>>
+  <<set $activeSlave.faceImplant += 1>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to 6,8>>
+  <<set $activeSlave.anus to 0>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.oralSkill to 0>>
+  <<set $activeSlave.analSkill to 0>>
+  <<set $activeSlave.whoreSkill to 0>>
+  <<set $activeSlave.entertainSkill to 2>>
+  <<set $activeSlave.age to random(38,44)>>
+  <<set $activeSlave.sexualQuirk to either("hates men")>>
+  <<set $activeSlave.behavioralQuirk to either("arrogant", "bitchy")>>
+  <<set $activeSlave.customTat to "A small, twenty-year-old tattoo of the crest of an old world fraternity is visible on her left shoulder blade.">>
+  <<set $activeSlave.customDesc to "Her face is still recognizable as that which once graced a million campaign posters.">>
+
+<<elseif $seed lte 145>>
+  <<display "Generate XY Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 3>>
+  <<set $activeSlave.prestigeDesc to "She was born a child of royalty, but her family was overthrown when she was still young. She is a graduate cum laude of the world's most renowned slave school.">>
+  <<set $activeSlave.career to 0>>
+  <<set $activeSlave.boobs += 100>>
+  <<set $activeSlave.butt += 1>>
+  <<set $activeSlave.lips += 1>>
+  <<set $activeSlave.face += 1>>
+  <<set $activeSlave.height += 1>>
+  <<set $activeSlave.devotion to random(15,17)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to 10>>
+  <<set $activeSlave.anus to 0>>
+  <<set $activeSlave.dick to 2>>
+  <<set $activeSlave.balls to 1>>
+  <<set $activeSlave.weight to 0>>
+  <<set $activeSlave.vaginalSkill to 0>>
+  <<set $activeSlave.oralSkill to 3>>
+  <<set $activeSlave.analSkill to 0>>
+  <<set $activeSlave.whoreSkill to 1>>
+  <<set $activeSlave.entertainSkill to 2>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.age to 18>>
+  <<set $activeSlave.sexualQuirk to "none">>
+  <<set $activeSlave.behavioralQuirk to "none">>
+  <<set $activeSlave.customTat to "Her family crest is tattooed on her cheek.">>
+  <<set $activeSlave.customDesc to "Her recognizable face marks her as a descendant of an overthrown royal family.">>
+
+<<elseif $seed lte 150>>
+  <<display "Generate XY Slave">>
+  <<set $activeSlave.origin to "You bought her at auction.">>
+  <<set $activeSlave.prestige to 3>>
+  <<set $activeSlave.prestigeDesc to "She was once an arcology owner like you, but lost a Free Cities power struggle and was enslaved. An object lesson in the need to stay vigilant.">>
+  <<set $activeSlave.career to "an arcology owner">>
+  <<set $activeSlave.muscles to random(1,2)>>
+  <<set $activeSlave.heels to 1>>
+  <<set $activeSlave.mute to 1>>
+  <<set $activeSlave.devotion to random(-18,-16)>>
+  <<set $activeSlave.trust to random(-9,-5)>>
+  <<set $activeSlave.health to random(-8,-6)>>
+  <<set $activeSlave.anus to 3>>
+  <<set $activeSlave.weight to -1>>
+	<<set $activeSlave.nipplesPiercing to 2>>
+	<<set $activeSlave.clitPiercing to 2>>
+	<<set $activeSlave.vaginaPiercing to 2>>
+	<<set $activeSlave.dickPiercing to 2>>
+	<<set $activeSlave.anusPiercing to 2>>
+	<<set $activeSlave.lipsPiercing to 2>>
+	<<set $activeSlave.tonguePiercing to 2>>
+	<<set $activeSlave.earPiercing to 2>>
+	<<set $activeSlave.nosePiercing to 2>>
+	<<set $activeSlave.eyebrowPiercing to 2>>
+	<<set $activeSlave.navelPiercing to 2>>
+	<<set $activeSlave.boobsTat to "demeaning inscriptions">>
+	<<set $activeSlave.buttTat to "demeaning inscriptions">>
+	<<set $activeSlave.vaginaTat to "demeaning inscriptions">>
+	<<set $activeSlave.dickTat to "demeaning inscriptions">>
+	<<set $activeSlave.lipsTat to "demeaning inscriptions">>
+	<<set $activeSlave.anusTat to "demeaning inscriptions">>
+	<<set $activeSlave.shouldersTat to "demeaning inscriptions">>
+	<<set $activeSlave.armsTat to "demeaning inscriptions">>
+	<<set $activeSlave.legsTat to "demeaning inscriptions">>
+	<<set $activeSlave.stampTat to "demeaning inscriptions">>
+  <<set $activeSlave.oralSkill to 1>>
+  <<set $activeSlave.analSkill to 1>>
+  <<set $activeSlave.whoreSkill to 0>>
+  <<set $activeSlave.entertainSkill to 0>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.hlength to "shaved bald">>
+  <<set $activeSlave.age to random(28,44)>>
+  <<set $activeSlave.sexualQuirk to either("hates men")>>
+  <<set $activeSlave.behavioralQuirk to either("quirky")>>
+  <<set $activeSlave.customDesc to "Her back is covered in a fine network of hairline scars, as though she's been repeatedly flogged bloody, healed with curatives, and then flogged again.">>
+  <<set $activeSlave.customTat to "'ARCOLOGY OWNER' is tattooed across her forehead.">>
+<</if>>
+
+<<display "Slave Cost">>
+<</nobr>>\
+\
+It will take ¤<<print $slaveCost>> to win the auction.
+\
+<<nobr>>
+<<if $cash gte $slaveCost>>
+	[[Place that bid|New Slave Intro][$cash -= $slaveCost,$nextButton to "Continue",$nextLink to "AS Dump",$returnTo to "Main"]]
+<<else>>
+	//You lack the necessary funds to place a winning bid.//
+<</if>>
+<</nobr>>
+
+<<set $saleDescription to 1>><<display "Long Slave Description">><<set $saleDescription to 0>>
+
+<</if>>

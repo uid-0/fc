@@ -1,0 +1,103 @@
+<<nobr>>
+
+<<set $recruiterProgress += random(0,1)>>
+
+$slaves[$i].slaveName uses your online resources and some @@color:yellowgreen;modest funds@@ to convince $recruiterTarget from the old world to immigrate for voluntary enslavement.
+
+<<if $slaves[$i].devotion gt 18>>
+	Her extreme devotion to you lends her total cogency.
+	<<set $recruiterProgress += 2>>
+<<elseif $slaves[$i].devotion gt 10>>
+	Her devotion to you lends her conviction.
+	<<set $recruiterProgress += 1>>
+<<else>>
+	Her imperfect feelings toward you give her little conviction.
+<</if>>
+
+<<if $slaves[$i].intelligence gte 2>>
+	Her intelligence enables her to cleverly entrap potential slaves.
+	<<set $recruiterProgress += 1>>
+<</if>>
+
+<<if $slaves[$i].entertainSkill gt 2>>
+	She has the entertainment skills necessary to convince any target.
+	<<set $recruiterProgress += 2>>
+<<elseif $slaves[$i].entertainSkill gt 1>>
+	She has the necessary entertainment skills to banter successfully with her targets.
+	<<set $recruiterProgress += 1>>
+<<elseif $slaves[$i].entertainSkill gt 0>>
+	Her mediocre entertainment skills do nothing to convince her targets.
+<<else>>
+	Her total lack of entertainment skills seriously hinders her efforts.
+	<<set $recruiterProgress -= 1>>
+<</if>>
+
+<<if $promenadeUpgradePDAs is 1>>
+  The slaves out on the promenade help her by passing her tips they pick up while working the crowds.
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].assignment is "work on the promenade">>
+	  <<set $recruiterProgress += 0.5>>
+    <</if>>
+  <</for>>
+<</if>>
+
+<<if $recruiterTarget is "desperate whores">>
+  <<if ($Recruiter.analCount + $Recruiter.oralCount) gt 200>>
+	As a veteran slut, she speaks from experience when she says that being your slave whore will be safer and healthier than streetwalking.
+	<<set $recruiterProgress += 1>>
+  <<else>>
+	She does her best to convince them that being your slave whore will be safer and healthier than streetwalking.
+  <</if>>
+<<elseif $recruiterTarget is "expectant mothers">>
+  <<if $Recruiter.preg gt 5>>
+	Since she's visibly pregnant herself, she speaks with authority when she says that Free Cities medicine can keep them and their pregnancies safe and healthy.
+	<<set $recruiterProgress += 1>>
+  <<else>>
+	She does her best to convince them that Free Cities medicine can keep them and their pregnancies safe and healthy.
+  <</if>>
+<<elseif $recruiterTarget is "young migrants">>
+  <<if ($Recruiter.health gte 8) and ($Recruiter.face gt 0)>>
+	Her pretty face and shining health go a long way to convince them that being your slave promises a better life.
+	<<set $recruiterProgress += 1>>
+  <<else>>
+	She does her best to convince them that being your slave promises a better life.
+  <</if>>
+<<elseif $recruiterTarget is "dissolute sissies">>
+  <<if ($Recruiter.dick gt 1) and ($Recruiter.balls gt 0) and ($Recruiter.hormones lte 0)>>
+	She giggles and shows off her erection, making it easy to convince them that your slaves with dicks enjoy a sexually satisfying life.
+	<<set $recruiterProgress += 1>>
+  <<else>>
+	She does her best to convince them that your slaves with dicks enjoy a sexually satisfying life.
+  <</if>>
+<<elseif $recruiterTarget is "reassignment candidates">>
+  <<if ($Recruiter.ovaries is 0) and ($Recruiter.face gt 0)>>
+	She shows off her pretty face and describes her unusual biological situation under your care, convincing them that you'll turn them into happy little slave girls.
+	<<set $recruiterProgress += 1>>
+  <<else>>
+	She does her best to convince them that you'll turn them into happy little slave girls.
+  <</if>>
+<</if>>
+
+<<if ($slaves[$i].livingRules isnot "luxurious")>>
+  She would be more effective if she could show off a luxurious standard of living.
+  <<set $recruiterProgress -= 1>>
+<</if>>
+
+<<if $recruiterProgress gt 7>>
+	She has several excellent prospects and will probably get one of them to agree to enslavement soon.
+<<elseif $recruiterProgress gt 3>>
+	She has some prospects to work with but needs more time to get them agree to enslavement.
+<<else>>
+	She has no real prospects yet and has more work to do before anyone agrees to enslavement.
+<</if>>
+
+<<if ($slaves[$i].livingRules is "luxurious")>>
+  Being continually trusted with this position @@color:hotpink;increases her devotion to you@@ and encourages her to @@color:hotpink;trust you in turn.@@
+  <<set $slaves[$i].devotion += 1>>
+  <<set $slaves[$i].trust += 1>>
+<<else>>
+  Being continually trusted with this position @@color:hotpink;slightly increases her devotion to you,@@ though she harbors some doubts because she isn't allowed a room of her own to set her apart from the other slaves.
+  <<set $slaves[$i].devotion += 0.3>>
+<</if>>
+
+<</nobr>>\

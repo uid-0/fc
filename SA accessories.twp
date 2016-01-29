@@ -1,0 +1,137 @@
+<<nobr>>
+
+<<if ($slaves[$i].devotion lte 5) and ($slaves[$i].collar is "tight steel")>>
+	The tight steel collar she's wearing @@color:gold;reminds her to be afraid@@ every time she takes a breath.
+	<<set $slaves[$i].trust -= 0.3>>
+<<elseif ($slaves[$i].devotion lte 5) and ($slaves[$i].collar is "uncomfortable leather")>>
+	The uncomfortable leather collar she's wearing @@color:gold;reminds her to be afraid@@ every time she turns her head.
+	<<set $slaves[$i].trust -= 0.3>>
+<<elseif ($slaves[$i].devotion lte 5) and ($slaves[$i].collar is "dildo gag")>>
+	The dildo gag she's wearing @@color:gold;reminds her to be afraid@@ with every breath she must carefully take through her nose.
+	<<set $slaves[$i].trust -= 0.3>>
+<<elseif ($slaves[$i].devotion lte 5) and ($slaves[$i].collar is "shock punishment")>>
+	The shock collar she's wearing makes any punishment she deserves @@color:hotpink;immediate and inescapable.@@
+	<<set $slaves[$i].devotion -= 0.3>>
+	<<set $slaves[$i].trust -= 1>>
+	<<if ($slaves[$i].devotion lte -4) and ($slaves[$i].behavioralQuirk isnot "quirky")>>
+		Since she's rebellious her life is near-constant electroshock torture. Her resistance is @@color:hotpink;worn down by the agony@@ and she is @@color:gold;thoroughly cowed,@@ but she has been @@color:red;emotionally damaged@@ by the experience to the extent that further shock torture is not likely to affect her as greatly.
+		<<set $slaves[$i].devotion += 2>>
+		<<set $slaves[$i].trust -= 2>>
+		<<set $slaves[$i].behavioralQuirk to "quirky">>
+	<</if>>
+<<elseif ($slaves[$i].devotion lte 4) and ($slaves[$i].devotion gte -4) and (($slaves[$i].collar is "heavy gold") or ($slaves[$i].collar is "ancient Egyptian") or ($slaves[$i].collar is "pretty jewelry"))>>
+	She is @@color:mediumorchid;inappropriately proud@@ and @@color:mediumaquamarine;confident@@ of the nice collar she's wearing.
+	<<set $slaves[$i].devotion -= 1>>
+	<<set $slaves[$i].trust += 0.3>>
+<<elseif ($slaves[$i].devotion gt 4) and (($slaves[$i].collar is "heavy gold") or ($slaves[$i].collar is "ancient Egyptian"))>>
+	She bears the burden of her heavy gold collar with @@color:mediumaquamarine;confidence.@@
+	<<set $slaves[$i].trust += 0.3>>
+<<elseif ($slaves[$i].devotion gt 4) and ($slaves[$i].collar is "pretty jewelry")>>
+	The lovely collar she wears fills her with @@color:mediumaquamarine;confidence.@@
+	<<set $slaves[$i].trust += 0.3>>
+<<elseif ($slaves[$i].devotion gt 4) and ($slaves[$i].collar is "leather with cowbell")>>
+	<<if ($slaves[$i].fetish is "boobs") or ($slaves[$i].fetish is "nympho")>>
+	She @@color:hotpink;loves@@ how her cow collar encourages everyone to touch her udders.
+	<<set $slaves[$i].devotion += 0.3>>
+	<</if>>
+<</if>>
+
+<<if ($slaves[$i].collar is "dildo gag")>>
+  <<if $slaves[$i].oralSkill lt 1>>
+	Living gagged by a dildo, she can't help but get better at having things down her throat.
+	<<set $slaves[$i].oralSkill += 1>>
+  <</if>>
+<</if>>
+
+<<if ($slaves[$i].vaginalAccessory is "dildo")>>
+  <<if ($slaves[$i].vagina lt 1) and ($slaves[$i].vagina gt -1) and (random(1,100) gt 50)>>
+    Constantly wearing a dildo in her pussy @@color:lime;stretches it out.@@
+    <<set $slaves[$i].vagina += 1>>
+    <<if ($slaves[$i].sexualQuirk is "hates penetration") and (random(1,100) gt 50)>>
+      It also @@color:green;reduces her dislike of having her pussy filled.@@
+      <<set $slaves[$i].sexualQuirk to "none">>  
+    <</if>> 
+  <</if>>
+<<elseif ($slaves[$i].vaginalAccessory is "huge dildo")>>
+  <<if ($slaves[$i].vagina lt 2) and ($slaves[$i].vagina gt -1)>>
+    The huge dildo in her pussy @@color:hotpink;breaks her to sexual slavery@@ slightly.
+    <<set $slaves[$i].devotion += 0.3>>
+  <</if>>
+  <<if ($slaves[$i].vagina lt 3) and ($slaves[$i].vagina gt -1) and (random(1,100) gt 50)>>
+    Constantly wearing a huge dildo @@color:lime;stretches it out.@@
+    <<set $slaves[$i].vagina += 1>>
+  <</if>>
+<</if>>
+
+<<if ($slaves[$i].buttplug is "plug")>>
+  <<if ($slaves[$i].anus lt 1) and ($slaves[$i].anus gt -1) and (random(1,100) gt 50)>>
+    Constantly wearing a plug in her butt @@color:lime;stretches it out.@@
+    <<set $slaves[$i].anus += 1>>
+    <<if ($slaves[$i].sexualQuirk is "hates anal") and (random(1,100) gt 50)>>
+      It also @@color:green;gets her used to having her asshole filled.@@
+      <<set $slaves[$i].sexualQuirk to "none">>  
+    <</if>> 
+  <</if>>
+  <<if ($slaves[$i].fetish is "none") or ($slaves[$i].fetishDiscovered is 0)>>
+	<<if random(1,100) gt (80-$slaves[$i].devotion)>>
+	  Slowly, her anguish at getting the plug up her butt in the morning turns to secret enjoyment and finally to @@color:pink;open arousal at having her anus filled.@@
+	  <<set $slaves[$i].fetish to "buttslut">>
+	  <<set $slaves[$i].fetishDiscovered to 1>>
+	<</if>>
+  <</if>>
+<<elseif ($slaves[$i].buttplug is "huge plug")>>
+  <<if ($slaves[$i].anus lt 2) and ($slaves[$i].anus gt -1)>>
+    The uncomfortably huge plug in her asshole @@color:hotpink;breaks her to anal slavery@@ slightly.
+    <<set $slaves[$i].devotion += 0.3>>
+  <</if>>
+  <<if ($slaves[$i].anus lt 3) and ($slaves[$i].anus gt -1) and (random(1,100) gt 50)>>
+    Constantly wearing a huge plug in her butt @@color:lime;stretches it out.@@
+    <<set $slaves[$i].anus += 1>>
+  <</if>>
+  <<if ($slaves[$i].fetish is "none") or ($slaves[$i].fetishDiscovered is 0)>>
+	<<if random(1,100) gt (80-$slaves[$i].devotion)>>
+	  Slowly, her anguish at getting the huge plug seated in the morning turns to secret enjoyment and finally to @@color:pink;open arousal at having her anus filled.@@
+	  <<set $slaves[$i].fetish to "buttslut">>
+	  <<set $slaves[$i].fetishDiscovered to 1>>
+	<</if>>
+  <</if>>
+<</if>>
+
+<<if ($slaves[$i].shoes is "heels")>>
+  <<if $slaves[$i].devotion lt -4>>
+      She @@color:mediumorchid;resents being forced@@ to wear high heels.
+      <<set  $slaves[$i].devotion -= 0.7>>
+  <</if>>
+<<elseif ($slaves[$i].shoes is "boots")>>
+  <<if $slaves[$i].devotion lt -4>>
+      She @@color:mediumorchid;resents being forced@@ to wear high heeled boots.
+      <<set  $slaves[$i].devotion -= 0.7>>
+  <</if>>
+<<elseif ($slaves[$i].shoes is "extreme heels")>>
+  <<if $slaves[$i].devotion lt -4>>
+      She @@color:mediumorchid;resents being forced@@ to wear @@color:gold;painfully@@ high heels.
+      <<set  $slaves[$i].devotion -= 0.7>>
+      <<set  $slaves[$i].trust -= 0.3>>
+  <<else>>
+      She is kept @@color:hotpink;mindful@@ and @@color:gold;fearful@@ by the difficulty of walking in her extreme heels.
+      <<set  $slaves[$i].devotion += 0.3>>
+      <<set  $slaves[$i].trust -= 0.3>>
+  <</if>>
+  They're so high they're a bit @@color:red;unhealthy@@ for her legs.
+  <<set  $slaves[$i].health -= 0.3>>
+<<else>>
+  <<if ($slaves[$i].heels is 1) and ($slaves[$i].amp isnot 1) and ($slaves[$i].fetish isnot "mindbroken")>>
+    <<if ($slaves[$i].devotion gte -4) and ($slaves[$i].fetish is "submissive") and ($slaves[$i].fetishDiscovered is 1)>>
+        She @@color:hotpink;loves being forced@@ to crawl around like some kind of animal.
+        <<set  $slaves[$i].devotion += 0.3>>
+    <<elseif $slaves[$i].devotion gt 10>>
+        She accepts being forced to crawl around on all fours.
+    <<else>>
+        She @@color:mediumorchid;resents being forced@@ to crawl around like some kind of animal, but it keeps her properly @@color:gold;afraid.@@
+        <<set  $slaves[$i].devotion -= 0.7>>
+        <<set  $slaves[$i].trust -= 1>>
+    <</if>>
+  <</if>>
+<</if>>
+
+<</nobr>>

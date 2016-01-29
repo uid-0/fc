@@ -1,0 +1,67 @@
+<<nobr>>
+
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $nextButton to "Continue">>
+    
+<<set $slaveDealJustice to 1>>
+
+<<set $contractCost to 5000>>
+
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She sold herself into slavery to buy medical care for her daughter.">>
+<<set $activeSlave.devotion to random(5,6)>>
+<<set $activeSlave.trust to $activeSlave.devotion-4>>
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.health to random(0,2)>>
+<<set $activeSlave.age to random(24,44)>>
+<<set $activeSlave.earPiercing to 1>>
+<<if $activeSlave.dick is 0>>
+	<<set $activeSlave.vagina to random(1,2)>>
+	<<set $activeSlave.ovaries to 1>>
+<</if>>
+<<set $activeSlave.shouldersTat to either("tribal patterns", "floral designs")>>
+<<set $activeSlave.stampTat to either("tribal patterns", "floral designs")>>
+
+<</nobr>>\
+\
+Your personal assistant breaks in on your sleep with an urgent message. You push a slave off you and sit up to take it. As the owner of the arcology, you perform some functions that would traditionally be the province of a government. In this anarcho-liberal polity, it's still necessary for people making deals to have someone to appeal to when disputes arise. Part of your agreement with your tenants is that you will perform this duty on deals between two tenants. The message is about just such a disagreement; they always seem to happen in the middle of the night, and they're always urgent.
+
+An older woman who has signed an enslavement contract with a slave trader is accusing her of not living up to the terms. The contract requires that the trader pay the medical costs of the woman's daughter in return for the woman's voluntary enslavement. The woman claims that the payments have not been made and the trader is still insisting on enslavement.
+
+The trader states that the daughter was thought to only have a minor condition, but has proven to be suffering from serious cancer. She protests that she will lose a great deal of money, and that there's no way she would have made the deal if the woman had been honest with her about how bad her daughter's condition was. The woman responds that she didn't know.
+\
+<span id="result">
+<<click "Privately inform both parties you'll settle this in favor of the most generous">>
+	<<replace "#result">>
+	You privately inform both parties you'll settle this in favor of the most generous. You instantly receive a single notice of escrow payment contingent on the case going the payer's way. You select the @@color:yellowgreen;bigger of the two@@ and decide the matter before returning to bed in a good mood. However, the next day it becomes apparent that although she isn't stupid enough to make a public accusation of corruption, the older woman made use of her few remaining hours of freedom to @@color:red;slander@@ your administration of justice.
+	<<set $rep -= 100>>
+	<<set $cash += 2000>>
+    <</replace>>
+<</click>>
+<<click "Settle the dispute in favor of the older woman">>
+	<<replace "#result">>
+	You settle the dispute in favor of the slave-to-be. She is resigned, knowing that she's now owned by a woman who almost certainly hates her, but her daughter's treatments are assured. The story gets around quickly, @@color:green;capturing the hearts@@ of more romantic citizens. The angry slave trader leaves the arcology, @@color:red;reducing prosperity.@@
+	<<set $AProsperity -= 5>>
+	<<set $rep += 500>>
+    <</replace>>
+<</click>>
+<<click "Settle the dispute in favor of the slave trader">>
+	<<replace "#result">>
+	You settle the dispute in favor of the slave trader. The story of the mother's enslavement, along with the prompt death of the daughter due to inadequate treatment, gets around the Free Cities, @@color:red;appalling@@ more romantic citizens. The trader lets it be known amongst her peers that you do not brook uppity behavior from poor bitches, and that slave traders can expect to do well in your arcology, @@color:green;increasing prosperity.@@
+	<<set $AProsperity += 5>>
+	<<set $rep -= 500>>
+    <</replace>>
+<</click>>
+<<click "Offer to buy out the contract">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	You offer to simply buy out the contract, taking the slave for yourself, letting the slave trader out of her side of the deal, and providing for the daughter's medical care. The trader lets it be known amongst her peers that you will make things right no matter the cost to yourself, @@color:green;increasing prosperity.@@ The story of the mother willing to be enslaved gets around quickly, @@color:green;capturing the hearts@@ of more romantic citizens. The mother, meanwhile, presents herself for enslavement, @@color:hotpink;very grateful@@ that you've saved her daughter's life.
+	<<set $AProsperity += 5>>
+	<<set $rep += 500>>
+	<<set $nextLink to "AS Dump">>
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>> //This will cost $contractCost and give you the slave//
+</span>

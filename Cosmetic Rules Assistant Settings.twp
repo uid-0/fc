@@ -1,0 +1,117 @@
+<<nobr>>
+
+<<set $nextButton to "Back">>
+<<set $nextLink to "Rules Assistant">>
+<<set $encyclopedia to "Personal Assistant">>
+
+<</nobr>>\
+\
+//Please use the 'no default setting' option to identify areas I should not address.//
+
+__Cosmetic options:__
+<<nobr>>
+
+Contact lenses: ''$defaultRulesSlave.eyes.''
+
+[[No default eye color setting|Cosmetic Rules Assistant Settings][$defaultRulesSlave.eyes to "no default setting"]]
+| [[Blue|Cosmetic Rules Assistant Settings][$defaultRulesSlave.eyes to "blue"]]
+| [[Black|Cosmetic Rules Assistant Settings][$defaultRulesSlave.eyes to "black"]]
+| [[Brown|Cosmetic Rules Assistant Settings][$defaultRulesSlave.eyes to "brown"]]
+| [[Green|Cosmetic Rules Assistant Settings][$defaultRulesSlave.eyes to "green"]]
+| [[White|Cosmetic Rules Assistant Settings][$defaultRulesSlave.eyes to "white"]]
+| [[Catlike|Cosmetic Rules Assistant Settings][$defaultRulesSlave.eyes to "catlike"]]
+
+<</nobr>>
+<<nobr>>
+
+Makeup: 
+''
+<<if $defaultRulesSlave.makeup is 0>>
+	makeup-free.
+<<elseif $defaultRulesSlave.makeup is 1>>
+	minimal makeup.
+<<elseif $defaultRulesSlave.makeup is 2>>
+	color-coordinated.
+<<elseif $defaultRulesSlave.makeup is 3>>
+	garish.
+<<else>>
+	no default setting.
+<</if>>
+''
+[[No default makeup setting|Cosmetic Rules Assistant Settings][$defaultRulesSlave.makeup to "no default setting"]]
+| [[Makeup-free|Cosmetic Rules Assistant Settings][$defaultRulesSlave.makeup to 0]]
+| [[Nice|Cosmetic Rules Assistant Settings][$defaultRulesSlave.makeup to 1]]
+| [[Color-coordinate with hair|Cosmetic Rules Assistant Settings][$defaultRulesSlave.makeup to 2]]
+| [[Slutty|Cosmetic Rules Assistant Settings][$defaultRulesSlave.makeup to 3]]
+
+<</nobr>>
+<<nobr>>
+
+Nails:
+''
+<<if $defaultRulesSlave.nails is 0>>
+	clipped.
+<<elseif $defaultRulesSlave.nails is 1>>
+	long and elegant.
+<<elseif $defaultRulesSlave.nails is 2>>
+	color-coordinated.
+<<elseif $defaultRulesSlave.nails is 3>>
+	garish.
+<<else>>
+	no default setting.
+<</if>>
+''
+[[No default nails setting|Cosmetic Rules Assistant Settings][$defaultRulesSlave.nails to "no default setting"]]
+| [[Clipped|Cosmetic Rules Assistant Settings][$defaultRulesSlave.nails to 0]]
+| [[Extended|Cosmetic Rules Assistant Settings][$defaultRulesSlave.nails to 1]]
+| [[Color-coordinate with hair|Cosmetic Rules Assistant Settings][$defaultRulesSlave.nails to 2]]
+| [[Hooker nails|Cosmetic Rules Assistant Settings][$defaultRulesSlave.nails to 3]]
+
+<</nobr>>
+<<nobr>>
+
+Hair color: ''$defaultRulesSlave.hcolor.''
+
+[[No default hair color setting|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hcolor to "no default setting"]]
+| [[Blonde|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hcolor to "blonde"]]
+| [[Black|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hcolor to "black"]]
+| [[Brown|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hcolor to "brown"]]
+| [[Red|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hcolor to "red"]]
+| [[White|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hcolor to "white"]]
+
+<</nobr>>
+<<nobr>>
+
+Pubic hair style: ''$defaultRulesSlave.pubicHLength.''
+
+[[No default pubic hair style setting|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHLength to "no default setting"]]
+| [[Waxed|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHLength to "waxed"]]
+| [[Landing strip|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHLength to "in a strip"]]
+| [[Neat|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHLength to "neat"]]
+| [[Bushy|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHLength to "bushy"]]
+
+<</nobr>>
+<<nobr>>
+
+Pubic hair color, when present: ''$defaultRulesSlave.pubicHColor.''
+
+[[No default pubic hair color setting|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHColor to "no default setting"]]
+| [[Blonde|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHColor to "blonde"]]
+| [[Black|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHColor to "black"]]
+| [[Brown|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHColor to "brown"]]
+| [[Red|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHColor to "red"]]
+| [[White|Cosmetic Rules Assistant Settings][$defaultRulesSlave.pubicHColor to "white"]]
+
+<</nobr>>
+<<nobr>>
+
+Hair length: ''$defaultRulesSlave.hlength.''
+
+[[No default hair length setting|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hlength to "no default setting"]]
+| [[Long|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hlength to "long"]]
+| [[Shoulder-length|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hlength to "shoulder-length"]]
+| [[Short|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hlength to "short"]]
+| [[Very short|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hlength to "very short"]]
+| [[Shaved|Cosmetic Rules Assistant Settings][$defaultRulesSlave.hlength to "shaved bald"]]
+
+<</nobr>>

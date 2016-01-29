@@ -1,0 +1,51 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $buttslutInterestTargetName == $slaves[$i].ID>>
+<<set $activeSlave to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $subName == $slaves[$i].slaveName>>
+          <<set $slaves[$i].analCount += 1>>
+          <<set $analTotal += 1>>
+<</if>>
+<</for>>
+
+<</nobr>>\
+\
+In the middle of the afternoon, you take a break from work to fuck $buttslutName in your office. $buttslutName is such a complete buttslut that she's enjoying herself to an almost indecent degree: moaning, begging, or just smiling idiotically with her mouth open and her tongue lolling. After you finish and she leaves, you notice $activeSlave.slaveName at the door to your office. You call her in.
+
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> hesitates before explaining herself, and she's obviously aroused: <<if ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0)>>though her hormone-filled body can't get her dick hard any more, she's got a string of precum coming off her member<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>though her gelded body can't get her dick hard any more, she's got a string of precum coming off her limp member<<elseif $activeSlave.dick gt 4>>her gigantic cock is standing out like a mast<<elseif $activeSlave.dick gt 2>>she's sporting an impressive erection<<elseif $activeSlave.dick gt 0>>her little penis is rock hard<<elseif $activeSlave.clit gt 0>>her large clit is visibly engorged<<else>>her nipples are hard and there's a sheen on her pussylips<</if>>. It seems she passed by while you were buttfucking $buttslutName and found the sight rather compelling. It should be possible to either encourage this fascination or steer her away from it for now.
+\
+<span id="result">
+<<click "Turn her into another anal slut">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<if ($activeSlave.amp is 1) and ($activeSlave.mute is 1)>>She's mute and has no hands, so it takes a long, frustrating time for her to communicate that she would like you to do to her what you did to $buttslutName.<<elseif ($activeSlave.mute is 1)>>She's mute, so she uses gestures to ask you to do to her what you did to $buttslutName.<<elseif ($activeSlave.lips gt 2)>>She asks through her massive dick-sucking lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, can yeh do meh like yeh did $buttslutName?"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She asks through her big oral piercings, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, can yeh do meh like yeh did $buttslutName?"<<else>>She asks, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, may you please do me like that?"<</if>> You make her state it more explicitly, so she tries again: <<if ($activeSlave.amp is 1)>> she wriggles around until her ass is pointed straight at you, lets out a deep breath, and relaxes her sphincter visibly.<<elseif ($activeSlave.mute is 1)>>she tries to depict anal sex with hand gestures, then gives up and turns around and points to her ass.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Please fuck mah butt, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>!"<<else>>"Please fuck my butt, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!"<</if>> She squeaks with surprise as you throw her on the couch, but her eagerness is obvious. She does everything right, relaxing as you <<if ($PC.dick is 0)>>push a strap-on into<<else>>enter<</if>> her ass and enjoying herself all the way through. She climaxes hard to <<if ($PC.dick is 0)>>the phallus<<else>>the cock<</if>> in her asshole. @@color:hotpink;She has become more devoted to you,@@ and @@color:pink;her sexuality now focuses on her anus.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+	<<set $activeSlave.fetish to "buttslut">>
+	<<set $activeSlave.fetishDiscovered to 1>>
+    <</replace>>
+<</click>>
+<<click "Steer her away from anal obsession for the moment">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Good slaves get aroused according to their masters' whim, not their own silly tendencies. You call $activeSlave.slaveName over before she can give voice to her interest in anal sex, <<if ($activeSlave.dick is 0)>>and play with her until she orgasms while carefully keeping her ass untouched and unstimulated.<<else>>and let her masturbate while she blows you, to associate non-anal intercourse with pleasure.<</if>> You'll keep an eye on her, and with this correction @@color:hotpink;she'll become more submissive to you.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 1>>
+    <<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+</span>

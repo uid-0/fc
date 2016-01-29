@@ -1,0 +1,39 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+You see <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> moving gingerly as she heads out of the workout room, as though she's suffering some pain in her groin. Since she's coming off a workout rather than any duty that would explain a sore pussy, you head over to her to investigate. She greets you properly, looking a little rueful.
+
+<<if ($activeSlave.mute is 1)>>She gestures impatiently at her pussy, pulling down the compression shorts she was wearing to display her generous labia. She humorously pantomimes them moving about as she exercises and indicates pain.<<elseif ($activeSlave.lips gt 2)>>She lisps through her massive lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, my puthylipth are tho big. They make uthing the treadmill really painful."<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She lisps through her huge piercings, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, my puthylipth are tho big. They make uthing the treadmill really painful."<<else>>"<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, my pussylips are really big. They make running on the treadmill really painful, even wearing my compression shorts," she explains. "They just kind of get in the way."<</if>> She looks doubtful, as though she's wondering whether to make a request. Finally she makes up her mind to ask: <<if ($activeSlave.mute is 1)>>she waves towards the surgery, and gestures about the labiaplasty she knows some slaves receive, asking you if she can have hers reduced.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>> "May I have labiaplathty, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>? It would make working out tho much eathier."<<else>>"May I have labiaplasty, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>? It would make working out so much easier on my poor pussy."<</if>>
+\
+<span id="result">
+<<click "Let her have labiaplasty to resolve the issue">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	When you assent, she cheers up immediately, looking remarkably happy for a girl who's just learned her vagina is about to have a surgical operation performed on it. Then again, having those huge pussylips constantly getting in her way when she runs must be extremely uncomfortable, so it's not shocking she would consider a radical solution to her problem. When she exits the remote surgery, she looks @@color:red;sorer than ever,@@ of course, but she @@color:hotpink;smiles gratefully@@ at you the next time she sees you, and lets you know she's really looking forward to recovering enough for her to take her beloved <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> into her @@color:orange;newly streamlined cunt.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.health -= 1>>
+	<<set $activeSlave.labia to 0>>
+    <</replace>>
+<</click>>
+<<click "Let her know she's got a wonderful vagina">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	By way of an answer, you embrace her and give her a deep kiss on her <<if $activeSlave.lips gt 2>>enormous<<elseif $activeSlave.lips is 2>>pillowlike<<elseif $activeSlave.lips is 1>>big<<else>>pretty<</if>> lips, spreading a blush across her $activeSlave.skin cheeks. Your hands rove down her <<if $activeSlave.weight gt 0>>plush<<elseif $activeSlave.weight lt 0>>thin<<else>>nice<</if>> body, coming to rest on her <<if $activeSlave.butt gt 5>>magnificent<<elseif $activeSlave.butt gt 3>>rounded<<else>>tight<</if>> butt. You hug her up and into you, crushing her <<if $activeSlave.boobs gt 2000>>titanic<<elseif $activeSlave.boobs gt 800>>big<<else>>small<</if>> breasts against your manly chest. Before long being kissed and held by her beloved master has her playing the slut in your arms, and she backs against the wall before wrapping her legs around your middle to bring her pussy against your <<if ($PC.dick is 0)>>own. She moans in pain as you scissor against her sore pussy,<<else>>stiff prick. She gasps in pain as you press past her sore pussylips,<</if>> but before long she's grinding against you with her back propped against the wall, using the embrace of her strong legs to provide the power for a vigorous fuck. When she finally slides down the wall to stand again, a look of @@color:hotpink;profound pleasure@@ on her face, she lets you know that she understands your meaning and that she'll put up with sore petals, since <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> prefers her that way.
+	<<display "Vaginal VCheck">>
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.vaginalCount += 1>>
+	<<set $vaginalTotal += 1>>
+    <</replace>>
+<</click>><<if ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+</span>	

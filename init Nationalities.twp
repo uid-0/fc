@@ -1,0 +1,212 @@
+<<silently>>
+
+/*Nationalities Setup*/
+
+<<set $nationalities to []>>
+
+<<if $internationalTrade isnot 0>>
+<<if $internationalVariety is 1>>
+  <<set $nationalities.push("American", "Chinese", "Korean", "Indonesian", "Japanese", "Bangladeshi", "Pakistani", "Filipina", "Indian", "Russian", "Egyptian", "Nigerian", "Saudi", "Turkish", "Brazilian", "Argentinian", "Colombian", "Nigerian", "Australian", "Ethiopian", "German", "Mexican", "Vietnamese", "Iranian", "Congolese", "French", "Thai", "British", "Italian", "Spanish", "Kenyan", "Ukrainian", "Canadian", "Peruvian", "Venezuelan", "a New Zealander", "Irish", "Icelandic", "Finnish", "Polish", "Israeli", "Armenian", "Greek", "Moroccan", "Romanian", "Swedish", "Lithuanian", "Bolivian", "Haitian", "Cuban", "South African", "Chilean", "Belgian", "Danish", "Czech", "Serbian", "Slovak", "Norwegian", "Dutch", "Austrian", "Swiss", "Portuguese", "Hungarian", "Estonian", "Puerto Rican", "Jamaican", "Kazakh", "Zimbabwean", "Tanzanian", "Ugandan", "Malaysian", "Guatemalan", "Ghanan", "Lebanese", "Tunisian", "Emirati", "Libyan", "Jordanian", "Omani", "Malian")>>
+<<else>>
+  <<set $nationalities.push("Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese")>>
+  <<set $nationalities.push("Indian","Indian","Indian","Indian","Indian","Indian","Indian","Indian","Indian","Indian")>>
+  <<set $nationalities.push("American","American","American","American")>>
+  <<set $nationalities.push("Indonesian","Indonesian","Indonesian","Indonesian")>>
+  <<set $nationalities.push("Bangladeshi","Bangladeshi","Bangladeshi")>>
+  <<set $nationalities.push("Russian","Russian","Russian")>>
+  <<set $nationalities.push("Nigerian","Nigerian","Nigerian")>>
+  <<set $nationalities.push("South African","South African","South African")>>
+  <<set $nationalities.push("Brazilian","Brazilian","Brazilian")>>
+  <<set $nationalities.push("Mexican","Mexican","Mexican")>>
+  <<set $nationalities.push("Argentinian","Argentinian")>>
+  <<set $nationalities.push("Egyptian","Egyptian")>>
+  <<set $nationalities.push("Pakistani","Pakistani")>>
+  <<set $nationalities.push("Filipina","Filipina")>>
+  <<set $nationalities.push("Vietnamese","Vietnamese")>>
+  <<set $nationalities.push("Iranian","Iranian")>>
+  <<set $nationalities.push("Korean","Korean")>>
+  <<set $nationalities.push("Japanese","Japanese")>>
+  <<set $nationalities.push("Thai","Thai")>>
+  <<set $nationalities.push("Turkish","Turkish")>>
+  <<set $nationalities.push("Ethiopian","Ethiopian")>>
+  <<set $nationalities.push("Kenyan", "Kenyan")>>
+  <<set $nationalities.push("Congolese","Congolese")>>
+  <<set $nationalities.push("Colombian","Colombian")>>
+  <<set $nationalities.push("Venezuelan","Venezuelan")>>
+  <<set $nationalities.push("German","German")>>
+  <<set $nationalities.push("French","French")>>
+  <<set $nationalities.push("British","British")>>
+  <<set $nationalities.push("Italian","Italian")>>
+  <<set $nationalities.push("Spanish","Spanish")>>
+  <<set $nationalities.push("Ukrainian","Ukrainian")>>
+  <<set $nationalities.push("Polish","Polish")>>
+  <<set $nationalities.push("Burmese","Burmese")>>
+  <<set $nationalities.push("Algerian","Algerian")>>
+  <<set $nationalities.push("Sudanese","Sudanese")>>
+  <<set $nationalities.push("Lebanese")>>
+  <<set $nationalities.push("Tunisian")>>
+  <<set $nationalities.push("Emirati")>>
+  <<set $nationalities.push("Libyan")>>
+  <<set $nationalities.push("Jordanian")>>
+  <<set $nationalities.push("Omani")>>
+  <<set $nationalities.push("Malian")>>
+  <<set $nationalities.push("Iraqi")>>
+  <<set $nationalities.push("Uzbek")>>
+  <<set $nationalities.push("Nepalese")>>
+  <<set $nationalities.push("Afghan")>>
+  <<set $nationalities.push("Yemeni")>>
+  <<set $nationalities.push("Saudi")>>
+  <<set $nationalities.push("Australian")>>
+  <<set $nationalities.push("Ghanan")>>
+  <<set $nationalities.push("Canadian")>>
+  <<set $nationalities.push("Peruvian")>>
+  <<set $nationalities.push("Chilean")>>
+  <<set $nationalities.push("Guatemalan")>>
+  <<set $nationalities.push("a New Zealander")>>
+  <<set $nationalities.push("Irish")>>
+  <<set $nationalities.push("Icelandic")>>
+  <<set $nationalities.push("Finnish")>>
+  <<set $nationalities.push("Israeli")>>
+  <<set $nationalities.push("Armenian")>>
+  <<set $nationalities.push("Greek")>>
+  <<set $nationalities.push("Moroccan")>>
+  <<set $nationalities.push("Zimbabwean")>>
+  <<set $nationalities.push("Tanzanian")>>
+  <<set $nationalities.push("Ugandan")>>
+  <<set $nationalities.push("Romanian")>>
+  <<set $nationalities.push("Swedish")>>
+  <<set $nationalities.push("Belgian")>>
+  <<set $nationalities.push("Danish")>>
+  <<set $nationalities.push("Czech")>>
+  <<set $nationalities.push("Serbian")>>
+  <<set $nationalities.push("Slovak")>>
+  <<set $nationalities.push("Norwegian")>>
+  <<set $nationalities.push("Dutch")>>
+  <<set $nationalities.push("Austrian")>>
+  <<set $nationalities.push("Swiss")>>
+  <<set $nationalities.push("Portuguese")>>
+  <<set $nationalities.push("Hungarian")>>
+  <<set $nationalities.push("Estonian")>>
+  <<set $nationalities.push("Lithuanian")>>
+  <<set $nationalities.push("Bolivian")>>
+  <<set $nationalities.push("Haitian")>>
+  <<set $nationalities.push("Puerto Rican")>>
+  <<set $nationalities.push("Jamaican")>>
+  <<set $nationalities.push("Cuban")>>
+  <<set $nationalities.push("Kazakh")>>
+  <<set $nationalities.push("Malaysian", "Malaysian")>>
+<</if>>
+<</if>>
+
+<<if ($continent is "North America")>>
+    <<set $FSSupremacistRace to "white">>
+    <<set $FSSubjugationistRace to "black">>
+	<<set $nationalities.push("American","American","American","American")>>
+	<<set $nationalities.push("Mexican","Mexican")>>
+	<<set $nationalities.push("Canadian")>>
+	<<set $nationalities.push("Haitian")>>
+	<<set $nationalities.push("Cuban")>>
+    <<set $nationalities.push("Puerto Rican")>>
+    <<set $nationalities.push("Jamaican")>>
+<<elseif ($continent is "South America")>>
+    <<set $FSSupremacistRace to "latina">>
+    <<set $FSSubjugationistRace to "black">>
+	<<set $nationalities.push("Brazilian","Brazilian","Brazilian","Brazilian")>>
+	<<set $nationalities.push("Argentinian","Argentinian")>>
+	<<set $nationalities.push("Colombian","Colombian")>>
+	<<set $nationalities.push("Peruvian")>>
+	<<set $nationalities.push("Venezuelan")>>
+	<<set $nationalities.push("Bolivian")>>
+    <<set $nationalities.push("Chilean")>>
+    <<set $nationalities.push("Guatemalan")>>
+<<elseif ($continent is "the Middle East")>>
+    <<set $FSSupremacistRace to "middle eastern">>
+    <<set $FSSubjugationistRace to "asian">>
+	<<set $nationalities.push("Egyptian", "Egyptian", "Egyptian")>>
+	<<set $nationalities.push("Iranian", "Iranian")>>
+	<<set $nationalities.push("Saudi", "Saudi")>>
+	<<set $nationalities.push("Turkish", "Turkish")>>
+	<<set $nationalities.push("Lebanese")>>
+	<<set $nationalities.push("Emirati")>>
+	<<set $nationalities.push("Jordanian")>>
+	<<set $nationalities.push("Omani")>>
+	<<set $nationalities.push("Israeli")>>
+	<<set $nationalities.push("Armenian")>>
+	<<set $nationalities.push("Iraqi")>>
+	<<set $nationalities.push("Afghan")>>
+	<<set $nationalities.push("Yemeni")>>
+<<elseif ($continent is "Africa")>>
+    <<set $FSSupremacistRace to "black">>
+    <<set $FSSubjugationistRace to "white">>
+	<<set $nationalities.push("Nigerian", "Nigerian", "Nigerian")>>
+	<<set $nationalities.push("South African","South African","South African")>>
+	<<set $nationalities.push("Kenyan", "Kenyan")>>
+	<<set $nationalities.push("Congolese", "Congolese")>>
+	<<set $nationalities.push("Ethiopian", "Ethiopian")>>
+	<<set $nationalities.push("Algerian","Algerian")>>
+	<<set $nationalities.push("Sudanese","Sudanese")>>
+	<<set $nationalities.push("Moroccan")>>
+    <<set $nationalities.push("Ghanan")>>
+	<<set $nationalities.push("Tunisian")>>
+	<<set $nationalities.push("Malian")>>
+	<<set $nationalities.push("Libyan")>>
+    <<set $nationalities.push("Zimbabwean")>>
+    <<set $nationalities.push("Tanzanian")>>
+    <<set $nationalities.push("Ugandan")>>
+<<elseif ($continent is "Asia")>>
+    <<set $FSSupremacistRace to "asian">>
+    <<set $FSSubjugationistRace to "indo-aryan">>
+	<<set $nationalities.push("Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese","Chinese")>>
+	<<set $nationalities.push("Indian","Indian","Indian","Indian","Indian","Indian","Indian","Indian","Indian","Indian")>>
+	<<set $nationalities.push("Indonesian","Indonesian","Indonesian")>>
+	<<set $nationalities.push("Bangladeshi","Bangladeshi","Bangladeshi")>>
+	<<set $nationalities.push("Thai","Thai")>>
+	<<set $nationalities.push("Vietnamese","Vietnamese")>>
+	<<set $nationalities.push("Korean","Korean")>>
+	<<set $nationalities.push("Pakistani","Pakistani")>>
+	<<set $nationalities.push("Filipina","Filipina")>>
+	<<set $nationalities.push("Japanese","Japanese")>>
+	<<set $nationalities.push("Burmese","Burmese")>>
+    <<set $nationalities.push("Malaysian", "Malaysian")>>
+	<<set $nationalities.push("Uzbek")>>
+	<<set $nationalities.push("Nepalese")>>
+    <<set $nationalities.push("Kazakh")>>
+<<elseif ($continent is "Europe")>>
+	<<set $nationalities.push("Russian", "Russian", "Russian", "Russian")>>
+	<<set $nationalities.push("German", "German", "German")>>
+	<<set $nationalities.push("Ukrainian", "Ukrainian")>>
+	<<set $nationalities.push("French", "French")>>
+	<<set $nationalities.push("Italian", "Italian")>>
+	<<set $nationalities.push("Spanish", "Spanish")>>
+	<<set $nationalities.push("British", "British")>>
+	<<set $nationalities.push("Polish", "Polish")>>
+	<<set $nationalities.push("Romanian")>>
+	<<set $nationalities.push("Lithuanian")>>
+	<<set $nationalities.push("Irish")>>
+	<<set $nationalities.push("Icelandic")>>
+	<<set $nationalities.push("Finnish")>>
+    <<set $nationalities.push("Greek")>>
+    <<set $nationalities.push("Belgian")>>
+    <<set $nationalities.push("Danish")>>
+    <<set $nationalities.push("Czech")>>
+    <<set $nationalities.push("Serbian")>>
+    <<set $nationalities.push("Slovak")>>
+    <<set $nationalities.push("Norwegian")>>
+    <<set $nationalities.push("Dutch")>>
+    <<set $nationalities.push("Austrian")>>
+    <<set $nationalities.push("Swiss")>>
+    <<set $nationalities.push("Portugese")>>
+    <<set $nationalities.push("Hungarian")>>
+    <<set $nationalities.push("Estonian")>>
+<<elseif ($continent is "Australia")>>
+    <<set $FSSupremacistRace to "white">>
+    <<set $FSSubjugationistRace to "asian">>
+	<<set $nationalities.push("Australian","Australian","Australian")>>
+	<<set $nationalities.push("a New Zealander")>>
+<</if>>
+
+<<set $customSlave.nationality to $nationalities.random()>>
+
+<<goto "Starting Girls">>
+
+<</silently>>

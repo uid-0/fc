@@ -1,0 +1,149 @@
+<<nobr>>
+<<if $activeSlave.assignmentVisible is 0>>
+//Her rules are set by the facility she's assigned to//
+<<else>>
+__Living Standard__: ''$activeSlave.livingRules.''
+<<if $activeSlave.livingRules is "spare">>
+	[[Normal|Slave Interact][$activeSlave.livingRules to "normal"]] | [[Luxurious|Slave Interact][$activeSlave.livingRules to "luxurious"]]
+<<elseif $activeSlave.livingRules is "normal">>
+	[[Spare|Slave Interact][$activeSlave.livingRules to "spare"]] | [[Luxurious|Slave Interact][$activeSlave.livingRules to "luxurious"]]
+<<else>>
+	[[Spare|Slave Interact][$activeSlave.livingRules to "spare"]] | [[Normal|Slave Interact][$activeSlave.livingRules to "normal"]]
+<</if>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<<if $activeSlave.mute isnot 1>>
+__Speech Rules__: ''$activeSlave.speechRules.''
+<<if $activeSlave.speechRules is "restrictive">>
+	[[Permissive|Slave Interact][$activeSlave.speechRules to "permissive"]]
+<<else>>
+	[[Restrictive|Slave Interact][$activeSlave.speechRules to "restrictive"]]
+<</if>>
+<</if>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+__Relationship Rules__: ''$activeSlave.relationshipRules.''
+<<if $activeSlave.relationshipRules is "restrictive">>
+	[[Permissive|Slave Interact][$activeSlave.relationshipRules to "permissive"]]
+<<else>>
+	[[Restrictive|Slave Interact][$activeSlave.relationshipRules to "restrictive"]]
+<</if>>
+<</if>>
+<</nobr>>\
+\
+<<nobr>>
+<<if $activeSlave.assignmentVisible is 1>>
+<br>
+__Masturbation Rules__: ''$activeSlave.releaseRules.''
+[[Permissive|Slave Interact][$activeSlave.releaseRules to "permissive"]]
+ | [[Encourage interslave sex|Slave Interact][$activeSlave.releaseRules to "sapphic"]]
+ | [[Restrictive|Slave Interact][$activeSlave.releaseRules to "restrictive"]]
+&nbsp;&nbsp;&nbsp;&nbsp;
+<<if $activeSlave.useRulesAssistant isnot 0>>
+''Subject'' to the rules assistant. [[Exempt her|Slave Interact][$activeSlave.useRulesAssistant to 0]]
+<<else>>
+''Not subject'' to the rules assistant. [[Include her|Slave Interact][$activeSlave.useRulesAssistant to 1]]
+<</if>>
+<</if>>
+<</nobr>>
+\
+<<if $activeSlave.clitPiercing is 3>>\
+<<nobr>>
+<<if $activeSlave.dick lt 1>>Her smart clit piercing is set to
+<<else>>Her smart frenulum piercing is set to
+<</if>>
+<strong><span id="setting"><<print $activeSlave.clitSetting>></span></strong>.
+<<click "Vanilla">><<set $activeSlave.clitSetting to "vanilla">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "Oral">><<set $activeSlave.clitSetting to "oral">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "Anal">><<set $activeSlave.clitSetting to "anal">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "Breasts">><<set $activeSlave.clitSetting to "boobs">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "Girls">><<set $activeSlave.clitSetting to "lesbian">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "Submissive">><<set $activeSlave.clitSetting to "submissive">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "Dominance">><<set $activeSlave.clitSetting to "dom">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "Humiliation">><<set $activeSlave.clitSetting to "humiliation">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "Pregnancy">><<set $activeSlave.clitSetting to "pregnancy">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "Masochist">><<set $activeSlave.clitSetting to "masochist">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "Sadism">><<set $activeSlave.clitSetting to "sadist">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+ | <<click "All sex">><<set $activeSlave.clitSetting to "all">><<replace "#setting">><<print $activeSlave.clitSetting>><</replace>><</click>>
+<</nobr>>
+<</if>>\
+\
+<<nobr>>
+__Clothes__: ''$activeSlave.clothes.''
+[[Go naked|Slave Interact][$activeSlave.clothes to "no clothing",$activeSlave.choosesOwnClothes to 0]]
+ | [[Corset|Slave Interact][$activeSlave.clothes to "a very tight corset",$activeSlave.choosesOwnClothes to 0]]
+ | [[Uncomfortable straps|Slave Interact][$activeSlave.clothes to "uncomfortable straps",$activeSlave.choosesOwnClothes to 0]]
+ | [[Restrictive latex|Slave Interact][$activeSlave.clothes to "restrictive latex",$activeSlave.choosesOwnClothes to 0]]
+ | [[Penitent nun|Slave Interact][$activeSlave.clothes to "a penitent nun's habit",$activeSlave.choosesOwnClothes to 0]]
+ | [[Nice lingerie|Slave Interact][$activeSlave.clothes to "attractive lingerie",$activeSlave.choosesOwnClothes to 0]]
+ | [[Slutty maid|Slave Interact][$activeSlave.clothes to "a slutty maid outfit",$activeSlave.choosesOwnClothes to 0]]
+ | [[Nice maid|Slave Interact][$activeSlave.clothes to "a nice maid outfit",$activeSlave.choosesOwnClothes to 0]]
+ | [[String bikini|Slave Interact][$activeSlave.clothes to "string lingerie",$activeSlave.choosesOwnClothes to 0]]
+ | [[Cutoffs and a t-shirt|Slave Interact][$activeSlave.clothes to "cutoffs and a t-shirt",$activeSlave.choosesOwnClothes to 0]]
+ | [[Slave Gown|Slave Interact][$activeSlave.clothes to "a slave gown",$activeSlave.choosesOwnClothes to 0]]
+ | [[Kimono|Slave Interact][$activeSlave.clothes to "a kimono",$activeSlave.choosesOwnClothes to 0]]
+ | [[Slutty Quipao|Slave Interact][$activeSlave.clothes to "a slutty quipao",$activeSlave.choosesOwnClothes to 0]]
+ | [[Slutty Suit|Slave Interact][$activeSlave.clothes to "slutty business attire",$activeSlave.choosesOwnClothes to 0]]
+ | [[Nice Suit|Slave Interact][$activeSlave.clothes to "nice business attire",$activeSlave.choosesOwnClothes to 0]] | [[Slutty Nurse|Slave Interact][$activeSlave.clothes to "a nurse outfit",$activeSlave.choosesOwnClothes to 0]] | [[Schoolgirl|Slave Interact][$activeSlave.clothes to "a schoolgirl outfit",$activeSlave.choosesOwnClothes to 0]]
+ | [[Bodysuit|Slave Interact][$activeSlave.clothes to "a comfortable bodysuit",$activeSlave.choosesOwnClothes to 0]]
+ | [[Skimpy Battledress|Slave Interact][$activeSlave.clothes to "battledress",$activeSlave.choosesOwnClothes to 0]]
+ | [[Harem gauze|Slave Interact][$activeSlave.clothes to "harem gauze",$activeSlave.choosesOwnClothes to 0]]
+ | [[Hijab|Slave Interact][$activeSlave.clothes to "a hijab",$activeSlave.choosesOwnClothes to 0]]
+ | [[Fallen nun|Slave Interact][$activeSlave.clothes to "a fallen nun's habit",$activeSlave.choosesOwnClothes to 0]]
+ | [[Bangles|Slave Interact][$activeSlave.clothes to "slutty jewelry",$activeSlave.choosesOwnClothes to 0]]
+ | [[Select her own clothes|Slave Interact][$activeSlave.clothes to "choosing her own clothes",$activeSlave.choosesOwnClothes to 1]]
+<<if $FSPaternalist gt 20>>
+   | [[Conservative clothing|Slave Interact][$activeSlave.clothes to "conservative clothing",$activeSlave.choosesOwnClothes to 0]]
+<</if>>
+<<if $FSDegradationist gt 20>>
+   | [[Chains|Slave Interact][$activeSlave.clothes to "chains",$activeSlave.choosesOwnClothes to 0]]
+<</if>>
+<<if $FSPastoralist gt 20>>
+   | [[Western clothing|Slave Interact][$activeSlave.clothes to "Western clothing",$activeSlave.choosesOwnClothes to 0]]
+<</if>>
+<<if $FSPhysicalIdealist gt 20>>
+   | [[Body oil|Slave Interact][$activeSlave.clothes to "body oil",$activeSlave.choosesOwnClothes to 0]]
+<</if>>
+<<if $FSRomanRevivalist gt 20>>
+   | [[Toga|Slave Interact][$activeSlave.clothes to "a toga",$activeSlave.choosesOwnClothes to 0]]
+<</if>>
+<</nobr>>
+\
+<<nobr>>
+__Collar:__ ''$activeSlave.collar.''
+[[None|Slave Interact][$activeSlave.collar to "none"]]
+ | [[Tight steel|Slave Interact][$activeSlave.collar to "tight steel"]]
+ | [[Uncomfortable leather|Slave Interact][$activeSlave.collar to "uncomfortable leather"]]
+ | [[Shock punishment|Slave Interact][$activeSlave.collar to "shock punishment"]]
+ | [[Dildo gag|Slave Interact][$activeSlave.collar to "dildo gag"]]
+ | [[Heavy gold|Slave Interact][$activeSlave.collar to "heavy gold"]]
+ | [[Pretty jewelry|Slave Interact][$activeSlave.collar to "pretty jewelry"]]
+ | [[Leather with cowbell|Slave Interact][$activeSlave.collar to "leather with cowbell"]]
+<<if $FSAncientEgyptianRevivalist gt 20>>
+   | [[Ancient Egyptian|Slave Interact][$activeSlave.collar to "ancient Egyptian"]]
+<</if>>
+<</nobr>>\
+\
+<<nobr>>
+<<if $activeSlave.amp isnot 1>>
+<br>
+__Shoes__: ''$activeSlave.shoes.''
+[[Go barefoot|Slave Interact][$activeSlave.shoes to "none"]]
+ | [[Flats|Slave Interact][$activeSlave.shoes to "flats"]]
+ | [[Heels|Slave Interact][$activeSlave.shoes to "heels"]]
+ | [[Thigh boots|Slave Interact][$activeSlave.shoes to "boots"]]
+ | [[Painfully extreme heels|Slave Interact][$activeSlave.shoes to "extreme heels"]]
+<</if>>
+<</nobr>>
+\
+<<nobr>>
+__Buttplug__: ''$activeSlave.buttplug.''
+[[None|Slave Interact][$activeSlave.buttplug to "none"]]
+ | [[Normal|Slave Interact][$activeSlave.buttplug to "plug"]]
+ | [[Huge|Slave Interact][$activeSlave.buttplug to "huge plug"]]
+<<if $activeSlave.vagina gt -1>>
+&nbsp;&nbsp;&nbsp;&nbsp;__Accessories__: ''$activeSlave.vaginalAccessory.''
+[[None|Slave Interact][$activeSlave.vaginalAccessory to "none"]]
+ | [[Dildo plug|Slave Interact][$activeSlave.vaginalAccessory to "dildo"]]
+ | [[Huge dildo plug|Slave Interact][$activeSlave.vaginalAccessory to "huge dildo"]]
+ | [[Chastity belt|Slave Interact][$activeSlave.vaginalAccessory to "chastity belt"]]
+<</if>>
+<</nobr>>

@@ -1,0 +1,49 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+At the end of a long day, you take a moment to watch the comings and goings of your arcology to decompress. While doing so, you notice someone who's clearly had a longer day than you. <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is making her tired way back to the kitchen for a meal and then bed after a long day of sex work. She's stripped off her soiled clothes already, and is clearly too tired to care about nudity at all.
+
+She comes around the corner and <<if ($PC.boobs gt 0)>>runs into your prominent rack<<else>>almost runs into you<</if>>. She stops and stares, struggling to find the appropriate thing to say or do, but too exhausted to manage it. Even though she's been obediently cleaning herself between fucks, she looks used up. Her $activeSlave.skin skin is reddened here and there.<<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>> Her <<if ($activeSlave.pussylips gt 1)>>generous<<else>>poor<</if>> pussylips are puffy, and you have no doubt her vagina is quite sore.<</if>> The awkward way she's standing suggests that her <<if ($activeSlave.anus gt 2)>>gaping<<elseif ($activeSlave.anus gt 1)>>big<<else>>tight<</if>> asshole has had more than one dick up it recently. Even her nipples are pinker than usual, having been cruelly pinched.
+\
+<span id="result">
+<<click "Use her anyway">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You reach out, grab her shoulder, and shove her against the wall. <<if ($activeSlave.mute is 1)>>She manages to use a gesture to beg you not to,<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She manages to lisp, "Pleathe no, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>> -"<<else>>She manages to beg, "Please no, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> -"<</if>> before you give her a hard warning slap on the ass to shut her up. She's quiet, but starts to sob a little when she feels 
+<<if ($PC.dick is 0)>>the head of a strap-on<<else>>your cock<</if>> against her anus. <<if ($activeSlave.anus gt 2)>>It's gaped before you even touch it, but it's clearly sore enough that she dreads anal anyway.<<elseif ($activeSlave.anus gt 1)>>It's been fucked loose, but it's clearly sore enough that she dreads anal anyway.<<else>>It's somehow not gaped yet, and she dreads having it stretched yet again.<</if>> <<if ($activeSlave.height gt 1)>>She's tall enough that the angle isn't that uncomfortable for her.<<elseif ($activeSlave.anus gt 0)>>She hikes herself desperately up on her tiptoes to make the angle less uncomfortable for her.<<else>>She hikes herself desperately up on her tiptoes, but she's so short the angle is desperately uncomfortable for her.<</if>> She decides to try begging one last time, and <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>><<if ($activeSlave.mute is 1)>>signs to ask you to use her pussy instead<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>lisps, "Jutht uthe my puthy, please!"<<else>>whines, "Just use my pussy, please!"<</if>><<else>><<if ($activeSlave.mute is 1)>>signs to ask you to let her suck you off instead<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>lisps, "Let me thuck you off, please!"<<else>>whines, "Let me suck you off, please!"<</if>><</if>> as you shove 
+<<if ($PC.dick is 0)>>the strap-on<<else>>yourself<</if>> up her butt. She reflexively tries to get away into the wall, <<if ($activeSlave.boobs gt 2000)>>her enormous boobs squashing out to either side.<<elseif ($activeSlave.boobs gt 1000)>>her big boobs squashing out to either side.<<elseif ($activeSlave.boobs gt 300)>>her boobs crashing into it.<<else>>her sore nipples giving her a jerk as she does.<</if>> After some continued whining through her tears, she gives up and just @@color:gold;lets you@@ rape her sore ass.
+	<<set $activeSlave.trust += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Manipulate her into asking to suck you off">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You reach out, grab her shoulder, and shove her against the wall. <<if ($activeSlave.mute is 1)>>She manages to use a gesture to beg you not to,<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She manages to lisp, "Pleathe no, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>> -"<<else>>She manages to beg, "Please no, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> -"<</if>> before you give her a hard warning slap on the ass to shut her up. She's quiet, but starts to sob a little when she feels <<if ($PC.dick is 0)>>the head of a strap-on<<else>>your cock<</if>> against her anus. <<if ($activeSlave.anus gt 2)>>It's gaped before you even touch it, but it's clearly sore enough that she dreads anal anyway.<<elseif ($activeSlave.anus gt 1)>>It's been fucked loose, but it's clearly sore enough that she dreads anal anyway.<<else>>It's somehow not gaped yet, and she dreads having it stretched yet again.<</if>> She <<if ($activeSlave.mute is 1)>>signs let her suck you off instead.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>lisps, "Let me thuck you off, please!"<<else>>whines, "Let me suck you off, please!"<</if>> Having gotten her to beg for what you wanted all along, you spin her so her <<if ($activeSlave.muscles gt 2)>>powerful<<elseif ($activeSlave.muscles gt 1)>>strong<<else>>feminine<</if>> back hits the wall with a smack and shove her down it until her <<if ($activeSlave.lips gt 2)>>massive<<elseif ($activeSlave.lips gt 1)>>pillowlike<<else>>girlish<</if>> lips are level with your <<if ($PC.dick is 0)>>fake dick<<else>>dick<</if>>, and push it into her mouth without waiting for her to get ready. She gags, but does her best to work her tired mouth. When you're finally satisfied and you let her up, you aim another slap at her <<if ($activeSlave.butt gt 5)>>massive ass<<elseif ($activeSlave.butt gt 2)>>big butt<<else>>nice ass<</if>> and let her see it coming; she @@color:hotpink;accepts@@ the spank due to fright at what you might do if she dodged before fleeing.
+	<<set $activeSlave.trust += 1>>
+	<<set $activeSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Just talk with her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You take her by the hand, lead her to a nearby couch, and sit down with her, letting her seat herself beside you so she can lean against you without putting too much weight on her poor overused butthole. You ask her about your day. <<if ($activeSlave.mute is 1)>>She uses gestures to recount it through her tears. Apparently while one guy was using her anus, another thought it was hot and waited for him to be done before using her in turn, without letting her rest or clean herself. It took four cocks total for another slave to notice and rescue her.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She lisps, a little tearfully, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, thith guy wanted to uthe my butt in public. Tho of courthe I let him, and he made me thit in hith lap to do it, and held my legth back tho everyone could thee! And then another guy thought it wath hot and waited, and then fucked me in my ath too. Another girl finally noticed and rethcued me after four cockth, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I'm really thore."<<else>>She say, a little tearfully, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, this guy wanted to use my butt in public. So of course I let him, and he made me sit in his lap to do it, and held my legs back so everyone could see! And then another guy thought it was hot and waited, and then fucked me in my ass too. Another girl finally noticed and rescued me after four cocks, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I'm really sore."<</if>> She looks up at you with big $activeSlave.eyes eyes for a long moment, a final tear leaking down her $activeSlave.skin cheek, before she suddenly <<if ($activeSlave.mute is 1)>>shakes with mute laughter<<else>>giggles<</if>>. She explains herself after a while: it's not what she thought she'd be doing with her life, <<if ($activeSlave.career is 0)>>once upon a time<<else>>back when she was $activeSlave.career<</if>>. <<if ($activeSlave.mute is 1)>>She points to herself and uses both hands to mimic sodomy, as though to suggest that's all she is, before giving you a rueful smile.<<else>>"$activeSlave.slaveName the butthole ho, that's me," she lisps sadly, before giving you a rueful smile.<</if>> She kisses you and @@color:hotpink;thanks you@@ for listening.
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+</span>

@@ -1,0 +1,46 @@
+<<if def $slaves[3]>>
+<<if ($slaves[3].devotion gt 10)>>
+<<if ($slaves[3].amp isnot 1) and ($slaves[2].amp isnot 1) and ($slaves[1].amp isnot 1) and ($slaves[0].amp isnot 1)>>
+	<<set $events.push("RE devotees")>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if $bedSlaves+$masterSuiteSlaves gt 1>>
+	<<set $events.push("RE full bed")>>
+<</if>>
+
+<<if $slaves.length gt 2>>
+<<if ($slaves[$slaves.length-2].devotion lt -4)>>
+<<if ($slaves[$slaves.length-2].amp isnot 1)>>
+<<if ($slaves[$slaves.length-2].assignment isnot "be confined in the arcade")>>
+<<if ($slaves[$slaves.length-1].amp isnot 1)>>
+<<if ($slaves[$slaves.length-1].assignment isnot "be confined in the arcade")>>
+	<<set $events.push("RE rebels")>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if $brothelSlaves gt 3>>
+    <<set $events.push("RE busy brothel")>>
+<</if>>
+<<if $promenadeSlaves gt 3>>
+    <<set $events.push("RE busy promenade")>>
+<</if>>
+<<if $dairySlaves gt 3>>
+    <<set $events.push("RE busy dairy")>>
+<</if>>
+<<if $servantsQuartersSlaves gt 3>>
+    <<set $events.push("RE busy servants quarters")>>
+<</if>>
+<<if $arcadeSlaves gt 3>>
+    <<set $events.push("RE busy arcade")>>
+<</if>>
+<<if $masterSuiteSlaves gt 3>>
+  <<if $Concubine isnot 0>>
+    <<set $events.push("RE busy master suite")>>
+  <</if>>
+<</if>>

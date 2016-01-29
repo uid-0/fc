@@ -1,0 +1,23 @@
+<<nobr>>
+
+''Your head girl __@@color:pink;$HeadGirl.slaveName@@__'' notices that ''__@@color:pink;$activeSlave.slaveName@@__'' isn't as skilled at entertainment as she is.
+
+<<if ($HeadGirl.devotion lte 4)>>
+	Since your head girl is not obedient, her lazy attempts to teach are ineffectual.
+<<elseif ($HeadGirl.fetish is "humiliation")>>
+	In spare moments she teaches $activeSlave.slaveName how to entertain. Your head girl's enthusiasm for public display is infectious. @@color:green;$activeSlave.slaveName's entertainment skills have improved.@@
+	<<set $activeSlave.entertainSkill += 1>>
+<<elseif (random(1,100) lt (20+$HeadGirl.age+($HeadGirl.intelligence*10)+($activeSlave.intelligence*10)))>>
+	In spare moments she teaches $activeSlave.slaveName how to entertain. @@color:green;$activeSlave.slaveName's entertainment skills have improved.@@
+	<<set $activeSlave.entertainSkill += 1>>
+<<else>>
+	$HeadGirl.slaveName does her best but $activeSlave.slaveName doesn't learn much from her this week.
+<</if>>
+
+<<if $HeadGirl.age gt 30>>
+	$HeadGirl.slaveName's age and experience are an advantage in teaching courtesan skills.
+<<elseif $HeadGirl.age lt 25>>
+	$HeadGirl.slaveName's youth and inexperience are a disadvantage in teaching courtesan skills.
+<</if>>
+
+<</nobr>>\

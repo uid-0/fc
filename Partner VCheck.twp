@@ -1,0 +1,13 @@
+<<nobr>>
+  <<if ($partner.vagina is 0) and ($partner.anus is 0) and ($partner.vaginalAccessory isnot "chastity belt")>>
+      @@color:lime;This breaks in $partner.slaveName's virgin holes.@@
+      <<set $partner.vagina to 1>>
+      <<set $partner.anus to 1>>
+  <<elseif ($partner.vagina is 0) and ($partner.vaginalAccessory isnot "chastity belt")>>
+      @@color:lime;This breaks in $partner.slaveName's virgin pussy.@@
+      <<set $partner.vagina to 1>>
+  <<elseif ($partner.anus is 0)>>
+      @@color:lime;This breaks in $partner.slaveName's virgin ass.@@
+      <<set $partner.anus to 1>>
+  <</if>>
+<</nobr>>\

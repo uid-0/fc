@@ -1,0 +1,29 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Random Nonindividual Event">>
+
+<</nobr>>\
+\
+One day, you walk by the commercial space where the strip club that closed was located. The girls you set up in cheap housing tried to run the place as a worker-owned strip bar for a while, but as you suspected, they were obliged to start whoring in short order. With the price of sex driven so low by slave competition, there's hardly any profit in bodies patrons can't even touch. The girls here might be prostitutes now, but they're still free and they're surviving.
+
+As you pass, a pretty bottle blonde comes running out. "Hey," she calls, "you're the owner! You set us up with this place!" You ask her how they're doing. "Well," she says, smiling ruefully, "turning tricks ain't easy, you know. But we get by. Those rooms you set up for us are nice and cheap, even if we're packed in there like sorority girls." She winks. "Hey, I don't suppose you've fucked a free woman lately? I'll give you an Arcology Tour, on the house. Least I can do."
+\
+<span id="result">
+<<click "Take an Arcology Tour">>
+	<<replace "#result">>
+	The cubicle she takes you back into is small, but clean and well-kept. She gives you a kiss on the cheek. "That's not part of the Arcology Tour. Sorry. Here's the start of the real tour." She sucks you to full mast while shucking off her skimpy clothing. Then she turns around and slides you into her pussy with the ease of long practice. After a good long standing fuck, she begs you to "finish the tour" in her ass and then "pay the tour guide" by coming in her mouth. Afterward, as she's hurrying back into her clothes, she says, "We've got the money you paid to set those rooms up, @@color:yellowgreen;here it is.@@ And we're doing pretty good, so we could use a little more working space. We'd like the vacant space next door. We'll furnish it, if you'll let us have it?" @@color:green;Your arcology's prosperity has increased.@@
+	<<set $AProsperity += 2>>
+	<<set $space -= 1>>
+	<<set $cash += 500>>
+    <</replace>>
+<</click>>
+<<click "Politely decline">>
+	<<replace "#result">>
+	"Aw," she says, "you're no fun. Well anyway, we've got the money you paid to set those rooms up, @@color:yellowgreen;here it is.@@ And we're doing pretty good, so we could use a little more working space. We'd like the vacant space next door. We'll furnish it, if you'll let us have it?" @@color:green;Your arcology's prosperity has increased.@@
+	<<set $AProsperity += 2>>
+	<<set $space -= 1>>
+	<<set $cash += 500>>
+    <</replace>>
+<</click>>
+</span>

@@ -1,0 +1,16 @@
+<<nobr>>
+  <<if ($activeSlave.anus is 0)>>
+      @@color:lime;This breaks in $activeSlave.slaveName's virgin ass.@@
+      <<set $activeSlave.anus to 1>>
+      <<if ($activeSlave.devotion gt 4)>>
+      	She @@color:mediumorchid;hates@@ and @@color:gold;fears@@ you for violating her virgin butt.
+    	<<set $activeSlave.devotion -= 1>>
+    	<<set $activeSlave.trust -= 1>>
+      <<elseif ($activeSlave.devotion lt -4)>>
+      	@@color:mediumorchid;She hates you for violating her virgin butt.@@
+    	<<set  $activeSlave.devotion -= 1>>
+      <<else>>
+      	She accepts losing her anal virginity.
+ 	  <</if>>    
+  <</if>>
+<</nobr>>\

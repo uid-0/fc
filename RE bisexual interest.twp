@@ -1,0 +1,49 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $bisexualInterestTargetName == $slaves[$i].ID>>
+<<set $activeSlave to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<</nobr>>\
+\
+$bisexualName is happily enjoying a little female companionship. On the feeds, you see her in the showers with another slave; they're curled up together on the shower floor with the warm water playing over them both, kissing and giggling. After a while their play gets more sexual but stays loving and light, with the two of them nuzzling and nipping each other as they enjoy each other's touch and the gentle play of the water. You see <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> watching them with an open mouth, apparently lost to the world. You call her up after she's done getting an eyeful of female slave love.
+
+$activeSlave.slaveName hesitates before explaining herself, and she's obviously aroused: <<if ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0)>>though her hormone-filled body can't get her dick hard any more, she's got a string of precum coming off her member<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>though her gelded body can't get her dick hard any more, she's got a string of precum coming off her limp member<<elseif $activeSlave.dick gt 4>>her gigantic cock is standing out like a mast<<elseif $activeSlave.dick gt 2>>she's sporting an impressive erection<<elseif $activeSlave.dick gt 0>>her little penis is rock hard<<elseif $activeSlave.clit gt 0>>her large clit is visibly engorged<<else>>her nipples are hard and there's a sheen on her pussylips<</if>>. She lives in a world of female sexual availability, so it's not surprising that she seems to want to take advantage. It should be possible to either encourage this fascination with slave girls or steer her away from it for now.
+\
+<span id="result">
+<<click "Turn her appetites towards women as well as men">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	For the remainder of the week, you forbid $activeSlave.slaveName to orgasm to anything but female attention<<if ($PC.dick is 0)>> - not difficult, since you can give it to her yourself<</if>>. This is not a simple limitation, but an invitation to sexual creativity. If she is required to fuck a man, she must see a female slave<<if ($PC.dick is 0)>>(or you)<</if>> to get off afterward. If she needs relief, one of your other slaves is required to get her off, with special attention to breasts and female parts. @@color:hotpink;She has become more obedient,@@ and @@color:pink;her sexuality now focuses on both genders.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 10>>
+    <<set $oralTotal += 10>>
+	<<set $activeSlave.fetish to "likes girls">>
+	<<set $activeSlave.fetishDiscovered to 1>>
+    <</replace>>
+<</click>>
+<<click "Steer her away from bisexuality for the moment">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Good slaves get aroused according to their masters' whim, not their own silly tendencies. The solution to this fascination is simple: you require $activeSlave.slaveName to take dick; a lot of dick. You'll keep an eye on her, and with this correction @@color:hotpink;she'll become more obedient.@@
+	<<set $activeSlave.devotion += 1>>
+    <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+    	<<set $activeSlave.vaginalCount += 10>>
+		<<set $vaginalTotal += 10>>
+    <<else>>
+    	<<set $activeSlave.analCount += 10>>
+		<<set $analTotal += 10>>
+    <</if>>
+    <</replace>>
+<</click>>
+</span>

@@ -1,0 +1,45 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate XX Slave">>
+<<set $activeSlave.origin to "She was sold to you as a way of disposing of an inconveniently pregnant young woman.">>
+<<set $activeSlave.career to $youngCareers.random()>>
+<<set $activeSlave.health to random(-2,2)>>
+<<set $activeSlave.devotion to random(-9,-5)>>
+<<set $activeSlave.trust to random(-9,-5)>>
+<<set $activeSlave.preg to random(20,30)>>
+<<set $activeSlave.vagina to 1>>
+<<set $activeSlave.age to random(18,19)>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+The sexual and moral revolution taking place in the Free Cites has spread back into the old world, producing an inevitable reaction. Thus there are still many places in the world where it is socially embarrassing for one's young female relatives to appear pregnant and unmarried, and where direct solutions to this unfortunate situation are frowned upon. You receive a communication from one such place, from a traditionalist family whose daughter has dishonored them in this way.
+
+Having her disappear discreetly into your arcology would be a convenient and face-saving way of resolving the situation. Your society's respect for slave pregnancy gives them a plausible way to salve their own conciences where the baby is concerned. As for the girl, having her out of the way is what matters to them.
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	When she arrives, she is the very picture of a lost and very pregnant young waif. She clearly feels some hope at leaving her traditionalist home for a more modern society, but she has just as clearly heard enough about the Free Cities to know that she's likely to buy her presence here through long years of sexual labor. She sighs with relief at getting off her feet when the enslavement process finally allows her to sit.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

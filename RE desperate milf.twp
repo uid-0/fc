@@ -1,0 +1,50 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<if $seeDicks lt 2>>
+	<<display "Generate XX Slave">>
+<<else>>
+	<<display "Generate XY Slave">>
+<</if>>
+<<set $activeSlave.origin to "She sold herself into slavery to escape life on the streets.">>
+<<set $activeSlave.devotion to random(0,3)>>
+<<set $activeSlave.trust to random(0,3)>>
+<<set $activeSlave.boobs += 400>>
+<<set $activeSlave.butt += 1>>
+<<set $activeSlave.anus += 1>>
+<<set $activeSlave.face to 1>>
+<<set $activeSlave.fetish to "none">>
+<<set $activeSlave.fetishDiscovered to 0>>
+<<set $activeSlave.age to random(30,40)>>
+<<set $activeSlave.health to random(-8,-6)>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+A middle-aged woman comes to your penthouse for an interview. She's clearly unwell. Instead of standing in front of your desk, she kneels and looks at the floor as she speaks. "Sir, I'm desperate. I came to the Free Cities to build a better life, but... it hasn't worked out for me. I can't afford medical care, and I guess I'm too scared to try streetwalking yet, though I'll have to soon. I hear you're a known slave owner, and that you give your slaves good medical care... could you enslave me, Sir? I know I'm still pretty enough, so I'd be used as a sex slave." She weeps quietly as she talks, but she's brave enough to get through her little speech.
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	She sobs as the biometric scanners scrupulously record her every particular as belonging not to a person but to a piece of human property. She willingly places her biometric signature in testament to the truth of her voluntary enslavement. The process is completed with a distinct anticlimax: she is one of your slaves now. She looks almost relaxed, as though she's at peace, now.
+	<<set $nextLink to "AS Dump">>\
+	<<set $returnTo to "RIE Eligibility Check">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

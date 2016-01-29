@@ -1,0 +1,238 @@
+<<nobr>>
+
+<<set $nextButton to "Back">>
+<<set $nextLink to "Rules Assistant">>
+<<set $encyclopedia to "Personal Assistant">>
+
+<</nobr>>\
+\
+//Please use the 'no default setting' option to identify areas I should not address.//
+
+__Body modification options:__
+<<nobr>>
+
+Ear piercings: ''
+<<if $defaultRulesSlave.earPiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.earPiercing is 0>>None.<<elseif $defaultRulesSlave.earPiercing is 1>>Light.
+<<elseif $defaultRulesSlave.earPiercing is 2>>Heavy.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.earPiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.earPiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.earPiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.earPiercing to 2]]
+
+<</nobr>>
+<<nobr>>
+
+Nasal piercings: ''
+<<if $defaultRulesSlave.nosePiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.nosePiercing is 0>>None.<<elseif $defaultRulesSlave.nosePiercing is 1>>Light.
+<<elseif $defaultRulesSlave.nosePiercing is 2>>Heavy.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.nosePiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.nosePiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.nosePiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.nosePiercing to 2]]
+
+<</nobr>>
+<<nobr>>
+
+Eyebrow piercings: ''
+<<if $defaultRulesSlave.eyebrowPiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.eyebrowPiercing is 0>>None.<<elseif $defaultRulesSlave.eyebrowPiercing is 1>>Light.
+<<elseif $defaultRulesSlave.eyebrowPiercing is 2>>Heavy.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.eyebrowPiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.eyebrowPiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.eyebrowPiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.eyebrowPiercing to 2]]
+
+<</nobr>>
+<<nobr>>
+
+Navel piercing: ''
+<<if $defaultRulesSlave.navelPiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.navelPiercing is 0>>None.<<elseif $defaultRulesSlave.navelPiercing is 1>>Light.
+<<elseif $defaultRulesSlave.navelPiercing is 2>>Heavy.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.navelPiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.navelPiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.navelPiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.navelPiercing to 2]]
+
+<</nobr>>
+<<nobr>>
+
+Nipple piercings: ''
+<<if $defaultRulesSlave.nipplesPiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.nipplesPiercing is 0>>None.<<elseif $defaultRulesSlave.nipplesPiercing is 1>>Light.
+<<elseif $defaultRulesSlave.nipplesPiercing is 2>>Heavy.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.nipplesPiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.nipplesPiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.nipplesPiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.nipplesPiercing to 2]]
+
+<</nobr>>
+<<nobr>>
+
+Lip piercings: ''
+<<if $defaultRulesSlave.lipsPiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.lipsPiercing is 0>>None.<<elseif $defaultRulesSlave.lipsPiercing is 1>>Light.
+<<elseif $defaultRulesSlave.lipsPiercing is 2>>Heavy.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsPiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsPiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsPiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsPiercing to 2]]
+
+<</nobr>>
+<<nobr>>
+
+Tongue piercing: ''
+<<if $defaultRulesSlave.tonguePiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.tonguePiercing is 0>>None.<<elseif $defaultRulesSlave.tonguePiercing is 1>>Light.
+<<elseif $defaultRulesSlave.tonguePiercing is 2>>Heavy.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.tonguePiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.tonguePiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.tonguePiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.tonguePiercing to 2]]
+
+<</nobr>>
+<<nobr>>
+
+Clit piercing: ''
+<<if $defaultRulesSlave.clitPiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.clitPiercing is 0>>None.<<elseif $defaultRulesSlave.clitPiercing is 1>>Light.
+<<elseif $defaultRulesSlave.clitPiercing is 2>>Heavy.
+<<elseif $defaultRulesSlave.clitPiercing is 3>>Smart.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.clitPiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.clitPiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.clitPiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.clitPiercing to 2]] | [[Smart|Body Mod Rules Assistant Settings][$defaultRulesSlave.clitPiercing to 3]] //Warning: expensive//
+
+<</nobr>>\
+<<nobr>>
+
+<<if ($defaultRulesSlave.vagina isnot -1)>>
+<br>
+Pussylips piercings: ''
+<<if $defaultRulesSlave.vaginaPiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.vaginaPiercing is 0>>None.<<elseif $defaultRulesSlave.vaginaPiercing is 1>>Light.
+<<elseif $defaultRulesSlave.vaginaPiercing is 2>>Heavy.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaPiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaPiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaPiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaPiercing to 2]]
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if ($seeDicks gt 0)>>
+<br>
+Shaft piercings: ''
+<<if $defaultRulesSlave.dickPiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.dickPiercing is 0>>None.<<elseif $defaultRulesSlave.dickPiercing is 1>>Light.
+<<elseif $defaultRulesSlave.dickPiercing is 2>>Heavy.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickPiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickPiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickPiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickPiercing to 2]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+Perianal piercings: ''
+<<if $defaultRulesSlave.anusPiercing is "no default setting">>No default setting.<<elseif $defaultRulesSlave.anusPiercing is 0>>None.<<elseif $defaultRulesSlave.anusPiercing is 1>>Light.
+<<elseif $defaultRulesSlave.anusPiercing is 2>>Heavy.<</if>>''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusPiercing to "no default setting"]] | [[None|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusPiercing to 0]] | [[Light|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusPiercing to 1]] | [[Heavy|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusPiercing to 2]]
+
+<</nobr>>
+
+<<nobr>>
+
+Chest tattoos: ''$defaultRulesSlave.boobsTat.''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.boobsTat to "no default setting"]]
+	 | [[Tribal patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.boobsTat to "tribal patterns"]]
+	 | [[Floral designs|Body Mod Rules Assistant Settings][$defaultRulesSlave.boobsTat to "floral designs"]]
+	 | [[Lewd scenes|Body Mod Rules Assistant Settings][$defaultRulesSlave.boobsTat to "lewd scenes"]]
+	 | [[Degrading language|Body Mod Rules Assistant Settings][$defaultRulesSlave.boobsTat to "degrading language"]]
+	 | [[Slutty advertisements|Body Mod Rules Assistant Settings][$defaultRulesSlave.boobsTat to "slutty advertisements"]]
+	 | [[Demeaning inscription|Body Mod Rules Assistant Settings][$defaultRulesSlave.boobsTat to "demeaning inscriptions"]]
+	 | [[Bovine patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.boobsTat to "bovine patterns"]]
+
+<</nobr>>
+<<nobr>>
+
+Buttock tattoos: ''$defaultRulesSlave.buttTat.''
+[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.buttTat to "no default setting"]]
+	 | [[Tribal patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.buttTat to "tribal patterns"]]
+	 | [[Floral designs|Body Mod Rules Assistant Settings][$defaultRulesSlave.buttTat to "floral designs"]]
+	 | [[Lewd scenes|Body Mod Rules Assistant Settings][$defaultRulesSlave.buttTat to "lewd scenes"]]
+	 | [[Degrading language|Body Mod Rules Assistant Settings][$defaultRulesSlave.buttTat to "degrading language"]]
+	 | [[Slutty advertisements|Body Mod Rules Assistant Settings][$defaultRulesSlave.buttTat to "slutty advertisements"]]
+	 | [[Demeaning inscription|Body Mod Rules Assistant Settings][$defaultRulesSlave.buttTat to "demeaning inscriptions"]]
+	 | [[Bovine patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.buttTat to "bovine patterns"]]
+
+<</nobr>>
+<<nobr>>
+
+Facial tattoos: ''$defaultRulesSlave.lipsTat.''
+	[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsTat to "no default setting"]]
+	 | [[Tribal patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsTat to "tribal patterns"]]
+	 | [[Floral designs|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsTat to "floral designs"]]
+	 | [[Permanent makeup|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsTat to "permanent makeup"]]
+	 | [[Degrading language|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsTat to "degrading language"]]
+	 | [[Slutty advertisements|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsTat to "slutty advertisements"]]
+	 | [[Demeaning inscription|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsTat to "demeaning inscriptions"]]
+	 | [[Bovine patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsTat to "bovine patterns"]]
+
+<</nobr>>
+<<nobr>>
+
+Shoulder tattoos: ''$defaultRulesSlave.shouldersTat.''
+	[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.lipsTat to "no default setting"]]
+	 | [[Tribal patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.shouldersTat to "tribal patterns"]]
+	 | [[Floral designs|Body Mod Rules Assistant Settings][$defaultRulesSlave.shouldersTat to "floral designs"]]
+	 | [[Lewd scenes|Body Mod Rules Assistant Settings][$defaultRulesSlave.shouldersTat to "lewd scenes"]]
+	 | [[Degrading language|Body Mod Rules Assistant Settings][$defaultRulesSlave.shouldersTat to "degrading language"]]
+	 | [[Slutty advertisements|Body Mod Rules Assistant Settings][$defaultRulesSlave.shouldersTat to "slutty advertisements"]]
+	 | [[Demeaning inscription|Body Mod Rules Assistant Settings][$defaultRulesSlave.shouldersTat to "demeaning inscriptions"]]
+	 
+<</nobr>>
+<<nobr>>
+
+Arm tattoos: ''$defaultRulesSlave.armsTat.''
+	[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.armsTat to "no default setting"]]
+	 | [[Tribal patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.armsTat to "tribal patterns"]]
+	 | [[Floral designs|Body Mod Rules Assistant Settings][$defaultRulesSlave.armsTat to "floral designs"]]
+	 | [[Lewd scenes|Body Mod Rules Assistant Settings][$defaultRulesSlave.armsTat to "lewd scenes"]]
+	 | [[Degrading language|Body Mod Rules Assistant Settings][$defaultRulesSlave.armsTat to "degrading language"]]
+	 | [[Slutty advertisements|Body Mod Rules Assistant Settings][$defaultRulesSlave.armsTat to "slutty advertisements"]]
+	 | [[Demeaning inscription|Body Mod Rules Assistant Settings][$defaultRulesSlave.armsTat to "demeaning inscriptions"]]
+	 | [[Bovine patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.armsTat to "bovine patterns"]]
+
+<</nobr>>
+<<nobr>>
+
+Leg tattoos: ''$defaultRulesSlave.legsTat.''
+	[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.legsTat to "no default setting"]]
+	 | [[Tribal patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.legsTat to "tribal patterns"]]
+	 | [[Floral designs|Body Mod Rules Assistant Settings][$defaultRulesSlave.legsTat to "floral designs"]]
+	 | [[Lewd scenes|Body Mod Rules Assistant Settings][$defaultRulesSlave.legsTat to "lewd scenes"]]
+	 | [[Degrading language|Body Mod Rules Assistant Settings][$defaultRulesSlave.legsTat to "degrading language"]]
+	 | [[Slutty advertisements|Body Mod Rules Assistant Settings][$defaultRulesSlave.legsTat to "slutty advertisements"]]
+	 | [[Demeaning inscription|Body Mod Rules Assistant Settings][$defaultRulesSlave.legsTat to "demeaning inscriptions"]]
+	 | [[Bovine patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.legsTat to "bovine patterns"]]
+
+<</nobr>>
+<<nobr>>
+
+Lower back tattoo: ''$defaultRulesSlave.stampTat.''
+	[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.stampTat to "no default setting"]]
+	 | [[Tribal patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.stampTat to "tribal patterns"]]
+	 | [[Floral designs|Body Mod Rules Assistant Settings][$defaultRulesSlave.stampTat to "floral designs"]]
+	 | [[Lewd scenes|Body Mod Rules Assistant Settings][$defaultRulesSlave.stampTat to "lewd scenes"]]
+	 | [[Degrading language|Body Mod Rules Assistant Settings][$defaultRulesSlave.stampTat to "degrading language"]]
+	 | [[Slutty advertisements|Body Mod Rules Assistant Settings][$defaultRulesSlave.stampTat to "slutty advertisements"]]
+	 | [[Demeaning inscription|Body Mod Rules Assistant Settings][$defaultRulesSlave.stampTat to "demeaning inscriptions"]]
+	 | [[Bovine patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.stampTat to "bovine patterns"]]
+
+<</nobr>>
+<<nobr>>
+
+Abdominal tattoo: ''$defaultRulesSlave.vaginaTat.''
+	[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaTat to "no default setting"]]
+	 | [[Tribal patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaTat to "tribal patterns"]]
+	 | [[Floral designs|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaTat to "floral designs"]]
+	 | [[Lewd scenes|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaTat to "lewd scenes"]]
+	 | [[Degrading language|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaTat to "degrading language"]]
+	 | [[Slutty advertisements|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaTat to "slutty advertisements"]]
+	 | [[Demeaning inscription|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaTat to "demeaning inscriptions"]]
+	 | [[Bovine patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.vaginaTat to "bovine patterns"]]
+
+<</nobr>>\
+<<nobr>>
+
+<<if $seeDicks gt 0>>
+<br>
+Dick tattoo: ''$defaultRulesSlave.dickTat.''
+	[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickTat to "no default setting"]]
+	 | [[Tribal patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickTat to "tribal patterns"]]
+	 | [[Floral designs|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickTat to "floral designs"]]
+	 | [[Degrading language|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickTat to "degrading language"]]
+	 | [[Slutty advertisements|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickTat to "slutty advertisements"]]
+	 | [[Demeaning inscription|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickTat to "demeaning inscriptions"]]
+	 | [[Bovine patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.dickTat to "bovine patterns"]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+Anal tattoo or bleaching: ''$defaultRulesSlave.anusTat.''
+	[[No default setting|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusTat to "no default setting"]]
+	 | [[Bleached|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusTat to "bleached"]]
+	 | [[Tribal pattern|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusTat to "tribal patterns"]]
+	 | [[Floral designs|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusTat to "floral designs"]]
+	 | [[Degrading language|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusTat to "degrading language"]]
+	 | [[Slutty advertisements|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusTat to "slutty advertisements"]]
+	 | [[Demeaning inscription|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusTat to "demeaning inscriptions"]]
+	 | [[Bovine patterns|Body Mod Rules Assistant Settings][$defaultRulesSlave.anusTat to "bovine patterns"]]
+
+<</nobr>>

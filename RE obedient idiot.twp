@@ -1,0 +1,60 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+Your personal assistant breaks in on your work at your desk. <<if $assistant is 0>>"Sir,"<<else>>"Sweetheart,"<</if>> she says, "<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is having trouble figuring out the meal dispenser again." <<if $assistant is 0>>The report is deadpan, but she brings up a visual feed.<<else>>She brings up a visual feed. "Poor baby!" she exclaims.<</if>>
+
+Slaves are supposed to place a cup under a spigot, which detects the cup's presence and dispenses the appropriate nutrition for the girl. Unfortunately this concept seems a little tough for $activeSlave.slaveName. With no one around to ask for help, she has resorted to trying to suck food out of the spigot with her mouth. With no cup to be detected, she's not getting very far, and is getting bitterly frustrated.
+\
+<span id="result">
+<<click "Give her something more appropriate to suck on">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Your personal assistant, as usual, has to give the stupid slut considerable coaching to get her to your office without getting lost. This is a near-miraculous imbecility, as the penthouse is expressly designed to make it nearly impossible to get anywhere from anywhere else without passing by the office door. She understands orders to <<if ($PC.dick is 0)>>perform cunninglingus<<else>>suck a dick<</if>>, though, and gets down to it eagerly enough. When she finishes the job, <<if ($PC.dick is 0)>>wipes her mouth<<else>>she busily swallows every drop<</if>> and then looks up at you doubtfully. <<if ($activeSlave.mute is 1)>>She slowly spells out a question with her hands, asking if she's a good slave.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She lisps a hesitant question: "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, am I a good thlave?"<<else>>She mumbles a hesitant question: "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, am I a good slave?"<</if>> You tell her that she is, running a hand <<if $activeSlave.hlength is "shaved bald">>across her bald scalp<<else>>through her hair<</if>>. She seems @@color:hotpink;reassured,@@ and thankful when you give her a cup of her proper rations from your own hand.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 1>>
+    <<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Reassure her and get her to slow down">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She's so intent on trying to suck off the food dispenser that she doesn't hear you enter the room. She starts with surprise when you encircle her waist with your arms and murmur reassuringly in her ear. <<if ($activeSlave.mute is 1)>>She sadly gestures at the spigot and then flicks her own head.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She lisps, "Thorry <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I'm trying but ith hard."<<else>>She says sadly, "Sorry <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I'm trying to be a good slave but it's hard."<</if>> You kindly tell her that you know she's trying, and that that's what really matters. <<if ($activeSlave.mute is 1)>>Her hands awkwardly ask, "Really?"<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Really, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>?" she asks hopefully.<<else>>"Really, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>?" she asks hopefully.<</if>> You whisper into her ear that yes, she will be all right as long as she does her best. She wiggles her butt against you a little and giggles at the responding stiffness she feels between her buttocks. She shimmies down and takes you into her mouth, looking you in the eyes the whole time and @@color:hotpink;smiling@@ as much as she can manage with a dick in her mouth.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 1>>
+    <<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Spank the stupid out of her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She's so intent on trying to suck off the food dispenser that she doesn't hear you enter the room. She starts with surprise when you seize her and push her facedown across the counter. After making her confirm that she can hear you, you patiently repeat the very simple instructions for getting meals from the kitchen. Then, you tell her to repeat them. She manages the first step fine and has completely forgotten the second. The moment she hesitates, she has an instant to hear the rush of air trying to get out of the way of your speeding palm before it contacts the $activeSlave.skin skin of her buttocks. She writhes and cries and promises to try harder, but her poor rear end is almost raw before she gets it all right. She leaves the kitchen snuffling sadly to herself, but in the coming days she really does seem to @@color:gold;do her best@@ to avoid another beating.
+	<<set $activeSlave.trust -= 1>>
+    <</replace>>
+<</click>>
+<<if $arcade gt 0>>\
+<<click "Sentence her to a month in the arcade">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+    $activeSlave.slaveName screams and begs when she realizes what her punishment for being stupid is to be, but you are obdurate. <<if ($activeSlave.muscles gt 1)>>Her powerful form has to be sedated for immurement in the arcade.<<elseif ($activeSlave.weight gt -1)>>Her desperate struggles make immuring her in the arcade difficult.<<else>>Her thin form makes immuring her in the arcade pathetically easy.<</if>> After she's properly confined, the only sign of her discomfiture is a slight movement of her $activeSlave.skin butt as she wriggles desperately against her restraints.
+	<<set $activeSlave.assignment to "be confined in the arcade">><<set $activeSlave.assignmentVisible to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+	<<set $activeSlave.sentence to 4>>
+    <</replace>>
+<</click>>
+<</if>>\
+</span>

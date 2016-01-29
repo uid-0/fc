@@ -1,0 +1,146 @@
+<<nobr>>
+
+<<set $activeSlave.mammaryCount += 1>>
+<<set $mammaryTotal += 1>>
+
+You call her over so you can 
+<<if ($activeSlave.boobs gte 1000)>>
+	play with her huge tits.
+<<elseif ($activeSlave.boobsImplant gt 250)>>
+	play with her fake tits.
+<<elseif ($activeSlave.boobs gte 650)>>
+	play with her big tits.
+<<elseif ($activeSlave.boobs gte 300)>>
+	play with her small tits.
+<<else>>
+	play with her flat tits.
+<</if>>
+
+<<if ($activeSlave.boobsTat is "tribal patterns")>>
+	The tattoos on her breasts certainly drawn attention to her nipples.
+<<elseif ($activeSlave.boobsTat is "lewd scenes")>>
+	The tattoos on her abdomen nicely illustrate what you mean to do with her: a titfuck.
+<<elseif ($activeSlave.boobsTat is "degrading language")>>
+	The tattoos on her chest are asking you to use those breasts, after all.
+<</if>>
+
+<<if ($activeSlave.nipples gt 2)>>
+	Her nipples are so large they give her breasts an unavoidably lewd appeal as they jut outward..
+<<elseif ($activeSlave.nipples is 2)>>
+	Her huge nipples beg to be sucked.
+<<elseif ($activeSlave.nipples is 1)>>
+	Her big nipples jut out proudly.
+<</if>>
+
+<<if ($activeSlave.nipplesPiercing gt 1) and ($activeSlave.amp is 1)>>
+	You carry her over, playing with the chain between her nipples.
+<<elseif ($activeSlave.nipplesPiercing gt 1)>>
+	You pull her over by the chain between her nipples.
+<<elseif ($activeSlave.nipplesPiercing is 1)>>
+	Her nipple piercings glint enticingly.
+<</if>>
+
+<<if ($activeSlave.amp is 1)>>
+  <<if $PC.dick isnot 0>>
+	Her limbless <<if $seeRace is 1>>$activeSlave.race <</if>>torso makes her a unique appliance for mammary intercourse. You lay her down on the ground on her back, lube her cleavage, and straddle her torso. With your cock between her breasts, you <<if ($activeSlave.boobs gt 650)>>squash her tits together to form a nice lubricated channel,<<else>>hold your cock in place,<</if>> and ride back and forth on her. She has some trouble breathing under the assault, but she manages. And for the finale, she's totally unable to avoid a perfect cumshot.
+  <<elseif $PC.boobs isnot 0>>
+	You set her limbless torso upright on your lap, facing you, so that your breasts and hers are resting heavily against one another. She turns her head to avoid getting splashed in the eyes as you add a generous coating of oil to the heaving breastflesh. You reach around to grab her by the hips and slide her up and down, giving you both a wonderful mammary oil massage.
+  <<else>>
+	You set her limbless torso on the floor, and tease her for a while until her nipples are rock hard. This done, you kneel down on her with each of your legs aside her torso, and hump your pussy back and forth on the stiff nub of one nipple. She lies there, unable to do anything but comply, squirming with the stimulation.
+  <</if>>
+
+<<elseif ($activeSlave.fetish is "boobs") and ($activeSlave.fetishDiscovered is 1) and ($PC.dick isnot 0)>>
+	She comes over hurriedly, already presenting her breasts. She gives you a titjob with her lubricated cleavage while you sit at your desk, playing with her own nipples and moaning with pleasure. As you get close to orgasm, you push her hands away and take over, rolling her <<if $activeSlave.nipples gt 2>>massive <<elseif $activeSlave.nipples gt 1>>huge <<elseif $activeSlave.nipples gt 0>>big <</if>>nipples between your fingers and thumbs. When you finish, you give them a hard pull, sending her gasping over the edge as well.
+<<elseif ($activeSlave.fetish is "cumslut") and ($activeSlave.fetishDiscovered is 1) and ($activeSlave.dick isnot 0) and ($PC.dick isnot 0)>>
+	She comes over eagerly, with hunger in her eyes. She gives you a titjob with her lubricated cleavage while you sit at your desk. As a cumslut she's almost desperate to get your cum into her <<if $seeRace is 1>>$activeSlave.race <</if>>mouth and <<if ($activeSlave.hormones lt 1) and ($activeSlave.balls isnot 0)>>jacks herself off<<else>>rubs her sadly limp member<</if>> in anticipation. When you finish, she sits back with an ecstatic look on her face and lets your cum rest in her mouth as she climaxes into her hand. She pours her own cum from her hand into her mouth so it can mingle with yours.
+<<elseif ($activeSlave.fetish is "cumslut") and ($activeSlave.fetishDiscovered is 1) and ($PC.dick isnot 0)>>
+	She comes over eagerly, with hunger in her eyes. She gives you a titjob with her lubricated cleavage while you sit at your desk. As a cumslut she's almost desperate to get your cum into her <<if $seeRace is 1>>$activeSlave.race <</if>>mouth and rubs herself in anticipation. When you finish, she sits back with an ecstatic look on her face and lets your cum rest in her mouth as she climaxes.
+<<elseif  $activeSlave.devotion lt -4>>
+  <<if $PC.dick isnot 0>>
+	She tries to refuse you, so you throw her down on the couch next to your desk and squeeze lubricant between her $activeSlave.skin breasts. You straddle her torso, hold her boobs together, and fuck her cleavage. Your cum splashes her crying face.
+  <<elseif $PC.boobs isnot 0>>
+	She tries to refuse you, so you throw her down on the couch next to your desk and squirt lubricant all over her $activeSlave.skin breasts. Then, you lie down atop her with your breasts meshing with hers and begin to slide up and down, stimulating your nipples wonderfully. She tries to turn her head away, but you reach up to force her unwilling mouth to accept your insistent tongue.
+  <<else>>
+	She tries to refuse you, so you throw her down on the couch next to your desk and straddle her face, grinding your pussy against her unwilling mouth. You begin to grope her breasts and pinch her nipples to hardness, and hen she's slow at eating you out, you twist them cruelly. The pain makes her squeal into your pussy, a lovely sensation, so you manhandle her without mercy until you climax against her gasping face.
+  <</if>>
+<<elseif ($activeSlave.devotion lt 4) and ($activeSlave.lactation gt 0)>>
+  <<if $PC.dick isnot 0>>
+	She lies on the couch next to your desk and rubs lube over her $activeSlave.skin chest so you can fuck her tits. You straddle her torso, hold her boobs together, and fuck her cleavage. As you do, the pressure of your grip causes a thin rivulet of milk to run from each of her nipples. Your cum covers her reluctant face; between your semen and her milk she's quite a mess.
+  <<elseif $PC.boobs isnot 0>>
+	She lies on the couch next to your desk and rubs lube over her $activeSlave.skin breasts. Then, you lie down atop her with your breasts meshing with hers and begin to slide up and down, titillating your nipples wonderfully. She cannot ignore the slippery stimulation her nipples are recieving, and you find her mouth quite willing to receive your insistent tongue. She begins to leak milk, adding her cream to the lube between your breasts, and by the time you're done there's quite a mess.
+  <<else>>
+	he lies on the couch next to your desk, and you've straddled her face before she can do anything more. You begin to grope her breasts and pinch her nipples to hardness as she eats you out, your ministrations producing prompt jets of creamy milk, straight up into the air. You milk her without mercy, shooting some of the stronger streams into your mouth as you ride her, leaving her to massage her breasts gingerly as you get off her face.
+  <</if>>
+<<elseif  $activeSlave.devotion lt 4>>
+  <<if $PC.dick isnot 0>>
+	She lies on the couch next to your desk and rubs lube over her <<if $seeRace is 1>>$activeSlave.race <</if>>chest so you can fuck her $activeSlave.skin tits. You straddle her torso, hold her boobs together, and fuck her cleavage. Your cum covers her reluctant face.
+  <<elseif $PC.boobs isnot 0>>
+	She lies on the couch next to your desk and rubs lube over her $activeSlave.skin breasts. Then, you lie down atop her with your breasts meshing with hers and begin to slide up and down, titillating your nipples wonderfully. She cannot ignore the slippery stimulation her nipples are recieving, and you find her mouth quite willing to receive your insistent tongue.
+  <<else>>
+	She lies on the couch next to your desk, and you've straddled her face before she can do anything more. You begin to grope her breasts and pinch her nipples to hardness as she eats you out, your ministrations producing moans that feel quite nice against your clit. You maul her boobs without mercy as you reach your climax, leaving her to massage her breasts gingerly as you get off her.
+  <</if>>
+<<elseif ($activeSlave.lactation gt 0)>>
+	Since she's producing milk, she gets an emotional high from breastfeeding, and she sits on the edge of your desk for a while so you can use her as a beverage dispenser while you work. Once she's empty, she gets down to 
+<<if ($PC.dick is 0)>>eat you out. As she buries her face between your legs, she gently rolls her sore nipples around in her fingers, quietly moaning and whining.<<else>>give you a titjob. As she titfucks you, she gently rolls her sore nipples around in her fingers, quietly moaning and whining. Your cum covers her <<if $seeRace is 1>>$activeSlave.race <</if>>face in no time, and she's left with a spectacular mess to clean. She laps it all up.<</if>>
+<<else>>
+  <<if $PC.dick isnot 0>>
+	She massages and toys with her chest for your benefit, languidly rubbing lubricant over not only her cleavage but her entire chest, making sure every inch of her $activeSlave.skin breasts are nice and shiny. She gives you a titjob with her lubricated cleavage while you sit at your desk. Your cum covers her <<if $seeRace is 1>>$activeSlave.race <</if>>face, and she carefully licks it all off while continuing to play with her erect nipples.
+  <<elseif $PC.boobs isnot 0>>
+	She rubs lube over her $activeSlave.skin breasts, flirting with you and sticking out her chest, before lying down on the couch. You lie down atop her with your breasts meshing with hers and begin to slide up and down, titillating your nipples wonderfully. You find her mouth quite willing to receive your insistent tongue, and while you make out, she slips a hand down between your legs to give you a handjob, too.
+  <<else>>
+	She flirts with you and sticks out her chest before lying down on the couch. You've straddled her face before she can do anything more, and she begins to eat you out with enthusiasm. You begin to grope her breasts and pinch her nipples to hardness as she gives you oral, your ministrations producing moans that feel quite nice against your clit. You maul her boobs without mercy as you reach your climax, but she loves it all.
+  <</if>>
+<</if>>
+
+<<if (random(1,100) gt (100+$activeSlave.devotion))>>
+  <<if ($activeSlave.fetish isnot "breasts")>>
+  <<if ($activeSlave.fetish isnot "nympho")>>
+  <<if ($activeSlave.sexualQuirk isnot "hates men")>>
+      Being manhandled and used has given her a @@color:red;hatred of men.@@
+      <<set ($activeSlave.sexualQuirk to "hates men")>>
+  <</if>>
+  <</if>>
+  <</if>>
+<<elseif (random(1,100) gt (110-$activeSlave.devotion))>>
+  <<if ($activeSlave.fetish is "none")>>
+  <<if ($activeSlave.sexualQuirk isnot "hates men")>>
+      Having attention and love lavished on her boobs by <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> has her thinking of her @@color:pink;breasts as sexual organs.@@
+      <<set ($activeSlave.fetish to "breasts")>>
+      <<set ($activeSlave.fetishDiscovered to 1)>>
+  <</if>>
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.amp isnot 1)>>
+<<if ($activeSlave.assignment is "whore")>>
+	She heads off to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>> before she returns to prostituting herself.
+<<elseif ($activeSlave.assignment is "serve the public")>>
+	She heads off to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>> before she goes back out to fuck passersby.
+<<elseif ($activeSlave.assignment is "rest")>>
+	She stumbles off to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>> before crawling back into bed.
+<<elseif ($activeSlave.assignment is "train slaves")>>
+	She heads off to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>> before she returns to her classes.
+<<elseif ($activeSlave.assignment is "get milked")>>
+	She hurries off to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>> before going to get her uncomfortably milk-filled tits drained.
+<<elseif ($activeSlave.assignment is "please you")>>
+	She hurries off to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>> before returning to await use, as though nothing had happened.
+<<elseif ($activeSlave.assignment is "be a subordinate sex slave")>>
+	She moves off to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>>, though it's only a matter of time before another slave decides to play with her tits.
+<<elseif ($activeSlave.assignment is "be a subordinate servant")>>
+	She hurries off to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>>, since her chores didn't perform themselves while you titfucked her.
+<<elseif ($activeSlave.assignment is "be your Head Girl")>>
+	She hurries off to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>>, worried that her charges got up to trouble while she had her breasts around your cock.
+<<elseif ($activeSlave.assignment is "guard you")>>
+	She hurries off to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>> so that you will be unguarded for as little time as possible.
+<<elseif ($activeSlave.assignment is "work in the brothel")>>
+	She goes to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>>, even though it's likely to be splashed with customers' cum soon after she returns to work.
+<<elseif ($activeSlave.assignment is "work on the promenade")>>
+	She goes to beautify her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>> so it can again serve as an ornament to the promenade.
+<<elseif ($activeSlave.assignment is "work in the dairy")>>
+	She goes off to carefully wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>> to keep production in the dairy nice and sanitary.
+<<elseif ($activeSlave.assignment is "work as a servant")>>
+	She rushes to wash her <<if $activeSlave.boobs gt 1500>>acre of cleavage<<elseif $activeSlave.boobs gt 500>>generous cleavage<<else>>chest<</if>>, afraid she's fallen behind on the chores while you used her.
+<</if>>
+<</if>>
+
+<</nobr>>

@@ -1,0 +1,51 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<<set $activeSlave.devotion += 1>>
+
+<</nobr>>\
+\
+It's Friday evening, the most socially important part of the week in the arcology. <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> happens to be free this evening, and your schedule is open, too. Lately, she's been putting on a tour de force of seduction, erotic dance, and lewd entertainment whenever she gets the chance to catch someone's eye. There are a number of events tonight you could attend with her on your arm.
+\
+<span id="result">
+<<click "Go clubbing">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You inform $activeSlave.slaveName of your plans and tell her to get dressed appropriately. She meets you at the door wearing glitzy heels, an extremely short skirt, and a string bikini top so brief that her areolae are clearly visible. As you descend through the arcology the beats get faster and the drops get heavier. By the time you reach the club where the Free Cities' hottest DJ has a show tonight, $activeSlave.slaveName is a whirlwind of sexual energy in motion, moving with every beat and catching every eye. Her skills could have half the club lining up to fuck her for money, but tonight she's all yours. The entire floor is envious of you as the night wears on and her dancing turns into sexual servicing you in time with the music. <<if ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0) and ($activeSlave.hormones lt 1)>>Her tiny skirt does nothing to hide her erection<<elseif ($activeSlave.clit gt 0)>>Her tiny skirt displays her big, engorged clit<<else>>The smell of her arousal is noticeable even over the stink of sweat<</if>>. <<if ($activeSlave.boobs gt 1000)>>Her breasts get groped and mauled all night<<elseif ($activeSlave.butt gt 5)>>She grinds her ass against your crotch all night<<else>>Cum joins the sweat running off her<</if>>. The crowd is duly impressed; @@color:green;your reputation has increased.@@
+    <</replace>>
+    <<set $rep += 100>>
+<</click>>
+<<click "Attend a milonga">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You inform $activeSlave.slaveName of your plans and tell her to get dressed appropriately. She meets you at the door wearing classy heels and a gorgeous long dress cunningly designed to adhere to her while she dances despite the fact that it displays all of one leg, her entire back, cleavage, and the sides of both breasts. She has her hair up in a perfect bun accented with a spray of the latest jewelry, and is wearing severe makeup that makes her look aristocratic and elegant by turns. The host of the milonga, an old-world tango enthusiast, knows well the social graces and invites you, as the most prominent attendee, to perform the traditional demonstration tango that begins the dance. It goes wonderfully, and the entire party sighs in appreciation as you perform the classic tango. You lower $activeSlave.slaveName gracefully and pull her back up into a close embrace, and breath catches in more than one throat. As tradition dictates she dances with many partners throughout the night. One concession to Free Cities sensibilities is that the male and female roles in the tango may be filled by anyone, and $activeSlave.slaveName switches flawlessly between playing the female role to the elderly host one dance and the male role to his teenage granddaughter the next. The poor girl spends the rest of the evening staring at $activeSlave.slaveName with her tongue tied. Whoever $activeSlave.slaveName dances with, she always subtly shows by glance and gesture that it's you she truly wants. Everyone is quite envious of you; @@color:green;your reputation has increased.@@
+    <</replace>>
+    <<set $rep += 100>>
+<</click>>
+<<click "Never mind Friday night, the moon's out and it's romantic on the balcony">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You inform $activeSlave.slaveName of your plans and tell her to get dressed appropriately. She meets you at the door absolutely naked. She has half a question on her face, wondering whether this is going too far, but it vanishes when you smile reassuringly at her. You take her by the hand and lead her out onto the private balcony outside your office. It's a cloudless night, and the moon is full. You order the arcology to play a classic dance medley, and $activeSlave.slaveName becomes all innocence and grace, the perfect dance partner. The only real consequence of her nudity is the extra sway of her breasts<<if ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0) and ($activeSlave.hormones lt 1)>>, her visible erection,<<elseif ($activeSlave.clit gt 0)>>, her visibly engorged clit,<</if>> and the hardness of her nipples in the cool night when the dance brings you close. She enjoys herself immensely and in no time at all, she's meekly asking you to take her inside and dance with her on the bed. Naturally, you oblige. Her @@color:hotpink;devotion to you@@ and @@color:mediumaquamarine;trust in you@@ have increased.
+    <</replace>>
+    <<set $activeSlave.devotion += 0.5>>
+    <<set $activeSlave.devotion += 0.5>>
+    <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+      <<set $activeSlave.vaginalCount += 1>>
+      <<set $vaginalTotal += 1>>
+    <<else>>
+      <<set $activeSlave.analCount += 1>>
+      <<set $analTotal += 1>>
+    <</if>>
+<</click>>
+</span>

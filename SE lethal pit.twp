@@ -1,0 +1,360 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Nonrandom Event">>
+<<set $pitFought to 1>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if ($slaves[$i].ID == $fighterOne.ID)>>
+      <<set $fighterOne to $slaves[$i]>>
+  <</if>>
+  <<if ($slaves[$i].ID == $fighterTwo.ID)>>
+      <<set $fighterTwo to $slaves[$i]>>
+  <</if>>
+<</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+This week's pit fight is between $fighterOne.slaveName and $fighterTwo.slaveName. <<if $pitAudience is "none">>You are alone above the pit, left to watch them kill and die in private.<<elseif $pitAudience is "free">>Your guests line the rim of the pit, joking and betting, nervous and excited by the close prospect of watching a girl die.<<else>>The attendees line the rim of the pit, betting and arguing, nervous and excited by the close prospect of watching a girl die.<</if>>
+
+<<if $FSRomanRevivalist gt 0>>
+  They @@color:green;passionately approve@@ of your hosting lethal combat between slaves; this advances ideas from antiquity about what public events should be.
+  <<set $rep += 20*$FSSingleSlaveRep*($FSRomanRevivalist/$FSLockinLevel)>>
+  <<set $FSRomanRevivalist += 0.4*$FSSingleSlaveRep>>
+<</if>>
+
+You review the rules - the combatants will use their choice of swords, and the fight will be to the death, with both combatants executed if no decision is reached. The winner will  earn two complete days of rest, not to mention continued life. You take a moment to look over your girls before giving the word. After all, it's the last time you'll be seeing one of them alive.
+
+<</nobr>>
+
+<<nobr>>
+
+<<set $activeSlave to $fighterOne>>
+<<display "Deadliness">>
+<<set $fighterOneDeadliness to $deadliness>>
+
+<<if $fighterOne.fetish is "mindbroken">>
+	$fighterOne.slaveName is too broken to care about whether she lives or dies;
+<<elseif $fighterOneDeadliness gt 5>>
+	$fighterOne.slaveName seems very confident;
+<<elseif $fighterOneDeadliness gt 3>>
+	$fighterOne.slaveName seems nervous, but steels herself;
+<<elseif $fighterOneDeadliness gt 1>>
+	$fighterOne.slaveName seems hesitant and unsure;
+<<else>>
+	$fighterOne.slaveName is obviously terrified, and might flee if there were a way out of the pit;
+<</if>>
+
+<<if $fighterOne.fetish is "mindbroken">>
+	she is indifferent to the prospect of killing, as well.
+<<elseif $fighterOne.devotion gt 18>>
+	she is clearly willing to do her best to kill for you.
+<<elseif ($fighterOne.fetish is "sadist") and ($fighterOne.fetishDiscovered is 1)>>
+	the prospect of killing does not seem to concern her.
+<<elseif $fighterOne.devotion gt 10>>
+	she obviously does not want to kill, but will do as you order.
+<<elseif $fighterOne.devotion gt -4>>
+	she is clearly unhappy at the prospect of killing, but knows that the alternative is death.
+<<else>>
+	she knows that it's kill or be killed, and puts aside her hatred of you in an effort to live.
+<</if>>
+
+<<if $fighterOne.combatSkill gt 0>>
+	Her grip on her sword is sure and easy.
+<</if>>
+
+<<if $fighterOne.muscles gte 3>>
+	She is wielding a massive two-handed blade few others could even heft.
+<<elseif $fighterOne.muscles gte 2>>
+	She is strong enough to handle a bastard sword.
+<<elseif $fighterOne.muscles gte 1>>
+	She has selected a longsword suited to her strength.
+<<else>>
+	She has selected a short sword, the heaviest weapon she can manage.
+<</if>>
+
+<<if $fighterOne.height gt 0>>
+	Her height gives her a reach advantage.
+<</if>>
+
+<<if $fighterOne.health gt 5>>
+	Her shining health makes her a better fighter.
+<</if>>
+
+<<if $fighterOne.weight gt 0>>
+	Her heavy weight is an impediment as a pit fighter.
+<</if>>
+
+<<if $fighterOne.weight lt 0>>
+	Her light weight is an impediment as a pit fighter.
+<</if>>
+
+<<if $fighterOne.health lt -5>>
+	Her poor health makes her a weaker combatant.
+<</if>>
+
+<<if $fighterOne.preg gt 10>>
+	Her advanced pregnancy makes her much less effective, not to mention terrified for her child.
+<</if>>
+
+<</nobr>>
+
+<<nobr>>
+
+<<set $activeSlave to $fighterTwo>>
+<<display "Deadliness">>
+<<set $fighterTwoDeadliness to $deadliness>>
+
+<<if $fighterTwo.fetish is "mindbroken">>
+	$fighterTwo.slaveName is too broken to care about whether she lives or dies;
+<<elseif $fighterTwoDeadliness gt 5>>
+	$fighterTwo.slaveName seems very confident;
+<<elseif $fighterTwoDeadliness gt 3>>
+	$fighterTwo.slaveName seems nervous, but steels herself;
+<<elseif $fighterTwoDeadliness gt 1>>
+	$fighterTwo.slaveName seems hesitant and unsure;
+<<else>>
+	$fighterTwo.slaveName is obviously terrified, and might flee if there were a way out of the pit;
+<</if>>
+
+<<if $fighterTwo.fetish is "mindbroken">>
+	she is indifferent to the prospect of killing, as well.
+<<elseif $fighterTwo.devotion gt 18>>
+	she is clearly willing to do her best to kill for you.
+<<elseif ($fighterTwo.fetish is "sadist") and ($fighterTwo.fetishDiscovered is 1)>>
+	the prospect of killing does not seem to concern her.
+<<elseif $fighterTwo.devotion gt 10>>
+	she obviously does not want to kill, but will do as you order.
+<<elseif $fighterTwo.devotion gt -4>>
+	she is clearly unhappy at the prospect of killing, but knows that the alternative is death.
+<<else>>
+	she knows that it's kill or be killed, and puts aside her hatred of you in an effort to live.
+<</if>>
+
+<<if $fighterTwo.combatSkill gt 0>>
+	Her grip on her sword is sure and easy.
+<</if>>
+
+<<if $fighterTwo.muscles gte 3>>
+	She is wielding a massive two-handed blade few others could even heft.
+<<elseif $fighterTwo.muscles gte 2>>
+	She is strong enough to handle a bastard sword.
+<<elseif $fighterTwo.muscles gte 1>>
+	She has selected a longsword suited to her strength.
+<<else>>
+	She has selected a short sword, the heaviest weapon she can manage.
+<</if>>
+
+<<if $fighterTwo.height gt 0>>
+	Her height gives her a reach advantage.
+<</if>>
+
+<<if $fighterTwo.health gt 5>>
+	Her shining health makes her a better fighter.
+<</if>>
+
+<<if $fighterTwo.weight gt 0>>
+	Her heavy weight is an impediment as a pit fighter.
+<</if>>
+
+<<if $fighterTwo.weight lt 0>>
+	Her light weight is an impediment as a pit fighter.
+<</if>>
+
+<<if $fighterTwo.health lt -5>>
+	Her poor health makes her a weaker combatant.
+<</if>>
+
+<<if $fighterTwo.preg gt 10>>
+	Her advanced pregnancy makes her much less effective, not to mention terrified for her child.
+<</if>>
+
+In any case, both of the slaves have been dosed with aggression enhancers and inhibition blockers; they'll fight to kill.
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $fighterTwoDeadliness gt $fighterOneDeadliness>>
+	<<set $winner to $fighterTwo>>
+	<<set $winnerDeadliness to $fighterTwoDeadliness>>
+	<<set $loser to $fighterOne>>
+	<<set $loserDeadliness to $fighterOneDeadliness>>
+<<elseif $fighterTwoDeadliness lt $fighterOneDeadliness>>
+	<<set $loser to $fighterTwo>>
+	<<set $loserDeadliness to $fighterTwoDeadliness>>
+	<<set $winner to $fighterOne>>
+	<<set $winnerDeadliness to $fighterOneDeadliness>>
+<<elseif random(1,100) gt 50>>
+	<<set $winner to $fighterTwo>>
+	<<set $winnerDeadliness to $fighterTwoDeadliness>>
+	<<set $loser to $fighterOne>>
+	<<set $loserDeadliness to $fighterOneDeadliness>>
+<<else>>
+	<<set $loser to $fighterTwo>>
+	<<set $loserDeadliness to $fighterTwoDeadliness>>
+	<<set $winner to $fighterOne>>
+	<<set $winnerDeadliness to $fighterOneDeadliness>>
+<</if>>
+
+<<if ($winnerDeadliness gt $loserDeadliness+3) and ($winner.combatSkill gt 0)>>
+	$winner.slaveName wants to win, and she opens the fight with a furious attack. $loser.slaveName manages to get her blade up, blocking a strike with a ringing clash and a few sparks, but by doing so leaves her abdomen open and obscures her vision enough that she is unprepared for the following horizontal slash, which opens her belly wide. The stricken girl collapses, feebly trying to push her viscera back into place. Whether out of mercy or a desire to get it over with, $winner.slaveName quickly removes the dying girl's head.
+    <<if $pitAudience is "paid">>
+    	The audience is reasonably impressed by the gore, and your @@color:yellowgreen;cut of the betting@@ is reasonable.
+		<<set $cash += 4000>>
+    <<elseif $pitAudience is "free">>
+    	The audience is @@color:green;reasonably impressed@@ by the gore.
+		<<set $rep += 200>>
+    <</if>>
+<<elseif ($winnerDeadliness gt $loserDeadliness+3)>>
+	$winner.slaveName wants to win and is confident she will, but she isn't particularly sure about how to do so. She fights cautiously, swinging her sword in powerful but inaccurate strokes. It is only a matter of time before one of these strikes gets through; it's telling that rather than hitting what she aimed at, $winner.slaveName accidentally opens a massive gash down $loser.slaveName's thigh. Realizing she has to do something, $loser.slaveName makes a desperate counterattack, pouring blood as she goes. $winner.slaveName panics and fails to parry one of the last counterstrikes before loss of blood ends the attack, suffering a @@color:red;terrible cut@@ to her shoulder. Down to one arm, $winner.slaveName is forced to make a long, loud butchery of ending the fight.
+	<<set $winner.health -= 2>>
+    <<if $pitAudience is "paid">>
+    	The audience is reasonably impressed by the blood, and your @@color:yellowgreen;cut of the betting@@ is reasonable.
+		<<set $cash += 4000>>
+    <<elseif $pitAudience is "free">>
+    	The audience is @@color:green;reasonably impressed@@ by the blood.
+		<<set $rep += 200>>
+    <</if>>
+<<elseif ($winner.combatSkill gt 0) and ($loser.combatSkill gt 0)>>
+	Upon your word the two combatants approach each other warily, both knowing the other is reasonably competent. Before long they are trading thrust and parry, swing and block. $winner.slaveName is slowly pressed back, so she decides to change the nature of the fight. After three tries she manages to force $loser.slaveName to close, suffering a @@color:red;nearly severed ear@@ as she does. $loser.slaveName realizes she only retains an advantage at long range but cannot back up fast enough to avoid close combat. $loser.slaveName is forced back fast enough that she trips; she's barely fallen on her back before she grunts with shock and pain, dying with a look of surprise as she stares at the sword growing out of her chest.
+	<<set $winner.health -= 2>>
+    <<if $pitAudience is "paid">>
+    	The audience is quite impressed by the expert fight, and your @@color:yellowgreen;cut of the betting@@ is quite good.
+		<<set $cash += 10000>>
+    <<elseif $pitAudience is "free">>
+    	The audience is @@color:green;very impressed@@ by the expert fight.
+		<<set $rep += 500>>
+    <</if>>
+<<elseif ($winner.height-$loser.height lte -1)>>
+	$winner.slaveName realizes that $loser.slaveName's wingspan gives her a huge reach advantage. She bores straight in, taking @@color:red;a glancing scalp wound@@ but coming on regardless. $loser.slaveName understands her opponent's intention and backs off, but the pit is small and there isn't much room to retreat. When her back hits a padded wall, $winner.slaveName aims a gutting cut that $loser.slaveName struggles to block. She manages it, but the wall catches her point, so the block is with her wrist, not her sword. The sharp blade cuts almost all the way through the joint, leaving her in agony and totally incapable of defense. $winner.slaveName pushes her head back against the wall and cuts her throat down to the spine.
+	<<set $loser.health -= 2>>
+    <<if $pitAudience is "paid">>
+    	The audience is reasonably impressed by the blood, and your @@color:yellowgreen;cut of the betting@@ is reasonable.
+		<<set $cash += 4000>>
+    <<elseif $pitAudience is "free">>
+    	The audience is @@color:green;reasonably impressed@@ by the blood.
+		<<set $rep += 200>>
+    <</if>>
+<<elseif ($winner.muscle gt 2)>>
+	$winner.slaveName is so massively muscular that she's actually impeded by her lack of speed and flexibility. $loser.slaveName is properly afraid of her strength, though, so she tries to stay away as much as she can. The few times their blades clash reinforces this approach, since $winner.slaveName is able to beat her opponent's blocks out of the way with contemptuous ease. The fight takes a long, long time, but it takes more out of $loser.slaveName to survive than it takes out of $winner.slaveName to keep swinging. Eventually the gasping, weeping $loser.slaveName trips and does not struggle to her feet in time. It takes her tired opponent several overhead butcher's cleaves to end it.
+    <<if $pitAudience is "paid">>
+    	The audience is reasonably impressed by the show of strength, and your @@color:yellowgreen;cut of the betting@@ is reasonable.
+		<<set $cash += 1000>>
+    <<elseif $pitAudience is "free">>
+    	The audience is @@color:green;reasonably impressed@@ by the show of strength.
+		<<set $rep += 50>>
+    <</if>>
+<<elseif ($loser.boobs gt 1200)>>
+	$winner.slaveName takes an extremely simple shortcut to victory. The instant the fight starts, she slices $loser.slaveName right across her huge tits, which are so large the cannot properly be defended. $loser.slaveName reflexively drops her sword to clasp her hands over her ruined breasts, gushing blood<<if $loser.boobsImplant gt 400>> and implant fluid<</if>>. $winner.slaveName's followup is neither artful nor particularly well planned, but it is effective. She hits the distracted girl's neck from the side, almost but not quite separating her head from her body.
+    <<if $pitAudience is "paid">>
+    	The audience is not very impressed by this easy kill, and your @@color:yellowgreen;cut of the betting@@ is unimpressive.
+		<<set $cash += 2000>>
+    <<elseif $pitAudience is "free">>
+    	The audience is @@color:green;not very impressed@@ by this easy kill.
+		<<set $rep += 100>>
+    <</if>>
+<<elseif ($loser.dick gt 0)>>
+	$winner.slaveName wants to live badly enough that she takes an extremely brutal shortcut to victory. The instant the fight starts, she furiously swings for $loser.slaveName's face. $loser.slaveName reflexively raises her sword to block, at which point $winner.slaveName simply kicks her in the the dick. $loser.slaveName goes down like a marionette with cut strings, her mouth soundlessly opening and closing and tears leaking from her closed eyes. $winner.slaveName walks over to the prostrate slave and cuts her throat without much trouble.
+    <<if $pitAudience is "paid">>
+    	The audience is not very impressed by this easy kill, and your @@color:yellowgreen;cut of the betting@@ is unimpressive.
+		<<set $cash += 2000>>
+    <<elseif $pitAudience is "free">>
+    	The audience is @@color:green;not very impressed@@ by this easy kill.
+		<<set $rep += 100>>
+    <</if>>
+<<else>>
+	$winner.slaveName wants to live badly enough that she takes an extremely brutal shortcut to victory. The instant the fight starts, she furiously swings for $loser.slaveName's face. $loser.slaveName reflexively raises her sword to block, at which point $winner.slaveName simply kicks her in the the cunt. $loser.slaveName goes down like a marionette with cut strings, her mouth soundlessly opening and closing and tears leaking from her closed eyes. $winner.slaveName walks over to the prostrate slave and cuts her throat without much trouble.
+    <<if $pitAudience is "paid">>
+    	The audience is not very impressed by this easy kill, and your @@color:yellowgreen;cut of the betting@@ is unimpressive.
+		<<set $cash += 2000>>
+    <<elseif $pitAudience is "free">>
+    	The audience is @@color:green;not very impressed@@ by this easy kill.
+		<<set $rep += 1000>>
+    <</if>>
+<</if>>
+
+<</nobr>>
+
+<<nobr>>
+
+You let the winner $winner.slaveName, shaking as she comes off the adrenaline, drugs, and the fear, exit the pit.
+
+<<if $winner.fetish is "mindbroken">>
+	She was already so broken before today that she will not be seriously affected by having killed with her own hands.
+<<elseif $winner.devotion gt 28>>
+	She is so worshipful of you that she does not see killing $loser.slaveName as special in her own internal listing of things that she has willingly done and would willingly do again on your behalf.
+<<elseif ($winner.fetishDiscovered is 1) and ($winner.fetish is "sadist")>>
+	She has sunk even deeper into cruelty, callousness, and a total disregard of the value of other slaves' lives. Going forward, she's even @@color:hotpink;less likely to question@@ even the most abominable commands.
+	<<set $winner.devotion += 1>>
+<<elseif $winner.devotion gt 20>>
+	She will never forget having killed $loser.slaveName with her own hands. The only way she will be able to live with herself is to @@color:hotpink;subsume her will to yours,@@ telling herself that the killing was to serve and obey you.
+	<<set $winner.devotion += 2>>
+<<elseif $winner.devotion gt 10>>
+	She will never forget having killed $loser.slaveName with her own hands. The only way she will be able to live with herself is to tell herself that the killing was done on your orders.
+<<else>>
+	She will never forget having killed $loser.slaveName with her own hands. The only way she will be able to live with herself is to @@color:mediumorchid;blame you,@@ telling herself that the killing was the only choice you gave her if she wanted to live.
+	<<set $winner.devotion -= 2>>
+<</if>>
+
+<<if ($winner.fetish isnot "nympho") and ($winner.fetish isnot "sadist")>>
+<<if random(1,100) gt 50>>
+  Cruelty and callousness seeps its way into her sexuality; she has become a @@color:pink;bloody sadist.@@
+  <<set $winner.fetish to "sadist">>
+  <<set $winner.fetishDiscovered to 1>>
+<</if>>
+<</if>>
+
+<<if ($winner.rivalry gt 0) and($loser.ID is $winner.rivalryTarget)>>
+  <<if ($winner.devotion gt 15)>>
+	She is so accepting of the low value of slave life that she @@color:hotpink;is pleased@@ to have killed her rival $loser.slaveName.
+	<<set $winner.devotion += 1>>
+  <</if>>
+<<elseif ($winner.relationship gte 0) and ($loser.ID is $winner.relationshipTarget)>>
+  <<if ($winner.devotion gt 18)>>
+	She is so worshipful of you that she sees the death of her only friend at her own hand as an @@color:hotpink;honorable@@ end to their doomed slave relationship.
+	<<set $winner.devotion += 1>>
+  <<else>>
+	She shows little reaction to the death of her only friend at her own hand. In the coming days, it becomes clear that this is because she is @@color:red;no longer capable@@ of reacting to anything on an emotional level. Ever again.
+	<<set $winner.fetish to "mindbroken">>
+	<<set $winner.fetishDiscovered to 1>>
+  <</if>>
+<<elseif ($winner.relation isnot 0) and ($loser.ID is $winner.relationTarget)>>
+  <<if ($winner.devotion gt 18)>>
+	She is so worshipful of you that she sees the death of her $winner.relation at her own hand as an @@color:hotpink;honorable@@ end to their doomed family.
+	<<set $winner.devotion += 1>>
+  <<else>>
+	She shows little reaction to the death of her $winner.relation at her own hand. In the coming days, it becomes clear that this is because she is @@color:red;no longer capable@@ of reacting to anything on an emotional level. Ever again.
+	<<set $winner.fetish to "mindbroken">>
+	<<set $winner.fetishDiscovered to 1>>
+  <</if>>
+<</if>>
+
+<<if ($winner.combatSkill is 0)>>
+	With lethal experience in the pit $winner.slaveName has @@color:green;learned basic combat skills.@@
+    <<set $winner.combatSkill += 1>>
+<</if>>
+
+<<set $winner.pitKills += 1>>
+<<set $pitKillsTotal += 1>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if $winner.ID == $slaves[$i].ID>>
+	<<set $slaves[$i] to $winner>>
+  <</if>>
+<</for>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if $loser.ID == $fighterOne.ID>>
+	<<set $fighterOne to 0>>
+  <<elseif $loser.ID == $fighterTwo.ID>>
+	<<set $fighterTwo to 0>>
+  <</if>>
+  <<if $loser.ID == $slaves[$i].ID>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<display "Remove activeSlave">>
+  <</if>>
+<</for>>
+
+<</nobr>>\

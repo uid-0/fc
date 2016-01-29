@@ -1,0 +1,154 @@
+<<nobr>>
+
+<<if ($slaves[$i].fetish is "mindbroken")>>
+	/*She does not care what clothes she wears.*/
+
+<<elseif ($slaves[$i].devotion gte -4) and ($slaves[$i].clothes is "no clothing") and ($slaves[$i].fetish is "humiliation")>>
+	As a humiliation fetishist, she pretends to be embarrassed by her nudity but @@color:hotpink;secretly gets off on it.@@
+    <<set $slaves[$i].devotion += 0.7>>
+<<elseif ($slaves[$i].devotion gte -4) and ($slaves[$i].clothes is "no clothing") and ($slaves[$i].fetish is "nympho")>>
+	Her libido is so strong that she @@color:hotpink;enjoys being naked and available.@@
+    <<set $slaves[$i].devotion += 0.7>>
+<<elseif ($slaves[$i].clothes is "no clothing")>>
+
+<<elseif ($slaves[$i].waist gt 0) and ($slaves[$i].clothes is "a very tight corset")>>
+	Her waist is so narrow that she can wear a tight corset without trouble.
+<<elseif ($slaves[$i].devotion gt 4) and ($slaves[$i].clothes is "a very tight corset")>>
+	The corset she's wearing is so tight that it's @@color:red;unhealthy.@@ 
+    <<set $slaves[$i].health -= 1>>
+	<<if ($slaves[$i].fetish is "none") or ($slaves[$i].fetishDiscovered is 0)>>
+	  <<if random(1,100) gt 90-$slaves[$i].devotion>>
+		During sex, every breath in and out is agonizing. She learns to come in spite of, and then @@color:pink;because of the pain.@@
+		<<set $slaves[$i].fetish to "masochist">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+<<elseif ($slaves[$i].devotion lt -4) and ($slaves[$i].clothes is "a very tight corset")>>
+	The corset she's wearing is so tight that she @@color:hotpink;barely has breath to think,@@ though she has enough to @@color:gold;fear.@@ It's also @@color:red;unhealthy.@@ 
+    <<set $slaves[$i].devotion += 0.7>>
+    <<set $slaves[$i].trust -= 0.3>>
+    <<set $slaves[$i].health -= 1>>
+	<<if ($slaves[$i].fetish is "none") or ($slaves[$i].fetishDiscovered is 0)>>
+	  <<if random(1,100) gt 90-$slaves[$i].devotion>>
+		During sex, every breath in and out is agonizing. She learns to come in spite of, and then @@color:pink;because of the pain.@@
+		<<set $slaves[$i].fetish to "masochist">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+<<elseif ($slaves[$i].clothes is "a very tight corset")>>
+
+<<elseif ($slaves[$i].clothes is "a penitent nun's habit")>>
+	The mortification of the flesh she endures from wearing her sackcloth habit slowly and painfully @@color:hotpink;purifies her mind@@ of any but devoted, @@color:gold;fearful@@ thoughts. It's also @@color:red;unhealthy.@@ 
+    <<set $slaves[$i].devotion += 0.7>>
+    <<set $slaves[$i].trust -= 0.3>>
+    <<set $slaves[$i].health -= 0.3>>
+	<<if ($slaves[$i].fetish is "none") or ($slaves[$i].fetishDiscovered is 0)>>
+	  <<if random(1,100) gt 90-$slaves[$i].devotion>>
+		Her chafed skin makes sex an agonizing prospect. She learns to come in spite of, and then @@color:pink;because of the pain.@@
+		<<set $slaves[$i].fetish to "masochist">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+
+<<elseif ($slaves[$i].devotion gte -4) and ($slaves[$i].clothes is "uncomfortable straps") and ($slaves[$i].fetish is "masochist")>>
+	The uncomfortable straps she's wearing constantly give her little twinges of pain, @@color:hotpink;titillating her.@@
+    <<set $slaves[$i].devotion += 0.7>>
+<<elseif ($slaves[$i].devotion lt -4) and ($slaves[$i].clothes is "uncomfortable straps")>>
+	The uncomfortable straps she's wearing keep her @@color:hotpink;servile@@ and @@color:gold;afraid.@@
+	<<set $slaves[$i].devotion += 0.3>>
+	<<set $slaves[$i].trust -= 0.3>>
+	<<if ($slaves[$i].fetish is "none") or ($slaves[$i].fetishDiscovered is 0)>>
+	  <<if random(1,100) gt 90-$slaves[$i].devotion>>
+		The straps pinch and constrict her whenever she's used.  She learns to come in spite of, and then @@color:pink;because of the pain.@@
+		<<set $slaves[$i].fetish to "masochist">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+<<elseif ($slaves[$i].clothes is "uncomfortable straps")>>
+
+<<elseif ($slaves[$i].devotion gte -4) and ($slaves[$i].clothes is "chains") and ($slaves[$i].fetish is "masochist")>>
+	The chains she's wearing constantly give her little twinges of pain, @@color:hotpink;titillating her.@@
+    <<set $slaves[$i].devotion += 0.7>>
+<<elseif ($slaves[$i].devotion lt -4) and ($slaves[$i].clothes is "chains")>>
+	The chains she's wearing keep her @@color:hotpink;servile@@ and @@color:gold;afraid.@@
+	<<set $slaves[$i].devotion += 0.3>>
+	<<set $slaves[$i].trust -= 0.3>>
+	<<if ($slaves[$i].fetish is "none") or ($slaves[$i].fetishDiscovered is 0)>>
+	  <<if random(1,100) gt 90-$slaves[$i].devotion>>
+		The straps pinch and constrict her whenever she's used.  She learns to come in spite of, and then @@color:pink;because of the pain.@@
+		<<set $slaves[$i].fetish to "masochist">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+<<elseif ($slaves[$i].clothes is "chains")>>
+
+<<elseif ($slaves[$i].devotion gte -4) and ($slaves[$i].clothes is "restrictive latex") and ($slaves[$i].fetish is "submissive")>>
+	As a submissive she @@color:hotpink;enjoys being immured in latex.@@
+    <<set $slaves[$i].devotion += 0.7>>
+<<elseif ($slaves[$i].devotion lt -4) and ($slaves[$i].clothes is "restrictive latex")>>
+	The latex she's wearing limits her world to @@color:hotpink;your input and control@@ and @@color:gold;fear@@ of unexpected pain.
+	<<set $slaves[$i].devotion += 0.3>>
+	<<set $slaves[$i].trust -= 0.3>>
+<<elseif ($slaves[$i].clothes is "restrictive latex")>>
+
+<<elseif ($slaves[$i].devotion gt 4) and ($slaves[$i].vaginalAccessory is "chastity belt") and ($slaves[$i].vagina is 0) and ($slaves[$i].fetish is "buttslut")>>
+	She's such an anal whore that she's @@color:hotpink;perversely proud@@ of the chastity belt that covers her neglected pussy.
+    <<set $slaves[$i].devotion += 0.3>>
+<<elseif ($slaves[$i].devotion gt 4) and ($slaves[$i].vaginalAccessory is "chastity belt") and ($slaves[$i].vagina is 0)>>
+	She @@color:mediumaquamarine;trusts@@ that you're using the chastity belt she wears to save her virginity for something special.
+    <<set $slaves[$i].trust += 0.3>>
+<<elseif ($slaves[$i].vaginalAccessory is "chastity belt")>>
+
+<<elseif ($slaves[$i].devotion gt -4) and ($slaves[$i].clothes is "attractive lingerie") and ($slaves[$i].dick gt 0)>>
+	She is @@color:hotpink;proud@@ of the pretty lingerie she's wearing, but she constantly has to adjust her g-string to cover her penis.
+    <<set $slaves[$i].devotion += 0.3>>
+<<elseif ($slaves[$i].devotion gt 4) and ($slaves[$i].clothes is "string lingerie") and ($slaves[$i].dick gt 0)>>
+	She is @@color:hotpink;proud@@ of the slutty lingerie she's wearing, but she constantly has to adjust her string bikini bottom in a vain effort to cover her penis.
+    <<set $slaves[$i].devotion += 0.3>>
+
+<<elseif ($slaves[$i].devotion lte 4) and ($slaves[$i].clothes isnot "no clothing")>>
+	She is @@color:mediumorchid;inappropriately proud@@ of the nice clothes she's wearing, @@color:mediumaquamarine;building her confidence.@@
+    <<set $slaves[$i].devotion -= 1>>
+    <<set $slaves[$i].trust += 1>>
+<<elseif ($slaves[$i].clothes isnot "no clothing")>>
+	She is @@color:hotpink;proud@@ and @@color:mediumaquamarine;confident@@ of the nice clothes she's wearing.
+    <<set $slaves[$i].devotion += 0.3>>
+    <<set $slaves[$i].trust += 0.3>>
+       
+<</if>>
+
+<<if ($slaves[$i].clothes is "a very tight corset") and ($slaves[$i].waist lt 1) and (random(1,100) gt 70)>>
+	@@color:lime;The corseting narrows her waist.@@
+    <<set $slaves[$i].waist += 1>>
+<</if>>
+
+<<if ($slaves[$i].preg gt 10)>>
+<<if ($slaves[$i].clothes is "a very tight corset")>>
+<<if (random(1,100) gt 50)>>
+	The tight corseting has @@color:orange;caused her to miscarry,@@ which @@color:red;damages her health.@@
+	<<set  $slaves[$i].health -= 2>>
+	<<set $slaves[$i].preg to -1>>
+	She is
+<<if $slaves[$i].devotion lt -10>>
+	@@color:mediumorchid;filled with violent, consuming hatred@@ and @@color:gold;fear.@@ Even though she knew her baby was destined for a slave orphanage, it seems she cared for it and views you as its killer.
+    <<set  $slaves[$i].devotion -= 5>>
+    <<set  $slaves[$i].trust -= 5>>
+<<elseif $slaves[$i].devotion lt -4>>
+	@@color:mediumorchid;afflicted by desperate, inconsolable grief@@ and @@color:gold;horror.@@ Even though she knew her baby was destined for a slave orphanage, it seems she cared for it.
+    <<set  $slaves[$i].devotion -= 2>>
+    <<set  $slaves[$i].trust -= 4>>
+<<elseif $slaves[$i].devotion lte 4>>
+	@@color:mediumorchid;consumed by enduring sorrow@@ and @@color:gold;horror.@@ Even though she knew her baby was destined for a slave orphanage, it seems she cared for it.
+    <<set  $slaves[$i].devotion -= 1>>
+    <<set  $slaves[$i].trust -= 1>>
+<<elseif $slaves[$i].devotion lte 10>>
+	dully obedient. She has been broken to slave life so thoroughly that even this is neither surprising nor affecting.
+<<else>>
+	@@color:hotpink;pleased by this stark development@@, since she is so attentive to your will. She also expects she'll be able to fuck better now.
+    <<set  $slaves[$i].devotion += 1>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<</nobr>>\

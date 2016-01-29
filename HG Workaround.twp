@@ -1,0 +1,22 @@
+<<if ($HeadGirl is 0)>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if ($slaves[$i].assignment is "be your Head Girl")>>
+      <<set $slaves[$i].assignment to "rest">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+    <</if>>
+  <</for>>
+<<else>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $HeadGirl.ID == $slaves[$i].ID>>
+        <<set $slaves[$i].assignment to "be your Head Girl">> 
+		<<set $slaves[$i].assignmentVisible to 1>>
+		<<set $slaves[$i].choosesOwnAssignment to 0>>
+		<<set $slaves[$i].sentence to 0>>
+    <<elseif ($slaves[$i].assignment is "be your Head Girl")>>
+      <<set $slaves[$i].assignment to "rest">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+    <</if>>
+  <</for>>
+<</if>>
+
+<<goto "Main>>

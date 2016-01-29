@@ -1,0 +1,55 @@
+<<if $activeSlave.boobsTat is 0>>
+	<<set $activeSlave.boobsTat to "lewd scenes">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.buttTat is 0>>
+	<<set $activeSlave.buttTat to "lewd scenes">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.vaginaTat is 0>>
+	<<set $activeSlave.vaginaTat to "lewd scenes">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.lipsTat is 0>>
+	<<set $activeSlave.lipsTat to "permanent makeup">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if ($activeSlave.anusTat is 0) or ($activeSlave.anusTat is "bleached")>>
+	<<set $activeSlave.anusTat to "bleached">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.shouldersTat is 0>>
+	<<set $activeSlave.shouldersTat to "lewd scenes">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.armsTat is 0>>
+	<<set $activeSlave.armsTat to "lewd scenes">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.legsTat is 0>>
+	<<set $activeSlave.legsTat to "lewd scenes">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.stampTat is 0>>
+	<<set $activeSlave.stampTat to "lewd scenes">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<goto "Body Modification">>

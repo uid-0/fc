@@ -1,0 +1,70 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $contractCost to 1500>>
+<<display "Generate XY Slave">>
+<<set $activeSlave.origin to "She was sold into slavery by her older sister.">>
+<<set $activeSlave.career to "a reluctant anal whore">>
+<<set $activeSlave.devotion to random(-3,3)>>
+<<set $activeSlave.trust to random(-3,3)>>
+    <<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.health to random(0,2)>>
+<<set $activeSlave.anus to 1>>
+<<set $activeSlave.vagina to -1>>
+<<set $activeSlave.dick to 1>>
+<<set $activeSlave.clit to 0>>
+<<set $activeSlave.balls to 1>>
+<<set $activeSlave.face to 1>>
+<<set $activeSlave.weight to 0>>
+<<set $activeSlave.vaginalSkill to 0>>
+<<set $activeSlave.oralSkill to 1>>
+<<set $activeSlave.analSkill to 1>>
+<<set $activeSlave.boobs to 600>>
+<<set $activeSlave.boobsImplant to 400>>
+<<set $activeSlave.butt to either(1,2)>>
+<<set $activeSlave.preg to -3>>
+<<set $activeSlave.age to 18>>
+<<set $activeSlave.sexualQuirk to "hates anal">>
+<<set $activeSlave.hlength to "in twin tails">>
+
+<<set $activeSlave.relation to "sister">>
+<<set $activeSlave.relationTarget to $activeSlave.ID + 1000>>
+<<set $activeSlave.rivalry to 3>>
+<<set $activeSlave.rivalryTarget to $activeSlave.ID + 1000>>
+
+<<display "Slave Cost">>
+<<set $slaveCost -= 1500>>
+
+<</nobr>>\
+\
+Your head girl comes to see you. She flags a slave posted for sale on your desk. The posting seems completely unimpressive - just a bitch barely past her 18th birthday with basic implants and a pathetic little dick - until she points out that the person posting her for sale is her sister. Her slightly older, naturally female sister. Who, to go by the pictures, the younger sibling has desperately been trying to mold herself to look more like.
+
+You bring up a video feed of the one-room apartment they share. A man, clearly a client, is sitting on the bed while the sissy rides him. She's facing away from the john, so she isn't trying to hide the fact that she isn't happy selling her anus for money. The older sister is naked, but she's trying to act as a pimp of sorts rather than helping fuck. She alternately poses and preens for the john and nonverbally scolds the wincing sissy when he's not paying attention. After the customer finishes, the sissy heads to the toilet to clean herself, and her older sister whispers to the john that the sissy's for sale. The john laughs at her and excuses himself.
+
+"It won't show on the desk yet, but rumor is the little cunt's gotten them both in bad debt, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. You could grab them both cheap."
+
+//Enslaving the younger, sissy sister will cost ¤<<print $contractCost>>. Alternatively, you could sell your rights to her. Less costs, this will bring in  ¤<<print $slaveCost>>. As a third option, for ¤<<print ($contractCost*2)>> you could enslave both sisters, but you wouldn't be able to examine the older one first. She'll likely be very rebellious and sexually unskilled.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave the sissy slut">>
+	<<set $activeSlave.relation to 0>>
+	<<set $activeSlave.relationTarget to 0>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	The poor sissy isn't happy to become a slave, but she's clearly relieved to be away from her sister. The bitch isn't likely to have an easy time; the sale didn't clear her from debt. $activeSlave.slaveName describes her basic sexual experience, which includes a lot of sucking and anal whoring. Without more ado she moves from practical sexual slavery at the hands of her sister to actual sexual slavery.
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+<<if $cash gte ($contractCost*2)>>\
+[[Enslave both|RE mismatched pair workaround][$sissy to $activeSlave, $slaves.push($sissy), $cash -= ($contractCost*2)]]
+<<else>>\
+	//You lack the necessary funds to enslave both of them.//
+<</if>>\
+</span>

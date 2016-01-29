@@ -1,0 +1,63 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<set $activeSlave to $Concubine>>
+
+<</nobr>>\
+\
+It's been a long, harassing day as owner of the arcology. You're composing an angry communication to a couple of imbecile tenants who seem to think they're still in their old world shithole of a homeland, insist on acting like it, and are also wealthy enough to make it unwise to simply defenestrate them from the nearest window. Not that you aren't tempted. Suddenly, you feel a moist, <<if ($activeSlave.lips gt 2)>>massive<<elseif ($activeSlave.lips gt 1)>>pillowlike<<else>>girlish<</if>> pair of lips nibbling their way along your ear, and a <<if ($activeSlave.muscles gt 2)>>powerful<<elseif ($activeSlave.muscles gt 1)>>strong<<else>>femininie<</if>> hand on your shoulder. Its owner <<if ($activeSlave.mute is 1)>>passes you a handwritten note: "♥ ♥ It can wait, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> ♥ ♥"<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>lisps: "It can wait, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<else>>whispers: "It can wait, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."<</if>>
+
+You turn to see your concubine <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>'s <<if ($activeSlave.butt gt 5)>>massive, nude ass<<elseif ($activeSlave.butt gt 2)>>big naked butt<<else>>nice, nude rear<</if>> vanishing back into your suite.<<if ($activeSlave.boobs gt 2000)>> As she sways away from you, you can clearly see the sides of her massive tits, sticking out on either side of her torso.<</if>>
+\
+<span id="result">
+<<click "It cannot wait">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Your responsibilities will not wait. You keep at it, composing a firm yet even-handed message that @@color:green;puts the miscreants in their place@@ without ruffling feathers. $activeSlave.slaveName has gone to sleep by the time you enter your suite, but she wakes at your entrance and sleepily holds the sheets open so you can climb in. Once you're bedded down she <<if ($activeSlave.boobs gt 2000)>>lies close to you with one of her breasts resting half on your chest, since she can't fit under your arm with her ridiculous tits.<<elseif ($activeSlave.boobs gt 1000)>>burrows softly under your arm, her breasts heavy against your chest.<<elseif ($activeSlave.boobs gt 300)>>snuggles under your arm, her breasts against your chest.<<else>>fits herself under your arm, her flat chest letting her mold herself to your torso perfectly.<</if>>
+	<<set $rep += 100>>
+    <</replace>>
+<</click>>
+<<click "It can wait until after some lovemaking with the Concubine">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	When you enter your suite, the dim light reveals $activeSlave.slaveName waiting with her beautiful body laid across the bed. When she sees the kind of lovemaking you're in the mood for, she spreads her arms for you, smiling gently. She kisses you lovingly, <<if ($activeSlave.mute is 1)>>taking your hand in hers and drawing a heart on your palm with one finger.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>lisping: "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I love you."<<else>>murmuring: "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I love you."<</if>> <<if ($PC.dick is 0)>>She lies on her side and raises one leg for you so you can straddle the other, sliding up to press your pussy against her submissive groin. You grind against her; the stimulation is so strong that she writhes into the sheets, panting and whining.<<else>><<if ($activeSlave.vagina gt 0)>>Her pussy is warm and very wet, making penetration easy; she gasps and arches her back, clasping you between her legs as her $activeSlave.eyes eyes look deep into yours.<<elseif ($activeSlave.anus gt 0)>>Her butt is relaxed and welcoming, and she holds her legs back to take missionary anal loving as her $activeSlave.eyes look deep into yours.<<else>>She holds her thighs together for frottage so she can love you without losing her virginity.<</if>><</if>> You both know each other quite well, and maintain the gentle communion for a long time. When she senses your climax building, she lets herself climb to orgasm with you, holding <<if ($PC.dick is 0)>>your hips in her hands<<else>>you in her arms<</if>>. She quickly cleans you with her mouth and heads to the shower. When she gets out you're back at work, but she comes out to @@color:hotpink;plant another kiss on you.@@
+	<<set $activeSlave.devotion += 2>>
+	<<set $activeSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+	<<if ($activeSlave.vagina gt 0)>>
+	  <<set $activeSlave.vaginalCount += 1>>
+	  <<set $vaginalTotal += 1>>
+	<<elseif ($activeSlave.anus gt 0)>>
+	  <<set $activeSlave.analCount += 1>>
+	  <<set $analTotal += 1>>
+	<</if>>
+    <</replace>>
+<</click>>
+<<if ($activeSlave.anus gt 0)>>\
+<<click "It can wait until after some rough sex with the Concubine">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	When you enter your suite, the dim light reveals $activeSlave.slaveName waiting with her beautiful body laid across the bed. When she sees <<if ($PC.dick is 0)>>the big strap-on you're wearing<<else>>the kind of sex you're in the mood for<</if>>, she turns over and pushes her face down into the sheets. She pulls her knees under herself and reaches back to pull her <<if ($activeSlave.butt gt 5)>>huge<<elseif ($activeSlave.butt gt 2)>>sizeable<<else>>pretty<</if>> buttocks apart, relaxing and then clenching her <<if ($activeSlave.anus gt 2)>>gaping<<elseif ($activeSlave.anus gt 1)>>big<<else>>tight<</if>> asshole invitingly. She starts <<if ($activeSlave.mute is 1)>>to point an inviting finger at her backdoor,<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>to lisp "Pleathe athrape me, Ma-" into the sheets,<<else>>to beg "Pleathe athrape me, Ma-" into the sheets,<</if>> but you interrupt her by shoving her forward so that she's all the way facedown on the bed. She knows how you like it and starts to wriggle, struggle, and whine as you roughly sodomize her, <<if ($PC.dick is 0)>>the strap-on<<else>>your cock<</if>> ramming straight up her ass despite the uncomfortable angle, <<if ($activeSlave.butt gt 5)>>which her huge ass makes easier for her by limiting how deeply you can fuck her without her buttocks spread wide.<<elseif ($activeSlave.butt gt 2)>>which her big behind makes easier for her by limiting how deeply you can fuck her.<<else>>which her modest ass makes harder for her by allowing you to get really deep inside her anus.<</if>> She continues to wrestle with you, sometimes even managing to dislodge <<if ($PC.dick is 0)>>the strap-on<<else>>your dick<</if>>, allowing you the <<if ($PC.dick is 0)>>cruel delight<<else>>delicious sensation<</if>> of pushing it back up her butt each time. Despite the pretense her enjoyment is obvious; <<if ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0)>>though her hormone-filled body can't get her dick hard any more, she's leaking precum all over the bed.<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>though her gelded body can't get her dick hard any more, she's leaking precum all over the bed.<<elseif $activeSlave.dick gt 0>>she can't stop herself from humping her rock-hard cock against the sheets below her.<<elseif $activeSlave.clit gt 1>>she can't stop herself from humping her erect clit against the sheets below her.<<else>>her pussy is so wet she's leaving a wet spot on the sheets beneath her.<</if>> She finally orgasms, sobbing with overstimulation when you pound her for a while longer before <<if ($PC.dick is 0)>>finding your own climax<<else>>shooting rope after rope of cum into her<</if>>. She quickly cleans you with her mouth and heads to the shower. When she gets out you're back at work, but she comes out to @@color:hotpink;plant a kiss on you.@@
+	<<set $activeSlave.devotion += 2>>
+	<<set $activeSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+	<<if ($activeSlave.vagina gt 0)>>
+	  <<set $activeSlave.vaginalCount += 1>>
+	  <<set $vaginalTotal += 1>>
+	<<elseif ($activeSlave.anus gt 0)>>
+	  <<set $activeSlave.analCount += 1>>
+	  <<set $analTotal += 1>>
+	<</if>>
+    <</replace>>
+<</click>>
+<</if>>\
+</span>

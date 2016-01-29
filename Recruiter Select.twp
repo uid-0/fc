@@ -1,0 +1,50 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $Recruiter.ID == $slaves[$i].ID>>
+	''__@@color:pink;$slaves[$i].slaveName@@__'' is recruiting girls.
+    <<set $assignment to 1>>
+    <<set $slaves[$i].assignment to "recruit girls">>
+    <<set $slaves[$i].assignmentVisible to 1>>
+<</if>>
+<</for>>
+<<if ($assignment is 0)>>
+	You do not have a recruiter working at present.
+<</if>>
+
+<</nobr>>
+
+Your recruiter will target ''$recruiterTarget.'' __Assign a different focus:__\
+<<nobr>>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;[[Desperate whores|Recruiter Select][$recruiterTarget to "desperate whores"]] //Likely to be skilled but unhealthy//
+<br>&nbsp;&nbsp;&nbsp;&nbsp;[[Young migrants|Recruiter Select][$recruiterTarget to "young migrants"]] //Young and inexperienced but unhealthy//
+<<if ($seeDicks isnot 2)>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;[[Expectant mothers|Recruiter Select][$recruiterTarget to "expectant mothers"]] //Will be pregnant, and likely unhealthy//
+<</if>>
+<<if ($seeDicks isnot 0)>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;[[Dissolute sissies|Recruiter Select][$recruiterTarget to "dissolute sissies"]] //Will be born male and have some experience//
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;[[Reassignment candidates|Recruiter Select][$recruiterTarget to "reassignment candidates"]] //Will be born male//
+<</if>>
+
+<</nobr>>
+
+__Appoint a recruiter from among your devoted slaves:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<nobr>>
+<<if $slaves[$i].assignmentVisible is 1>>
+<<if $slaves[$i].assignment isnot "recruit girls">>
+<<if ($slaves[$i].devotion gt 10) and ($slaves[$i].amp isnot 1) and ($slaves[$i].mute isnot 1)>>
+  <br><<print "[[$slaves[$i].slaveName|Recruiter Workaround][$Recruiter to $slaves[" + $i + "]]]">>
+  <<display "Slave Summary">>
+<</if>>
+<</if>>
+<</if>>
+<</nobr>>\
+<</for>>\
+
+[[None|Recruiter Workaround][$Recruiter to 0]]

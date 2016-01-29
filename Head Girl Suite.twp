@@ -1,0 +1,62 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $HGSuiteSlaves to 0>>
+<<set $notHGSuiteSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "live with your Head Girl">>
+      <<set $HGSuiteSlaves += 1>>
+      <<set $activeSlave to $slaves[$i]>>
+    <<else>>
+	  <<set $notHGSuiteSlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $HeadGirl is 0>>
+	You have no Head Girl appointed to live in the suite.
+<<elseif $HGSuiteSlaves gt 0>>
+	Your Head Girl $HeadGirl.slaveName has $activeSlave.slaveName living in her suite with her, as her servant, assistant, and sexual appliance.
+<<else>>
+	Your Head Girl $HeadGirl.slaveName lives alone in her handsome suite.
+<</if>>
+
+<br>
+//Any slave assigned to live with your Head Girl will become, for most practical purposes, her slave. Your Head Girl will look after her, use her, and will dress her, train her, drug her, and surgically modify her according to her own tastes.//
+
+<</nobr>>
+
+<<if $HGSuiteSlaves gt 0>>\
+__Bring the Head Girl's girl out of the suite:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "live with your Head Girl">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Bring her out of the Head Girl's suite|Retrieve from HGSuite][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notHGSuiteSlaves gt 1>>\
+<<if $HGSuiteSlaves lt 1>>\
+__Assign a slave to the Head Girl:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+<<if $slaves[$i].assignment isnot "be your Head Girl">>\
+<<if $slaves[$i].devotion gte -4>>\
+  <br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+  <<display "Slave Summary">>\
+  | <<print "[[Send her to live with your Head Girl|Assign to HGSuite][$activeSlave to $slaves[" + $i + "]]]">>\
+<<else>>\
+  <br>//$slaves[$i].slaveName is rebellious and your Head Girl won't have the time to deal with her properly//\
+<</if>>\
+<</if>>\
+<</if>>\
+<</for>>
+<</if>>\
+<</if>>\

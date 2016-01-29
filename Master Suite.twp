@@ -1,0 +1,114 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $masterSuiteSlaves to 0>>
+<<set $notMasterSuiteSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "serve in the master suite">>
+      <<set $masterSuiteSlaves += 1>>
+    <<else>>
+	  <<set $notMasterSuiteSlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $FSRomanRevivalistDecoration gte 60>>
+  The master suite is a Roman patrician's apartment. There is a small shrine to the old gods the master favors in a side room, and the flooring is erotic mosaic.
+<<elseif $FSAncientEgyptianRevivalistDecoration gte 60>>
+  The master suite is the royal room of an ancient Egyptian palace. There is a small shrine to the old gods the master favors in a side room, and linen hangings decorate the walls and ceiling.
+<<elseif $FSChattelReligionistDecoration gte 60>>
+  The master suite is a severe place of cold stone and hard wood. A single shaft of sunlight illuminates the bed where penitents give their bodies to their master.
+<<elseif $FSDegradationistDecoration gte 60>>
+  The master suite has a gothic appearance. Blood-red upholstery and hardwood menace. There are numerous places where resistant slaves can be restrained.
+<<elseif $FSAssetExpansionistDecoration gte 60>>
+  The master suite is comfortable, with lots of easy-to-clean leather and plentiful tools, toys, and lubricants to make sex with stacked slaves as fun as possible.
+<<elseif $FSTransformationFetishistDecoration gte 60>>
+  The master suite is comfortable, with lots of easy-to-clean leather and plentiful tools, toys, and lubricants to make sex with bimbo slaves as fun as possible.
+<<elseif $FSGenderRadicalistDecoration gte 60>>
+  The master suite is comfortable, with lots of easy-to-clean leather and plentiful tools, toys, and lubricants to make fucking slave girls in the butt lots of fun. The straps to restrain slave girls who don't want to be fucked in the butt are concealed for now.
+<<elseif $FSGenderFundamentalistDecoration gte 60>>
+  The master suite is comfortable, with lots of easy-to-clean leather and plentiful tools, toys, and lubricants to make fucking slave girls nice and enjoyable. The straps to restrain slave girls who don't want to be fucked are concealed for now.
+<<elseif $FSPhysicalIdealistDecoration gte 60>>
+  The master suite is a shrine to the master's body. Athletic trophies and photographs of past victories line the walls. There are mirrors almost everywhere, including on the ceiling over the bed.
+<<elseif $FSSupremacistDecoration gte 60>>
+  The master suite is decorated like the master bedroom in a mansion in the old countries of $FSSupremacistRace people.
+<<elseif $FSSubjugationistDecoration gte 60>>
+  The master suite is decorated like the master bedroom in a mansion in the old countries which favored $FSSubjugationistRace slaves.
+<<elseif $FSPaternalistDecoration gte 60>>
+  The master suite is comfortable, with lots of easy-to-clean leather and plentiful tools, toys, and lubricants to make sex with slaves mutually enjoyable.
+<<elseif $FSBodyPuristDecoration gte 60>>
+  The master suite is comfortable, with lots of easy-to-clean leather and plentiful tools, toys, and lubricants to make sex with slaves mutually enjoyable.
+<<elseif $FSSlimnessEnthusiastDecoration gte 60>>
+  The master suite is comfortable, with lots of easy-to-clean leather and plentiful tools, toys, and lubricants to make sex with slaves mutually enjoyable.
+<<elseif $FSPastoralistDecoration gte 60>>
+  The master suite is comfortable, with lots of easy-to-clean leather and plentiful tools, toys, and lubricants. Everything that isn't waterproof is covered in plastic, to catch errant milk.
+<</if>>
+
+<<if $masterSuiteSlaves gt 2>>
+	The master suite is busy with slaves, so many that they are able to rotate through keeping themselves perfect and ready for your pleasure. The slaves not on call at the moment are mostly amusing themselves with intramural sex.
+<<elseif $masterSuiteSlaves gt 0>>
+	The master suite sparsely populated, so that the few slaves here have to work hard and quickly to ensure that an assortment of sex slaves is perfect and ready for your pleasure at any given moment.
+<<else>>
+	None of your slaves are serving in the master suite.
+<</if>>
+
+<br>
+<<if $masterSuiteUpgradeLuxury is 1>>
+	The master suite is a fantasy world of sexual opulence, full of luxuries of all kinds. The slaves here live free of want or worry, and have everything except their freedom.
+<<else>>
+	The master suite is fairly normal, except for its inhabitants.
+	[[Refit the suite to the height of opulence|Master Suite][$cash -= 25000, $masterSuiteUpgradeLuxury to 1]]
+	//Costs ¤25000//
+<</if>>
+
+<br>
+//Sir, slaves assigned here will use drugs to maintain and even improve their health, and will generally live an outstanding life.//
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $Concubine isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $slaves[$i].ID is $Concubine.ID>>
+	  <<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>
+	  <<display "Slave Summary">>
+	  | <<print "[[Change or remove Concubine|Concubine Select]]">>\
+	<</if>>
+  <</for>>
+<<else>>
+	You do not have a slave serving as your Concubine. [[Appoint one|Concubine Select]]
+<</if>>
+
+<</nobr>>
+
+<<if $masterSuiteSlaves gt 0>>\
+__Bring a slave out of the master suite:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "serve in the master suite">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Send her out of the Suite|Retrieve from Master Suite][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notMasterSuiteSlaves gt 1>>\
+__Send a slave to serve in the master suite:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+  <<if ($slaves[$i].devotion gt 4) or ($slaves[$i].trust lt -4)>>\
+	  <br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+	  <<display "Slave Summary">>\
+	  | <<print "[[Add her to the Suite|Assign to Master Suite][$activeSlave to $slaves[" + $i + "]]]">>\
+  <<else>>\
+	<br>//$slaves[$i].slaveName is not sufficiently broken for the master suite//\
+  <</if>>\
+<</if>>\
+<</for>>
+<</if>>\

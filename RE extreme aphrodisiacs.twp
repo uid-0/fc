@@ -1,0 +1,41 @@
+<<nobr>>
+
+	<<set $nextButton to "Continue">>
+	<<set $nextLink to "AS Dump">>
+    <<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+As you are retiring for the night, <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> <<if ($activeSlave.heels is 1) and ($activeSlave.shoes isnot "heels") and ($activeSlave.shoes isnot "boots") and ($activeSlave.shoes isnot "extreme heels")>>crawls<<elseif ($activeSlave.shoes is "heels") or ($activeSlave.shoes is "boots") or ($activeSlave.shoes is "extreme heels")>>totters<<else>>walks<</if>> into your bedroom. Since she is not allowed to ask questions, she says nothing, but her reason for being here is obvious enough. She's on a medically reckless dosage of aphrodisiacs, and she's panting as she <<if ($activeSlave.heels is 1) and ($activeSlave.shoes isnot "heels") and ($activeSlave.shoes isnot "boots") and ($activeSlave.shoes isnot "extreme heels")>>kneels<<elseif ($activeSlave.shoes is "heels")>>teeters<<else>>stands<</if>> there. Her nipples are hard, and there's visible moisture on her <<if $seeRace is 1>>$activeSlave.race <</if>><<if $activeSlave.vagina isnot -1>>pussylips<<else>>dickhead<</if>>. It's also against the rules for her to masturbate, so she clearly decided to come to you rather than break the rules. There's no way she'll be able to sleep like this.
+\
+<span id="result">
+<<click "Take pity and give her relief">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You sit on the edge of the bed and draw her down to sit on your lap. This way, you can enjoy gently fucking her while you draw orgasm after orgasm out of her with your hands. She'll only be relieved for a few hours, but she's @@color:hotpink;tearfully grateful all the same.@@
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+<<click "See how rough you can be and still get her to cum">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	The aphrodisiac dosage she's on will let her orgasm to almost anything. You spend a few minutes playing with her nipples, skillfully edging her away from climax, and she's almost vibrating with discomfort. She's so desperate that she sobs with relief when you order her to <<if ($activeSlave.heels is 1) and ($activeSlave.shoes isnot "heels")>>kneel<<elseif ($activeSlave.shoes is "heels")>>totter up<<else>>stand<</if>> against a wall and spread her buttocks. A little saliva and <<if ($PC.dick is 0)>>your vibrating strap-on<<else>>your dick<</if>> is up her willing ass. The position is uncomfortable for her, and you are not gentle, but she comes anyway. By the end of the night her butthole is so sore that she lies on her stomach every chance she gets. Her submissiveness @@color:hotpink;has increased.@@  
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+<<click "Send her away">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She leaves with ill-concealed disappointment, and is faced with the choice between covert, rule-breaking masturbation or a sleepless night. Her regard for you @@color:mediumorchid;has decreased.@@
+	<<set $activeSlave.devotion -= 1>>
+    <</replace>>
+<</click>>
+</span>

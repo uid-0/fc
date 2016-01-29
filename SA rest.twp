@@ -1,0 +1,28 @@
+<<nobr>>
+
+<<if $slaves[$i].health gt 9>>
+  Her health is so outstanding that rest does not improve it.
+<<elseif $slaves[$i].health gt -10>>
+  Her @@color:green;health recovers@@ with rest.
+  <<set $slaves[$i].health += 1>>
+<</if>>
+
+<<if $slaves[$i].devotion gt 4>>
+  <<if $slaves[$i].trust lte 4>>
+	Being allowed to rest @@color:green;reduces her fear@@ of you.
+	<<set $slaves[$i].trust += 1>>
+  <<elseif $slaves[$i].trust lte 10>>
+	Being allowed to rest @@color:green;builds her trust@@ in you.
+	<<set $slaves[$i].trust += 0.7>>
+  <<else>>
+	Being allowed to rest @@color:green;confirms her trust@@ in you.
+	<<set $slaves[$i].trust += 0.7>>
+  <</if>>
+<<else>>
+  <<if $slaves[$i].trust lt -4>>
+	Being allowed to rest @@color:green;reduces her fear@@ of you.
+	<<set $slaves[$i].trust += 1>>
+  <</if>>
+<</if>>
+
+<</nobr>>\

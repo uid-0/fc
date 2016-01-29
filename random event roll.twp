@@ -1,0 +1,7 @@
+<<if $events.length is 0>>
+	<<set $events.push("RE no event")>>
+<</if>>
+
+<<set $goto to $events.random()>>
+<<goto $goto>>
+	

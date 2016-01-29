@@ -1,0 +1,228 @@
+<<nobr>>
+
+<<if $slaves[$i].drugs is "no drugs">>
+
+<<elseif ($slaves[$i].drugs is "aphrodisiacs")>>
+	The aphrodisiacs @@color:hotpink;increase her acceptance@@ of sexual slavery.
+	<<set $slaves[$i].devotion += 1>>
+	
+<<elseif ($slaves[$i].drugs is "extreme aphrodisiacs")>>
+	The aphrodisiacs @@color:hotpink;increase her acceptance@@ of sexual slavery. Such a high dosage @@color:red;isn't healthy@@.
+	<<set $slaves[$i].devotion += 1>>
+	<<set $slaves[$i].health -= 0.7>>
+	
+<<elseif ($slaves[$i].drugs is "hormone enhancers")>>
+	Her drug regime prepares her body to accept hormonal effects.
+	<<display "SA hormone effects">>
+    
+<<elseif ($slaves[$i].drugs is "psychosuppressants")>>
+  The psychosuppressants @@color:hotpink;reduce her ability to question her role@@ or @@color:mediumaquamarine;think independently.@@
+  <<set $slaves[$i].devotion += 1>>
+  <<set $slaves[$i].trust += 1>>
+  <<if ($slaves[$i].intelligence gt -2)>>
+	They @@color:orangered;negatively impact her intelligence,@@ as well.
+	<<set $slaves[$i].intelligence -= 1>>
+  <</if>>
+  <<if ($slaves[$i].intelligence lt 0)>>
+	<<if ($slaves[$i].fetish isnot "submissive")>>
+	  The willingness to @@color:pink;submit@@ created by the drugs invades her sexuality, too.
+	  <<set $slaves[$i].fetish to "submissive">>
+	  <<set $slaves[$i].fetishDiscovered to 1>>
+	<</if>>
+  <</if>>
+    
+<<elseif ($slaves[$i].drugs is "breast injections")>>
+  Being pumped full of A-HGH @@color:red;isn't healthy.@@
+  <<if ($slaves[$i].boobs lt 800)>>
+	@@color:lime;Her modest breasts grow rapidly.@@
+	<<set $slaves[$i].boobs += 150>>
+	<<set $slaves[$i].boobs += $injectionUpgrade>>
+  <<elseif ($slaves[$i].boobs lt 2000)>>
+	@@color:lime;Her big breasts grow steadily.@@
+	<<set $slaves[$i].boobs += 100>>
+	<<set $slaves[$i].boobs += $injectionUpgrade>>
+  <<elseif ($slaves[$i].boobs lt 5000)>>
+	@@color:lime;Her huge breasts grow gradually.@@
+	<<set $slaves[$i].boobs += 50>>
+	<<set $slaves[$i].boobs += $injectionUpgrade>>
+  <<else>>
+	@@color:lime;Her gigantic breasts grow very slowly.@@
+	<<set $slaves[$i].boobs += 25>>
+	<<set $slaves[$i].boobs += 0.5*$injectionUpgrade>>
+  <</if>>
+  <<set $slaves[$i].health -= 1>>
+  <<if random(1,100) gt 70+($slaves[$i].areolae*10)>>
+	The increase in breast size @@color:lime;stretches and broadens her areolae.@@
+	<<set $slaves[$i].areolae += 1>>
+  <</if>>
+  <<if random(1,100) gt 85+($slaves[$i].nipples*5)>>
+	The hormones also @@color:lime;cause nipple growth.@@
+	<<set $slaves[$i].nipples += 1>>
+  <</if>>
+    
+<<elseif ($slaves[$i].drugs is "butt injections")>>
+  Being pumped full of A-HGH @@color:red;isn't healthy.@@
+  <<if ($slaves[$i].butt lt 3)>>
+	@@color:lime;Her small butt swells rapidly.@@
+	<<set $slaves[$i].butt += 1>>
+  <<else>>
+	@@color:lime;Her big butt grows gradually.@@
+	<<set $slaves[$i].butt += 0.5>>
+	<<set $slaves[$i].butt += ($injectionUpgrade/50)>>
+  <</if>>
+  <<set $slaves[$i].health -= 1>>
+    
+<<elseif ($slaves[$i].drugs is "lip injections")>>
+  Being pumped full of A-HGH @@color:red;isn't healthy.@@
+  <<if ($slaves[$i].lips lt 3)>>
+	@@color:lime;Her lips swell rapidly.@@
+	<<set $slaves[$i].lips += 1>>
+  <</if>>
+  <<set $slaves[$i].health -= 1>>
+    
+<<elseif ($slaves[$i].drugs is "penis enhancement")>>
+  <<if (random(1,100) gt (50-$injectionUpgrade+($slaves[$i].dick*5))) and ($slaves[$i].dick lt 6)>>
+	Being filled with penis enhancers meant for horses @@color:red;isn't healthy.@@ @@color:lime;Her cock swells painfully.@@
+	<<set $slaves[$i].dick += 1>>
+	<<set $slaves[$i].health -= 1>>
+  <<elseif ($slaves[$i].drugs is "penis enhancement") and ($slaves[$i].balls isnot 0)  and ($slaves[$i].balls lt 6) and (random(1,100) gt (60-$injectionUpgrade+($slaves[$i].balls*5)))>>
+	Being filled with enhancers meant for horses @@color:red;isn't healthy.@@ @@color:lime;Her balls swell painfully.@@
+	<<set $slaves[$i].balls += 1>>
+	<<set $slaves[$i].health -= 1>>
+  <<else>>
+	Despite being filled with penis enhancers meant for horses, her cock does not grow.
+  <</if>>
+    
+<<elseif ($slaves[$i].drugs is "curatives")>>
+  <<if ($slaves[$i].health gt 9)>>
+	Her health is already outstanding and cannot be improved with further drug treatment. @@color:yellow;Her drug regimen has been ended.@@
+	<<set $slaves[$i].drugs to "no drugs">>   
+  <<elseif ($slaves[$i].health lt -2) and ($slaves[$i].fetish isnot "mindbroken")>>
+	@@color:green;Her poor health rapidly improves@@ under drug treatment, and she @@color:mediumaquamarine;trusts you more@@ for giving her access to expensive modern medicine.
+	<<set $slaves[$i].health += 1>>
+	<<set $slaves[$i].health += $curativeUpgrade>>
+	<<set $slaves[$i].trust += 0.3>>
+  <<elseif ($slaves[$i].health lt -2)>>
+	@@color:green;Her poor health rapidly improves@@ under drug treatment.
+	<<set $slaves[$i].health += 1>>
+	<<set $slaves[$i].health += $curativeUpgrade>>
+  <<elseif ($slaves[$i].fetish isnot "mindbroken")>>
+	@@color:green;Her health improves@@ under curative treatment, and and she @@color:mediumaquamarine;trusts you more@@ for giving her access to expensive modern medicine.
+	<<set $slaves[$i].health += 0.7>>
+	<<set $slaves[$i].health += $curativeUpgrade>>
+	<<set $slaves[$i].trust += 0.3>>
+  <<else>>
+	@@color:green;Her health improves@@ under curative treatment.
+	<<set $slaves[$i].health += 0.7>>
+	<<set $slaves[$i].health += $curativeUpgrade>>
+  <</if>>
+    
+<<elseif ($slaves[$i].drugs is "steroids")>>
+  <<if ($slaves[$i].dick is 0) and (random(1,100) gt 40+($slaves[$i].clit*10))>>
+	The gear she's on @@color:lime;increases the size of her clit.@@
+	<<set $slaves[$i].clit += 1>>
+  <<elseif ($slaves[$i].dick isnot 0) and ($slaves[$i].dick lt 3) and (random(1,100) gt 95)>>
+	The gear she's on @@color:lime;increases the size of her penis.@@
+	<<set $slaves[$i].dick += 1>>
+  <<elseif (($slaves[$i].face-$slaves[$i].faceImplant) gt 1) and (random(1,100) gt 95)>>
+	The gear she's on @@color:orange;hardens her pretty face a little.@@
+	<<set $slaves[$i].face -= 1>>
+  <<elseif ($slaves[$i].balls isnot 0) and ($slaves[$i].balls lt 3) and (random(1,100) gt 95)>>
+	The gear she's on @@color:lime;increases the size of her balls.@@
+	<<set $slaves[$i].balls += 1>>
+  <<elseif random(1,100) gt 110-($slaves[$i].anus*10)>>
+	The steroids she's on have an effect on her stretched anal muscles, giving her a @@color:orange;tighter butthole.@@
+	<<set $slaves[$i].anus -= 1>>
+  <<elseif random(1,100) gt 110-($slaves[$i].vagina*10)>>
+	The steroids she's on have an effect on her vaginal muscles, giving her a @@color:orange;tighter pussy.@@
+	<<set $slaves[$i].vagina -= 1>>
+  <</if>>
+	
+<</if>>
+
+<<if ($slaves[$i].drugs isnot "curatives")>>
+<<if ($slaves[$i].health lt -5)>>
+	It's difficult being so ill, and she @@color:mediumorchid;resents you@@ for not treating her.
+	<<set $slaves[$i].devotion -= 0.3>>
+<<elseif ($slaves[$i].health gt 5)>>
+	She understands that she owes her near-perfect health to you and @@color:hotpink;believes@@ that life with you is better than freedom in some ways.
+	<<set $slaves[$i].trust += 0.3>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].drugs is "breast injections")>>
+  <<if ($slaves[$i].boobs gte 9000)>>
+	Her udders are now so huge that further A-HGH treatment will not increase their size. @@color:yellow;Her drug regimen has been ended.@@
+	<<set $slaves[$i].drugs to "no drugs">>
+  <</if>>
+<<elseif ($slaves[$i].drugs is "butt injections")>>
+  <<if ($slaves[$i].butt gte 9)>>
+	Her ass is now so huge that further A-HGH treatment will not increase its size. @@color:yellow;Her drug regimen has been ended.@@
+	<<set $slaves[$i].drugs to "no drugs">>
+  <</if>>
+<<elseif ($slaves[$i].drugs is "lip injections")>>
+  <<if ($slaves[$i]. lips gte 3)>>
+	Her lips are now so huge that further A-HGH treatment will not increase their size. @@color:yellow;Her drug regimen has been ended.@@
+	<<set $slaves[$i].drugs to "no drugs">>
+  <</if>>
+<<elseif ($slaves[$i].drugs is "penis enhancement")>>
+  <<if ($slaves[$i].dick gte 6) and ($slaves[$i].balls gte 6)>>
+	Her cock and balls are now so huge that further drug enhancement will not increase their size. @@color:yellow;Her drug regimen has been ended.@@
+	<<set $slaves[$i].drugs to "no drugs">>
+  <<elseif ($slaves[$i].dick gte 6) and ($slaves[$i].balls is 0)>>
+	Her cock is now so huge that further drug enhancement will not increase its size. @@color:yellow;Her drug regimen has been ended.@@
+	<<set $slaves[$i].drugs to "no drugs">>
+  <</if>>
+<<elseif ($slaves[$i].drugs is "psychosuppressants")>>
+  <<if ($slaves[$i].intelligence lte -2)>>
+	She is so moronic that drug treatment can't really make her more willing to obey others than she already is. @@color:yellow;Her drug regimen has been ended.@@
+	<<set $slaves[$i].drugs to "no drugs">>
+  <</if>>
+<</if>>
+
+<<if ($slaves[$i].addict gt 0)>>
+
+<<if ($slaves[$i].drugs is "aphrodisiacs")>>
+	Getting the aphrodisiacs she needs from you @@color:hotpink;increases her habituation to slavery.@@
+	<<set $slaves[$i].addict += 1>>
+<<elseif ($slaves[$i].drugs is "extreme aphrodisiacs")>>
+	Getting a huge dose of her beloved aphrodisiacs from you @@color:hotpink;increases her addiction to slavery.@@
+	<<set $slaves[$i].addict += 2>>
+<<elseif ($slaves[$i].addict lt 2)>>
+	She has finally been @@color:cyan;weaned off aphrodisiacs.@@
+	<<set $slaves[$i].addict to 0>>
+<<elseif ($aphrodisiacUpgrade is 1)>>
+	Substitutes produced by your advanced pharmaceutical fabricator protect her from the negative effects of aphrodisiac withdrawal and even hasten the flushing of her system.
+	<<set $slaves[$i].addict -= 2>>
+<<else>>
+	She feels the effects of withdrawal from aphrodisiacs keenly, and she is @@color:mediumorchid;bitterly resentful@@.
+	<<set $slaves[$i].addict -= 2>>
+	<<set $slaves[$i].devotion -= 2>>
+<</if>>
+
+<<else>>
+
+<<if ($slaves[$i].drugs is "aphrodisiacs") and (random(1,100) gt 80)>>
+	@@color:cyan;She has become an aphrodisiac addict.@@
+	<<set $slaves[$i].addict to 1>>
+<<elseif ($slaves[$i].drugs is "extreme aphrodisiacs") and (random(1,100) gt 60)>>
+	@@color:cyan;She has become an aphrodisiac addict.@@
+	<<set $slaves[$i].addict to 2>>
+<</if>>
+
+<</if>>
+    
+<<if ($slaves[$i].lactation gt 1)>>
+<<if ($slaves[$i].boobs lt 800)>>
+	The powerful lactation drugs she's implanted with @@color:lime;rapidly swell her small breasts.@@
+	<<set $slaves[$i].boobs += 100>>
+<<elseif ($slaves[$i].boobs lt 1600)>>
+	The powerful lactation drugs she's implanted with @@color:lime;slowly swell her big breasts.@@
+	<<set $slaves[$i].boobs += 50>>
+<<elseif ($slaves[$i].boobs lt 3000)>>
+	The powerful lactation drugs she's implanted with @@color:lime;gradually swell her enormous breasts.@@
+	<<set $slaves[$i].boobs += 25>>
+<</if>>
+<</if>>
+
+<</nobr>>\

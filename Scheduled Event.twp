@@ -1,0 +1,25 @@
+<<if ($recruiterProgress gte 13)>>
+  <<if ($recruiterTarget is "desperate whores")>>
+	<<goto "SE desperate whores">>
+  <<elseif ($recruiterTarget is "young migrants")>>
+	<<goto "SE young migrants">>
+  <<elseif ($recruiterTarget is "expectant mothers")>>
+	<<goto "SE expectant mothers">>
+  <<elseif ($recruiterTarget is "dissolute sissies")>>
+	<<goto "SE dissolute sissies">>
+  <<elseif ($recruiterTarget is "reassignment candidates")>>
+	<<goto "SE reassignment candidates">>
+  <</if>>
+<<elseif ($customSlaveOrdered is 1)>>
+	<<goto "SE custom slave delivery">>
+<<elseif ($fighterOne isnot 0) and ($fighterTwo isnot 0) and ($pitFought is 0)>>
+  <<if $pitLethal is 1>>
+	<<goto "SE lethal pit">>
+  <<else>>
+	<<goto "SE nonlethal pit">>
+  <</if>>
+<<elseif $plot is 1>>
+	<<goto "Nonrandom Event">>
+<<else>>
+	<<goto "Random Nonindividual Event">>
+<</if>>

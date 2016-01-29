@@ -1,0 +1,200 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<span id="name"><span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span></span> comes to see you, clearly in a good mood. Since she's allowed to ask questions, she comes right out with it.
+
+<<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+  "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I'm feeling healthy, and I've been a good girl thith week. With everyone getting tho many powerful drugth -" she takes a breath before asking in a rush
+<<else>>
+  "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I'm feeling healthy, and I've been a good girl this week. With everyone getting all these powerful drugs -" she takes a breath before asking in a rush
+<</if>>
+
+<<if ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "dom") and ($activeSlave.dick gt 0) and ($activeSlave.dick lt 5) and ($activeSlave.balls gt 0)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of penith enhancement? I know I'm a thex thlave and it'th my place to get fucked, but when I do get to do a girl, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I want to thee a little fear in her eyeth."
+  <<else>>
+	"- may I have a dose of penis enhancement? I know I'm a sex slave and it's my place to get fucked, but when I do get to do a girl, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I want to see a little fear in her eyes."
+  <</if>>
+  <<set $seed to "dick">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "sadist") and ($activeSlave.dick gt 0) and ($activeSlave.dick lt 5) and ($activeSlave.balls gt 0)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of penith enhancement? I know I'm a thex thlave and it'th my place to get fucked, but when I do get to do a girl, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I want her to hurt."
+  <<else>>
+	"- may I have a dose of penis enhancement? I know I'm a sex slave and it's my place to get fucked, but when I do get to do a girl, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I want her to hurt."
+  <</if>>
+  <<set $seed to "dick">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "nympho") and ($activeSlave.dick gt 0) and ($activeSlave.dick lt 5) and ($activeSlave.balls gt 0)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of penith enhancement? I jutht want to fuck all the time, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. Girlth with big cockth have more fun, even getting fucked. Ethpecially getting fucked."
+  <<else>>
+	"- may I have a dose of penis enhancement? I just want to fuck all the time, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. Girls with big cocks have more fun, even getting fucked. Especially getting fucked."
+  <</if>>
+  <<set $seed to "dick">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "likes girls") and ($activeSlave.lips lt 3)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of lip enhancement? I love the ladieth, and the ladieth love thome luth lipth kithing them down there."
+  <<else>>
+	"- may I have a dose of lip enhancement? I love the ladies, and the ladies love some lush lips kissing them down there."
+  <</if>>
+  <<set $seed to "lips">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "masochist") and ($activeSlave.dick gt 1)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a big dothe of hormoneth to thrink my dick? I'm a thex thlave and it'th my place to get fucked, and when I get uthed like a little thlut it hurtth tho good, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."
+  <<else>>
+	"- may I have a big dose of hormones to shrink my dick? I'm a sex slave and it's my place to get fucked, and when I get used like a little slut it hurts so good, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."
+  <</if>>
+  <<set $seed to "dickMinus">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "submissive") and ($activeSlave.dick gt 1)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a big dothe of hormoneth to thrink my dick? I don't need a big dick to get fucked, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I don't want to intimidate anyone who might uthe me."
+  <<else>>
+	"- may I have a big dose of hormones to shrink my dick? I don't need a big dick to get fucked, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I don't want to intimidate anyone who might use me."
+  <</if>>
+  <<set $seed to "dickMinus">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "cumslut") and ($activeSlave.lips lt 3)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of lip enhancement? I want everyone to imagine my lipth around their cock, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."
+  <<else>>
+	"- may I have a dose of lip enhancement? I want everyone to imagine my lips around their cock, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."
+  <</if>>
+  <<set $seed to "lips">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "humiliation") and ($activeSlave.dick gt 1)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a big dothe of hormoneth to thhrink my dick? It would be tho humiliating to have a little bitch dick, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, everyone would know I'm a worthleth little thlut."
+  <<else>>
+	"- may I have a big dose of hormones to shrink my dick? It would be so humiliating to have a little bitch dick, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, everyone would know I'm a worthless little slut."
+  <</if>>
+  <<set $seed to "dickMinus">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "humiliation") and ($activeSlave.lips lt 3)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of lip enhancement? I want lipth tho big everyone knowth I'm a thlut the moment they thee me. They'll thtare at me."
+  <<else>>
+	"- may I have a dose of lip enhancement? I want lips so big everyone knows I'm a slut the moment they see me. They'll stare at me."
+  <</if>>
+  <<set $seed to "lips">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "buttslut") and ($activeSlave.butt lt 9)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of ath growth drugth? I would love it if everyone thought of fucking my big butt the moment they thaw me!"
+  <<else>>
+	"- may I have a dose of ass growth drugs? I would love it if everyone thought of fucking my big butt the moment they saw me!"
+  <</if>>
+  <<set $seed to "butt">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "boobs") and ($activeSlave.butt lt 9)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of boob growth drugth? I would love it if everyone thought of touching and thucking and fucking my big bimbo boobieth the moment they thaw me!"
+  <<else>>
+	"- may I have a dose of boob growth drugs? I would love it if everyone thought of touching and sucking and fucking my big bimbo boobies the moment they saw me!"
+  <</if>>
+  <<set $seed to "boobs">>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "pregnancy") and ($activeSlave.butt lt 9)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of boob growth drugth? I want to look, you know, fertile, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."
+  <<else>>
+	"- may I have a dose of boob growth drugs? I want to look, you know, fertile, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."
+  <</if>>
+  <<set $seed to "boobs">>
+<<elseif ($FSGenderRadicalist gt 0) and ($activeSlave.dick gt 1)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a big dothe of hormoneth to thrink my dick? I jutht want to become the betht little girl I can be, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I don't want anything dithtracting anyone from my rear puthy."
+  <<else>>
+	"- may I have a big dose of hormones to shrink my dick? I just want to become the best little girl I can be, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I don't want anything distracting anyone from my rear pussy."
+  <</if>>
+  <<set $seed to "dickMinus">>
+<<elseif ($activeSlave.butt lt $activeSlave.boobs/1000)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of athth growth drugth? I want to be ath fuckable ath I can for you, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, and I think my butt needth it more than my boobth."
+  <<else>>
+	"- may I have a dose of ass growth drugs? I want to be as fuckable as I can for you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, and I think my butt needs it more than my boobs."
+  <</if>>
+  <<set $seed to "butt">>
+<<else>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"- may I have a dothe of boob growth drugth? I want to be as fuckable as I can for you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, and I think my boobs need it more than my butt."
+  <<else>>
+	"- may I have a dose of boob growth drugs? I want to be as fuckable as I can for you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, and I think my boobs need it more than my butt."
+  <</if>>
+  <<set $seed to "boobs">>
+<</if>>
+
+<</nobr>>
+\
+<span id="result">
+<<click "Give her the necessary injections">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<nobr>>
+	  You load the injection gun you keep in your desk, and tap it repeatedly against the cooperative slave's
+	  <<if $seed is "boobs">>
+		tits,
+	  <<elseif $seed is "butt">>
+		rear end,
+	  <<elseif $seed is "lips">>
+		lips,
+	  <<elseif $seed is "dick">>
+		cock,
+	  <<elseif $seed is "dickMinus">>
+		girly dick,
+	  <</if>>
+	  producing a hiss each time as pressurized gas painlessly drives the drugs deep into her tissues. She leaves @@color:hotpink;thanking@@ you profusely, massaging herself in anticipation.
+	  <<set $activeSlave.devotion += 0.7>>
+	  Before the end of the week, her
+	  <<if $seed is "boobs">>
+		@@color:lime;boobs have grown,@@ delighting her.
+		<<set $activeSlave.boobs += 200>>
+		The dose of growth hormones necessary to cause such rapid tissue changes left her feeling @@color:red;rather ill,@@ but she is recovering normally.
+		<<set $activeSlave.health -= 1>>
+	  <<elseif $seed is "butt">>
+		@@color:lime;buttocks have grown,@@ delighting her.
+		<<set $activeSlave.butt += 1>>
+		The dose of growth hormones necessary to cause such rapid tissue changes left her feeling @@color:red;rather ill,@@ but she is recovering normally.
+		<<set $activeSlave.health -= 1>>
+	  <<elseif $seed is "lips">>
+		@@color:lime;lips have swelled,@@ delighting her.
+		<<set $activeSlave.lips += 1>>
+		The dose of growth hormones necessary to cause such rapid tissue changes left her feeling @@color:red;rather ill,@@ but she is recovering normally.
+		<<set $activeSlave.health -= 1>>
+	  <<elseif $seed is "dick">>
+		@@color:lime;cock has grown,@@ delighting her.
+		<<set $activeSlave.dick += 1>>
+		<<if $activeSlave.balls lt 5>>
+		  <<if random(1,100) gt 70>>
+		  	As a side effect, her @@color:lime;balls have also swelled,@@ which she sees as an added benefit.
+			<<set $activeSlave.balls += 1>>
+		  <</if>>
+		<</if>>
+		The dose of growth hormones and male hormone treatment necessary to cause such rapid change left her feeling @@color:red;rather ill,@@ but she is recovering normally.
+		<<set $activeSlave.health -= 1>>
+	  <<elseif $seed is "dickMinus">>
+		@@color:orange;dick has shrunk,@@ delighting her.
+		<<set $activeSlave.dick -= 1>>
+		<<if $activeSlave.balls gt 1>>
+		  <<if random(1,100) gt 70>>
+		  	As a side effect, her @@orange:lime;balls have also atrophied,@@ which she sees as an added benefit.
+			<<set $activeSlave.balls -= 1>>
+		  <</if>>
+		<</if>>
+		The dose of growth hormones and male hormone treatment necessary to cause such rapid tissue reduction left her feeling @@color:red;rather ill,@@ but she is recovering normally.
+		<<set $activeSlave.health -= 1>>
+	  <</if>>
+	<</nobr>>
+    <</replace>>
+<</click>>
+<<click "Decline">>
+	<<replace "#result">>
+	You tell her that she's better as she is, and she must respect your judgment in this regard. She leaves looking more @@color:hotpink;flattered@@ than disappointed. She's less insecure in her own body, and @@color:gold;trusts@@ that <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> has a plan for her.
+	<<set $activeSlave.devotion += 0.3>>
+	<<set $activeSlave.trust += 0.3>>
+    <</replace>>
+<</click>>
+</span>

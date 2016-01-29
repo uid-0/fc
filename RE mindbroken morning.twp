@@ -1,0 +1,35 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+It's a sunny morning, with rare mild weather, and you're stuck at your desk, as usual. After the typical rush of slaves clears the kitchen after the breakfast hour, you see one peel off to stand out on a balcony for a moment with the light on her face. You pay little attention to such a trifle, but then notice that it's <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>.
+
+You head out and find that she's looking up at the sun with her $activeSlave.eyes eyes closed, letting the warmth and light envelop her <<if ($activeSlave.face gt 1)>>gorgeous<<elseif  ($activeSlave.face gt 0)>>pretty<<else>>homely<</if>> face. She hasn't gotten completely ready for her day yet, and her $activeSlave.skin skin is clean and quite bare. Despite her small remaining mental capacity, it seems she's still capable of the minor pleasure of enjoying the sunlight. It is very probably the only enjoyable thing she'll register today.
+\
+<span id="result">
+<<click "Let her be">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Satisfied that there's no need for immediate intervention, you head back to your desk. A few minutes later, she heads in to finish getting ready and get to work, saving your personal assistant the necessity of directing her. As the broken slave passes your office, you think for a moment that you see a bit of moisture glinting in her eyes, but soon correct yourself: it's just a reflection from the glass walls of the arcology. She makes it to her assignment on time, and no one notices anything unusual about her today.
+    <</replace>>
+<</click>>
+<<click "See if an orgasm will cheer her up">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You<<if ($PC.dick is 0)>> don a strap-on and<</if>> slide your hands around her <<if ($activeSlave.weight gt 0)>>soft<<elseif ($activeSlave.weight gt -1)>>trim<<else>>skinny<</if>> waist, feeling the warmth of her skin, and gently step forward until she's between you and the balcony railing. She is silently obedient, not reacting at all other than to obey your direction as to where she should go. For example, when she feels <<if ($PC.dick is 0)>>the phallus<<else>>your hardening dick<</if>> pressing against her, she <<if ($activeSlave.height gt 0)>>unconsciously bends forward a little and cocks her hips to position herself<<else>>rises up on the balls of her feet to bring her short body up to the right height<</if>> for anal. She relaxes her <<if ($activeSlave.anus gt 2)>>loose anus<<elseif  ($activeSlave.anus gt 1)>>asshole<<else>>tight little asshole<</if>> completely, making entry easy. Your hands rove, teasing her<<if ($activeSlave.nipples gt 1)>> huge<<elseif ($activeSlave.nipples gt 0)>> big<</if>> nipples, <<if ($activeSlave.boobs gt 1000)>>hefting her heavy tits<<elseif  ($activeSlave.boobs gt 300)>>squeezing her healthy breasts<<else>>pressing her flat chest<</if>>. Her face is complacent and unaffected even as her body responds, <<if ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0)>>her useless dick sporting a drop of precum<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>her soft dick twitching feebly<<elseif $activeSlave.dick gt 4>>her giant penis protruding through a gap in the railing<<elseif $activeSlave.dick gt 2>>her penis pressing hard against the railing<<elseif $activeSlave.dick gt 0>>her pathetic hard-on barely protruding from between her thighs<<elseif $activeSlave.clit gt 0>>her huge clit stiff under a brush from your fingers<<else>>her pussy warm and wet under a brush from your fingers<</if>>. Even her eventual orgasm is entirely mechanical, a simple tightening of her <if ($activeSlave.anus gt 2)>>gaping<<elseif  ($activeSlave.anus gt 1)>>loosened<<else>>tight<</if>> sphincter, a gasp of air into her lungs, and a slight shiver. There is a quirk at the corner of her mouth that might be transitory pleasure, but a look into her eyes confirms that it is not so.
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+	<<display "Anal VCheck">>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take virginity//<</if>>
+</span>

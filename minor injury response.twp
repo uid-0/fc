@@ -1,0 +1,41 @@
+<<nobr>>
+
+<<if $FSDegradationist gt 20>>
+
+She carries on, knowing that in your degradationist arcology, this is accepted behavior.
+
+<<elseif $FSPaternalist gt 20>>
+
+<<if ($AProsperityCap gte 60) and (random(1,100) gt 50)>>
+  The security drones successfully detain him and oblige him to pay significant @@color:yellowgreen;compensation,@@ since abusing slaves is discouraged here.
+  <<set $cash += 50>>
+<<elseif ($AProsperityCap gte 160) and (random(1,100) gt 50)>>
+  The computer systems successfully detain him and require him to pay significant @@color:yellowgreen;compensation,@@ since abusing slaves is discouraged here.
+  <<set $cash += 50>>
+<<elseif ($slaves[$i].whoreSkill*20 gt random(1,100))>>
+  $slaves[$i].slaveName is used to this sort of thing, and convinces him to pay significant @@color:yellowgreen;compensation,@@ since abusing slaves is discouraged here.
+  <<set $cash += 50>>
+<<elseif ($slaves[$i].combatSkill gt 0)>>
+  $slaves[$i].slaveName can take care of herself, and she successfully forces him to pay significant @@color:yellowgreen;compensation,@@ since abusing slaves is discouraged here.
+  <<set $cash += 50>>
+<</if>>
+
+<<else>>
+
+<<if ($AProsperityCap gte 60) and (random(1,100) gt 50)>>
+  The security drones successfully detain him and oblige him to pay minor @@color:yellowgreen;compensation.@@
+  <<set $cash += 10>>
+<<elseif ($AProsperityCap gte 160) and (random(1,100) gt 50)>>
+  The computer systems successfully detain him and require him to pay minor @@color:yellowgreen;compensation.@@
+  <<set $cash += 10>>
+<<elseif ($slaves[$i].whoreSkill*20 gt random(1,100))>>
+  $slaves[$i].slaveName is used to this sort of thing, and convinces him to pay minor @@color:yellowgreen;compensation.@@
+  <<set $cash += 10>>
+<<elseif ($slaves[$i].combatSkill gt 0)>>
+  $slaves[$i].slaveName can take care of herself, and she successfully forces him to pay minor @@color:yellowgreen;compensation.@@
+  <<set $cash += 10>>
+<</if>>
+
+<</if>>
+
+<</nobr>>

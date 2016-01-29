@@ -1,0 +1,116 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $servantsQuarterSlaves to 0>>
+<<set $notServantsQuarterSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "work as a servant">>
+      <<set $servantsQuarterSlaves += 1>>
+    <<else>>
+	  <<set $notServantsQuarterSlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $FSDegradationistDecoration gte 60>>
+  The quarters are severe and utilitarian. Servants sleep uncomfortably here, knowing that even on their meager bedrolls, they are fair game for abuse.
+<<elseif $FSChattelReligionistDecoration gte 60>>
+  The quarters are spartan, yet functional. Servants here are expected to be clean and hardworking, and there is a penitent's cell ready for them if they are not.
+<<elseif $FSRomanRevivalistDecoration gte 60>>
+  The quarters spartan, yet functional. At one end of the long dormitory there is an alcove with a shrine to the Roman goddess of domesticity.
+<<elseif $FSAncientEgyptianRevivalistDecoration gte 60>>
+  The quarters utilitarian, yet warm and well-kept. At one end of the long dormitory there is an alcove with a shrine to the Egyptian goddess of servility.
+<<elseif $FSSubjugationistDecoration gte 60>>
+  The quarters are spartan, since that's all $FSSubjugationistRace domestics need or deserve. There's a whipping post in the corner of the room so that whenever a slave is beaten, the rest must watch.
+<<elseif $FSSupremacistDecoration gte 60>>
+  The quarters are spartan, since that's all domestics from the inferior races need or deserve. There's a whipping post in the corner of the room so that whenever a slave is beaten, the rest must watch.
+<<elseif $FSPaternalistDecoration gte 60>>
+  The quarters are comfortable and well-kept. Though there is little privacy here, the servants are provided for. There's even a small rest area for them to take their regular breaks in.
+<<elseif $FSGenderRadicalistDecoration gte 60>>
+  The quarters are comfortable and well-kept. There are pornographic pictures on the walls, depicting all sorts of slaves earnestly enjoying taking cocks up their anuses.
+<<elseif $FSGenderFundamentalistDecoration gte 60>>
+  The quarters are comfortable and well-kept. There are pornographic pictures on the walls, depicting pretty female slaves being fucked by muscular men.
+<<elseif $FSAssetExpansionistDecoration gte 60>>
+  The quarters are comfortable and well-kept. There are pornographic pictures on the walls, depicting slaves with gigantic breasts earnestly enjoying huge cocks.
+<<elseif $FSTransformationFetishistDecoration gte 60>>
+  The quarters are comfortable and well-kept. There are pornographic pictures on the walls, depicting slaves with huge implants earnestly enjoying sex.
+<<elseif $FSBodyPuristDecoration gte 60>>
+  The quarters are comfortable and well-kept. There are pornographic pictures on the walls, depicting gorgeous slaves earnestly enjoying sex.
+<<elseif $FSSlimnessEnthusiastDecoration gte 60>>
+  The quarters are comfortable and well-kept. There are pornographic pictures on the walls, depicting slender slaves earnestly enjoying sex.
+<<elseif $FSPhysicalIdealistDecoration gte 60>>
+  The quarters are comfortable and well-kept. There are softcore pictures on the walls, depicting gorgeously muscled, oiled-up men and women, flexing and posing for the camera.
+<<elseif $FSPastoralistDecoration gte 60>>
+  The quarters are comfortable and well-kept. There are pornographic pictures on the walls, depicting lactating slaves earnestly enjoying sex.
+<</if>>
+
+<<if $servantsQuarterSlaves gt 2>>
+	The servants' quarters are busy with hurrying slaves. One shift of girls is eating, cleaning the quarters, and bathing. The second is sleeping, and the third is out in the penthouse cleaning and serving.
+<<elseif $servantsQuarterSlaves gt 0>>
+	A few slaves are working out of servants' quarters. They must split their scant time between looking after their own needs and the superior needs of everyone else.
+<<elseif $Stewardess isnot 0>>
+	$Stewardess.slaveName is alone, and seems rather bereft without anyone to order around.
+<<else>>
+	None of your slaves are working out of the servants' quarters. [[Decomission the quarters|Main][$servantsQuarters to 0, $servantsQuartersUpgradeMonitoring to 0]]
+<</if>>
+
+<br>
+<<if $servantsQuartersUpgradeMonitoring is 1>>
+	The quarters have been upgraded with enhanced monitoring systems to make the servants work harder, improving their obedience and efficiency.
+<<else>>
+	The quarters are standard.
+	[[Upgrade the monitoring systems to force harder work|Servants' Quarters][$cash -= 10000, $servantsQuartersUpgradeMonitoring to 1]]
+	//Costs ¤10000 and will increase upkeep costs//
+<</if>>
+
+<br>
+//Sir, slaves assigned here will use drugs to maintain and even improve their health. They will gradually become obedient if they aren't already, but they'll lose devotion due to monotony.//
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $Stewardess isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $slaves[$i].ID is $Stewardess.ID>>
+	  <<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>
+	  <<display "Slave Summary">>
+	  | <<print "[[Change or remove Stewardess|Stewardess Select]]">>\
+	<</if>>
+  <</for>>
+<<else>>
+	You do not have a slave serving as a Stewardess. [[Appoint one|Stewardess Select]]
+<</if>>
+
+<</nobr>>
+
+<<if $servantsQuarterSlaves gt 0>>\
+__Bring a slave out of the servants' quarters:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "work as a servant">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Release her from the Servants' Quarters|Retrieve from servants' quarters][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notServantsQuarterSlaves gt 1>>\
+__Send a slave to work out of the servants' quarters:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+<<if ($slaves[$i].devotion gt 4) or ($slaves[$i].trust lt -4)>>\
+  <br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+  <<display "Slave Summary">>\
+  | <<print "[[Assign her to the Servants' Quarters|Assign to servants' quarters][$activeSlave to $slaves[" + $i + "]]]">>\
+<<else>>\
+  <br>//$slaves[$i].slaveName must be either more fearful of you or more devoted to you//\
+<</if>>\
+<</if>>\
+<</for>>
+<</if>>\

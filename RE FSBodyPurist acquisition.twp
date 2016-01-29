@@ -1,0 +1,41 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She offered herself for voluntary enslavement to get to an arcology in which implants are uncommon, since she has a fear of surgery.">>
+<<set $activeSlave.health to random(-2,2)>>
+<<set $activeSlave.devotion to random(-3,3)>>
+<<set $activeSlave.trust to random(-3,3)>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+You receive so many messages, as a noted titan of the new Free Cities world, that your personal assistant has to be quite draconian in culling them. She lets only the most important through to you. One category of message that always gets through regardless of content, though, is requests for voluntary enslavement. As the new world takes shape, they've become less rare than they once were.
+
+This one is from another arcology, which is rather unusual. You are presented with a rather normal-looking, if obviously poor, free citizen. She says dejectedly, "I'm on my last few ¤ here, sir. The owner here, he's planning to enslave me later today. I just know it. He fills his slaves up with silicone until they look like fucking barbie dolls." She shivers fearfully. "You don't do that, right? If I have to be a fucktoy, I don't want to be cut up first."
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	When she arrives, it's obvious that she isn't particularly happy with the situation, but there is some evident relief to her. When asked about it, she says, "I really hate the idea of surgery, especially implant surgery, M-<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. Just - the idea of having fake shit in here -" she rubs her chest a little "- ugh." She laughs bitterly at herself, and then rubs her chest again, looking at you with mixed fear and invitation.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

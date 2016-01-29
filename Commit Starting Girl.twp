@@ -1,0 +1,24 @@
+<<nobr>>
+
+<<display "Slave Cost">>
+<<set $cash -= $slaveCost>>
+
+$activeSlave.slaveName has been added to your starting stable of slaves. You now have ¤$cash remaining.
+
+<<set $slaves.push($activeSlave)>>
+<<set $startingGirlCopied to 1>>
+
+<</nobr>>
+\
+<<nobr>>
+
+<<if $cash gte 2000>>
+  <br>
+  [[Add another slave, based on the previous slave|Starting Girls]]
+  <br>
+  [[Add another slave, starting from a new slave|Starting Girls Workaround]]
+<</if>>
+<br>
+[[Take control of the arcology|Acquisition]]
+
+<</nobr>>

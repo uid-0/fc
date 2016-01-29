@@ -1,0 +1,35 @@
+<<silently>>
+
+<<if random(1,100) gt 60>>
+
+<<if $activeSlave.dick gt 0>>
+  <<set $activeSlave.dick to 0>>
+  <<set $activeSlave.balls to 0>>
+  <<set $activeSlave.ovaries to 1>>
+  <<set $activeSlave.vagina to either(0,1,1,1,2,2)>>
+  <<set $activeSlave.boobs += 100*random(1,4)>>
+  <<set $activeSlave.butt += random(1,2)>>
+  <<if $activeSlave.muscles gte 1>>
+	<<set $activeSlave.muscles -= random(0,1)>>
+  <</if>>
+  <<if $activeSlave.height gt -2>>
+	<<set $activeSlave.height -= random(0,1)>>
+  <</if>>
+<<else>>
+  <<set $activeSlave.dick to random(1,4)>>
+  <<set $activeSlave.balls to random(1,4)>>
+  <<set $activeSlave.ovaries to 0>>
+  <<set $activeSlave.vagina to -1>>
+  <<set $activeSlave.boobs to 100*random(1,4)>>
+  <<set $activeSlave.butt to random(1,3)>>
+  <<if $activeSlave.muscles lt 2>>
+	<<set $activeSlave.muscles += random(0,1)>>
+  <</if>>
+  <<if $activeSlave.height lt 2>>
+	<<set $activeSlave.height += random(0,1)>>
+  <</if>>
+<</if>>
+
+<</if>>
+
+<</silently>>

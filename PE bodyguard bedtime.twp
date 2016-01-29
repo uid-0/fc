@@ -1,0 +1,66 @@
+<<nobr>>
+
+	<<set $nextButton to "Continue">>
+	<<set $nextLink to "RIE Eligibility Check">>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $Bodyguard.ID == $slaves[$i].ID>>
+<<set $activeSlave to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is accustomed to sleep on a bedroll placed across the bottom of the door to your bedroom. In this way, no one could enter the room without going past your bodyguard, even as she lies resting. As you watch, the breath in her <<if ($activeSlave.muscles gt 1)>>muscular<<elseif ($activeSlave.muscles is -1)>>thin<<elseif ($activeSlave.boobs lt 500) and ($activeSlave.butt lt 3)>>androgynous<<elseif ($activeSlave.height is -1)>>tall<<elseif ($activeSlave.height is -1)>>short<<else>>feminine<</if>> <<if $seeRace is 1>>$activeSlave.race <</if>>form slowly raises and lowers the sheet over her.
+\
+<span id="result">
+<<click "Let her up in bed with you">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Of course, $activeSlave.slaveName promptly obeys your order that she come up and join you in bed. After you have gone to sleep, however, she does not feel that she can sleep herself, since she is no longer blocking the door. She spends the rest of the night in sleepless watch, agonizing over this disruption of her protection of your person. @@color:mediumorchid;She is confused and unhappy.@@
+	<<set $activeSlave.devotion -= 1>>
+    <</replace>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if $slaves[$i].ID == $activeSlave.ID>>
+  <<set $slaves[$i] to $activeSlave>>
+  <</if>>
+  <</for>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if $slaves[$i].ID == $Bodyguard.ID>>
+  <<set $Bodyguard to $slaves[$i]>>
+  <</if>>
+  <</for>>
+<</click>>
+<<click "Commend and reward her the next morning">> //This will take virginity//
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	The next morning, you sit at your desk to do business as usual, and $activeSlave.slaveName takes up station just behind your left shoulder. You thank her for her vigilance as she does. She looks almost confused to be thanked for doing her proper duty, so you settle on a more direct method of communicating your closeness to her. <<if $activeSlave.vaginalAccessory is "chastity belt">>Since she's wearing chastity, you take her out onto the balcony, arm an extra security system so she can relax, and have gentle, loving sex with her until she's climaxed twice.<<elseif $activeSlave.hormones gt 0>>Since she's doped up on hormones, you take her out onto the balcony, arm an extra security system so she can relax, and have gentle, loving anal sex with her until she's climaxed twice.<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>Since she's a gelding, you take her out onto the balcony, arm an extra security system so she can relax, and have gentle, loving anal sex with her until she's climaxed twice.<<elseif $activeSlave.vagina is -1>>Since she's a virile shemale slave, you take her and another slave out onto the balcony, arm an extra security system so she can relax, and set the other slave to orally servicing her erect member. Meanwhile, you have gentle, loving anal sex with her until she's climaxed twice.<<else>>You take her out onto the balcony, arm an extra security system so she can relax, and have gentle, loving sex with her until she's climaxed twice, once to your gentle massaging of her mons while you fuck her, and once to hard rubbing of her pussy while you have enthusiastic anal sex.<</if>> @@color:hotpink;She is grateful@@ that you allowed her to relax in this way and @@color:mediumaquamarine;respects your judgment@@ in how you set things up.
+	<<display "Simple VCheck">>
+    <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+      <<set $activeSlave.vaginalCount += 1>>
+      <<set $vaginalTotal += 1>>
+      <<set $activeSlave.analCount += 1>>
+      <<set $analTotal += 1>>
+    <<else>>
+      <<set $activeSlave.analCount += 1>>
+      <<set $analTotal += 1>>
+    <</if>> 
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.trust += 1>>
+    <</replace>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if $slaves[$i].ID == $activeSlave.ID>>
+  <<set $slaves[$i] to $activeSlave>>
+  <</if>>
+  <</for>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if $slaves[$i].ID == $Bodyguard.ID>>
+  <<set $Bodyguard to $slaves[$i]>>
+  <</if>>
+  <</for>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+</span>

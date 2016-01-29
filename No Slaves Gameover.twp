@@ -1,0 +1,5 @@
+Since you are without slaves, Free Cities society no longer considers you a citizen of the first rank. Your personal story may continue, but that part of it worthy of retelling has now ended.
+
+''GAME OVER''
+
+<<set $ui to "start">>

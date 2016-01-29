@@ -1,0 +1,59 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+Late one night, <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> comes to see you. Strangely, several of your other slaves are stealing glances at her as she does. She seems oddly proud of herself. Asked why, she says, "It's my millenary, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. The arcology has logged me getting fucked 999 times." The other slaves obviously view it as significant, too.
+
+As the Free Cities grow and evolve, slave culture does too. It seems this is a new tradition among obedient sex slaves. She obviously expects you to do the honors, and it seems the rest of your girls are looking forward to it.
+\
+<span id="result">
+<<click "Give her her thousandth fuck">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You decide that a slave's thousandth fuck ought to be representative of sexual slavery. So, you<<if ($PC.dick is 0)>> don a strap-on,<</if>> push her over the arm of the couch next to your desk and take her <<if $seeRace is 1>>$activeSlave.race <</if>><<if $activeSlave.vaginalAccessory is "chastity belt">>ass<<elseif $activeSlave.vagina is 0>>ass<<elseif $activeSlave.vagina gt -1>>pussy<<else>>trap ass<</if>> hard and fast, doggy style. She's clearly got a lot of experience, so she takes the pounding well. Before long she's happily moaning and begging, pushing herself back into you. You thrust deep inside her. She thanks you and wishes you a happy millenary. @@color:hotpink;She has become more devoted to you.@@
+	<<set $activeSlave.devotion += 1>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+    <</replace>>
+<</click>>
+<<click "Include everyone">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You decide to celebrate this happy event with everyone. You beckon to the watching slaves<<if ($PC.dick is 0)>>while you don a strap-on<</if>>, and they come eagerly or sullenly according to their natures. They troop in. After some thought, you position a slave on the couch next to your desk, $activeSlave.slaveName <<if $activeSlave.amp isnot 1>>on all fours<<else>>propped up<</if>> in front of her giving cunnilingus, a third slave under $activeSlave.slaveName to orally service her in turn, and yourself behind $activeSlave.slaveName to take her <<if $seeRace is 1>>$activeSlave.race <</if>>ass. Each slave besides $activeSlave.slaveName gets a suck from $activeSlave.slaveName on the couch and then slides under her to reciprocate. She works her way through all your slaves one by one, with feminine lips and tongues delighting her <<if $activeSlave.dick isnot 0>>dickhead<<else>>clit<</if>> and your <<if ($PC.dick is 0)>>strap-on<<else>>cock<</if>> gently pumping her butt the whole time. When she's done, she thanks you exhaustedly and begs you to do this for her next millenary. @@color:hotpink;Her love for you has increased.@@
+	<<set $activeSlave.devotion += 2>>
+	<<set $activeSlave.oralCount += $slaves.length>>
+    <<set $oralTotal += $slaves.length>>
+    <</replace>>
+<</click>>
+<<click "Send her off">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She leaves sadly, and you can see a few of the other slaves comforting her as they prepare for bed. <<if $activeSlave.dick isnot 0>>To cheer her up, a couple of your slaves let her buttfuck them before bed.<<else>>To cheer her up, a couple of your slaves get her off before bed.<</if>> This disappointment @@color:mediumorchid;reduces her devotion.@@
+	<<set $activeSlave.devotion -= 1>>
+    <<if ($activeSlave.dick gt 0) and ($activeSlave.balls gt O) and ($activeSlave.hormones gt 0)>>
+      <<set $activeSlave.penetrativeCount += 2>>
+      <<set $penetrativeTotal += 2>>
+    <<else>>
+      <<set $activeSlave.oralCount += 2>>
+      <<set $oralTotal += 2>>
+    <</if>>
+    <</replace>>
+<</click>>
+</span>

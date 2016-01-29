@@ -1,0 +1,57 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> has been doing her best to be a good slave girl recently. Since she doesn't have a pussy, that means she's been doing her best to take it up the ass like a good slave. She isn't all that used to it yet, but she tries. She's trying right now, bent over the arm of the couch in your office with your <<if ($PC.dick is 0)>>vibrating strap-on<<else>>cock<</if>> pumping in and out of her. She looks like she wants to ask something, so you tell her to spit it out. <<if ($activeSlave.mute is 1)>>She uses gestures to ask if she can masturbate while you sodomize her.<<elseif ($activeSlave.lips gt 2)>>She begs meekly through her massive dick-sucking lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, can I pleathe touch mythelf?"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She begs meekly through her mouthful of piercings, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, can I pleathe touch mythelf?"<<else>>She begs meekly, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, may I please, please touch myself?"<</if>>
+\
+<span id="result">
+<<click "Let her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She moans with gratitude and relief. She masturbates furiously as you continue to use her butt. She was clearly near the edge anyway, and <<if ($activeSlave.balls gt 0)>>spatters the couch with cum<<else>>shakes with release<</if>> after just a few strokes of your <<if ($PC.dick is 0)>>strap-on<<else>>dick<</if>> up her butt. Her <<if ($activeSlave.anus gt 2)>>gaping<<elseif ($activeSlave.anus gt 1)>>loose<<else>>tight<</if>> ass spasms and tightens with her climax<<if ($PC.dick gt 0)>>, a wonderful sensation<</if>>. You aren't finished with her, but she rubs herself languidly and enjoys the hard anal reaming more than she ever has previously. Her devotion to you @@color:hotpink;has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Train her to be a skilled anal bottom">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She obeys your orders to keep her hands off her dick, but can't hide her disappointment and frustration. You keep a close watch on her, and buttfuck her every chance you get, teaching her the finer points of taking a <<if ($PC.dick is 0)>>strap-on<<else>>dick<</if>> up the butt. You focus entirely on your pleasure, teaching her how to use her <<if ($activeSlave.anus gt 2)>>gaping<<elseif ($activeSlave.anus gt 1)>>loose<<else>>tight<</if>> anal ring to extract orgasms from cocks. This experience was hard for her but @@color:green;has increased her anal skill.@@
+	<<set $activeSlave.analSkill += 1>>
+	<<set $activeSlave.analCount += 9>>
+	<<set $analTotal += 9>>
+    <</replace>>
+<</click>>
+<<if ($activeSlave.fetish isnot "buttslut") or ($activeSlave.fetishDiscovered isnot 1)>>\
+<<click "Train her to orgasm anally">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<nobr>>
+	She obeys your orders to keep her hands off her dick, but can't hide her disappointment and frustration. You keep a close watch on her, and fuck her <<if ($activeSlave.anus gt 2)>>gaping<<elseif ($activeSlave.anus gt 1)>>loose<<else>>tight<</if>> anus every chance you get, keeping her desperately aroused and desperately sodomized. After some days of this, she finally reaches a point of desperate arousal that permits her to orgasm to prostate stimulation alone.
+	<<set $activeSlave.analCount += 9>>
+    <<set $analTotal += 9>>
+	<<if random(1,100) gt 50>>
+	  <<set $activeSlave.fetish to "buttslut">>
+	  <<set $activeSlave.fetishDiscovered to 1>>
+	  Before she realizes what's happening, @@color:pink;she's getting aroused at the thought of anal sex.@@
+	<<else>>
+	  Despite being used as an anal slut for a whole week, she was not significantly affected.
+	<</if>>
+	<</nobr>>
+    <</replace>>
+<</click>>
+<</if>>\
+</span>

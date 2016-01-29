@@ -1,0 +1,45 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 2000>>
+<<display "Generate New Slave">>
+<<if $activeSlave.race is $FSSupremacistRace>>
+	<<goto "RE FSSupremacist acquisition">>
+<</if>>
+<<set $activeSlave.origin to "She was captured and enslaved in a conflict zone and fenced to you by a mercenary group.">>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.devotion -= 8>>
+<<set $activeSlave.trust to random(-9,-5)>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 2000>>
+
+<</nobr>>\
+\
+Ever since you have been steering your arcology towards a belief in $FSSupremacistRace supremacy, you've been receiving increasingly useful communications from groups that share your ideals. Many rebel, mercenary, and paramilitary groups active in conflict zones have racial beliefs of one stripe or other, and by taking the $FSSupremacistRace side, you've automatically inserted yourself into a worldwide network of like-minded organizations. You receive an urgent communication from one such private military company.
+
+It seems that they've run into a serious cash flow problem. They may not have liquid assets, but they do have human assets. What they lack is the slaveholding and selling infrastructure to translate the latter into the former. They're interested in fencing some merchandise to you, no questions asked, on a flat fee basis. Included in the message is a slave dossier detailing the piece of human chattel they're offering.
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	A battered VTOL craft arrives at your arcology, broadcasting obviously bogus IFF codes. It seems this mercenary group is playing fast and loose in an attempt to get back on their feet. The aircraft doesn't even touch down on the pad they're directed to: it simply hovers six feet off the pad for the five seconds it takes to shove a canvas bag that obviously contains a struggling human form out of the side door.
+	<<set $nextLink to "AS Dump">>\
+	<<set $returnTo to "RIE Eligibility Check">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

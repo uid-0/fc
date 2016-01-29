@@ -1,0 +1,58 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is not yet broken to your will. With your experience with slaves, you've been expecting her to take some opportunity of exercising her remaining independence. You don't have long to wait.
+
+One day, you give her inconsequential orders, naturally addressing her by her slave name, $activeSlave.slaveName. She replies waspishly<<if ($activeSlave.lips gt 2)>> through her dick-sucking lips, ["<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, my name ith $activeSlave.birthName."]<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>> through her heavily-pierced lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, my name ith $activeSlave.birthName."<<else>>, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, my name is $activeSlave.birthName."<</if>> She sets her jaw and manages to meet your eyes without flinching.
+
+<<nobr>>
+<span id="result">
+<<click "Extirpate this foolishness with pain">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You seize her and begin to bind her for appropriate punishment. $activeSlave.slaveName does not resist you physically at first. She finds herself tied bent over your desk, face down, with her arms locked behind her. She struggles a little when you insert your cock into her <<if ($activeSlave.anus is 1)>>poor little anus<<elseif ($activeSlave.anus is 2)>>whore's butt<<else>>gaping rear end<</if>>, but her real agony begins when you place her arms in an inescapable joint lock and apply a little pressure. It doesn't damage her, but it easily causes more pain than she is capable of resisting. She does a little dance within her bindings, squealing and involuntarily clenching you nicely with her anal ring. You require her to recite the litany <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"My name ith $activeSlave.slaveName!"<<else>>"My name is $activeSlave.slaveName!"<</if>>, coaching her with alternate orders and agonizing correction until she's screaming every word at the top of her lungs in an endless wail. Her screeching rises and falls as she feels the burning sensation of your merciless use of her ass, but she works her lungs hard to avoid as much pain as she can. When you've climaxed and cast off her bindings, you make her repeat her name one last time as she stiffly rubs her abused arms and anus. She does, @@color:gold;without hesitation.@@
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<br>
+<<click "Allow her to resume her birth name, but make it publicly humiliating">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+    You calmly and charitably tell her that that's acceptable; she can be $activeSlave.birthName again. She has the wit to be worried, and she soon finds that her fears are not unjustified. You bring her out to the promenade, and explain with equanimity that she has two choices: she can either introduce herself to strangers by name and offer them free oral sex, or she can be whipped until she introduces herself to strangers by name and offers them free oral sex. Her lip quivers a little, but she stumbles over to a nearby group of local worthies and whimpers hesitantly, <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"H-hi, my name ith $activeSlave.birthName. Can I thuck you off?"<<else>>"H-hi, my name is $activeSlave.birthName, can I suck you off, please?"<</if>> They laugh, and understanding the situation perfectly, give you a @@color:green;grateful wave@@ even as their leader pushes her to her knees. For the rest of the week, she's seeing to her duties, sleeping, or blowing strangers after telling them her name. Though she has reassumed her birth name, it is @@color:gold;no longer any source of independence to her.@@
+    <<set $rep += 100>>
+    <<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.oralCount += 50>>
+	<<set $activeSlave.slaveName to $activeSlave.birthName>>
+	<<set $oralTotal += 50>>
+    <<if random(1,100) gt 50>>The experience has turned her into a  @@color:pink;humiliation fetishist.@@<<set $activeSlave.fetish to "humiliation">><<set $activeSlave.fetishDiscovered to 1>><</if>>
+    <</replace>>
+<</click>> //This may impact her sexuality.//
+<br>
+<<if $arcade gt 0>>
+<<click "Sentence her to a month in the arcade">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+    $activeSlave.slaveName screams and begs when she realizes what her punishment is, but you are obdurate. <<if ($activeSlave.muscles gt 1)>>Her powerful form has to be sedated for immurement in the arcade.<<elseif ($activeSlave.weight gt -1)>>Her desperate struggles make immuring her in the arcade difficult.<<else>>Her thin form makes immuring her in the arcade pathetically easy.<</if>> After she's properly confined, the only sign of her discomfiture is a slight movement of her $activeSlave.skin butt as she wriggles desperately against her restraints.
+	<<set $activeSlave.assignment to "be confined in the arcade">><<set $activeSlave.assignmentVisible to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+	<<set $activeSlave.sentence to 4>>
+    <</replace>>
+<</click>>
+<</if>>
+</span>
+<</nobr>>

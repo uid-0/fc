@@ -1,0 +1,196 @@
+<<nobr>>
+
+<<set $brothelSlaves to 0>>
+<<set $legendaryWhoreID to 0>>
+<<set $bonuses to 0>>
+<<set $slim to 0>>
+<<set $stacked to 0>>
+<<set $modded to 0>>
+<<set $unmodded to 0>>
+<<set $pure to 0>>
+<<set $implanted to 0>>
+<<set $XX to 0>>
+<<set $XY to 0>>
+<<set $young to 0>>
+<<set $old to 0>>
+<<set $profits to 0>>
+<<set $madamFetish to 0>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].assignment is "work in the brothel")>>
+  <<set $brothelSlaves += 1>>
+  <<if ($legendaryWhoreID is 0) and ($slaves[$i].whoreSkill gte 3) and ($slaves[$i].devotion gt 10) and ($slaves[$i].prestige is 0)>>
+	<<set $legendaryWhoreID to $slaves[$i].ID>>
+  <</if>>			
+  <<silently>>
+  <<if ($brothelUpgradeDrugs is 1)>>
+	<<set $slaves[$i].health += 0.3>>
+	<<set $slaves[$i].drugs to "extreme aphrodisiacs">>
+	<<display "SA drugs">>
+  <</if>>
+  <<set $oldCash to $cash>>
+  <<display [[SA whore]]>>
+  <<set $profits += $cash-$oldCash>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if $slaves[$i].health lt -4>>
+	<<set $slaves[$i].health += 1.3>>
+  <<elseif $slaves[$i].health lt 0>>
+	<<set $slaves[$i].health += 1>>
+  <<elseif $slaves[$i].health lt 9>>
+	<<set $slaves[$i].health += 0.7>>
+  <</if>>
+  <<if ($slaves[$i].devotion lt 4) and ($slaves[$i].trust gt -4)>>
+	<<set $slaves[$i].devotion -= 1>>
+	<<set $slaves[$i].trust -= 1>>
+  <<elseif ($slaves[$i].devotion lt 9)>>
+	<<set $slaves[$i].devotion += 0.3>>
+  <<elseif ($slaves[$i].devotion gt 9)>>
+	<<set $slaves[$i].devotion -= 0.3>>
+  <</if>>
+
+<<elseif ($Madam isnot 0) and ($slaves[$i].ID is $Madam.ID)>>
+  <<silently>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if $slaves[$i].health lt -4>>
+	<<set $slaves[$i].health += 1.3>>
+  <<elseif $slaves[$i].health lt 0>>
+	<<set $slaves[$i].health += 1>>
+  <<elseif $slaves[$i].health lt 9>>
+	<<set $slaves[$i].health += 0.7>>
+  <</if>>
+  <<if $slaves[$i].devotion lt 12>>
+	<<set $slaves[$i].devotion += 0.3>>
+  <</if>>
+  <<if $slaves[$i].trust lt 12>>
+	<<set $slaves[$i].trust += 0.3>>
+  <</if>>
+  <<if (($slaves[$i].fetish isnot "likes girls") and ($slaves[$i].fetish isnot "none")) or ($slaves[$i].fetishDiscovered is 0)>>
+	<<if ($slaves[$i].clitSetting is "likes girls") or ($slaves[$i].clitPiercing lt 3)>>
+	  <<if random(1,100) lt $slaves[$i].devotion>>
+		<<set $madamFetish to 1>>
+		<<set $slaves[$i].fetish to "likes girls">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+  <</if>>	
+<</if>>
+<</for>>
+
+<<if $brothelSlaves gt 0>>
+  <<set $oldCash to $cash>>
+  <<set $possibleBonuses to 1>>
+  <<if $brothelSlaves is 1>>
+	''There is one slave whore working out of your brothel.''
+  <<else>>
+	''There are $brothelSlaves slave whores working out of your brothel.''
+  <</if>>
+
+  <<if ($FSAssetExpansionist lt 20) and ($FSSlimnessEnthusiast lt 20)>>
+	<<set $possibleBonuses += 1>>
+	<<if ($slim gt 0) and ($stacked gt 0) and (Math.abs($slim-$stacked) lte ($brothelSlaves/3))>>
+	  <<set $cash += $brothelSlaves*random(20,30)>>
+	  <<set $bonuses += 1>>
+	  The brothel offers a @@color:yellowgreen;wide@@ variety of slim and stacked slaves.
+	<</if>>
+  <</if>>
+  <<if ($FSDegradationist lt 20) and ($FSBodyPurist lt 20)>>
+	<<set $possibleBonuses += 1>>
+	<<if ($modded gt 0) and ($unmodded gt 0) and (Math.abs($modded-$unmodded) lte ($brothelSlaves/3))>>
+	  <<set $cash += $brothelSlaves*random(20,30)>>
+	  <<set $bonuses += 1>>
+	  The brothel offers a @@color:yellowgreen;both@@ heavily pierced and tattooed slaves and slaves with more natural bodies.
+	<</if>>
+  <</if>>
+  <<if ($FSImplantFetishist lt 20) and ($FSBodyPurist lt 20)>>
+	<<set $possibleBonuses += 1>>
+	<<if ($implanted gt 0) and ($pure gt 0) and (Math.abs($implanted-$pure) lte ($brothelSlaves/3))>>
+	  <<set $cash += $brothelSlaves*random(20,30)>>
+	  <<set $bonuses += 1>>
+	  The brothel offers @@color:yellowgreen;both@@ all-natural girls, and slaves whose beauty has been improved by surgical means.
+	<</if>>
+  <</if>>
+  <<if $seeDicks isnot 0>>
+	<<set $possibleBonuses += 1>>
+	<<if ($XX gt 0) and ($XY gt 0) and (Math.abs($XX-$XY) lte ($brothelSlaves/3))>>
+	  <<set $cash += $brothelSlaves*random(20,30)>>
+	  <<set $bonuses += 1>>
+	  The brothel offers a @@color:yellowgreen;mix@@ of whores that can appeal to varied tastes in genitalia.
+	<</if>>
+  <</if>>
+  <<if ($young gt 0) and ($old gt 0) and (Math.abs($young-$old) lte ($brothelSlaves/3))>>
+	<<set $cash += $brothelSlaves*random(20,30)>>
+	<<set $bonuses += 1>>
+	The brothel offers girls @@color:yellowgreen;both@@ young and mature.
+  <</if>>
+
+<<if ($bonuses gte $possibleBonuses)>>
+  <<set $cash += $brothelSlaves*random(40,60)>>
+  There is a ''@@color:yellowgreen;perfect variety@@'' of slave whores working in the brothel.
+  <</if>>
+
+  <<set $profits += $cash-$oldCash>>
+  <<if ($Madam isnot 0)>>
+	$Madam.slaveName is serving as the madam.
+	<<if ($madamFetish is 1)>>
+	  She isn't above sampling the merchandise herself; before long it's obvious to her girls that she @@color:pink;really likes them.@@
+	<</if>>
+	<<set $oldCash to $cash>>
+	<<if ($Madam.whoreSkill lt 1)>>
+	  Though $Madam.slaveName does her best to manage the brothel, with her lack of skill she can do little.
+	<<elseif ($Madam.whoreSkill is 1)>>
+	  $Madam.slaveName's basic skills marginally @@color:yellowgreen;improve@@ business at the brothel.
+	  <<set $cash += Math.trunc($profits*0.05)>>
+	<<elseif ($Madam.whoreSkill is 2)>>
+	  $Madam.slaveName's skills @@color:yellowgreen;improve@@ business at the brothel.
+	  <<set $cash += Math.trunc($profits*0.1)>>
+	<<elseif ($Madam.whoreSkill gt 2)>>
+	  $Madam.slaveName's skills greatly @@color:yellowgreen;improve@@ business at the brothel.
+	  <<set $cash += Math.trunc($profits*0.15)>>
+	<</if>>
+	<<if ($Madam.age gt 35)>>
+	  Her age and experience also contribute.
+	  <<set $cash += Math.trunc($profits*0.05)>>
+	<</if>>
+	<<if ($Madam.intelligence gt 0)>>
+	  She is a clever manager.
+	  <<set $cash += Math.trunc($profits*0.05*$Madam.intelligence)>>
+	<</if>>
+	<<if ($Madam.dick gt 2) and ($Madam.balls gt 0) and ($Madam.hormones lt 1)>>
+	  Her turgid dick helps her manage the bitches.
+	  <<set $cash += Math.trunc($profits*0.05)>>
+	<</if>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if ($slaves[$i].assignment is "work in the brothel")>>
+		<<if ($slaves[$i].sexualQuirk isnot "none") and (random(1,100) gt 90)>>
+		  She manages to @@color:green;break@@ $slaves[$i].slaveName of her sexual quirks, too.
+		  <<set $slaves[$i].sexualQuirk to "none">>
+		<<elseif ($slaves[$i].behavioralQuirk isnot "none") and (random(1,100) gt 90)>>
+		  She manages to @@color:green;break@@ $slaves[$i].slaveName of her quirks, too.
+		  <<set $slaves[$i].behavioralQuirk to "none">>
+		<</if>>
+	  <</if>>
+	<</for>>
+	<<set $profits += $cash-$oldCash>>
+  <</if>>
+  They make you @@color:yellowgreen;¤$profits@@ this week.
+  <<if (($brothel*5) lt $brothelSlaves)>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if ($slaves[$i].assignment is "work in the brothel")>>
+		<<set $slaves[$i].health -= 1>>
+	  <</if>>
+	<</for>>
+	There are too many whores crammed into the brothel. Living this way is @@color:red;bad for their health.@@
+  <</if>>
+  
+<<else>>
+  ''Your brothel is empty.''
+<</if>>
+<br>
+
+<</nobr>>

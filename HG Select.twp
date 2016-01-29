@@ -1,0 +1,75 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+<<set $encyclopedia to "The Head Girl">>\
+\
+<<nobr>>
+
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $HeadGirl.ID == $slaves[$i].ID>>
+	''__@@color:pink;$slaves[$i].slaveName@@__'' is serving as your head girl.
+    <<set $assignment to 1>>
+    <<set $slaves[$i].assignment to "be your Head Girl">>
+    <<set $slaves[$i].assignmentVisible to 1>>
+<</if>>
+<<set $encyclopedia to "The Head Girl">>\
+<</for>>
+<<if ($assignment is 0)>>
+	You have not selected a head girl.
+<</if>>
+
+<</nobr>>
+
+__Your Head Girl will prioritize training in the following order:__
+<<nobr>>
+
+<<if ($headGirlTrainsHealth is 0)>>
+	Your head girl will @@color:red;NOT TREAT@@ poor health. [[Improve health|HG Select][$headGirlTrainsHealth to 1]]
+<<else>>
+	Your head girl will @@color:green;TREAT@@ poor health. [[Stop improving health|HG Select][$headGirlTrainsHealth to 0]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if ($headGirlTrainsQuirks is 0)>>
+	Your head girl will @@color:red;NOT FIX@@ quirks. [[Fix quirks|HG Select][$headGirlTrainsQuirks to 1]]
+<<else>>
+	Your head girl will @@color:green;FIX@@ quirks. [[Stop fixing quirks|HG Select][$headGirlTrainsQuirks to 0]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if ($headGirlTrainsObedience is 0)>>
+	Your head girl will @@color:red;NOT TRAIN@@ obedience. [[Train obedience|HG Select][$headGirlTrainsObedience to 1]]
+<<else>>
+	Your head girl will @@color:green;TRAIN@@ obedience. [[Stop training obedience|HG Select][$headGirlTrainsObedience to 0]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if ($headGirlTrainsSkills is 0)>>
+	Your head girl will @@color:red;NOT TRAIN@@ skills. [[Train skills|HG Select][$headGirlTrainsSkills to 1]]
+<<else>>
+	Your head girl will @@color:green;TRAIN@@ skills. [[Stop training skills|HG Select][$headGirlTrainsSkills to 0]]
+<</if>>
+
+<</nobr>>
+
+__Appoint a head girl from among your devoted slaves:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<nobr>>
+<<if $slaves[$i].assignmentVisible is 1>>
+<<if $slaves[$i].assignment isnot "be your Head Girl">>
+<<if ($slaves[$i].devotion gt 10) and ($slaves[$i].amp isnot 1) and ($slaves[$i].mute isnot 1)>>
+  <br><<print "[[$slaves[$i].slaveName|HG Workaround][$HeadGirl to $slaves[" + $i + "]]]">>
+  <<display "Slave Summary">>
+<</if>>
+<</if>>
+<</if>>
+<</nobr>>\
+<</for>>\
+
+[[None|HG Workaround][$HeadGirl to 0]]

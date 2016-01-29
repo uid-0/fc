@@ -1,0 +1,95 @@
+<<nobr>>
+<<if $activeSlave.speechRules is "restrictive">>
+	She is not allowed to speak unless spoken to.
+<<else>>
+	She is allowed to speak and ask questions.
+<</if>>
+
+Her responses to your commands are 
+<<if $activeSlave.trust lt -4>>compliant due to sheer terror.
+<<elseif $activeSlave.devotion lt -10>>spiteful and filled with contempt.
+<<elseif $activeSlave.devotion lt -4>>reluctant and resistant.
+<<elseif $activeSlave.devotion lte 4>>hesitant.
+<<elseif $activeSlave.devotion lte 10>>automatic and obedient.
+<<else>>devoted and eager.
+<</if>>
+
+<<if $activeSlave.health lt -9>>
+	She is nearly unresponsive. She's obviously very sick.
+<<elseif $activeSlave.health lt -5>>
+	Her words are slurred and random. She must be sick.
+<<elseif $activeSlave.health lt -2>>
+	Her words are slow and strained. She seems ill.
+<<elseif $activeSlave.health lte 2>>
+	She seems reasonably healthy.
+<<elseif $activeSlave.health lte 5>>
+	She shines with health.
+<<else>>
+	She almost gleams; she's in the absolute best of health.
+<</if>>
+
+<<if ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "submissive")>>
+	She's a natural submissive, and enjoys the strictures of slavery.
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "likes girls")>>
+	She's naturally bisexual, and enjoys being allowed to touch other women.
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "cumslut")>>
+	She's a cumslut, and loves giving blowjobs and receiving facials.
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "humiliation")>>
+	She's a slut for humiliation, and gets off on having others see her enslavement.
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "buttslut")>>
+	She prefers anal sex.
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "boobs")>>
+	She loves mammary intercourse.
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "buttslut")>>
+	She fetishizes pregnancy.
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "masochist")>>
+	She loves pain.
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "sadist")>>
+	She enjoys causing pain.
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "dom")>>
+	She likes being dominant.
+<<elseif ($activeSlave.fetishDiscovered is 1)>>
+	She has a normal sexuality.
+<</if>>
+
+<</nobr>>
+
+Your training will seek to <span id="training"><strong><<print $trainingRegimen>>.</strong> </span><span id="cost"></span>
+<<nobr>>
+
+Change training objective:
+
+<<if ($activeSlave.devotion lte 4) and ($activeSlave.trust gt -4)>>
+	<<click "Break her will">><<set $nextLink to "break her will">><<set $trainingRegimen to "break her will">><<replace "#training">><strong><<print $trainingRegimen>>.</strong><</replace>><</click>>
+	| <<click "Use enhanced breaking techniques">><<set $nextLink to "break her will">><<set $trainingRegimen to "harshly break her will">><<replace "#training">><strong><<print $trainingRegimen>>.</strong><</replace>><</click>>
+<<else>>
+	<<click "Build her devotion">><<set $nextLink to "build her devotion">><<set $trainingRegimen to "build her devotion">><<replace "#training">><strong><<print $trainingRegimen>>.</strong><</replace>><</click>>
+<</if>>
+
+<<if $activeSlave.fetishDiscovered is 0>>
+	 | <<click "Explore her sexuality">><<set $nextLink to "explore her sexuality">><<set $trainingRegimen to "explore her sexuality">><<replace "#training">><strong><<print $trainingRegimen>>.</strong><</replace>><</click>>
+<<else>>
+	 | //You already understand her sexuality//
+<</if>>
+
+<<if ($activeSlave.sexualQuirk isnot "none") or ($activeSlave.behavioralQuirk isnot "none")>>
+	 | <<click "Iron out her quirks">><<set $nextLink to "fix her quirks">><<set $trainingRegimen to "fix her quirks">><<replace "#training">><strong><<print $trainingRegimen>>.</strong><</replace>><</click>>
+<</if>>
+
+<<if ($activeSlave.analSkill gt 2) and ($activeSlave.oralSkill gt 2) and ($activeSlave.vaginalSkill gt 2) and ($activeSlave.whoreSkill gt 0) and ($activeSlave.entertainSkill gt 0)>>
+	 | //She knows all the skills you can teach//
+<<elseif ($activeSlave.analSkill gt 2) and ($activeSlave.oralSkill gt 2) and ($activeSlave.whoreSkill gt 0) and ($activeSlave.entertainSkill gt 0) and ($activeSlave.vagina is -1) and ($activeSlave.balls is 0)>>
+	 | //She knows all the skills you can teach a gelded slave//
+<<elseif ($activeSlave.analSkill gt 2) and ($activeSlave.oralSkill gt 2) and ($activeSlave.whoreSkill gt 0) and ($activeSlave.entertainSkill gt 0) and ($activeSlave.vagina is -1)>>
+	 | //She knows all the skills you can teach a shemale slave//
+<<elseif ($activeSlave.analSkill gt 2) and ($activeSlave.oralSkill gt 2) and ($activeSlave.whoreSkill gt 0) and ($activeSlave.entertainSkill gt 0) and ($activeSlave.vaginalAccessory is "chastity belt")>>
+	 | //She knows all the skills you can teach while she's wearing a chastity belt//
+<<elseif ($activeSlave.devotion lte 4) and ($activeSlave.trust gt -4)>>
+	 | //She's too disobedient to learn sex skills//
+<<else>>
+ | <<click "Teach her">><<set $nextLink to "learn skills">><<set $trainingRegimen to "learn skills">><<replace "#training">><strong><<print $trainingRegimen>>.</strong><</replace>><</click>>
+<</if>>
+
+ | <<click "Care for her">><<set $nextLink to "look after her">><<set $trainingRegimen to "look after her">><<replace "#training">><strong><<print $trainingRegimen>>.</strong><</replace>><</click>>
+
+<</nobr>>

@@ -1,0 +1,28 @@
+<<nobr>>
+
+$slaves[$i].slaveName sets an example for your other slaves. She helps them when they try and fail, and punishes them when they fail to try.
+
+<<if ($slaves[$i].livingRules is "luxurious") and ($HGSuite is 1)>>
+  Being continually trusted with this position @@color:hotpink;increases her devotion to you,@@ and encourages her to @@color:mediumaquamarine;trust you in turn;@@ she's also @@color:hotpink;grateful@@ for her nice suite, which makes her one of the best provided for slaves in the Free Cities.
+  <<set $slaves[$i].devotion += 1.3>>
+  <<set $slaves[$i].trust += 1>>
+<<elseif ($slaves[$i].livingRules is "luxurious")>>
+  Being continually trusted with this position @@color:hotpink;increases her devotion to you@@ and encourages her to @@color:mediumaquamarine;trust you in turn.@@
+  <<set $slaves[$i].devotion += 1>>
+  <<set $slaves[$i].trust += 1>>
+<<elseif ($HGSuite is 1)>>
+  She's @@color:hotpink;grateful@@ for her nice suite, which makes her one of the best provided for slaves in the Free Cities. Being continually trusted with this position encourages her to @@color:mediumaquamarine;trust you in turn.@@
+  <<set $slaves[$i].devotion += 0.7>>
+  <<set $slaves[$i].trust += 1>>
+<<else>>
+  Being continually trusted with this position @@color:hotpink;slightly increases her devotion to you,@@ though she harbors some doubts because she isn't allowed a room of her own to set her apart from the other slaves.
+  <<set $slaves[$i].devotion += 0.3>>
+<</if>>
+
+<<if ($slaves[$i].fetish is "none") or ($slaves[$i].fetishDiscovered is 0)>>
+  Having all the slaves look up to and obey her affects her sexuality, turning her into a @@color:pink;bit of a dominatrix.@@
+  <<set $slaves[$i].fetish to "dom">>
+  <<set $slaves[$i].fetishDiscovered to 1>>
+<</if>>
+
+<</nobr>>\

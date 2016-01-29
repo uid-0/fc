@@ -1,0 +1,43 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+Though your personal assistant constantly monitors all your slaves, you keep an eye on the video feeds yourself. There's nothing like the personal, human touch. You notice one night that <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is crouched in the bottom of the shower. Sensing something amiss, you discreetly investigate, and find that she's crying quietly under the warm water.
+\
+<span id="result">
+<<click "Enter the shower and comfort her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She starts with surprise as you enter the shower, and then looks at you in shock as you sit down beside her, ignoring the water soaking your clothes. She does not resist when you draw her gently into your lap. She's stiff and uncomfortable as you hold her gently, but she eventually relaxes and allows her head to rest <<if ($PC.boobs gt 0)>>between your breasts<<else>>against your shoulder<</if>>. She's utterly conflicted; the hateful person who she is expected to fuck is tenderly comforting her. She finally seems to accept the animal comfort, whatever its source, and is @@color:hotpink;drawn closer to you.@@
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+<<click "Use her when she gets out">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Eventually she finishes and switches the shower to dry. The airflow dries her and she steps out, but as she does, she's seized and flung over the countertop with a slap as her naked, $activeSlave.skin skin hits the surface. <<if $activeSlave.vaginalAccessory is "chastity belt">>With her chastity belt protecting her pussy, you ram <<if ($PC.dick is 0)>>your vibrating strap-on<<else>>yourself<</if>> up her ass instead, drawing a pained sob.<<elseif $activeSlave.vagina is -1>>You ram <<if ($PC.dick is 0)>>your vibrating strap-on<<else>>yourself<</if>> up her ass, drawing a pained sob.<<else>>You take her silly cunt just long enough to force a few gasps out of her before you pull out and ram <<if ($PC.dick is 0)>>your vibrating strap-on<<else>>yourself<</if>> up her ass, drawing a pained sob.<</if>> As she takes the pounding sullenly, she has a direct view of her own eyes in the mirror, and clearly @@color:gold;is disturbed by what she sees.@@
+	<<set $activeSlave.trust -= 1>>
+      <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+          <<set $activeSlave.vaginalCount += 1>>
+          <<set $vaginalTotal += 1>>
+          <<set $activeSlave.analCount += 1>>
+          <<set $analTotal += 1>>
+  		  <<display "Simple VCheck">>
+      <<else>>
+          <<set $activeSlave.analCount += 1>>
+          <<set $analTotal += 1>>
+  		  <<display "Anal VCheck">>
+      <</if>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+</span>

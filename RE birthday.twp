@@ -1,0 +1,50 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+	<<set $activeSlave.age += 1>>
+
+<</nobr>>\
+\
+You come across <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> in the kitchen. She has a normal slave meal on a plate in front of her, but also has a pack of hotwax candles from your sex gear. Oddly, she has a candle upright in the food and is trying to light it. You ask what she's doing, and she explains <<if ($activeSlave.lips gt 2)>>meekly through her massive dick-sucking lips, "I unno, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. Ah been a slave so long. Ah jus saw th date tday an... seem lak de righ thing to do. Ahm sorry."<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>meekly through her inconvenient oral piercings, "I unno, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. Ah been a slave so long. Ah jus saw th date tday an... seem lak de righ thing to do. Ahm sorry."<<else>>meekly, "I don't know, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I've been a slave so long. I just saw the date today and this seemed like the right thing to do. I'm sorry."<</if>> It's probably her birthday. Apparently she's losing her grasp on the concept.
+\
+<span id="result">
+<<click "Bake her a cake">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You bake a simple cake while patiently explaining birthdays. She slowly remembers, and looks repeatedly at the date display to ingrain her birthday back in her mind. When the cake is done, you quickly dust it with confectionary sugar, stand a hotwax candle in the middle of it, and invite her to think of a wish and blow it out. She sits on your lap and the two of you take turns feeding each other warm cake. When the cake is gone she gets up to do the dishes and you turn to go. As you go, she asks <<if ($activeSlave.lips gt 2)>>through her massive dick-sucking lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, may Ah tell yeh wha mah wish was?"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>through her inconvenient oral piercings, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, may Ah tell yeh wha mah wish was?"<<else>>"<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, may I tell you what my wish was?"<</if>> You nod, and she kneels on the kitchen chair with her eyes closed, her hands spreading her buttocks, and her mouth open. <<if ($activeSlave.lips gt 2)>>"Buttsex, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Buttsex, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<else>>"Buttsex, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."<</if>> @@color:hotpink;Her devotion has increased.@@
+	<<set $activeSlave.devotion += 1>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+    <</replace>>
+<</click>>
+<<click "Teach her a new meaning of birthdays">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You explain at length that she will feel this way once a year, and that this day is special. On the day that makes her feel this way, she is to cover her nipples with whipped cream, add a pattern with chocolate syrup, garnish each with a cherry, and present herself to her <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. She nods in understanding and gets to work. When she's done, you help her reach the confection on her left breast herself while you eat the one on her right. When you're done, she @@color:hotpink;kisses you impulsively@@. She tastes like whipped cream and chocolate.
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+<<click "Punish her for making a mess">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She begs your forgiveness and quickly cleans up the food and candles. She can't seem to shake the feeling that @@color:mediumorchid;something is wrong with this@@.
+	<<set $activeSlave.devotion -= 1>>
+    <</replace>>
+<</click>>
+</span>

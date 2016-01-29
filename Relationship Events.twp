@@ -1,0 +1,83 @@
+<<set $used to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($used is 0)>>
+<<if ($slaves[$i].relation is "mother")>>
+<<if ($slaves[$i].devotion gt 10)>>
+  <<set $mother to $slaves[$i]>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $mother.relationTarget>>
+      <<set $daughter to $slaves[$j]>>
+    <</if>>
+  <</for>>
+  <<if ($daughter.devotion gt 10)>>
+    <<if ($daughter.amp isnot 1)>>
+      <<if ($mother.amp isnot 1)>>
+        <<if ($daughter.anus isnot 0)>>
+          <<if ($mother.anus isnot 0)>>
+            <<set $events.push("RE devoted mother daughter")>>
+            <<set $used to 1>>
+          <</if>>
+        <</if>>
+      <</if>>
+    <</if>>
+  <</if>>
+<</if>>
+<</if>>
+<</if>>
+<</for>>
+
+<<set $used to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($used is 0)>>
+<<if ($slaves[$i].relation is "sister")>>
+<<if ($slaves[$i].dick is 1)>>
+	<<set $youngerSister to $slaves[$i]>>
+    <<for $j to 0; $j lt $slaves.length; $j++>>
+		<<if $slaves[$j].ID is $slaves[$i].relationTarget>>
+			<<set $olderSister to $slaves[$j]>>
+		<</if>>
+	<</for>>
+<<if ($olderSister.anus is 0)>>
+<<if ($youngerSister.devotion gt ($olderSister.devotion+5))>>
+<<set $events.push("RE sibling revenge")>>
+<<set $used to 1>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</for>>
+
+<<set $used to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($used is 0)>>
+<<if ($slaves[$i].relation is "twin")>>
+	<<set $alphaTwin to $slaves[$i]>>
+    <<for $j to 0; $j lt $slaves.length; $j++>>
+		<<if $slaves[$j].ID is $slaves[$i].relationTarget>>
+			<<set $betaTwin to $slaves[$j]>>
+		<</if>>
+	<</for>>
+<<if ($alphaTwin.anus gt 0)>>
+<<if ($betaTwin.anus gt 0)>>
+<<if ($alphaTwin.devotion gt 10)>>
+<<if ($betaTwin.devotion gt 10)>>
+<<if ($alphaTwin .amp isnot 1)>>
+<<if ($betaTwin.amp isnot 1)>>
+<<set $events.push("RE devoted twins")>>
+<<set $used to 1>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</for>>
+
+/*<<display "Twin Check">>
+
+<<if ($alphaTwin.anus gt 0) and ($betaTwin.anus gt 0) and ($alphaTwin.devotion gt 10) and ($betaTwin.devotion gt 10)>>
+	<<set $events.push("RE devoted twins")>>
+<</if>>*/

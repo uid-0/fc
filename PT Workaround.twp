@@ -1,0 +1,14 @@
+<<nobr>>
+
+''You train __@@color:pink;$activeSlave.slaveName@@__'' when she isn't otherwise occupied.
+
+<<display $trainingRegimen>>
+
+<<for $I to 0; $I lt $slaves.length; $I++>>
+<<if $activeSlave.ID == $slaves[$I].ID>>
+<<set $slaves[$I] to $activeSlave>>
+<<set $activeSlave to {}>>
+<</if>>
+<</for>>
+
+<</nobr>>\

@@ -1,0 +1,149 @@
+<<nobr>>
+
+<<set $attendantUsedCure to 0>>
+<<set $restedSlaves to 0>>
+<<set $spaSlaves to 0>>
+<<set $attendantFetish to 0>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].assignment is "rest in the spa")>>
+  <<set $spaSlaves += 1>>
+  <<silently>>
+  <<display [[SA rest]]>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if ($slaves[$i].devotion lt 4) and ($slaves[$i].trust gt -4)>>
+	<<set $slaves[$i].devotion -= 1>>
+	<<set $slaves[$i].trust -= 1>>
+  <<elseif ($slaves[$i].devotion lt 9)>>
+	<<set $slaves[$i].devotion += 0.3>>
+  <<elseif ($slaves[$i].devotion gt 9)>>
+	<<set $slaves[$i].devotion -= 0.3>>
+  <</if>>
+  <<if $Attendant isnot 0>>
+	<<if ($slaves[$i].fetish is "mindbroken") and ($slaves[$i].health gt 4) and ($attendantUsedCure is 0)>>
+	  <<set $attendantUsedCure to 1>>
+	  <<if (random(1,100) gt 90-$Attendant.devotion)>>
+		@@color:green;Something almost miraculous has happened.@@ $Attendant.slaveName has always refused to believe that $slaves[$i].slaveName could not be reached, and has spent weeks lavishing patient tenderness on her. $slaves[$i].slaveName has begun to respond, and is stirring from her mental torpor.
+		<<set $slaves[$i].devotion to -3>>
+		<<set $slaves[$i].sexualQuirk to "hates men">>
+		<<set $slaves[$i].behavioralQuirk to "quirky">>
+		<<set $slaves[$i].fetish to "none">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+		<<if ($FSPaternalist gt 0)>>
+		  Society @@color:green;strongly approves@@ of $slaves[$i].slaveName being restored to sanity, which advances ideals about enlightened slave ownership.
+		  <<set $repGain += 2*$FSSingleSlaveRep*($FSPaternalist/$FSLockinLevel)>>
+		  <<set $FSPaternalist += 0.01*$FSSingleSlaveRep>>
+		<</if>>
+	  <</if>>
+	<</if>>
+	<<if ($Attendant.fetish is "none") or ($Attendant.fetish is "submissive")>>
+	  <<set $slaves[$i].devotion += 0.3>>
+	<</if>>
+	<<if ($Attendant.age gt 35)>>
+	  <<set $slaves[$i].devotion += 0.3>>
+	<</if>>
+	<<if ($Attendant.ovaries is 1)>>
+	  <<set $slaves[$i].health += 0.3>>
+	<</if>>
+	<<if ($Attendant.intelligence gt 0)>>
+	  <<if $slaves[$i].behavioralQuirk isnot "none">>
+		<<if random(1,100) gt (80-($Attendant.intelligence*20))>>
+		  <<set $slaves[$i].behavioralQuirk to "none">>
+		<</if>>
+	  <<elseif $slaves[$i].sexualQuirk isnot "none">>
+		<<if random(1,100) gt (80-($Attendant.intelligence*20))>>
+		  <<set $slaves[$i].sexualQuirk to "none">>
+		<</if>>
+	  <</if>>
+	<</if>>
+  <</if>>
+  <<if ($slaves[$i].health lt 10)>>
+	<<set $slaves[$i].health += 2>>
+	<<if ($spaUpgrade is 1)>>
+	  <<set $slaves[$i].health += 0.3>>
+	<</if>>
+  <</if>>
+  <<if ($slaves[$i].health gte 10)>>
+	<<if $slaves[$i].fetish isnot "mindbroken">>
+	  <<set $slaves[$i].health to 10>>
+	  <<set $slaves[$i].assignment to "rest">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+	  <<set $restedSlaves += 1>>
+	<</if>>
+  <</if>>
+
+<<elseif ($Attendant isnot 0) and ($slaves[$i].ID is $Attendant.ID)>>
+  <<silently>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if ($slaves[$i].health lt 10)>>
+	<<set $slaves[$i].health += 2>>
+  <</if>>
+  <<if ($slaves[$i].devotion lt 12)>>
+	<<set $slaves[$i].devotion += 0.3>>
+  <</if>>
+  <<if $slaves[$i].trust lt 12>>
+	<<set $slaves[$i].trust += 0.3>>
+  <</if>>
+  <<if (($slaves[$i].fetish isnot "submissive") and ($slaves[$i].fetish isnot "none")) or ($slaves[$i].fetishDiscovered is 0)>>
+	<<if ($slaves[$i].clitSetting is "submissive") or ($slaves[$i].clitPiercing lt 3)>>
+	  <<if random(1,100) lt $slaves[$i].devotion>>
+		<<set $attendantFetish to 1>>
+		<<set $slaves[$i].fetish to "submissive">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+  <</if>>
+<</if>>
+<</for>>
+
+<<if ($spaSlaves gt 0)>>
+  <<if ($spaSlaves is 1)>>
+	''There is one slave resting and recuperating in the spa.''
+  <<else>>
+	''There are $spaSlaves slaves resting and recuperating in the spa.''
+  <</if>>
+
+  <<if ($Attendant isnot 0)>>
+	$Attendant.slaveName is serving as the spa attendant.
+	<<if ($attendantFetish is 1)>>
+	  When she is paid a visit by a slave with sexual issues to work out, she provides her with an understanding, willing, giving partner. She finds real satisfaction in helping your slaves find sexual gratification, and @@color:pink;becomes a submissive.@@
+	<</if>>
+	<<if ($Attendant.fetish is "none")>>
+	  $Attendant.slaveName respects the slaves working in the spa, allowing them to relax completely.
+	<<elseif ($Attendant.fetish is "submissive")>>
+	  $Attendant.slaveName lets the slaves resting in the spa take the lead sexually, doing her best to please them.
+	<<elseif ($Attendant.fetishDiscovered is 1)>>
+	  $Attendant.slaveName can't keep her hands to herself, preventing the slaves in the spa from relaxing completely.
+	<</if>>
+	<<if ($Attendant.age gt 35)>>
+	  Her age encourages the slaves in the spa to relax and pour out their troubles to her.
+	<</if>>
+	<<if ($Attendant.intelligence gt 0)>>
+	  She's so intelligent she can suss out the cause of slaves' emotional issues and counsel them effectively.
+	<</if>>
+	<<if ($Attendant.ovaries is 1)>>
+	  She has a natural mothering instinct and really makes her girls feel at home.
+	<</if>>
+  <</if>>
+
+  <<if ($restedSlaves gt 0)>>
+	<<if ($restedSlaves is 1)>>
+	  one slave has rested until she reached a state of @@color:green;perfect health@@ and will leave the spa before the end of the week.
+	<<else>>
+	  $restedSlaves slaves have rested until they reached a state of @@color:green;perfect health@@ and will leave the spa before the end of the week.
+	<</if>>
+	<<set $spaSlaves -= $restedSlaves>>
+  <</if>>
+  
+<<else>>
+  ''The spa is empty.''
+<</if>>
+<br>
+
+<</nobr>>

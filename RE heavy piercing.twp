@@ -1,0 +1,53 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>'s intimate areas are heavily pierced. This is great; it draws attention to her holes and makes her look like the sex slave she is. However, it does necessitate some extra maintenance. It's the end of the day, and $activeSlave.slaveName is in a bathroom carefully checking each of her piercings. Many of them come in contact with fluids on a regular basis, so she cleans them conscientiously.
+
+As you watch her, it occurs to you that since $activeSlave.slaveName isn't fully devoted to you yet, there's all manner of inventive ways you could have a little fun and increase her submission to you at the same time.
+\
+<span id="result">
+<<click "Weight her piercings and fuck her so they swing">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You order her to make sure all of her piercings have rings in them, and then come join you when she's done. She enters your office with a mixture of fear and curiosity on her face. You put her down on all fours with her legs spread, blindfold her, and then start clipping little metal weights on short chains to each of her piercings. Before long, her nipples are painfully stretched under the tugging, <<if ($activeSlave.dick gt 0)>>and the weights up and down her cock are causing her considerable discomfort.<<else>>her pussylips are being pulled downward, and even her clit is agonizingly tortured.<</if>> You fuck her thoroughly, pounding her so the weights swing. She sobs and begs. @@color:hotpink;She has become more submissive to you.@@
+    <<set $activeSlave.devotion += 1>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+        <<display "Vaginal VCheck">>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+        <<display "Anal VCheck">>
+    <</if>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<<click "Secure her by her piercings for public use">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You order her to make sure all of her piercings have rings in them, and then come to you when she's done. She enters your office with a mixture of fear and curiosity on her face. You lead her outside and secure her in a side hall so that her ass is presented to anyone who takes interest. She's forced to maintain this exact posture by a light chain between <<if ($activeSlave.dick gt 0)>>her dickhead and a ring on the ground.<<else>>her pussy and a ring on the ground.<</if>> You fuck her ass to check the bondage; it's good. The chain is out of the way, and she jerks and struggles amusingly to keep it from tugging her painfully. You pull out to leave her fucked butt with cum dribbling out of it, and leave her to the tender mercies of the growing crowd. @@color:green;The sadists among the public are duly grateful.@@
+    <<display "Simple VCheck">>
+	<<set $rep += 500>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 5>>
+		<<set $vaginalTotal += 5>>
+    	<<set $activeSlave.analCount += 5>>
+		<<set $analTotal += 5>>
+    <<else>>
+    	<<set $activeSlave.analCount += 10>>
+		<<set $analTotal += 10>>
+    <</if>>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+</span>

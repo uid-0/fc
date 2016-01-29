@@ -1,0 +1,37 @@
+<<silently>>
+
+<<set $release to 0>>
+
+<<if ($activeSlave.assignment is "serve the public")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "work on the promenade")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "whore")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "work in the brothel")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "please you")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "serve in the master suite")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "be a subordinate sex slave")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "work a glory hole")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "be confined in the arcade")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "get milked") and ($activeSlave.fetish is "boobs")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "get milked") and ($activeSlave.fetish is "nympho")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "work in the dairy") and ($activeSlave.fetish is "boobs")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "work in the dairy") and ($activeSlave.fetish is "nympho")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "get cockmilked")>>
+	<<set $release to 1>>
+<<elseif ($activeSlave.assignment is "work in the collection facility")>>
+	<<set $release to 1>>
+<</if>>
+
+<</silently>>

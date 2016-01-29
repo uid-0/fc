@@ -1,0 +1,634 @@
+<<nobr>>
+
+<<if $slaves[$i].relationship is 0>>
+
+<<if $slaves[$i].fetish isnot "mindbroken">>
+<<if $slaves[$i].devotion gt -20>>
+  <<if $slaves[$i].behavioralQuirk is "none">>
+  	<<set $seed to random(1,100)>>
+  <<else>>
+  	<<set $seed to random(1,80)>>
+  <</if>>
+  <<if $seed gt 75>>
+    <<set $resentment to 0>>
+    <<for $j to 0; $j lt $slaves.length; $j++>>
+      <<if $slaves[$j].ID isnot $slaves[$i].ID>>
+      <<if $slaves[$j].assignment isnot "stay confined">>
+      <<if ($slaves[$i].assignment is "work in the brothel") and ($slaves[$j].ID is $Madam.ID)>>
+        <<if ($Madam.relationship is 0)>>
+          <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+            <<if random(1,100) gt 0>>
+              <<if $slaves[$i].relationshipRules is "permissive">>
+              <<if $Madam.relationshipRules is "permissive">>
+                $slaves[$i].slaveName manages to ingratiate herself with the Madam, $slaves[$j].slaveName. The two slaves have @@color:lightgreen;struck up a friendship.@@
+                <<set $slaves[$j].relationship to 1>>
+                <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+                <<set $slaves[$i].relationship to 1>>
+                <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+                <<else>>
+                <<if $slaves[$i].devotion lt -4>>
+                $slaves[$i].slaveName tries to strike up a friendship with the Madam, $slaves[$j].slaveName and is @@color:gold;punished@@ by $slaves[$j].slaveName for disrespect.
+                <<set $slaves[$i].trust -= 0.7>>
+              	<</if>>
+              <</if>>
+              <</if>>
+            <</if>>
+          <</if>>
+        <</if>>
+      <<elseif ($slaves[$i].assignment is "work on the promenade") and ($slaves[$j].ID is $Concierge.ID)>>
+        <<if ($Concierge.relationship is 0)>>
+        <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+        <<if random(1,100) gt 0>>
+        <<if $slaves[$i].relationshipRules is "permissive">>
+		<<if $Concierge.relationshipRules is "permissive">>
+        $slaves[$i].slaveName manages to ingratiate herself with the Concierge, $slaves[$j].slaveName. The two slaves have @@color:lightgreen;struck up a friendship.@@
+        <<set $slaves[$j].relationship to 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship to 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+        <<else>>
+        <<if $slaves[$i].devotion lt -4>>
+        $slaves[$i].slaveName tries to strike up a friendship with the Concierge, $slaves[$j].slaveName and is @@color:gold;punished@@ by $slaves[$j].slaveName for disrespect.
+        <<set $slaves[$i].trust -= 0.7>>
+		<</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+      <<elseif ($slaves[$i].assignment is "work in the dairy") and ($slaves[$j].ID is $Milkmaid.ID)>>
+        <<if ($Milkmaid.relationship is 0)>>
+        <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+        <<if random(1,100) gt 0>>
+        <<if $slaves[$i].relationshipRules is "permissive">>
+		<<if $Milkmaid.relationshipRules is "permissive">>
+        $slaves[$i].slaveName manages to ingratiate herself with the Milkmaid, $slaves[$j].slaveName. The two slaves have @@color:lightgreen;struck up a friendship.@@
+        <<set $slaves[$j].relationship to 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship to 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+        <<else>>
+        <<if $slaves[$i].devotion lt -4>>
+        $slaves[$i].slaveName tries to strike up a friendship with the Milkmaid, $slaves[$j].slaveName and is @@color:gold;punished@@ by $slaves[$j].slaveName for disrespect.
+        <<set $slaves[$i].trust -= 0.7>>
+		<</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+      <<elseif ($slaves[$i].assignment is "work in the collection facility") and ($slaves[$j].ID is $Collectrix.ID)>>
+        <<if ($Collectrix.relationship is 0)>>
+        <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+        <<if random(1,100) gt 0>>
+        <<if $slaves[$i].relationshipRules is "permissive">>
+		<<if $Collectrix.relationshipRules is "permissive">>
+        $slaves[$i].slaveName manages to ingratiate herself with the Collectrix, $slaves[$j].slaveName. The two slaves have @@color:lightgreen;struck up a friendship.@@
+        <<set $slaves[$j].relationship to 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship to 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+        <<else>>
+        <<if $slaves[$i].devotion lt -4>>
+        $slaves[$i].slaveName tries to strike up a friendship with the Collectrix, $slaves[$j].slaveName and is @@color:gold;punished@@ by $slaves[$j].slaveName for disrespect.
+        <<set $slaves[$i].trust -= 0.7>>
+		<</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+      <<elseif ($slaves[$i].assignment is "learn in the schoolroom") and ($slaves[$j].ID is $Schoolteacher.ID)>>
+        <<if ($Schoolteacher.relationship is 0)>>
+        <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+        <<if random(1,100) gt 0>>
+        <<if $slaves[$i].relationshipRules is "permissive">>
+		<<if $Schoolteacher.relationshipRules is "permissive">>
+        $slaves[$i].slaveName manages to ingratiate herself with the Schoolteacher, $slaves[$j].slaveName. The two slaves have @@color:lightgreen;struck up a friendship.@@
+        <<set $slaves[$j].relationship to 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship to 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+        <<else>>
+        <<if $slaves[$i].devotion lt -4>>
+        $slaves[$i].slaveName tries to strike up a friendship with the Schoolteacher, $slaves[$j].slaveName and is @@color:gold;punished@@ by $slaves[$j].slaveName for disrespect.
+        <<set $slaves[$i].trust -= 0.7>>
+		<</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>><<elseif ($slaves[$i].assignment is "rest in the spa") and ($slaves[$j].ID is $Attendant.ID)>>
+        <<if ($Attendant.relationship is 0)>>
+        <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+        <<if random(1,100) gt 0>>
+        <<if $slaves[$i].relationshipRules is "permissive">>
+		<<if $Attendant.relationshipRules is "permissive">>
+        $slaves[$i].slaveName basks in the affection and care of the spa attendant, $slaves[$j].slaveName. The two slaves have @@color:lightgreen;struck up a friendship.@@
+        <<set $slaves[$j].relationship to 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship to 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+        <<else>>
+        <<if $slaves[$i].devotion lt -4>>
+        $slaves[$i].slaveName tries to strike up a friendship with the spa attendant, $slaves[$j].slaveName. $slaves[$j].slaveName gently @@color:hotpink;counsels@@ her to obey the rules.
+        <<set $slaves[$i].devotion += 0.3>>
+		<</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+      <<elseif ($slaves[$i].assignment is "work as a servant") and ($slaves[$j].ID is $Stewardess.ID)>>
+        <<if ($Stewardess.relationship is 0)>>
+        <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+        <<if random(1,100) gt 0>>
+        <<if $slaves[$i].relationshipRules is "permissive">>
+		<<if $Stewardess.relationshipRules is "permissive">>
+        $slaves[$i].slaveName manages to ingratiate herself with the Stewardess, $slaves[$j].slaveName. The two slaves have @@color:lightgreen;struck up a friendship.@@
+        <<set $slaves[$j].relationship to 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship to 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+        <<else>>
+        <<if $slaves[$i].devotion lt -4>>
+        $slaves[$i].slaveName tries to strike up a friendship with the Stewardess, $slaves[$j].slaveName and is @@color:gold;punished@@ by $slaves[$j].slaveName for disrespect.
+        <<set $slaves[$i].trust -= 0.7>>
+		<</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+	  <<elseif ($slaves[$i].assignment is "be confined in the cellblock") and ($slaves[$j].ID is $Wardeness.ID)>>
+        <<if ($Wardeness.relationship is 0)>>
+        <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+        <<if random(1,100) gt 0>>
+        <<if $slaves[$i].relationshipRules is "permissive">>
+		<<if $Wardeness.relationshipRules is "permissive">>
+        $slaves[$i].slaveName manages to earn the respect of the Wardeness, $slaves[$j].slaveName. The two slaves have @@color:lightgreen;struck up a friendship.@@
+        <<set $slaves[$j].relationship to 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship to 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+        <<else>>
+        <<if $slaves[$i].devotion lt -4>>
+        $slaves[$i].slaveName tries to strike up a friendship with the Wardeness, $slaves[$j].slaveName and is @@color:gold;beaten@@ by $slaves[$j].slaveName for her trouble.
+        <<set $slaves[$i].trust -= 1>>
+		<</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+<<elseif ($slaves[$i].assignment is "serve in the master suite") and ($slaves[$j].ID is $Concubine.ID)>>
+        <<if ($Concubine.relationship is 0)>>
+        <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+        <<if random(1,100) gt 0>>
+        <<if $slaves[$i].relationshipRules is "permissive">>
+		<<if $Concubine.relationshipRules is "permissive">>
+        $slaves[$i].slaveName becomes especially close to the Concubine, $slaves[$j].slaveName. The two slaves have @@color:lightgreen;struck up a friendship.@@
+        <<set $slaves[$j].relationship to 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship to 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+        <<else>>
+        <<if $slaves[$i].devotion lt -4>>
+        $slaves[$i].slaveName tries to strike up a friendship with the Concubine, $slaves[$j].slaveName and is gently @@color:hotpink;counseled@@ by $slaves[$j].slaveName that such things are against the rules.
+        <<set $slaves[$i].devotion += 0.3>>
+		<</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+        <</if>>
+      <<elseif $slaves[$j].assignment is $slaves[$i].assignment>>
+        <<if ($slaves[$i].relationship is 0)>>
+        <<if ($slaves[$j].relationship is 0)>>
+          <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+            <<if random(1,100) gt 50>>
+              <<if $slaves[$i].relationshipRules is "permissive">>
+              <<if $slaves[$j].relationshipRules is "permissive">>
+                $slaves[$i].slaveName and $slaves[$j].slaveName see a lot of each other at work and @@color:lightgreen;strike up a friendship.@@
+                <<set $slaves[$j].relationship to 1>>
+                <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+                <<set $slaves[$i].relationship to 1>>
+                <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+              <<else>>
+                <<if $slaves[$i].relationshipRules is "restrictive">>
+                  <<if $resentment is 0>>
+                    $slaves[$i].slaveName tries to strike up a friendship with $slaves[$j].slaveName and is @@color:gold;punished@@ for breaking the rules against such things; she @@color:mediumorchid;resents@@ being castigated for simple sociability.
+                    <<set $slaves[$i].devotion -= 0.3>>
+                    <<set $slaves[$i].trust -= 0.3>>
+                    <<set $resentment to 1>>
+                  <</if>>
+                <</if>>
+              <</if>>
+              <</if>>
+            <</if>>
+          <</if>>
+        <</if>>
+        <</if>>
+      <<elseif $slaves[$j].fetish is $slaves[$i].fetish>>
+        <<if ($slaves[$i].relationship is 0)>>
+        <<if ($slaves[$j].relationship is 0)>>
+          <<if ($slaves[$i].rivalryTarget isnot $slaves[$j].ID)>>
+            <<if ($slaves[$i].fetish isnot "none")>>
+              <<if ($slaves[$i].releaseRules isnot "restrictive")>>
+                <<if random(1,100) gt 0>>
+                  <<if $slaves[$i].relationshipRules is "permissive">>
+                  <<if $slaves[$j].relationshipRules is "permissive">>
+                    $slaves[$i].slaveName and $slaves[$j].slaveName share sexual inclinations, so it's only natural that they @@color:lightgreen;become friends with benefits.@@
+                    <<set $slaves[$j].relationship to 3>>
+                    <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+                    <<set $slaves[$i].relationship to 3>>
+                    <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+                  <<else>>
+                    <<if $slaves[$i].relationshipRules is "restrictive">>
+                    $slaves[$i].slaveName tries to strike up a sexual relationship with $slaves[$j].slaveName and is @@color:gold;punished@@ for breaking the rules against such things; she @@color:mediumorchid;resents@@ being prevented from pursuing her.
+                    <<set $slaves[$i].devotion -= 0.3>>
+                    <<set $slaves[$i].trust -= 0.3>>
+                    <</if>>
+                  <</if>>
+                  <</if>>
+                <</if>>
+              <</if>>
+            <</if>>
+          <</if>>
+          <</if>>
+        <</if>>
+      <</if>>
+      <</if>>
+      <</if>>
+    <</for>>
+  <</if>>
+<</if>>
+<</if>>
+
+<<else>>
+
+<<if $slaves[$i].fetish is "mindbroken">>
+
+Since she is mindbroken, she @@color:lightsalmon;can't really maintain@@ any meaningful relationship with
+<<for $j to 0; $j lt $slaves.length; $j++>>
+  <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+      $slaves[$j].slaveName.
+      <<set $slaves[$j].relationship to 0>>
+      <<set $slaves[$j].relationshipTarget to 0>>
+  <</if>>
+<</for>>
+<<set $slaves[$i].relationship to 0>>
+<<set $slaves[$i].relationshipTarget to 0>>
+
+<<elseif $slaves[$i].relationshipRules is "restrictive">>
+
+<<for $j to 0; $j lt $slaves.length; $j++>>
+  <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+  <<if $slaves[$j].relationshipRules is "restrictive">>
+      Since the rules forbid the relationship between $slaves[$i].slaveName and $slaves[$j].slaveName, they are @@color:lightsalmon;forced apart.@@
+      <<set $slaves[$j].relationship -= 1>>
+      <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+      <<set $slaves[$i].relationship -= 1>>
+      <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+      <<if $slaves[$i].devotion lte 10>>
+          $slaves[$i].slaveName @@color:mediumorchid;resents@@ this.
+          <<set $slaves[$i].devotion -= 0.3>>
+      <</if>>
+      <<if $slaves[$j].devotion lte 10>>
+          $slaves[$j].slaveName @@color:mediumorchid;resents@@ this.
+          <<set $slaves[$j].devotion -= 0.3>>
+      <</if>>
+  <</if>>
+  <</if>>
+<</for>>
+
+<<elseif $slaves[$i].relationship lte 1>>
+
+<<if ($slaves[$i].relation isnot 0) and ($slaves[$i].relationTarget is $slaves[$i].relationshipTarget) and (random(1,100) gt 80)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+        $slaves[$i].slaveName and $slaves[$j].slaveName build on their family relationship and become @@color:lightgreen;best friends.@@
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship += 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+    <</if>>
+  <</for>>
+<<elseif ($slaves[$i].fetish is "nympho") or ($slaves[$i].fetish is "likes girls") and (random(1,100) gt 70)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+        $slaves[$i].slaveName obviously lusts after $slaves[$j].slaveName, and does everything she can to @@color:lightgreen;draw her closer.@@
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship += 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+    <</if>>
+  <</for>>
+<<elseif (random(1,100) gt 90)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+        $slaves[$i].slaveName and $slaves[$j].slaveName support and reassure each other and become @@color:lightgreen;best friends.@@
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship += 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+    <</if>>
+  <</for>>
+<</if>>
+<<if $slaves[$i].devotion lt -4>>
+	Having a friend to rely on emotionally increases $slaves[$i].slaveName's @@color:mediumorchid;independence.@@
+	<<set $slaves[$i].devotion -= 1>>
+<</if>>
+<<if $slaves[$i].trust lt -4>>
+	Having a friend to rely on emotionally @@color:mediumaquamarine;reduces@@ $slaves[$i].slaveName's fear of you.
+	<<set $slaves[$i].trust += 1>>
+<</if>>
+
+<<elseif $slaves[$i].relationship lte 2>>
+
+<<if ($slaves[$i].fetish is "nympho") or ($slaves[$i].fetish is "likes girls") and ($slaves[$i].relation isnot 0) and ($slaves[$i].relationTarget is $slaves[$i].relationshipTarget) and (random(1,100) gt 80)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+        Reveling in the taboo nature of her attraction to $slaves[$j].slaveName, $slaves[$i].slaveName successfully seduces $slaves[$j].slaveName and they become @@color:lightgreen;friends with benefits.@@
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship += 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+    <</if>>
+  <</for>>
+<<elseif ($slaves[$i].fetish is "nympho") or ($slaves[$i].fetish is "likes girls") and (random(1,100) gt 70)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+        $slaves[$i].slaveName successfully seduces $slaves[$j].slaveName and they become @@color:lightgreen;friends with benefits.@@
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship += 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+    <</if>>
+  <</for>>
+<<elseif ($slaves[$i].relation isnot 0) and ($slaves[$i].relationTarget is $slaves[$i].relationshipTarget) and (random(1,100) gt 95)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+        $slaves[$i].slaveName and $slaves[$j].slaveName eventually happen to be together and horny, and find themselves fucking without thinking. They have become incestuous @@color:lightgreen;friends with benefits.@@
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship += 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+    <</if>>
+  <</for>>
+<<elseif ($slaves[$i].sexualQuirk is "hates men") and (random(1,100) gt 95)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+    <<if ($slaves[$j].dick gt 0)>>
+        Despite $slaves[$i].slaveName's distaste for cock, $slaves[$i].slaveName and $slaves[$j].slaveName fuck in a weak moment and find themselves becoming @@color:lightgreen;friends with benefits.@@
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship += 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+    <</if>>
+    <</if>>
+  <</for>>
+<<elseif ($slaves[$i].sexualQuirk is "hates women") and (random(1,100) gt 95)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+    <<if ($slaves[$j].vagina isnot -1)>>
+        Despite $slaves[$i].slaveName's dislike of pussy, $slaves[$i].slaveName and $slaves[$j].slaveName fuck in a weak moment and find themselves becoming @@color:lightgreen;friends with benefits.@@
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship += 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+    <</if>>
+    <</if>>
+  <</for>>
+<<elseif (random(1,100) gt 90)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+        Living in an atmosphere of omnipresent sexuality, $slaves[$i].slaveName and $slaves[$j].slaveName fuck in a weak moment and find themselves becoming @@color:lightgreen;friends with benefits.@@
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$j].relationshipTarget to $slaves[$i].ID>>
+        <<set $slaves[$i].relationship += 1>>
+        <<set $slaves[$i].relationshipTarget to $slaves[$j].ID>>
+    <</if>>
+  <</for>>
+<</if>>
+<<if $slaves[$i].devotion lt -4>>
+	Having a close friend to rely on emotionally increases $slaves[$i].slaveName's @@color:mediumorchid;independence.@@
+	<<set $slaves[$i].devotion -= 1>>
+<<elseif $slaves[$i].devotion gt 10>>
+	$slaves[$i].slaveName sometimes feels she has @@color:hotpink;a decent life,@@ between her good <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> and her close friend.
+	<<set $slaves[$i].devotion += 0.3>>
+<</if>>
+<<if $slaves[$i].trust lt -4>>
+	Having a good friend to rely on emotionally @@color:mediumaquamarine;reduces@@ $slaves[$i].slaveName's fear of you.
+	<<set $slaves[$i].trust += 1>>
+<</if>>
+
+<<elseif $slaves[$i].relationship lte 3>>
+
+<<if ($slaves[$i].fetish is "nympho") or ($slaves[$i].fetish is "likes girls") and ($slaves[$i].relation isnot 0) and ($slaves[$i].relationTarget is $slaves[$i].relationshipTarget) and (random(1,100) gt 80)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+        Reveling in the taboo nature of her sexual relationship with $slaves[$j].slaveName, $slaves[$i].slaveName not only enjoys $slaves[$j].slaveName's body, but looks after her pleasure, too. Their relationship becomes @@color:lightgreen;romantically emotional@@ as well as physical and familial.
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$i].relationship += 1>>
+    <</if>>
+  <</for>>
+<<elseif ($slaves[$i].fetish is "nympho") or ($slaves[$i].fetish is "likes girls") and (random(1,100) gt 70)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+        $slaves[$i].slaveName not only enjoys $slaves[$j].slaveName's body, but looks after her pleasure, too. Without meaning it to, their relationship becomes @@color:lightgreen;strongly emotional@@ as well as physical.
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$i].relationship += 1>>
+    <</if>>
+  <</for>>
+<<elseif (random(1,100) gt 80)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+        $slaves[$i].slaveName and $slaves[$j].slaveName have spent enough time looking after each other's sexual and emotional needs that their relationship has become @@color:lightgreen;very strong.@@
+        <<set $slaves[$j].relationship += 1>>
+        <<set $slaves[$i].relationship += 1>>
+    <</if>>
+  <</for>>
+<</if>>
+<<if $slaves[$i].devotion lt -4>>
+	Having a fuckbuddy to rely on emotionally and sexually increases $slaves[$i].slaveName's @@color:mediumorchid;independence.@@
+	<<set $slaves[$i].devotion -= 1>>
+<<elseif $slaves[$i].devotion lt 10>>
+	Since $slaves[$i].slaveName's source of emotional support is also sexual, she @@color:hotpink;associates@@ sex with intimacy.
+	<<set $slaves[$i].devotion += 0.3>>
+<<elseif $slaves[$i].devotion gt 10>>
+	$slaves[$i].slaveName sometimes feels she has @@color:hotpink;a good life,@@ between her benevolent <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> and her very close friend.
+	<<set $slaves[$i].devotion += 0.3>>
+<</if>>
+<<if $slaves[$i].trust lte 4>>
+	Having a loving friend @@color:mediumaquamarine;reduces@@ $slaves[$i].slaveName's fear of you.
+	<<set $slaves[$i].trust += 1>>
+<</if>>
+
+<<elseif $slaves[$i].relationship lte 4>>
+
+<<if $slaves[$i].devotion lt -4>>
+	Having a lover to rely on emotionally and sexually increases $slaves[$i].slaveName's @@color:mediumorchid;independence.@@
+	<<set $slaves[$i].devotion -= 1>>
+<<elseif $slaves[$i].devotion lt 10>>
+	Since $slaves[$i].slaveName's source of emotional support is also sexual, she @@color:hotpink;associates@@ sex with intimacy.
+	<<set $slaves[$i].devotion += 0.3>>
+<<elseif $slaves[$i].devotion gt 10>>
+	$slaves[$i].slaveName often feels she has @@color:hotpink;a good life,@@ between her wonderful <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> and her dear lover.
+	<<set $slaves[$i].devotion += 0.3>>
+<</if>>
+<<if $slaves[$i].trust lte 4>>
+	Having a lover to rely on emotionally and sexually @@color:mediumaquamarine;reduces@@ $slaves[$i].slaveName's fear of you.
+	<<set $slaves[$i].trust += 1>>
+<<elseif $slaves[$i].trust lte 10>>
+	Having a lover to rely on emotionally and sexually @@color:mediumaquamarine;increases@@ $slaves[$i].slaveName's trust in you.
+	<<set $slaves[$i].trust += 0.7>>
+<</if>>
+
+<<elseif $slaves[$i].relationship gt 4>>
+
+<<if $slaves[$i].devotion lt -4>>
+	Having a wife to rely on emotionally and sexually increases $slaves[$i].slaveName's @@color:mediumorchid;independence.@@
+	<<set $slaves[$i].devotion -= 1>>
+<<elseif $slaves[$i].devotion lt 10>>
+	$slaves[$i].slaveName and her slave wife support each other as they @@color:hotpink;build a life@@ in sexual slavery.
+	<<set $slaves[$i].devotion += 0.3>>
+<<elseif $slaves[$i].devotion gt 10>>
+	$slaves[$i].slaveName often feels she has @@color:hotpink;a wonderful life,@@ between her dear <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> and her precious slave wife.
+	<<set $slaves[$i].devotion += 0.3>>
+	<<if $FSChattelReligionist gt 0>>
+	  Society @@color:green;approves@@ of their marriage, which advances the sacrament of slave marriage.
+	  <<set $repGain += $FSSingleSlaveRep*($FSChattelReligionist/$FSLockinLevel)>>
+	  <<set $FSChattelReligionist += 0.05*$FSSingleSlaveRep>>
+	<</if>>
+<</if>>
+<<if $slaves[$i].trust lte 4>>
+	Having a wife to rely on emotionally and sexually @@color:mediumaquamarine;reduces@@ $slaves[$i].slaveName's fear of you.
+	<<set $slaves[$i].trust += 1>>
+<<elseif $slaves[$i].trust lte 10>>
+	Having a wife to rely on emotionally and sexually @@color:mediumaquamarine;increases@@ $slaves[$i].slaveName's trust in you.
+	<<set $slaves[$i].trust += 0.7>>
+<<else>>
+	Having a wife to rely on emotionally and sexually @@color:mediumaquamarine;increases@@ $slaves[$i].slaveName's already implicit trust in you.
+	<<set $slaves[$i].trust += 0.3>>
+<</if>>
+
+<</if>>
+<</if>>
+
+<<if $slaves[$i].relationship gte 3>>
+  <<if $slaves[$i].relation isnot 0>>
+  <<if ($slaves[$i].relationTarget is $slaves[$i].relationshipTarget) and ($slaves[$i].origin isnot "She offered herself to you for enslavement hoping you would preserve her incestuous relationship with her sibling.")>>
+	$slaves[$i].slaveName
+	<<if $slaves[$i].devotion gt 20>>
+	  is so inured to the perversities of slavery that she @@color:hotpink;enjoys@@ carrying on an incestuous relationship with her own
+	  <<set $slaves[$i].devotion += 0.3>>
+	<<elseif $slaves[$i].devotion gt 15>>
+	  is so devoted to you that she accepts carrying on an incestuous relationship with her own
+	<<elseif $slaves[$i].devotion gt 10>>
+	  is somewhat @@color:mediumorchid;disturbed@@ that she's carrying on an incestuous relationship with her own
+	  <<set $slaves[$i].devotion -= 0.3>>
+	<<elseif $slaves[$i].devotion gt 4>>
+	  is @@color:mediumorchid;disturbed@@ and @@color:gold;scared@@ that she's carrying on an incestuous relationship with her own
+	  <<set $slaves[$i].devotion -= 0.7>>
+	  <<set $slaves[$i].trust -= 0.3>>
+	<<else>>
+	  is @@color:mediumorchid;revolted@@ and @@color:gold;scared@@ that she's carrying on an incestuous relationship with her own
+	  <<set $slaves[$i].devotion -= 1>>
+	  <<set $slaves[$i].trust -= 0.7>>
+	<</if>>
+	<<if $slaves[$i].relation is "twin">>
+	  twin.
+	<<elseif $slaves[$i].relation is "sister">>
+	  sister.
+	<<elseif $slaves[$i].relation is "mother">>
+	  daughter.
+	<<elseif $slaves[$i].relation is "daughter">>
+	  mother.
+	<</if>>
+	<<if $FSAncientEgyptianRevivalist gt 0>>
+	  Society @@color:green;strongly approves@@ of their incestuous relationship, which advances the Egyptian revivalist ideal of slave incest.
+	  <<set $repGain += 2*$FSSingleSlaveRep*($FSAncientEgyptianRevivalist/$FSLockinLevel)>>
+	  <<set $FSAncientEgyptianRevivalist += 0.1*$FSSingleSlaveRep>>
+	<</if>>
+  <<elseif ($slaves[$i].relationTarget is $slaves[$i].relationshipTarget) and ($slaves[$i].origin is "She offered herself to you for enslavement hoping you would preserve her incestuous relationship with her sibling.")>>
+	$slaves[$i].slaveName is @@color:mediumaquamarine;thankful@@ that you've preserved the incestuous relationship between her and her sibling.
+	<<set $slaves[$i].trust += 0.7>>
+	<<if $FSAncientEgyptianRevivalist gt 0>>
+	  Society @@color:green;strongly approves@@ of their incestuous relationship, which advances the Egyptian revivalist ideal of slave incest.
+	  <<set $repGain += 2*$FSSingleSlaveRep*($FSAncientEgyptianRevivalist/$FSLockinLevel)>>
+	  <<set $FSAncientEgyptianRevivalist += 0.1*$FSSingleSlaveRep>>
+	<</if>>
+  <</if>>
+  <</if>>
+<</if>>
+
+<<if $slaves[$i].relationship gte 3>>
+<<if $slaves[$i].releaseRules isnot "restrictive">>
+<<if $slaves[$i].fetish isnot "nympho">>
+
+<<for $j to 0; $j lt $slaves.length; $j++>>
+  <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+  <<if $slaves[$j].fetish isnot "none">>
+  <<if $slaves[$j].fetish isnot $slaves[$i].fetish >>
+  <<if random(1,100) gt (95-($slaves[$i].relationship*5))>>
+    <<if $slaves[$j].fetish is "boobs">>
+      After experiencing $slaves[$j].slaveName's love of breasts, her own and $slaves[$i].slaveName's, $slaves[$i].slaveName happily joins her as a @@color:hotpink;boob fanatic.@@
+      <<set $slaves[$i].fetish to "boobs">>
+      <<set $slaves[$i].fetishDiscovered to 1>>
+    <<elseif $slaves[$j].fetish is "buttslut">>
+      $slaves[$j].slaveName begs $slaves[$i].slaveName to fuck her ass so many times that $slaves[$i].slaveName reconsiders her stance on buttsex. She becomes just as much of an @@color:hotpink;anal slut@@ as $slaves[$j].slaveName.
+      <<set $slaves[$i].fetish to "buttslut">>
+      <<set $slaves[$i].fetishDiscovered to 1>>
+    <<elseif $slaves[$j].fetish is "cumslut">>
+      After sharing blowjobs with $slaves[$j].slaveName enough times, $slaves[$i].slaveName develops an @@color:hotpink;oral fixation@@ of her own.
+      <<set $slaves[$i].fetish to "cumslut">>
+      <<set $slaves[$i].fetishDiscovered to 1>>
+    <<elseif $slaves[$j].fetish is "submissive">>
+	  <<if ($slaves[$i].fetish isnot "dom") and ($slaves[$i].fetish isnot "nympho")>>
+		$slaves[$j].slaveName begs $slaves[$i].slaveName to dominate her so many times that $slaves[$i].slaveName gets used to domination, and finds she likes it. She becomes just as much of an @@color:hotpink;sexual dominant@@ as a slave can be.
+		<<set $slaves[$i].fetish to "dom">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+    <<elseif $slaves[$j].fetish is "dom">>
+	  <<if ($slaves[$i].fetish isnot "submissive") and ($slaves[$i].fetish isnot "nympho")>>
+		$slaves[$j].slaveName holds $slaves[$i].slaveName down and fucks her so many times that $slaves[$i].slaveName starts to get off on being used. She becomes a true @@color:hotpink;sexual submissive@@, and loves $slaves[$j].slaveName all the more for dominating her.
+		<<set $slaves[$i].fetish to "submissive">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+    <<elseif $slaves[$j].fetish is "masochist">>
+	  <<if ($slaves[$i].fetish isnot "sadist") and ($slaves[$i].fetish isnot "nympho")>>
+		$slaves[$j].slaveName begs $slaves[$i].slaveName to hurt her so many times that $slaves[$i].slaveName gets used to sadism, and finds she likes it. She becomes just as much of an @@color:hotpink;sexual sadist@@ as a slave can be.
+		<<set $slaves[$i].fetish to "sadist">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+    <<elseif $slaves[$j].fetish is "sadist">>
+	  <<if ($slaves[$i].fetish isnot "masochist") and ($slaves[$i].fetish isnot "nympho")>>
+		$slaves[$j].slaveName hits $slaves[$i].slaveName during sex so often that $slaves[$i].slaveName starts to get off on being beaten. She becomes a true @@color:hotpink;masochist@@, and loves $slaves[$j].slaveName all the more for abusing her.
+		<<set $slaves[$i].fetish to "masochist">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+    <<elseif $slaves[$j].fetish is "humiliation">>
+      $slaves[$j].slaveName begs $slaves[$i].slaveName to humiliate her sexually so many times that $slaves[$i].slaveName can't help but be embarrassed by all the public sex, herself. She gets off on the @@color:hotpink;humiliation@@ with $slaves[$j].slaveName.
+      <<set $slaves[$i].fetish to "humiliation">>
+      <<set $slaves[$i].fetishDiscovered to 1>>
+    <<elseif $slaves[$j].fetish is "pregnancy">>
+      $slaves[$j].slaveName shares her hopes and dreams of pregnancy and children with $slaves[$i].slaveName all the time, and $slaves[$i].slaveName can't help but feel her @@color:hotpink;biological clock@@ tick in time with $slaves[$j].slaveName's.
+      <<set $slaves[$i].fetish to "pregnancy">>
+      <<set $slaves[$i].fetishDiscovered to 1>>
+    <<elseif ($slaves[$j].fetish is "nympho") and (random(1,100) gt 50)>>
+      $slaves[$j].slaveName is such a sex addict that $slaves[$i].slaveName comes to @@color:hotpink;appreciate constant sex@@ with $slaves[$j].slaveName: with anyone at all, actually.
+      <<set $slaves[$i].fetish to "nympho">>
+      <<set $slaves[$i].fetishDiscovered to 1>>
+    <</if>>
+  <</if>>
+  <</if>>
+  <</if>>
+  <</if>>
+<</for>>
+  
+<</if>>
+<</if>>
+<</if>>
+
+<</nobr>>

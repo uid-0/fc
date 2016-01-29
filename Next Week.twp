@@ -1,0 +1,90 @@
+<<silently>>
+
+<<if $autosave isnot 0>>
+  <<script>>Save.autosave.save("Week Start Autosave")<</script>>
+<</if>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+	<<set $slaves[$i].tired to 0>>
+	<<set $slaves[$i].oldDevotion to $slaves[$i].devotion>>
+	<<set $slaves[$i].oldTrust to $slaves[$i].trust>>
+	<<set $slaves[$i].minorInjury to 0>>
+    <<if $slaves[$i].sentence gt 1>>
+	  <<set $slaves[$i].sentence -= 1>>
+    <<elseif $slaves[$i].sentence gt 0>>
+	  <<set $slaves[$i].sentence to 0>>
+	  <<set $slaves[$i].assignment to "rest">>
+	  <<set $slaves[$i].assignmentVisible to 1>>
+    <</if>>
+    <<if $slaves[$i].weekAcquired is 0>>
+        <<set $slaves[$i].weekAcquired to $week>>
+    <</if>>
+    <<if $slaves[$i].relation lte 0>>
+        <<set $slaves[$i].relationTarget to 0>>
+    <</if>>
+    <<if $slaves[$i].relationship lte 0>>
+        <<set $slaves[$i].relationshipTarget to 0>>
+    <</if>>
+    <<if $slaves[$i].rivalry lte 0>>
+        <<set $slaves[$i].rivalryTarget to 0>>
+    <</if>>
+    <<if $slaves[$i].devotion gt 30>>
+	  <<set $slaves[$i].devotion to 30>>
+	<<else>>
+	  <<set $slaves[$i].devotion to Math.trunc($slaves[$i].devotion*10)/10>>
+    <</if>>
+<</for>>
+
+<<if $week is $oldWeek>>
+  <<set $week += 1>>
+<</if>>
+
+<<if $week lt 20>>
+	<<if random(1,100) gt 40>>
+	  <<set $weatherToday to $niceWeather.random()>>
+    <<else>>
+      <<set $weatherToday to $lightWeather.random()>>
+    <</if>>
+<<elseif $week lt 40>>
+	<<if random(1,100) gt 60>>
+      <<set $weatherToday to $niceWeather.random()>>
+    <<elseif random(1,100) gt 20>>
+      <<set $weatherToday to $lightWeather.random()>>
+    <<else>>
+      <<set $weatherToday to $heavyWeather.random()>>
+    <</if>>
+<<elseif $week lt 60>>
+	<<if random(1,100) gt 60>>
+      <<set $weatherToday to $niceWeather.random()>>
+    <<elseif random(1,100) gt 20>>
+      <<set $weatherToday to $lightWeather.random()>>
+    <<else>>
+      <<set $weatherToday to $heavyWeather.random()>>
+    <</if>>
+<<else>>
+	<<if random(1,100) gt 60>>
+      <<set $weatherToday to $lightWeather.random()>>
+	<<elseif random(1,100) gt 20>>
+      <<set $weatherToday to $heavyWeather.random()>>
+    <<else>>
+      <<set $weatherToday to $extremeWeather.random()>>
+    <</if>>
+<</if>>
+
+<<set $preOwnedViewed to 0>>
+<<set $repGain to 0>>
+<<set $pitFought = 0>>
+<<set $eventDescription to 0>>
+<<set $prestigeAuctioned to 0>>
+<<set $slavesSeen to 0>>
+<<set $slaveMarketLimit to 10+($rep/1000)>>
+
+/*HACKY EVENT WORKAROUNDS*/
+<<if $eventID isnot -1>>
+	<<set $slaves[$eventID].devotion -= 10>>
+	<<set $eventID to -1>>
+<</if>>
+
+<<goto "Main">>
+
+<</silently>>

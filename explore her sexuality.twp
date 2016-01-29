@@ -1,0 +1,161 @@
+<<nobr>>
+
+<<set $activeSlave.fetishDiscovered to 1>>
+
+You set about investigating her sexuality.
+
+<<if $activeSlave.devotion lt -10>>
+	She's so rebellious that you have to fill her with psychoactive drugs and restrain her painfully in order to learn anything. This abuse @@color:mediumorchid;increases her hatred.@@
+	<<set $activeSlave.devotion -= 1>>
+<<elseif $activeSlave.devotion lte 4>>
+	You anticipate that she won't be sufficiently compliant with some of the extreme practices you mean to investigate, so you give her a hearty dose of aphrodisiacs and place her in bondage gear. She isn't happy, but soon she's too horny to care.
+<<else>>
+	She's obedient enough that there is no trouble with any of the sexual kinks you subject her to. Some she likes more than others, but when she's not enjoying herself, she grits her teeth and concentrates on obeying you.
+<</if>>
+
+<</nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+You start things off with a good exploratory fondle. You play with her nipples and each of her holes and gauge her reaction.
+
+<<if $activeSlave.fetish is "boobs">>
+	You've barely touched her nipples before she moans. After some experimentation, it becomes clear that her nipples might as well be a pair of slightly less sensitive clits. Finding her mammary fixation with you has @@color:hotpink;increased her devotion to you.@@
+	<<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.fetish is "buttslut">>
+	<<if $activeSlave.vagina is -1>>When you move from fingering her pussy to her asshole,<<else>>When you move from her fondling her mouth to her asshole,<</if>> you've barely touched her butt before she comes explosively. After some experimentation, it becomes clear that her g-spot might as well be located up her ass. Finding her anal fixation with you has @@color:hotpink;increased her devotion to you.@@
+	<<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.fetish is "nympho">>
+	She shows no real reaction when you move your fingers from hole to hole, because she seems to react with arousal to fingers in any of them.
+<<else>>
+	Nothing unusual happens.
+<</if>>
+
+<</nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+Next, you demand extreme submission from her. You make her change into bondage gear that blinds her, restricts her movement, forces her to present her breasts uncomfortably, and holds vibrators against her. Thus attired, she is forced to serve you in whatever petty ways occur to you.
+
+<<if $activeSlave.fetish is "submissive">>
+	During the first hour of this treatment, she cums hard against the vibrators. She's a natural submissive! Discovering this about herself under your hands has @@color:hotpink;increased her devotion to you.@@
+	<<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.fetish is "nympho">>
+	She complies, showing the same enthusiasm for this as for other sex.
+<<else>>
+	She complies, but she's not a natural submissive.
+<</if>>
+
+<</nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+Before you let her out of the extreme bondage, you rain a series of light blows across her nipples and buttocks.
+
+<<if $activeSlave.fetish is "masochist">>
+	She almost orgasms at the stinging pain. She's a masochist! This discovery has @@color:hotpink;increased her devotion to you.@@
+	<<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.fetish is "nympho">>
+	She enjoys the pain play, but she seems to enjoy everything you try.
+	<<set $activeSlave.devotion += 2>>
+<<else>>
+	She struggles and tries to avoid the blows.
+<</if>>
+
+<</nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+Later, you bring her with you as you go about your day. Every time you encounter one of your slaves, you let her do whatever she likes to the slave. <<if $activeSlave.dick gt 0>>Since she has a cock, this is a lot more fun. You usually let her have the looser of the other slave's holes.<</if>>
+
+<<if $activeSlave.fetish is "likes girls">>
+	She can't keep her hands off the other slaves; she's naturally bisexual! @@color:hotpink;Finding that she loves life surrounded by naked, available women increased her devotion to you.@@
+	<<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.fetish is "nympho">>
+	She shows no preference what equipment anyone has, and seems to enjoy everything.
+<<else>>
+	She's not naturally bisexual. Of course, she'll fuck whoever she's required to fuck.
+<</if>>
+
+<</nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+The next day, she continues to accompany you. Whenever cum is involved in your day's affairs in any way, you require her to clean it up with her mouth.
+
+<<if $activeSlave.fetish is "cumslut">>
+	She enjoys this treatment. She's a cumslut! Discovering this about herself under your hands has @@color:hotpink;increased her devotion to you.@@
+	<<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.fetish is "nympho">>
+	She enjoys using her mouth, but no more than other kinds of sexual activity.
+<<else>>
+	If she had any special regard for cum, you'd know it, and she doesn't.
+<</if>>
+
+<</nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+You carefully watch her reaction as you let her spend a short time relaxing with a pregnant slave.
+
+<<if $activeSlave.fetish is "pregnancy">>
+	She's fascinated. She fetishizes fertility! Discovering this with you has @@color:hotpink;increased her devotion to you.@@
+	<<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.fetish is "nympho">>
+	She spends most of the rest ogling the pregnant slave's boobs..
+	<<set $activeSlave.devotion += 2>>
+<<else>>
+	She simply enjoys the rest.
+<</if>>
+
+<</nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+You restrain the pregnant slave and administer a brief beating across her bare buttocks, ensuring that you cause enough pain to produce a few tears, a bit of begging, and some struggling.
+
+<<if $activeSlave.fetish is "sadist">>
+	She's almost painfully aroused. She's titillated by the idea of causing pain! Discovering this about herself under your direction has @@color:hotpink;increased her devotion to you.@@
+	<<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.fetish is "nympho">>
+	She enjoys watching the poor pregnant slave wriggle, but she's watching her butt rather than the beating.
+	<<set $activeSlave.devotion += 2>>
+<<else>>
+	She's a bit disturbed by the sight of you punishing the pregnant girl.
+<</if>>
+
+<</nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+Before letting the poor pregnant slave go, you require $activeSlave.slaveName to add a blindfold to the restraints.
+
+<<if $activeSlave.fetish is "dom">>
+	She seems to really enjoy blindfolding the poor girl, reassuring her as she does. She's a natural sexual top! Discovering this about herself under your direction has @@color:hotpink;increased her devotion to you.@@
+	<<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.fetish is "nympho">>
+	She enjoys getting closer to the slave, mostly so she can give her pregnant pussy a thorough grope.
+	<<set $activeSlave.devotion += 2>>
+<<else>>
+	She just follows orders.
+<</if>>
+
+<</nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+Lastly, you place her in a special room in your penthouse filled with live video equipment. They get to see her groped, deepthroated, facial'd, teased, and tortured.
+
+<<if $activeSlave.fetish is "humiliation">>
+	The more viewers she gets, the harder she comes. She's a slut for humiliation! Discovering this about herself under your hands has @@color:hotpink;increased her devotion to you.@@
+	<<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.fetish is "nympho">>
+	She enjoys showing off sexually, but focuses on the sex first. She got off on everything, and is clearly a nympho. Discovering this about herself under your hands has @@color:hotpink;greatly increased her devotion to you.@@
+	<<set $activeSlave.devotion += 2>>
+<<else>>
+	She gets through it, but she doesn't seem to enjoy seeing her audience on the screen.
+<</if>>
+
+<</nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;<<nobr>>
+
+<<if ($activeSlave.devotion gt 4)>>
+	She is now fully broken; @@color:yellow;her training assignment has defaulted to fostering devotion.@@
+	<<set $trainingRegimen to "build her devotion">>
+<<else>>
+	With her sexuality explored @@color:yellow;her training assignment has defaulted breaking her will.@@
+	<<set $trainingRegimen to "break her will">>
+<</if>>
+
+<</nobr>>

@@ -1,0 +1,428 @@
+<<set $encyclopedia to " ">>\
+\
+<<display "Arcology Description">>
+\
+<<nobr>>
+
+<<if $FSAnnounced gt 0>>
+<br>
+__Society__
+<br>
+You have the ability to define new societal norms for your arcology.
+
+<<if $FSCredits gt 0>>
+	@@color:yellow;Your arcology's society is ready to begin accepting a new societal direction.@@
+<</if>>
+
+<<if $FSSupremacist gte $FSLockinLevel>>
+  Your arcology believes implicitly in $FSSupremacistRace superiority.
+<<elseif $FSSupremacist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with $FSSupremacistRace superiority.
+<<elseif $FSSupremacist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to $FSSupremacistRace superiority.
+<<elseif $FSSupremacist gt 0>>
+  Your arcology is unconvinced of $FSSupremacistRace superiority.
+<</if>>
+
+<<if $FSSubjugationist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the inferiority of $FSSubjugationistRace people.
+<<elseif $FSSubjugationist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the inferiority of $FSSubjugationistRace people.
+<<elseif $FSSubjugationist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the inferiority of $FSSubjugationistRace people.
+<<elseif $FSSubjugationist gt 0>>
+  Your arcology is unconvinced of the inferiority of $FSSubjugationistRace people.
+<</if>>
+
+<<if $FSGenderRadicalist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the need to redefine gender around power.
+<<elseif $FSGenderRadicalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the need to redefine gender around power.
+<<elseif $FSGenderRadicalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the need to redefine gender around power.
+<<elseif $FSGenderRadicalist gt 0>>
+  Your arcology is unconvinced of the need to redefine gender around power.
+<</if>>
+
+<<if $FSGenderFundamentalist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the need to preserve traditional gender roles.
+<<elseif $FSGenderFundamentalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the need to preserve traditional gender roles.
+<<elseif $FSGenderFundamentalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the need to preserve traditional gender roles.
+<<elseif $FSGenderFundamentalist gt 0>>
+  Your arcology is unconvinced of the need to preserve traditional gender roles.
+<</if>>
+
+<<if $FSPaternalist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the vision of a well-bred race of slaves.
+<<elseif $FSPaternalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the vision of a well-bred race of slaves.
+<<elseif $FSPaternalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the vision of a well-bred race of slaves.
+<<elseif $FSPaternalist gt 0>>
+  Your arcology is unconvinced of the vision of a well-bred race of slaves.
+<</if>>
+
+<<if $FSDegradationist gte $FSLockinLevel>>
+  Your arcology believes implicitly that slaves are not human and should be thoroughly degraded.
+<<elseif $FSDegradationist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that slaves are not human and should be thoroughly degraded.
+<<elseif $FSDegradationist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the proposition that slaves are not human and should be thoroughly degraded.
+<<elseif $FSDegradationist gt 0>>
+  Your arcology is unconvinced that slaves are not human and should be thoroughly degraded.
+<</if>>
+
+<<if $FSBodyPurist gte $FSLockinLevel>>
+  Your arcology believes implicitly in the unattractive nature of implants.
+<<elseif $FSBodyPurist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the unattractive nature of implants.
+<<elseif $FSBodyPurist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the unattractive nature of implants.
+<<elseif $FSBodyPurist gt 0>>
+  Your arcology is unconvinced of the unattractive nature of implants.
+<</if>>
+
+<<if $FSTransformationFetishist gte $FSLockinLevel>>
+  Your arcology passionately fetishizes implants.
+<<elseif $FSTransformationFetishist gte $FSLockinLevel*0.6>>
+  Your arcology strongly fetishizes implants.
+<<elseif $FSTransformationFetishist gte $FSLockinLevel*0.3>>
+  Your arcology fetishizes implants.
+<<elseif $FSTransformationFetishist gt 0>>
+  Your arcology is beginning to fetishize implants.
+<</if>>
+
+<<if $FSSlimnessEnthusiast gte $FSLockinLevel>>
+  Your arcology is passionately enthusiastic about slim slaves with girlish figures.
+<<elseif $FSSlimnessEnthusiast gte $FSLockinLevel*0.6>>
+  Your arcology is very enthusiastic about slim slaves with girlish figures.
+<<elseif $FSSlimnessEnthusiast gte $FSLockinLevel*0.3>>
+  Your arcology is enthusiastic about slim slaves with girlish figures.
+<<elseif $FSSlimnessEnthusiast gt 0>>
+  Your arcology is beginning to be enthusiastic about slim slaves with girlish figures.
+<</if>>
+
+<<if $FSAssetExpansionist gte $FSLockinLevel>>
+  Your arcology believes implicitly that all tits and asses should be bigger.
+<<elseif $FSAssetExpansionist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that all tits and asses should be bigger.
+<<elseif $FSAssetExpansionist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the idea that all tits and asses should be bigger.
+<<elseif $FSAssetExpansionist gt 0>>
+  Your arcology is unconvinced that all tits and asses should be bigger.
+<</if>>
+
+<<if $FSPastoralist gte $FSLockinLevel>>
+  Your arcology believes implicitly that slaves should be milked.
+<<elseif $FSPastoralist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that slaves should be milked.
+<<elseif $FSPastoralist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the idea that slaves should be milked.
+<<elseif $FSPastoralist gt 0>>
+  Your arcology is unconvinced that slaves should be milked.
+<</if>>
+
+<<if $FSPhysicalIdealist gte $FSLockinLevel>>
+  Your arcology believes implicitly that all slaves should be tall and strong.
+<<elseif $FSPhysicalIdealist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with the idea that all slaves should be tall and strong.
+<<elseif $FSPhysicalIdealist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to the idea that all slaves should be tall and strong.
+<<elseif $FSPhysicalIdealist gt 0>>
+  Your arcology is unconvinced that all slaves should be tall and strong.
+<</if>>
+
+<<if $FSChattelReligionist gte $FSLockinLevel>>
+  Your arcology believes implicitly in a version of religion that emphasizes slaveholding traditions.
+<<elseif $FSChattelReligionist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with a version of religion that emphasizes slaveholding traditions.
+<<elseif $FSChattelReligionist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to a version of religion that emphasizes slaveholding traditions.
+<<elseif $FSChattelReligionist gt 0>>
+  Your arcology is unconvinced of a version of religion that emphasizes slaveholding traditions.
+<</if>>
+
+<<if $FSRomanRevivalist gte $FSLockinLevel>>
+  Your arcology believes implicitly that it is the new Rome.
+<<elseif $FSRomanRevivalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with your project to build the new Rome.
+<<elseif $FSRomanRevivalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to your project to build the new Rome.
+<<elseif $FSRomanRevivalist gt 0>>
+  Your arcology is unconvinced of the wisdom of your project to build the new Rome.
+<</if>>
+
+<<if $FSAncientEgyptianRevivalist gte $FSLockinLevel>>
+  Your arcology believes implicitly that it is the land of the Pharaohs, reborn.
+<<elseif $FSAncientEgyptianRevivalist gte $FSLockinLevel*0.6>>
+  Your arcology agrees strongly with your project to build a new land of the Pharaohs.
+<<elseif $FSAncientEgyptianRevivalist gte $FSLockinLevel*0.3>>
+  Your arcology is sympathetic to your project to build a new land of the Pharaohs.
+<<elseif $FSAncientEgyptianRevivalist gt 0>>
+  Your arcology is unconvinced of the wisdom of your project to build a new land of the Pharaohs.
+<</if>>
+
+[[Future Society]]
+
+<br>
+
+<</if>>
+
+<</nobr>>\
+
+__Construction__
+<<nobr>>
+
+<<if $AProsperityCap is 60>>
+	//The first major upgrade needed is the installation of a drone security system so higher-class citizens will feel safe and protected should they choose to immigrate. This upgrade will cost ¤5000.// [[Install drone security system|Manage Arcology][$cash -= 5000, $AProsperityCap to 80]]
+<<elseif $AProsperityCap is 80>>
+	//The next major upgrade needed is the installation of a better water reclamation system so your residents will have access to cheaper water and hydroponically grown food. This upgrade will cost ¤10000.// [[Upgrade water reclamation system|Manage Arcology][$cash -= 10000, $AProsperityCap to 100]]
+<<elseif $AProsperityCap is 100>>
+	//The next major upgrade needed is the installation of a broader apron at the bottom of the arcology to increase its surface area and gather more solar energy. Right now, tenants that use a lot of power have to import it from outside. This upgrade will cost ¤20000.// [[Install solar apron|Manage Arcology][$cash -= 20000, $AProsperityCap to 120]]
+<<elseif $AProsperityCap is 120>>
+	//The next major upgrade needed is the improvement of the computer core. The prosperity of the arcology is threatening to overwhelm its data processing systems. Sir, I assure you that I am in no way biased on this subject. This upgrade will cost ¤50000.// [[Upgrade computer core|Manage Arcology][$cash -= 50000, $AProsperityCap to 140]]
+<<elseif $AProsperityCap is 140>>
+	//The next major upgrade needed is an overhaul of the commercial floors. As the arcology has become prosperous a better class of citizen has started to look for a higher class of establishment. These renovations will cost ¤100000.// [[Renovate commercial floors|Manage Arcology][$cash -= 100000, $AProsperityCap to 160]]
+<<elseif $AProsperityCap is 160>>
+	//The next major upgrade needed is an overhaul of the residential floors. As the arcology has become prosperous a better class of citizen has started to look for a higher class of living quarters. These renovations will cost ¤200000.// [[Renovate residential floors|Manage Arcology][$cash -= 200000, $AProsperityCap to 180]]
+<<else>>
+	//The arcology is fully upgraded.//
+<</if>>
+
+<</nobr>>
+
+__Facilities__
+<<nobr>>
+
+<<if $brothel is 0>>
+    [[Combine empty apartments into a brothel|Manage Arcology][$cash -= 10000, $brothel to 1]]
+	//Costs ¤10000 and will incur upkeep costs//
+<<elseif $brothel gt 0>>
+	A brothel has been installed directly below your penthouse. It can support <<print $brothel*5>> whores.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $promenade is 0>>
+    [[Renovate rooms off the promenade to support public servants|Manage Arcology][$cash -= 10000, $promenade to 1]]
+	//Costs ¤10000 and will incur upkeep costs//
+<<elseif $promenade gt 0>>
+	There are rooms off the promenade to support slaves as they please citizens. They can support <<print $promenade*5>> sluts.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $arcade is 0>>
+    [[Construct a sex arcade to confine slaves in|Manage Arcology][$cash -= 10000, $arcade to 1]]
+	//Costs ¤10000 and will incur upkeep costs//
+<<elseif $arcade gt 0>>
+	A sex arcade has been installed in the arcology. It can support <<print $arcade*5>> inmates.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $dairy is 0>>
+    [[Add a dairy to the water reclamation facility|Manage Arcology][$cash -= 5000, $dairy to 1]]
+	//Costs ¤5000 and will incur upkeep costs//
+<<elseif $dairy gt 0>>
+	A dairy has been installed in the water reclamation area of your penthouse. It can support <<print $dairy*5>> milkers.
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $seeDicks isnot 0>>
+<br>
+<<if $collectionFacility is 0>>
+    [[Add a semen Collection Facility to the arcology|Manage Arcology][$cash -= 5000, $collectionFacility to 1]]
+	//Costs ¤5000 and will incur upkeep costs//
+<<elseif $collectionFacility gt 0>>
+	A semen Collection Facility has been installed in the arcology. It can support <<print $collectionFacility*5>> milkers.
+<</if>>
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $servantsQuarters is 0>>
+    [[Build a dormitory to house large numbers of house servants|Manage Arcology][$cash -= 5000, $servantsQuarters to 1]]
+	//Costs ¤5000//
+<<else>>
+	Your penthouse includes a dormitory to house large numbers of house servants.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $schoolroom is 0>>
+    [[Build a schoolroom where slaves can be educated|Manage Arcology][$cash -= 5000, $schoolroom to 1]]
+	//Costs ¤5000//
+<<else>>
+	Your penthouse includes a schoolroom where slaves can be educated.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $spa isnot 1>>
+    [[Install open baths to provide relaxation space for resting slaves|Manage Arcology][$cash -= 5000, $spa to 1]]
+	//Costs ¤5000//
+<<else>>
+	The penthouse includes a fully appointed spa where slaves can rest and recuperate.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $cellblock isnot 1>>
+    [[Construct cells to properly confine disobedient slaves|Manage Arcology][$cash -= 5000, $cellblock to 1]]
+	//Costs ¤5000//
+<<else>>
+	The lower level of the penthouse includes a hallway of cells to confine slaves in.
+<</if>>
+
+<</nobr>>
+
+__Penthouse Improvements__
+<<nobr>>
+
+<<if $masterSuite isnot 1>>
+    [[Improve your master bedroom to house a harem of personal toys|Manage Arcology][$cash -= 5000, $masterSuite to 1]]
+	//Costs ¤5000//
+<<else>>
+	Your penthouse is capped by a master suite with room for an entire harem of personal toys.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $HGSuite isnot 1>>
+    [[Build a small suite for a Head Girl to live in|Manage Arcology][$cash -= 5000, $HGSuite to 1]]
+	//Costs ¤5000//
+<<else>>
+	There is a small but handsome suite next to yours reserved for the Head Girl.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $feeder is 0>>
+    [[Upgrade the kitchen's nutritional sensing systems|Manage Arcology][$cash -= 5000, $feeder to 1]]
+	//Costs ¤5000//
+<<elseif $feeder is 1>>
+    The kitchen mounts sophistocated sensors to refine diets in real time. [[Upgrade the kitchen's nutritional systems for hormonal balancing|Manage Arcology][$cash -= 5000, $feeder to 2]]
+	//Costs ¤5000//
+<<else>>
+	The kitchen mounts sensors to refine diets in real time, and its nutritional systems work with each slave's hormonal balancing to maximize effects.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $dojo is 0>>
+    [[Set up a personal armory to support a bodyguard|Manage Arcology][$cash -= 5000, $dojo to 1]]
+	//Costs ¤5000//
+<<elseif $dojo is 1>>
+	There is a small armory next to your office that can support a bodyguard. [[Upgrade the armory with a private room for the bodyguard|Manage Arcology][$cash -= 5000, $dojo to 2]]
+	//Costs ¤5000//
+<<else>>
+	There is a small armory next to your office that can support a bodyguard, with a little room for her to rest in when off duty.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $pit is 0>>
+    [[Build a pit to host slave fights|Manage Arcology][$cash -= 5000, $pit to 1]]
+	//Costs ¤5000//
+<<else>>
+	You have a room with a padded pit sunken into the floor for slave fights.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if ($dispensary is 0) and ($rep gt 5000)>>
+    [[Install a cutting-edge pharmaceutical fabricator|Manage Arcology][$cash -= 50000, $dispensary to 1, $drugsCost to ($drugsCost/2)]]
+	//Costs ¤50000//
+<<elseif ($dispensary is 0)>>
+	//You lack the reputation to obtain cutting-edge pharmaceutical technology//
+<<else>>
+	There is a cutting-edge [[pharmaceutical fabricator|Dispensary]] in the basement.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if ($surgeryUpgrade is 0) and ($rep gt 7000)>>
+    [[Upgrade the remote surgery|Manage Arcology][$cash -= 50000, $surgeryUpgrade to 1]]
+	//Costs ¤50000//
+<<elseif ($surgeryUpgrade is 0)>>
+	//You lack the reputation to secure rare surgery upgrades//
+<<else>>
+	Your remote surgery has been heavily upgraded and customized.
+<</if>>
+
+<</nobr>>
+
+__Special Upgrades__
+<<nobr>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<<if ($personalArms is 0) and ($mercenaries is 0)>>
+//Your arcology has no special upgrades//
+<</if>>
+
+<<if ($personalArms is 1)>>
+You own a prototype powered exoskeleton that mounts armor and a smart mortar system, and has rifles mounted into its forearms.
+<<elseif ($personalArms gt 1)>>
+You own a prototype powered exoskeleton that mounts armor and a smart mortar system, and has rifles mounted into its forearms. Furthermore, your security drones can rearm with small-caliber guns if necessary.
+<</if>>
+
+<<if ($mercenaries gt 0)>>
+<<if ($mercenaries is 1)>>
+A squad of mercenaries is permanently quartered in your arcology. They are grim men and women, heavily armed and armored. Their upkeep is costing ¤<<print ($mercenaries*1000)>> weekly.
+<<elseif ($mercenaries lt 5)>>
+A full platoon of mercenaries is permanently quartered in your arcology. They are grim men and women, heavily armed and armored. Their upkeep is costing ¤<<print ($mercenaries*1000)>> weekly.
+<<elseif ($mercenaries gte 5)>>
+You have permanently settled a full platoon of mercenaries in your arcology as your $mercenariesTitle. They are grim men and women who appreciate their luxurious life here and train hard to keep their skills with their prototype armor sharp. Their upkeep is costing ¤<<print ($mercenaries*1000)>> weekly.
+<</if>>
+<</if>>
+
+<<if ($assistant gt 0)>>
+Your personal assistant is using an alternative personality setting, speaking in a sultry, sexual voice, and talking as though the penthouse's sex toys are her body.
+<</if>>
+<<if ($assistant gt 1)>>
+She also has charge of all smart piercings in the arcology, and is using her adaptations to sexual duties to improve their effectiveness.
+<</if>>
+
+<</nobr>>
+
+<<nobr>>
+Your slaves have participated in approximately <<print $oralTotal+$vaginalTotal+$analTotal>> sexual encounters: $oralTotal primarily oral, $vaginalTotal vanilla, $mammaryTotal mammary, $analTotal anal, and $penetrativeTotal with the slave penetrating another. They have produced about $milkTotal liters of marketable milk, <<if $seeDicks isnot 0>>about $cumTotal deciliters of marketable cum, <</if>>and have given birth $birthsTotal times.
+
+<<if $pitKillsTotal gt 0>>$pitKillsTotal slaves have died in your fighting pit.<</if>>
+<<if $fuckdollsSold gt 0>>$fuckdollsSold mindbroken arcade slaves have been converted into Fuckdolls and sold.<</if>>
+
+<</nobr>>
+
+/*<<nobr>>
+
+//
+
+<<if $normalizedEvents is 1>>
+	Random events distribution: ''normalized''. Random events will happen with equal frequency.
+    [[Realistic|Manage Arcology][$normalizedEvents to 0]]
+<<else>>
+	Random events distribution: ''realistic''. Events will happen more frequently if more slaves qualify for them.
+    [[Normalize|Manage Arcology][$normalizedEvents to 1]]
+<</if>>
+
+//
+
+<</nobr>>*/

@@ -1,0 +1,96 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Nonrandom Event">>
+<<set $returnTo to "Nonrandom Event">>
+<<set $encyclopedia to "Enslaving People">>
+
+	<<set $customSlaveOrdered to 0>>
+
+<<set $activeSlave to $customSlave>>
+
+<<set $activeSlave.ID to $IDNumber>>
+<<set $IDNumber += 1>>
+
+<<set $activeSlave.weekAcquired to $week>>
+<<set $activeSlave.origin to "You purchased her by special order.">>
+
+<<set $activeSlave.fetish to either("none", "none", "none", "none", "none", "none", "submissive", "likes girls", "cumslut", "humiliation", "buttslut", "boobs","pregnancy")>>
+
+<<set $activeSlave.sexualQuirk to either("none")>>
+<<set $activeSlave.behavioralQuirk to either("none")>>
+
+<<set $activeSlave.devotion to random(-2,2)>>
+<<set $activeSlave.trust to random(-2,2)>>
+
+<<display "New Slave Race Nationality and Name">>
+
+<<if $activeSlave.race is "black">>
+	<<set $activeSlave.skin to either("black", "brown", "light brown")>>
+	<<set $activeSlave.hcolor to either("black", "black", "black", "brown")>>
+    <<set $activeSlave.hlength to either("shoulder-length", "short", "very short", "shaved bald", "crinkled")>>
+<<elseif $activeSlave.race is "white">>
+	<<set $activeSlave.skin to either("pale", "tanned", "fair")>>
+	<<set $activeSlave.eyes to either("blue", "brown", "green")>>
+	<<set $activeSlave.hcolor to either("black", "blonde", "red", "brown")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<<elseif $activeSlave.race is "latina">>
+	<<set $activeSlave.skin to either("olive", "brown", "light brown")>>
+	<<set $activeSlave.hcolor to either("black", "black", "brown", "brown")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<<elseif $activeSlave.race is "asian">>
+	<<set $activeSlave.skin to either("pale", "dark", "light")>>
+	<<set $activeSlave.hcolor to either("black")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<<elseif ($activeSlave.race is "indo-aryan") or ($activeSlave.race is "malay") or ($activeSlave.race is "pacific islander") or ($activeSlave.race is "amerindian")>>
+	<<set $activeSlave.skin to either("pale", "dark", "light")>>
+	<<set $activeSlave.hcolor to either("black")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<<elseif ($activeSlave.race is "middle eastern") or ($activeSlave.race is "semitic") or ($activeSlave.race is "southern European")>>
+	<<set $activeSlave.skin to either("pale", "dark", "light")>>
+	<<set $activeSlave.hcolor to either("black")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length", "short", "very short", "shaved bald")>>
+<</if>>
+
+<<set $activeSlave.slaveName to $activeSlave.birthName>>
+
+<<if $activeSlave.anus is 0>>
+	<<set $activeSlave.analSkill to 0>>
+<</if>>
+
+<<if $activeSlave.vagina is -1>>
+    <<set $activeSlave.vaginalSkill to 0>>
+    <<set $activeSlave.clit to 0>>
+	<<set $activeSlave.preg to -2>>
+    <<if $activeSlave.fetish is "pregnancy">><<set $activeSlave.fetish to "none">><</if>>
+<</if>>
+
+<<display "Slave Cost">>
+<<set $slaveCost to $slaveCost*2>>
+
+<</nobr>>\
+\
+A slave dealer has submitted a slave to satisfy the order you posted.
+
+//As usual, the asking price is quite high, to cover the costs of finding a slave to order. In compensation, you can freely decline the slave and keep the order open, or even modify it later.//
+
+<<set $saleDescription to 1>><<display "Long Slave Description">><<set $saleDescription to 0>>
+
+Her price is ¤<<print $slaveCost>>.
+
+<span id="result">
+<<if $cash gte $slaveCost>>\
+	<<click "Accept the offered slave">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $slaveCost>>
+	<<replace "#result">>
+	She has been reasonably broken by the dealer that offered her to you. She has also picked up on the fact that she was specially selected, and is a little hopeful that this means she may be treated well. She is now awaiting your instructions.
+	<<set $nextLink to "AS Dump">>\
+	<<set $returnTo to "Random Nonindividual Event">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to accept the offered slave.//
+<</if>>\
+</span>

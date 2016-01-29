@@ -1,0 +1,53 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<set $activeSlave to $Stewardess>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $slaves[$i].assignment is "learn in the schoolroom">>
+<<set $subSlave to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<<set $subSlave.oralCount += 1>>
+<<set $oralTotal += 1>>
+
+<</nobr>>\
+\
+<<print "[[$subSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">> is at the head of the class. In this case, the literal head of the class; she has been performing poorly at her studies, so <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> has her under the teacher's desk, giving $activeSlave.slaveName oral. $activeSlave.slaveName is continuing the lesson, giving little indication she's being orally serviced. The other students are doing their best to look attentive, lest they be required to replace $subSlave.slaveName under the teacher's desk.
+\
+<span id="result">
+<<click "Encourage the schoolteacher to abuse poor students">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You lean against the doorway of the classroom. $activeSlave.slaveName glances at you, but you subtly let her know to continue with her business. When she finishes the lesson and, around the same time, climaxes, you clear your throat. The students all start with surprise and turn to you with trepidation. You observe in a conversational tone of voice that $activeSlave.slaveName is making great sacrifices here, performing an unsexy, boring job, and that any slave that does not work hard to learn will find herself at the teacher's sexual disposal. Several of the least attentive students @@color:green;try to look studious,@@ though a few of the better ones can't hide a certain anticipation.
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $slaves[$i].assignment is "learn in the schoolroom">>
+	<<set $slaves[$i].intelligenceImplant += 0.1>>
+	<<set $slaves[$i].oralCount += 1>>
+	<<set $oralTotal += 1>>
+	<</if>>
+	<</for>>
+    <</replace>>
+<</click>>
+<<click "Take the delinquent student in hand">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	When $activeSlave.slaveName finishes using $subSlave.slaveName's mouth, $subSlave.slaveName crawls out from under her desk and stumbles back towards her seat. She stops short when she realizes you're sitting in it. All the other students do their absolute best to be perfectly studious as $subSlave.slaveName gets back to her knees, for you this time. After class is over, you tell her that since she can't have been paying particularly good attention, she'll have to take @@color:green;remedial classes@@ after everyone else is done. $activeSlave.slaveName gives $subSlave.slaveName a very thorough grope at 'remedial classes,' making sure to pinch her student's nipples.
+	<<set $subSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $subSlave.ID == $slaves[$i].ID>>
+		<<set $slaves[$i].intelligenceImplant += 0.5>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>>
+</span>

@@ -1,0 +1,34 @@
+<<nobr>>
+
+<<if ($activeSlave.health lt 10)>>
+	Your close and expert attention improves her health in a way drug treatment or mere medical intervention cannot.
+	@@color:green;Her health has improved.@@
+	<<set $activeSlave.health += 1>>
+<</if>>
+
+<<if ($activeSlave.anus is 3) or ($activeSlave.vagina is 3)>>
+$activeSlave.slaveName is a veteran sex slave and has seen hard use. Tightening up a slave is difficult, but with close supervision and attention it can be done. You and your other slaves carefully apply injections, creams, and massage, and her other work is carefully managed to reduce wear and tear.
+<</if>>
+
+<<if ($activeSlave.anus is 3) and (random(1,100) gt 50)>>
+	@@color:orange;Her anus has recovered and is now merely loose.@@
+	<<set $activeSlave.anus to 2>>
+<<elseif ($activeSlave.anus is 3)>>
+	Her distended anus does not improve this week.
+<</if>>
+
+<<if ($activeSlave.vagina is 3) and (random(1,100) gt 50)>>
+	@@color:orange;Her pussy has tightened.@@
+	<<set $activeSlave.anus to 2>>
+<<elseif ($activeSlave.vagina is 3)>>
+	Her loose pussy does not recover this week.
+<</if>>
+
+/*
+<<if ($activeSlave.vagina isnot 3) and ($activeSlave.anus isnot 3)>>
+	She no longer fucked out; @@color:yellow;her training assignment has defaulted to fostering devotion.@@
+	<<set $trainingRegimen to "build her devotion">>
+<</if>>
+*/
+
+<</nobr>>\

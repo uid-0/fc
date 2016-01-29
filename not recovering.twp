@@ -1,0 +1,56 @@
+<<nobr>>
+
+<<if $activeSlave.assignmentVisible is 0>>
+//She is assigned to $activeSlave.assignment; bring her out of the facility to reassign her//
+<<else>>
+
+__Assignment__: <strong><span id="assign"><<print $activeSlave.assignment>></span>.</strong>
+<<click "Rest">><<set $activeSlave.assignment to "rest">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<replace "#assign">><<print $activeSlave.assignment>><</replace>><</click>>
+ | <<click "Fucktoy">><<set $activeSlave.assignment to "please you">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<goto "Slave Interact">><</click>>
+<<if (($activeSlave.devotion gte -4) or ($activeSlave.trust lt -4)) and ($activeSlave.amp isnot 1)>>
+   | <<click "Subordinate sex slave">><<set $activeSlave.assignment to "be a subordinate sex slave">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<goto "Subordinate Targeting">><</click>>
+   | <<click "Subordinate servant">><<set $activeSlave.assignment to "be a subordinate servant">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<replace "#assign">><<print $activeSlave.assignment>><</replace>><</click>>
+<<elseif ($activeSlave.amp is 1)>>
+  /* | //Amputees cannot be servants// */
+<<else>>
+  /* | //Too rebellious to serve// */
+<</if>>
+<<if (($activeSlave.devotion gte -4) or ($activeSlave.trust lt -4)) and ($activeSlave.fetish isnot "mindbroken") and ($activeSlave.intelligenceImplant isnot 1)>>
+   | __<<click "Take slave classes">><<set $activeSlave.assignment to "take classes">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<replace "#assign">><<print $activeSlave.assignment>><</replace>><</click>>__
+<<else>>
+  /* | //Too resistant to take classes// */
+<</if>>
+ | <<click "Confine her">><<set $activeSlave.assignment to "stay confined">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<replace "#assign">><<print $activeSlave.assignment>><</replace>><</click>>
+ | <<click "Whore">><<set $activeSlave.assignment to "whore">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<replace "#assign">><<print $activeSlave.assignment>><</replace>><</click>>
+ | <<click "Public servant">><<set $activeSlave.assignment to "serve the public">><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<replace "#assign">><<print $activeSlave.assignment>><</replace>><</click>>
+ | <<click "Glory hole">><<set $activeSlave.assignment to "work a glory hole">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<replace "#assign">><<print $activeSlave.assignment>><</replace>><</click>>
+<<if $activeSlave.lactation gt 0>>
+ | <<click "Be a milk cow">><<set $activeSlave.assignment to "get milked">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<replace "#assign">><<print $activeSlave.assignment>><</replace>><</click>>
+<<else>>
+/* | //Not lactating// */
+<</if>>
+<<if ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0)>>
+ | <<click "Get her dick milked">><<set $activeSlave.assignment to "get cockmilked">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 0>><<replace "#assign">><<print $activeSlave.assignment>><</replace>><</click>>
+<</if>>
+<<if ($activeSlave.sentence is 0)>>
+ | [[Assign her to her current task for a month|Slave Interact][$activeSlave.sentence to 4]]
+ | <<click "Let her choose her own assignment">><<set $activeSlave.assignment to "choose her own job">><<set $activeSlave.assignmentVisible to 1>><<set $activeSlave.sentence to 0>><<set $activeSlave.choosesOwnAssignment to 1>><<replace "#assign">><<print $activeSlave.assignment>><</replace>><</click>>
+<</if>>
+<<if ($activeSlave.assignment is "please you")>>
+__Fucktoy use preference__: <strong><span id="hole"><<print $activeSlave.toyHole>></span></strong>.
+<<click "Mouth">><<set $activeSlave.toyHole to "mouth">><<replace "#hole">><<print $activeSlave.toyHole>><</replace>><</click>>
+ | <<click "Tits">><<set $activeSlave.toyHole to "boobs">><<replace "#hole">><<print $activeSlave.toyHole>><</replace>><</click>>
+<<if ($activeSlave.vagina gt 0) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+ | <<click "Pussy">><<set $activeSlave.toyHole to "pussy">><<replace "#hole">><<print $activeSlave.toyHole>><</replace>><</click>>
+<<elseif ($activeSlave.vagina is 0)>> | //Take her virginity before giving her pussy special attention//
+<</if>>
+<<if ($activeSlave.anus gt 0)>>
+ | <<click "Ass">><<set $activeSlave.toyHole to "ass">><<replace "#hole">><<print $activeSlave.toyHole>><</replace>><</click>>
+<<else>> | //Take her anal virginity before giving her ass special attention//
+<</if>>
+ | <<click "No Preference">><<set $activeSlave.toyHole to "all her holes">><<replace "#hole">><<print $activeSlave.toyHole>><</replace>><</click>>
+<</if>>
+
+<</if>>
+
+<</nobr>>

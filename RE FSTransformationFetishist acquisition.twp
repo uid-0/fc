@@ -1,0 +1,53 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "You received her from a surgeon who botched an implant operation on her and needed to get her out of sight.">>
+<<set $activeSlave.boobsImplant += random(10,20)*200>>
+<<set $activeSlave.boobs += $activeSlave.boobsImplant>>
+<<set $activeSlave.nipples to 1>>
+<<set $activeSlave.areolae to 2>>
+<<set $activeSlave.buttImplant += random(2,4)>>
+<<set $activeSlave.butt += $activeSlave.buttImplant>>
+<<set $activeSlave.lips += 2>>
+<<set $activeSlave.lipsImplant += 2>>
+<<set $activeSlave.face += 1>>
+<<set $activeSlave.faceImplant += 1>>
+<<set $activeSlave.devotion to random(-20,-15)>>
+<<set $activeSlave.trust to random(-9,-5)>>
+<<set $activeSlave.health to random(-8,-7)>>
+<<set $activeSlave.pubicHLength to "waxed">>
+<<set $activeSlave.behavioralQuirk to either("arrogant", "bitchy", "anorexic", "quirky")>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+You receive a message coded urgent from a surgeon who you've hired in the past. You are on the point of opening the a call with a friendly businesslike salutation when you see his haggard, worried face, and change your greeting to one of commiseration and understanding. He pours out his troubles to you in a rush.
+
+It seems he botched an implant operation on a free woman. She's still out, and the implants are in successfully, but she's not too far from dead and will remain so for some time. He needs her out of sight, now. With your pull, you could easily manipulate the financial situation to enslave her and get her out of the doctor's area at the same time. It would be a favor to him, and by the medical records, a favor to you too, once you nurse her back to health. She's quite the implant queen.
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	She arrives with various medical devices still attached to her, wrapped up in supportive hospital clothing. Despite this, it's obvious that you've made a good decision. The new tits that got her into this situation are so cartoonish that some of the medical tubing has been hastily routed between them. After a few weeks on curatives and a few more in training, she'll be ready to bounce those fake boobs up and down as she takes dick.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

@@ -1,0 +1,1610 @@
+<<nobr>>
+
+<<set $lisping to 0>>
+<<if ($activeSlave.amp is 0)>>
+  <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	<<set $lisping to 1>>
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.devotion lt -10)>>
+  She
+  <<if ($activeSlave.trust gte -4)>>
+	<<if ($activeSlave.mute is 1)>>
+	  gestures
+	<<elseif ($lisping is 1)>>
+	  lisps
+	<<else>>
+	  declares  
+	<</if>>
+	angrily that it's wrong to keep her a slave, and that you should free her.
+  <<elseif ($activeSlave.trust gte -10)>>
+	<<if ($activeSlave.mute is 1)>>
+	  gestures
+	<<elseif ($lisping is 1)>>
+	  lisps
+	<<else>>
+	  mutters  
+	<</if>>
+	hesitantly that it's wrong to keep her a slave, and that you should free her.
+  <<else>>
+	<<if ($activeSlave.mute is 1)>>
+	  gestures a perfunctory plea not to hurt her.
+	<<elseif ($lisping is 1)>>
+	  lisps a perfunctory "Pleathe don't hurt me, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."
+	<<else>>
+	  mutters a perfunctory "Please don't hurt me, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."
+	<</if>>
+  <</if>>
+
+<<elseif ($activeSlave.devotion lt -4)>>
+  She
+	<<if ($activeSlave.trust gte -4)>>
+	  <<if ($activeSlave.mute is 1)>>
+		gestures
+	  <<elseif ($lisping is 1)>>
+		lisps
+	  <<else>>
+		mutters  
+	  <</if>>
+	  hestitantly that she does not like being a slave, and then
+	  <<if ($activeSlave.mute is 1)>>
+		lets her hands fall to her sides.
+	  <<else>>
+		falls silent.  
+	  <</if>>
+	<<elseif ($activeSlave.trust gte -10)>>
+	  <<if ($activeSlave.mute is 1)>>
+		gestures
+	  <<elseif ($lisping is 1)>>
+		lisps
+	  <<else>>
+		mutters  
+	  <</if>>
+	  fearfully that she does not like being a slave, and then
+	  <<if ($activeSlave.mute is 1)>>
+		lets her hands fall to her sides, shaking a little.
+	  <<else>>
+		falls silent, shaking a little.  
+	  <</if>>
+	<<else>>
+	  <<if ($activeSlave.mute is 1)>>
+		gestures a perfunctory plea not to hurt her.
+	  <<elseif ($lisping is 1)>>
+		lisps a perfunctory "Pleathe don't hurt me, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."
+	  <<else>>
+		mutters a perfunctory "Please don't hurt me, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."
+	  <</if>>
+	<</if>>
+
+<<elseif ($activeSlave.devotion lte 4)>>
+  She
+	<<if ($activeSlave.trust gte -4)>>
+	  <<if ($activeSlave.mute is 1)>>
+		gestures
+	  <<elseif ($lisping is 1)>>
+		lisps
+	  <<else>>
+		says  
+	  <</if>>
+	  earnestly that she will do whatever you order her to.
+	<<elseif ($activeSlave.trust gte -10)>>
+	  <<if ($activeSlave.mute is 1)>>
+		gestures
+	  <<elseif ($lisping is 1)>>
+		lisps
+	  <<else>>
+		says  
+	  <</if>>
+	  fearfully that she will do whatever you order her to, since she does not want to be locked up or beaten.
+	<<else>>
+	  <<if ($activeSlave.mute is 1)>>
+		gestures
+	  <<elseif ($lisping is 1)>>
+		lisps
+	  <<else>>
+		says  
+	  <</if>>
+	  shakily that she will do whatever you order her to, since she does not want to be hurt or killed.
+	<</if>>
+
+<<else>>
+
+<<if ($activeSlave.devotion lte 10)>>
+  <<if ($activeSlave.mute is 1)>>
+  	She gestures that you're <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>>, and she will do her best to obey you. She continues to sign:
+  <<elseif ($lisping is 1)>>
+	"You're my <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, and I'll do my betht to obey you," she lisps.
+  <<else>>
+	"You're my <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, and I'll do my best to obey you," she says.  
+  <</if>>
+<<elseif ($activeSlave.devotion lte 27)>>
+  <<if ($activeSlave.mute is 1)>>
+  	She gestures that you're her beloved master, and she trusts that you know what's best for her. She continues to sign:
+  <<elseif ($lisping is 1)>>
+	"You're my beloved <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, and you know what'th betht for me," she lisps.
+  <<else>>
+	"You're my beloved <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, and you know what's best for me," she says.  
+  <</if>>
+<<else>>
+  <<if ($activeSlave.mute is 1)>>
+  	She makes a simple gesture, meaning "I love you." She continues to sign:
+  <<elseif ($lisping is 1)>>
+	"I love you," she lisps simply.
+  <<else>>
+	"I love you," she says simply.  
+  <</if>>
+<</if>>
+
+<<if $activeSlave.trust lt -10>>
+  <<if ($lisping is 1)>>
+	"I'm terrified of you.
+  <<else>>
+	"I'm terrified of you.
+  <</if>>
+<<elseif $activeSlave.trust lt -4>>
+  <<if ($lisping is 1)>>
+	"You frighten me, thometimeth.
+  <<else>>
+	"You frighten me, sometimes.
+  <</if>>
+<<elseif $activeSlave.trust lte 4>>
+  <<if ($lisping is 1)>>
+	"I know you have total power over me.
+  <<else>>
+	"I know you have total power over me.
+  <</if>>
+<<elseif $activeSlave.trust lte 10>>
+  <<if ($lisping is 1)>>
+	"You know what'th betht for me.
+  <<else>>
+	"You know what's best for me.
+  <</if>>
+<<elseif $activeSlave.trust lte 18>>
+  <<if ($lisping is 1)>>
+	"I trutht you to know what'th betht for me.
+  <<else>>
+	"I trust you to know what's best for me.
+  <</if>>
+<<else>>
+  <<if ($lisping is 1)>>
+	"I trutht you completely.
+  <<else>>
+	"I trust you completely.
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.speechRules is "restrictive")>>
+  <<if ($activeSlave.devotion gt 20)>>
+	<<if ($lisping is 1)>>
+	  Thank you tho much for a chance to talk a little, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I underthtand why I mutht be thilent, but it'th nice to get the chance.
+	<<else>>
+	  Thank you so much for a chance to talk a little, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I understand why I must be silent, but it's nice to get the chance. 
+	<</if>>
+  <<else>>
+	<<if ($lisping is 1)>>
+	  Thank you tho much for a chance to talk a little, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th hard, never thpeaking.
+	<<else>>
+	  Thank you so much for a chance to talk a little, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's hard, never speaking.
+	<</if>>
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.fetishDiscovered is 1)>>
+  <<if ($activeSlave.fetish is "submissive")>>
+	<<if $lisping is 1>>
+	  I love it when you uthe me.
+	<<else>>
+	  I love it when you use me.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "dom")>>
+	<<if $lisping is 1>>
+	  I love fucking the other thlaveth.
+	<<else>>
+	  I love fucking the other slaves.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "sadist")>>
+	<<if $lisping is 1>>
+	  I love hurting the other thlaveth.
+	<<else>>
+	  I love hurting the other slaves.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "masochist")>>
+	I love it when you hurt me.
+  <<elseif ($activeSlave.fetish is "likes girls")>>
+	<<if $lisping is 1>>
+	  I love fucking the other girlth.
+	<<else>>
+	  I love fucking the other girls.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "cumslut")>>
+	<<if $lisping is 1>>
+	  I love thucking your cock.
+	<<else>>
+	  I love sucking your cock.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "humiliation")>>
+	<<if $lisping is 1>>
+	  I love it when you uthe me in public.
+	<<else>>
+	  I love it when you use me in public.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "buttslut")>>
+	<<if $lisping is 1>>
+	  I love it when you uthe my ath.
+	<<else>>
+	  I love it when you use my ass.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "pregnancy")>>
+	I love being your breeder.
+  <<elseif ($activeSlave.fetish is "boobs")>>
+	<<if $lisping is 1>>
+	  I love it when you pinch my nippleth.
+	<<else>>
+	  I love it when you pinch my nipples.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "nympho")>>
+	<<if $lisping is 1>>
+	  I love being your nympho thlut.
+	<<else>>
+	  I love being your nympho slut.
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  It'th boring of me, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, but I really do love normal thex.
+	<<else>>
+	  It's boring of me, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, but I really do love normal sex.
+	<</if>>
+  <</if>>
+<<else>>
+	<<if $lisping is 1>>
+		I wish I underthtood my own thexuality better.
+	<<else>>
+		I wish I understood my own sexuality better.
+	<</if>>
+<</if>>
+
+My favorite part of myself is
+<<if ($activeSlave.fetishDiscovered is 1)>>
+  <<if ($activeSlave.fetish is "submissive")>>
+	<<if $lisping is 1>>
+	  my $activeSlave.skin thkin, I like how it feelth when you look me all over before you grab me.
+	<<else>>
+	  my $activeSlave.skin skin, I like how it feels when you look me all over before you grab me.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "dom") and ($activeSlave.muscles gte 1)>>
+	<<if $lisping is 1>>
+	  my muthcleth, I like how it feelth to be strong, forthing another thlave.
+	<<else>>
+	  my muscles, I like how it feels to be strong, forcing another slave.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "sadist") and ($activeSlave.muscles gte 1)>>
+	<<if $lisping is 1>>
+	  my muthcleth, I like how it feelth to be strong, hitting another thlave.
+	<<else>>
+	  my muscles, I like how it feels to be strong, hitting another slave.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "masochist")>>
+	<<if $lisping is 1>>
+	  my $activeSlave.skin thkin, I like how it lookth when it bruitheth.
+	<<else>>
+	  my $activeSlave.skin skin, I like how it looks when it bruises.
+	<</if>>
+  <<elseif ($activeSlave.fetish is "likes girls")>>
+	<<if ($activeSlave.lips gt 2)>>
+	  my huge lipth, I like how the other girlth will do anything for oral from me.
+	<<elseif ($activeSlave.lips gte 1)>>
+	  <<if ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+		my lipth, I like how the other girlth will do anything for oral from me.
+	  <<else>>
+		my lips, I like how the other girls will do anything for oral from me.
+	  <</if>>
+	<</if>>
+  <<elseif ($activeSlave.fetish is "cumslut")>>
+	<<if ($activeSlave.lips gt 2)>>
+	  my huge lipth, I like how everyone expecth to fathefuck me.
+	<<elseif ($activeSlave.lips gte 1)>>
+	  <<if ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+		my lipth, I like how everyone expecth to fathefuck me.
+	  <<else>>
+		my lips, I like how everyone expects to facefuck me.
+	  <</if>>
+	<</if>>
+  <<elseif ($activeSlave.fetish is "humiliation")>>
+	my whole $activeSlave.race body, I like how it feels when everyone stares at me getting fucked.
+  <<elseif ($activeSlave.fetish is "buttslut")>>
+	<<if ($activeSlave.anus gt 2)>>
+	  <<if $lisping is 1>>
+		my athputhy, I like how it'th tho loothe anyone can jutht come right up and buttfuck me.
+	  <<else>>
+		my asspussy, I like how it's so loose anyone can just come right up and buttfuck me.
+	  <</if>>
+	<<elseif ($activeSlave.anus gt 1)>>
+	  <<if $lisping is 1>>
+		my athhole, I like how I can take anyone'th cock.
+	  <<else>>
+		my asshole, I like how I can take anyone's cock.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		my tight little anuth, I like feeling it thtretch to take a dick.
+	  <<else>>
+		my tight little anus, I like feeling it stretch to take a dick.
+	  <</if>>
+	<</if>>
+  <<elseif ($activeSlave.fetish is "pregnancy")>>
+	<<if ($activeSlave.preg gt 0)>>
+	  <<if $lisping is 1>>
+		my pregnant belly, of courthe.
+	  <<else>>
+		my pregnant belly, of course.
+	  <</if>>
+	<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0)>>
+	  <<if $lisping is 1>>
+		my cock, I imagine knocking another thlave up all the time.
+	  <<else>>
+		my cock, I imagine knocking another slave up all the time.
+	  <</if>>
+	<<elseif ($activeSlave.weight gt 0)>>
+	  <<if $lisping is 1>>
+		my pluth tummy, I can imagine mythelf pregnant.
+	  <<else>>
+		my plush tummy, I can imagine myself pregnant.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		my tight tummy, I can imagine myself pregnant.
+	  <<else>>
+		my tight tummy, I can imagine mythelf pregnant.
+	  <</if>>
+	<</if>>
+  <<elseif ($activeSlave.fetish is "boobs")>>
+	<<if ($activeSlave.lactation gt 0)>>
+	  <<if $lisping is 1>>
+		my milky nippleth of courthe.
+	  <<else>>
+		my milky nipples of course.
+	  <</if>>
+	<<elseif ($activeSlave.boobs gt 2000)>>
+	  <<if $lisping is 1>>
+		my huge boobth, I like how they're tho big they're the center of attention.
+	  <<else>>
+		my huge tits, I like how they're so big they're the center of attention.
+	  <</if>>
+	<<elseif ($activeSlave.nipples gt 0)>>
+	  <<if $lisping is 1>>
+		my big nippleth, it'th like having clitth on my chetht.
+	  <<else>>
+		my big nipples, it's like having clits on my chest.
+	  <</if>>
+	<<elseif ($activeSlave.boobs gt 700)>>
+	  <<if $lisping is 1>>
+		my big boobth, I like how they feel wrapped around a dick.
+	  <<else>>
+		my big boobs, I like how they feel wrapped around a dick.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		my boobs, of courthe.
+	  <<else>>
+		my boobs, of course.
+	  <</if>>
+	<</if>>
+  <<elseif ($activeSlave.fetish is "nympho")>>
+	<<if $lisping is 1>>
+	  - is - I can't dethide!
+	<<else>>
+	  - is - I can't decide!
+	<</if>>
+	<<if $activeSlave.vagina gt -1>>
+	  <<if $lisping is 1>>
+		I love my puthy of courthe.
+	  <<else>>
+		I love my pussy of course.
+	  <</if>>
+	<</if>>
+	<<if $activeSlave.clit gt 0>>
+	  <<if $lisping is 1>>
+		Having another thlave thuck my big clit ith incredible.
+	  <<else>>
+		Having another slave suck my big clit is incredible.
+	  <</if>>
+	<</if>>
+	<<if $activeSlave.vagina gt -1>>
+	  But
+	<<else>>
+	  Of course
+	<</if>>
+	<<if $activeSlave.anus gt 1>>
+	  <<if $lisping is 1>>
+		taking big dickth up my ath ith lotth of fun.
+	  <<else>>
+		taking big dicks up my ass is lots of fun.
+	  <</if>>
+	<<elseif $activeSlave.anus gt 0>>
+	  <<if $lisping is 1>>
+		taking cock in my tight ath ith lotth of fun.
+	  <<else>>
+		taking cock in my tight ass is lots of fun.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		I can't wait to get buttraped for the firtht time.
+	  <<else>>
+		I can't wait to get buttraped for the first time.
+	  <</if>>
+	<</if>>
+	<<if $activeSlave.dick gt 3>>
+	  <<if $lisping is 1>>
+		My big cock thwingth around when I get thodomized from behind, it'th great.
+	  <<else>>
+		My big cock swings around when I get sodomized from behind, it's great.
+	  <</if>>
+	<<elseif $activeSlave.dick gt 1>>
+	  <<if $lisping is 1>>
+		My dick flopth around when I get thodomized from behind, it'th great.
+	  <<else>>
+		My dick flops around when I get sodomized from behind, it's great.
+	  <</if>>
+	<<elseif $activeSlave.dick gt 0>>
+	  <<if $lisping is 1>>
+		My tiny little bitch dick ith only good for encouraging people to moletht my butthole, but I don't mind at all.
+	  <<else>>
+		My tiny little bitch dick is only good for encouraging people to molest my butthole, but I don't mind at all.
+	  <</if>>
+	<</if>>
+	<<if ($activeSlave.nipples gt 0)>>
+	  <<if $lisping is 1>>
+		I love my big nippleth, it'th like having clitth on my chetht.
+	  <<else>>
+		I love my big nipples, it's like having clits on my chest.
+	  <</if>>
+	<</if>>
+	<<if ($activeSlave.lactation gt 0)>>
+	  <<if $lisping is 1>>
+		Being able to nurthe ith really thexy, I alwayth want to fuck right after. Or during.
+	  <<else>>
+		Being able to nurse is really sexy, I always want to fuck right after. Or during.
+	  <</if>>
+	<</if>>
+	<<if ($activeSlave.boobs gt 2000)>>
+	  <<if $lisping is 1>>
+		My huge boobth are great, they're like an advertithement I want to fuck.
+	  <<else>>
+		My huge boobs are great, they're like an advertisement I want to fuck.
+	  <</if>>
+	<<elseif ($activeSlave.boobs gt 700)>>
+	  <<if $lisping is 1>>
+		I like showing off my big boobth.
+	  <<else>>
+		I like showing off my big boobs.
+	  <</if>>
+	<</if>>
+	<<if ($activeSlave.lips gt 1)>>
+	  <<if $lisping is 1>>
+		Can't forget my dick thucking lipth, I don't know what I'd do without them.
+	  <<else>>
+		Can't forget my dick sucking lips, I don't know what I'd do without them.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		Can't forget my lipth and tongue, getting people off ith fun too.
+	  <<else>>
+		Can't forget my lips and tongue, getting people off is fun too.
+	  <</if>>
+	<</if>>
+  <<else>>
+	<<if ($activeSlave.face gt 0)>>
+	 my face, it's nice to be pretty.
+	<<else>>
+	 my face, I guess.
+	<</if>>
+  <</if>>
+<<else>>
+  <<if ($activeSlave.face gt 0)>>
+   my face, it's nice to be pretty.
+  <<else>>
+   my face, I guess.
+  <</if>>
+<</if>>
+
+<<display "release check">>
+<<if ($release is 0)>>
+
+<<if ($activeSlave.releaseRules is "permissive")>>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "humiliation")>>
+	  <<if $lisping is 1>>
+		Thank you for letting me touch mythelf, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I love doing it where people can thee me.
+	  <<else>>
+		Thank you for letting me touch myself, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I love doing it where people can see me.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "sadist")>>
+	  <<if $lisping is 1>>
+		Thank you for letting me touch mythelf, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I try to be nearby when a bitch getth punithhed to I can mathturbate to it.
+	  <<else>>
+		Thank you for letting me touch myself, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I try to be nearby when a bitch gets punished to I can masturbate to it.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "likes girls")>>
+	  <<if $lisping is 1>>
+		Thank you for letting me touch mythelf, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. With all thethe hot girlth around, it'th a good thing I can't actually go blind from it.
+	  <<else>>
+		Thank you for letting me touch myself, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. With all these hot girls around, it's a good thing I can't actually go blind from it.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "buttslut")>>
+	  <<if $lisping is 1>>
+		Thank you for letting me fuck my own athhole, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	  <<else>>
+		Thank you for letting me fuck my own asshole, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "boobs")>>
+	  <<if $lisping is 1>>
+		Thank you for letting pamper my own nippleth, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	  <<else>>
+		Thank you for letting pamper my own nipples, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		Thank you for letting me touch mythelf, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th a good thing I can't actually go blind from it.
+	  <<else>>
+		Thank you for letting me touch myself, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's a good thing I can't actually go blind from it.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		Thank you for letting me touch mythelf, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	  <<else>>
+		Thank you for letting me touch myself, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	  <</if>>
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  Thank you for letting me touch mythelf, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	<<else>>
+	  Thank you for letting me touch myself, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	<</if>>
+  <</if>>
+<<else>>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "submissive")>>
+	  <<if $lisping is 1>>
+		I'm tho horny, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can't thtop thinking about you holding me down and fucking me.
+	  <<else>>
+		I'm so horny, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can't stop thinking about you holding me down and fucking me.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "masochist")>>
+	  <<if $lisping is 1>>
+		I'm tho horny, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can't thtop thinking about you thpanking my worthleth bottom.
+	  <<else>>
+		I'm so horny, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can't stop thinking about you spanking my worthless bottom.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "humiliation")>>
+	  <<if $lisping is 1>>
+		I'm tho horny, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can't thtop thinking about everyone thtaring at my worthleth body.
+	  <<else>>
+		I'm so horny, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can't stop thinking about everyone staring at my worthless body.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "dom")>>
+	  <<if $lisping is 1>>
+		I'm tho horny, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can't thtop thinking about the other thlaveth, how it would feel to fuck them.
+	  <<else>>
+		I'm so horny, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can't stop thinking about the other slaves, how it would feel to fuck them.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "sadist")>>
+	  <<if $lisping is 1>>
+		I'm tho horny, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can't thtop thinking about the other thlaveth, how it would feel to hurt them.
+	  <<else>>
+		I'm so horny, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can't stop thinking about the other slaves, how it would feel to hurt them.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "likes girls")>>
+	  <<if $lisping is 1>>
+		I'm tho horny, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can't thtop thinking about the other thlaveth' beautiful puthieth and boobth and, and I want to fuck them tho bad.
+	  <<else>>
+		I'm so horny, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can't stop thinking about the other slaves' beautiful pussies and boobs and, and I want to fuck them so bad.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "cumslut")>>
+	  <<if $lisping is 1>>
+		I'm tho horny, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can't thtop thtaring at cockth and imagining them down my throat, cumming and cumming.
+	  <<else>>
+		I'm so horny, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can't stop staring at cocks and imagining them down my throat, cumming and cumming.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "buttslut")>>
+	  <<if $lisping is 1>>
+		I'm tho horny, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. My aththhole ith killing me, all I want to to ith touch it and maththage it and thtretch it out.
+	  <<else>>
+		I'm so horny, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. My anus is killing me, all I want to to is touch it and massage it and stretch it out.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "boobs")>>
+	  <<if $lisping is 1>>
+		I'm tho horny, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I want to rub my nippleth againtht everything.
+	  <<else>>
+		I'm so horny, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I want to rub my nipples against everything.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "pregnancy")>>
+	  <<if $lisping is 1>>
+		I withh I could touch mythelf, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can't get thethe thoughth of pregnancy out of my head.
+	  <<else>>
+		I wish I could touch myself, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can't get these thoughts of pregnancy out of my head.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		I feel like I'm going crathy, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I'm tho horny.
+	  <<else>>
+		I feel like I'm going crazy, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I'm so horny.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		I haven't been touching mythelf, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, jutht like you thaid, but I'm really horny.
+	  <<else>>
+		I haven't been touching myself, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, just like you said, but I'm really horny.
+	  <</if>>
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I haven't been touching mythelf, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, jutht like you thaid, but I'm really horny.
+	<<else>>
+	  I haven't been touching myself, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, just like you said, but I'm really horny.
+	<</if>>
+  <</if>>
+<</if>>
+<</if>>
+
+<</if>> /* Closes release check */
+
+<<if ($activeSlave.dick gt 0)>>
+<<if ($activeSlave.balls is 0)>>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "submissive")>>
+	  <<if $lisping is 1>>
+		I don't mind being clipped; I like taking it.
+	  <<else>>
+		I don't mind being clipped; I like taking it.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "masochist")>>
+	  <<if $lisping is 1>>
+		Being gelded," she shivers, "hurtth thometimeth. I like it.
+	  <<else>>
+		Being gelded," she shivers, "hurts sometimes. I like it.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "humiliation")>>
+	  <<if $lisping is 1>>
+		I don't mind being clipped." She shivers. "Everyone knowth! It'th tho embarrathing.
+	  <<else>>
+		I don't mind being clipped." She shivers. "Everyone knows! It's so embarrassing.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "dom")>>
+	  <<if $lisping is 1>>
+		I thometimeth mith my ballth. It'th a little harder to be dominant without them.
+	  <<else>>
+		I sometimes miss my balls. It's a little harder to be dominant without them.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "sadist")>>
+	  <<if $lisping is 1>>
+		I thometimeth mith my ballth. I thtill fantathize about raping the other girlth.
+	  <<else>>
+		I sometimes miss my balls. I still fantasize about raping the other girls.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "pregnancy")>>
+	  <<if $lisping is 1>>
+		I thometimeth mith my ballth. I thtill fantathize about getting the other girlth pregnant.
+	  <<else>>
+		I sometimes miss my balls. I still fantasize about getting the other girls pregnant.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "likes girls")>>
+	  <<if $lisping is 1>>
+		I thometimeth mith my ballth. I thtill fantathize about boning the other girlth.
+	  <<else>>
+		I sometimes miss my balls. I still fantasize about boning the other girls.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "cumslut")>>
+	  <<if $lisping is 1>>
+		I barely cum without my ballth. I mith, you know, cleaning up after mythelf. With my mouth.
+	  <<else>>
+		I barely cum without my balls. I miss, you know, cleaning up after myself. With my mouth.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "buttslut")>>
+	  <<if $lisping is 1>>
+		I really like being clipped. I think it'th leth dithtracting, you know, from my butthole.
+	  <<else>>
+		I really like being clipped. I think it's less distracting, you know, from my butthole.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "boobs")>>
+	  <<if $lisping is 1>>
+		I don't mind being clipped. Between that and my boobth I feel like a nice little thlave girl.
+	  <<else>>
+		I don't mind being clipped. Between that and my boobs I feel like a nice little slave girl.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		I like being gelded." She giggles. "More cockth for me!
+	  <<else>>
+		I like being gelded." She giggles. "More cocks for me!
+	  <</if>>
+	<<else>>
+	  <<if $activeSlave.devotion gt 25>>
+		<<if $lisping is 1>>
+		  I love being your gelded thlave girl, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+		<<else>>
+		  I love being your gelded slave girl, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+		<</if>>
+	  <<else>>
+		<<if $lisping is 1>>
+		  To be honetht, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I do mith having ballth, thometimeth.
+		<<else>>
+		  To be honest, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I do miss having balls, sometimes.
+		<</if>>
+	  <</if>>
+	<</if>>
+  <<else>>
+	<<if $activeSlave.devotion gt 25>>
+	  <<if $lisping is 1>>
+		I love being your gelded thlave girl, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	  <<else>>
+		I love being your gelded slave girl, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		To be honetht, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I do mith having ballth, thometimeth.
+	  <<else>>
+		To be honest, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I do miss having balls, sometimes.
+	  <</if>>
+	<</if>>
+  <</if>>
+<<elseif ($activeSlave.hormones gt 0)>>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "submissive")>>
+	  <<if $lisping is 1>>
+		I don't mind the hormoneth keeping me thoft. I like getting fucked, anyway.
+	  <<else>>
+		I don't mind the hormones keeping me soft. I like getting fucked, anyway.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "masochist")>>
+	  <<if $lisping is 1>>
+		I don't mind the hormoneth keeping me thoft. I think it encourageth people to hurt me.
+	  <<else>>
+		I don't mind the hormones keeping me soft. I think it encourages people to hurt me.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "humiliation")>>
+	  <<if $lisping is 1>>
+		I don't mind being impotent." She shivers. "Everyone knowth! It'th tho embarrathing.
+	  <<else>>
+		I don't mind being impotent." She shivers. "Everyone knows! It's so embarrassing.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "dom")>>
+	  <<if $lisping is 1>>
+		I with the hormoneth didn't thtop me from getting hard. It'th tough to be dominant when I'm all thoft.
+	  <<else>>
+		I wish the hormones didn't stop me from getting hard. It's tough to be dominant when I'm all soft.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "sadist")>>
+	  <<if $lisping is 1>>
+		I with the hormoneth didn't thtop me from getting hard. I thtill fantathize about raping the other girlth.
+	  <<else>>
+		I wish the hormones didn't stop me from getting hard. I still fantasize about raping the other girls.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "likes girls")>>
+	  <<if $lisping is 1>>
+		I with the hormoneth didn't thtop me from getting hard. I thtill fantathize about boning the other girlth.
+	  <<else>>
+		I wish the hormones didn't stop me from getting hard. I still fantasize about boning the other girls.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "cumslut")>>
+	  <<if $lisping is 1>>
+		I cum a lot leth on thethe hormoneth. I mith, you know, cleaning up after mythelf. With my mouth.
+	  <<else>>
+		I cum a lot less on these hormones. I miss, you know, cleaning up after myself. With my mouth.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "buttslut")>>
+	  <<if $lisping is 1>>
+		I don't mind the hormoneth keeping me thoft. I prefer taking it, anyway." She turns and sticks her ass out. "Up the butt.
+	  <<else>>
+		I don't mind the hormones keeping me soft. I prefer taking it, anyway." She turns and sticks her ass out. "Up the butt.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "boobs")>>
+	  <<if $lisping is 1>>
+		I don't mind the hormoneth keeping me thoft. Between that and my boobth I feel like a cute thlave girl.
+	  <<else>>
+		I don't mind the hormones keeping me soft. Between that and my boobs I feel like a cute slave girl.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "pregnancy")>>
+	  <<if $lisping is 1>>
+		I with the hormoneth didn't thtop me from getting hard. I thtill fantathize about getting the other girlth pregnant.
+	  <<else>>
+		I wish the hormones didn't stop me from getting hard. I still fantasize about getting the other girls pregnant.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		I thometimeth with I could thtill get hard." She looks pensive. "Actually I don't care, getting fucked ith nice too.
+	  <<else>>
+		I sometimes wish I could still get hard." She looks pensive. "Actually I don't care, getting fucked is nice too.
+	  <</if>>
+	<<else>>
+	  <<if $activeSlave.devotion gt 25>>
+		<<if $lisping is 1>>
+		  I love you, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, tho I don't mind how thethe hormoneth keep me thoft, if that'th how you want me.
+		<<else>>
+		  I love you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, so I don't mind how these hormones keep me soft, if that's how you want me.
+		<</if>>
+	  <<else>>
+		<<if $lisping is 1>>
+		  I thometimeth with thethe hormoneth let me get hard.
+		<<else>>
+		  I sometimes wish these hormones let me get hard.
+		<</if>>
+	  <</if>>
+	<</if>>
+  <<else>>
+	<<if $activeSlave.devotion gt 25>>
+	  <<if $lisping is 1>>
+		I love you, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, tho I don't mind how thethe hormoneth keep me thoft, if that'th how you want me.
+	  <<else>>
+		I love you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, so I don't mind how these hormones keep me soft, if that's how you want me.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		I thometimeth with thethe hormoneth let me get hard.
+	  <<else>>
+		I sometimes wish these hormones let me get hard.
+	  <</if>>
+	<</if>>
+  <</if>>
+<</if>> /* closes balls check */
+<<elseif $activeSlave.preg is -1>>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "pregnancy")>>
+	  <<if $lisping is 1>>
+		I fantathize about my belly getting heavy with pregnancy, but I know it won't happen while I'm on contraceptiveth.
+	  <<else>>
+		I fantasize about my belly getting heavy with pregnancy, but I know it won't happen while I'm on contraceptives.
+	  <</if>>
+	<</if>>
+  <</if>>
+<</if>> /* closes dick check */
+
+<<if $activeSlave.hormones is 2>>
+  <<if ($activeSlave.age gt 35)>>
+	<<if ($activeSlave.devotion gt 10)>>
+	  <<if $lisping is 1>>
+		On all thethe hormoneth I'm almotht going through puberty all over again. Kind of a thurprithe at my age." She grins suggestively. "I'll do my betht to fuck like a teenager, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	  <<else>>
+		On all these hormones I'm almost going through puberty all over again. Kind of a surprise at my age." She grins suggestively. "I'll do my best to fuck like a teenager, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	  <</if>>
+	<</if>>
+  <</if>>
+<</if>>
+
+<<if $activeSlave.drugs is "curatives">>
+  <<if ($activeSlave.health lt 0)>>
+	<<if $lisping is 1>>
+	  I don't feel good, but I can almotht feel the curativeth fixing me. Thank you, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	<<else>>
+	  I don't feel good, but I can almost feel the curatives fixing me. Thank you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	<</if>>
+  <<elseif ($activeSlave.age gt 35)>>
+	<<if $lisping is 1>>
+	  I can almotht feel the curativeth working. They make me feel tho young! Thank you, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	<<else>>
+	  I can almost feel the curatives working. They make me feel so young! Thank you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I can almotht feel the curativeth working. They're pretty incredible. Thank you, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	<<else>>
+	  I can almost feel the curatives working. They're pretty incredible. Thank you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	<</if>>
+  <</if>>
+<<elseif $activeSlave.drugs is "penis enhancement">>
+  <<if ($activeSlave.balls is 0)>>
+	<<if $lisping is 1>>
+	  I can feel my dick growing, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, but it'th thtill tho thoft. I gueth it'll jutht flop around more when you buttfuck me.
+	<<else>>
+	  I can feel my dick growing, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, but it's still so soft. I guess it'll just flop around more when you buttfuck me.
+	<</if>>
+  <<elseif ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "sadist")>>
+	  <<if $lisping is 1>>
+		I can feel my dick growing, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can jutht imagine puthhing it into thome poor thtruggling girl'th athhole.
+	  <<else>>
+		I can feel my dick growing, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can just imagine pushing it into some poor struggling girl's asshole.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "dom")>>
+	  <<if $lisping is 1>>
+		I can feel my dick growing, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can jutht imagine thmacking it againtht thome little thlut'th face.
+	  <<else>>
+		I can feel my dick growing, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can just imagine smacking it against some little slut's face.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "likes girls")>>
+	  <<if $lisping is 1>>
+		I can feel my dick growing, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can jutht imagine puthing it into a warm, wet puthy.
+	  <<else>>
+		I can feel my dick growing, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can just imagine pushing it into a warm, wet pussy.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		I can almotht feel my dick growing, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th kind of uncomfortable.
+	  <<else>>
+		I can almost feel my dick growing, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's kind of uncomfortable.
+	  <</if>>
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I can almotht feel my dick growing, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th kind of uncomfortable.
+	<<else>>
+	  I can almost feel my dick growing, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's kind of uncomfortable.
+	<</if>>
+  <</if>>
+<<elseif $activeSlave.drugs is "breast injections">>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "boobs") or ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		I can almotht feel my boobth thwelling, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. Thank you for injecting them with hormoneth, and pleathe, never thtop.
+	  <<else>>
+		I can almost feel my boobs swelling, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. Thank you for injecting them with hormones, and please, never stop.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		I can almotht feel my boobth thwelling, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th kind of uncomfortable.
+	  <<else>>
+		I can almost feel my boobs swelling, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's kind of uncomfortable.
+	  <</if>>
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I can almotht feel my boobth thwelling, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th kind of uncomfortable.
+	<<else>>
+	  I can almost feel my boobs swelling, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's kind of uncomfortable.
+	<</if>>
+  <</if>>
+<<elseif $activeSlave.drugs is "butt injections">>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "buttslut") or ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		I can almotht feel my butt growing, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can't wait to feel a dick thliding up in between my buttockth.
+	  <<else>>
+		I can almost feel my butt growing, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can't wait to feel a dick sliding up in between my buttocks.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		I can almotht feel my butt growing, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th kind of uncomfortable.
+	  <<else>>
+		I can almost feel my butt growing, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's kind of uncomfortable.
+	  <</if>>
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I can almotht feel my butt growing, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th kind of uncomfortable.
+	<<else>>
+	  I can almost feel my butt growing, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's kind of uncomfortable.
+	<</if>>
+  <</if>>
+<<elseif $activeSlave.drugs is "lip injections">>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "buttslut") or ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		I can almotht feel my lipth thwelling, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I can't wait to wrap them around a cock.
+	  <<else>>
+		I can almost feel my lips swelling, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I can't wait to wrap them around a cock.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		I can almotht feel my lipth thwelling, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th kind of uncomfortable.
+	  <<else>>
+		I can almost feel my lips swelling, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's kind of uncomfortable.
+	  <</if>>
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I can almotht feel my lipth thwelling, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th kind of uncomfortable.
+	<<else>>
+	  I can almost feel my lips swelling, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's kind of uncomfortable.
+	<</if>>
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.assignment is "whore") or ($activeSlave.assignment is "work in the brothel")>>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "submissive")>>
+	  <<if $lisping is 1>>
+		It'th nice being a whore, I get treated like I detherve.
+	  <<else>>
+		It's nice being a whore, I get treated like I deserve.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "dom")>>
+	  <<if $lisping is 1>>
+		Being a whore ith okay, thometimeth thomebody wanth to be dommed.
+	  <<else>>
+		Being a whore is okay, sometimes somebody wants to be dommed.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "sadist")>>
+	  <<if $lisping is 1>>
+		Being a whore ith okay, thometimeth thomebody wanth me to hurt one of their thlaveth for them.
+	  <<else>>
+		Being a whore is okay, sometimes somebody wants me to hurt one of their slaves for them.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "masochist")>>
+	  <<if $lisping is 1>>
+		It'th nice being a whore, I get hurt like I detherve.
+	  <<else>>
+		It's nice being a whore, I get hurt like I deserve.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "likes girls")>>
+	  <<if $lisping is 1>>
+		It'th nice being a whore, I get women customerth thometimeth.
+	  <<else>>
+		It's nice being a whore, I get women customers sometimes.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "cumslut")>>
+	  <<if $lisping is 1>>
+		It'th great being a whore. If I wath thtill free, I would fantathize about thucking thith many men off.
+	  <<else>>
+		It's great being a whore. If I was still free, I would fantasize about sucking this many men off.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "humiliation")>>
+	  <<if $lisping is 1>>
+		It'th great being a whore, the shame keeps me really horny.
+	  <<else>>
+		It's great being a whore, the shame keeps me really horny.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "buttslut")>>
+	  <<if $lisping is 1>>
+		It'th great being a whore. If I wath thtill free, I would fantathize about taking thith much anal.
+	  <<else>>
+		It's great being a whore. If I was still free, I would fantasize about taking this much anal.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "boobs")>>
+	  <<if $lisping is 1>>
+		It'th nice being a whore, thometimeth cuthtomerth jutht play with my boobth for hourth.
+	  <<else>>
+		It's nice being a whore, sometimes customers just play with my boobs for hours.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		It'th great being a whore. I can't imagine being thatithfied doing anything elthe.
+	  <<else>>
+		It's great being a whore. I can't imagine being satisfied doing anything else.
+	  <</if>>
+	<</if>>
+  <</if>>
+<<elseif ($activeSlave.assignment is "public service") or ($activeSlave.assignment is "work on the promenade")>>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "submissive")>>
+	  <<if $lisping is 1>>
+		It's nice being a public thlut, I get treated like I deserve.
+	  <<else>>
+		It'th nice being a public slut, I get treated like I detherve.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "dom")>>
+	  <<if $lisping is 1>>
+		Being a public thlut ith okay, thometimeth thomebody wanth to be dommed.
+	  <<else>>
+		Being a public slut is okay, sometimes somebody wants to be dommed.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "sadist")>>
+	  <<if $lisping is 1>>
+		Being a public thlut ith okay, thometimeth thomebody wanth me to hurt one of their thlaveth for them.
+	  <<else>>
+		Being a public slut is okay, sometimes somebody wants me to hurt one of their slaves for them.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "masochist")>>
+	  <<if $lisping is 1>>
+		It'th nice being a public thlut, I get hurt like I detherve.
+	  <<else>>
+		It's nice being a public slut, I get hurt like I deserve.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "likes girls")>>
+	  <<if $lisping is 1>>
+		It'th nice being a public thlut, I can hit on women thometimeth.
+	  <<else>>
+		It's nice being a public slut, I can hit on women sometimes.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "cumslut")>>
+	  <<if $lisping is 1>>
+		It'th great being a public thlut. If I wath thtill free, I would fantathize about thucking thith many men off.
+	  <<else>>
+		It's great being a public slut. If I was still free, I would fantasize about sucking this many men off.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "humiliation")>>
+	  <<if $lisping is 1>>
+		It'th great being a public thlut, the shame keeps me really horny.
+	  <<else>>
+		It's great being a public slut, the shame keeps me really horny.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "buttslut")>>
+	  <<if $lisping is 1>>
+		It'th great being a public thlut. If I wath thtill free, I would fantathize about taking thith much anal.
+	  <<else>>
+		It's great being a public slut. If I was still free, I would fantasize about taking this much anal.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "boobs")>>
+	  <<if $lisping is 1>>
+		It'th nice being a public thlut, thometimeth people jutht play with my boobth for hourth.
+	  <<else>>
+		It's nice being a public slut, sometimes people just play with my boobs for hours.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		It'th great being a public thlut. I can't imagine being thatithfied doing anything elthe.
+	  <<else>>
+		It's great being a public slut. I can't imagine being satisfied doing anything else.
+	  <</if>>
+	<</if>>
+  <</if>>
+<<elseif ($activeSlave.assignment is "get milked") or ($activeSlave.assignment is "work in the dairy")>>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "submissive")>>
+	  <<if $lisping is 1>>
+		It's nice being a cow, I get treated like I deserve.
+	  <<else>>
+		It'th nice being a cow, I get treated like I detherve.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "likes girls")>>
+	  <<if $lisping is 1>>
+		It'th okay being a cow, with all the girlth around.
+	  <<else>>
+		It's okay being a cow, with all the girls around.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "boobs")>>
+	  <<if $lisping is 1>>
+		It'th tho, tho wonderful being a cow.
+	  <<else>>
+		It's so, so wonderful being a cow.
+	  <</if>>
+	<<elseif ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		It'th pretty nice, being a cow.
+	  <<else>>
+		It's pretty nice, being a cow.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		Being a cow ith hard work.
+	  <<else>>
+		Being a cow is hard work.
+	  <</if>>
+	<</if>>
+  <</if>>
+<<elseif ($activeSlave.assignment is "get cockmilked") or ($activeSlave.assignment is "work in the collection facility")>>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "buttslut") or ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		Getting buttfucked to orgathm whenever I can get hard ith a dream come true. Actually, getting buttfucked until I cum even when I'm thoft is pretty nice too.
+	  <<else>>
+		Getting buttfucked to orgasm whenever I can get hard is a dream come true. Actually, getting buttfucked until I cum even when I'm soft is pretty nice too.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		It'th thurprithingly hard work, coming all day.
+	  <<else>>
+		It's surprisingly hard work, coming all day.
+	  <</if>>
+	<</if>>
+  <</if>>
+<<elseif ($activeSlave.assignment is "please you") or ($activeSlave.assignment is "serve in the master suite")>>
+  <<if ($activeSlave.fetishDiscovered is 1)>>
+	<<if ($activeSlave.fetish is "nympho")>>
+	  <<if $lisping is 1>>
+		I love how taking your cock ith my only job, and I love having your other toyth to fuck too.
+	  <<else>>
+		I love how taking your cock is my only job, and I love having your other toys to fuck too.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		It'th nice being your girl.
+	  <<else>>
+		It's nice being your girl.
+	  <</if>>
+	<</if>>
+  <</if>>
+<<elseif ($activeSlave.assignment is "rest") or ($activeSlave.assignment is "rest in the spa")>>
+  <<if $lisping is 1>>
+	Thank you for letting me retht.
+  <<else>>
+	Thank you for letting me rest.
+  <</if>>
+<<else>>
+  <<if $lisping is 1>>
+	Being a fuckthlave is hard work.
+  <<else>>
+	Being a sex slave is hard work.
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.oralSkill + $activeSlave.vaginalSkill + $activeSlave.analSkill) gte 8>>
+  <<if $lisping is 1>>
+	I'm really proud of my thex thkillth, it'th nice to be good at what you do.
+  <<else>>
+	I'm really proud of my sex skills, it's nice to be good at what you do.
+  <</if>>
+<<elseif (($activeSlave.oralSkill + $activeSlave.analSkill) gte 5) and ($activeSlave.vagina is -1)>>
+  <<if $lisping is 1>>
+	I'm really proud of my thex thkillth, it'th nice to be good at what you do. Without a cunt my poor butt doeth double duty, but that'th okay.
+  <<else>>
+	I'm really proud of my sex skills, it's nice to be good at what you do. Without a cunt my poor butt does double duty, but that's okay.
+  <</if>>
+<<elseif ($activeSlave.whoreSkill gt 2)>>
+  <<if $lisping is 1>>
+	I'm really proud of my whoring thkillth, prothtitution ith jutht a job like any other to me.
+  <<else>>
+	I'm really proud of my skills, prostitution is just a job like any other to me.
+  <</if>>
+<<elseif ($activeSlave.entertainSkill gt 2)>>
+  <<if $lisping is 1>>
+	I'm really proud of my thkillth, I feel like I can make anyone want me.
+  <<else>>
+	I'm really proud of my skills, I feel like I can make anyone want me.
+  <</if>>
+<<elseif ($activeSlave.analSkill gt 2)>>
+  <<if ($activeSlave.vagina is -1)>>
+	<<if $lisping is 1>>
+	  I'm really proud of my anal thkillth, I can take a dick ath well ath anyone.
+	<<else>>
+	  I'm really proud of my anal skills, I can take a dick as well as anyone.
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I'm really proud of my anal thkillth, it'th fun having three fuckholeth.
+	<<else>>
+	  I'm really proud of my anal skills, it's fun having three fuckholes.
+	<</if>>
+  <</if>>
+<<elseif ($activeSlave.analSkill lt 2) and ($activeSlave.anus gt 0)>>
+  <<if $lisping is 1>>
+	I with I were better at anal, if I learned to relax getting buttfucked wouldn't hurt tho much.
+  <<else>>
+	I wish I were better at anal, if I learned to relax getting buttfucked wouldn't hurt so much.
+  <</if>>
+<<elseif ($activeSlave.vaginalSkill lt 2) and ($activeSlave.vagina gt 0)>>
+  <<if $lisping is 1>>
+	I with I were better at thex, thometimeth all I can think to do ith jutht lie there.
+  <<else>>
+	I wish I were better at sex, sometimes all I can think to do is just lie there.
+  <</if>>
+<<elseif ($activeSlave.oralSkill lt 2)>>
+  <<if $lisping is 1>>
+	I with I were better at blowjobth, it would be nice not to gag tho much.
+  <<else>>
+	I wish I were better at blowjobs, it would be nice not to gag so much.
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.relationship isnot 0)>>
+<<for $j to 0; $j lt $slaves.length; $j++>>
+  <<if $slaves[$j].ID is $activeSlave.relationshipTarget>>
+	<<if $activeSlave.relationship lte 2>>
+	  <<if $lisping is 1>>
+		I really like theeing $slaves[$j].slaveName every day, she's a good friend." She blushes. "She'th kind of hot, too.
+	  <<else>>
+		I really like seeing $slaves[$j].slaveName every day, she's a good friend." She blushes. "She's kind of hot, too.
+	  <</if>>
+	<<elseif $activeSlave.relationship lte 3>>
+	  <<if $lisping is 1>>
+		I really like theeing $slaves[$j].slaveName every day, she's a good friend -" She blushes. "- even when we're not fucking.
+	  <<else>>
+		I really like seeing $slaves[$j].slaveName every day, she's a good friend -" She blushes. "- even when we're not having sex.
+	  <</if>>
+	<<elseif $activeSlave.relationship lte 4>>
+	  <<if $lisping is 1>>
+		I really love $slaves[$j].slaveName." She blushes. "Thank you for letting uth be together, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	  <<else>>
+		I really love $slaves[$j].slaveName." She blushes. "Thank you for letting us be together, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	  <</if>>
+	<<else>>
+	  <<if $lisping is 1>>
+		I'm tho happy with $slaves[$j].slaveName." She blushes. "Thank you for her, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	  <<else>>
+		I'm so happy with $slaves[$j].slaveName." She blushes. "Thank you for her, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	  <</if>>
+	<</if>>
+  <</if>>
+<</for>>
+<</if>>
+
+<<if ($FSSupremacistDecoration gt 10) or ($FSSubjugationistDecoration gt 10) or ($FSGenderRadicalistDecoration gt 10) or ($FSGenderFundamentalistDecoration gt 10) or ($FSPaternalistDecoration gt 10) or ($FSDegradationistDecoration gt 10) or ($FSBodyPuristDecoration gt 10) or ($FSTransformationFetishistDecoration gt 10) or ($FSSlimnessEnthusiastDecoration gt 10) or ($FSAssetExpansionistDecoration gt 10) or ($FSPastoralistDecoration gt 10) or ($FSPhysicalIdealistDecoration gt 10) or ($FSChattelReligionistDecoration gt 10) or ($FSRomanRevivalistDecoration gt 10) or ($FSAncientEgyptianRevivalistDecoration gt 10)>>
+
+<<if ($activeSlave.devotion gt 20)>>
+  <<if $lisping is 1>>
+	I'll do everything I can to thupport your vithion for the future.
+  <<else>>
+	I'll do everything I can to support your vision for the future.
+  <</if>>
+<<elseif ($activeSlave.devotion gt 10)>>
+  <<if $lisping is 1>>
+	I do my betht to thupport your vithion for the future.
+  <<else>>
+	I do my best to support your vision for the future.
+  <</if>>
+<<else>>
+  <<if $lisping is 1>>
+	I try to conform to your vithion for the future.
+  <<else>>
+	I try to conform to your vision for the future.
+  <</if>>
+<</if>>
+
+<<if $FSRomanRevivalist gte 10>>
+  <<if ($activeSlave.intelligence gt 1)>>
+	<<if $lisping is 1>>
+	  The new Rome ith fathinating, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I'm glad to be a part of it.
+	<<else>>
+	  The new Rome is fascinating, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I'm glad to be a part of it.
+	<</if>>
+  <<elseif ($activeSlave.devotion gt 20)>>
+	<<if $lisping is 1>>
+	  I'm proud to be a thlave in the new Rome.
+	<<else>>
+	  I'm proud to be a slave in the new Rome.
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  Being a thlave in the new Rome ith a little thcary, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I hear the thlaveth fighting thometimeth.
+	<<else>>
+	  Being a slave in the new Rome is a little scary, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I hear the slaves fighting sometimes.
+	<</if>>
+  <</if>>
+<</if>>
+<<if $FSAncientEgyptianRevivalist gte 10>>
+  <<if ($activeSlave.intelligence gt 1)>>
+	<<if $lisping is 1>>
+	  Thith new Egypt ith fathcinating, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. I'm glad to be a part of it.
+	<<else>>
+	  This new Egypt is fascinating, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I'm glad to be a part of it.
+	<</if>>
+  <<elseif ($activeSlave.devotion gt 20)>>
+	<<if $lisping is 1>>
+	  I'm proud to be a thlave of the new Pharaoh.
+	<<else>>
+	  I'm proud to be a slave of the new Pharaoh.
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  Being a thlave in thith new ancient Egypt ith a little reathuring. Thome of the other thlaveth thay they uthed to uthe thlaveth for great thingth, anyway.
+	<<else>>
+	  Being a slave in this new ancient Egypt is a little reassuring. Some of the other slaves say they used to use slaves for great things, anyway.
+	<</if>>
+  <</if>>
+<</if>>
+<<if $FSChattelReligionist gte 10>>
+  <<if ($activeSlave.intelligence gt 1)>>
+	<<if $lisping is 1>>
+	  It'th interethting, theeing how fatht a new faith can take hold.
+	<<else>>
+	  It's interesting, seeing how fast a new faith can take hold.
+	<</if>>
+  <<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "masochist")>>
+	<<if $lisping is 1>>
+	  I - I alwayth thought pain wath good for me. It'th tho nice to be told that it'th true at latht.
+	<<else>>
+	  I - I always thought pain was good for me. It's so nice to be told that it's true at last.
+	<</if>>
+  <<elseif ($activeSlave.devotion gt 20)>>
+	<<if $lisping is 1>>
+	  I'm proud to be a thlave, thince that'th what'th right for me.
+	<<else>>
+	  I'm proud to be a slave, since that's what's right for me.
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  Thometimeth I have doubth about the new faith, but I do my betht to ignore them.
+	<<else>>
+	  Sometimes I have doubts about the new faith, but I do my best to ignore them.
+	<</if>>
+  <</if>>
+<</if>>
+<<if $FSDegradationist gte 10>>
+  <<if ($activeSlave.intelligence gt 1)>>
+	<<if ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "submissive")>>
+	<<if $lisping is 1>>
+	  I - I alwayth knew I wath a utheleth bitch, tho it'th eathy to accept being degraded.
+	<<else>>
+	  I - I always knew I was a useless bitch, so it's easy to accept being degraded.
+	<</if>>
+  <<elseif ($activeSlave.devotion gt 20)>>
+	<<if $lisping is 1>>
+	  I'm your worthleth little degraded fuckpuppet, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	<<else>>
+	  I'm your worthless little degraded fuckpuppet, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I'm trying to accept the degradation, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.
+	<<else>>
+	  I'm trying to accept the degradation, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+	<</if>>
+  <</if>>
+<</if>>
+<<if $FSAssetExpansionist gte 10>>
+  <<if ($activeSlave.intelligence gt 1)>>
+	<<if $lisping is 1>>
+	  I've been watching all the body dythphoria on dithplay lately; it'th certainly novel.
+	<<else>>
+	  I've been watching all the body dysphoria on display lately; it's certainly novel.
+	<</if>>
+  <<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "nympho")>>
+	<<if $lisping is 1>>
+	  Thank you tho much for thupporting thith new T&A expanthion culture, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th like you made it jutht for me. Tho much eye candy!
+	<<else>>
+	  Thank you so much for supporting this new T&A expansion culture, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's like you made it just for me. So much eye candy!
+	<</if>>
+  <<elseif ($activeSlave.boobs gt 1000)>>
+	<<if $lisping is 1>>
+	  It'th almotht thtrange, being in a place where thethe titth don't make me different.
+	<<else>>
+	  It's almost strange, being in a place where these tits don't make me different.
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I'm a little worried I don't have the boobth for thith new expanthion culture though.
+	<<else>>
+	  I'm a little worried I don't have the tits for this new expansion culture though.
+	<</if>>
+  <</if>>
+<</if>>
+<<if $FSTransformationFetishist gte 10>>
+  <<if ($activeSlave.intelligence gt 1)>>
+	<<if $lisping is 1>>
+	  I'm learning a lot about men, jutht watching how what'th beautiful ith changing.
+	<<else>>
+	  I'm learning a lot about men, just watching how what's beautiful is changing.
+	<</if>>
+  <<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "nympho")>>
+	<<if $lisping is 1>>
+	  The arcology ith like, a bimbo land now, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th tho hot!
+	<<else>>
+	  The arcology is like, a bimbo land now, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. It's so hot!
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I like getting hotter, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, but all the thurgery ith thtill a little thcary.
+	<<else>>
+	  I like getting hotter, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, but all the surgery is still a little scary.
+	<</if>>
+  <</if>>
+<</if>>
+<<if $FSGenderRadicalist gte 10>>
+  <<if ($activeSlave.intelligence gt 1)>>
+	<<if $lisping is 1>>
+	  I thuppothe it wath inevitable that a place where anyone can be a thlave would thtart treating anyone who'th a thlave ath a girl.
+	<<else>>
+	  I suppose it was inevitable that a place where anyone can be a slave would start treating anyone who's a slave as a girl.
+	<</if>>
+  <<elseif ($activeSlave.dick gt 0)>>
+	<<if $lisping is 1>>
+	  It ithn't alwayth eathy being a thlave girl, but it'th nice being in a place where that'th normal.
+	<<else>>
+	  It isn't always easy being a slave girl, but it's nice being in a place where that's normal.
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  It'th kind of nice, being a thlave in a place where, you know, anyone can be a thlave.
+	<<else>>
+	  It's kind of nice, being a slave in a place where, you know, anyone can be a slave.
+	<</if>>
+  <</if>>
+<</if>>
+<<if $FSGenderFundamentalist gte 10>>
+  <<if ($activeSlave.intelligence gt 1)>>
+	<<if $lisping is 1>>
+	  I thhouldn't be thurprithed at how eathy it ith to reinforce traditional valueth in a new, thlavery focuthed culture.
+	<<else>>
+	  I shouldn't be surprised at how easy it is to reinforce traditional values in a new, slavery focused culture.
+	<</if>>
+  <<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "likes girls")>>
+	<<if $lisping is 1>>
+	  I really like how you're encouraging thlavery to focuth on girlth." She giggles. "I like girlth!
+	<<else>>
+	  I really like how you're encouraging slavery to focus on girls." She giggles. "I like girls!
+	<</if>>
+  <<elseif ($activeSlave.dick gt 0)>>
+	<<if $lisping is 1>>
+	  I know I'm not a perfect fit for your vithion of the future, but I'll do my betht to be a good girl.
+	<<else>>
+	  I know I'm not a perfect fit for your vision of the future, but I'll do my best to be a good girl.
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  I'm relieved I fit into your vithion of the future of thlavery.
+	<<else>>
+	  I'm relieved I fit into your vision of the future of slavery.
+	<</if>>
+  <</if>>
+<</if>>
+<<if $FSPhysicalIdealist gte 10>>
+<</if>>
+<<if $FSSubjugationist gte 10>>
+<</if>>
+<<if $FSSupremacist gte 10>>
+<</if>>
+<<if $FSPaternalist gte 10>>
+<</if>>
+<<if $FSBodyPurist gte 10>>
+<</if>>
+<<if $FSSlimnessEnthusiast gte 10>>
+<</if>>
+<<if $FSPastoralist gte 10>>
+<</if>>
+
+<</if>>
+
+<<if $lisping is 1>>
+  Tho, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she concludes,
+<<else>>
+  So, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>," she concludes,
+<</if>>
+<<if ($activeSlave.fetishDiscovered is 1)>>
+  <<if ($activeSlave.fetish is "submissive")>>
+	<<if $lisping is 1>>
+	  "May I therve you thomehow?"
+	<<else>>
+	  "May I serve you somehow?"
+	<</if>>
+  <<elseif ($activeSlave.fetish is "dom")>>
+	"May I hold a bitch down for you?"
+  <<elseif ($activeSlave.fetish is "sadist")>>
+	<<if $lisping is 1>>
+	  "May I thpank a bitch for you?"
+	<<else>>
+	  "May I spank a bitch for you?"
+	<</if>>
+  <<elseif ($activeSlave.fetish is "masochist")>>
+	<<if $lisping is 1>>
+	  "May I be your pain thlave now?"
+	<<else>>
+	  "May I be your pain slave now?"
+	<</if>>
+  <<elseif ($activeSlave.fetish is "likes girls")>>
+	<<if $lisping is 1>>
+	  "May I hang around and get oral from the next thlave in here?"
+	<<else>>
+	  "May I hang around and get oral from the next slave in here?"
+	<</if>>
+  <<elseif ($activeSlave.fetish is "cumslut")>>
+	"May I blow you now?"
+  <<elseif ($activeSlave.fetish is "humiliation")>>
+	"May I be humiliated now?"
+  <<elseif ($activeSlave.fetish is "buttslut")>>
+	<<if $lisping is 1>>
+	  "May I be your anal cockthleeve now?"
+	<<else>>
+	  "May I be your anal cocksleeve now?"
+	<</if>>
+  <<elseif ($activeSlave.fetish is "pregnancy")>>
+	<<if ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0)>>
+	  <<if $lisping is 1>>
+		"Are there any thlaves you want knocked up?"
+	  <<else>>
+		"Are there any slaves you want knocked up?"
+	  <</if>>
+	<<elseif ($activeSlave.preg gt -2) and ($activeSlave.ovaries gt 0)>>
+	  "May I be bred?"
+	<<else>>
+	  <<if $lisping is 1>>
+		"Are there any pregnant thlaves I could, you know, thpend time with?"
+	  <<else>>
+		"Are there any pregnant slaves I could, you know, spend time with?"
+	  <</if>>
+	<</if>>
+  <<elseif ($activeSlave.fetish is "boobs")>>
+	"May I give you a titjob now?"
+  <<elseif ($activeSlave.fetish is "nympho")>>
+	<<if $lisping is 1>>
+	  "Pleathe fuck me. Pleathe."
+	<<else>>
+	  "Please fuck me. Please."
+	<</if>>
+  <<else>>
+	<<if $lisping is 1>>
+	  "May I therve you thomehow?"
+	<<else>>
+	  "May I serve you somehow?"
+	<</if>>
+  <</if>>
+<<else>>
+  <<if $lisping is 1>>
+	"May I therve you thomehow?"
+  <<else>>
+	"May I serve you somehow?"
+  <</if>>
+<</if>>
+
+<</if>> /*Closes fearful and below exempt*/
+
+<</nobr>>

@@ -1,0 +1,273 @@
+<<if $ui isnot "start">>\
+<<nobr>>
+<<if $nextLinkDisplay is 1>>
+	<span id="nextButton"><strong><<click $nextButton>><<set $nextLinkDisplay to 0>><<display $nextLink>><</click>></strong></span>
+<<else>>
+	<span id="nextButton"><strong><<click [[($nextButton)|($nextLink)]]>><</click>></strong></span>
+<</if>>
+<</nobr>>
+/*<<print passage()>>*/
+''Week $week''
+//Weather://<<nobr>>
+<<if $weatherToday.severity is 1>>
+//@@color:cyan;$weatherToday.name@@//
+<<elseif $weatherToday.severity is 2>>
+//@@color:yellow;$weatherToday.name@@//
+<<elseif $weatherToday.severity is 3>>
+//@@color:orange;$weatherToday.name@@//
+<<else>>
+//@@color:red;$weatherToday.name@@//
+<</if>>
+<</nobr>>
+
+<<nobr>>
+<<if passage() is "Main">>
+	<span id="manageArcology"><strong><<click "Manage Arcology">><<set $nextButton to "Back">><<set $nextLink to passage()>><<goto "Manage Arcology">><</click>></strong></span>
+<</if>>
+<</nobr>>
+<<nobr>>
+    <<set $cash to Math.trunc($cash)>>
+<<if $cash gt 0>>
+	@@color:yellowgreen;Cash@@ | ''¤'' <<print $cash>>
+<<else>>
+	__@@color:red;Cash@@__ | ''¤'' <<print $cash>>
+<</if>>
+<</nobr>>
+@@color:pink;Slaves@@ | <<print $slaves.length>>
+<<if passage() is "Main">>[[upkeep|Costs Report]]:<<else>>upkeep:<</if>> ¤$costs
+<<nobr>>
+@@color:gold;Renown@@ | 
+<<if $rep gt 19000>>
+	@@color:rgb(30,0,220);worshipped@@
+<<elseif $rep gt 18000>>
+	@@color:rgb(40,0,210);great@@
+<<elseif $rep gt 17000>>
+	@@color:rgb(50,0,200);exalted@@
+<<elseif $rep gt 16000>>
+	@@color:rgb(60,0,190);illustrious@@
+<<elseif $rep gt 15000>>
+	@@color:rgb(70,0,180);prestigious@@
+<<elseif $rep gt 14000>>
+	@@color:rgb(80,0,170);renowned@@
+<<elseif $rep gt 13000>>
+	@@color:rgb(90,0,160);famed@@
+<<elseif $rep gt 12000>>
+	@@color:rgb(100,0,150);celebrated@@
+<<elseif $rep gt 11000>>
+	@@color:rgb(110,0,140);honored@@
+<<elseif $rep gt 10000>>
+	@@color:rgb(120,0,130);acclaimed@@
+<<elseif $rep gt 9000>>
+	@@color:rgb(130,0,120);eminent@@
+<<elseif $rep gt 8250>>
+	@@color:rgb(140,0,110);prominent@@
+<<elseif $rep gt 7500>>
+	@@color:rgb(150,0,100);distinguished@@
+<<elseif $rep gt 6750>>
+	@@color:rgb(160,0,90);admired@@
+<<elseif $rep gt 6000>>
+	@@color:rgb(170,0,80);esteemed@@
+<<elseif $rep gt 5250>>
+	@@color:rgb(180,0,70);respected@@
+<<elseif $rep gt 4500>>
+	@@color:rgb(190,0,60);known@@
+<<elseif $rep gt 3750>>
+	@@color:rgb(200,0,50);recognized@@
+<<elseif $rep gt 3000>>
+	@@color:rgb(210,0,40);rumored@@
+<<elseif $rep gt 2250>>
+	@@color:rgb(220,0,30);envied@@
+<<elseif $rep gt 1500>>
+	@@color:rgb(230,0,20);resented@@
+<<elseif $rep gt 750>>
+	@@color:rgb(240,0,10);disliked@@
+<<else>>
+	@@color:rgb(250,0,0);unknown@@
+<</if>>
+<</nobr>>
+
+<<nobr>>
+<<if ($HGSuite gt 0)>>
+<<if passage() is "Main">>
+<<set $HGSuiteSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "live with your Head Girl">>
+      <<set $HGSuiteSlaves += 1>>
+    <</if>>
+  <</for>>
+[[Head Girl Suite]] <<if $HGSuiteSlaves gt 0>>($HGSuiteSlaves slaves)<</if>><br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($brothel gt 0)>>
+<<if passage() is "Main">>
+<<set $brothelSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "work in the brothel">>
+      <<set $brothelSlaves += 1>>
+    <</if>>
+  <</for>>
+[[Brothel]] ($brothelSlaves/<<print $brothel*5>> whores<<if $Madam isnot 0>>, madam<</if>>)<br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($promenade gt 0)>>
+<<if passage() is "Main">>
+<<set $promenadeSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "work on the promenade">>
+      <<set $promenadeSlaves += 1>>
+    <</if>>
+  <</for>>
+[[Promenade]] ($promenadeSlaves/<<print $promenade*5>> courtesans<<if $Concierge isnot 0>>, concierge<</if>>)<br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($arcade gt 0)>>
+<<if passage() is "Main">>
+<<set $arcadeSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "be confined in the arcade">>
+      <<set $arcadeSlaves += 1>>
+    <</if>>
+  <</for>>
+[[Arcade]] ($arcadeSlaves/<<print $arcade*5>> inmates)<br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($dairy gt 0)>>
+<<if passage() is "Main">>
+<<set $dairySlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "work in the dairy">>
+      <<set $dairySlaves += 1>>
+    <</if>>
+  <</for>>
+[[Dairy]] ($dairySlaves/<<print $dairy*5>> cows<<if $Milkmaid isnot 0>>, milkmaid<</if>>)<br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($collectionFacility gt 0)>>
+<<if passage() is "Main">>
+<<set $collectionFacilitySlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "work in the collection facility">>
+      <<set $collectionFacilitySlaves += 1>>
+    <</if>>
+  <</for>>
+[[Collection Facility]] ($collectionFacilitySlaves/<<print $collectionFacility*5>> milkers<<if $Collectrix isnot 0>>, collectrix<</if>>)<br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($servantsQuarters gt 0)>>
+<<if passage() is "Main">>
+<<set $servantsQuartersSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "work as a servant">>
+      <<set $servantsQuartersSlaves += 1>>
+    <</if>>
+  <</for>>
+[[Servants' Quarters]] ($servantsQuartersSlaves servants<<if $Stewardess isnot 0>>, stewardess<</if>>)<br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($masterSuite gt 0)>>
+<<if passage() is "Main">>
+<<set $masterSuiteSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "serve in the master suite">>
+      <<set $masterSuiteSlaves += 1>>
+    <</if>>
+  <</for>>
+[[Master Suite]] <<if ($masterSuiteSlaves gt 0) or ($Concubine isnot 0)>>(<<if $masterSuiteSlaves gt 0>>$masterSuiteSlaves bedslaves<</if>><<if ($masterSuiteSlaves gt 0) and ($Concubine isnot 0)>>, <</if>><<if $Concubine isnot 0>>concubine<</if>>)<</if>><br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($schoolroom gt 0)>>
+<<if passage() is "Main">>
+<<set $schoolroomSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "learn in the schoolroom">>
+      <<set $schoolroomSlaves += 1>>
+    <</if>>
+  <</for>>
+[[Schoolroom]] ($schoolroomSlaves students<<if $Schoolteacher isnot 0>>, schoolteacher<</if>>)<br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($spa gt 0)>>
+<<if passage() is "Main">>
+<<set $spaSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "rest in the spa">>
+      <<set $spaSlaves += 1>>
+    <</if>>
+  <</for>>
+[[Spa]] ($spaSlaves bathers<<if $Attendant isnot 0>>, attendant<</if>>)<br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($cellblock gt 0)>>
+<<if passage() is "Main">>
+<<set $cellblockSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "be confined in the cellblock">>
+      <<set $cellblockSlaves += 1>>
+    <</if>>
+  <</for>>
+[[Cellblock]] ($cellblockSlaves prisoners<<if $Wardeness isnot 0>>, wardeness<</if>>)<br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($pit gt 0)>>
+<<if passage() is "Main">>
+<<set $pitSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].ID is $fighterOne.ID>>
+      <<set $pitSlaves += 1>>
+    <<elseif $slaves[$i].ID is $fighterTwo.ID>>
+      <<set $pitSlaves += 1>>
+    <</if>>
+  <</for>>
+[[Pit]] ($pitSlaves combatants)<br>
+<<else>><br>
+<</if>>
+<</if>>
+<</nobr>>\
+
+<<nobr>>
+<<if passage() is "Main">>
+<span id="options"><<click "Options">><<set $nextButton to "Back">><<set $nextLink to passage()>><<goto "Options">><</click>></span>
+<</if>>
+<</nobr>>
+<<nobr>>
+<<if $encyclopedia isnot " ">>
+//FC Encyclopedia://<br>
+[[$encyclopedia|Encyclopedia][$nextButton to "Back", $nextLink to passage()]]
+<<else>>
+<br>
+<</if>>
+<</nobr>>\
+<</if>>\

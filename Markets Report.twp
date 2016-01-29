@@ -1,0 +1,120 @@
+<<nobr>>
+
+<<set $assetAffected to either("general", "slaves", "entrapment", "capture", "training", "surgical", "drugs")>>
+<<set $assetDirection to either("up", "down")>>
+
+<<if $assetAffected is "general">>
+  <<if $assetDirection is "up">>
+	<<if random(1,100) gt 50>>
+	  ...rising energy costs drove @@color:yellowgreen;rising prices@@ of several market baskets...
+	<<else>>
+	  ...conflict-driven increases in transportation costs increase @@color:yellowgreen;price indices@@...
+	<</if>>
+	<<set $generalAssetPrice += 2>>
+  <<else>>
+	<<if random(1,100) gt 50>>
+	  ...increasing Free Cities slave labor effects @@color:gold;general prices@@...
+	<<else>>
+	  ...Antarctic oil shale pushing down energy prices, driving down major @@color:gold;price indices@@...
+	<</if>>
+	<<set $generalAssetPrice -= 2>>
+  <</if>>
+<<elseif $assetAffected is "slaves">>
+  <<if $assetDirection is "up">>
+	<<if random(1,100) gt 50>>
+	  ...heavy demand for fashionable varieties drove @@color:yellowgreen;rising slave prices@@ last...
+	<<else>>
+	  ...study suggested the sexual revolution would continue to drive up @@color:yellowgreen;slave prices@@...
+	<</if>>
+	<<set $slaveAssetPrice += 2>>
+  <<else>>
+	<<if random(1,100) gt 50>>
+	  ...increased supply due to bush wars drove down @@color:gold;slave prices@@...
+	<<else>>
+	  ...@@color:gold;slave prices@@ continue to fall due to major improvements in training...
+	<</if>>
+	<<set $slaveAssetPrice -= 2>>
+  <</if>>
+<<elseif $assetAffected is "entrapment">>
+  <<if $assetDirection is "up">>
+	<<if random(1,100) gt 50>>
+	  ...prospect of deregulation drove a @@color:yellowgreen;scramble@@ for means of enslavement...
+	<<else>>
+	  ...law would legalize enslavement, driving @@color:yellowgreen;high prices@@ for associated...
+	<</if>>
+	<<set $entrapmentAssetPrice += 2>>
+  <<else>>
+	<<if random(1,100) gt 50>>
+	  ...reactionism produced lower deman and @@color:gold;lower prices@@ for legal enslavement...
+	<<else>>
+	  ...report on low success rates @@color:gold;drove down@@ value of legal enslavement methods...
+	<</if>>
+	<<set $entrapmentAssetPrice -= 2>>
+  <</if>>
+<<elseif $assetAffected is "capture">>
+  <<if $assetDirection is "up">>
+	<<if random(1,100) gt 50>>
+	  ...declaration of war @@color:yellowgreen;pushed up@@ average mercenary wage...
+	<<else>>
+	  ...advancing technology to blame for @@color:yellowgreen;rising costs@@ of assets for wet work...
+	<</if>>
+	<<set $captureAssetPrice += 2>>
+  <<else>>
+	<<if random(1,100) gt 50>>
+	  ...rumored peace treaty @@color:gold;pushed down@@ mercenary contract clearing rate...
+	<<else>>
+	  ...demobilization of the cash-strapped army expected to produce mercenary @@color:gold;glut@@...
+	<</if>>
+	<<set $captureAssetPrice -= 2>>
+  <</if>>
+<<elseif $assetAffected is "training">>
+  <<if $assetDirection is "up">>
+	<<if random(1,100) gt 50>>
+	  ...rising demand in turn @@color:yellowgreen;pushing up@@ prices for most means of slave training...
+	<<else>>
+	  ...public demand for ever-better slave training inevitably @@color:yellowgreen;increase@@ training costs...
+	<</if>>
+	<<set $trainingAssetPrice += 2>>
+  <<else>>
+	<<if random(1,100) gt 50>>
+	  ...competition from low-cost slave breaking firms @@color:gold;reducing@@ asking price for...
+	<<else>>
+	  ...increased automation of slave training @@color:gold;negatively impacting@@ training contracts...
+	<</if>>
+	<<set $trainingAssetPrice -= 2>>
+  <</if>>
+<<elseif $assetAffected is "surgical">>
+  <<if $assetDirection is "up">>
+	<<if random(1,100) gt 50>>
+	  ...fashionable extravagant implant procedures @@color:yellowgreen;driving prices@@ of remote surgical...
+	<<else>>
+	  ...near-universal breast implants producing corresponding @@color:yellowgreen;price inflation@@ of surgery...
+	<</if>>
+	<<set $surgicalAssetPrice += 2>>
+  <<else>>
+	<<if random(1,100) gt 50>>
+	  ...vastly reduced overhead with remote surgery @@color:gold;hitting prices@@ of surgery hard...
+	<<else>>
+	  ...oversupply after major manufacturers converted lines to @@color:gold;low-cost@@ implant production...
+	<</if>>
+	<<set $surgicalAssetPrice -= 2>>
+  <</if>>
+<<elseif $assetAffected is "drugs">>
+  <<if $assetDirection is "up">>
+	<<if random(1,100) gt 50>>
+	  ...intense demand for curatives in conflict zones @@color:yellowgreen;increasing prices@@...
+	<<else>>
+	  ...setbacks in growth hormone human testing expected to @@color:yellowgreen;increase prices@@ of traditional formula...
+	<</if>>
+	<<set $drugAssetPrice += 2>>
+  <<else>>
+	<<if random(1,100) gt 50>>
+	  ...new formula @@color:gold;cut costs@@ of common curatives by an unprecedented...
+	<<else>>
+	  ...glut caused by big pharma reorienting towards @@color:gold;cheap,@@ mass-produced aphros...
+	<</if>>
+	<<set $drugAssetPrice -= 2>>
+  <</if>>
+<</if>>
+
+<</nobr>>

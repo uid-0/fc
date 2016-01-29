@@ -1,0 +1,51 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $masochistInterestTargetName == $slaves[$i].ID>>
+<<set $activeSlave to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $subName == $slaves[$i].slaveName>>
+<<set $slaves[$i].vaginalCount += 1>>
+<<set $vaginalTotal += 1>>
+<</if>>
+<</for>>
+
+<</nobr>>\
+\
+You have $masochistName bent over your desk, and are seeing to your own amusement and her masochistic streak at once. She has her body flat on the desk, but is unrestrained, and has been told that she must not rise off it at all. You then tell her to count strokes and begin to flog her ass with a leathern insturment. Before long she is experiencing more pain than the human body can support without involuntary movement, and you tell her to go back one count whenever she does. At long last she completes the required number of blows, and lies quivering and sobbing, thanking you over and over, until she stiffens again at the burning sensation of a cock stretching her anal sphincter. You are not gentle, and the rough sodomy combined with the burning of her outraged buttocks as you slap yourself against them maintains her pain high. After you finish and she leaves, wincing in agony but with a faraway look of release, you notice $activeSlave.slaveName at the door to your office. You call her in.
+
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> hesitates before explaining herself, and she's obviously aroused: <<if ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0)>>though her hormone-filled body can't get her dick hard any more, she's got a string of precum coming off her member<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>though her gelded body can't get her dick hard any more, she's got a string of precum coming off her limp member<<elseif $activeSlave.dick gt 4>>her gigantic cock is standing out like a mast<<elseif $activeSlave.dick gt 2>>she's sporting an impressive erection<<elseif $activeSlave.dick gt 0>>her little penis is rock hard<<elseif $activeSlave.clit gt 0>>her large clit is visibly engorged<<else>>her nipples are hard and there's a sheen on her pussylips<</if>>. It seems she passed by while you were beating $masochistName and found the sight rather compelling. It should be possible to either encourage this fascination or steer her away from it for now.
+\
+<span id="result">
+<<click "Turn her into another pain slut">>\
+	<<replace "#result">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<if ($activeSlave.amp is 1) and ($activeSlave.mute is 1)>>She's mute and has no hands, so it takes a long, frustrating time for her to communicate that she would like you to hurt her, too.<<elseif ($activeSlave.mute is 1)>>She's mute, so she uses gestures to ask you hurt her, too.<<elseif ($activeSlave.lips gt 2)>>She asks through her massive dick-sucking lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, can - can you hurt me? Like that?"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She asks through her big oral piercings, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, can - can you hurt me? Like that?"<<else>>She asks, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, can - can you hurt me? Like that?"<</if>> You make her state it more explicitly, so she tries again: <<if ($activeSlave.amp is 1)>> she wriggles herself into a position where she can lightly slap her amputee ass against a chair leg.<<elseif ($activeSlave.mute is 1)>>she turns around and starts to spank herself roughly.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Pleathe beat me, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>!"<<else>>"Please beat me, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!"<</if>> You shove her over the desk, rub your hand over her ass, which is quivering with anticipation and fear, and ask if she wants you to hit her. She's almost beside herself, shuddering at the titillation, but before she can answer, you use your other hand to strike her <<if $activeSlave.dick gt 0>>cockhead<<else>>pussylips<</if>>. As she writhes in agony, you tell her to get used to it. She's a pain slut now, second thoughts or not. She hasn't recovered before she feels the still more urgent pain of rough anal, which is then overlaid by rough spanking, nipple pinching, and <<if $activeSlave.dick gt 0>>dick abuse<<else>>clit torture<</if>>. @@color:hotpink;She has become more devoted to you,@@ and @@color:pink;she has started to get off on pain.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+	<<set $activeSlave.fetish to "masochist">>
+	<<set $activeSlave.fetishDiscovered to 1>>
+    <</replace>>
+<</click>>
+<<click "Steer her away from pain obsession for the moment">>
+	<<replace "#result">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	Good slaves get aroused according to their masters' whim, not their own silly tendencies. You call $activeSlave.slaveName over before she can give voice to her interest in pain play, <<if ($activeSlave.dick is 0)>>and play with her until she orgasms while <<if ($PC.dick is 0)>>giving you oral<<else>>sucking you off<</if>>, all while carefully keeping her experience purely pleasurable.<<else>>and let her masturbate while she blows you, carefully keeping her experience purely pleasurable.<</if>> You'll keep an eye on her, and with this correction @@color:hotpink;she'll become more submissive to you.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 1>>
+    <<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+</span>

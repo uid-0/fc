@@ -1,0 +1,82 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+//Your weekly costs are as follows.//
+<<nobr>>
+
+<<if $girls is 3>>
+  Since you are accustomed to luxury, your __personal living expenses__ are ¤<<print ($girls*(250+($economy*500)))>>.
+<<elseif $girls is 2>>
+  Since you are living well in retirement, your __personal living expenses__ are ¤<<print ($girls*(250+($economy*500)))>>.
+<<else>>
+  Since you are used to a fairly normal life, your __personal living expenses__ are ¤<<print ($girls*(250+($economy*500)))>>.
+<</if>>
+
+<<if $mercenaries gt 0>>
+	<br>__Mercenary__ expenses: ¤<<print ($mercenaries*1000)>>
+<</if>>
+<<if $brothel gt 0>>
+	<br>__Brothel__ maintenance: ¤<<print ($brothel*$facilityCost)+(0.2*$brothelUpgradeDrugs*$brothel*$facilityCost)>>
+<</if>>
+<<if $promenade gt 0>>
+	<br>__Promenade__ maintenance: ¤<<print ($promenade*$facilityCost)+(0.2*$promenadeUpgradePDAs*$promenade*$facilityCost)>>
+<</if>>
+<<if $arcade gt 0>>
+	<br>__Arcade__ maintenance: ¤<<print (0.5*$arcade*$facilityCost)+(0.2*$arcadeUpgradeInjectors*$arcade*$facilityCost)+(0.2*$arcadeUpgradeCollectors*$arcade*$facilityCost)>>
+<</if>>
+<<if $dairy gt 0>>
+	<br>__Dairy__ maintenance: ¤<<print ($dairy*$facilityCost)+(0.2*$dairyUpgradeFeeders*$dairy*$facilityCost)+(0.1*$dairyUpgradePreg*$dairy*$facilityCost)>>
+<</if>>
+<<if $collectionFacility gt 0>>
+	<br>__Collection Facility__ maintenance: ¤<<print ($collectionFacility*$facilityCost)+(0.2*$collectionFacilityUpgradeStimulators*$collectionFacility*$facilityCost)+(0.2*$collectionFacilityUpgradeMilkers*$collectionFacility*$facilityCost)>>
+<</if>>
+<<if ($servantsQuarters gt 0) and ($servantsQuartersUpgradeMonitoring gt 0)>>
+	<br>__Servants' Quarters__ maintenance: ¤<<print (0.2*$servantsQuartersUpgradeMonitoring*$servantsQuarters*$facilityCost)>>
+<</if>>
+<<if $FSSpending isnot 0>>
+	<br>__Society Shaping__ expenses: ¤$FSSpending
+<</if>>
+<<if $Recruiter isnot 0>>
+	<br>__Recruiting__ expenses: ¤250
+<</if>>
+
+<<set $girlsCosts to 0>>
+<br>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+  <<set $individualCosts to 0>>
+  ''$slaves[$i].slaveName'':
+  <<if $slaves[$i].livingRules is "luxurious">>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;Living expenses: ¤<<print ($rulesCost*4)>>
+      <<set $individualCosts += ($rulesCost*4)>>
+  <<elseif $slaves[$i].livingRules is "normal">>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;Living expenses: ¤<<print ($rulesCost*2)>>
+      <<set $individualCosts += ($rulesCost*2)>>
+  <<else>>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;Living expenses: ¤<<print ($rulesCost)>>
+      <<set $individualCosts += $rulesCost>>
+  <</if>>
+  <<if ($slaves[$i].drugs is "aphrodisiacs")>>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;Aphrodisiacs: ¤<<print ($drugsCost)>>
+      <<set $individualCosts += $drugsCost>>     
+  <<elseif ($slaves[$i].drugs is "curatives")>>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;Curatives: ¤<<print ($drugsCost*3)>>
+      <<set $individualCosts += ($drugsCost*3)>>     
+  <<elseif ($slaves[$i].drugs isnot "no drugs")>>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;Standard drugs: ¤<<print ($drugsCost*2)>>
+      <<set $individualCosts += ($drugsCost*2)>>  
+  <</if>>
+  <<if ($slaves[$i].hormones isnot 0)>>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;Hormones: ¤<<print (Math.trunc($drugsCost*Math.abs($slaves[$i].hormones)*0.5))>>
+      <<set $individualCosts += Math.trunc($drugsCost*Math.abs($slaves[$i].hormones)*0.5)>>
+  <</if>>
+  <<if ($slaves[$i].preg is -1) and ($slaves[$i].ovaries is 1)>>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;Contraceptives: ¤<<print (Math.trunc($drugsCost*0.5))>>
+      <<set $individualCosts += Math.trunc($drugsCost*0.5)>>
+  <</if>>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__Total__: ¤<<print ($individualCosts)>>
+  <<set $girlsCosts += $individualCosts>>
+  <br>
+<</for>>
+
+<</nobr>>

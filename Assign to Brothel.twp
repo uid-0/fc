@@ -1,0 +1,29 @@
+<<set $activeSlave.assignment to "work in the brothel">>
+<<set $activeSlave.assignmentVisible to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+<<set $activeSlave.livingRules to "spare">>
+<<set $activeSlave.releaseRules to "restrictive">>
+<<set $activeSlave.drugs to "no drugs">>
+<<set $activeSlave.sentence to 0>>
+
+<<if $activeSlave.ID is $personalAttention>>
+	<<set $personalAttention to -1>>
+<</if>>
+
+<<if $activeSlave.ID is $HeadGirl.ID>>
+	<<set $HeadGirl to 0>>
+<</if>>
+<<if $activeSlave.ID is $Recruiter.ID>>
+	<<set $Recruiter to 0>>
+<</if>>
+<<if $activeSlave.ID is $Bodyguard.ID>>
+	<<set $Bodyguard to 0>>
+<</if>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $activeSlave.ID == $slaves[$i].ID>>
+<<set $slaves[$i] to $activeSlave>>
+<</if>>
+<</for>>
+    
+<<goto "Brothel">>

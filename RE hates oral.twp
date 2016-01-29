@@ -1,0 +1,74 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> has been in your service long enough to know that oral sex is a daily fact of life for most slaves, and that most slaves are not only required to put up with cum, but to love it, too - or at least be able to fake enjoyment convincingly. She's seen cum spattered on other slaves' faces, pooling in their mouths, and dripping from their asses only to be licked up by other slaves. It's clear from $activeSlave.slaveName's recent reactions to these acts that she's quite disgusted by oral sex in general and cum in particular. Depending on your point of view, this could be a flaw for her to overcome or a weakness you can exploit.
+\
+<span id="result">
+<<click "Let her earn a break for her throat">>
+<<replace "#name">>\
+$activeSlave.slaveName\
+<</replace>>\
+<<replace "#result">>
+	You tell her she's a sex slave, and that she needs to learn how to suck dick. <<if ($activeSlave.mute is 1) and ($activeSlave.amp isnot 1)>>She frantically begs with gestures, pleading on her knees.<<elseif ($activeSlave.mute is 1)>>She frantically mouths pleas that you leave her throat cock-free.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She slurs, "Pleese no, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, pleese don rape my mouth, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>!"<<else>>She begs, "Please no, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, please don't rape my mouth, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!"<</if>> You make a show of considering, and then tell her that if she's extra obedient, you might let her earn a break for her throat - for now. 
+<<nobr>>
+<<if $activeSlave.vagina gt 0>><<set $activeSlave.vaginalCount += 1>><<set $vaginalTotal += 1>>
+You tell her to lie back and spread her legs, because you're going to give her a good old fashioned missionary-position pounding. She does so with unusual obedience, and as you're giving her a thorough pounding, whether out of relief, gratitude, or a desire to put on a good performance, she certainly seems to be enjoying it more than usual.
+<<elseif $activeSlave.anus gt 0>><<set $activeSlave.analCount += 1>><<set $analTotal += 1>>
+You tell her to bend over and spread her ass for you, because if she doesn't want you going in one end you're going to go in the other. She does so with unusual obedience, and as you <<if ($activeSlave.anus is 1)>>gently but firmly pound her still-tight ass<<elseif ($activeSlave.anus is 2)>>pound away at her well-used backdoor<<else>>mercilessly jackhammer her gaping hole<</if>> she actively tries to match the rhythm of your thrusts.
+<<else>>
+You tell her that if she's going to hesitate to use her mouth when all her other holes are still virgin, she's going to have to find an amazingly thorough way to please a dick if she's going to earn her throat a reprieve. She looks<<if $activeSlave.intelligence lt 0>> uncharacteristically<</if>> thoughtful for a moment before bending over before you, spitting in her hand <<if $activeSlave.vagina is 0>>and thoroughly coating her inner thighs with her saliva.<<else>>and thoroughly coating the crack of her <<if $activeSlave.butt lte 2>>slender<<elseif $activeSlave.butt lte 4>>curvy<<else>>huge<</if>> ass.<</if>> The invitation is obvious, but just to be sure she pleads with you to satisfy yourself alongside her virgin holes. You answer her pleading with your dick, and though it's not quite as pleasurable as a newly-deflowered hole, <<if $activeSlave.vagina is 0>>before long her virgin cunt starts to supply extra lubrication and she starts to gasp and moan along with your thrusts.<<else>>$activeSlave.name's trembling whenever your thrusts come perilously close to penetrating her virgin ass is thoroughly entertaining.<</if>> Before long, you plaster her still-virgin hole with your cum.
+<</if>>
+<</nobr>>When you're done, you bend down and whisper in her ear that if she shows any sign of rebelliousness, you'll give every dick in the Arcology free access to her throat. @@color:hotpink;She has become more obedient,@@ in the hope this will persuade you to not follow through on your threat.
+<<set $activeSlave.devotion += 1>>
+<</replace>>
+<</click>>
+<<click "Try to brute-force her oral resistance with a public blowbang">>
+<<replace "#name">>\
+$activeSlave.slaveName\
+<</replace>>\
+<<replace "#result">>
+Simple problems require simple solutions - she'll get fucked in the mouth until she either gets over her hang-ups about oral or learns to hide them. You drag the protesting $activeSlave.slaveName out in public, chain her low so that her mouth is available, and tell her that she'll suck dicks until she gets through five in a row without grimacing, gagging, or resisting. You have a comfortable chair brought out to you and settle in to watch the show.
+
+$activeSlave.slaveName tries, she really does. But when word gets out as to the conditions of her enslavement, her users take a perverse enjoyment in being rougher than usual to evoke the exact reactions she's trying to avoid. By the third failed streak, you've started to grow bored of the spectacle, but luckily you find entertainment in conversation with those who have already been entertained by poor $activeSlave.slaveName. Before long more chairs have been brought up and an impromptu salon has been set up alongside the blowbang line. By the sixth failed streak, an enterprising citizen has set up a small bar and is serving drinks. By the ninth, you've delegated watching $activeSlave.slaveName to your assistant. You personally break the 11th streak after she reached four, to general acclaim from your newfound friends and a toast to your virility.
+
+When the 14th streak is finally successful, there are serious talks about making these blowbang salons a regular occurrence and some backslapping directed towards you for your innovation in genteel hedonism. While you seriously doubt $activeSlave.slaveName enjoys oral sex any more than she did at the start of the day, she's certainly @@color:green;learned to keep her feelings on the matter to herself@@. She did, however, @@color:red;have quite a rough time@@ of it<<if $activeSlave.oralSkill lt 2>>, @@color:green;though she did learn a thing or two about sucking dick@@<<set $activeSlave.oralskill += 1>><</if>>. And last of all, you and $activeSlave.slaveName did make @@color:green;quite a good impression@@ today, though for widely differing reasons.
+<<set $activeSlave.health -= 1>>
+<<set $activeSlave.sexualQuirk to "none">>
+<<set $seed to random(65,80)>>
+<<set $activeSlave.oralCount += $seed>>
+<<set $oralTotal += $seed>>
+<<set $rep += 100>>
+<</replace>>
+<</click>>
+<<click "Teach her to see cum as a reward">>
+<<replace "#name">>\
+$activeSlave.slaveName\
+<</replace>>\
+<<replace "#result">>
+You bring $activeSlave.slaveName into your office and stand her in front of your leather couch. She eyes you <<if $activeSlave.devotion lt -4>>suspiciously<<else>>worriedly<</if>> as you ready <<if ($activeSlave.vagina gte 0) and ($activeSlave.dick gt 0)>>two bullet vibrators<<else>>a bullet vibrator<</if>>. <<if ($activeSlave.vagina gte 0) and ($activeSlave.dick gt 0)>>You secure one bullet to $activeSlave.slaveName's frenulum and one to her clit<<elseif $activeSlave.dick gt 0>>You secure the bullet to $activeSlave.slaveName's frenulum<<else>>You secure the bullet to $activeSlave.slaveName's clit<</if>>. You explain that the arcology continually monitors your vital signs, and will use them to estimate your arousal; the system controls the bullet vibrators, which will emit stimulating vibrations scaled to your pleasure. The more pleasure you feel, the more pleasant the vibrations will be, though they will not bring her to orgasm until you climax. To demonstrate, you give the head of your cock a quick squeeze. $activeSlave.slaveName squeals in surprise at the sudden stimulation as the bullets spring to life. You tell her to get to work. Though timid at first, as she proceeds to blow you, she becomes more and more enthusiastic as her own pleasure builds. It isn't long until she's deepthroating you enthusiastically and begging you to cum in her mouth. You make her hold out a bit longer, and then you complete the training session, filling her mouth with your cum. She climaxes in turn, and virtually melts into a quivering mess on your floor.<<if $activeSlave.dick gt 0>> $activeSlave.slaveName's cock oozes cum from her intense orgasm, and you command her to clean it off the floor before she gets back to her duties.<</if>><<if random(1,4) is 4>>@@color:pink;You've successfully linked cum and pleasure in her mind@@, guaranteeing her a confusing few days as she tries to reconcile this with her hatred of oral sex.<<set ($activeSlave.fetish to "cumslut")>><<set ($activeSlave.fetishDiscovered to 1)>><<else>>This has @@color:green;broken her of her bad habits.@@<<set $activeSlave.sexualQuirk to "none">><</if>> This demonstration of your control over her has @@color:hotpink;worn down her resistance to your commands.@@
+<<set $activeSlave.oralCount += 1>>
+<<set $oralTotal += 1>>
+<<set $activeSlave.devotion += 1>>
+<</replace>>
+<</click>>
+<<if ($activeSlave.dick gt 0)>>
+<<click "Make her eat her own cum">>
+<<replace "#name">>\
+$activeSlave.slaveName\
+<</replace>>\
+<<replace "#result">>
+Your cum training tactics have two components: Cum should be linked with pleasure, and cum should not be disgusting to $activeSlave.slaveName, because even $activeSlave.slaveName produces it. To drive home these lessons, you lead $activeSlave.slaveName to your office's leather couch, arranging her<<if $activeSlave.height lt -1>> petite<<elseif $activeSlave.height is -1>> short<<elseif $activeSlave.height is 1>>  tall<<elseif $activeSlave.height gt 1>> very tall<</if>> form upside down with her head on the cushion, her back on the backrest, and her <<if $activeSlave.amp is 1>>stumps<<else>>legs<</if>> in the air. In this position, her <<if ($activeSlave.dick gt 5)>>gigantic<<elseif ($activeSlave.dick gt 4)>>huge<<elseif ($activeSlave.dick gt 3)>>large<<elseif ($activeSlave.dick gt 2)>>average<<elseif ($activeSlave.dick gt 1)>>small<<elseif ($activeSlave.dick gt 0)>>tiny<</if>> cock hangs directly over her anxious face. <<if ($activeSlave.drugs is "aphrodisiacs") or ($activeSlave.drugs is "extreme aphrodisiacs")>>The aphrodisiacs in her system already have her so aroused she's already dripping precum; as you approach her vulnerable form on the couch, a drop lands on her chin.<<else>>You sit next to her vulnerable form on the couch as she looks at you in anticipation.<</if>> You <<if ($activeSlave.anus gt 2)>>insert a wide vibrating plug into her gaping anus<<elseif ($activeSlave.anus gt 1)>>insert a big vibrating plug into her ass<<elseif ($activeSlave.anus gt 0)>>insert a vibrating plug into her tight ass<<else>>place a bullet vibrator over the pucker of her virgin anus<</if>>, secure a bullet vibrator her quivering perineum, and another to the base of her dick, and set them all to gradually increase the strength of their vibrations. In no time at all she releases a torrent of thick, white semen, all of which lands right on her outstretched tongue and pools in her throat. You nudge her chin to make her close her mouth and swallow. After a week of such treatment, she @@color:green;acquires a taste for semen.@@
+<<set ($activeSlave.fetish to "cumslut")>>
+<<set $activeSlave.devotion += 1>>
+<</replace>>
+<</click>>
+<</if>>\
+</span>
+/*Written by anon, coded by Boney M*/

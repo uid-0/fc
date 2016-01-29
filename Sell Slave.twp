@@ -1,0 +1,71 @@
+<<set $nextButton to "Back">>\
+<<set $nextLink to "Slave Interact">>\
+<<nobr>>
+You prepare her for sale. Her response to being put up for purchase is 
+<<if $activeSlave.devotion lt -10>>muted; perhaps she hopes a new master will be less hateful than you.
+<<elseif $activeSlave.devotion lt -4>>muted weeping; for some reason, she doesn't like being treated like meat on a slab.
+<<elseif $activeSlave.devotion lte 4>>hesitant; she can't seem to make up her mind whether this is going to mean an improvement or not.
+<<elseif $activeSlave.devotion lte 10>>obedient, if mechanical; she may want to stay with you.
+<<elseif $activeSlave.devotion lte 18>>ill-concealed sorrow; she clearly wants to stay with you very much.
+<<else>>open, abject, and heart-wrenching begging. Staying with you truly seems to be her only wish.
+<</if>>
+
+<<display "Slave Cost">>
+<<set $slaveCost to (random(80,90)*Math.trunc($slaveCost/100))>>
+<<set $slaveCost to 100*Math.trunc($slaveCost/100)>>
+<</nobr>>
+
+<<nobr>>
+<<if $activeSlave.behavioralQuirk isnot "none">>
+	She has mental flaws that reduce her appeal.
+<</if>>
+<<if $activeSlave.sexualQuirk isnot "none">>
+	She has sexual flaws that reduce her appeal.
+<</if>>
+
+<<if ($activeSlave.fetishDiscovered is 1)>>
+  <<if ($activeSlave.fetish is "mindbroken")>>
+	Her broken mind greatly reduces her appeal.
+  <<elseif ($activeSlave.fetish isnot "none")>>
+	Her strong sexual tendencies increase her appeal.
+  <</if>>
+<<else>>
+  The lack of information on her sexuality reduces the price.
+<</if>>
+
+<<if $activeSlave.vagina is 0>>
+	Her virginity greatly increases her value.
+<</if>>
+
+<<if $activeSlave.preg gt 10>>
+	Her pregnancy greatly reduces her value.
+<<elseif $activeSlave.preg lt -1>>
+	Her barrenness reduces her value.
+<</if>>
+
+<<if $activeSlave.prestige gt 0>>
+	As a prestigious slave she is extremely expensive.
+<</if>>
+
+<<if $activeSlave.brand isnot 0>>
+  <<if $rep gt 10000>>
+	Since you have a very high reputation, your brand enhances her value.
+  <<elseif $rep lt 5000>>
+	Since you are not well known, your brand reduces her value.
+  <</if>>
+<</if>>
+
+<<if $activeSlave.intelligence gt 0>>
+	Her intelligence increases her value.
+<<elseif $activeSlave.intelligence lt 0>>
+	Her stupidity reduces her value.
+<</if>>
+
+<<if $activeSlave.intelligenceImplant is 1>>
+	Her education increases her value.
+<</if>>
+<</nobr>>
+
+The bids roll in. The offered price is ¤<<print $slaveCost>>.
+
+[[Accept price|Slave Sold][$cash += $slaveCost]]

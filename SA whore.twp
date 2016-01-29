@@ -1,0 +1,466 @@
+<<nobr>>
+<<display "FResult">>
+<<if ($slaves[$i].releaseRules is "restrictive")>>
+	<<set $FResult += 2>>
+<</if>>
+<<display "Beauty">>
+
+$slaves[$i].slaveName's appearance attracted $beauty customers (<<print Math.trunc($beauty/7)>> a day), and on average they paid ¤$FResult.
+
+<<set $injury to 0>>
+<<if ($slaves[$i].drugs is "preventatives")>>
+  The drugs she's on protect her from the wear of whoring.
+<<elseif ($slaves[$i].health lt -5)>>
+  The stress of whoring while ill is @@color:red;very hard on her.@@
+  <<set $slaves[$i].health -= 1>>
+  <<set $injury to 1>>
+<<elseif ($slaves[$i].health lt -2) and (random(1,100) gt 50)>>
+  The stress of whoring while ill is @@color:red;hard on her.@@
+  <<set $slaves[$i].health -= 0.7>>
+  <<set $injury to 1>>
+<<elseif ($slaves[$i].vagina lt 0)>>
+  <<if (($slaves[$i].analSkill + $slaves[$i].oralSkill) gt 5)>>
+	She's such an expert whore that she copes with the stress of being a shemale prostitute.
+  <<elseif random(1,100) gt 40+(10*($slaves[$i].analSkill + $slaves[$i].oralSkill))>>
+	The stress of being a shemale prostitute is @@color:red;hard on her.@@
+	<<set $slaves[$i].health -= 0.7>>
+	<<set $injury to 1>>
+  <</if>>
+<<elseif ($slaves[$i].vaginalAccessory is "chastity belt")>>
+  <<if (($slaves[$i].analSkill + $slaves[$i].oralSkill) gt 5)>>
+	She's such an expert whore that she copes with the stress of being limited to buttsex and oral.
+  <<elseif random(1,100) gt 40+(10*($slaves[$i].analSkill + $slaves[$i].oralSkill))>>
+	The stress of being being limited to buttsex and oral is @@color:red;hard on her.@@
+	<<set $slaves[$i].health -= 0.7>>
+	<<set $injury to 1>>
+  <</if>>
+<<elseif ($slaves[$i].analSkill + $slaves[$i].oralSkill + $slaves[$i].vaginalSkill) lt 9>>
+  <<if random(1,100) gt 10+(10*($slaves[$i].analSkill + $slaves[$i].oralSkill + $slaves[$i].vaginalSkill))>>
+	<<set $injury to 1>>
+  <</if>>
+<</if>>
+<<if ($injury is 1)>>
+  <<set $slaves[$i].health -= 0.3>>
+  <<set $seed to random(1,100)>>
+  <<if ($seed gt 80)>>
+	<<set $slaves[$i].minorInjury to "sore ass">>
+	Rough anal with a careless customer left her with a @@color:red;$slaves[$i].minorInjury.@@
+	<<display "minor injury response">>
+  <<elseif ($seed gt 60)>>
+	<<set $slaves[$i].minorInjury to "black eye">>
+	A violent customer left her with a @@color:red;$slaves[$i].minorInjury.@@
+	<<display "minor injury response">>
+  <<elseif ($seed gt 40)>>
+	<<set $slaves[$i].minorInjury to "split lip">>
+	An abusive customer left her with a @@color:red;$slaves[$i].minorInjury.@@
+	<<display "minor injury response">>
+  <<elseif ($seed gt 20)>>
+	<<set $slaves[$i].minorInjury to "bad bruise">>
+	A rough customer left her with a @@color:red;$slaves[$i].minorInjury.@@
+	<<display "minor injury response">>
+  <<else>>
+	<<set $slaves[$i].minorInjury to "sore muscle">>
+	The hard labor of constant sex left her with a @@color:red;$slaves[$i].minorInjury.@@
+  <</if>>
+<</if>>
+  
+<<if ($slaves[$i].vagina is 0) and ($slaves[$i].drugs is "extreme aphrodisiacs") and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+	Her virginity goes to the highest bidder, earning ¤<<print ($beauty*2)>>. She's so full of aphrodisiacs that she @@color:hotpink;enjoys the experience.@@ @@color:lime;Her pussy is now broken in.@@
+	<<set $slaves[$i].devotion += 1>>
+    <<set $slaves[$i].vagina to 1>>
+    <<set $FResult += 2>>
+<<elseif ($slaves[$i].vagina is 0) and ($slaves[$i].devotion gt 4) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+	Her virginity goes to the highest bidder, earning ¤<<print ($beauty*2)>>. Losing her virginity in this way @@color:hotpink;confirms her submission to you.@@ @@color:lime;Her pussy is now broken in.@@
+	<<set $slaves[$i].devotion += 1>>
+    <<set $slaves[$i].vagina to 1>>
+    <<set $FResult += 2>>
+<<elseif ($slaves[$i].vagina is 0) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+	Her virginity goes to the highest bidder, earning ¤<<print ($beauty*2)>>. She tries to resist, and losing her virginity to a rape makes her @@color:mediumorchid;hate@@ and @@color:gold;fear@@ you a great deal. @@color:lime;Her pussy is now broken in.@@
+	<<set $slaves[$i].devotion -= 2>>
+	<<set $slaves[$i].trust -= 2>>
+    <<set $slaves[$i].vagina to 1>>
+    <<set $FResult += 2>>
+<<elseif ($slaves[$i].vagina lt 3) and ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt") and (random(1,100) gt (70+($slaves[$i].vagina*10)))>>
+	@@color:lime;Her pussy gets loosened by the whoring.@@
+	<<set $slaves[$i].vagina += 1>>
+<<elseif $slaves[$i].vagina is 3>>
+<</if>>
+
+<<if ($slaves[$i].anus is 0) and ($slaves[$i].drugs is "extreme aphrodisiacs")>>
+	Her tight little anus goes to the highest bidder, earning ¤<<print ($beauty*2)>>. She's so full of aphrodisiacs that she @@color:hotpink;enjoys the experience.@@ Her fresh asshole is fucked all week, and by the end of it @@color:lime;she won't sit down.@@
+	<<set $slaves[$i].devotion += 1>>
+    <<set $slaves[$i].anus to 2>>
+    <<set $FResult += 2>>
+<<elseif ($slaves[$i].anus is 0) and ($slaves[$i].devotion gt 4)>>
+	Her tight little anus goes to the highest bidder, earning ¤<<print ($beauty*2)>>. The pain and humiliation @@color:hotpink;confirm her submission to you.@@ Her fresh asshole is fucked all week, and by the end of it @@color:lime;she won't sit down.@@
+	<<set $slaves[$i].devotion += 1>>
+    <<set $slaves[$i].anus to 2>>
+    <<set $FResult += 2>>
+<<elseif ($slaves[$i].anus is 0)>>
+	Her tight little anus goes to the highest bidder, earning ¤<<print ($beauty*2)>>. The pain and humiliation increases her @@color:mediumorchid;hatred@@ and @@color:gold;fear@@ for you. Her fresh asshole is fucked all week, and by the end of it @@color:lime;she won't sit down.@@
+	<<set $slaves[$i].devotion -= 1>>
+	<<set $slaves[$i].trust -= 1>>
+    <<set $slaves[$i].anus to 2>>
+    <<set $FResult += 2>>
+<<elseif ($slaves[$i].anus lt 3) and ($slaves[$i].vagina lt 0) and (random(1,100) gt 60)>>
+	@@color:lime;Her asshole sees constant use in place of a pussy and loosens.@@
+	<<set $slaves[$i].anus += 1>>
+<<elseif ($slaves[$i].anus lt 3) and ($slaves[$i].clothes is "chastity") and (random(1,100) gt 60)>>
+	@@color:lime;Her asshole sees constant use in place of her protected pussy and loosens.@@
+	<<set $slaves[$i].anus += 1>>
+<<elseif ($slaves[$i].anus lt 3) and (random(1,100) gt (75+($slaves[$i].anus*10)))>>
+	@@color:lime;Her asshole loosens with constant use.@@
+	<<set $slaves[$i].anus += 1>>
+<<elseif $slaves[$i].anus is 3>>
+<</if>>
+
+<<if ($slaves[$i].devotion lte 4)>>
+<<elseif ($slaves[$i].whoreSkill is 1)>>
+	As an experienced prostitute, she gets a little more money out of customers.
+<<elseif ($slaves[$i].whoreSkill is 2)>>
+	As a hardened prostitute, she gets more money out of customers.
+<<elseif ($slaves[$i].whoreSkill is 3)>>
+	As a veteran prostitute, she makes more money.
+<</if>>
+<<if ($slaves[$i].amp isnot 1)>>
+<<if ($slaves[$i]. whoreSkill is 0)>>
+  <<if random(1,100) lt 40+($slaves[$i].intelligence*10)>>
+	With experience as a prostitute @@color:green;she learns basic street smarts.@@
+  	<<set $slaves[$i]. whoreSkill to 1>>
+  <</if>>
+<<elseif ($slaves[$i]. whoreSkill is 1)>>
+  <<if random(1,100) lt 40+($slaves[$i].intelligence*10)>>
+	With experience as a hooker @@color:green;she gets better at steering clients to more lucrative sex acts.@@
+  	<<set $slaves[$i]. whoreSkill to 2>>
+  <</if>>
+<<elseif ($slaves[$i]. whoreSkill is 2)>>
+  <<if random(1,100) lt 40+($slaves[$i].intelligence*10)>>
+	With experience as a whore @@color:green;she masters squeezing a john for every penny.@@
+  	<<set $slaves[$i].whoreSkill to 3>>
+  <</if>>
+<</if>>
+<</if>>
+
+<<if $slaves[$i].drugs is "extreme aphrodisiacs">>
+	The aphrodisiac cocktail has her so desperately horny that regardless of her personal feelings, she @@color:hotpink;gets off with customers all week.@@ In her drug-addled state she doesn't remember enough to learn sexual skills.
+	<<set $slaves[$i].devotion += 1>>
+<<elseif $slaves[$i].devotion lte 4>>
+  <<if $slaves[$i].trust gte -4>>
+	She tries to refuse being used as a sex slave, so she is restrained for use. She loses a bit of herself to a week of rape, but remembers enough to know @@color:mediumorchid;you're responsible,@@ and @@color:gold;can force her if necessary.@@
+	<<set $slaves[$i].devotion -= 1>>
+	<<set $slaves[$i].trust -= 1>>
+  <<else>>
+	She doesn't show much enthusiasm, but the habit of sexual slavery @@color:hotpink;wears away at her will.@@
+	<<set $slaves[$i].devotion += 1>>
+  <</if>>
+<<elseif ($slaves[$i].oralSkill lt 3)>>
+  <<if random(1,100) lt 40+($slaves[$i].intelligence*10)>>
+	She shows diligence, and with so many cocks to suck, @@color:green;her oral skills improve.@@
+	<<set $slaves[$i].oralSkill += 1>>
+  <</if>>
+<<elseif ($slaves[$i].vaginalSkill lt 3) and ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+  <<if random(1,100) lt 40+($slaves[$i].intelligence*10)>>
+	She shows diligence, and with so many cocks in her, @@color:green;her vaginal skills improve.@@
+	<<set $slaves[$i].vaginalSkill += 1>>
+  <</if>>
+<<elseif ($slaves[$i].analSkill lt 3) and ($slaves[$i].vagina is -1)>>
+  <<if random(1,100) lt 40+($slaves[$i].intelligence*10)>>
+	As a shemale whore she has to take it up the ass constantly, so  @@color:green;her anal skills improve.@@
+	<<set $slaves[$i].analSkill += 1>>
+  <</if>>
+<<elseif ($slaves[$i].analSkill lt 3)>>
+  <<if random(1,100) lt 40+($slaves[$i].intelligence*10)>>
+	She shows diligence, and with so many cocks to take up the ass, @@color:green;her anal skills improve.@@
+	<<set $slaves[$i].analSkill += 1>>
+  <</if>>
+<<elseif $slaves[$i].vaginalSkill is 3>>
+	She's a @@color:aquamarine;sexual master@@, making her a high-class courtesan. She escorts, offers massage, and works as a personal trainer.
+<<elseif ($slaves[$i].analSkill is 3) and ($slaves[$i].oralSkill is 3) and ($slaves[$i].vagina is -1)>>
+	She's a @@color:aquamarine;masterful shemale@@, making her a high-class courtesan. She escorts, offers massage, and works as a personal trainer.
+<</if>>
+
+<<if ($slaves[$i].releaseRules is "restrictive")>>
+	She's a better whore because prostitution is her main sexual outlet.
+<</if>>
+
+<<if $slaves[$i].relation isnot 0>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationTarget>>
+      <<if $slaves[$j].assignment is $slaves[$i].assignment>>
+		Since her $slaves[$j].relation $slaves[$j].slaveName is selling herself too, she earns extra ¤ by working with her.
+		<<if $FSAncientEgyptianRevivalist gt 20>>
+		  Customers are very enthusiastic about being able to participate in properly ancient Egyptian incestous sex.
+		<</if>>
+      <</if>>
+    <</if>>
+  <</for>>
+<</if>>
+<<if $slaves[$i].relationship isnot 0>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].relationshipTarget>>
+      <<if $slaves[$j].assignment is $slaves[$i].assignment>>
+		Her
+        <<if $slaves[$j].relationship lte 1>>
+        	friend
+        <<elseif $slaves[$j].relationship lte 2>>
+        	best friend
+        <<elseif $slaves[$j].relationship lte 3>>
+        	friend with benefits
+        <<elseif $slaves[$j].relationship lte 4>>
+        	lover
+        <<elseif $slaves[$j].relationship gt 4>>
+        	slave wife
+   		<</if>>
+        $slaves[$j].slaveName is also whoring, so she earns a bit more.
+      <</if>>
+    <</if>>
+  <</for>>
+<</if>>
+<<if $slaves[$i].rivalry isnot 0>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].rivalryTarget>>
+      <<if $slaves[$j].assignment is $slaves[$i].assignment>>
+		She earns a little less ¤ due to bickering with $slaves[$j].slaveName.
+      <</if>>
+    <</if>>
+  <</for>>
+<</if>>
+
+<<if $slaves[$i].minorInjury isnot 0>>
+	She attracts fewer people due to her minor injury.
+	<<set $beauty -= 1>>
+<</if>>
+
+<<if $slaves[$i].drugs is "extreme aphrodisiacs">>
+	On such a heavy aphrodisiac dose, she can't wait for each customer to fuck her.
+<<elseif $slaves[$i].drugs is "aphrodisiacs">>
+	On aphrodisiacs, she climaxes with every customer.
+<<elseif $assayedSlave.devotion gt 18>>
+	She's so devoted that she does her best and pleases every customer.
+<<elseif $assayedSlave.devotion gt 10>>
+	She's so devoted that she works hard to please customers.
+<<elseif $assayedSlave.trust lt -4>>
+	She's afraid of you, so she works hard to please customers.
+<<else>>
+	She neither loves nor fears you enough to work hard, and makes a poor whore.
+<</if>>
+
+<<if ($slaves[$i].butt gt 4) and ($slaves[$i].boobs gt 800)>>
+  <<if $FSAssetExpansionist gt 0>>
+	She makes a river of ¤ with her huge, fashionable assets.
+  <<elseif $FSSlimnessEnthusiast gte 20>>
+	She makes no extra ¤ with her large assets since many citizens consider them disgusting.
+  <<else>>
+	She receives extra ¤ for having huge assets.
+  <</if>>
+  <<if $FSGenderRadicalist gt 0>>
+  <<if $slaves[$i].dick gt 0>>
+	The new appetite for stacked whores with dicks makes her especially profitable.
+  <</if>>
+  <</if>>
+<</if>>
+
+<<if ($slaves[$i].boobs lt 500) and ($slaves[$i].butt lt 3) and ($slaves[$i].weight lt 1) and ($slaves[$i].muscles lt 3)>>
+  <<if $FSSlimnessEnthusiast gt 0>>
+	She makes extra ¤ due to her fashionably sleek little body.
+  <<else>>
+	She receives extra ¤ for having a sleek, girlish figure.
+  <</if>>
+<</if>>
+
+<<if ($slaves[$i].boobsImplant is 0) and ($slaves[$i].buttImplant is 0) and ($slaves[$i].waist lt 2) and ($slaves[$i].lipsImplant is 0) and ($slaves[$i].faceImplant lt 2)>>
+  <<if $FSBodyPurist gt 0>>
+	With her all-natural, implant free appearance, she's very profitable.
+  <<elseif $FSTransformationFetishist gte 20>>
+	Customers are disappointed by her all-natural, implant free appearance.
+  <<else>>
+	Some discerning customers appreciate her all-natural, implant free appearance.
+  <</if>>
+<<else>>
+  <<if $FSTransformationFetishist gt 0>>
+	The public is willing to pay more for her augmented body.
+  <</if>>
+<</if>>
+
+<<if ($slaves[$i].clitPiercing gt 2) and ($slaves[$i].devotion gt -4)>>
+	Everyone who likes $slaves[$i].clitSetting sex loves her enthusiasm for sex encouraged by her smart piercing.
+<<elseif ($slaves[$i].clitPiercing gt 2)>>
+	Everyone who likes $slaves[$i].clitSetting sex appreciates her reduced reluctance towards sex encouraged by her smart piercing.
+<</if>>
+
+<<if $slaves[$i].teeth is 1>>
+	The extra attention she receives from her ability to give toothless sucks is balanced out by the customers who are disgusted by it.
+<<elseif $slaves[$i].teeth is 2>>
+	The extra attention she receives from her terrifying mouth of sharp teeth is balanced out by the customers who are scared off by them.
+<</if>>
+
+<<if $slaves[$i].dick isnot 0>>
+<<if $FSGenderFundamentalist is 0>>
+	She sees fewer customers because some prefer whores without cocks, but she is better paid by the ones she sees.
+<<else>>
+	The reinforcement of traditional gender roles has created strong demand for discreet whores with dicks.
+<</if>>
+<</if>>
+
+<<if $slaves[$i].muscles gt 2>>
+  <<if $FSPhysicalIdealist gt 0>>
+	In the new culture of your arcology her muscles make her a very profitable whore.
+  <<else>>
+	Her muscles scare off some customers, but some pay well to enjoy a muscular whore.
+  <</if>>
+<</if>>
+
+<<if $slaves[$i].amp is 1>>
+	Many prefer to fuck a whore with limbs, but some greatly enjoy buying the use of a helpless amputee.
+<</if>>
+
+<<if $slaves[$i].preg gt 10>>
+<<if $FSGenderFundamentalist is 0>>
+	Many customers avoid visibly pregnant whores.
+<<else>>
+	The new respect for traditional gender roles has given many citizens a taste for pregnant whores
+<</if>>
+<</if>>
+
+<<if ($seeRace is 1)>>
+<<if ($slaves[$i].race is "surgically altered to look white") or ($slaves[$i].race is "white")>>
+	Many customers prefer white girls like $slaves[$i].slaveName.
+<</if>>
+<</if>>
+<<if $FSSupremacist gt 0>>
+<<if $slaves[$i].race isnot $FSSupremacistRace>>
+  Some citizens fetishize whores of the servile races.
+<</if>>
+<</if>>
+<<if $FSSubjugationist gt 0>>
+<<if $slaves[$i].race is $FSSubjugationistRace>>
+  Many prefer to use and abuse whores of the proper slave race.
+<</if>>
+<</if>>
+
+<<if $slaves[$i].intelligence gt 0>>
+	Her intelligence gives her an advantage at the business of selling her body.
+<<elseif $slaves[$i].intelligence lt 0>>
+	Her stupidity gives her an handicap at the business of selling her body.
+<</if>>
+
+<<if $slaves[$i].prestige gt 0>>
+	She attracts more attention because it's prestigious to fuck her.
+<</if>>
+
+<<if ($slaves[$i].fetishDiscovered is 1)>>
+<<if ($slaves[$i].fetish is "submissive")>>
+	She receives extra ¤ for her eagerness to submit to customers.
+<<elseif ($slaves[$i].fetish is "likes girls")>>
+	She receives extra ¤ for her eagerness to fuck other whores.
+<<elseif ($slaves[$i].fetish is "cumslut")>>
+	She receives extra ¤ for her enjoyment of her customers' cum.
+<<elseif ($slaves[$i].fetish is "humiliation")>>
+	She receives extra ¤ for her eagerness to be humiliated by customers.
+<<elseif ($slaves[$i].fetish is "buttslut")>>
+	She receives extra ¤ for her obvious enjoyment of buttsex.
+<<elseif ($slaves[$i].fetish is "dom")>>
+	She receives some extra ¤ for her enthusiasm dominating other slaves in group sex.
+<<elseif ($slaves[$i].fetish is "masochist")>>
+	She receives extra ¤ for her obvious enjoyment of pain.
+<<elseif ($slaves[$i].fetish is "sadist")>>
+	She receives some extra ¤ for her willingness to abuse other slaves.
+<<elseif ($slaves[$i].fetish is "mindbroken")>>
+	She receives less ¤ because she just lies there, mind broken.
+<<elseif ($slaves[$i].fetish is "pregnancy") and ($slaves[$i].vagina gt 0) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+	As an impregnation fetishist she's very enthusiastic about vaginal sex.
+<<elseif ($slaves[$i].fetish is "nympho")>>
+	As a nymphomaniac she enjoys sex with everyone and is wildly successful.
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].behavioralQuirk is "arrogant")>>
+	She receives less ¤ because she treats clients like they are beneath her dignity.
+<<elseif ($slaves[$i].behavioralQuirk is "bitchy")>>
+	She receives less ¤ because she makes cutting remarks to clients.
+<<elseif ($slaves[$i].behavioralQuirk is "quirky")>>
+	She receives less ¤ because clients are annoyed by her quirky behavior.
+<</if>>
+<<if ($slaves[$i].sexualQuirk is "hates oral")>>
+	She receives less ¤ because she tries to avoid sucking cock.
+<<elseif ($slaves[$i].sexualQuirk is "hates anal")>>
+	She receives less ¤ because she tries to avoid taking it up the ass.
+<<elseif ($slaves[$i].sexualQuirk is "hates penetration")>>
+	She receives less ¤ because she tries to avoid getting fucked.
+<<elseif ($slaves[$i].sexualQuirk is "hates men")>>
+	She receives less ¤ because she can't conceal her distaste for men.
+<<elseif ($slaves[$i].sexualQuirk is "hates women")>>
+	She receives less ¤ because she can't conceal her distaste for women.
+<</if>>
+
+<<if ($slaves[$i].sexualQuirk is "none")>>
+<<if $slaves[$i].devotion lt 10>>
+<<if random(1,100) gt 70>>
+<<if ($slaves[$i].vaginalSkill lt 2) and ($slaves[$i].vagina isnot -1) and ($slaves[$i].vaginalAccessory isnot "chastity belt")>>
+	After being fucked too hard too often, she now @@color:red;dislikes being penetrated.@@
+	<<set $slaves[$i].sexualQuirk to "hates penetration">>
+<<elseif ($slaves[$i].analSkill lt 2)>>
+	After so much anal pain, she now @@color:red;dislikes being buttfucked.@@
+	<<set $slaves[$i].sexualQuirk to "hates anal">>
+<<elseif ($slaves[$i].oralSkill lt 2)>>
+	After one too many facials, she now @@color:red;dislikes sucking cock.@@
+	<<set $slaves[$i].sexualQuirk to "hates oral">>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+In total, you were paid @@color:yellowgreen;¤<<print Math.trunc($beauty*$FResult)>>@@ for the use of $slaves[$i].slaveName's body this week.
+
+<<if ($slaves[$i].vaginalAccessory isnot "chastity belt") and ($slaves[$i].vagina isnot -1) and ($slaves[$i].clit gt 1)>>
+	<<set $slaves[$i].oralCount += Math.trunc($beauty*0.3)>>
+	<<set $oralTotal += Math.trunc($beauty*0.3)>>
+	<<set $slaves[$i].vaginalCount += Math.trunc($beauty*0.2)>>
+	<<set $vaginalTotal += Math.trunc($beauty*0.2)>>
+	<<set $slaves[$i].analCount += Math.trunc($beauty*0.3)>>
+	<<set $analTotal += Math.trunc($beauty*0.3)>>
+	<<set $slaves[$i].mammaryCount += Math.trunc($beauty*0.1)>>
+	<<set $mammaryTotal += Math.trunc($beauty*0.1)>>
+	<<set $slaves[$i].penetrativeCount += Math.trunc($beauty*0.1)>>
+	<<set $penetrativeTotal += Math.trunc($beauty*0.1)>>
+<<elseif ($slaves[$i].vaginalAccessory isnot "chastity belt") and ($slaves[$i].vagina isnot -1) and ($slaves[$i].dick gt 0) and ($slaves[$i].balls gt 0) and ($slaves[$i].hormones lt 1)>>
+	<<set $slaves[$i].oralCount += Math.trunc($beauty*0.3)>>
+	<<set $oralTotal += Math.trunc($beauty*0.3)>>
+	<<set $slaves[$i].vaginalCount += Math.trunc($beauty*0.2)>>
+	<<set $vaginalTotal += Math.trunc($beauty*0.2)>>
+	<<set $slaves[$i].analCount += Math.trunc($beauty*0.3)>>
+	<<set $analTotal += Math.trunc($beauty*0.3)>>
+	<<set $slaves[$i].mammaryCount += Math.trunc($beauty*0.1)>>
+	<<set $mammaryTotal += Math.trunc($beauty*0.1)>>
+	<<set $slaves[$i].penetrativeCount += Math.trunc($beauty*0.1)>>
+	<<set $penetrativeTotal += Math.trunc($beauty*0.1)>>
+<<elseif ($slaves[$i].vagina is -1) and ($slaves[$i].dick gt 0) and ($slaves[$i].balls gt 0) and ($slaves[$i].hormones lt 1)>>
+	<<set $slaves[$i].oralCount += Math.trunc($beauty*0.3)>>
+	<<set $oralTotal += Math.trunc($beauty*0.3)>>
+	<<set $slaves[$i].analCount += Math.trunc($beauty*0.4)>>
+	<<set $analTotal += Math.trunc($beauty*0.4)>>
+	<<set $slaves[$i].mammaryCount += Math.trunc($beauty*0.1)>>
+	<<set $mammaryTotal += Math.trunc($beauty*0.1)>>
+	<<set $slaves[$i].penetrativeCount += Math.trunc($beauty*0.2)>>
+	<<set $penetrativeTotal += Math.trunc($beauty*0.2)>>
+<<elseif ($slaves[$i].vaginalAccessory isnot "chastity belt") and ($slaves[$i].vagina isnot -1)>>
+	<<set $slaves[$i].oralCount += Math.trunc($beauty*0.3)>>
+	<<set $oralTotal += Math.trunc($beauty*0.3)>>
+	<<set $slaves[$i].vaginalCount += Math.trunc($beauty*0.3)>>
+	<<set $vaginalTotal += Math.trunc($beauty*0.3)>>
+	<<set $slaves[$i].analCount += Math.trunc($beauty*0.3)>>
+	<<set $analTotal += Math.trunc($beauty*0.3)>>
+	<<set $slaves[$i].mammaryCount += Math.trunc($beauty*0.1)>>
+	<<set $mammaryTotal += Math.trunc($beauty*0.1)>>
+<<else>>
+	<<set $slaves[$i].oralCount += Math.trunc($beauty*0.4)>>
+	<<set $oralTotal += Math.trunc($beauty*0.4)>>
+	<<set $slaves[$i].analCount += Math.trunc($beauty*0.5)>>
+	<<set $analTotal += Math.trunc($beauty*0.5)>>
+	<<set $slaves[$i].mammaryCount += Math.trunc($beauty*0.1)>>
+	<<set $mammaryTotal += Math.trunc($beauty*0.1)>>
+<</if>>
+
+<<set $cash += Math.trunc($beauty*$FResult)>>
+
+<</nobr>>\

@@ -1,0 +1,62 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> comes into your office and politely waits until you indicate she can have your attention. <<if ($activeSlave.mute is 1)>>She comically pantomimes anal sex, and then uses gestures to ask if she can serve you anally.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She lisps, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, tho many of the other thlaveth get buttfucked. I think ith kinda hot, and I feel almotht wrong not taking cock in all my holeth. Pleathe take my butt, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<else>>She says, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I see so many of the other slaves geting buttfucked. I think it's hot seeing them take it up the ass, and I feel almost incomplete since I don't take cock in every hole. Please take my butt virginity, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."<</if>> She turns around and wiggles her posterior indicatively.
+\
+<span id="result">
+<<click "No, reassure her that she doesn't need to be an anal slut">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You kindly explain that you've decided to save her ass - for now. She starts to express understanding and apologize for bothering you, but finds herself swept off her <<if $activeSlave.amp is 1>>stumps<<else>>feet<</if>> and deposited on the couch. She gasps with surprise when she finds herself being teased, fondled, and massaged rather than outright used. In no time at all she's pressing her whole body against you and shivering with delight. <<if $activeSlave.vagina gt 0>>Her shivers reach a crescendo when you <<if ($PC.dick is 0)>>scissor yourself against<<else>>enter<</if>> her warm, wet pussy, which convulsively flexes against your <<if ($PC.dick is 0)>>clit<<else>>rock hard dick<</if>>.<<else>><<if ($PC.dick is 0)>>You ride her face,<<else>>You use the space between her thighs,<</if>> lavishing attention on her nipples to share the pleasure.<</if>> She leaves your office feeling @@color:hotpink;very close to <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> indeed,@@ and seems to have forgotten her unfucked butthole for now.
+	<<set $activeSlave.devotion += 1>>
+	<<if $activeSlave.vagina gt 0>>
+	  <<set $activeSlave.vaginalCount += 1>>
+	  <<set $vaginalTotal += 1>>
+	<</if>>
+    <</replace>>
+<</click>>
+<<click "Make sure her first anal sex is enjoyable">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You bring her over to the couch, set her on your lap, and teasingly play with her body for a long time. Every so often you graze a finger over her unfucked butthole, making her shiver and press herself against you, but you only make it the center of attention once the poor over-aroused slave <<if ($activeSlave.mute is 1)>>begins to use piteous gestures to beg you abjectly for anal.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>lisps, "I can't take it any more, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>! Pleathe uthe my athole!"<<else>>begs, "I can't take it any more, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>! Please fuck my ass!"<</if>> In reward, you sink a lightly lubricated finger up to the first knuckle in her delightfully tight asshole. She's already on the edge of orgasm, and it takes a long, long time for you to work first a finger, then two, and then your <<if ($PC.dick is 0)>>strap-on<<else>>cock<</if>> up her ass without sending her over. When you finally let her orgasm <<if ($PC.dick is 0)>>her unabashed enjoyment<<else>>the strength of her spasming sphincter<</if>> sends you over as well. She's left in a haze of @@color:hotpink;sexual satisfaction@@ that radiates outward from her @@color:lime;newly stretched asshole,@@ and she @@color:mediumaquamarine;trusts you@@ a lot more, now.
+	<<if ($activeSlave.fetishDiscovered isnot 1) or (($activeSlave.fetish isnot "nympho") and ($activeSlave.fetish isnot "buttslut"))>>
+	  Before the end of the week she's back, begging for @@color:pink;another dick up the ass.@@
+	  <<set $activeSlave.fetishDiscovered to 1>>
+	  <<set $activeSlave.fetish to "buttslut">>
+	<</if>>
+	<<set $activeSlave.devotion += 0.5>>
+	<<set $activeSlave.trust += 0.5>>
+	<<set $activeSlave.anus to 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Make sure her first buttfuck puts her in her place">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You throw her onto the couch facedown, catching a glimpse of her doubtful face as she goes; she's already started to wonder whether this was a mistake. In a few moments she knows it for sure as she feels the burning sensation of a lubricated <<if ($PC.dick is 0)>>strap-on<<else>>dickhead<</if>> forcing her virgin sphincter wide. Whatever noises she might be making are pretty inaudible, since you have her sobbing face shoved deep between the leather cushions. She tries not to struggle and relax for her beloved master, but her body rebels against the pain and she starts to wriggle spastically, trying to burrow into the couch to get away from the pounding. When you finish, the poor slave is left lying on the couch with <<if ($PC.dick is 0)>>a<<else>>a thin dribble of ejaculate escaping from her<</if>> @@color:lime;newly fucked butthole,@@ a stream of drying tears running down each side of her face,<<if $activeSlave.dick gt 0>> a single drop of precum at the tip of her totally flaccid dick,<</if>> and a new understanding of @@color:gold;her place in life.@@
+	<<if ($activeSlave.fetishDiscovered isnot 1) or (($activeSlave.fetish isnot "nympho") and ($activeSlave.fetish isnot "submissive"))>>
+	  Before the end of the week it's clear that she's taken the anal rape to heart, and now sees her body as something @@color:pink;for others to use and abuse.@@
+	  <<set $activeSlave.fetishDiscovered to 1>>
+	  <<set $activeSlave.fetish to "submissive">>
+	<</if>>
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.anus to 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+</span>

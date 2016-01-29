@@ -1,0 +1,49 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> comes before you naked for a routine inspection. You take particular care to examine her massive breasts; since they've grown so large it's necessary to check for unsightly veins, stretch marks, and the like. You note her big nipples with appreciation. Since her breasts are so enormous and completely free of implants, they're quite saggy. When she stands, her nipples face out and down. As you inspect her with your hands, she <<if ($activeSlave.mute is 1)>>breathes a little harder and looks like she would speak, were she not mute.<<elseif ($activeSlave.lips gt 2)>>murmurs through her huge lips, "Dat feelth good, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>murmurs through her piercings, "Dat feelth good, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<else>>murmurs, "That feels really nice, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."<</if>>
+\
+<span id="result">
+<<click "Give her a nice massage">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You sit on the couch next to your desk and pat your thighs. She smiles and comes over, lowering herself <<if ($PC.dick is 0)>>into your lap<<else>>onto your member<</if>> without hesitation. You help her get comfortable and instead of <<if ($PC.dick is 0)>>grinding<<else>>thrusting<</if>> or telling her to ride, you just sit there with her in your lap, gently massaging her massive tits. They get sore from swinging around as she moves, works, and fucks, and soon she's groaning with pleasure at the attention. You finally manage to bring her to orgasm with almost nothing but delicate stimulation of her nipples. @@color:mediumaquamarine;She has become more trusting of you.@@
+	<<set $activeSlave.trust += 1>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+    <</replace>>
+<</click>>
+<<click "Use her so they swing around">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You tell her to kneel on the smooth floor. She knows this means doggy style, so she compliantly arches her back and cocks her hips to offer herself to you. You<<if ($PC.dick is 0)>> don a strap-on and<</if>> enter <<if ($activeSlave.vagina is -1)>>her trap ass<<else>>her pussy<</if>> without preamble and seize her hips. She braces herself, knowing what's coming, but soon she discovers a new disadvantage to her pendulous breasts: as you pound her hard, her long nipples frequently brush against the floor, causing her to wince and buck. <<if ($activeSlave.dick gt 0)>>Her cock doesn't help, either, flopping around half-erect as she vacillates between pain and arousal. <<elseif ($activeSlave.clit gt 2)>>Her huge clit doesn't help, either, flopping around half-erect as she vacillates between pain and arousal. <</if>><<if ($activeSlave.vagina gt -1)>>When you switch to her ass, the shallower strokes give her nipples a bit of respite. <</if>> You finish with a particularly hard thrust <<if ($PC.dick is 0)>>and shake with climax<<else>>to spill your seed deep inside her butt<</if>>, ramming forward hard enough to spill her down onto her bosom. As you rise, her discomfited form is a pretty sight, with her breasts squashed against the floor and her well fucked butt lewdly relaxed. @@color:hotpink;She has become more submissive.@@
+	<<set $activeSlave.devotion += 1>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+    <<display "Simple VCheck">>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+</span>

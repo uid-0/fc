@@ -1,0 +1,48 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<set $activeSlave to $Collectrix>>
+
+<</nobr>>\
+\
+Your collectrix <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> worked hard today. She's clearly exhausted, but she seems to think it below her to show the fatigue. She holds her chin level and her shoulders square as she heads to the bathroom to bathe before bed. After her shower, she inspects her crotch closely before appearing to start masturbating. On closer inspection, however, she's very gently massaging analgesic lotion into her cock, wincing a little as she does so. She starts a little when you enter the room, but relaxes when you tell her to continue her ministrations and let you know how she's feeling as she does.
+
+<<if ($activeSlave.mute is 1)>>She indicates in amusingly graphic gestures that her dick is sore. She painstakingly counts on her fingers, letting you know that she's fucked <<print $collectionFacilitySlaves>> assholes today, most of them more than once.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, Ah've fucked a lot of butth today. There'th <<print $collectionFacilitySlaves>> thlaveth in the fathility, and ah fucked em all up the butt at leatht onthe. Motht of them more than onthe. My poor cock ith a little thore, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she lisps.<<else>>"<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I've fucked a lot of assholes today. There's <<print $collectionFacilitySlaves>> slaves in the facility, and I fucked them all up the butt at least once. Most of them more than once. My poor cock is a little sore, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>," she says.<</if>> With so many slaves getting cockmilked in the collection facility, she certainly has to work hard to make sure none of them go unpenetrated.
+\
+<span id="result">
+<<click "Use her ass as she looks after herself">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Wordlessly, you<<if ($PC.dick is 0)>> don a strap-on and<</if>> come up behind her; the first thing to touch her is <<if ($PC.dick is 0)>>the phallus<<else>>your rapidly hardening dick<</if>>, which pokes against <<if $activeSlave.height gt 0>>right up against her asshole, since she's nice and tall enough for standing anal. She gasps a little and angles her hips to accept your cock.<<else>>her lower back, since she's shorter than you. She gasps a little and hikes herself up on tiptoe to accept your cock.<</if>> As she feels you slide into her body she whimpers with devotion, turning her upper body so she can kiss her <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> while he sodomizes her. <<if ($activeSlave.mute is 1)>>She uses gestures to thank you for making her feel like the milkers do.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Tho thith ith how it feelth when I do them," she whispers.<<else>>"So this is how it feels when I do them," she whispers.<</if>> She uses the lotion to masturbate while she takes it, wincing whenever she loses control and squeezes her sore cock too hard. When you're done she sinks to the bathroom floor in a boneless pool of @@color:hotpink;satisfied sexual exhaustion,@@ dripping ejaculate from her front<<if ($PC.dick is 0)>><<else>> and back<</if>>.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $Collectrix.ID == $slaves[$i].ID>>
+		<<set $slaves[$i] to $activeSlave>>
+		<<set $Collectrix to $activeSlave>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>>
+<<click "Help her with her duties">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	$activeSlave.slaveName is surprised to find you in the collection facility when she gets there the next morning. Since you're already <<if ($PC.dick is 0)>>using a strap-on to fuck<<else>>balls deep in<</if>> a whining milker's ass, she understands immediately that you're there to help. She's @@color:hotpink;gratified,@@ and does her best to make sure you have a good time. With so many slaves physically restrained to make their backdoors available, it's hard not to. $activeSlave.slaveName does her best to use a slave next to you so she can be available for extra amusement at all times as the two of you sodomize away.
+	<<set $activeSlave.devotion += 1>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $Collectrix.ID == $slaves[$i].ID>>
+		<<set $slaves[$i] to $activeSlave>>
+		<<set $Collectrix to $activeSlave>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>>
+</span>

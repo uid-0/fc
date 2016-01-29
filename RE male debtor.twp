@@ -1,0 +1,42 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+	<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate XY Slave">>
+<<set $activeSlave.origin to "She was enslaved after she fell into debt to you.">>
+<<set $activeSlave.devotion to random(-9,-5)>>
+<<set $activeSlave.trust to random(-3,0)>>
+<<set $activeSlave.age to random(18,30)>>
+<<set $activeSlave.hlength to either("very short", "short")>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+One of the tenants in your arcology has not paid rent in some time. In the Free Cities, debtors may be enslaved once their debt reaches a fair price for their enslavement. Your tenant has reached this point. He comes to see you, despondent; you are disappointed to see that he is male, since biologically male slaves do not command good prices.
+
+//You could enslave him and immediately force him into the remote surgery for cosmetic alteration to look more female. This would cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Transform him, then enslave her">>
+	<<set $slaves.push($activeSlave)>>
+<<set $nextLink to "AS Dump">>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	To avoid fuss, you simply order him to take a pill once the legalities of enslavement are complete. He does, and it knocks him out. The remote surgery successfully transforms her. Once she wakes, she is naturally horrified and furious with you; where there was once a young man there is now a slim, flat-chested sex slave with a vague, androgynous appearance and a flaccid dick.
+	<<set $nextLink to "AS Dump">>\
+	<<set $returnTo to "RIE Eligibility Check">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

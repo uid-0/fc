@@ -1,0 +1,24 @@
+<<nobr>>
+
+<<set $nextButton to "Back">>
+<<set $nextLink to "Slave Interact">>
+
+<<set $impregnatrix to 0>>
+<<set $eligibility to 0>>
+
+//$activeSlave.slaveName is fertile; now you must select a slave with both a penis and testicles.//
+
+<</nobr>>
+
+__Select an eligible slave to serve as the semen donatrix:__
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if ($slaves[$i].dick gt 0) and ($slaves[$i].balls gt 0)>>\
+<<if ($slaves[$i].ID isnot $activeSlave.ID)>>\
+	<<print "[[$slaves[$i].slaveName|FSlaveImpreg Consummate][$impregnatrix to $slaves[" + $i + "]]]">>
+	<<set $eligibility to 1>>\
+<</if>>\
+<</if>>\
+<</for>>\
+<<if ($eligibility is 0)>>\
+	//You have no slaves capable of inseminating others.//
+<</if>>\

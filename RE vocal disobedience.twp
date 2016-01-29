@@ -1,0 +1,52 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+One morning, despite the fact that she is not allowed to speak without being spoken to, <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> looks you directly in the eye and asks <<if ($activeSlave.lips gt 2)>>boldly through her massive dick-sucking lips, "Ahm tired, can ah have the dah off?"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>boldly through her inconvenient oral piercings, "Ahm tired, can ah have the dah off?"<<else>>boldly, "I'm tired, can I have the day off?"<</if>> She didn't even call you <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>.
+\
+<span id="result">
+<<click "Give her a rough spanking">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<if ($activeSlave.amp isnot 1)>>You tie the protesting slave to your desk so that her chest is against the top of the desk and she's standing upright with her ass in the air.<<else>>You place the protesting, defenseless torso on your desk, face down.<</if>> You spank her severely, leaving her buttocks bright pink. She must count the strokes or have her punishment start over. Sobbing, she counts <<if ($activeSlave.lips gt 2)>>through her massive dick-sucking lips, "Six, UUHHH, Seben, UUHHH, Seben"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>through her inconvenient oral piercings, "Six, UUHHH, Seben, UUHHH, Seben"<<else>>"Six, AAGHHH, Seven, AAGHHH, Seven"<</if>> and then realizes her mistake and begs for mercy - in vain, of course. You finish her off with a rough fuck, with her jerking against her restraints every time you stroke into her sore buttocks. @@color:gold;She learns from the experience.@@
+	<<set $activeSlave.trust -= 1>>
+    <</replace>>
+<</click>>
+<<click "Sentence her to public use">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	When she sees she's being taken to a sex booth, she begins to cry. She begs <<if ($activeSlave.lips gt 2)>>through her massive dick-sucking lips, "Peese, no, mathter, Ah'll be good-"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>through her inconvenient oral piercings, "Peese, no, mathter, Ah'll be good-"<<else>>through her tears, "Please, no, master, I'll be good-"<</if>> but is cut off when the machine closes around her head. It will offer her ass and pussy to anyone who pays for the rest of the week, and keep her fed and cleaned. Her world will become nothing but silent, featureless darkness and dick. You earn some money off her, and by the end of the night her holes get well stretched. @@color:hotpink;She learns from the experience.@@<<if $activeSlave.vagina is 0>>@@color:lime; She's lost her virginity.@@<<set $activeSlave.vagina += 1>><<elseif $activeSlave.vagina gt -1>><<set $activeSlave.vagina += 1>><</if>>  <<if $activeSlave.anus is 0>>@@color:lime; She's lost her anal cherry.@@<</if>>
+	<<set $activeSlave.anus += 1>>
+	<<set $activeSlave.devotion += 1>>
+    <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+    	<<set $activeSlave.vaginalCount += 10>>
+		<<set $vaginalTotal += 10>>
+    	<<set $activeSlave.analCount += 10>>
+		<<set $analTotal += 10>>
+    <<else>>
+    	<<set $activeSlave.analCount += 20>>
+		<<set $analTotal += 20>>
+    <</if>>
+	<<set $cash += 50>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<<click "Give her the day off">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She skips away happily and spends the rest of the day lounging around. Her obedience to you @@color:mediumorchid;has decreased.@@
+	<<set $activeSlave.devotion -= 1>>
+    <</replace>>
+<</click>>
+</span>

@@ -1,0 +1,69 @@
+<<nobr>>
+
+<<set $activeSlave.devotion -= 0.7>>
+<<if ($activeSlave.trust gt 2)>>
+  <<set $slaves[$i].trust -= 0.7>>
+<<else>>
+  <<set $slaves[$i].trust -= 1>>
+<</if>>
+
+<<if ($activeSlave.devotion lt -24)>>
+	$activeSlave.slaveName violently resists you whenever she can. This cannot be permitted, so after a particularly severe bout of physical resistance, you decide to employ an old method of breaking a mind without damaging a body. You secure her to a board and gently wash her face with a wet cloth. She spits defiance, only to be surprised when you lower the board so that her feet are higher than her head. You tie the cloth around her face. A thin stream of water onto the cloth produces all the feeling and none of the reality of a slow death by drowning. Waterboarding isn't much use for extracting information, but it works well for @@color:gold;slavebreaking.@@
+
+<<elseif ($activeSlave.devotion lt -20)>>
+	$activeSlave.slaveName is really wild and stern measures must be taken. So, she is forced, struggling and screaming, into a latex suit that completely blinds, deafens, and immobilizes her. So attired, the only places where she can feel any sensations at all other than endless latex darkness are her <<if ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>pussy, cock<<elseif ($activeSlave.dick isnot 0)>>cock<<else>>pussy<</if>> and backdoor. For her, time becomes a featureless, torturous boredom broken only by occasional rape. Eventually, she becomes so desperate for something, anything, to break the monotony that she begins to @@color:hotpink;look forward@@ to the next time a phallus will @@color:gold;force@@ its way into her.
+	<<set $activeSlave.devotion -= 0.7>>
+	<<if ($activeSlave.vagina is -1)>>
+		<<set $slaves[$i].analCount += 6>>
+		<<set $analTotal += 6>>
+    <<else>>
+		<<set $slaves[$i].analCount += 3>>
+		<<set $analTotal += 3>>
+		<<set $slaves[$i].vaginalCount += 3>>
+		<<set $vaginalTotal += 3>>
+    <</if>>
+    
+<<elseif ($activeSlave.devotion lt -15) and ($activeSlave.hlength isnot "shaved bald") and (random(1,100) gt 90)>>
+	$activeSlave.slaveName needs to be taken down a peg. Fortunately, you know just the thing. You bring her into a bathroom, place a chair in the tub, and tie her securely to the chair. She isn't too perturbed - she probably expects a face fuck under running water or something like that - but she begins to cry when she hears you switch on an electric shaver. She luxuriates in her hair, flaunting it every chance she gets; it's something of value in a bleak slave world and she sobs as you shave it off her. Afterward, she sniffles and @@color:gold;looks at you in fear@@ and @@color:mediumorchid;unhappiness@@ when you rub her newly bald scalp. Of course, there's always the body modification studio of you ever feel like she's earned her hair back.
+    <<set $activeSlave.hlength to "shaved bald">>
+    
+<<elseif (random(1,100) lt 10) and ($activeSlave.anus gt 0)>>
+	Sometimes, there's no need to be clever. The first indication she gets that you've decided to train her this week is when she wakes suddenly in the middle of the night to the burning sensation of a cock being shoved up her ass. Not knowing what is happening, she struggles, but since she was already lying in her bed you just lie on top of her and press her wriggling body into the sheets as you assrape her. For the rest of the week, she finds herself grabbed and fucked. She can't help but @@color:gold;become used to abuse@@ despite her @@color:mediumorchid;resentment.@@
+	<<if ($activeSlave.vagina is -1)>>
+		<<set $slaves[$i].analCount += 6>>
+		<<set $analTotal += 6>>
+    <<else>>
+		<<set $slaves[$i].analCount += 3>>
+		<<set $analTotal += 3>>
+		<<set $slaves[$i].vaginalCount += 3>>
+		<<set $vaginalTotal += 3>>
+    <</if>>
+    
+<<else>>
+	You bind her securely to a special chair in your office. Yours is a busy week, with a lot of business interviews, so whenever the interviewee has pleased you, you offer him or her the use of the poor slave's body on the way out. The chair is specially designed so that the seat, back and armrests can rotate vertically relative to the ground, so her body can be spun to make any of her holes convenient. Fortunately, it also has a pan beneath it to stop the generous stream of ejaculate and lubricant that drips from her from besmirching the floor. She can't help but @@color:gold;become used to abuse@@ despite her @@color:mediumorchid;resentment.@@
+	<<if ($activeSlave.vagina is -1)>>
+		<<set $slaves[$i].analCount += 10>>
+		<<set $analTotal += 10>>
+    <<else>>
+		<<set $slaves[$i].analCount += 5>>
+		<<set $analTotal += 5>>
+		<<set $slaves[$i].vaginalCount += 5>>
+		<<set $vaginalTotal += 5>>
+    <</if>>
+<</if>>
+
+<<if ($activeSlave.trust lt -4) and ($activeSlave.fetishDiscovered is 0)>>
+	She is now fully broken; @@color:yellow;her training assignment has defaulted to exploring her sexuality.@@
+	<<set $trainingRegimen to "explore her sexuality">>
+<<elseif ($activeSlave.trust lt -4)>>
+	She is now fully broken; @@color:yellow;her training assignment has defaulted to fostering devotion.@@
+	<<set $trainingRegimen to "build her devotion">>
+<<elseif ($activeSlave.devotion gt 4) and ($activeSlave.fetishDiscovered is 0)>>
+	She is now obedient and attentive; @@color:yellow;her training assignment has defaulted to exploring her sexuality.@@
+	<<set $trainingRegimen to "explore her sexuality">>
+<<elseif ($activeSlave.devotion gt 4)>>
+	She is now obedient and attentive; @@color:yellow;her training assignment has defaulted to fostering devotion.@@
+	<<set $trainingRegimen to "build her devotion">>
+<</if>>
+
+<</nobr>>\

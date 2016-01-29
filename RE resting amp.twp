@@ -1,0 +1,41 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+You're working at your desk late at night when the arcology's systems discreetly highlight significant movement in the slave quarters. <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>'s limbless torso is in bed, asleep but struggling in discomfort. Without arms or legs, it seems the sheet has become wrapped around her. She's dreaming of something sexual; <<if ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0)>>she can't maintain an erection but her limp dick sports a drop of precum.<<elseif  ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>she can't maintain an erection but her limp dick sports a drop of precum.<<elseif $activeSlave.dick gt 4>>her massive erection is tenting the sheet.<<elseif $activeSlave.dick gt 2>>her erection is tenting the sheet.<<elseif $activeSlave.dick gt 0>>her pathetic little erection is tenting the sheet.<<else>>her pussy has left a moist spot on the sheet.<</if>> As you watch, her sleeping struggles against the sheet <<if $activeSlave.boobs gte 800>>and her smothering tits<<elseif $activeSlave.butt gt 5>>and her gigantic ass<<else>>and her limblessness<</if>> finally leave her lying naked on her pad. After a few moments, she begins to shiver convulsively.
+\
+<span id="result">
+<<click "Check on her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Since she's limbless, her health is more fragile than most slaves'. You look in on her, and when she continues to shiver, you pull the sheets back around her, tucking her in in such a way that she can lie comfortably. In the morning she doesn't understand why she's so snug and well-rested, but @@color:green;her health improves with decent sleep.@@
+	<<set $activeSlave.health += 1>>
+    <</replace>>
+<</click>>
+<<click "Keep her warm">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You spoon her gently from behind, spending the night sleeping with her limbless torso cradled in your arms. She snuggles against you in her sleep, enjoying the animal warmth. When she wakes in the morning, she is surprised to see that it's you keeping her company, but after a few moments' confusion she accepts the unlooked-for comfort and goes back to sleep. @@color:hotpink;She has become more trusting of you.@@
+	<<set $activeSlave.trust += 1>>
+    <</replace>>
+<</click>>
+<<click "Leave her be">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	In the morning, her lips are blue and she's nearly unresponsive. Your other slaves get her working again, but @@color:red;her health has been damaged.@@
+	<<set $activeSlave.health -= 1>>
+    <</replace>>
+<</click>>
+</span>

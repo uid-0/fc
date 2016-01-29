@@ -1,0 +1,114 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Free Cities Justice">>
+
+<<set $contractCost to 1000>>
+
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "You sentenced her to enslavement as a punishment for suspected escapism.">>
+<<set $activeSlave.career to "suspected former slave">>
+<<set $activeSlave.devotion to random(-15,-11)>>
+<<set $activeSlave.trust to random(-3,0)>>
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.health to random(-8,-7)>>
+<<set $activeSlave.heels to 1>>
+<<set $activeSlave.boobs += 100*random(12,32)>>
+<<set $activeSlave.butt += random(2,4)>>
+<<set $activeSlave.anus to 1>>
+<<if $activeSlave.dick is 0>>
+	<<set $activeSlave.balls to 0>>
+	<<set $activeSlave.vagina to 2>>
+	<<set $activeSlave.vaginalSkill to 1>>
+<<else>>
+	<<set $activeSlave.dick to random(4,5)>>
+	<<set $activeSlave.balls to random(0,2)>>
+	<<set $activeSlave.ovaries to 0>>
+	<<set $activeSlave.clit to 0>>
+	<<set $activeSlave.vaginalSkill to 0>>
+<</if>>
+<<set $activeSlave.oralSkill to 0>>
+<<set $activeSlave.analSkill to 0>>
+<<set $activeSlave.whoreSkill to 0>>
+<<set $activeSlave.sexualQuirk to "hates men">>
+<<set $activeSlave.behavioralQuirk to "quirky">>
+
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+Your personal assistant alerts you that a criminal has been detected by your security systems and detained by the drones. Crime is extremely uncommon in your arcology, since nothing can escape the notice of the omnipresent monitoring systems. This is a simple case of vagrancy; sleeping on the streets (due to penury rather than inebriation) breaks an implicit contract all visitors to the arcology sign by coming here. The criminal is anything but usual, however. She bears signs of extreme hormone manipulation over a long period, and has had her Achilles tendons clipped. Camera records show her crawling in with a cargo shipment. She's clad in rags, and you cannot find any record of her anywhere. The growing crowd is convinced she's an escaped slave, and is growing ugly.
+
+//Applying enslavement as punishment will cost ¤$contractCost. Doing so and then selling her immediately will bring in approximately ¤$slaveCost.//
+
+<<set $saleDescription to 1>>\
+<<display "Long Slave Description">>\
+<<set $saleDescription to 0>>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave the poor girl">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You complete the legalities and biometric scanning quickly and without fuss. She remains limp throughout the process, only recovering enough to barely grasp the situation as she is enslaved.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<click "Sentence her to a day in the stocks, then enslave her">>
+	<<set $activeSlave.health -= 1>>
+	<<set $activeSlave.behavioralQuirk to "quirky">>
+	<<set $activeSlave.sexualQuirk to "hates men">>
+	<<set $activeSlave.anus to 2>>
+	<<if $activeSlave.vagina gt -1>>
+	  <<set $activeSlave.vagina to 2>>
+	  <<if random(1,100) gt 60>>
+		<<set $activeSlave.preg to 1>>
+	  <</if>>
+	<</if>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You declare her holes fair game for the entire arcology, so that all free citizens can own her for a moment, if they wish. She spends a torturous day in the stocks before being hauled in for enslavement, somewhat @@color:red;the worse for wear@@ and @@color:red;acting oddly@@ due to her ordeal, bruises all over her body, cum leaking from her @@color:lime;loosened@@ anus<<if $activeSlave.vagina gt -1>> and @@color:lime;fucked-out@@ pussy<</if>>. The public @@color:green;enjoys the fun.@@
+	<<set $rep += 100>>
+	<<set $nextLink to "AS Dump">>
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<if $arcade gt 0>>\
+<<click "Enslave her and sentence her to a month in the arcade">>
+	<<set $activeSlave.assignment to "be confined in the arcade">><<set $activeSlave.assignmentVisible to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+	<<set $activeSlave.sentence to 4>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You complete the legalities and biometric scanning quickly, and tell the crowd that her holes will be available at the arcade within the hour. The public @@color:green;looks forward@@ to seeing her there, angrily suspecting her of being an escapee and glad that they'll be able to take part in her punishment.
+	<<set $rep += 50>>
+	<<set $nextLink to "AS Dump">>
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<</if>>\
+<<click "Punitively amputate her limbs, and then enslave her">>
+	<<set $activeSlave.health -= 2>>
+	<<set $activeSlave.amp to 1>>
+	<<set $activeSlave.heels to 0>>
+	<<set $activeSlave.behavioralQuirk to "quirky">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    An example must be made. If she escaped once with her tendons clipped, she must be rather talented at it. It remains to be seen if she can manage to escape with nor arms and legs, so you announce her sentence to the crowd and send her unconcious form for reduction. Of course, @@color:red;her health is affected.@@ The public @@color:green;approves of this harshness,@@ believing that you have taken strong measures against escapees.
+	<<set $rep += 100>>
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

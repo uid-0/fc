@@ -1,0 +1,50 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate XX Slave">>
+<<set $activeSlave.origin to "She offered herself to you for enslavement because she was swept up in the romanticism of a historical revival.">>
+<<set $activeSlave.devotion to random(-3,-1)>>
+<<set $activeSlave.trust to random(1,3)>>
+<<set $activeSlave.age to random(22,28)>>
+<<set $activeSlave.career to "a student">>
+<<set $activeSlave.health to random(-2,0)>>
+<<set $activeSlave.face to random(-1,0)>>
+<<set $activeSlave.vagina to 0>>
+<<set $activeSlave.vaginalSkill to 0>>
+<<set $activeSlave.whoreSkill to 0>>
+<<set $activeSlave.entertainSkill to 0>>
+<<set $activeSlave.intelligence to random(0,1)>>
+<<set $activeSlave.intelligenceImplant to 1>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+You receive so many messages, as a noted titan of the new Free Cities world, that your personal assistant has to be quite draconian in culling them. She lets only the most important through to you. One category of message that always gets through regardless of content, though, is requests for voluntary enslavement. As the new world takes shape, they've become less rare than they once were.
+
+The call comes in from an old world university. The caller is a young woman who explains that she's struggling with extreme student debt, and has recently graduated with a history degree that she can't seem to turn into gainful employment. She gushes at length about how much she enjoyed ancient history, and how she's heard all about your ideas about reviving ancient culture in the Free Cities. She sees joining your household as a romantic way out of her difficult situation. Apparently she read all the idyllic parts of history and somehow missed out on learning about the salt mines and slave galleys. She's not terribly pretty and seems socially awkward, but that's likely to have its side benefits. She nervously sends you a complete dossier on herself.
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	She arrives wide-eyed and enthusiastic about the historical style she saw on the way in. She swallows nervously throughout the enslavement process and even cries a little at the end. She's slow to undress, and when she's finished, she covers her modest breasts with one arm and her mons with the other. It seems that she's about to have a rude awakening about the realities of being a house slave.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

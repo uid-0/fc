@@ -1,0 +1,151 @@
+<<nobr>>
+
+<<set $hormones to $slaves[$i].hormones>>
+<<if ($slaves[$i].balls isnot 0) and ($hormones gt -2)>>
+	<<set $hormones -= 1>>
+<</if>>
+<<if ($slaves[$i].ovaries isnot 0) and ($hormones lt 2)>>
+	<<set $hormones += 1>>
+<</if>>
+
+<<if ($hormones gt 1)>>
+  <<if ($slaves[$i].dick gt 3) and (random(1,100) gt 90-($feeder*10))>>
+      Hormonal effects cause @@color:orange;her cock to atrophy to a more normal size.@@
+      <<set $slaves[$i].dick -= 1>>
+  <<elseif ($slaves[$i].dick gt 1) and (random(1,100) gt 95-($feeder*10))>>
+      Hormonal effects cause @@color:orange;her dick to atrophy to a tiny size.@@
+      <<set $slaves[$i].dick -= 1>>
+  <<elseif ($slaves[$i].balls gt 3) and (random(1,100) gt 90-($feeder*10))>>
+      Hormonal effects cause @@color:orange;her nuts to atrophy to a more normal size.@@
+      <<set $slaves[$i].balls -= 1>>
+  <<elseif ($slaves[$i].balls gt 1) and (random(1,100) gt 95-($feeder*10))>>
+      Hormonal effects cause @@color:orange;her testicles to atrophy to a tiny size.@@
+      <<set $slaves[$i].balls -= 1>> 
+  <<elseif (($slaves[$i].butt-$slaves[$i].buttImplant) lt 2) and (random(1,100) gt 60-($feeder*10))>>
+      Hormonal effects cause @@color:lime;the tiny natural size of her butt to increase.@@
+      <<set $slaves[$i].butt += 1>>
+  <<elseif (($slaves[$i].boobs-$slaves[$i].boobsImplant) lt 450) and (random(1,100) gt 60-($feeder*10))>>
+      Hormonal effects cause @@color:lime;the tiny natural size of her breasts to increase.@@
+      <<set $slaves[$i].boobs += 100>>
+  <<elseif (($slaves[$i].face-$slaves[$i].faceImplant) lt 0) and (random(1,100) gt 60-($feeder*10))>>
+      Hormonal effects cause @@color:lime;her facial structure to soften and become less unattractive.@@
+      <<set $slaves[$i].face += 1>>
+  <<elseif (random(1,100) gt 100-($slaves[$i].clit*10))>>
+      Hormonal effects cause @@color:orange;her clit to shrink significantly.@@
+      <<set $slaves[$i].clit -= 1>>
+  <<elseif ($slaves[$i].muscles gt 2) and ($slaves[$i].diet isnot "muscle building")>>
+      Hormonal effects @@color:orange;reduce her heavy musculature.@@
+      <<set $slaves[$i].muscles -= 0.2>>
+  <<elseif ($slaves[$i].muscles gt 1) and ($slaves[$i].diet isnot "muscle building")>>
+      Hormonal effects @@color:orange;reduce her musculature slightly.@@
+      <<set $slaves[$i].muscles -= 0.1>>
+  <<elseif ($slaves[$i].devotion lt -4)>>
+      Hormonal effects make her a bit more @@color:hotpink;docile.@@
+      <<set $slaves[$i].devotion += 0.3>>
+  <<elseif ($slaves[$i].trust gte -4)>>
+      Hormonal effects make her a bit more @@color:mediumaquamarine;trusting.@@
+      <<set $slaves[$i].trust += 0.3>>
+  <</if>>
+
+<<elseif ($hormones gt 0) and ($slaves[$i].ovaries is 0)>>
+  <<if ($slaves[$i].dick gt 2) and (random(1,100) gt 95-($feeder*10))>>
+      Hormonal effects cause @@color:orange;her cock to atrophy to a more smaller size.@@
+      <<set $slaves[$i].dick -= 1>>
+  <<elseif ($slaves[$i].balls gt 1) and (random(1,100) gt 95-($feeder*10))>>
+      Hormonal effects cause @@color:orange;her testicles to atrophy to a tiny size.@@
+      <<set $slaves[$i].balls -= 1>>
+  <<elseif (($slaves[$i].butt-$slaves[$i].buttImplant) lt 2) and ($slaves[$i].ovaries is 1) and (random(1,100) gt 75-($feeder*10))>>
+      Hormonal effects cause @@color:lime;the tiny natural size of her butt to increase.@@
+      <<set $slaves[$i].butt += 1>>
+  <<elseif (($slaves[$i].boobs-$slaves[$i].boobsImplant) lt 350) and ($slaves[$i].ovaries is 1) and (random(1,100) gt 75-($feeder*10))>>
+      Hormonal effects cause @@color:lime;the tiny natural size of her breasts to increase.@@
+      <<set $slaves[$i].boobs += 100>>
+  <<elseif (($slaves[$i].face-$slaves[$i].faceImplant) lt -1) and (random(1,100) gt 60-($feeder*10))>>
+      Hormonal effects cause @@color:lime;her facial structure to soften and become less unattractive.@@
+      <<set $slaves[$i].face += 1>>
+  <<elseif (random(1,100) gt 100-($slaves[$i].clit*10))>>
+      Hormonal effects cause @@color:orange;her huge clit to shrink significantly.@@
+      <<set $slaves[$i].clit -= 1>>
+  <<elseif ($slaves[$i].muscles gt 2) and ($slaves[$i].diet isnot "muscle building")>>
+      Hormonal effects @@color:orange;reduce her heavy musculature slightly.@@
+      <<set $slaves[$i].muscles -= 0.1>>
+  <</if>>
+
+<<elseif ($hormones gt -1)>>
+
+<<elseif ($hormones gt -2)>>
+  <<if (($slaves[$i].butt-$slaves[$i].buttImplant) gt 5) and (random(1,100) gt 95-($feeder*10))>>
+      Hormonal effects cause @@color:orange;the huge natural size of her butt to decrease.@@
+      <<set $slaves[$i].butt -= 1>>
+  <<elseif (($slaves[$i].boobs-$slaves[$i].boobsImplant) gt 1000) and (random(1,100) gt 95-($feeder*10))>>
+      Hormonal effects cause @@color:orange;the huge natural size of her boobs to decrease.@@
+      <<set $slaves[$i].boobs -= 100>>
+  <<elseif ($slaves[$i].dick is 0) and ($slaves[$i].balls is 0) and ($slaves[$i].clit lt 3) and (random(1,100) gt 75-($feeder*10)+($slaves[$i].clit*10))>>
+      Hormonal effects cause @@color:lime;her clit to grow significantly.@@
+      <<set $slaves[$i].clit += 1>>
+  <</if>>
+
+<<elseif ($hormones lte -2)>>
+  <<if ($slaves[$i].dick lt 2) and ($slaves[$i].dick gt 0) and (random(1,100)gt 80-($feeder*10))>>
+      Hormonal effects cause @@color:lime;her micropenis to return to a more normal size.@@
+      <<set $slaves[$i].dick += 1>>
+  <<elseif ($slaves[$i].balls lt 2) and ($slaves[$i].balls gt 0) and (random(1,100) gt 75-($feeder*10))>>
+      Hormonal effects cause @@color:lime;her balls to drop.@@
+      <<set $slaves[$i].balls += 1>>
+  <<elseif (($slaves[$i].butt-$slaves[$i].buttImplant) gt 5) and (random(1,100) gt 90-($feeder*10))>>
+      Hormonal effects cause @@color:orange;the huge natural size of her butt to decrease.@@
+      <<set $slaves[$i].butt -= 1>>
+  <<elseif (($slaves[$i].butt-$slaves[$i].buttImplant) gt 2) and (random(1,100) gt 95-($feeder*10))>>
+      Hormonal effects cause @@color:orange;the natural size of her butt to decrease.@@
+      <<set $slaves[$i].butt -= 1>>
+  <<elseif (($slaves[$i].boobs-$slaves[$i].boobsImplant) gt 1000) and (random(1,100) gt 90-($feeder*10))>>
+      Hormonal effects cause @@color:orange;the huge natural size of her boobs to decrease.@@
+      <<set $slaves[$i].boobs -= 100>>
+  <<elseif (($slaves[$i].boobs-$slaves[$i].boobsImplant) gt 400) and (random(1,100) gt 95-($feeder*10))>>
+      Hormonal effects cause @@color:orange;the natural size of her boobs to decrease.@@
+      <<set $slaves[$i].boobs -= 100>>
+  <<elseif (($slaves[$i].face-$slaves[$i].faceImplant) gt -1) and (random(1,100) gt 75-($feeder*10))>>
+      Hormonal effects cause @@color:orange;her facial structure to harden and become less attractive.@@
+      <<set $slaves[$i].face -= 1>>
+  <<elseif ($slaves[$i].dick is 0) and ($slaves[$i].balls is 0) and ($slaves[$i].clit lt 3) and (random(1,100) gt 50-($feeder*10)+($slaves[$i].clit*10))>>
+      Hormonal effects cause @@color:lime;her clit to grow significantly.@@
+      <<set $slaves[$i].clit += 1>>
+  <<elseif ($slaves[$i].devotion lt -4)>>
+      Hormonal effects @@color:mediumorchid;make her a bit less docile.@@
+      <<set $slaves[$i].devotion -= 0.3>>
+  <</if>>
+
+<</if>>
+
+<<if ($hormones lt 0)>>
+<<if ($slaves[$i].dick gt 0)>>
+<<if ($slaves[$i].devotion gt 0)>>
+<<if ($slaves[$i].fetish is "buttslut") and ($slaves[$i].fetishDiscovered is 1)>>
+	She wishes she were more feminine, but she loves getting fucked in the butt so much that it doesn't much bother her.
+<<elseif ($slaves[$i].fetish is "likes girls") and ($slaves[$i].fetishDiscovered is 1)>>
+	She wishes she were more feminine, but she loves fucking other girls so much that she likes being able to get hard.
+<<elseif ($slaves[$i].fetish is "sadist") and ($slaves[$i].fetishDiscovered is 1)>>
+	Life is easier for effeminate slaves, but she loves abusing other slaves so much that she likes being able to get hard.
+<<elseif ($slaves[$i].fetish is "dom") and ($slaves[$i].fetishDiscovered is 1)>>
+	Life is easier for effeminate slaves, but she loves dominating other girls so much that she likes being able to get hard.
+<<elseif ($slaves[$i].fetish is "nympho") and ($slaves[$i].fetishDiscovered is 1)>>
+	She wishes she were more feminine, but she loves getting fucked like a good little sex slave so much that she doesn't think about it much.
+<<elseif ($slaves[$i].devotion lte 4)>>
+	Life is easier for effeminate slaves, so @@color:mediumorchid;she's a little unhappy@@ that she isn't getting hormones to make her more feminine.
+	<<set $slaves[$i].devotion -= 0.3>>
+<<elseif ($slaves[$i].devotion lte 10)>>
+	She wants to be a good slave girl, so @@color:mediumorchid;she's a little unhappy@@ that she isn't getting hormones to make her look more feminine.
+	<<set $slaves[$i].devotion -= 0.3>>
+<<else>>
+	She wishes she were more feminine, but she accepts your judgment in not giving her hormones to make that happen.
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].devotion gt 4) and ($slaves[$i].vagina gt -1) and ($slaves[$i].preg lt 0) and ($slaves[$i].fetish is "pregnancy")>>
+	She badly wants to have a child, so @@color:mediumorchid;she's unhappy@@ that she's on contraceptives.
+	<<set $slaves[$i].devotion -= 0.7>>
+<</if>>
+
+<</nobr>>

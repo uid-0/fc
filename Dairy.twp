@@ -1,0 +1,147 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+<<set $encyclopedia to "Slave Dairy">>\
+\
+<<nobr>>
+
+<<set $dairySlaves to 0>>
+<<set $notdairySlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "work in the dairy">>
+      <<set $dairySlaves += 1>>
+    <<else>>
+	  <<set $notdairySlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $FSPastoralistDecoration gte 60>>
+  The dairy is state of the art, and spotlessly clean. All attention here is on the cows, to keep them happy, productive, and growing.
+<<elseif $FSDegradationistDecoration gte 60>>
+  The dairy is harsh and utilitarian. There are stands to restrain cows who aren't being milked for dosing, punishment, or sexual use. There are cattle prods here and there to use on resistant cows, unproductive cows, or cows one wishes to hear scream.
+<<elseif $FSChattelReligionistDecoration gte 60>>
+  The dairy is functional and clean. There are nice quotations from the holy book on the walls, and there is a little shrine designed to allow a cow who has difficulty standing to make her devotions comfortably.
+<<elseif $FSRomanRevivalistDecoration gte 60>>
+  The dairy is functional and clean, using traditional methods wherever possible. At one end of the long row of stalls there is an alcove with a shrine to the Roman goddess of bountiful harvests.
+<<elseif $FSAncientEgyptianRevivalistDecoration gte 60>>
+  The dairy is functional and clean, using traditional methods wherever possible. At one end of the long row of stalls there is an alcove with a shrine to the Egyptian god of bountiful harvests.
+<<elseif $FSSubjugationistDecoration gte 60>>
+  The dairy is spartan, since that's all $FSSubjugationistRace cows need. There are cattle prods here and there to use on resistant cows, unproductive cows, or $FSSubjugationistRace cows one wishes to hear scream.
+<<elseif $FSSupremacistDecoration gte 60>>
+  The dairy is spartan, since that's all cows of inferior races need. There are cattle prods here and there to use on resistant cows, unproductive cows, or subhuman cows one wishes to hear scream.
+<<elseif $FSPaternalistDecoration gte 60>>
+  The dairy is comfortable and well-kept. Rather than stalls, the dairy has an open arrangement of machines cows can use freely, and a lovely common area they can relax in afterward.
+<<elseif $FSGenderRadicalistDecoration gte 60>>
+  The dairy is comfortable and well-kept. The milking machines include artificial vaginas so that cows with cocks can get off while they're milked.
+<<elseif $FSGenderFundamentalistDecoration gte 60>>
+  The dairy is comfortable and well-kept. The milking machines include vibrators so that cows can get off while they're milked.
+<<elseif $FSAssetExpansionistDecoration gte 60>>
+  The dairy is comfortable and well-kept.
+<<elseif $FSTransformationFetishistDecoration gte 60>>
+  The dairy is comfortable and well-kept.
+<<elseif $FSBodyPuristDecoration gte 60>>
+  The dairy is comfortable and well-kept.
+<<elseif $FSSlimnessEnthusiastDecoration gte 60>>
+  The dairy is comfortable and well-kept.
+<<elseif $FSPhysicalIdealistDecoration gte 60>>
+  The dairy is comfortable and well-kept.
+<</if>>
+
+<<if $dairySlaves gt 2>>
+	The dairy is bustling with activity. Numerous slaves look after their bodies, eat, and relax in a crowd between milkings. The row of milking machines is producing the sighs of working machinery and the moans of relieved slaves.
+<<elseif $dairySlaves gt 0>>
+	The dairy is working steadily. Slaves look after their bodies, eat, and relax between milkings. Occasionally a slave moves over to the milking machines to let her milk down.
+<<elseif $Milkmaid isnot 0>>
+	$Milkmaid.slaveName is alone in the dairy, and has nothing to do but clean and maintain the equipment.
+<<else>>
+	The dairy is empty and desolate. [[Decomission the dairy|Main][$dairy to 0, $dairyUpgradeFeeders to 0, $dairyUpgradePreg to 0]]
+<</if>>
+
+<br>
+It can support <<print $dairy*5>> milkers.
+<<if $dairy*5 lt $dairySlaves>>
+  @@color:red;The dairy is overcrowded.@@
+<</if>>
+[[Expand the dairy|Dairy][$cash -= 5000, $dairy += 1]]
+//Costs ¤5000 and will increase upkeep costs//
+	
+<br>
+<<if $dairyUpgradeFeeders is 1>>
+	The milking machines hold feeders in slaves' mouths and plumbed plugs up their anuses as they're milked, ensuring ideal nutrition and production.
+<<else>>
+	The dairy is equipped to feed and clean slaves normally.
+	[[Upgrade the milking machines with intubators|Dairy][$cash -= 10000, $dairyUpgradeFeeders to 1]]
+	//Costs ¤10000 and will increase upkeep costs//
+<</if>>
+	
+<br>
+<<if $dairyUpgradePreg is 1>>
+	The dairy can support cow pregnancies, and the cows' wombs are available for hire.
+<<else>>
+	The dairy is not prepared to support cow pregnancies, and therefore cannot be used to contract out slaves' wombs.
+	[[Upgrade the dairy to support pregnancies|Dairy][$cash -= 2500, $dairyUpgradePreg to 1]]
+	//Costs ¤2500 and will increase upkeep costs//
+<</if>>
+	
+<br>
+<<if $dairyUpgradeRestraints is 1>>
+	The dairy is equipped to restrain recalcitrant cows so that they can be milked without danger to themselves or others.
+<<else>>
+	The dairy is not equipped to restrain recalcitrant cows, so only obedient slaves can be milked here.
+	[[Equip the dairy with milking racks|Dairy][$cash -= 5000, $dairyUpgradeRestraints to 1]]
+	//Costs ¤5000//
+<</if>>
+
+<br>
+//Sir, slaves assigned here will use drugs to maintain and even improve their health, and will slowly reach a state of obedience out of habit if they are not yet there. Their heavy lactation will also gradually increase their natural breast size, up to a very impressive state.//
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $Milkmaid isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $slaves[$i].ID is $Milkmaid.ID>>
+	  <<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>
+	  <<display "Slave Summary">>
+	  | <<print "[[Change or remove Milkmaid|Milkmaid Select]]">>\
+	<</if>>
+  <</for>>
+<<else>>
+	You do not have a slave serving as a Milkmaid. [[Appoint one|Milkmaid Select]]
+<</if>>
+
+<</nobr>>
+
+<<if $dairySlaves gt 0>>\
+__Bring a slave out of the dairy:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "work in the dairy">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Release her from the Dairy|Retrieve from dairy][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notdairySlaves gt 1>>\
+__Send a slave to the dairy:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+  <<if ($slaves[$i].lactation gt 0)>>\
+	<<if ($slaves[$i].devotion gt 4) or ($slaves[$i].trust lt -4) or ($slaves[$i].amp is 1) or ($dairyUpgradeRestraints is 1)>>\
+	  <br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+	  <<display "Slave Summary">>\
+	  | <<print "[[Send her to the Dairy|Assign to dairy][$activeSlave to $slaves[" + $i + "]]]">>\
+	<<else>>\
+	  <br>//$slaves[$i].slaveName must be either more fearful of you or more devoted to you//\
+	<</if>>\
+  <<else>>\
+	<br>//$slaves[$i].slaveName is not lactating and cannot be a dairy cow//\
+  <</if>>\
+<</if>>\
+<</for>>
+<</if>>\

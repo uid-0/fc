@@ -1,0 +1,120 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+\
+<<nobr>>
+
+<<set $schoolroomSlaves to 0>>
+<<set $notSchoolroomSlaves to 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].assignment is "learn in the schoolroom">>
+      <<set $schoolroomSlaves += 1>>
+    <<else>>
+	  <<set $notSchoolroomSlaves += 1>>
+    <</if>>
+  <</for>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<if $FSDegradationistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently displaying a rote recitation of a slave's proper acceptance of her subhuman status.
+<<elseif $FSChattelReligionistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently displaying a passage from the holy book that supports slavery.
+<<elseif $FSRomanRevivalistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently showing the story of a famous Roman slave who sacrificed her life for the life of <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>>.
+<<elseif $FSAncientEgyptianRevivalistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently showing an interpretation of Egyptian history that attributes many great monuments to the enlightened use slave labor.
+<<elseif $FSSubjugationistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently reviewing the scientific evidence for $FSSubjugationistRace inferiority.
+<<elseif $FSSupremacistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently reviewing the scientific evidence for $FSSupremacistRace superiority.
+<<elseif $FSPaternalistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently reviewing a lesson on time-management skills, and the students are taking notes on their own tablets.
+<<elseif $FSGenderRadicalistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently going over how to keep one's asspussy ready for intercourse at any time, including how to schedule regular enemata and pre-lubrication.
+<<elseif $FSGenderFundamentalistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently going over the trifecta that is the standard approach of sex slaves: a blowjob, followed by vaginal, finished with anal.
+<<elseif $FSPastoralistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently reviewing how to help fellow slaves with huge, lactating breasts.
+<<elseif $FSAssetExpansionistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently reviewing techniques that allow two slaves with huge breasts to inspect and moisturize each others' hard to reach areas.
+<<elseif $FSTransformationFetishistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently offering a brief primer on surgical recovery, with practical techniques to make it quicker.
+<<elseif $FSPhysicalIdealistDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently offering a brief primer on the arcology's nutritional system which will allow slaves to double check their own protein intake.
+<<elseif $FSBodyPuristDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently offering a brief primer on the arcology's nutritional system which will allow slaves to double check their own caloric intake.
+<<elseif $FSSlimnessEnthusiastDecoration gte 60>>
+  The schoolroom is well-equipped, with wall screens to display lessons. These are currently offering a brief primer on the arcology's nutritional system which will allow slaves to double check their own caloric intake.
+<</if>>
+
+<<if $schoolroomSlaves gt 2>>
+	The schoolroom is busy with slaves, repeating their lessons out loud to drill the instruction home. A few girls are maintaining uncomfortable positions in the corner as punishment for poor work.
+<<elseif $schoolroomSlaves gt 0>>
+	The schoolroom sparsely populated, the few students repeating their lessons out loud to drill the instruction home. One girl is maintaining an uncomfortable position in the corner as punishment for poor work.
+<<elseif $Schoolteacher isnot 0>>
+	$Schoolteacher.slaveName is alone in the schoolroom, and has nothing to do but work on her lesson plans.
+<<else>>
+	None of your slaves are learning in the schoolroom.[[Decomission the schoolroom|Main][$schoolroom to 0, $schoolroomUpgradeRemedial to 0]]
+<</if>>
+
+<br>
+<<if $schoolroomUpgradeRemedial is 1>>
+	The schoolroom has been upgraded with advanced teaching tools to help even the stupidest slave learn at an acceptable pace. Intelligent slaves won't learn much faster as a result, but idiots will benefit a great deal.
+<<else>>
+	The schoolroom is standard.
+	[[Purchase teaching tools to help stupid slaves learn good|Schoolroom][$cash -= 5000, $schoolroomUpgradeRemedial to 1]]
+	//Costs ¤5000//
+<</if>>
+
+<br>
+//Sir, slaves assigned here will use drugs to maintain and even improve their health. They will gradually become obedient if they aren't already.//
+
+<</nobr>>
+
+<<nobr>>
+
+<<if $Schoolteacher isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if $slaves[$i].ID is $Schoolteacher.ID>>
+	  <<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>
+	  <<display "Slave Summary">>
+	  | <<print "[[Change or remove Schoolteacher|Schoolteacher Select]]">>\
+	<</if>>
+  <</for>>
+<<else>>
+	You do not have a slave serving as a Schoolteacher. [[Appoint one|Schoolteacher Select]]
+<</if>>
+
+<</nobr>>
+
+<<if $schoolroomSlaves gt 0>>\
+__Bring a slave out of the schoolroom:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignment is "learn in the schoolroom">>\
+<br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+| <<print "[[Release her from the Schoolroom|Retrieve from Schoolroom][$activeSlave to $slaves[" + $i + "]]]">>\
+<</if>>\
+<</for>>
+<</if>>\
+
+<<if $notSchoolroomSlaves gt 1>>\
+__Send a slave to work out of the schoolroom:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+  <<if ($slaves[$i].devotion gte -4) or ($slaves[$i].trust lt -4)>>\
+	<<if $slaves[$i].intelligenceImplant isnot 1>>\
+	  <br><<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+	  <<display "Slave Summary">>\
+	  | <<print "[[Assign her to the Schoolroom|Assign to Schoolroom][$activeSlave to $slaves[" + $i + "]]]">>\
+	<<else>>\
+	  <br>//$slaves[$i].slaveName already has a basic education//\
+	<</if>>\
+  <<else>>\
+	<br>//$slaves[$i].slaveName is too resistant to learn//\
+  <</if>>\
+<</if>>\
+<</for>>
+<</if>>\

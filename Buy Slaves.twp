@@ -1,0 +1,75 @@
+<<nobr>>
+<<set $nextButton to "Back">>
+<<set $nextLink to "Main">>
+<</nobr>>\
+\
+__Slave Purchase Options__
+//There are many different organizations to purchase slaves from, but many of them are selective about their customers and will only sell to you if you are reputable.//\
+<<nobr>>
+<<if ($slaveCostFactor gt 1.1)>>
+	@@color:yellow;There is a bull market for slaves; the price of slaves is very high.@@
+<<elseif ($slaveCostFactor gt 1)>>
+	@@color:yellow;The slave market is bullish; the price of slaves is high.@@
+<<elseif ($slaveCostFactor lt 0.9)>>
+	@@color:yellow;There is a bear market for slaves; the price of slaves is very low.@@
+<<elseif ($slaveCostFactor lt 1)>>
+	@@color:yellow;The slave market is bearish; the price of slaves is low.@@
+<<else>>
+	The slave market is stable; the price of slaves is average.
+<</if>>
+<</nobr>>
+
+[[Public market|Kidnapped Slave][$slavesSeen += 1]] | //Low price; will tend to be low quality and rebellious.//
+<<nobr>>
+<<if ($rep gt 1500)>>
+	[[Pre-owned auction|Sale Slave][$slavesSeen += 1]] | //High price; will tend to be good quality and obedient.//
+<</if>>
+
+<<if ($rep gt 3000)>>
+	<br>''Slave Schools:'' //High prices; will be young and healthy.//<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	<<if ($seeDicks isnot 2)>>
+      [[The Slavegirl School][$slavesSeen += 1]] | 
+      [[Growth Research Institute][$slavesSeen += 1]] | 
+      [[St. Claver Preparatory][$slavesSeen += 1]]
+    <</if>>
+    <<if ($seeDicks is 1)>>
+       | 
+    <</if>>
+    <<if ($seeDicks isnot 0)>>
+      [[L'école des Enculées][$slavesSeen += 1]] | 
+      [[The Gymnasium-Academy][$slavesSeen += 1]]
+    <</if>>
+<</if>>
+
+<<if ($rep gt 4500)>>
+	<br>[[Consult the household liquidator|Household Liquidator][$slavesSeen += 2]] | //Offers slaves close to one another at a very high price.//
+<</if>>
+
+<<if ($rep gt 6000)>>
+	<br>[[Place a special order|Custom Slave]] | //Customizable but very expensive.//
+<</if>>
+
+<<if ($rep gt 7500)>>
+	<br>[[Attend an auction of a prestigious slave|Prestigious Slave]] | //Variable and expensive.//
+<</if>>
+
+<<if ($rep gt 9000)>>
+	<br>[[Acquire other slaveowners' stock|Special Slave]] | //Variable and expensive.//
+<</if>>
+
+<<if ($rep lte 1500)>>
+	//You are not reputable enough to buy pre-owned slaves.//
+<<elseif ($rep lte 3000)>>
+	<br>//You are not reputable enough to acquire fresh school slaves.//
+<<elseif ($rep lte 4500)>>
+	<br>//You are not reputable enough to consult the household liquidator.//
+<<elseif ($rep lte 6000)>>
+	<br>//You are not reputable enough to order custom slaves.//
+<<elseif ($rep lte 7500)>>
+	<br>//You are not reputable enough to bid on prestigious slaves.//
+<<elseif ($rep lte 9000)>>
+	<br>//You are not reputable enough to acquire other slaveowners' stock.//
+<<else>>
+	<br>You are so reputable that you can access all of the Free Cities' slaving markets.
+<</if>>
+<</nobr>>

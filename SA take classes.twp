@@ -1,0 +1,137 @@
+<<nobr>>
+
+<<set $learning to 1>>
+
+<<if ($slaves[$i].assignment is "learn in the schoolroom")>>
+	<<if ($Schoolteacher isnot 0)>>
+		<<set $seed to $Schoolteacher.intelligence+$Schoolteacher.intelligenceImplant>>
+		<<if ($Schoolteacher.age gt 35)>>
+			<<set $seed += 1>>
+		<</if>>
+		<<if ($Schoolteacher.face gt 1)>>
+			<<set $seed += 1>>
+		<</if>>
+		<<if (random(1,100) lt 20+($seed*20))>>
+			<<set $learning += 1>>
+		<</if>>
+	<</if>>
+<</if>>
+
+$slaves[$i].slaveName takes courses in slavery under the close supervision of your personal assistant;
+<<if ($slaves[$i].devotion gt 4)>>
+  she is such an obedient slave that your assistant mostly @@color:hotpink;encourages her.@@
+  <<set $slaves[$i].devotion += 0.7>>
+<<elseif ($slaves[$i].trust lt -4)>>
+  she obeys out of fear, so your assistant mostly @@color:hotpink;encourages her.@@
+  <<set $slaves[$i].devotion += 0.3>>
+<<else>>
+  she is resistant, so your assistant mostly @@color:gold;puhishes her,@@ increasing her @@color:mediumorchid;dislike for slavery.@@
+  <<set $slaves[$i].devotion -= 0.3>>
+  <<set $slaves[$i].trust -= 0.7>>
+<</if>>
+
+<<if ($slaves[$i].intelligence gte 2)>>
+	She is highly intelligent
+	<<set $learning += 1>>
+<<elseif ($slaves[$i].intelligence gte 1)>>
+	She is of above average intelligence
+	<<if (random(1,100) lt 70)>>
+		<<set $learning += 1>>
+	<</if>>
+<<elseif ($slaves[$i].intelligence gte 0)>>
+	She is of average intelligence
+	<<if (random(1,100) lt 50)>>
+		<<set $learning += 1>>
+	<</if>>
+<<elseif ($schoolroomUpgradeRemedial is 1) and ($slaves[$i].assignment is "learn in the schoolroom")>>
+	<<if (random(1,100) lt 50)>>
+		<<set $learning += 1>>
+	<</if>>
+<<elseif ($slaves[$i].intelligence gte -1)>>
+	She is of below average intelligence
+	<<if (random(1,100) lt 30)>>
+		<<set $learning += 1>>
+	<</if>>
+<<else>>
+	She is quite stupid
+<</if>>
+
+<<if ($slaves[$i].devotion gte 18)>>
+	and worshipful of you,
+	<<set $learning += 1>>
+<<elseif ($slaves[$i].devotion gt 10)>>
+	and devoted to you,
+	<<if (random(1,100) lt 70)>>
+		<<set $learning += 1>>
+	<</if>>
+<<elseif ($slaves[$i].devotion gt 4)>>
+	and obedient to you,
+	<<if (random(1,100) lt 50)>>
+		<<set $learning += 1>>
+	<</if>>
+<<elseif ($slaves[$i].trust lt -4)>>
+	and frightened of you,
+	<<if (random(1,100) lt 50)>>
+		<<set $learning += 1>>
+	<</if>>
+<<else>>
+	and neither likes you nor is afraid of you,
+<</if>>
+
+<<if ($learning lte 1)>>
+	and she learns slowly this week.
+<<elseif ($learning is 2)>>
+	and she does well with her studies this week.
+<<else>>
+	and she is perfectly studious this week.
+<</if>>
+
+<<set $seed to 0>>
+<<for $j to 0; $j lt $learning; $j++>>
+	<<if ($slaves[$i].devotion lte 4) and ($seed is 0)>>
+		Since she is wanting in basic obedience, she suffers through courses on @@color:hotpink;her place@@ in the Free Cities world.
+		<<set $slaves[$i].devotion += 0.3>>
+		<<set $seed to 1>>
+	<<elseif ($slaves[$i].oralSkill lt 1)>>
+		Since she is orally incompetent, she is taught basic gag reflex suppression exercises and other simple @@color:green;oral knowledge.@@
+		<<set $slaves[$i].oralSkill += 1>>
+	<<elseif ($slaves[$i].vaginalSkill lt 1) and ($slaves[$i].vagina gt -1)>>
+		Since she is unskilled at using her pussy, she is taught kegel exercises and other simple @@color:green;vaginal skills.@@
+		<<set $slaves[$i].vaginalSkill += 1>>
+	<<elseif ($slaves[$i].analSkill lt 1)>>
+		Since she is a novice at taking it up her butt, she is taught relaxation exercises and other simple @@color:green;anal basics.@@
+		<<set $slaves[$i].analSkill += 1>>
+	<<elseif ($slaves[$i].whoreSkill lt 1)>>
+		Since she has little idea what's involved in selling her body, she is taught basic safety practices and other simple @@color:green;prostitution skills.@@
+		<<set $slaves[$i].whoreSkill += 1>>
+	<<elseif ($slaves[$i].entertainSkill lt 1)>>
+		Since her entertainment value is limited to her holes, she is taught simple conversational skills and other @@color:green;courtesan's essentials.@@
+		<<set $slaves[$i].entertainSkill += 1>>
+	<</if>>
+<</for>>
+	
+<<if ($slaves[$i].intelligenceImplant lte 0.9)>>
+	She makes some progress towards a basic education.
+	<<set $slaves[$i].intelligenceImplant += 0.1*$learning>>
+	<<if ($slaves[$i].intelligenceImplant gt 0.9)>>
+		<<set $slaves[$i].intelligenceImplant to 0.9>>
+	<</if>>	
+<</if>>
+
+<<if ($slaves[$i].intelligenceImplant is 0.9)>>
+	She has completed a course of slave education, and for most purposes she is now @@color:deepskyblue;more intelligent.@@
+	<<set $slaves[$i].intelligenceImplant to 1>>
+	<<if ($slaves[$i].intelligence lt 2)>>
+		<<set $slaves[$i].intelligence += 1>>
+	<</if>>
+<</if>>
+
+<<if ($slaves[$i].intelligenceImplant is 1) and ($slaves[$i].whoreSkill gte 1) and ($slaves[$i].entertainSkill gte 1) and ($slaves[$i].analSkill gte 1) and ($slaves[$i].oralSkill gte 1)>>
+	<<if ($slaves[$i].vaginalSkill gte 1) or ($slaves[$i].vagina is -1)>>
+		She can learn little from further classes, so @@color:yellow;her assignment has defaulted to rest.@@
+		<<set $slaves[$i].assignment to "rest">>
+		<<set $slaves[$i].assignmentVisible to 1>>
+	<</if>>
+<</if>>
+
+<</nobr>>\

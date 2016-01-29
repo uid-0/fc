@@ -1,0 +1,164 @@
+<<nobr>>
+
+<<if ($slaves[$i].devotion lte 4)>>
+	and uses the ability to select outfits to cover up with comfortable cut-offs and a t-shirt, @@color:mediumorchid;increasing her independence.@@	and wears comfortable flats, since she sees no reason to show off.
+    <<set $slaves[$i].shoes to "flats">>
+    <<set $slaves[$i].clothes to "cutoffs and a t-shirt">>
+    
+<<else>>
+	She @@color:hotpink;loves@@ being able to dress herself,
+    
+<<if ($FSAncientEgyptianRevivalist gt 0)>>
+  dons a wesekh to support your ancient Egyptian pretensions,
+  <<set $slaves[$i].collar to "ancient Egyptian">>
+<</if>> 
+
+<<if ($FSChattelReligionist gt 0)>>
+  <<if ($continent is "North America") or ($continent is "South America") or ($continent is "Europe") or ($continent is "Australia")>>
+	and wears a nun outfit to conform to your arcology's culture.
+    <<set $slaves[$i].clothes to "a fallen nun's habit">>
+  <<else>>
+	and wears a hijab to conform to your arcology's culture.
+    <<set $slaves[$i].clothes to "a hijab">>
+  <</if>>
+<<elseif ($FSAncientEgyptianRevivalist gt 0)>>
+    and complements it with golden bangles, since no clothing is necessary for a sex slave in your warm and sunny arcology.
+    <<set $slaves[$i].clothes to "slutty jewelry">>
+<<elseif ($FSRomanRevivalist gt 0)>>
+  and wears a toga to take part in your Roman revivalism.
+  <<set $slaves[$i].clothes to "a toga">>
+<<elseif ($FSPaternalist gt 0)>>
+  and wears conservative clothing, as permitted by your paternalism.
+  <<set $slaves[$i].clothes to "conservative clothing">>
+<<elseif ($FSDegradationist gt 0)>>
+  and wears chains, to degrade herself as required by your societal goals.
+  <<set $slaves[$i].clothes to "chains">>
+<<elseif ($FSPhysicalIdealist gt 0)>>
+  and coats herself in body oil to show off how she's part of your physical idealism.
+  <<set $slaves[$i].clothes to "body oil">>
+<<elseif ($FSPastoralist gt 0)>>
+  and wears Western clothing, since she thinks it fits with pastoralism.
+  <<set $slaves[$i].clothes to "Western clothing">>
+<<elseif ($FSGenderFundamentalist gt 0) or ($FSBodyPurist gt 0)>>
+	and wears a kimono to conform to your arcology's culture.
+    <<set $slaves[$i].clothes to "a kimono">>
+<<elseif ($slaves[$i].assignment is "guard you")>>
+	and wears a bodysuit to show off her curves without hindering her deadliness.
+    <<set $slaves[$i].clothes to "a comfortable bodysuit">>
+<<elseif ($slaves[$i].assignment is "be the Madam")>>
+	and wears a slutty suit to entice and arouse while still looking managerial.
+    <<set $slaves[$i].clothes to "slutty business attire">>
+<<elseif ($slaves[$i].assignment is "be the Concierge")>>
+	and wears a revealing gown to entice and arouse while still looking elegant.
+    <<set $slaves[$i].clothes to "a slave gown">>
+<<elseif ($slaves[$i].assignment is "be the Milkmaid")>>
+	and wears a sturdy maid outfit, since anything else might be damaged by her hard work with the cows.
+	<<set $slaves[$i].clothes to "a nice maid outfit">>
+<<elseif ($slaves[$i].assignment is "be the Collectrix")>>
+	and wears a nurse outfit to help keep her charges hard.
+    <<set $slaves[$i].clothes to "a nurse outfit">>
+<<elseif ($slaves[$i].assignment is "be your Head Girl")>>
+	and wears a handsome suit to give her that extra touch of authority.
+    <<set $slaves[$i].clothes to "nice business attire">>
+<<elseif ($slaves[$i].assignment is "be the Schoolteacher")>>
+	and wears a schoolgirl outfit to help keep her charges on task.
+    <<set $slaves[$i].clothes to "a schoolgirl outfit">>
+<<elseif ($slaves[$i].assignment is "be the Attendant")>>
+	and wears a string bikini, since it's all she can wear that won't be ruined by all the moisture in the spa.
+    <<set $slaves[$i].clothes to "string lingerie">>
+<<elseif ($slaves[$i].assignment is "be the Wardeness")>>
+	and dons battledress, the better to intimidate the prisoners.
+    <<set $slaves[$i].clothes to "battledress">>
+<<elseif ($slaves[$i].assignment is "be the Concubine")>>
+	and goes naked, since it's her honored role to be the chief object of your desire.
+    <<set $slaves[$i].clothes to "no clothing">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "submissive")>>
+	and wears restrictive latex to encourage others to dominate her.
+    <<set $slaves[$i].clothes to "restrictive latex">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "dom")>>
+	and wears a handsome suit, since she likes other slaves to look up to her.
+    <<set $slaves[$i].clothes to "nice business attire">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "masochist")>>
+	and wears painfully restrictive bondage gear, since she likes the torment.
+    <<set $slaves[$i].clothes to "uncomfortable straps">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "sadist")>>
+	and wears an elegant gown, since she thinks it makes her look the part of the femme fatale.
+    <<set $slaves[$i].clothes to "a slave gown">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "likes girls")>>
+	and wears a schoolgirl outfit to show off a little T&A for the other girls while still dressing nicely.
+    <<set $slaves[$i].clothes to "a schoolgirl outfit">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "cumslut")>>
+	and wears cut-offs and a t-shirt, because the fun yet relatively conservative outfit seems to encourage others to ask her for blowjobs.
+    <<set $slaves[$i].clothes to "cutoffs and a t-shirt">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "humiliation")>>
+	and wears leather straps with rings over her private parts because she enjoys the embarrassment such a humiliating outfit causes her.
+    <<set $slaves[$i].clothes to "uncomfortable straps">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "buttslut")>>
+	and wears nothing other than slutty bangles, because she likes to catch the eye without putting anything between cocks and her rear end.
+    <<set $slaves[$i].clothes to "slutty jewelry">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "mindbroken")>>
+	or would, if she were competent or sane.
+    <<set $slaves[$i].clothes to "no clothing">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "pregnancy")>>
+	and wears a short maid dress, because she wants to look motherly and fuckable at the same time.
+    <<set $slaves[$i].clothes to "a slutty maid outfit">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "nympho")>>
+	but goes nude, since as a nympho she gets plenty of attention anyway, and considers clothes an unnecessary hindrance.
+    <<set $slaves[$i].clothes to "no clothing">>
+<<elseif ($slaves[$i].assignment is "rest")>>
+	and wears a comfortable t-shirt and cutoffs to relax.
+    <<set $slaves[$i].clothes to "no clothing">>
+<<elseif ($slaves[$i].assignment is "be a subordinate sex slave")>>
+	but gives up and goes naked after the other slaves constantly tear whatever she's wearing off her.
+    <<set $slaves[$i].clothes to "no clothing">>
+<<elseif ($slaves[$i].assignment is "work a glory hole")>>
+	but doesn't bother wearing anything, since no one could see her clothing when she's immured inside the glory hole.
+    <<set $slaves[$i].clothes to "no clothing">>
+<<elseif ($slaves[$i].assignment is "take classes") or ($slaves[$i].assignment is "learn in the schoolroom")>>
+	and wears a schoolgirl outfit, since it seems most appropriate.
+    <<set $slaves[$i].clothes to "a schoolgirl outfit">>
+<<elseif ($slaves[$i].assignment is "whore") or ($slaves[$i].assignment is "work in the brothel")>>
+	and wears string lingerie to show off her merchandise.
+    <<set $slaves[$i].clothes to "string lingerie">>
+<<elseif ($slaves[$i].assignment is "serve the public") or ($slaves[$i].assignment is "work on the promenade")>>
+	and wears pretty lingerie to show off her body and still look a little classy.
+    <<set $slaves[$i].clothes to "attractive lingerie">>
+<<elseif ($slaves[$i].assignment is "get milked") or ($slaves[$i].assignment is "work in the dairy")>>
+	and wears sturdy lingerie to offer the best support to her sore, milk-filled udders.
+    <<set $slaves[$i].clothes to "attractive lingerie">>
+<<elseif ($slaves[$i].assignment is "get cockmilked") or ($slaves[$i].assignment is "work in the collection facility")>>
+	and wears a slutty maid outfit to let her sore private parts breathe a little.
+    <<set $slaves[$i].clothes to "a slutty maid outfit">>
+<<elseif ($slaves[$i].assignment is "be a subordinate servant") or ($slaves[$i].assignment is "work as a servant")>>
+	and wears a sturdy maid outfit, since anything else might be damaged by her hard work around the penthouse.
+    <<set $slaves[$i].clothes to "a nice maid outfit">>
+<<else>>
+	and wears string lingerie to show off her body.
+    <<set $slaves[$i].clothes to "string lingerie">>
+<</if>>
+
+<<if ($slaves[$i].amp is 0)>>
+<<if ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "dom")>>
+	She wears boots to look like a proper dominant.
+    <<set $slaves[$i].shoes to "boots">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "sadist")>>
+	She wears boots, since she thinks they make her look dangerous.
+    <<set $slaves[$i].shoes to "boots">>
+<<elseif ($slaves[$i].heels is 1)>>
+	She wears the heels she needs to walk.
+    <<set $slaves[$i].shoes to "heels">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "none")>>
+	She wears comfortable flats, since she isn't much for fetishism.
+    <<set $slaves[$i].shoes to "flats">>
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "none")>>
+	She wears comfortable flats, since she doesn't have a fetish to show off.
+    <<set $slaves[$i].shoes to "flats">>
+<<else>>
+	She wears heels to strut her stuff.
+    <<set $slaves[$i].shoes to "heels">>
+<</if>>
+<</if>>
+
+<</if>>
+
+<</nobr>>

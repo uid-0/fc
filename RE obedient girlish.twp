@@ -1,0 +1,42 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is nice and slim, with a trim chest, narrow hips and not much of an ass to speak of. Despite the myriad ways a Free Cities slaveowner can give his property tits and asses, you've held off for now, keeping her lithe. She comes before you for a routine nude inspection, obediently standing before your desk with her hands crossed over her flat stomach. A perfectly devoted slave might display herself, and a rebellious one might try to cover herself: she's neither. <<if $activeSlave.dick gt 0>>Though she's not sexually aroused, her cock is visible and contributes greatly to her androgyny.<<else>>Her bare pussy completes the picture of simultaneous innocence and availability.<</if>>
+\
+<span id="result">
+<<click "Let her get dressed and spend some quality time with her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You let $activeSlave.slaveName don a nice dress and take her out. She's a little suspicious at first but when you reach the first balcony on your lazy route around the huge building the sun on her face and the gentle breeze around her ears convince her there's no trick. She watches you shyly as you lead her around, soaking in the sights and relaxing. Though you still speak as <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>>, you chat about goings on around the arcology, and you buy her a fresh fruit from a vendor. The unexpected show of care and compassion has her quite agog. By the time you take her out onto another parklike balcony and fuck her on a bench, <<if ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0) and ($activeSlave.preg gt -3)>>her dick is tenting the front of her dress and she's happy to take it up the ass.<<elseif ($activeSlave.dick gt 0)>>she's happy to take it up the ass, though there's no sign of an erection from her useless sissy dick.<<else>>she's wet and ready and moans happily as you enter her.<</if>> There's no hesitation or fear at all on her face when she sees you're returning her to your penthouse; @@color:mediumaquamarine;her trust in you has increased.@@
+	<<set $activeSlave.trust += 1>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+    <</replace>>
+<</click>>
+<<click "Dominate her narrow ass">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You make a show of examining her with a critical air that makes her aware of her modest endowments. Finished, you announce in a serious tone that you're concerned that you can't tell if she's a girl, since girls have breasts and butts. <<if ($activeSlave.mute is 1)>>She protests wordlessly, gesturing desperately at herself.<<elseif ($activeSlave.lips gt 2)>>She protests through her huge lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, ah'm a thlave girl!"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She protests through her piercings, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, ah'm a thlave girl!"<<else>>She protests, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I'm a slave girl! Please, just look at me, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!"<</if>> Shaking your head with pretended doubt, you say that since you're not sure you'll have to make do. Your order her to lie face down on the couch<<if ($PC.dick is 0)>> while you don a strap-on<</if>>. She does doubtfully, only realizing what you intend when she feels <<if ($PC.dick is 0)>>the strap-on<<else>>your dickhead<</if>> forcing its way between her narrow buttcheeks. She whimpers and moans into the couch as you roughly sodomize her. It's true, she's pretty androgynous from this angle, especially while she takes it up the butthole. @@color:hotpink;She has become more submissive to you,@@ but there's @@color:gold;some fear there, too.@@
+	<<set $activeSlave.trust -= 0.3>>
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+</span>

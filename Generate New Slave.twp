@@ -1,0 +1,9 @@
+<<nobr>>
+<<if ($seeDicks is 1) and (random(1,100) gt 80)>>
+	<<display "Generate XY Slave">>
+<<elseif ($seeDicks is 2)>>
+	<<display "Generate XY Slave">>
+<<else>>
+	<<display "Generate XX Slave">>
+<</if>>
+<</nobr>>\

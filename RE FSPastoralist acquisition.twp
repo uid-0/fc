@@ -1,0 +1,45 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate XX Slave">>
+<<set $activeSlave.origin to "She offered herself for voluntary enslavement, choosing you as her new owner because you treat lactating girls well.">>
+<<set $activeSlave.health to random(-2,2)>>
+<<set $activeSlave.devotion to random(-3,3)>>
+<<set $activeSlave.trust to random(1,3)>>
+<<set $activeSlave.preg to random(10,20)>>
+<<set $activeSlave.lactation to 1>>
+<<set $activeSlave.vagina to 1>>
+<<set $activeSlave.boobs += 200*random(2,5)>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+You receive so many messages, as a noted titan of the new Free Cities world, that your personal assistant has to be quite draconian in culling them. She lets only the most important through to you. One category of message that always gets through regardless of content, though, is requests for voluntary enslavement. As the new world takes shape, they've become less rare than they once were.
+
+This call is coming from a public kiosk, which is usually an indication that the person on the other end is a transient individual who has decided to take slavery over homelessness. This proves to be right on the money in this case, though the woman isn't too terribly bedraggled; her situation must be recent. She asks to be enslaved with the crushing sadness most such people experience during their last free hours. "I'm pregnant," she says through tears. "I know I'm not that pretty, sir. But," and she brings her sizeable chest into view, "I've got pretty big boobs, and I started giving milk yesterday. I was searching the net, and I saw that you milk women, sir. It seems like a better life than getting fucked all the time."
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	She drags herself in, but as the enslavement process winds grindingly on, she shakes off her depression. The vast weight of her situation lifts from her. You've seen this before, the perverse internal freedom that comes with the knowledge that her life is in the hands of another now, and that all she has to do or can do is obey. Her last words to you as a free woman are an ironic statement that, when she was teased back in school for the size of her boobs, she never thought they'd save her one day.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

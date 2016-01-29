@@ -1,0 +1,120 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Free Cities Justice">>
+
+<<set $contractCost to 1000>>
+
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "You sentenced her to enslavement as a punishment for attempted burglary.">>
+<<set $activeSlave.career to "criminal addict">>
+<<set $activeSlave.devotion to random(-15,-11)>>
+<<set $activeSlave.trust to random(-3,0)>>
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.health to random(-4,-2)>>
+<<set $activeSlave.addict to 30>>
+<<set $activeSlave.anus to 3>>
+<<if $activeSlave.dick is 0>>
+	<<set $activeSlave.balls to 0>>
+	<<set $activeSlave.vagina to 2>>
+	<<set $activeSlave.vaginalSkill to 1>>
+<<else>>
+	<<set $activeSlave.ovaries to 0>>
+	<<set $activeSlave.clit to 0>>
+	<<set $activeSlave.vaginalSkill to 0>>
+<</if>>
+<<set $activeSlave.oralSkill to 1>>
+<<set $activeSlave.analSkill to 2>>
+<<set $activeSlave.whoreSkill to 1>>
+<<set $activeSlave.earPiercing to 1>>
+<<set $activeSlave.nosePiercing to 1>>
+<<set $activeSlave.nipplesPiercing to 1>>
+<<set $activeSlave.clitPiercing to 1>>
+<<set $activeSlave.behavioralQuirk to "quirky">>
+
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+Your personal assistant alerts you that a criminal has been detected by your security systems and detained by the drones. Crime is extremely uncommon in your arcology, since nothing can escape the notice of the omnipresent monitoring systems. Criminals are usually either too angry, too ignorant, or too stupid to understand the impossibility of successful petty crime. This is the latter situation; a girl suffering severe aphrodisiac withdrawal has attempted to break into a store that sells the stuff. She's now lying in a pool of her own urine with a tazer round stuck in her ass; the drone responsible is hovering helpfully nearby, hitting her with another shock whenever she does more than twitch.
+
+//Applying enslavement as punishment will cost ¤$contractCost. Doing so and then selling her immediately will bring in approximately ¤$slaveCost.//
+
+<<set $saleDescription to 1>>\
+<<display "Long Slave Description">>\
+<<set $saleDescription to 0>>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave the cunt">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You complete the legalities and biometric scanning quickly and without fuss. The condemned recovers enough by the end of the process to start masturbating weakly, even as she begins begging for a fix. Then it's off to the penthouse for basic slave induction.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<click "Sentence her to a day in the stocks, then enslave her">>
+	<<set $activeSlave.health -= 1>>
+	<<set $activeSlave.behavioralQuirk to "quirky">>
+	<<set $activeSlave.sexualQuirk to "hates men">>
+	<<set $activeSlave.anus to 2>>
+	<<if $activeSlave.vagina gt -1>>
+	  <<set $activeSlave.vagina to 2>>
+	  <<if random(1,100) gt 60>>
+		<<set $activeSlave.preg to 1>>
+	  <</if>>
+	<</if>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You declare her holes fair game for the entire arcology, since she must somehow repay her debt to society. She spends a torturous day in the stocks before being hauled in for enslavement, somewhat @@color:red;the worse for wear@@ and @@color:red;acting oddly@@ due to her ordeal, bruises all over her body, cum leaking from her @@color:lime;loosened@@ anus<<if $activeSlave.vagina gt -1>> and @@color:lime;fucked-out@@ pussy<</if>>. The public @@color:green;enjoys the fun.@@
+	<<set $rep += 100>>
+	<<set $nextLink to "AS Dump">>
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<if $arcade gt 0>>\
+<<click "Enslave her and sentence her to a month in the arcade">>
+	<<set $activeSlave.assignment to "be confined in the arcade">><<set $activeSlave.assignmentVisible to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+	<<set $activeSlave.sentence to 4>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You complete the legalities and biometric scanning quickly and cautiously. The  condemned recovers enough by the end of the process to start masturbating weakly, even as she begins begging for a fix. When she learns she's headed to the arcade, she actually relaxes a little, having heard the whores there get drugs. The public @@color:green;looks forward@@ to seeing her there, especially the owner of the shop she attempted to burglarize.
+	<<set $rep += 50>>
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<</if>>\
+<<click "Punitively amputate her limbs, and then enslave her">>
+	<<set $activeSlave.health -= 2>>
+	<<set $activeSlave.amp to 1>>
+	<<set $activeSlave.heels to 0>>
+	<<set $activeSlave.behavioralQuirk to "quirky">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    An example must be made. Free people must understand that criminals who commit outrages against them will be severely punished. The protesting malefactor is stripped and stuffed into your remote surgery on public video feed. She begs for a fix until she realizes what's coming, at which point she switches to fighting vainly to escape. Of course, @@color:red;her health is affected@@ and the horrible experience has left her @@color:red;acting oddly.@@ Then it's off to the penthouse for basic slave induction. The public @@color:green;approves of this harshness.@@
+	<<set $rep += 100>>
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+<<click "Publicly flog the criminal">>
+	<<replace "#result">>
+    Naturally, the wretch will be thrown out of the arcology: but an example must first be made. Free people must understand that criminals who commit outrages against them will be severely punished. The twitching, begging malefactor is stripped and flogged on the main promenade before being escorted bleeding, and still twitching from withdrawal, out of the arcology. The public @@color:green;approves of this harshness.@@
+	<<set $rep += 100>>
+	<<set $nextLink to "RIE Eligibility Check">>\
+    <</replace>>
+<</click>>
+</span>

@@ -1,0 +1,45 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is standing in the bathroom in front of the sink, with one leg up on the counter so she can inspect her genitalia. From the feeds, it's obvious she's grieved by what she sees. As you watch, she sobs quietly, reaching towards where her scrotum used to be with a trembling hand. Apparently, she's having trouble accepting her status as a gelded slut.
+\
+<span id="result">
+<<click "Abuse her ass">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She turns around as you enter the bathroom, fear and loathing on her face, but you seize her shoulder and spin her back around without a word. You drag her across the counter until her face is over the sink, and turn it on. She struggles in sheer incomprehension as you hold her head over the filling basin with one hand and roughly grope her butt with the other. When the sink is full, you tell her to spread her buttocks for you like a good butthole bitch. She hesitates, so you push her face under the surface of the water and hold it there until she complies. You shove <<if ($PC.dick is 0)>>a dildo<<else>>your member<</if>> up her anus so harshly that she spasms and reflexively tries to get away, so you push her under again until she stops struggling. For the next ten minutes, she gets shoved under water whenever she offers the slightest resistance to anal rape. Soon, her tears are pattering down into the sink. The next time you decide to buttfuck her, she's @@color:gold;compliant from sheer terror.@@
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Reassure her of her sexual worth">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She turns around as you enter the bathroom, fear and loathing on her face, but is surprised by your gentle expression. She's more shocked still when you give her a reassuring hug and kiss her unresisting mouth. She's so unable to figure out what's happening that she eventually gives up and relaxes into you. You gently turn her around to face the mirror again, and working from the top of her head, describe her body in minute detail, explaining how pretty and valuable a sex slave she is. When you're about to reach her butt, <<if ($activeSlave.mute is 1)>>she uses gestures beg you not to assrape her.<<elseif ($activeSlave.lips gt 2)>>she begs meekly through her massive dick-sucking lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, pleathe, pleathe don't athrape me."<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>she begs meekly through her mouthful of piercings, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, pleathe, pleathe don't athrape me."<<else>>she begs meekly, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, please, please don't assrape me. I don't think I can take it."<</if>> You patiently explain that taking <<if ($PC.dick is 0)>>anything you feel like inserting into her backdoor<<else>>your cock<</if>> is her duty, and begin to massage her sphincter open with a single gentle finger. She doesn't enjoy the ensuing assfuck, but she doesn't truly hate it either and @@color:hotpink;begins to hope@@ that being your butt slave won't be so painful after all.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analSkill += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Comfort her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She turns around as you enter the bathroom, fear and loathing on her face, but is surprised by your gentle expression. She's more shocked still when you give her a reassuring hug and kiss her unresisting mouth. She's so unable to figure out what's happening that she eventually gives up and relaxes into you. You run your hands along her body and kiss her deeply for a long while before reassuring her of her value to you. She looks confused, but goes about her business with dry eyes. She hates you a little less, but wonders whether she can get away with retaining some independence.
+    <</replace>>
+<</click>>
+</span>

@@ -1,0 +1,262 @@
+<<nobr>>
+
+Your arcology is located in $continent. It is a huge structure whose<<if $AProsperityCap gte 120>> solar-panelled<</if>> skin gleams in the sunshine<<if $AProsperityCap gte 100>>, while verdant exterior hydroponics bays lend it an air of growth<</if>>.
+
+<<if $FSChattelReligionistDecoration gte 100>>
+  The uppermost point on the arcology is capped by a massive religious icon.
+<</if>>
+<<if $FSRomanRevivalistDecoration gte 100>>
+  The entrances of the arcology are built of white stone, with graceful columns bringing Rome immediately to mind.
+<</if>>
+<<if $FSAncientEgyptianRevivalistDecoration gte 100>>
+  The entrances of the arcology are built of sandstone, with richly carved columns bringing ancient Egypt immediately to mind.
+<</if>>
+
+<<if ($FSSupremacistDecoration is 100) or ($FSSubjugationistDecoration is 100) or ($FSGenderRadicalistDecoration is 100) or ($FSGenderFundamentalistDecoration is 100) or ($FSPaternalistDecoration is 100) or ($FSDegradationistDecoration is 100) or ($FSBodyPuristDecoration is 100) or ($FSTransformationFetishistDecoration is 100) or ($FSSlimnessEnthusiastDecoration is 100) or ($FSAssetExpansionistDecoration is 100) or ($FSPastoralistDecoration is 100) or ($FSPhysicalIdealistDecoration is 100) or ($FSChattelReligionistDecoration is 100) or ($FSRomanRevivalistDecoration is 100) or ($FSAncientEgyptianRevivalistDecoration is 100)>>
+  Outside the main entrance, there is an enormous statue of an idealized male figure with several statues of nude slaves at his feet.
+  <<if $FSSupremacistDecoration is 100>>
+	The central male figure has distinctly $FSSupremacistRace features.
+  <</if>>
+  <<if $FSSubjugationistDecoration is 100>>
+	The slaves have exaggerated $FSSubjugationistRace features.
+  <</if>>
+  <<if $FSGenderRadicalistDecoration is 100>>
+	The slaves are all hermaphrodites.
+  <</if>>
+  <<if $FSGenderFundamentalistDecoration is 100>>
+	The slaves are all perfectly female.
+  <</if>>
+  <<if $FSPaternalistDecoration is 100>>
+	The slaves are gazing adoringly up at the central male figure.
+  <</if>>
+  <<if $FSDegradationistDecoration is 100>>
+	The slaves are cowering, and are wearing chains.
+  <</if>>
+  <<if $FSBodyPuristDecoration is 100>>
+	The slaves' bodies idealized too.
+  <</if>>
+  <<if $FSTransformationFetishistDecoration is 100>>
+	The slaves have unnaturally narrow waists and big breasts.
+  <</if>>
+  <<if $FSSlimnessEnthusiastDecoration is 100>>
+	The slaves have pretty, girlish figures.
+  <</if>>
+  <<if $FSAssetExpansionistDecoration is 100>>
+	The slaves' breasts are unrealistically huge, almost as large as the rest of their bodies.
+  <</if>>
+  <<if $FSPastoralistDecoration is 100>>
+	The statuary is located in the middle of a fountain; the slaves' nipples pour water into the pool beneath.
+  <</if>>
+  <<if $FSPhysicalIdealistDecoration is 100>>
+	Both the central male figure and the slaves are very muscular.
+  <</if>>
+  <<if $FSChattelReligionistDecoration is 100>>
+	The central male figure has a halo behind his head, and the slaves are in attitudes of worship.
+  <</if>>
+  <<if $FSRomanRevivalistDecoration is 100>>
+	The central male figure is wearing a toga; he has a laurel wreath about his brow.
+  <</if>>
+  <<if $FSAncientEgyptianRevivalistDecoration is 100>>
+	The central male figure is wearing a pharaoh's crown.
+  <</if>>
+<</if>>
+
+<<if ($FSSupremacistDecoration gte 40) or ($FSSubjugationistDecoration gte 40) or ($FSGenderRadicalistDecoration gte 40) or ($FSGenderFundamentalistDecoration gte 40) or ($FSPaternalistDecoration gte 40) or ($FSDegradationistDecoration gte 40) or ($FSBodyPuristDecoration gte 40) or ($FSTransformationFetishistDecoration gte 40) or ($FSSlimnessEnthusiastDecoration gte 40) or ($FSAssetExpansionistDecoration gte 40) or ($FSPastoralistDecoration gte 40) or ($FSPhysicalIdealistDecoration gte 40) or ($FSChattelReligionistDecoration gte 40) or ($FSRomanRevivalistDecoration gte 40) or ($FSAncientEgyptianRevivalistDecoration gte 40)>>
+  The entryway features the first of the arcology's many banks of public screens.
+    <<if $FSSupremacistDecoration gte 40>>
+	Some are showing talk shows and documentaries supporting $FSSupremacistRace supremacy.
+  <</if>>
+  <<if $FSSubjugationistDecoration gte 40>>
+	Some are showing long pseudoscientific programs explaining $FSSubjugationistRace degeneracy.
+  <</if>>
+  <<if $FSGenderRadicalistDecoration gte 40>>
+	Some are showing pornography starring slaves with a truly remarkable variety of genitalia.
+  <</if>>
+  <<if $FSGenderFundamentalistDecoration gte 40>>
+	Some are showing pornography starring women with perfect tits, tight asses and nice pussies.
+  <</if>>
+  <<if $FSPaternalistDecoration gte 40>>
+	Some are showing educational programs for the edification of slaves, and news programs featuring slave accomplishments.
+  <</if>>
+  <<if $FSDegradationistDecoration gte 40>>
+	Some are showing abusive pornography involving slaves being beaten, sodomized, and modified against their will.
+  <</if>>
+  <<if $FSBodyPuristDecoration gte 40>>
+	Some are showing sports programs, the latest games, and self-improvement videos.
+  <</if>>
+  <<if $FSTransformationFetishistDecoration gte 40>>
+	Some are showing medical programs about surgical transformation, interspersed with pornography starring slaves with fake tits.
+  <</if>>
+  <<if $FSSlimnessEnthusiastDecoration gte 40>>
+	Some are showing workout videos interspersed with pornography starring slim slaves.
+  <</if>>
+  <<if $FSAssetExpansionistDecoration gte 40>>
+	Some are playing pornography starring slaves with huge assets, interspersed with pharmaceutical advertisements.
+  <</if>>
+  <<if $FSPastoralistDecoration gte 40>>
+	Some are showing informational agricultural programs interspersed with pornography starring slaves who are lactating heavily, hugely pregnant, or often both.
+  <</if>>
+  <<if $FSPhysicalIdealistDecoration gte 40>>
+	Some are showing bodybuilding competitions, advertisements for supplements, and pornography starring hugely muscular slaves.
+  <</if>>
+  <<if $FSChattelReligionistDecoration gte 40>>
+	Some are showing religious services interspersed with serious programs on the compatibility of sexual slavery with the faith.
+  <</if>>
+  <<if $FSRomanRevivalistDecoration gte 40>>
+	Some are showing announcements on the arcology's progress prepared by the state media for the edification of citizens.
+  <</if>>
+  <<if $FSAncientEgyptianRevivalistDecoration gte 40>>
+	Some are showing educational and scientific programs interspersed with multicultural features.
+  <</if>>
+  <<if $AProsperityCap gte 160>>The programming is constantly updated to suit the individual viewer.<</if>>
+<</if>>
+
+<<if ($FSSupremacistDecoration gte 60) or ($FSSubjugationistDecoration gte 60) or ($FSGenderRadicalistDecoration gte 60) or ($FSGenderFundamentalistDecoration gte 60) or ($FSPaternalistDecoration gte 60) or ($FSDegradationistDecoration gte 60) or ($FSBodyPuristDecoration gte 60) or ($FSTransformationFetishistDecoration gte 60) or ($FSSlimnessEnthusiastDecoration gte 60) or ($FSAssetExpansionistDecoration gte 60) or ($FSPastoralistDecoration gte 60) or ($FSPhysicalIdealistDecoration gte 60) or ($FSChattelReligionistDecoration gte 60) or ($FSRomanRevivalistDecoration gte 60) or ($FSAncientEgyptianRevivalistDecoration gte 60)>>
+  The central plaza is a large open atrium lined with banners.
+  <<if $FSSupremacistDecoration gte 60>>
+	Some depict great achievements in $FSSupremacistRace history.
+  <</if>>
+  <<if $FSSubjugationistDecoration gte 60>>
+	Some depict crushing defeats in $FSSubjugationistRace history.
+  <</if>>
+  <<if $FSGenderRadicalistDecoration gte 60>>
+	Some are split horizontally in three: one part depicts penetration of a woman's pussy, another depicts penetration of a shemale's anus, and the third depicts simultaneous penetration of a hermaphrodite's pussy and anus. The order in which they appear, top to bottom, varies from banner to banner.
+  <</if>>
+  <<if $FSGenderFundamentalistDecoration gte 60>>
+	Some lovingly depict closeups of pussies, a different one on each banner, in all their beauty and variation.
+  <</if>>
+  <<if $FSPaternalistDecoration gte 60>>
+	Some feature respectful portraits of some of the arcology's most talented slaves doing what they're best at.
+  <</if>>
+  <<if $FSBodyPuristDecoration gte 60>>
+	Some feature athletic portraits of the nude bodies of some of the arcology's fastest, strongest, and healthiest girls.
+  <</if>>
+  <<if $FSTransformationFetishistDecoration gte 60>>
+	Some depict sex featuring some of the arcology's most heavily implanted slaves.
+  <</if>>
+  <<if $FSSlimnessEnthusiastDecoration gte 60>>
+	Some feature artistic depictions of slender girls, running, dancing, and in the midst of the act of love.
+  <</if>>
+  <<if $FSAssetExpansionistDecoration gte 60>>
+	Some feature lewd closeups of enormous breasts and giant asses.
+  <</if>>
+  <<if $FSPastoralistDecoration gte 60>>
+	Some feature prizewinning cows.
+  <</if>>
+  <<if $FSPhysicalIdealistDecoration gte 60>>
+	Some feature some of the arcology's most swole ladies.
+  <</if>>
+  <<if $FSChattelReligionistDecoration gte 60>>
+	Many include religious iconography.
+  <</if>>
+  <<if $FSDegradationistDecoration gte 60>>
+	There are cages hanging from the ceiling of the central plaza; a naked slave occupies each one.
+  <</if>>
+  <<if $FSRomanRevivalistDecoration gte 60>>
+	The central plaza is decorated to look like a thriving Roman forum on market day.
+  <</if>>
+  <<if $FSAncientEgyptianRevivalistDecoration gte 60>>
+	The central plaza is decorated to look like a thriving ancient Egyptian market on a festival day.
+  <</if>>
+  <<if $AProsperityCap gte 60>>A security drone occasionally flies across the open space.<</if>>
+<<else>>
+  <<if $AProsperityCap gte 60>>The central plaza is a large atrium; a security drone occasionally flies across the open space.<</if>>
+<</if>>
+
+<<if ($FSSupremacistDecoration gte 80) or ($FSSubjugationistDecoration gte 80) or ($FSGenderRadicalistDecoration gte 80) or ($FSGenderFundamentalistDecoration gte 80) or ($FSPaternalistDecoration gte 80) or ($FSDegradationistDecoration gte 80) or ($FSBodyPuristDecoration gte 80) or ($FSTransformationFetishistDecoration gte 80) or ($FSSlimnessEnthusiastDecoration gte 80) or ($FSAssetExpansionistDecoration gte 80) or ($FSPastoralistDecoration gte 80) or ($FSPhysicalIdealistDecoration gte 80) or ($FSChattelReligionistDecoration gte 80) or ($FSRomanRevivalistDecoration gte 80) or ($FSAncientEgyptianRevivalistDecoration gte 80)>>
+  There are numerous slaves stationed down on the plaza to greet visitors.
+  <<if $FSPaternalistDecoration gte 80>>
+	They're intelligent and articulate.
+  <</if>>
+  <<if $FSBodyPuristDecoration gte 80>>
+	Most are pretty and unspoiled.
+  <</if>>
+  <<if $FSTransformationFetishistDecoration gte 80>>
+	Most have enormous fake tits, lips and asses.
+  <</if>>
+  <<if $FSSlimnessEnthusiastDecoration gte 80>>
+	Many are girlish and energetic.
+  <</if>>
+  <<if $FSAssetExpansionistDecoration gte 80>>
+	Many are using wheeled stands to permit them to stand comfortably despite their titanic breasts.
+  <</if>>
+  <<if $FSPastoralistDecoration gte 80>>
+	Many of them can offer visitors a sample of the arcology's pride and joy, straight from the nipple.
+  <</if>>
+  <<if $FSPhysicalIdealistDecoration gte 80>>
+	Their musculature is uniformly stunning. Swole acceptance is high here.
+  <</if>>
+  <<if $FSRomanRevivalistDecoration gte 80>>
+	Many are wearing authentic ancient Roman stolas and maintaining composed and dignified attitudes.
+  <</if>>
+  <<if $FSAncientEgyptianRevivalistDecoration gte 80>>
+	Many are wearing authentic ancient Egyptian dresses, and are dancing and making merry when they aren't assisting people.
+  <</if>>
+  <<if $FSGenderRadicalistDecoration gte 80>>
+	On several raised stands around the plaza, girls with dicks are stripping for the pleasure of passersby.
+  <</if>>
+  <<if $FSGenderFundamentalistDecoration gte 80>>
+	On several raised stands around the plaza, female slaves are stripping for the pleasure of passersby.
+  <</if>>
+  <<if $FSChattelReligionistDecoration gte 80>>
+	A handful of slaves are in religious attire, praying. They help if asked, and will even lead brief religious services if requested.
+  <</if>>
+  <<if $FSDegradationistDecoration gte 80>>
+	Numerous downtrodden slaves are working on the plaza at menial tasks. Some are even carrying citizens in sedan chairs.
+  <</if>>
+  <<if $FSSupremacistDecoration gte 80>>
+	Here and there around the plaza, slaves of every race besides $FSSupremacistRace people can be seen carrying things, cleaning, and even shining shoes.
+  <</if>>
+  <<if $FSSubjugationistDecoration gte 80>>
+	In the center of the plaza, an auction of a large group of frightened $FSSubjugationistRace slaves is taking place.
+  <</if>>
+  <<if $AProsperityCap gte 140>>The plaza is packed with citizens doing business.<</if>>
+<</if>>
+
+<<if $FSSupremacistDecoration gte 80>>
+  The chanted sounds of indoctrination can faintly be heard in the plaza.
+<</if>>
+<<if $FSSubjugationistDecoration gte 80>>
+  Judging by the sound of leather on flesh, a whipping is happening somewhere close by the plaza.
+<</if>>
+<<if $FSGenderRadicalistDecoration gte 80>>
+  A slave is being sodomized in a parlor off the plaza, to go by the pained moaning.
+<</if>>
+<<if $FSGenderFundamentalistDecoration gte 80>>
+  A slave is being fucked in a parlor off the plaza, to go by the  gasps of pleasure.
+<</if>>
+<<if $FSPaternalistDecoration gte 80>>
+  The sounds of orgasm are drifting out of a hallway off the plaza.
+<</if>>
+<<if $FSDegradationistDecoration gte 80>>
+  Agonized screaming is drifting out of a hallway off the plaza.
+<</if>>
+<<if $FSBodyPuristDecoration gte 80>>
+  Splashing water in a swimming pool can be heard from below the plaza.
+<</if>>
+<<if $FSTransformationFetishistDecoration gte 80>>
+  The heavy beat of club music can be heard on the plaza.
+<</if>>
+<<if $FSSlimnessEnthusiastDecoration gte 80>>
+  The quiet murmur of feet on a running track can be heard from the promenade above the plaza.
+<</if>>
+<<if $FSAssetExpansionistDecoration gte 80>>
+  Stereotypical bimbo giggling can be heard from the promenade above the plaza.
+<</if>>
+<<if $FSPastoralistDecoration gte 80>>
+  An indistinct gushing noise is coming from somewhere below the plaza.
+<</if>>
+<<if $FSPhysicalIdealistDecoration gte 80>>
+  The clash of a deadlift bar being racked can be heard from a nearby gym.
+<</if>>
+<<if $FSChattelReligionistDecoration gte 80>>
+  A lovely hymn is drifting through the air.
+<</if>>
+<<if $FSRomanRevivalistDecoration gte 80>>
+  Faintly, the sound of cheering can be heard as a slave dies in gladiatorial combat.
+<</if>>
+<<if $FSAncientEgyptianRevivalistDecoration gte 80>>
+  To the side of the plaza is a huge stone entryway heading down: the entrance to the tomb you have prepared for yourself.
+<</if>>
+
+<</nobr>>

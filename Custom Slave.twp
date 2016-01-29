@@ -1,0 +1,230 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+<<set $returnTo to "Main">>\
+<<set $encyclopedia to "Kidnapped Slaves">>\
+<<if ($customSlave.dick is 0) and ($customSlave.vagina is -1)>><<set $customSlave.vagina to 0>><</if>>\
+\
+<<if $customSlaveOrdered is 0>>You work up a new slave order for posting where slave merchants can work to fulfill it.<<else>>You review your posted slave order.<</if>> <<if $personalAssistant is 1>>As you work, your personal assistant makes lewd comments about what she looks forward to doing to this new slave. <</if>>Your order requests a slave with the following characteristics:
+
+<<nobr>>
+<<if $customSlave.age lt 20>>18-19 years old.
+<<elseif $customSlave.age lt 30>>20-29 years old.
+<<elseif $customSlave.age lt 40>>30-39 years old.
+<<else>>40+ years old.
+<</if>>
+[["18-19"|Custom Slave][$customSlave.age to random(18,19)]] | [["20-29"|Custom Slave][$customSlave.age to random(20,29)]] | [["30-39"|Custom Slave][$customSlave.age to random(30,39)]] | [[40+|Custom Slave][$customSlave.age to random(40,44)]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.health is 0>>Healthy.
+<<else>>Extremely healthy.
+<</if>>
+[[Healthy|Custom Slave][$customSlave.health to 0]] | [[Extremely healthy|Custom Slave][$customSlave.health to 8]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.muscles is 0>>Normal musculature.
+<<elseif $customSlave.muscles is 1>>Toned.
+<<else>>Ripped.
+<</if>>
+[[Normal|Custom Slave][$customSlave.muscles to 0]] | [[Toned|Custom Slave][$customSlave.muscles to 1]] | [[Ripped|Custom Slave][$customSlave.muscles to 2]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.lips is 0>>Normal lips.
+<<elseif $customSlave.lips is 1>>Plush lips.
+<</if>>
+[[Normal|Custom Slave][$customSlave.lips to 0]] | [[Plush|Custom Slave][$customSlave.lips to 1]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.height lt -1>>Petite.
+<<elseif $customSlave.height is -1>>Short.
+<<elseif $customSlave.height is 0>>Average height.
+<<elseif $customSlave.height is 1>>Tall.
+<<elseif $customSlave.height gt 1>>Very tall.
+<</if>>
+[[Petite|Custom Slave][$customSlave.height to -2]] | [[Short|Custom Slave][$customSlave.height to -1]] | [[Average height|Custom Slave][$customSlave.height to 0]] | [[Tall|Custom Slave][$customSlave.height to 1]] | [[Very Tall|Custom Slave][$customSlave.height to 2]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.face lt -1>>Very unattractive face.
+<<elseif $customSlave.face is -1>>Unattractive face.
+<<elseif $customSlave.face is 0>>Average face.
+<<elseif $customSlave.face is 1>>Attractive face.
+<<elseif $customSlave.face gt 1>>Very attractive face.
+<</if>>
+[[Very unattractive|Custom Slave][$customSlave.face to -2]] | [[Unattractive|Custom Slave][$customSlave.face to -1]] | [[Average|Custom Slave][$customSlave.face to 0]] | [[Attractive|Custom Slave][$customSlave.face to 1]] | [[Very attractive|Custom Slave][$customSlave.face to 2]]
+<</nobr>>
+/*<<nobr>>
+<<if $customSlave.race is "white">>White.
+<<elseif $customSlave.race is "asian">>Asian.
+<<elseif $customSlave.race is "latina">>Latina.
+<<elseif $customSlave.race is "middle eastern">>Arab.
+<<else>>Black.
+<</if>>
+[[White|Custom Slave][$customSlave.race to "white"]] | [[Asian|Custom Slave][$customSlave.race to "asian"]] | [[Latina|Custom Slave][$customSlave.race to "latina"]] | [[Middle Eastern|Custom Slave][$customSlave.race to "middle eastern"]] | [[Black|Custom Slave][$customSlave.race to "black"]]
+<</nobr>>*/\
+<<nobr>>
+<<if $customSlave.boobs is 200>>Flat chest.
+<<elseif $customSlave.boobs lte 500>>Healthy breasts.
+<<else>>Big breasts.
+<</if>>
+[[Flat|Custom Slave][$customSlave.boobs to 200]] | [[Healthy|Custom Slave][$customSlave.boobs to 500]] | [[Big|Custom Slave][$customSlave.boobs to 800]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.butt is 1>>Flat buttocks.
+<<elseif $customSlave.butt lt 4>>Healthy buttocks.
+<<else>>Huge buttocks.
+<</if>>
+[[Flat|Custom Slave][$customSlave.butt to 1]] | [[Healthy|Custom Slave][$customSlave.butt to 3]] | [[Huge|Custom Slave][$customSlave.butt to 5]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.vagina is -1>>No vagina.
+<<elseif $customSlave.vagina is 0>>Vaginal virgin.
+<<else>>Normal vagina.
+<</if>>
+<<if $customSlave.dick gt 0>>[[No vagina|Custom Slave][$customSlave.vagina to -1, $customSlave.preg to -2, $customSlave.ovaries to 0]]<<else>>//No vagina//<</if>> | [[Vaginal virgin|Custom Slave][$customSlave.vagina to 0, $customSlave.preg to -1, $customSlave.ovaries to 1]] | [[Normal vagina|Custom Slave][$customSlave.vagina to 1, $customSlave.preg to -1, $customSlave.ovaries to 1]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.dick is 0>>No penis.
+<<elseif $customSlave.dick is 2>>Small penis.
+<<else>>Large penis.
+<</if>>
+[[No penis|Custom Slave][$customSlave.dick to 0,$customSlave.balls to 0,$customSlave.clit to 0]] | [[Small penis|Custom Slave][$customSlave.dick to 2,$customSlave.clit to 0]] | [[Large penis|Custom Slave][$customSlave.dick to 4,$customSlave.clit to 0]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.dick gt 0>>
+<<if $customSlave.balls is 0>>No testicles.<<elseif $customSlave.balls is 3>>Small testicles.<<else>>Large testicles.<</if>>
+[[No testicles|Custom Slave][$customSlave.balls to 0,$customSlave.clit to 0]] | [[Small testicles|Custom Slave][$customSlave.balls to 2,$customSlave.clit to 0]] | [[Large testicles|Custom Slave][$customSlave.balls to 4,$customSlave.clit to 0]]
+<<else>>
+<<if $customSlave.clit is 0>>Normal clitoris.<<else>>Enormous clitoris.<</if>>
+[[Normal clitoris|Custom Slave][$customSlave.clit to 0]] | [[Enormous clitoris|Custom Slave][$customSlave.clit to 3]]
+<</if>>
+<</nobr>>
+<<nobr>>
+<<if $customSlave.anus is 0>>Anal virgin.
+<<else>>Normal anus.
+<</if>>
+[[Anal virgin|Custom Slave][$customSlave.anus to 0]] | [[Normal anus|Custom Slave][$customSlave.anus to 1]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.analSkill is 0>>Sexually unskilled.
+<<elseif $customSlave.analSkill is 0>>Sexually skilled.
+<<else>>Sexual expert.
+<</if>>
+[[Unskilled|Custom Slave][$customSlave.analSkill to 0,$customSlave.oralSkill to 0,$customSlave.vaginalSkill to 0]] | [[Skilled|Custom Slave][$customSlave.analSkill to 1,$customSlave.oralSkill to 1,$customSlave.vaginalSkill to 1]] | [[Expert|Custom Slave][$customSlave.analSkill to 2,$customSlave.oralSkill to 2,$customSlave.vaginalSkill to 2]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.whoreSkill is 0>>Unskilled at prostitution and entertainment.
+<<elseif $customSlave.whoreSkill is 0>>Skilled at prostitution and entertainment.
+<<else>>Prostitution and entertainment expert.
+<</if>>
+[[Unskilled|Custom Slave][$customSlave.whoreSkill to 0,$customSlave.entertainSkill to 0]] | [[Skilled|Custom Slave][$customSlave.whoreSkill to 1,$customSlave.entertainSkill to 1]] | [[Expert|Custom Slave][$customSlave.whoreSkill to 2,$customSlave.entertainSkill to 2]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.combatSkill is 0>>Unskilled at combat.
+<<else>>Skilled at combat.
+<</if>>
+[[Unskilled|Custom Slave][$customSlave.combatSkill to 0]] | [[Skilled|Custom Slave][$customSlave.combatSkill to 1]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.intelligence is 2>>Brilliant.
+<<elseif $customSlave.intelligence is 1>>Smart.
+<<elseif $customSlave.intelligence is 0>>Average intelligence.
+<<elseif $customSlave.intelligence is -1>>Stupid.
+<<else>>Moronic.
+<</if>>
+[[Brilliant|Custom Slave][$customSlave.intelligence to 2]] | [[Smart|Custom Slave][$customSlave.intelligence to 1]] | [[Average intelligence|Custom Slave][$customSlave.intelligence to 0]] | [[Stupid|Custom Slave][$customSlave.intelligence to -1]] | [[Moronic|Custom Slave][$customSlave.intelligence to -2]]
+<</nobr>>
+<<nobr>>
+<<if $customSlave.intelligenceImplant is 1>>Educated.
+<<else>>Uneducated.
+<</if>>
+[[Educated|Custom Slave][$customSlave.intelligenceImplant to 1]] | [[Uneducated|Custom Slave][$customSlave.intelligenceImplant to 0]]
+<</nobr>>
+<<nobr>>
+Nationality: $customSlave.nationality.
+[[American|Custom Slave][$customSlave.nationality to "American"]] | 
+[[Afghan|Custom Slave][$customSlave.nationality to "Afghan"]] | 
+[[Algerian|Custom Slave][$customSlave.nationality to "Algerian"]] | 
+[[Argentinian|Custom Slave][$customSlave.nationality to "Argentinian"]] | 
+[[Armenian|Custom Slave][$customSlave.nationality to "Armenian"]] | 
+[[Australian|Custom Slave][$customSlave.nationality to "Australian"]] | 
+[[Austrian|Custom Slave][$customSlave.nationality to "Austrian"]] | 
+[[Bangladeshi|Custom Slave][$customSlave.nationality to "Bangladeshi"]] | 
+[[Belgian|Custom Slave][$customSlave.nationality to "Belgian"]] | 
+[[Bolivian|Custom Slave][$customSlave.nationality to "Bolivian"]] | 
+[[Brazilian|Custom Slave][$customSlave.nationality to "Brazilian"]] | 
+[[British|Custom Slave][$customSlave.nationality to "British"]] | 
+[[Burmese|Custom Slave][$customSlave.nationality to "Burmese"]] | 
+[[Canadian|Custom Slave][$customSlave.nationality to "Canadian"]] | 
+[[Chilean|Custom Slave][$customSlave.nationality to "Chilean"]] | 
+[[Chinese|Custom Slave][$customSlave.nationality to "Chinese"]] | 
+[[Czech|Custom Slave][$customSlave.nationality to "Czech"]] | 
+[[Colombian|Custom Slave][$customSlave.nationality to "Colombian"]] | 
+[[Congolese|Custom Slave][$customSlave.nationality to "Congolese"]] | 
+[[Cuban|Custom Slave][$customSlave.nationality to "Cuban"]] | 
+[[Danish|Custom Slave][$customSlave.nationality to "Danish"]] | 
+[[Dutch|Custom Slave][$customSlave.nationality to "Dutch"]] | 
+[[Egyptian|Custom Slave][$customSlave.nationality to "Egyptian"]] | 
+[[Estonian|Custom Slave][$customSlave.nationality to "Estonian"]] | 
+[[Ethiopian|Custom Slave][$customSlave.nationality to "Ethiopian"]] | 
+[[Filipina|Custom Slave][$customSlave.nationality to "Filipina"]] | 
+[[Finnish|Custom Slave][$customSlave.nationality to "Finnish"]] | 
+[[French|Custom Slave][$customSlave.nationality to "French"]] | 
+[[German|Custom Slave][$customSlave.nationality to "German"]] | 
+[[Ghanan|Custom Slave][$customSlave.nationality to "Ghanan"]] | 
+[[Greek|Custom Slave][$customSlave.nationality to "Greek"]] | 
+[[Guatemalan|Custom Slave][$customSlave.nationality to "Guatemalan"]] | 
+[[Haitian|Custom Slave][$customSlave.nationality to "Haitian"]] | 
+[[Hungarian|Custom Slave][$customSlave.nationality to "Hungarian"]] | 
+[[Icelandic|Custom Slave][$customSlave.nationality to "Icelandic"]] | 
+[[Indonesian|Custom Slave][$customSlave.nationality to "Indonesian"]] | 
+[[Indian|Custom Slave][$customSlave.nationality to "Indian"]] | 
+[[Iranian|Custom Slave][$customSlave.nationality to "Iranian"]] | [[Iraqi|Custom Slave][$customSlave.nationality to "Iraqi"]] | 
+[[Irish|Custom Slave][$customSlave.nationality to "Irish"]] | 
+[[Italian|Custom Slave][$customSlave.nationality to "Italian"]] | 
+[[Israeli|Custom Slave][$customSlave.nationality to "Israeli"]] | 
+[[Jamaican|Custom Slave][$customSlave.nationality to "Jamaican"]] | 
+[[Japanese|Custom Slave][$customSlave.nationality to "Japanese"]] | 
+[[Kazakh|Custom Slave][$customSlave.nationality to "Kazakh"]] | 
+[[Kenyan|Custom Slave][$customSlave.nationality to "Kenyan"]] | 
+[[Korean|Custom Slave][$customSlave.nationality to "Korean"]] | 
+[[Lithuanian|Custom Slave][$customSlave.nationality to "Lithuanian"]] | 
+[[Malaysian|Custom Slave][$customSlave.nationality to "Malaysian"]] | 
+[[Mexican|Custom Slave][$customSlave.nationality to "Mexican"]] | 
+[[Moroccan|Custom Slave][$customSlave.nationality to "Moroccan"]] | 
+[[Nepalese|Custom Slave][$customSlave.nationality to "Nepalese"]] | 
+[[New Zealander|Custom Slave][$customSlave.nationality to "a New Zealander"]] | 
+[[Nigerian|Custom Slave][$customSlave.nationality to "Nigerian"]] | 
+[[Norwegian|Custom Slave][$customSlave.nationality to "Norwegian"]] | 
+[[Pakistani|Custom Slave][$customSlave.nationality to "Pakistani"]] | 
+[[Peruvian|Custom Slave][$customSlave.nationality to "Peruvian"]] | 
+[[Polish|Custom Slave][$customSlave.nationality to "Polish"]] | 
+[[Portuguese|Custom Slave][$customSlave.nationality to "Portuguese"]] | 
+[[Puerto Rican|Custom Slave][$customSlave.nationality to "Puerto Rican"]] | 
+[[Romanian|Custom Slave][$customSlave.nationality to "Romanian"]] | 
+[[Russian|Custom Slave][$customSlave.nationality to "Russian"]] | 
+[[Saudi|Custom Slave][$customSlave.nationality to "Saudi"]] | 
+[[Serbian|Custom Slave][$customSlave.nationality to "Serbian"]] | 
+[[Slovak|Custom Slave][$customSlave.nationality to "Slovak"]] | 
+[[South African|Custom Slave][$customSlave.nationality to "South African"]] | 
+[[Spanish|Custom Slave][$customSlave.nationality to "Spanish"]] | 
+[[Sudanese|Custom Slave][$customSlave.nationality to "Sudanese"]] | 
+[[Swedish|Custom Slave][$customSlave.nationality to "Swedish"]] | 
+[[Swiss|Custom Slave][$customSlave.nationality to "Swiss"]] | 
+[[Tanzanian|Custom Slave][$customSlave.nationality to "Tanzanian"]] | 
+[[Thai|Custom Slave][$customSlave.nationality to "Thai"]] | 
+[[Turkish|Custom Slave][$customSlave.nationality to "Turkish"]] | 
+[[Ugandan|Custom Slave][$customSlave.nationality to "Ugandan"]] | 
+[[Ukrainian|Custom Slave][$customSlave.nationality to "Ukrainian"]] | 
+[[Uzbek|Custom Slave][$customSlave.nationality to "Uzbek"]] | 
+[[Venezuelan|Custom Slave][$customSlave.nationality to "Venezuelan"]] | 
+[[Vietnamese|Custom Slave][$customSlave.nationality to "Vietnamese"]] | 
+[[Yemeni|Custom Slave][$customSlave.nationality to "Yemeni"]] | 
+[[Zimbabwean|Custom Slave][$customSlave.nationality to "Zimbabwean"]]
+<</nobr>>
+
+<<nobr>>
+<<if $customSlaveOrdered is 1>>
+[[Withdraw custom slave order|Main][$customSlaveOrdered to 0]]
+<<else>>
+[[Post custom slave order|Main][$customSlaveOrdered to 1]]
+<</if>>
+<</nobr>>

@@ -1,0 +1,124 @@
+<<nobr>>
+
+<<if $slaves[$i].rivalry is 0>>
+
+<<if $slaves[$i].fetish isnot "mindbroken">>
+  <<if $slaves[$i].behavioralQuirk is "none">>
+  	<<set $seed to random(1,100)>>
+  <<else>>
+  	<<set $seed to random(1,110)>>
+  <</if>>
+  <<if $seed gt 90>>
+    <<for $j to 0; $j lt $slaves.length; $j++>>
+      <<if $slaves[$j].ID isnot $slaves[$i].ID>>
+      <<if $slaves[$j].assignment is $slaves[$i].assignment>>
+      <<if $slaves[$j].assignment isnot "stay confined">>
+      <<if $slaves[$j].assignment isnot "be confined in the arcade">>
+      <<if ($slaves[$j].rivalry is 0) and ($slaves[$i].rivalry is 0)>>
+      <<if ($slaves[$i].relationshipTarget isnot $slaves[$j].ID)>>
+      <<if random(1,200) gt (160+$slaves[$j].devotion+$slaves[$i].devotion)>>
+          $slaves[$i].slaveName and $slaves[$j].slaveName see too much of each other and @@color:lightsalmon;start to dislike each other.@@
+          <<set $slaves[$j].rivalry to 1>>
+          <<set $slaves[$j].rivalryTarget to $slaves[$i].ID>>
+          <<set $slaves[$i].rivalry to 1>>
+          <<set $slaves[$i].rivalryTarget to $slaves[$j].ID>>
+      <</if>>
+      <</if>>
+      <</if>>
+      <</if>>
+      <</if>>
+      <</if>>
+      <</if>>
+    <</for>>
+  <</if>>
+<</if>>
+
+<<else>>
+
+<<if $slaves[$i].fetish is "mindbroken">>
+
+Since she is mindbroken, she @@color:lightsalmon;can't really maintain@@ any meaningful rivalry with
+<<for $j to 0; $j lt $slaves.length; $j++>>
+  <<if $slaves[$j].ID is $slaves[$i].rivalryTarget>>
+      $slaves[$j].slaveName.
+      <<set $slaves[$j].rivalry to 0>>
+      <<set $slaves[$j].rivalryTarget to 0>>
+  <</if>>
+<</for>>
+<<set $slaves[$i].rivalry to 0>>
+<<set $slaves[$i].rivalryTarget to 0>>
+
+<<else>>
+
+<<if (random(1,100) gt 70)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].rivalryTarget>>
+    <<if ($slaves[$j].assignment isnot $slaves[$i].assignment)>>
+        With time apart $slaves[$i].slaveName and $slaves[$j].slaveName @@color:lightgreen;dislike each other less.@@
+        <<set $slaves[$j].rivalry -= 1>>
+        <<set $slaves[$i].rivalry -= 1>>
+    <<elseif ($slaves[$j].fetish is $slaves[$i].fetish) and ($slaves[$j].fetishDiscovered is 1) and ($slaves[$i].fetishDiscovered is 1)>>
+        $slaves[$i].slaveName and $slaves[$j].slaveName share sexual interests, and in the sexual atmosphere of the arcology, it's @@color:lightgreen;difficult for them to keep up their dislike@@ of one another with the mutual attraction.
+        <<set $slaves[$j].rivalry -= 1>>
+        <<set $slaves[$i].rivalry -= 1>>
+    <<elseif ($slaves[$j].devotion gt 10) and ($slaves[$i].devotion gt 10)>>
+        Since both $slaves[$i].slaveName and $slaves[$j].slaveName are devoted to you, they work together to @@color:lightgreen;get over their feud,@@ since it gets in the way of their duties.
+        <<set $slaves[$j].rivalry -= 1>>
+        <<set $slaves[$i].rivalry -= 1>>
+    <<elseif ($slaves[$j].trust lt -4) and ($slaves[$i].devotion lt -4)>>
+        Since both $slaves[$i].slaveName and $slaves[$j].slaveName are terrified of you, they work together to @@color:lightgreen;get over their feud,@@ since it brings punishment on both of them.
+        <<set $slaves[$j].rivalry -= 1>>
+        <<set $slaves[$i].rivalry -= 1>>
+    <<elseif (random(1,100) gt 70)>>
+        $slaves[$i].slaveName and $slaves[$j].slaveName's @@color:lightgreen;feud dissipates a little.@@
+        <<set $slaves[$j].rivalry -= 1>>
+        <<set $slaves[$i].rivalry -= 1>>
+    <</if>>
+    <</if>>
+  <</for>>
+<<elseif ($slaves[$i].relation isnot 0) and ($slaves[$i].relationTarget is $slaves[$i].rivalryTarget) and (random(1,100) gt 80)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].rivalryTarget>>
+        $slaves[$i].slaveName and $slaves[$j].slaveName @@color:lightsalmon;pursue their family rivalry.@@
+        <<set $slaves[$j].rivalry += 1>>
+        <<set $slaves[$i].rivalry += 1>>
+    <</if>>
+  <</for>>
+<<elseif ($slaves[$i].relation isnot 0) and ($slaves[$i].relationTarget is $slaves[$i].rivalryTarget) and (random(1,100) gt 80)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].rivalryTarget>>
+        $slaves[$i].slaveName and $slaves[$j].slaveName @@color:lightgreen;patch up their family relationship.@@
+        <<set $slaves[$j].rivalry -= 1>>
+        <<set $slaves[$i].rivalry -= 1>>
+    <</if>>
+  <</for>>
+<<elseif ($slaves[$i].fetish is "nympho") or ($slaves[$i].fetish is "likes girls") and (random(1,100) gt 70)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].rivalryTarget>>
+        $slaves[$i].slaveName lusts after $slaves[$j].slaveName, and does everything she can to @@color:lightgreen;patch up their differences.@@
+        <<set $slaves[$j].rivalry -= 1>>
+        <<set $slaves[$i].rivalry -= 1>>
+    <</if>>
+  <</for>>
+<<elseif (random(1,100) gt 90)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].rivalryTarget>>
+        $slaves[$i].slaveName and $slaves[$j].slaveName @@color:lightsalmon;bicker@@ and indulge their rivalry whenever they can.
+        <<set $slaves[$j].rivalry += 1>>
+        <<set $slaves[$i].rivalry += 1>>
+    <</if>>
+  <</for>>
+<<elseif (random(1,100) gt 90)>>
+  <<for $j to 0; $j lt $slaves.length; $j++>>
+    <<if $slaves[$j].ID is $slaves[$i].rivalryTarget>>
+        $slaves[$i].slaveName and $slaves[$j].slaveName manage to @@color:lightgreen;de-escalate their little feud.@@
+        <<set $slaves[$j].rivalry -= 1>>
+        <<set $slaves[$i].rivalry -= 1>>
+    <</if>>
+  <</for>>
+<</if>>
+
+<</if>>
+<</if>>
+
+<</nobr>>

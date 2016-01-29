@@ -1,0 +1,100 @@
+<<nobr>>
+
+<<if ($activeSlave.behavioralQuirk is "arrogant")>>
+	$activeSlave.slaveName seems to think she's better than everyone else. Naturally, as her owner you have the means to correct this sad misapprehension. As  you train her during the week, you ensure that she submits to anyone and everyone. She is rarely permitted to enjoy sex under your tutelage, but is instead required to use her mouth and hands to get others off. She cleans, washes, and serves.
+	<<set $slaves[$i].oralCount += 10>>
+	<<set $oralTotal += 10>>
+    
+<<elseif ($activeSlave.behavioralQuirk is "bitchy")>>
+	$activeSlave.slaveName always has a cutting remark ready. The more obedient she's feeling, the more she directs them at people other than her <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, but it's still a serious problem. When you train her this week, you keep a sharp ear on her. Whenever she bitches out, you require her to promptly offer the target of her pissiness the use of her mouth. She'll either shut her mouth or have it roughly filled.
+	<<set $slaves[$i].oralCount += 10>>
+	<<set $oralTotal += 10>>
+    
+<<elseif ($activeSlave.behavioralQuirk is "quirky")>>
+	$activeSlave.slaveName is odd. She behaves strangely, speaking randomly at times and doing things for no apparent reason. In earlier times this might have been considered 'adorable' or 'unique,' but in a slave it's just annoying. You punish her severely whenever she fails to do or say the right thing for the right reasons.
+    
+<<elseif ($activeSlave.behavioralQuirk is "anorexic")>>
+	$activeSlave.slaveName has an unreasonable, psychologically based belief that she is too fat. This is a serious enough condition in the clinical sense that the usual routine of punishment will not affect it. Instead, you apply a regime of positive reinforcement: she is given attention and approval for her curves when they grow.
+    
+<<elseif ($activeSlave.sexualQuirk is "hates oral")>>
+	$activeSlave.slaveName has a powerful gag reflex. As a result, it's pretty unpleasant to receive oral sex from her, no matter how hard she tries. You apply various inventive techniques for addressing this, all of which involve requiring her to repeatedly deepthroat some object or other.
+	<<set $slaves[$i].oralCount += 10>>
+	<<set $oralTotal += 10>>
+    
+<<elseif ($activeSlave.sexualQuirk is "hates anal")>>
+	$activeSlave.slaveName does not like it up the butt. She views her rectum as a dirty place that should not be involved in sex. Naturally, this is an unacceptable view for a Free Cities sex slave to hold. The best way to address this foolishness is by long practice, so you take every opportunity to stick things up her behind, and when you bore of that, you require her to assfuck herself with a dildo instead.
+  <<if ($activeSlave.anus is 0)>>
+      Of course, @@color:lime;this breaks in her virgin asshole.@@
+      <<set $activeSlave.anus to 1>>
+  <</if>>
+		<<set $slaves[$i].analCount += 10>>
+		<<set $analTotal += 10>>
+  
+<<elseif ($activeSlave.sexualQuirk is "hates penetration") and ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+	$activeSlave.slaveName does not like sex. In earlier times, it was accepted and understood that some, particularly some women, had a low sex drive. No Free Cities sex slave is allowed to engage in such foolishness. It's a hard quirk to fix, and for now you substitute obedience for honest enjoyment, and just get her used to strong stimulation without putting anything in her.
+    
+<<elseif ($activeSlave.sexualQuirk is "hates penetration")>>
+	$activeSlave.slaveName does not like it up the butt. She views her rectum as a dirty place that should not be involved in sex. Naturally, this is an unacceptable view for a Free Cities slut to hold. The best way to address this foolishness is by long practice, so you take every opportunity to stick things up her behind, and when you bore of that, you require her to assfuck herself instead.
+		<<set $slaves[$i].analCount += 10>>
+		<<set $analTotal += 10>>
+	<<display "Simple VCheck">>
+    
+<<elseif ($activeSlave.sexualQuirk is "hates men")>>
+  $activeSlave.slaveName does not like men. This is of course a huge obstacle to her performing her duties well. Breaking her of this is an unusually difficult task,
+  <<if $PC.dick isnot 0>>
+	so you approach it subtly. You simply require her to spend as much time as possible around you, eating, sleeping, and going about normal business. She already understood what you were to your slaves, sexually; she now is accustomed to who you are when you're not fucking.
+  <<else>>
+	all the moreso since you cannot use yourself ats a teaching tool. Fortunately, there are any number of men coming and going as you do business, and it's trivial to force her to associate pleasure with their presence.
+  <</if>>
+    
+<<elseif ($activeSlave.sexualQuirk is "hates women")>>
+  $activeSlave.slaveName does not like having sex with girls. This is an obstacle to her performing her duties well, given how often slaves are expected to service cunts. This is a quirk that you can address by working her through it,
+  <<if $PC.dick isnot 0>>
+	even though you can't use your own body as a teaching tool. Fortunately, there's plenty of slave pussy around to use instead.
+	<<set $slaves[$i].oralCount += 10>>
+	<<set $oralTotal += 10>>
+  <<else>>
+	mostly by requiring her to get very well acquainted with her owner's lovely female body.
+	<<set $slaves[$i].oralCount += 10>>
+	<<set $oralTotal += 10>>
+  <</if>>
+<</if>>
+
+<<if (random(1,100) gt (90+$activeSlave.devotion))>>
+	Despite your efforts, she remains the same at the end of the week.
+<<elseif ($activeSlave.devotion gte -4) and ($activeSlave.fetishDiscovered is 0)>>
+	By the end of the week, @@color:green;you break her of her bad habits.@@ @@color:hotpink;Her obedience has increased.@@
+    <<if $activeSlave.behavioralQuirk isnot "none">>
+      <<set $activeSlave.behavioralQuirk to "none">>
+    <<elseif $activeSlave.sexualQuirk isnot "none">>
+      <<set $activeSlave.sexualQuirk to "none">>
+    <</if>>
+    <<set $activeSlave.devotion += 1>>
+<<elseif $activeSlave.devotion lte 4>>
+	By the end of the week, @@color:green;you break her of her bad habits.@@ @@color:hotpink;Her obedience has increased.@@
+    <<if $activeSlave.behavioralQuirk isnot "none">>
+      <<set $activeSlave.behavioralQuirk to "none">>
+    <<elseif $activeSlave.sexualQuirk isnot "none">>
+      <<set $activeSlave.sexualQuirk to "none">>
+    <</if>>
+    <<set $activeSlave.devotion += 1>>
+<<else>>
+	By the end of the week, @@color:green;you break her of her bad habits.@@ @@color:hotpink;Her obedience has increased.@@
+    <<if $activeSlave.behavioralQuirk isnot "none">>
+      <<set $activeSlave.behavioralQuirk to "none">>
+    <<elseif $activeSlave.sexualQuirk isnot "none">>
+      <<set $activeSlave.sexualQuirk to "none">>
+    <</if>>
+    <<set $activeSlave.devotion += 1>>
+<</if>>
+
+<<if ($activeSlave.behavioralQuirk is "none") and ($activeSlave.sexualQuirk is "none")>>
+	Therefore, @@color:yellow;her training assignment has defaulted to building her devotion.@@
+    <<if $activeSlave.devotion gt 4>>
+      <<set $trainingRegimen to "build her devotion">>
+    <<else>>
+      <<set $trainingRegimen to "break her will">>
+    <</if>>
+<</if>>
+
+<</nobr>>\

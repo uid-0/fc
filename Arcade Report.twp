@@ -1,0 +1,122 @@
+<<nobr>>
+
+<<set $milked to 0>>
+<<set $cockmilked to 0>>
+<<set $arcadeSlaves to 0>>
+<<set $profits to 0>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].assignment is "be confined in the arcade")>>
+  <<set $slaves[$i].trust -= 1>>
+  <<set $arcadeSlaves += 1>>
+  <<silently>>
+  <<if ($arcadeUpgradeInjectors is 1)>>
+	<<if ($slaves[$i].health lt -6)>>
+	  <<set $slaves[$i].health to -6>>
+	<<elseif ($slaves[$i].health gt -5)>>
+	  <<set $slaves[$i].health -= 1>>
+	<</if>>
+	<<set $slaves[$i].drugs to "extreme aphrodisiacs">>
+	<<display "SA drugs">>
+	<<set $slaves[$i].devotion -= 1>>
+  <<else>>
+	<<if ($slaves[$i].health lt -6)>>
+	  <<set $slaves[$i].health += 2>>
+	<<elseif ($slaves[$i].health lt 1)>>
+	  <<set $slaves[$i].health += 1>>
+	<<elseif ($slaves[$i].health gt 2)>>
+	  <<set $slaves[$i].health -= 1>>
+	<</if>>
+  <</if>>
+  <<set $oldCash to $cash>>
+  <<display [[SA work a glory hole]]>>
+  <<if ($arcadeUpgradeCollectors gt 0)>>
+	<<if ($slaves[$i].lactation gt 0)>>
+	  <<display [[SA get milked]]>>
+	  <<if ($slaves[$i].boobs lt 2000)>>
+		<<set $slaves[$i].boobs += 100>>
+	  <<elseif ($slaves[$i].boobs lt 5000)>>
+		<<set $slaves[$i].boobs += 50>>
+	  <<elseif ($slaves[$i].boobs lt 10000)>>
+		<<set $slaves[$i].boobs += 25>>
+	  <</if>>
+	  <<set $milked += 1>>
+	<</if>>
+	<<if ($slaves[$i].dick gt 0)>>
+	<<if ($slaves[$i].balls gt 0)>>
+	  <<display [[SA get cockmilked]]>>
+	  <<if ($slaves[$i].balls lt 5)>>
+		<<if (random(1,100) gt (40+(10*$slaves[$i].balls)))>>
+		  <<set $slaves[$i].balls += 1>>
+		<</if>>
+	  <</if>>
+	  <<if ($slaves[$i].dick lt 5)>>
+		<<if (random(1,100) gt (40+(10*$slaves[$i].dick)))>>
+		  <<set $slaves[$i].dick += 1>>
+		<</if>>
+	  <</if>>
+	  <<set $cockmilked += 1>>
+	<</if>>
+	<</if>>
+  <</if>>
+  <<set $profits += $cash-$oldCash>>
+  <<display "SA long term effects">>
+  <</silently>>	  
+<</if>>
+<</for>>
+
+<<if ($arcadeSlaves gt 0)>>
+  <<if ($arcadeSlaves is 1)>>
+	''There is one inmate confined in your arcade.''
+  <<else>>
+	''There are $arcadeSlaves inmates confined in your arcade.''
+  <</if>>
+  <<if $milked is 1>>
+	One of them is lactating and spends her time in the arcade being simultaneously milked and fucked.
+  <<elseif $milked gt 1>>
+	$milked of them are lactating and spend their time in the arcade being simultaneously milked and fucked.
+  <</if>>
+  <<if $cockmilked is 1>>
+	One of them is lactating and spends her time in the arcade being simultaneously milked and fucked.
+  <<elseif $cockmilked gt 1>>
+	$cockmilked of them retain testicles and are brutally cockmilked as they are used.
+  <</if>>
+  The arcade makes you @@color:yellowgreen;¤$profits@@ this week.
+  <<if ($FSDegradationist gt 20)>>
+	The tenants located near the arcade don't mind having it nearby.
+  <<elseif ($FSPaternalist gt 20)>>
+	Many of the better tenants located near the arcade consider it an @@color:red;intolerable@@ establishment to have nearby.
+	<<set $repGain -= Math.trunc($profits/20)>>
+  <<else>>
+	Some of the better tenants located near the arcade consider it an @@color:red;obnoxious@@ establishment to have nearby.
+	<<set $repGain -= Math.trunc($profits/100)>>
+  <</if>>
+
+  <<if ($arcade*5 lt $arcadeSlaves)>>
+	<<if ($arcadeUpgradeFuckdolls is 1)>>
+	  <<for $i to 0; $i lt $slaves.length; $i++>>
+		<<if ($slaves[$i].assignment is "be confined in the arcade")>>
+		  <<if ($slaves[$i].fetish is "mindbroken")>>
+			<<set $activeSlave to $slaves[$i]>>
+		  <</if>>
+		<</if>>
+	  <</for>>
+	  $activeSlave.slaveName is mindbroken and surplus to the needs of the arcade, so she has been converted into a Fuckdoll and sold for @@color:yellowgreen;¤3000.@@
+	  <<set $fuckdollsSold += 1>>
+	  <<set $cash += 3000>>
+	  <<display "Remove activeSlave">>
+	<<else>>
+	  <<for $i to 0; $i lt $slaves.length; $i++>>
+		<<if ($slaves[$i].assignment is "be confined in the arcade")>>
+		  <<set $slaves[$i].health -= 1>>
+		<</if>>
+	  <</for>>
+	  There are too many inmates crammed into the arcade. Living this way is @@color:red;bad for their health.@@
+	<</if>>
+  <</if>>
+
+<<else>>
+  ''Your arcade is empty.''
+<</if>>
+
+<</nobr>>

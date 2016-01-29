@@ -1,0 +1,44 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "RIE Eligibility Check">>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $HeadGirl.ID == $slaves[$i].ID>>
+<<set $activeSlave to $slaves[$i]>>
+<</if>>
+<</for>>
+
+<<set $j to $slaves.length-1>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>, despite being a loyal and sexually receptive slave girl, still has a virile cock. She certainly isn't shy about using it in pursuit of her head girl duties. $slaves[$j].slaveName has apparently committed some minor sin, and is now being made to pay. $activeSlave.slaveName has her lying on her back on a table with her helpless <<if $seeRace is 1>>$slaves[$j].race <</if>>throat serving as a hole for $activeSlave.slaveName to fuck <<if $seeRace is 1>>with her $activeSlave.race cock <</if>>while $activeSlave.slaveName rains light slaps on poor $slaves[$j].slaveName's nipples, breasts, and <<if ($slaves[$j].preg lt -2)>>limp dick<<elseif ($slaves[$j].dick gt 0)>>dick<<elseif ($slaves[$j].clit gt 0)>>big clit<<else>>mons<</if>>. All the while, your head girl expounds on $slaves[$j].slaveName's shortcomings and the ways in which she must apply herself to better serve you.
+\
+<span id="result">
+<<click "Compliment your head girl's efforts, and encourage her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	As you walk into the room to offer $activeSlave.slaveName some positive reinforcement, she groans, arches her back, and shoots her load down $slaves[$j].slaveName's retching <<if $seeRace is 1>>$slaves[$j].race <</if>>throat. $activeSlave.slaveName immediately greets you with perfect decorum, despite her recent orgasm, and delivers $slaves[$j].slaveName an agonizing flick to the ear when she does not, in $activeSlave.slaveName's opinion, follow suit with sufficient speed. You inform $activeSlave.slaveName that she is a fine Head Girl, and that if she continues to apply herself she will bring credit to you as a slave owner. She looks a little surprised, but thanks you correctly. It is only due to the arcology's monitoring system that you know that, as you turn your back and go, a single tear escapes from her eye and rolls down her pretty <<if $seeRace is 1>>$activeSlave.race <</if>>cheek. In the coming week, no shirker is safe from her wrath. @@color:hotpink;Every single one of your slaves has become better broken to your will.@@
+	<<set $slaves[$slaves.length-1].oralCount += 1>>
+	<<set $oralTotal += 1>>
+    <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<set $slaves[$i].devotion += 1>>
+    <</for>>
+    <</replace>>
+<</click>>
+<<click "Instruct your head girl to give that slave special attention">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	The next time you see $activeSlave.slaveName, you ask what $slaves[$j].slaveName did. It seems she did not complete her assigned duty with sufficient speed, and compounded her sin by talking back to $activeSlave.slaveName when she pointed this out. You observe that if she continues to fail to clean, she can do it with her tongue; and that if she continues to fail to be polite, she can clean $activeSlave.slaveName's <<if $seeRace is 1>>$activeSlave.race <</if>>body with her tongue. Your head girl nods her understanding with a grin. This is one week @@color:hotpink;the disobedient bitch won't soon forget.@@
+	<<set $slaves[$slaves.length-1].devotion += 3>>
+	<<set $slaves[$slaves.length-1].oralCount += 5>>
+	<<set $oralTotal += 5>>
+    <</replace>>
+<</click>>
+</span>

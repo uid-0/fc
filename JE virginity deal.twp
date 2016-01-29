@@ -1,0 +1,64 @@
+<<nobr>>
+
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $nextButton to "Continue">>
+    
+<<set $virginityDealJustice to 1>>
+
+<<set $contractCost to 10000>>
+
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "You bought out a deal for her sale after the seller took her virginity and the buyer no longer wanted her.">>
+<<set $activeSlave.devotion to random(5,6)>>
+<<set $activeSlave.trust to $activeSlave.devotion-4>>
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.health to random(0,2)>>
+<<set $activeSlave.age to random(18,22)>>
+<<set $activeSlave.anus to 2>>
+<<if $activeSlave.dick is 0>>
+	<<set $activeSlave.vagina to 2>>
+	<<set $activeSlave.ovaries to 1>>
+	<<set $activeSlave.preg to 1>>
+<</if>>
+
+<</nobr>>\
+\
+Your personal assistant breaks in on your sleep with an urgent message. You push a slave off you and sit up to take it. As the owner of the arcology, you perform some functions that would traditionally be the province of a government. In this anarcho-liberal polity, it's still necessary for people making deals to have someone to appeal to when disputes arise. Part of your agreement with your tenants is that you will perform this duty on deals between two tenants. The message is about just such a disagreement; they always seem to happen in the middle of the night, and they're always urgent.
+
+A wealthy slaveowner, clearly nursing a ferocious hangover, is accusing a less prominent citizen of refusing to honor the terms of a sale they signed in the early hours of the morning. Already shaking your head, you pull up the security logs with his permission. You verify that yes, indeed, they're visible at a loud party hosted by the wealthy slaveowner, talking over a tablet for a long time before shaking hands and signing.
+
+The putative buyer protests that though the terms of sale don't show it, their conversation before the sale focused on the slave's virginity. The logs show that this, too, is true. And then, he rages, the slaveowner got even drunker, and brought the slave up to join the party, encouraging other guests to gangbang her. The logs show this too; the slave is definitely not a virgin any longer. The would-be buyer says he understands that he should have gotten the part about the virginity in writing and guaranteed up until he got his hands on her, but requests that you honor the spirit of the deal by letting him out of a contract to buy a now-ruined slave.
+\
+<span id="result">
+<<click "Privately inform both parties you'll settle this in favor of the most generous">>
+	<<replace "#result">>
+	You privately inform both parties you'll settle this in favor of the most generous. You instantly receive two notices of escrow payment contingent on the case going the payer's way. You select the @@color:yellowgreen;bigger of the two@@ and decide the matter before returning to bed in a good mood. However, the next day it becomes apparent that although he isn't stupid enough to make a public accusation of corruption, the buyer is furious at paying virgin prices for a defiled slave, and is privately @@color:red;slandering@@ your administration of justice.
+	<<set $rep -= 100>>
+	<<set $cash += 2000>>
+    <</replace>>
+<</click>>
+<<click "Settle the dispute in favor of the prominent slaveowner">>
+	<<replace "#result">>
+	A deal is a deal; buyer beware. You settle the dispute in favor of the slaveowner. He lets it be known amongst his peers that you do not let social inferiors insist on justice against their betters. Citizens of quality become more willing to consider dealmaking in your arcology, @@color:green;increasing prosperity.@@ On the other hand, the angry buyer shows himself to be not a person to treat lightly, either; he mantains a @@color:red;malicious@@ whispering campaign to the effect that your administration of justice is fatally biased.
+	<<set $AProsperity += 5>>
+	<<set $rep -= 500>>
+    <</replace>>
+<</click>>
+<<click "Settle the dispute in favor of the prospective buyer">>
+	<<replace "#result">>
+	What's most important is the justice of the outcome. You settle the dispute in favor of the buyer, who would otherwise be forced to buy something he did not mean to pay for. He lets it be known far and wide that you are willing to stand up for what's right, no matter what and no matter who, @@color:green;improving@@ your reputation. The angry seller, now afflicted with a devalued slave in addition to a bad headache, lets his group of friends know that social superiors have no advantage at justice here. They become more reticent about dealmaking in your arcology, @@color:red;damaging@@ its prosperity.
+	<<set $AProsperity -= 5>>
+	<<set $rep += 500>>
+    <</replace>>
+<</click>>
+<<click "Offer to buy out the contract">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	You offer to simply buy out the contract, taking the slave for yourself. This lets the buyer out of buying her, and the slaveowner gets his money; but it soon becomes apparent that what both of them were really looking for is an opportunity to put one over on the other. Neither is pleased to be denied a petty victory, but they both have the sense to keep their mouths shut. The poor slave, meanwhile, appears in the penthouse entryway, @@color:hotpink;hopeful@@ that she's been lucky enough to end up in a less abusive situation.
+	<<set $nextLink to "AS Dump">>
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>> //This will cost $contractCost and give you the slave//
+</span>

@@ -1,0 +1,54 @@
+//I see. In any case, I will offer useful information whenever possible in italics.
+
+Your new arcology has some unusual equipment. The previous owner kept a small stable of sex slaves. The penthouse therefore has a body modification studio for tattooing, bleaching and piercing, and an auto salon for more prosaic things like hair care. It also has a remote surgery, a small surgical theater that can be operated remotely by a qualified surgeon if you can pay the fee. Finally, it has a slave nutrition system connected to the arcology's hydroponics bays. This system produces a tasty protein-rich drink that provides the physically active female body all its necessary nutrients while leaving the lower digestive tract extremely clean. It even causes a mild increase in sex drive.
+
+The previous owner seems to have left in something of a hurry. He could not get all of his slaves away.//<<nobr>>
+
+<<if $cheatMode is 1>>
+	<<display [[Cheatmode Database]]>>
+<<else>>
+  <<set $activeSlave to $heroSlaves.pluck()>>
+  <<set $activeSlave.pubicHColor to $activeSlave.hcolor>>
+  <<set $activeSlave.pubicHLength to "waxed">>
+  <<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+  <<set $activeSlave.oldTrust to $activeSlave.trust>>
+  <<set $slaves.push($activeSlave)>>
+  //There is one left; her name is $activeSlave.slaveName.//
+  <<if $activeSlave.fetish is "mindbroken">>
+	//She is, sadly, not mentally competent, and is wandering through the penthouse at the moment.//
+  <<elseif $activeSlave.amp is 1>>
+	//She is a quadruple amputee and is quite helpless, so you can attend to her at your leisure.//
+  <<elseif $activeSlave.devotion lt -10>>
+	//She is quite rebellious and was attempting to escape, so I have locked her in the slave quarters.//
+  <<elseif $activeSlave.devotion lt -4>>
+	//She resists my orders and was considering escape, so I have locked her in the slave quarters.//
+  <<elseif $activeSlave.devotion lte 4>>
+	//She is reasonably obedient, and is waiting for you in the dormitory, I believe in the hope of making a good impression.//
+  <<elseif $activeSlave.fetish is "nympho">>
+	//She is a remarkable sexual addict, and I believe she will be very happy to meet you.//
+  <<elseif $activeSlave.fetish is "buttslut">>
+	//She is currently in the dormitory masturbating anally, and I believe she will be happy to meet you.//
+  <<elseif $activeSlave.fetish is "cumslut">>
+	//She is currently in the dormitory exhibiting oral fixation, and I believe she will be happy to meet you.//
+  <<elseif $activeSlave.fetish is "boobs">>
+	//She is currently in the dormitory playing with her nipples, and I believe she will be happy to meet you.//
+  <<elseif $activeSlave.fetish is "pregnancy">>
+	//She is currently in the dormitory examining herself to try to discern her fertility, and I believe she will be happy to meet you.//
+  <<elseif $activeSlave.fetish is "humiliation">>
+	//She is currently in the entryway flashing passersby, and I believe she will be happy to meet you.//
+  <<elseif $activeSlave.fetish is "submissive">>
+	//She is currently in the dormitory, experimenting with self-bondage using the sheets; I believe she will be happy to meet you.//
+  <<elseif $activeSlave.fetish is "dom">>
+	//She is currently in the exercise area keeping fit; she likes to take an active role sexually and is using this down time to work out.//
+  <<elseif $activeSlave.fetish is "sadist">>
+	//She is currently outside your office; she enjoys being superior to other slaves and I believe she means to ingratiate herself to you.//
+  <<elseif $activeSlave.fetish is "masochist">>
+	//She is a sexual masochist; she is currently in the bathroom, experimenting with auto-flagellation with a wet towel.//
+  <<elseif $activeSlave.fetish is "none">>
+	//She is currently outside your office, and I believe she is attempting to maintain sexual arousal to make a good first impression on you.//
+  <</if>>
+<</if>>
+
+<</nobr>>
+
+[[Continue|Main][$ui to "main",$startingGirlsNationality to 0,$slaveCostFactor to 1]]

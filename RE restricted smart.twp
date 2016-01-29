@@ -1,0 +1,38 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+During a routine inspection of <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>, you notice that she's behaving a little strangely. She's participating in the inspection with almost manic attention, trying to anticipate your directions and hanging desperately on your every word. After a moment, you reflect that she's a smart girl, and is probably suffering for a lack of conversation. As you regard her <<if ($activeSlave.amp is 1)>>sitting limblessly<<else>>standing<</if>> there, her eyes almost scream at you for some stort of stimulation. Her life is not without mental interest, but talking is one of the quintessential human behaviors, and having it taken away is very difficult for someone as intelligent as her. A mute almost might have it easier, for she is also denied the volubility through sign language that mute slaves under less restrictive rules often enjoy.
+\
+<span id="result">
+<<click "Discuss her future with her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You announce matter-of-factly that she's allowed to speak temporarily, and that you'll be discussing where she is and where she sees herself in the near future. She's disconcerted by the subject but so desperate for conversation that she's overjoyed anyway. <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"I underthtand what you're doing, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she lisps. "I'm to be broken down into a devoted thlave." She looks thoughtful. "I'll help you with that. It'll be eathier if I do, won't it?" She looks up, and you nod; she gives you a rueful smile. "A good thlut would offer to <<if ($PC.dick is 0)>>give you oral now, I think. So, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, may I pleathe be allowed to lick your puthy?"<<else>>thuck your cock now, I think. Tho <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, can I thuck your cock pleathe?"<</if>><<else>>"I understand what you're doing, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>," she says forthrightly. "I'm to be broken down into a devoted slave." She looks thoughtful. "I'll help you with that. It'll be easier if I do, won't it?" She looks up, and you nod; she gives you a rueful smile. "A good slut would offer to <<if ($PC.dick is 0)>>give you oral now, I think. So, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, may I please be allowed to lick your pussy?"<<else>>suck your cock now, I think. So, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, may I please be allowed to suck your cock?"<</if>><</if>> You nod, and tell her that the rules are back in effect. As <<if $activeSlave.amp is 1>>you get her helpless form into position<<else>>she gets down on her knees<</if>> she @@color:hotpink;focuses on the task@@ in front of her with all her considerable intelligence, clearly having decided to make things easier on herself by conforming to her new life.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Let her talk during a rough buttfuck">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You <<if $activeSlave.amp is 1>>lay her fuckpuppet torso across<<else>>push her backwards onto<</if>> your desk, groping her <<if $activeSlave.butt gt 4>>big<<elseif $activeSlave.butt gt 1>>moderate<<else>>meagre<</if>> butt. You instruct her that she'll be allowed to talk if she wants, but not yet, as you <<if ($PC.dick is 0)>>push a couple of fingers up<<else>>line your cock up with<</if>> her <<if $activeSlave.anus gt 2>>gaping<<elseif $activeSlave.anus gt 1>>sizeable<<else>>tight<</if>> asshole. As you penetrate her, you tell her that the time to talk is now. <<if $activeSlave.anus gt 2>>To make the sex sufficiently uncomfortable, you <<if ($PC.dick is 0)>>finger fuck<<else>>cock<</if>> her without mercy.<<elseif $activeSlave.anus gt 1>>To make the sex sufficiently uncomfortable, you pull yourself out with every stroke, putting her through initial anal penetration over and over.<<else>>Her butt is so tight that just a simple assfuck makes her uncomfortable enough.<</if>> She opens her mouth, closes it again, grunts at the burning sensation of your rough use of her poor ass, and then shuts up. You ask her if she's sure she doesn't have anything to say, and she makes her one verbal comment of the day:	<<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"No, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<else>>"No, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."<</if>> She understands the lesson here: fail to @@color:hotpink;conform,@@ @@color:gold;get assraped.@@ It's as simple as that.
+	<<set $activeSlave.devotion += 0.5>>
+	<<set $activeSlave.trust -= 0.5>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+	<<display "Anal VCheck">>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take virginity//<</if>>
+</span>

@@ -1,0 +1,536 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Body Modification Degradation">>
+
+<<set $encyclopedia to "The Studio">>
+
+<<set $brandApplied to 0>>
+
+<</nobr>>\
+\
+$activeSlave.slaveName is lying strapped down on the table in your body modification studio. She is entirely at your mercy.
+\
+<<nobr>>
+
+<<if ($activeSlave.nipplesPiercing + $activeSlave.lipsPiercing + $activeSlave.vaginaPiercing + $activeSlave.anusPiercing + $activeSlave.clitPiercing) lt 10>>
+	<br>
+	[[Add piercings wherever possible|Increment Piercings]]
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.earPiercing is 0>>
+	Her ears have not been pierced.
+<<elseif $activeSlave.earPiercing is 1>>
+	Her earlobes are conventionally pierced.
+<<elseif $activeSlave.earPiercing is 2>>
+	Her ears are heavily pierced, with multiple lobe piercings and a row of helix piercings.
+<</if>>
+<<if $activeSlave.earPiercing is 0>>
+	[[Pierce them|Body Modification][$activeSlave.earPiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.earPiercing is 1>>
+	[[Pierce them heavily|Body Modification][$activeSlave.earPiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.earPiercing gt 0>>
+	//[[Remove piercings|Body Modification][$activeSlave.earPiercing to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.nosePiercing is 0>>
+	Her nose has not been pierced.
+<<elseif $activeSlave.nosePiercing is 1>>
+	She has a simple stud in her nose.
+<<elseif $activeSlave.nosePiercing is 2>>
+	She has nasal studs and a large septum ring.
+<</if>>
+<<if $activeSlave.nosePiercing is 0>>
+	[[Pierce it|Body Modification][$activeSlave.nosePiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.nosePiercing is 1>>
+	[[Pierce it heavily|Body Modification][$activeSlave.nosePiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.nosePiercing gt 0>>
+	//[[Remove piercings|Body Modification][$activeSlave.nosePiercing to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.eyebrowPiercing is 0>>
+	Her eyebrows have not been pierced.
+<<elseif $activeSlave.eyebrowPiercing is 1>>
+	She has a simple stud in one eyebrow.
+<<elseif $activeSlave.eyebrowPiercing is 2>>
+	She has multiple eyebrow rings.
+<</if>>
+<<if $activeSlave.eyebrowPiercing is 0>>
+	[[Pierce them|Body Modification][$activeSlave.eyebrowPiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.eyebrowPiercing is 1>>
+	[[Pierce them heavily|Body Modification][$activeSlave.eyebrowPiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.eyebrowPiercing gt 0>>
+	//[[Remove piercings|Body Modification][$activeSlave.eyebrowPiercing to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.navelPiercing is 1>>
+	Her navel bears a simple stud.
+<<elseif $activeSlave.navelPiercing is 2>>
+	Her navel is pierced with a ring, which has a short length of light chain dangling from it.
+<<else>>
+	Her navel is unpierced.
+<</if>>
+<<if $activeSlave.navelPiercing lt 1>>
+	[[Pierce it|Body Modification][$activeSlave.navelPiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.navelPiercing is 1>>
+	[[Pierce it heavily|Body Modification][$activeSlave.navelPiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.navelPiercing gt 0>>
+	//[[Remove piercing|Body Modification][$activeSlave.navelPiercing to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.nipplesPiercing is 0>>
+	Her nipples are fresh and unpierced.
+<<elseif $activeSlave.nipplesPiercing is 1>>
+	Her nipples bear a simple piercing.
+<<elseif $activeSlave.nipplesPiercing is 2>>
+	Her nipples are heavily pierced with several rings and studs, and there is a chain between them.
+<</if>>
+<<if $activeSlave.nipplesPiercing is 0>>
+	[[Pierce them|Body Modification][$activeSlave.nipplesPiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.nipplesPiercing is 1>>
+	[[Pierce them heavily|Body Modification][$activeSlave.nipplesPiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.nipplesPiercing gt 0>>
+	//[[Remove piercings|Body Modification][$activeSlave.nipplesPiercing to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.lipsPiercing is 0>>
+	Her lips are unpierced.
+<<elseif $activeSlave.lipsPiercing is 1>>
+	She has a simple lip piercing for a stud.
+<<elseif $activeSlave.lipsPiercing is 2>>
+	Her lips are heavily pierced.
+<</if>>
+<<if $activeSlave.lipsPiercing is 0>>
+	[[Pierce them|Body Modification][$activeSlave.lipsPiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.lipsPiercing is 1>>
+	[[Pierce them heavily|Body Modification][$activeSlave.lipsPiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.lipsPiercing gt 0>>
+	//[[Remove piercings|Body Modification][$activeSlave.lipsPiercing to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.tonguePiercing is 0>>
+	Her tongue is unpierced.
+<<elseif $activeSlave.tonguePiercing is 1>>
+	She has a simple tongue stud.
+<<elseif $activeSlave.tonguePiercing is 2>>
+	Her tongue is heavily pierced.
+<</if>>
+<<if $activeSlave.tonguePiercing is 0>>
+	[[Pierce it|Body Modification][$activeSlave.tonguePiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.tonguePiercing is 1>>
+	[[Pierce it heavily|Body Modification][$activeSlave.tonguePiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.tonguePiercing gt 0>>
+	//[[Remove piercings|Body Modification][$activeSlave.tonguePiercing to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if ($activeSlave.clitPiercing is 0) and ($activeSlave.vagina isnot -1)>>
+	Her clit is unpierced.
+<<elseif ($activeSlave.clitPiercing is 1) and ($activeSlave.vagina isnot -1)>>
+	She has a simple clitoral stud.
+<<elseif ($activeSlave.clitPiercing is 2) and ($activeSlave.vagina isnot -1)>>
+	She has a big ring in her clit.
+<<elseif ($activeSlave.clitPiercing gt 2) and ($activeSlave.vagina isnot -1)>>
+	She has a smart piercing in her clit.
+<<elseif ($activeSlave.clitPiercing is 0)>>
+	Her dickhead is unpierced.
+<<elseif ($activeSlave.clitPiercing is 1)>>
+	She has a simple dickhead stud.
+<<elseif ($activeSlave.clitPiercing is 2)>>
+	She has a big ring in her dickhead.
+<<elseif ($activeSlave.clitPiercing gt 2)>>
+	She has a smart frenulum piercing.
+<</if>>
+<<if $activeSlave.clitPiercing is 0>>
+	[[Pierce her|Body Modification][$activeSlave.clitPiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.clitPiercing is 1>>
+	[[Give her a big piercing|Body Modification][$activeSlave.clitPiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.clitPiercing isnot 3>>
+	 | [[Give her a smart piercing|Body Modification][$activeSlave.clitPiercing to 3,$activeSlave.clitSetting to "all",$cash -=$SPcost,$degradation += 1]] //Costs ¤$SPcost, unlocks options to mold sexuality//
+<</if>>
+<<if $activeSlave.clitPiercing gt 0>>
+	//[[Remove piercings|Body Modification][$activeSlave.clitPiercing to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if ($activeSlave.vagina isnot -1)>>
+<br>
+<<if ($activeSlave.vaginaPiercing is 0)>>
+	Her pussylips are unpierced.
+<<elseif ($activeSlave.vaginaPiercing is 1)>>
+	She has a simple row of studs down her labia.
+<<elseif ($activeSlave.vaginaPiercing is 2)>>
+	She has a row of big rings down her labia.
+<</if>>
+<<if $activeSlave.vaginaPiercing is 0>>
+	[[Pierce her|Body Modification][$activeSlave.vaginaPiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.vaginaPiercing is 1>>
+	[[Give her huge piercings|Body Modification][$activeSlave.vaginaPiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.vaginaPiercing gt 0>>
+	//[[Remove piercings|Body Modification][$activeSlave.vaginaPiercing to 0,$cash -= $modCost]]//
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if ($activeSlave.dick gt 0)>>
+<br>
+<<if ($activeSlave.dickPiercing is 0)>>
+	Her shaft is unpierced.
+<<elseif ($activeSlave.dickPiercing is 1)>>
+	She has a simple row of studs down her cock.
+<<elseif ($activeSlave.dickPiercing is 2)>>
+	She has a row of big rings down her cock.
+<</if>>
+<<if ($activeSlave.balls isnot 0)>>
+<<if ($activeSlave.dickPiercing is 1)>>
+	She has a couple of studs in her ballsack.
+<<elseif ($activeSlave.dickPiercing is 2)>>
+	She has a row of rings down the center of her ballsack, all the way from the base of her shaft to her perineum.
+<</if>>
+<</if>>
+<<if $activeSlave.dickPiercing is 0>>
+	[[Pierce her|Body Modification][$activeSlave.dickPiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.dickPiercing is 1>>
+	[[Give her huge piercings|Body Modification][$activeSlave.dickPiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.dickPiercing gt 0>>
+	//[[Remove piercings|Body Modification][$activeSlave.dickPiercing to 0,$cash -= $modCost]]//
+<</if>>
+<</if>>
+
+<</nobr>>
+<<nobr>>
+<<if $activeSlave.anusPiercing is 0>>
+	Her perineum has not been pierced.
+<<elseif ($activeSlave.anusPiercing is 1) and ($activeSlave.vagina lt 0)>>
+	She has a simple piercing between the base of her cock and her asshole.
+<<elseif $activeSlave.anusPiercing is 1>>
+	She has a simple piercing between her pussy and her asshole.
+<<elseif ($activeSlave.anusPiercing is 2) and ($activeSlave.vagina lt 0)>>
+	She has a big ring between between the base of her cock and her asshole and studs in a ring around her anus.
+<<elseif $activeSlave.anusPiercing is 2>>
+	She has a big ring between her pussy and her asshole and studs in a ring around her anus.
+<</if>>
+<<if $activeSlave.anusPiercing is 0>>
+	[[Pierce it|Body Modification][$activeSlave.anusPiercing to 1,$cash -= $modCost]]
+<<elseif $activeSlave.anusPiercing is 1>>
+	[[Pierce all around her butthole|Body Modification][$activeSlave.anusPiercing to 2,$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.anusPiercing gt 0>>
+	//[[Remove piercings|Body Modification][$activeSlave.anusPiercing to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+
+<<nobr>>
+
+Your preferred location for brands is the ''$brandTarget.''
+
+	[[Buttocks|Body Modification][$brandTarget to "buttocks"]]
+	 | [[Breasts|Body Modification][$brandTarget to "breasts"]]
+	 | [[Back|Body Modification][$brandTarget to "back"]]
+	 | [[Chest|Body Modification][$brandTarget to "chest"]]
+	 | [[Cheek|Body Modification][$brandTarget to "cheek"]]
+
+<</nobr>>
+<<nobr>>
+
+Your brand design is ''$brandDesign.''
+
+	[[Your initials|Body Modification][$brandDesign to "your initials"]]
+	 | [[SLUT|Body Modification][$brandDesign to "SLUT"]]
+	 | [[WHORE|Body Modification][$brandDesign to "WHORE"]]
+	 | [[SLAVE|Body Modification][$brandDesign to "SLAVE"]]
+	 | [[Pussy symbol|Body Modification][$brandDesign to "a pussy symbol"]]
+	 | [[Anus symbol|Body Modification][$brandDesign to "an anus symbol"]]
+	 | [[Penis symbol|Body Modification][$brandDesign to "a penis symbol"]]
+
+<</nobr>>
+<<nobr>>
+     
+<<if $activeSlave.brand isnot 0>>
+	She has $activeSlave.brand branded into the flesh of her $activeSlave.brandLocation.
+<<else>>
+	[[Brand her|Body Modification][$brandApplied to 1,$activeSlave.brand to $brandDesign,$activeSlave.brandLocation to $brandTarget,$cash -= $modCost,$degradation += 10]]
+//Branding will slightly reduce her beauty but may slowly increase your reputation.//
+<</if>>
+
+<</nobr>>
+
+<<nobr>>
+
+<<if ($activeSlave.lipsTat is 0) and ($activeSlave.buttTat is 0) and ($activeSlave.vaginaTat is 0) and ($activeSlave.boobsTat is 0)>>
+__Apply full-body tattoos:__
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+[[Tribal patterns|Full Tribal Patterns]] | [[Floral designs|Full Floral Designs]] | [[Lewd scenes|Full Lewd Scenes]] | [[Degrading language|Full Degrading Language]] | [[Slutty advertisements|Full Slutty Advertisements]] | [[Demeaning inscriptions|Full Demeaning Inscriptions]] | [[Cow patterns|Full Cow]]
+<br>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $activeSlave.boobsTat is 0>>
+	Her chest and breasts are not tattooed.
+<<else>>
+	Her chest and breasts are tattooed with $activeSlave.boobsTat.
+<</if>>
+<<if $activeSlave.boobsTat is 0>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Tribal patterns|Body Modification][$activeSlave.boobsTat to "tribal patterns",$cash -= $modCost]]
+	 | [[Floral designs|Body Modification][$activeSlave.boobsTat to "floral designs",$cash -= $modCost]]
+	 | [[Lewd scenes|Body Modification][$activeSlave.boobsTat to "lewd scenes",$cash -= $modCost,$degradation += 1]]
+	 | [[Degrading language|Body Modification][$activeSlave.boobsTat to "degrading language",$cash -= $modCost,$degradation += 1]]
+	 | [[Slutty advertisements|Body Modification][$activeSlave.boobsTat to "slutty advertisements",$cash -= $modCost,$degradation += 1]]
+	 | [[Demeaning inscription|Body Modification][$activeSlave.boobsTat to "demeaning inscriptions",$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.boobsTat isnot 0>>
+	//[[Remove tattoos|Body Modification][$activeSlave.boobsTat to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+<<if $activeSlave.buttTat is 0>>
+	Her buttocks are not tattooed.
+<<else>>
+	Her buttocks are tattooed with $activeSlave.buttTat.
+<</if>>
+<<if $activeSlave.buttTat is 0>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Tribal patterns|Body Modification][$activeSlave.buttTat to "tribal patterns",$cash -= $modCost]]
+	 | [[Floral designs|Body Modification][$activeSlave.buttTat to "floral designs",$cash -= $modCost]]
+	 | [[Lewd scenes|Body Modification][$activeSlave.buttTat to "lewd scenes",$cash -= $modCost,$degradation += 1]]
+	 | [[Degrading language|Body Modification][$activeSlave.buttTat to "degrading language",$cash -= $modCost,$degradation += 1]]
+	 | [[Slutty advertisements|Body Modification][$activeSlave.buttTat to "slutty advertisements",$cash -= $modCost,$degradation += 1]]
+	 | [[Demeaning inscription|Body Modification][$activeSlave.buttTat to "demeaning inscriptions",$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.buttTat isnot 0>>
+	//[[Remove tattoos|Body Modification][$activeSlave.buttTat to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.lipsTat is 0>>
+	She has no facial tattoos.
+<<else>>
+	Her face is tattooed with $activeSlave.lipsTat.
+<</if>>
+<<if $activeSlave.lipsTat is 0>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Tribal patterns|Body Modification][$activeSlave.lipsTat to "tribal patterns",$cash -= $modCost]]
+	 | [[Floral designs|Body Modification][$activeSlave.lipsTat to "floral designs",$cash -= $modCost]]
+	 | [[Permanent makeup|Body Modification][$activeSlave.lipsTat to "permanent makeup",$cash -= $modCost,$degradation += 1]]
+	 | [[Degrading language|Body Modification][$activeSlave.lipsTat to "degrading language",$cash -= $modCost,$degradation += 1]]
+	 | [[Slutty advertisements|Body Modification][$activeSlave.lipsTat to "slutty advertisements",$cash -= $modCost,$degradation += 1]]
+	 | [[Demeaning inscription|Body Modification][$activeSlave.lipsTat to "demeaning inscriptions",$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.lipsTat isnot 0>>
+	//[[Remove tattoos|Body Modification][$activeSlave.lipsTat to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.amp isnot 1>>
+<<if $activeSlave.shouldersTat is 0>>
+	She has no shoulder tattoos.
+<<else>>
+	Her shoulders are tattooed with $activeSlave.shouldersTat.
+<</if>>
+<<if $activeSlave.shouldersTat is 0>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Tribal patterns|Body Modification][$activeSlave.shouldersTat to "tribal patterns",$cash -= $modCost]]
+	 | [[Floral designs|Body Modification][$activeSlave.shouldersTat to "floral designs",$cash -= $modCost]]
+	 | [[Lewd scenes|Body Modification][$activeSlave.shouldersTat to "lewd scenes",$cash -= $modCost,$degradation += 1]]
+	 | [[Degrading language|Body Modification][$activeSlave.shouldersTat to "degrading language",$cash -= $modCost,$degradation += 1]]
+	 | [[Slutty advertisements|Body Modification][$activeSlave.shouldersTat to "slutty advertisements",$cash -= $modCost,$degradation += 1]]
+	 | [[Demeaning inscription|Body Modification][$activeSlave.shouldersTat to "demeaning inscriptions",$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.shouldersTat isnot 0>>
+	//[[Remove tattoos|Body Modification][$activeSlave.shouldersTat to 0,$cash -= $modCost]]//
+<</if>>
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.amp isnot 1>>
+<<if $activeSlave.armsTat is 0>>
+	She has no arm tattoos.
+<<else>>
+	Her arms are tattooed with $activeSlave.armsTat.
+<</if>>
+<<if $activeSlave.armsTat is 0>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Tribal patterns|Body Modification][$activeSlave.armsTat to "tribal patterns",$cash -= $modCost]]
+	 | [[Floral designs|Body Modification][$activeSlave.armsTat to "floral designs",$cash -= $modCost]]
+	 | [[Lewd scenes|Body Modification][$activeSlave.armsTat to "lewd scenes",$cash -= $modCost,$degradation += 1]]
+	 | [[Degrading language|Body Modification][$activeSlave.armsTat to "degrading language",$cash -= $modCost,$degradation += 1]]
+	 | [[Slutty advertisements|Body Modification][$activeSlave.armsTat to "slutty advertisements",$cash -= $modCost,$degradation += 1]]
+	 | [[Demeaning inscription|Body Modification][$activeSlave.armsTat to "demeaning inscriptions",$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.armsTat isnot 0>>
+	//[[Remove tattoos|Body Modification][$activeSlave.armsTat to 0,$cash -= $modCost]]//
+<</if>>
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.amp isnot 1>>
+<<if $activeSlave.legsTat is 0>>
+	She has no leg tattoos.
+<<else>>
+	Her legs are tattooed with $activeSlave.legsTat.
+<</if>>
+<<if $activeSlave.legsTat is 0>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Tribal patterns|Body Modification][$activeSlave.legsTat to "tribal patterns",$cash -= $modCost]]
+	 | [[Floral designs|Body Modification][$activeSlave.legsTat to "floral designs",$cash -= $modCost]]
+	 | [[Lewd scenes|Body Modification][$activeSlave.legsTat to "lewd scenes",$cash -= $modCost,$degradation += 1]]
+	 | [[Degrading language|Body Modification][$activeSlave.legsTat to "degrading language",$cash -= $modCost,$degradation += 1]]
+	 | [[Slutty advertisements|Body Modification][$activeSlave.legsTat to "slutty advertisements",$cash -= $modCost,$degradation += 1]]
+	 | [[Demeaning inscription|Body Modification][$activeSlave.legsTat to "demeaning inscriptions",$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.legsTat isnot 0>>
+	//[[Remove tattoos|Body Modification][$activeSlave.legsTat to 0,$cash -= $modCost]]//
+<</if>>
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.stampTat is 0>>
+	She has no lower back tattoos.
+<<else>>
+	Her lower back is tattooed with $activeSlave.stampTat.
+<</if>>
+<<if $activeSlave.stampTat is 0>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Tribal patterns|Body Modification][$activeSlave.stampTat to "tribal patterns",$cash -= $modCost]]
+	 | [[Floral designs|Body Modification][$activeSlave.stampTat to "floral designs",$cash -= $modCost]]
+	 | [[Lewd scenes|Body Modification][$activeSlave.stampTat to "lewd scenes",$cash -= $modCost,$degradation += 1]]
+	 | [[Degrading language|Body Modification][$activeSlave.stampTat to "degrading language",$cash -= $modCost,$degradation += 1]]
+	 | [[Slutty advertisements|Body Modification][$activeSlave.stampTat to "slutty advertisements",$cash -= $modCost,$degradation += 1]]
+	 | [[Demeaning inscription|Body Modification][$activeSlave.stampTat to "demeaning inscriptions",$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.stampTat isnot 0>>
+	//[[Remove tattoos|Body Modification][$activeSlave.stampTat to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.vaginaTat is 0>>
+ 	Her abdomen and pubis have not been tattooed.
+<<else>>
+	Her abdomen and pubis are tattooed with $activeSlave.vaginaTat.
+<</if>>
+<<if $activeSlave.vaginaTat is 0>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Tribal patterns|Body Modification][$activeSlave.vaginaTat to "tribal patterns",$cash -= $modCost]]
+	 | [[Floral designs|Body Modification][$activeSlave.vaginaTat to "floral designs",$cash -= $modCost]]
+	 | [[Lewd scenes|Body Modification][$activeSlave.vaginaTat to "lewd scenes",$cash -= $modCost,$degradation += 1]]
+	 | [[Degrading language|Body Modification][$activeSlave.vaginaTat to "degrading language",$cash -= $modCost,$degradation += 1]]
+	 | [[Slutty advertisements|Body Modification][$activeSlave.vaginaTat to "slutty advertisements",$cash -= $modCost,$degradation += 1]]
+	 | [[Demeaning inscription|Body Modification][$activeSlave.vaginaTat to "demeaning inscriptions",$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.vaginaTat isnot 0>>
+	//[[Remove tattoos|Body Modification][$activeSlave.vaginaTat to 0,$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $activeSlave.dick gt 0>>
+<br>
+<<if $activeSlave.dickTat is 0>>
+ 	Her dick has not been tattooed.
+<<else>>
+	Her dick is tattooed with $activeSlave.dickTat.
+<</if>>
+<<if $activeSlave.dickTat is 0>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Tribal patterns|Body Modification][$activeSlave.dickTat to "tribal patterns",$cash -= $modCost]]
+	 | [[Floral designs|Body Modification][$activeSlave.dickTat to "floral designs",$cash -= $modCost]]
+	 | [[Degrading language|Body Modification][$activeSlave.dickTat to "degrading language",$cash -= $modCost,$degradation += 1]]
+	 | [[Slutty advertisements|Body Modification][$activeSlave.dickTat to "slutty advertisements",$cash -= $modCost,$degradation += 1]]
+	 | [[Demeaning inscription|Body Modification][$activeSlave.dickTat to "demeaning inscriptions",$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if $activeSlave.dickTat isnot 0>>
+	//[[Remove tattoos|Body Modification][$activeSlave.dickTat to 0,$cash -= $modCost]]//
+<</if>>
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $activeSlave.anusTat is 0>>
+	Her anus is brown and unbleached.
+<<elseif $activeSlave.anusTat is "bleached">>
+	Her anus is bleached and looks like a sexual organ.
+<<else>>
+	Her anus is tattooed with $activeSlave.anusTat.
+<</if>>
+<<if $activeSlave.anusTat is 0>>
+	[[Bleach it|Body Modification][$activeSlave.anusTat to "bleached",$cash -= $modCost]]
+<<elseif $activeSlave.anusTat is "bleached">>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	[[Tribal pattern|Body Modification][$activeSlave.anusTat to "tribal patterns",$cash -= $modCost,$degradation += 1]]
+	 | [[Floral designs|Body Modification][$activeSlave.anusTat to "floral designs",$cash -= $modCost]]
+	 | [[Degrading language|Body Modification][$activeSlave.anusTat to "degrading language",$cash -= $modCost,$degradation += 1]]
+	 | [[Slutty advertisements|Body Modification][$activeSlave.anusTat to "slutty advertisements",$cash -= $modCost,$degradation += 1]]
+	 | [[Demeaning inscription|Body Modification][$activeSlave.anusTat to "demeaning inscriptions",$cash -= $modCost,$degradation += 1]]
+<</if>>
+<<if ($activeSlave.anusTat isnot 0) and ($activeSlave.anusTat isnot "bleached")>>
+	//[[Remove tattoo|Body Modification][$activeSlave.anusTat to "bleached",$cash -= $modCost]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+<<if  ($activeSlave.customTat is " ")>>
+	Give her a custom tattoo: <<textbox "$activeSlave.customTat" $activeSlave.customTat "Slave Interact">>
+<<else>>
+	She has a custom tattoo: $activeSlave.customTat
+	Change her custom tattoo: <<textbox "$activeSlave.customTat" $activeSlave.customTat "Slave Interact">> //For more than one tat, just use commas//
+<</if>>
+<<if $activeSlave.customTat isnot " ">>
+	//[[Remove custom tattoo|Body Modification][$activeSlave.customTat to " ",$cash -= $modCost]]//
+<</if>>
+<</nobr>>

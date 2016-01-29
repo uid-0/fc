@@ -1,0 +1,107 @@
+<<nobr>>
+
+She is wearing $activeSlave.clothes, 
+
+<<if ($activeSlave.clothes is "a very tight corset")>>
+	so her breath comes in short, labored pants.
+<<elseif ($activeSlave.clothes is "conservative clothing")>>
+  including nice slacks and a pretty silk blouse.
+<<elseif ($activeSlave.clothes is "chains")>>
+  looped tightly around her body wherever they can make her most uncomfortable.
+<<elseif ($activeSlave.clothes is "Western clothing")>>
+  including a flannel shirt, chaps, and a cowboy hat.
+<<elseif ($activeSlave.clothes is "body oil")>>
+  rubbed into every inch of exposed skin to show off her body.
+<<elseif ($activeSlave.clothes is "a toga")>>
+  made of sturdy white linen, appropriate for a female sex worker.
+<<elseif ($activeSlave.clothes is "a slutty quipao")>>
+  made of beautiful silk.
+<<elseif ($activeSlave.clothes is "uncomfortable straps")>>
+	which are in the shape of sturdy lingerie, except that wherever the straps cross a nipple or a hole, there is a steel ring to permit access.
+<<elseif ($activeSlave.clothes is "restrictive latex")>>
+	which covers everything except her mouth, breasts, and genitals.
+<<elseif ($activeSlave.clothes is "attractive lingerie") and ($activeSlave.amp is 1)>>
+	including a lovely bra with holes to let her nipples poke through and a pretty g-string.
+<<elseif ($activeSlave.clothes is "attractive lingerie")>>
+	including a lovely bra with holes to let her nipples poke through, a pretty g-string, long sheer stockings, and a garter belt.
+<<elseif ($activeSlave.clothes is "a fallen nun's habit")>>
+	a kinky latex affair that manages to look enough like traditional religious garb to be thoroughly sacreligious.
+<<elseif ($activeSlave.clothes is "a penitent nun's habit")>>
+	made of roughspun sackcloth designed to chafe the wearer.
+<<elseif ($activeSlave.clothes is "string lingerie") and ($activeSlave.areolae gt 1)>>
+	including a string bikini, which fails to entirely cover her broad areolae, and a g-string.
+<<elseif ($activeSlave.clothes is "string lingerie") and ($activeSlave.anus gt 2)>>
+	including a string bikini and a g-string, which comically fails to conceal her huge asshole.
+<<elseif ($activeSlave.clothes is "string lingerie")>>
+	including a string bikini and a g-string.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.fetish is "nympho") and ($activeSlave.fetishDiscovered is 1)>>
+	which has "Fuck me!" across the front in huge letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.fetish is "buttslut") and ($activeSlave.fetishDiscovered is 1)>>
+	which has "BUTTSLUT" across the front in capital letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.fetish is "cumslut") and ($activeSlave.fetishDiscovered is 1)>>
+	which has "CUMSLUT" across the front in capital letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.fetish is "submissive") and ($activeSlave.fetishDiscovered is 1)>>
+	which has "SUB" on the front in capital letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.fetish is "sadist") and ($activeSlave.fetishDiscovered is 1)>>
+	which has "AWFUL BITCH" on the front in capital letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.fetish is "masochist") and ($activeSlave.fetishDiscovered is 1)>>
+	which has "PAINSLUT" on the front in capital letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.fetish is "dom") and ($activeSlave.fetishDiscovered is 1)>>
+	which has "TOP" on the front in capital letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.fetish is "humiliation") and ($activeSlave.fetishDiscovered is 1)>>
+	which has "SEX SLAVE" on the front in capital letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.fetish is "pregnancy") and ($activeSlave.fetishDiscovered is 1)>>
+	which has "BREEDER" on the front in capital letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.fetish is "boobs") and ($activeSlave.fetishDiscovered is 1)>>
+	which has "I <3 BOOBS" on the front in capital letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.dick gt 0) and ($activeSlave.vagina gt -1)>>
+	which has "HERMAPHRODITE" on the front in capital letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0)>>
+	which has "Sissy Slave" across the front in large letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.dick gt 0)>>
+	which has "Neutered Bitch" across the front in large letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.vagina is 0)>>
+	which has "Virgin!" across the front in large letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.anus is 0)>>
+	which has "Anal Virgin!" across the front in large letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.preg gt 0)>>
+	which has "I'm Pregnant!" across the front in large letters.
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt")>>
+	which has "Property Of" across the front, above your name.
+<<elseif ($activeSlave.clothes is "a slutty outfit")>>
+	whatever she thinks most sexually appealing today.
+<<elseif ($activeSlave.clothes is "a slave gown") and ($activeSlave.amp is 1)>>
+	a gorgeous affair with cuts that leave her boobs and ass completely exposed, tailored to favor her lack of arms and legs.
+<<elseif ($activeSlave.clothes is "a slave gown")>>
+	a gorgeous affair with cuts that leave her boobs and ass completely exposed.
+<<elseif ($activeSlave.clothes is "slutty business attire")>>
+	a suit jacket cut to show a great deal of cleavage and a short skirt.
+<<elseif ($activeSlave.clothes is "nice business attire")>>
+	a suit jacket and a nice skirt.
+<<elseif ($activeSlave.clothes is "a comfortable bodysuit")>>
+	a snug bodysuit that covers her to the neck while displaying the shape of everything.
+<<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+	which includes a very short, dark dress, a white blouse, and an apron.
+<<elseif ($activeSlave.clothes is "a nice maid outfit")>>
+	which includes a dark dress, a white blouse, and an apron.
+<<elseif ($activeSlave.clothes is "a nurse outfit")>>
+	which includes a brief white jacket and a tight white skirt.
+<<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+	which includes a tight white blouse and a short plaid skirt.
+<<elseif ($activeSlave.clothes is "a kimono")>>
+	of the furisode pattern.
+<<elseif ($activeSlave.clothes is "a hijab")>>
+	which modestly covers her entire body.
+<<elseif ($activeSlave.clothes is "battledress")>>
+	including comfortable fatigue pants and a sturdy tank top.
+<<elseif ($activeSlave.clothes is "harem gauze")>>
+	in classic harem girl style. She's mostly covered and even veiled, but you can see everything straight through the filmy cloth.
+<<elseif ($activeSlave.clothes is "slutty jewelry") and ($activeSlave.amp is 1)>>
+	including a thin chain under her breasts and a belt of the same with a lewd ornament over her stomach.
+<<elseif ($activeSlave.clothes is "slutty jewelry")>>
+	including bracelets and anklets and a belt of thin chain with a lewd ornament over her stomach.
+<<else>>
+	and her nude body is on display.
+<</if>>
+
+<</nobr>>\

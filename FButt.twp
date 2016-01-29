@@ -1,0 +1,183 @@
+<<nobr>>
+
+<<set $activeSlave.analCount += 1>>
+<<set $analTotal += 1>>
+
+You call her over so you can
+<<if ($activeSlave.vagina is -1)>>
+	use her sole fuckhole.
+<<elseif ($activeSlave.vagina gt 2)>>
+	fuck her gaping holes.
+<<elseif ($activeSlave.vagina is 2)>>
+	use her whorish holes.
+<<elseif ($activeSlave.vagina is 1)>>
+	use her tight holes.
+<<elseif ($activeSlave.vagina is 0)>>
+	take her virginity.
+<</if>>
+
+<<if ($activeSlave.vagina isnot -1)>>
+<<if ($activeSlave.vaginaTat is "tribal patterns")>>
+	The tattoos on her abdomen certainly draw attention there.
+<<elseif ($activeSlave.vaginaTat is "lewd scenes")>>
+	The tattoos on her abdomen nicely illustrate what you mean to do to her.
+<<elseif ($activeSlave.vaginaTat is "degrading language")>>
+	The tattoos on her abdomen are asking you to, after all.
+<</if>>
+<</if>>
+
+<<if ($activeSlave.vaginaPiercing gt 1)>>
+	Her pierced lips and clit have her nice and wet.
+<<elseif ($activeSlave.vaginaPiercing is 1)>>
+	Her pierced clit has her nice and moist.
+<</if>>
+<<if ($activeSlave.vaginaPiercing gt 1) and ($activeSlave.dick isnot 0)>>
+	Metal glints all up and down her cock.
+<<elseif ($activeSlave.vaginaPiercing is 1) and ($activeSlave.dick isnot 0)>>
+	Metal glints at the head of her cock.
+<</if>>
+
+<<if ($activeSlave.anusPiercing gt 1)>>
+	The ring of stud piercings around her anus should massage you delightfully as you sodomize her.
+<<elseif ($activeSlave.anusPiercing is 1)>>
+	Her perineum piercing has a big ring in it, which you should be able to feel when you hilt yourself in her ass.
+<</if>>
+
+<<if ($activeSlave.anusTat isnot 0)>>
+<<if ($activeSlave.anusTat isnot 4)>>
+<<if ($activeSlave.vagina gt -1)>>
+	Her anus is invitingly bleached, which is appropriate: rather than looking like she has a hole for fucking and an ass, it looks like she has two fuckholes.
+<<elseif ($activeSlave.balls is 0)>>
+	Her anus is invitingly bleached, making it look like she has a natural fuckhole despite the fact that she's a gelding.
+<<else>>
+	Her anus is invitingly bleached, making it look like she has a natural fuckhole despite the fact that she's a shemale.
+<</if>>
+<</if>>
+<</if>>
+
+<<if  ($activeSlave.devotion gt 10) and ($activeSlave.vagina is 0) and ($activeSlave.anus is 0)>>
+	<<if ($PC.dick is 0)>>You step into a strap-on, lubricate it, and break in her holes in quick succession.<<else>>You take her virginity and then break in her virgin butt.<</if>> In just a few minutes, she has lost her virginity and been assfucked for the first time. She @@color:hotpink;submits utterly@@ to your spoilage of her innocence and thanks you meekly for introducing her to proper sexual slavery. @@color:lime;Her holes have been broken in.@@
+	<<set $activeSlave.vagina to 1>>
+	<<set ($activeSlave.anus to 1)>>
+    <<set  $activeSlave.devotion += 2>>
+<<elseif ($activeSlave.devotion gt 4) and ($activeSlave.vagina is 0) and ($activeSlave.anus is 0)>>
+	<<if ($PC.dick is 0)>>You step into a strap-on, lubricate it, and break in her holes in quick succession.<<else>>Brooking no hesitation, you take her virginity and then break in her virgin butt.<</if>> In just a few minutes, she has lost her virginity and been assfucked for the first time. She's so bewildered by the pain and novelty that all she feels is @@color:gold;a little fear@@ of further use. @@color:lime;Her holes have been broken in.@@
+    <<set  $activeSlave.trust -= 1>>
+	<<set $activeSlave.vagina to 1>>
+	<<set ($activeSlave.anus to 1)>>
+<<elseif ($activeSlave.vagina is 0) and ($activeSlave.anus is 0)>>
+	<<if ($PC.dick is 0)>>You step into a strap-on, lubricate it, and break in her holes in quick succession.<<else>>Brooking no resistance, you take her virginity and then break in her virgin butt.<</if>> In just a few minutes, she has lost her virginity to rape and her anal virginity to a rough buttfuck. To say she @@color:mediumorchid;resents you@@ and @@color:gold;fears further abuse@@ would be an understatement. @@color:lime;Her holes have been broken in.@@
+    <<set  $activeSlave.devotion -= 2>>
+    <<set  $activeSlave.trust -= 2>>
+	<<set $activeSlave.vagina to 1>>
+	<<set ($activeSlave.anus to 1)>>
+
+<<elseif  ($activeSlave.devotion gt 4) and ($activeSlave.vagina is 0)>>
+	She accepts your orders without comment and presents her virgin pussy for defloration<<if ($PC.dick is 0)>>, watching with some small trepidation as you don a strap-on<</if>>. Since she is already well broken, this new connection with <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> @@color:hotpink;increases her devotion to you.@@ @@color:lime;Her pussy has been broken in.@@
+	<<set $activeSlave.vagina to 1>>
+    <<set  $activeSlave.devotion += 2>>
+<<elseif ($activeSlave.devotion gte -4) and ($activeSlave.vagina is 0)>>
+	She is clearly unhappy at losing her pearl of great price to you; this probably isn't what she imagined her first real sex would be like.<<if ($PC.dick is 0)>>Her lower lip quivers with trepidation as she watches you don a strap-on and maneuver to fuck her virgin hole.<</if>> Nevertheless, this new connection with <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> @@color:hotpink;increases her devotion to you.@@ @@color:lime;Her pussy has been broken in,@@ and she is @@color:gold;fearful@@ that sex will continue to be painful.
+	<<set $activeSlave.vagina to 1>>
+    <<set  $activeSlave.devotion += 1>>
+<<elseif ($activeSlave.vagina is 0)>>
+	As you anticipated, she refuses to give you her virginity. And as you expected, she is unable to resist you. She cries as <<if ($PC.dick is 0)>>your strap-on<<else>>your cock<</if>> opens her fresh, tight hole. The rape @@color:mediumorchid;decreases her devotion to you.@@ @@color:lime;Her pussy has been broken in,@@ and she @@color:gold;fears further abuse.@@
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.vagina to 1>>
+
+<<elseif  ($activeSlave.devotion gt 4) and ($activeSlave.anus is 0)>>
+	She accepts your orders without comment and presents her virgin anus for defloration. You<<if ($PC.dick is 0)>> don a strap-on and<</if>> gently sodomize her. Since she is already well broken, this new connection with <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> @@color:hotpink;increases her devotion to you.@@ @@color:lime;Her tight little ass has been broken in.@@
+    <<set  $activeSlave.devotion += 1>>
+	<<set ($activeSlave.anus to 1)>>
+<<elseif  ($activeSlave.devotion gte -4) and ($activeSlave.anus is 0)>>
+	She is clearly unhappy at the idea of taking a dick up her butt. She obeys orders anyway, and lies there wincing and moaning as you<<if ($PC.dick is 0)>> don a strap-on and<</if>> fuck her ass. @@color:lime;Her tight little ass has been broken in,@@ and she @@color:gold;fears further anal pain.@@
+	<<set $activeSlave.anus to 1>>
+<<elseif ($activeSlave.anus is 0)>>
+	She is appalled at the idea of taking it up the ass<<if ($PC.dick is 0)>> and cries with fear as you don a strap-on<</if>>. She does anyway though, sobbing into the cushions<<if $activeSlave.amp isnot 1>> while you hold her arms behind her<</if>>. The painful anal rape @@color:mediumorchid;decreases her devotion to you.@@ @@color:lime;Her tight little ass has been broken in,@@ and she is @@color:gold;terrified of further anal pain.@@
+    <<set  $activeSlave.devotion -= 1>>
+	<<set $activeSlave.anus to 1>>
+
+<<elseif  $activeSlave.devotion lt -4>>
+	<<if ($PC.dick is 0)>>You don a cruelly large strap-on, and you do it so she can see it. <</if>>She tries to refuse you, so you throw her across the back of the couch next to your desk with her <<if $seeRace is 1>>$activeSlave.race <</if>>ass in the air. You finger her anus <<if ($activeSlave.vagina isnot -1)>>while fucking her pussy<<elseif ($activeSlave.amp isnot 1)>>while frotting her thighs<</if>> for a bit and then switch to her now-ready anus. She sobs as you penetrate her rectum. <<if ($activeSlave.dick isnot 0) and ($activeSlave.hormones lt 1) and ($activeSlave.balls isnot 0)>>Despite her unwillingness to be sodomized, the prostate stimulation gives her an erection anyway. She's mortified that she would get an erection while being anally raped.<<elseif ($activeSlave.dick isnot 0)>>Her flaccid dick is ground into the back of the couch as you rape her.<</if>>
+<<elseif  $activeSlave.devotion lt 10>>
+	You throw her across the back of the couch next to your desk with her ass in the air<<if ($PC.dick is 0)>>, and don a strap-on<</if>>. You finger her <<if $seeRace is 1>>$activeSlave.race <</if>>ass while <<if ($activeSlave.vagina isnot -1)>>fucking her pussy<<else>>frotting her thighs<</if>> for a bit and then switch to her now-ready anus. <<if ($activeSlave.anus is 1)>>Her ass is so tight that you have to work yourself in.<<elseif ($activeSlave.anus is 2)>>Your <<if ($PC.dick is 0)>>fake dick<<else>>cock<</if>> slides easily up her ass.<<else>>You slide into her already-gaping asspussy with ease.<</if>> She gasps as you penetrate her rectum, but you timed the switch so that she was on the verge of orgasm, and she comes immediately. <<if ($activeSlave.dick isnot 0)>>Her cock spatters the couch with cum, and you make her lick it up.<</if>>
+<<else>>
+	<<if ($activeSlave.amp isnot 1)>>She kneels on the floor<<else>>You lay her on the floor<</if>> so you can take her at will<<if ($PC.dick is 0)>>, and don a strap-on<</if>>. You finger her <<if $seeRace is 1>>$activeSlave.race <</if>>ass while <<if ($activeSlave.vagina isnot -1)>>fucking her pussy<<else>>frotting her<</if>> for a bit and then switch to her now-ready anus. <<if ($activeSlave.anus is 1)>>Her ass is so tight that you have to work yourself in.<<elseif ($activeSlave.anus is 2)>>Your cock slides easily up her ass.<<else>>You slide into her already-gaping asspussy with ease.<</if>> You fuck her there for a while before repeatedly pulling out and stuffing yourself back in. She moans each time you fill a waiting hole. <<if ($activeSlave.dick isnot 0) and ($activeSlave.hormones lt 1) and ($activeSlave.balls isnot 0)>>Every time you penetrate, her erect dick jerks up and slaps her stomach.<<elseif ($activeSlave.dick isnot 0)>>Every time you penetrate, her limp dick flops around lamely.<<elseif ($activeSlave.clit gt 2)>>Her clit is so large that it bobs slightly with each thrust.<</if>>
+<</if>>
+
+<<if ($activeSlave.preg gt 10)>>
+	The poor girl's pregnant belly makes taking a rough fuck in both her holes uncomfortable for her.
+<</if>>
+
+<<if ($activeSlave.anusTat is "lewd scenes") and ($activeSlave.anus is 1)>>
+	As you fucked her butt, the decorative pattern around her ass stretched open. When you pull out, her momentary gape closes the pattern up quickly.
+<<elseif ($activeSlave.anusTat is "lewd scenes")>>
+	As you fucked her butt, the decorative pattern around her ass stretched open. When you pull out, her gape leaves the pattern distorted.
+<<elseif ($activeSlave.anusTat is "degrading language")>>
+	As you fucked her butt, the offensive language around her ass stretched and distorted.
+<</if>>
+
+<<if (random(1,100) gt (100+$activeSlave.devotion))>>
+  <<if ($activeSlave.fetish isnot "buttslut")>>
+  <<if ($activeSlave.fetish isnot "nympho")>>
+  <<if ($activeSlave.sexualQuirk isnot "hates penetration")>>
+      Being brutally used has given her a @@color:red;hatred of penetration.@@
+      <<set ($activeSlave.sexualQuirk to "hates penetration")>>
+  <</if>>
+  <</if>>
+  <</if>>
+<<elseif (random(1,100) gt (110-$activeSlave.devotion))>>
+  <<if ($activeSlave.fetish is "none")>>
+  <<if ($activeSlave.sexualQuirk isnot "hates penetration")>>
+      Orgasming to your use of her fuckhole @@color:pink;has her eager for more  buttsex.@@
+      <<set ($activeSlave.fetish to "buttslut")>>
+      <<set ($activeSlave.fetishDiscovered to 1)>>
+  <</if>>
+  <</if>>
+<</if>>
+
+<<if ($PC.dick isnot 0)>>
+
+<<if ($activeSlave.anus gt 2)>>
+	Cum drips out of her gaping hole.
+<<elseif ($activeSlave.anus is 2)>>
+	Cum drips out of her gaped anus.
+<<elseif ($activeSlave.anus is 1)>>
+	Her still-tight ass keeps your load inside her.
+<</if>>
+
+<<if ($activeSlave.amp isnot 1)>>
+<<if ($activeSlave.assignment is "whore")>>
+	She heads to the bathroom to clean her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole before returning to selling it publicly.<<else>>holes before returning to selling them publicly.<</if>>
+<<elseif ($activeSlave.assignment is "serve the public")>>
+	She heads to the bathroom to clean her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole before returning to offering it for free.<<else>>holes before returning to offering them for free.<</if>>
+<<elseif ($activeSlave.assignment is "rest")>>
+	She stumbles to the bathroom to clean her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>> before crawling back into bed.
+<<elseif ($activeSlave.assignment is "train slaves")>>
+	She heads to the bathroom to clean her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>> before she returns to teaching her classes.
+<<elseif ($activeSlave.assignment is "get milked")>>
+	She hurries to the bathroom to clean her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>> before going to get her uncomfortably milk-filled tits drained.
+<<elseif ($activeSlave.assignment is "please you")>>
+	She hurries to the bathroom to clean her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>> before returning to await your next use of her body, as though nothing had happened.
+<<elseif ($activeSlave.assignment is "be a subordinate sex slave")>>
+	She moves to the bathroom to clean her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>>, though it's only a matter of time before another slave decides to play with her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>asshole<<else>>pussy or asshole<</if>>.
+<<elseif ($activeSlave.assignment is "be a subordinate servant")>>
+	She hurries to the bathroom to clean her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>>, since her chores didn't perform themselves while you used her.
+<<elseif ($activeSlave.assignment is "be your Head Girl")>>
+	She hurries to the bathroom to clean her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>>, worried that her charges got up to trouble while you had your cock in her.
+<<elseif ($activeSlave.assignment is "guard you")>>
+	She hurries off to wash her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>> so you'll be unguarded for as little time as possible.
+<<elseif ($activeSlave.assignment is "work in the brothel")>>
+	She goes to wash her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>> so her next customer can have the illusion that he's the first to use it today.
+<<elseif ($activeSlave.assignment is "work on the promenade")>>
+	She goes to wash and delicately perfume her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole so it<<else>>holes so they<</if>> can gratify the finest citizen.
+<<elseif ($activeSlave.assignment is "work in the dairy")>>
+	She goes off to carefully wash her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>> to avoid besmirching the nice clean dairy.
+<<elseif ($activeSlave.assignment is "work as a servant")>>
+	She rushes to wash her <<if ($activeSlave.vagina lt 0) or ($activeSlave.vaginalAccessory is "chastity belt")>>fuckhole<<else>>holes<</if>>, impatient to get back to her undiminished chores.
+<</if>>
+<</if>>
+
+<</if>>
+
+<</nobr>>

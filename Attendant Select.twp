@@ -1,0 +1,37 @@
+<<set $nextButton to "Back">>\
+<<set $nextLink to "Spa">>\
+<<set $encyclopedia to " ">>\
+\
+<<nobr>>
+
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $Attendant.ID == $slaves[$i].ID>>
+	''__@@color:pink;$slaves[$i].slaveName@@__'' is serving as your Attendant.
+    <<set $assignment to 1>>
+    <<set $slaves[$i].assignment to "be the Attendant">>
+    <<set $slaves[$i].assignmentVisible to 0>>
+    <br><br>She will help heal your slaves.
+<</if>>
+<</for>>
+<<if ($assignment is 0)>>
+	You have not selected an Attendant.
+<</if>>
+
+<</nobr>>
+
+__Appoint a Attendant from your devoted slaves:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<nobr>>
+<<if ($slaves[$i].devotion gt 10)>>
+<<if $slaves[$i].assignmentVisible is 1>>
+<<if ($slaves[$i].amp isnot 1)>>
+  <br><<print "[[$slaves[$i].slaveName|Attendant Workaround][$Attendant to $slaves[" + $i + "]]]">>
+  <<display "Slave Summary">>
+<</if>>
+<</if>>
+<</if>>
+<</nobr>>\
+<</for>>\
+
+[[None|Attendant Workaround][$Attendant to 0]]

@@ -1,0 +1,19 @@
+<<nobr>>
+
+<<if ($activeSlave.collar is "uncomfortable leather")>>
+	Her uncomfortable leather collar makes her swallow and lick her lips periodically, making it look like she's offering oral even though she's just trying to relieve the discomfort.
+<<elseif ($activeSlave.collar is "tight steel")>>
+	Her tight steel collar makes her swallow and lick her lips periodically, making it look like she's offering oral even though she's just trying to relieve the discomfort.
+<<elseif ($activeSlave.collar is "shock punishment")>>
+	Her shock collar rests threateningly at her throat, ready to compel her to do anything you wish.
+<<elseif ($activeSlave.collar is "heavy gold")>>
+	Her heavy gold collar draws attention to the sexual decadence of her mouth.
+<<elseif ($activeSlave.collar is "pretty jewelry")>>
+	Her pretty necklace can hardly be called a collar, but it's just slavish enough to hint that the throat it rests on is available.
+<<elseif ($activeSlave.collar is "leather with cowbell")>>
+	Her cowbell tinkles merrily whenever she moves, instantly dispelling any grace or gravity.
+<<else>>
+	Her throat is uncovered and available.
+<</if>>
+
+<</nobr>>

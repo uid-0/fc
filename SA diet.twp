@@ -1,0 +1,39 @@
+<<nobr>>
+<<if $feeder is 1>>
+  The upgraded kitchen closely monitors her diet.
+<</if>>
+<<if ($slaves[$i].diet is "restricted")>>
+	<<display "Weight Loss">>\
+<<elseif ($slaves[$i].diet is "fattening")>>
+	<<display "Weight Gain">>\
+<<elseif ($slaves[$i].diet is "muscle building")>>
+	<<display "Muscle Gain">>\
+<<elseif ($slaves[$i].diet is "slimming")>>
+	<<display "Muscle Loss">>\
+<<elseif ($slaves[$i].diet is "cum")>>
+  <<if ($slaves[$i].devotion gt 4)>>
+	<<if ($slaves[$i].fetishDiscovered is 1)>>
+	  <<if ($slaves[$i].fetish is "nympho") or ($slaves[$i].fetish is "cumslut")>>
+		She @@color:hotpink;enjoys@@ the perversity of having large amounts of ejaculate in her diet.
+		<<set $slaves[$i].devotion += 0.3>>
+	  <</if>>
+	<</if>>
+	<<if ($slaves[$i].fetish isnot "nympho") and ($slaves[$i].fetish isnot "cumslut")>>
+	  <<if random(1,100) gt 70>>
+		After sucking down cum for sustenance, she has started to think of the stuff as a @@color:pink;true necessity@@ for life.
+		<<set $slaves[$i].fetish to "cumslut">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+  <<else>>
+	  <<if ($slaves[$i].fetish isnot "nympho") or ($slaves[$i].fetishDiscovered is 0)>>
+	  <<if ($slaves[$i].fetish isnot "cumslut") or ($slaves[$i].fetishDiscovered is 0)>>
+		She is @@color:mediumorchid;nauseated@@ by the large amounts of ejaculate in her diet.
+		<<set $slaves[$i].devotion -= 0.7>>
+		She has trouble keeping her disgusting food down.
+		<<display "Weight Loss">>\
+	  <</if>>
+	  <</if>>
+  <</if>>
+<</if>>
+<</nobr>>\

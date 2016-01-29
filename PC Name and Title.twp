@@ -1,0 +1,264 @@
+<<silently>>
+
+<<set $PCTitle to $PCName>>
+<<set $titles = []>>
+
+<<if $rep gt 18000>>
+	<<set $PCTitle to ($PCTitle + " the Great")>>
+<<elseif $rep gt 17000>>
+	<<set $PCTitle to ("the exalted " + $PCTitle)>>
+<<elseif $rep gt 16000>>
+	<<set $PCTitle to ("the illustrious " + $PCTitle)>>
+<<elseif $rep gt 15000>>
+	<<set $PCTitle to ("the prestigious " + $PCTitle)>>
+<<elseif $rep gt 14000>>
+	<<set $PCTitle to ("the renowned " + $PCTitle)>>
+<<elseif $rep gt 13000>>
+	<<set $PCTitle to ("the famed " + $PCTitle)>>
+<<elseif $rep gt 12000>>
+	<<set $PCTitle to ("the celebrated " + $PCTitle)>>
+<<elseif $rep gt 11000>>
+	<<set $PCTitle to ("the honored " + $PCTitle)>>
+<<elseif $rep gt 10000>>
+	<<set $PCTitle to ("the acclaimed " + $PCTitle)>>
+<<elseif $rep gt 9000>>
+	<<set $PCTitle to ("the eminent " + $PCTitle)>>
+<<elseif $rep gt 8250>>
+	<<set $PCTitle to ("the prominent " + $PCTitle)>>
+<<elseif $rep gt 7500>>
+	<<set $PCTitle to ("the distinguished " + $PCTitle)>>
+<<elseif $rep gt 6750>>
+	<<set $PCTitle to ("the admired " + $PCTitle)>>
+<<elseif $rep gt 6000>>
+	<<set $PCTitle to ("the esteemed " + $PCTitle)>>
+<<elseif $rep gt 5250>>
+	<<set $PCTitle to ("the respected " + $PCTitle)>>
+<<elseif $rep gt 4500>>
+	<<set $PCTitle to ("the known " + $PCTitle)>>
+<<elseif $rep gt 3750>>
+	<<set $PCTitle to ("the recognized " + $PCTitle)>>
+<<elseif $rep gt 3000>>
+	<<set $PCTitle to ("the rumored " + $PCTitle)>>
+<</if>>
+
+<<set $PCTitle to ($PCTitle + ", ")>>
+
+<<if $PCName is "FC Dev">>
+	<<set $titles.push("the Creator")>>
+<</if>>
+
+<<if $plot is 1>>
+  <<if $invasionVictory is 3>>
+	<<set $titles.push("Hero of the City")>>
+  <<elseif $invasionVictory is 2>>
+	<<set $titles.push("Defender of the City")>>
+  <</if>>
+  <<if $daughtersVictory is 3>>
+	<<set $titles.push("Destroyer of the Daughters")>>
+  <<elseif $daughtersVictory is 2>>
+	<<set $titles.push("Victor over the Daughters")>>
+  <</if>>
+<</if>>
+
+<<if $mercenaries gte 5>>
+  <<if $mercenariesTitle is "Evocati">>
+	<<set $seed to $mercenariesTitle>>
+	<<set $seed to ("Princeps of the " + $seed)>>
+	<<set $titles.push($seed)>>
+  <<elseif $mercenariesTitle is "Knights">>
+	<<set $seed to $mercenariesTitle>>
+	<<set $seed to ("Lord Commander of the " + $seed)>>
+	<<set $titles.push($seed)>>
+  <<elseif $mercenariesTitle is "Immortals">>
+	<<set $seed to $mercenariesTitle>>
+	<<set $seed to ("Tyrant of the " + $seed)>>
+	<<set $titles.push($seed)>>
+  <<else>>
+	<<set $seed to $mercenariesTitle>>
+	<<set $seed to ("Commander of the " + $seed)>>
+	<<set $titles.push($seed)>>
+  <</if>>
+<<elseif $mercenaries gte 1>>
+  <<set $titles.push("Commander of the Mercenaries")>>
+<</if>>
+
+<<if $dispensary is 1>>
+  <<set $titles.push("Pharmacologos")>>
+<</if>>
+
+<<if $FSSupremacist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("Grand Champion of the Blood")>>
+<<elseif $FSSupremacist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("Champion of the Blood")>>
+<<elseif $FSSupremacist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("Defender of the Blood")>>
+<</if>>
+
+<<if $FSSubjugationist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("Grand Overseer of the Inferior Race")>>
+<<elseif $FSSubjugationist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("Overseer of the Inferior Race")>>
+<<elseif $FSSubjugationist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("Subduer of the Inferior Race")>>
+<</if>>
+
+<<if $FSGenderRadicalist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("Buttfucker of All Slaves")>>
+<<elseif $FSGenderRadicalist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("Sodomizer of the Traps")>>
+<<elseif $FSGenderRadicalist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("Penetrator of the Sissies")>>
+<</if>>
+
+<<if $FSGenderFundamentalist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("Father to the City")>>
+<<elseif $FSGenderFundamentalist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("Defender of Women")>>
+<<elseif $FSGenderFundamentalist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("Restorer of Morals")>>
+<</if>>
+
+<<if $FSPaternalist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("Benefactor to All Slaves")>>
+<<elseif $FSPaternalist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("Benefactor of Slaves")>>
+<<elseif $FSPaternalist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("Pursuer of Justice")>>
+<</if>>
+
+<<if $FSDegradationist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("Holder of the Rod and the Lash")>>
+<<elseif $FSDegradationist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("Subduer of Slaves")>>
+<<elseif $FSDegradationist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("Pursuer of Justice")>>
+<</if>>
+
+<<if $FSBodyPurist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("the Purifier of the Breasts")>>
+<<elseif $FSBodyPurist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("the Discerning")>>
+<<elseif $FSBodyPurist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("the Tasteful")>>
+<</if>>
+
+<<if $FSAssetExpansionist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("the Expander of the Breasts")>>
+<<elseif $FSAssetExpansionist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("the Expander")>>
+<<elseif $FSAssetExpansionist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("the Implantor")>>
+<</if>>
+
+<<if $FSPastoralist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("the Master of Cattle")>>
+<<elseif $FSPastoralist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("the Rancher")>>
+<<elseif $FSPastoralist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("the Farmer")>>
+<</if>>
+
+<<if $FSPhysicalIdealist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("beloved of Brodin")>>
+<<elseif $FSPhysicalIdealist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("he of the godlike Body")>>
+<<elseif $FSPhysicalIdealist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("advancer of Gains")>>
+<</if>>
+
+<<if $FSChattelReligionist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("Keeper of the Blade and Chalice")>>
+<<elseif $FSChattelReligionist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("Champion of the Faith")>>
+<<elseif $FSChattelReligionist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("the Holy")>>
+<</if>>
+
+<<if $FSRomanRevivalist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("First Consul")>>
+<<elseif $FSRomanRevivalist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("Aedile")>>
+<<elseif $FSRomanRevivalist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("Quaestor")>>
+<</if>>
+
+<<if $FSAncientEgyptianRevivalist gte $FSLockinLevel*0.9>>
+  <<set $titles.push("the Living God")>>
+<<elseif $FSAncientEgyptianRevivalist gte $FSLockinLevel*0.6>>
+  <<set $titles.push("Pharaoh")>>
+<<elseif $FSAncientEgyptianRevivalist gte $FSLockinLevel*0.3>>
+  <<set $titles.push("Prince of the Nile")>>
+<</if>>
+
+<<if $brothelSlaves gte 15>>
+  <<set $titles.push("Procurator of the Brothel")>>
+<</if>>
+<<if $promenadeSlaves gte 15>>
+  <<set $titles.push("First on the Promenade")>>
+<</if>>
+<<if $dairySlaves gte 15>>
+  <<set $titles.push("Supplier of the Milk")>>
+<</if>>
+<<if $collectionFacilitySlaves gte 15>>
+  <<set $titles.push("Extractor of the Ejaculate")>>
+<</if>>
+<<if $servantsQuartersSlaves gte 15>>
+  <<set $titles.push("Director of the Servants")>>
+<</if>>
+<<if $schoolroomSlaves gte 10>>
+  <<set $titles.push("Educator of the Slaves")>>
+<</if>>
+<<if $spaSlaves gte 10>>
+  <<set $titles.push("Order of the Bath")>>
+<</if>>
+<<if $arcadeSlaves gte 15>>
+  <<set $titles.push("Comptroller of the Arcade")>>
+<</if>>
+
+<<if $slaves.length gt 50>>
+  <<set $titles.push("Master of Slaves")>>
+<<elseif $slaves.length gt 40>>
+  <<set $titles.push("Holder of Slaves")>>
+<<elseif $slaves.length gt 30>>
+  <<set $titles.push("Keeper of Slaves")>>
+<<elseif $slaves.length gt 20>>
+  <<set $titles.push("Manager of Slaves")>>
+<<elseif $slaves.length gt 10>>
+  <<set $titles.push("owner of slaves")>>
+<</if>>
+
+<<if $corpValue gt 500000>>
+  <<set $titles.push("Corporate Titan")>>
+<<elseif $corpValue gt 250000>>
+  <<set $titles.push("corporate innovator")>>
+<<elseif $corpValue gt 100000>>
+  <<set $titles.push("corporate founder")>>
+<<elseif $corpValue gt 0>>
+  <<set $titles.push("noted corporate businessman")>>
+<</if>>
+
+<<if $titles.length gt 0>>
+  <<set $titles.push("and ")>>
+<</if>>
+
+<<if $rep gt 18000>>
+  <<set $titles.push("unquestioned Master of the Arcology")>>
+<<elseif $rep gt 15000>>
+  <<set $titles.push("Lord of the Arcology")>>
+<<elseif $rep gt 12000>>
+  <<set $titles.push("Ruler of the Arcology")>>
+<<elseif $rep gt 9000>>
+  <<set $titles.push("chief officer of the arcology")>>
+<<else>>
+  <<set $titles.push("owner of the arcology")>>
+<</if>>
+
+<<for $i to 0; $i lt $titles.length; $i++>>
+  <<set $seed to $titles[$i]>>
+  <<set $PCTitle to ($PCTitle + $seed)>>
+  <<if $i lt $titles.length-2>>
+	<<set $PCTitle to ($PCTitle + ", ")>>
+  <</if>>
+<</for>>
+
+<</silently>>

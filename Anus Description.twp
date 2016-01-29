@@ -1,0 +1,191 @@
+<<nobr>>
+
+<<if ($showClothing is 1) and ($saleDescription is 0)>>
+
+<<if ($activeSlave.clothes is "a very tight corset")>>
+  <<if ($activeSlave.anus gt 2)>>
+	With ass bare, her huge asshole is very visible from the rear.
+  <<elseif ($activeSlave.anus gt 1)>>
+	With her butt bare, her roomy asshole is very visible from the rear.
+  <<else>>
+	With her butt bare, there is a occasional glimpse of her asshole.
+  <</if>>
+<<elseif ($activeSlave.clothes is "conservative clothing")>>
+<<elseif ($activeSlave.clothes is "chains")>>
+  <<if ($activeSlave.anus gt 2)>>
+	Another chain runs down her asscrack; her asshole is so huge that it occasionally threatens to swallow one of the links.
+  <<else>>
+	Another chain runs down her asscrack.
+  <</if>>
+<<elseif ($activeSlave.clothes is "Western clothing")>>
+  <<if ($activeSlave.anus gt 2)>>
+	With ass bare, her huge asshole is very visible from the rear.
+  <<elseif ($activeSlave.anus gt 1)>>
+	With her butt bare, her roomy asshole is very visible from the rear.
+  <<else>>
+	With her butt bare, there is a occasional glimpse of her asshole.
+  <</if>>
+<<elseif ($activeSlave.clothes is "body oil")>>
+  <<if ($activeSlave.anus gt 2)>>
+	With butt ass bare, her huge, well-oiled asshole is very visible from the rear.
+  <<elseif ($activeSlave.anus gt 1)>>
+	With her butt bare, her roomy, well-oiled asshole is very visible from the rear.
+  <<else>>
+	With her butt bare, there is a occasional glimpse of her well-oiled asshole.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a toga")>>
+<<elseif ($activeSlave.clothes is "a slutty quipao")>>
+  <<if ($activeSlave.butt gt 6)>>
+  	The rear hem of her quipao is so inadequate to cover her butt that
+	<<if ($activeSlave.anus gt 2)>>
+	  her huge asshole is very visible from the rear.
+	<<elseif ($activeSlave.anus gt 1)>>
+	  her roomy asshole is very visible from the rear.
+	<<else>>
+	  there is a occasional glimpse of her asshole.
+	<</if>>
+  <</if>>
+<<elseif ($activeSlave.clothes is "uncomfortable straps")>>
+  <<if ($activeSlave.anus gt 2)>>
+	The strap between her buttocks has a steel ring over her butthole to admit cock. Amusingly, the ring is probably more restrictive than her loose ass.
+  <<else>>
+	The strap between her buttocks has a steel ring over her asshole to admit cock.
+  <</if>>
+<<elseif ($activeSlave.clothes is "restrictive latex")>>
+  <<if ($activeSlave.anus gt 1)>>
+	Her well-fucked asshole is visible through a hole in the latex, left expressly to admit cock.
+  <<else>>
+	Her tight asshole is visible through a hole in the latex, left expressly to admit cock.
+  <</if>>
+<<elseif ($activeSlave.clothes is "attractive lingerie")>>
+  <<if ($activeSlave.anus gt 1)>>
+	Her g-string cannot conceal her well-fucked asshole.
+  <<else>>
+	Her g-string shows only a hint of her tight asshole.
+  <</if>>
+<<elseif ($activeSlave.clothes is "string lingerie")>>
+  <<if ($activeSlave.anus gt 1)>>
+	Her well-fucked asshole makes a mockery of her string bikini, which cannot begin to conceal it.
+  <<else>>
+	Her string bikini shows more than a hint of her tight asshole.
+  <</if>>
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt")>>
+<<elseif ($activeSlave.clothes is "battledress")>>
+<<elseif ($activeSlave.clothes is "harem gauze")>>
+  <<if ($activeSlave.anus gt 1)>>
+	Her well-fucked asshole is clearly visible through her gauze.
+  <<else>>
+	Her tight ass is tantalizingly visible through her gauze.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a fallen nun's habit")>>
+	With her butt uncovered, committing the sin of sodomy with this nun is as easy as bending her over.
+<<elseif ($activeSlave.clothes is "a penitent nun's habit")>>
+	Her poor sinful asshole is terribly chafed by her habit.
+<<elseif ($activeSlave.clothes is "a slutty outfit")>>
+	Her slutty outfits are designed for easy access to her asshole.
+<<elseif ($activeSlave.clothes is "a slave gown")>>
+	Though her gown is very pretty, her asshole is bare beneath it.
+<<elseif ($activeSlave.clothes is "slutty business attire")>>
+	Her short skirt can slide up over her hips to bare her butthole.
+<<elseif ($activeSlave.clothes is "nice business attire")>>
+	Her conservative skirt can be slid up over her hips to bare her butthole.
+<<elseif ($activeSlave.clothes is "a comfortable bodysuit")>>
+	Her bodysuit is so form-fitting that the shape of her anus is distinctly visible.
+<<elseif ($activeSlave.clothes is "a nurse outfit")>>
+	The skirt is tight enough that lifting it to fuck her butt is an amusing wrestling match.
+<<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+	The skirt is so short that it doesn't even have to be lifted to fuck her schoolgirl ass.
+<<elseif ($activeSlave.clothes is "a hijab")>>
+	The hijab may be modest, but it's also loose and easy to lift.
+<<elseif ($activeSlave.clothes is "a kimono")>>
+<<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+	The short skirt of her maid dress is made to be easily liftable for access to her anus.
+<<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+<<elseif ($activeSlave.clothes is "a slave gown")>>
+<<elseif ($activeSlave.anus gt 2)>>
+	With her ass bare, her huge asshole is very visible from the rear.
+<<elseif ($activeSlave.anus gt 1)>>
+	With her ass bare, her loose asshole is visible from the rear.
+<<else>>
+	With her ass bare, there is a occasional glimpse of her asshole.
+<</if>>
+
+<<if ($activeSlave.buttplug is "plug") and ($activeSlave.anus gt 2)>>
+	It's filled by a standard buttplug, which is on the verge of falling out.
+<<elseif ($activeSlave.buttplug is "plug")>>
+	It's filled by a standard buttplug.
+<<elseif ($activeSlave.buttplug is "huge plug") and ($activeSlave.anus lt 2)>>
+	It's agonizingly stretched by a huge buttplug.
+<<elseif ($activeSlave.buttplug is "huge plug") and ($activeSlave.anus lt 3)>>
+	It's uncomfortably filled by a huge buttplug.
+<<elseif ($activeSlave.buttplug is "huge plug")>>
+	It's comfortably filled by a huge buttplug.
+<</if>>
+
+<</if>>
+
+<<if  $activeSlave.anus is 0>>She is an @@color:lime;anal virgin;@@ her asshole is fresh and tight,
+<<elseif  $activeSlave.anus is 1>>Her asshole has been fucked before, but it's still tight,
+<<elseif  $activeSlave.anus is 2>> Her asshole is fairly loose,
+<<else>> Her asshole is a huge soft slit, a real whore's asspussy,
+<</if>>
+
+and she is
+
+<<if $activeSlave.analSkill is 3>>a @@color:aquamarine;masterful anal slut@@.
+<<elseif $activeSlave.analSkill is 2>>an @@color:aquamarine;expert anal slut@@.
+<<elseif $activeSlave.analSkill is 1>>a @@color:aquamarine;skilled anal slut@@.
+<<else>>unskilled at pleasing cocks with it.
+<</if>>
+
+<<if ($activeSlave.pubicHLength is "bushy")>>
+	Since she has been left natural she has some light $activeSlave.pubicHColor pubic hair around her ass.
+<</if>>
+
+<<if $activeSlave.minorInjury is "sore ass">>
+	Her asshole has seen hard use lately and looks a little sore.
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if ($activeSlave.vagina gt -1)>>
+  <<if ($activeSlave.anusPiercing is 1)>>
+      She has a simple piercing between her pussy and her asshole. It rubs her genitals and keeps her sexually primed.
+  <<elseif ($activeSlave.anusPiercing is 2)>>
+      She has a big ring between her pussy and her asshole and studs in a ring around her anus. She can't keep her mind off her constantly stimulated butthole.
+  <</if>>
+<<else>>
+  <<if ($activeSlave.anusPiercing is 1)>>
+      She has a simple piercing between her pussy and the base of her dick. It rubs her genitals and keeps her sexually primed.
+  <<elseif ($activeSlave.anusPiercing is 2)>>
+      She has a big ring between her asshole and the base of her dick, and studs in a ring around her anus. She can't keep her mind off her constantly stimulated rear pussy.
+  <</if>>
+<</if>>
+
+<<if $activeSlave.anusTat is "bleached">>
+	Her anus is bleached and looks like a sexual organ.
+<<elseif $activeSlave.anusTat is "floral designs">>
+	She has a huge blooming flower tattooed right over her anus.
+<<elseif $activeSlave.anusTat is "slutty advertisements">>
+  <<if ($activeSlave.vagina gt -1)>>
+	She has a ring of text tattooed around her anus which reads 'Spit First.'
+  <<else>>
+	She has a ring of text tattooed around her anus which reads 'This Is My Pussy, Too.'
+  <</if>>
+<<elseif $activeSlave.anusTat is "demeaning inscriptions">>
+  <<if ($activeSlave.vagina gt -1)>>
+	She has a ring of text tattooed around her anus which reads 'Favorite Fuckhole.'
+  <<else>>
+	She has a ring of text tattooed around her anus which reads 'Sissy Slut's Sodomy Slit.'
+  <</if>>
+<<elseif $activeSlave.anusTat is "tribal patterns">>
+	Her anus is bleached and looks like a sexual organ. It is tattooed with a tribal pattern that changes interestingly when she relaxes or tightens her sphincter.
+<<elseif $activeSlave.anusTat is "degrading language">>
+	Her anus is bleached and looks like a sexual organ. It is tattooed with degrading language; the inscription forms a ring around her hole and it states that you made her an anal slut.
+<<elseif $activeSlave.anusTat is "bovine patterns">>
+	Her anus is tattooed to mimic the puffy, dark appearance of a cow's.
+<</if>>
+
+<</if>>
+
+<</nobr>>

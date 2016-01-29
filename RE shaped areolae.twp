@@ -1,0 +1,34 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>'s breasts are real works of art. <<if $activeSlave.boobsImplant gt 0>>Her massive fake tits dominate her figure,<<else>>Her massive, sagging natural tits dominate her figure,<</if>> but the real attention getter are her unique, <<if $activeSlave.areolae is 4>>heart-shaped<<else>>star-shaped<</if>> areolae. The darker flesh around her nipples would be - should be - circular in any other woman, and the cute <<if $activeSlave.areolae is 4>>hearts<<else>>stars<</if>> around $activeSlave.slaveName's nipples are proof of just how much you've modified her. She's devoted to you, so much so that she loves showing off her special assets.
+\
+<span id="result">
+<<click "Show her off around the arcology">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You give $activeSlave.slaveName a variation on a usual slave gown. It's just as gorgeous, but this one actually covers her ass and crotch as well. In fact, it covers her <<if $activeSlave.amp is 1>>limbless torso and face completely: everything except her boobs.<<else>>arms, legs, and her face from the nose up.<</if>> The only flesh visible at all is her mouth, her chin, and her huge breasts, supported and presented by gentle corseting. <<if $activeSlave.amp is 1>>You carry her around the arcology's promenade.<<else>>You place a gentle hand on the small of her back to guide her, and stroll around the arcology's promenade.<</if>> $activeSlave.slaveName is blinded by the silk over her face, but she can still hear the appreciative murmurs of onlookers as they eye her magnificent breasts with their <<if $activeSlave.areolae is 4>>heart-shaped<<else>>star-shaped<</if>> areolae. She shivers a little with suppressed pride. @@color:hotpink;Her devotion to you has increased,@@ and @@color:green;your reputation as a person with unique property grows.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $rep += 100>>
+    <</replace>>
+<</click>>
+<<click "Use that pride as an advertisement">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	There's all sorts of business going on in your arcology, from flesh rented or bought down to more pedestrian affairs. Advertisement never goes amiss. You place $activeSlave.slaveName naked on a slowly rotating pedestal surrounded by a clear plastiglass tube on a busy thoroughfare in the lower parts of the arcology. These devices are often used to display slaves for sale or slave whores for rent; $activeSlave.slaveName is simply identified by your name as arcology owner, which is thus @@color:yellowgreen;identified with business prosperity.@@ She spends the day serving as eye candy for passersby, rotating gently on the pedestal as she shows off her body, giving pride of place to her <<if $activeSlave.areolae is 4>>heart-shaped<<else>>star-shaped<</if>> areolae. She loves all the attention, and @@color:hotpink;her devotion to you has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $cash += 100>>
+    <</replace>>
+<</click>>
+</span>

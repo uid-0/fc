@@ -1,0 +1,52 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is a real public servant. This morning, she rose early, did her chores, and looked after herself. She heads out past your desk toward the arcology's lower floors to offer herself freely to everyone she meets.
+
+As she goes, you notice that <<if ($activeSlave.dick gt 1) and ($activeSlave.balls gt 0) and ($activeSlave.hormones lt 1)>>her erection is obvious<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0) and ($activeSlave.hormones lt 1)>>her pathetic erection is visible<<elseif ($activeSlave.clit gt 0)>>her big clit is obviously engorged<<else>>her cheeks are flushed and she's panting a little<</if>>. Apparently, she can't wait to <<if ($activeSlave.fetish is "submissive")>>play the submissive<<elseif ($activeSlave.fetish is "humiliation")>>be publicly degraded<<elseif ($activeSlave.fetish is "cumslut")>>gorge herself on cum<<elseif ($activeSlave.fetish is "buttslut")>>spend all day getting pounded in the ass<<elseif ($activeSlave.fetish is "likes girls")>>enjoy all the men and women<<else>>be a complete slut<</if>>. If you went with her, you could certainly show off a little.
+
+\
+<span id="result">
+<<click "Share her body with the public">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<if ($activeSlave.amp isnot 1)>>$activeSlave.slaveName is surprised to find you walking beside her, but obediently falls in behind you as a proper slave should.<<else>>You scoop $activeSlave.slaveName's limbless form up and carry her out.<</if>> You take her to a lovely open balcony and seat yourself on a bench surrounded by the lush greenery and flowing water of the arcology's food systems. You pull her ass down onto your <<if ($PC.dick is 0)>>strap-on<<else>>rigid cock<</if>> so she can offer everything else to the public. <<if ($activeSlave.vagina isnot -1)>>For several hours, citizens come and go, most choosing to fuck her wet and available pussy. You climax repeatedly from the <<if ($PC.dick is 0)>>titillating nature of<<else>>extra fullness of her butt during<</if>> double penetration, and by the time you're finished she's dripping ejaculate from both her holes.<<elseif ($activeSlave.vaginalAccessory is "chastity belt")>>Since she's wearing a chastity belt and you're wearing her backdoor around your <<if ($PC.dick is 0)>>strap-on<<else>>cock<</if>>, her mouth is all that's left. She gives so many blowjobs by the time you're finished that her face, hair, chest and even stomach are liberally spattered with cum.<<else>>With your cock pumping her butt as much as you can manage with her seated in your lap, her dick flops up and down, lewdly advertising her sexual availability. She gives so many blowjobs by the time you're finished that her face, hair, chest and even stomach are liberally spattered with cum.<</if>> The public is sure to remember this spectacle; @@color:green;your reputation has increased.@@
+    <</replace>>
+    <<set $rep += 100>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+<</click>>
+<<click "Meet her with some aftercare when she returns, instead">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	$activeSlave.slaveName returns many hours later. She carefully took breaks for her own safety, and cleaned herself periodically, so there isn't much evidence, but she's obviously bone tired. When you meet her at the entrance to your penthouse she's surprised to see you, but she gives you a little smile anyway. You share a simple meal with her, give her a strong massage, and put her to bed. Afterward you turn to be about your business, but she wordlessly offers herself to you as you do. She's sore, so you spoon her gently in bed, fucking her slowly to sleep. She falls asleep with a serene expression on her face. @@color:hotpink;Her devotion to you has increased.@@
+    <</replace>>
+    <<set $activeSlave.devotion += 1>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+<</click>>
+</span>
+
+
+	

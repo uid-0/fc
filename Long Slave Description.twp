@@ -1,0 +1,835 @@
+<<nobr>>
+
+/*
+
+<<if $activeSlave.choosesOwnClothes is 1>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $activeSlave.ID == $activeSlave.ID>>
+      <<silently>>
+        <<display "SA chooses own clothes">>
+        <<set $activeSlave to $activeSlave>>
+      <</silently>>
+    <</if>>
+  <</for>>
+<</if>>
+
+*/
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+''@@color:pink;$activeSlave.slaveName@@''
+
+<<if ($activeSlave.customLabel isnot " ")>>
+	(@@color:yellow;''<<print $activeSlave.customLabel>>''@@)
+<</if>>
+
+<<if $saleDescription is 1>>
+
+is available to inspect.
+
+<<elseif $eventDescription is 1>>
+
+is currently involved in an event. She is 
+<<if $activeSlave.devotion lt -18>>@@color:darkviolet;extremely hateful@@
+<<elseif $activeSlave.devotion lt -10>>@@color:darkviolet;hateful@@
+<<elseif $activeSlave.devotion lt -4>>@@color:mediumorchid;resistant@@
+<<elseif $activeSlave.devotion lte 4>>@@color:yellow;hesitant@@
+<<elseif $activeSlave.devotion lte 10>>@@color:hotpink;accepting@@
+<<elseif $activeSlave.devotion lte 18>>@@color:deeppink;devoted@@
+<<else>>@@color:magenta;worshipful@@
+<</if>>
+
+towards you and
+
+<<if $activeSlave.trust lte -18>>@@color:goldenrod;is extremely terrified of@@
+<<elseif $activeSlave.trust lt -10>>@@color:goldenrod;is terrified of@@
+<<elseif $activeSlave.trust lt -4>>@@color:gold;is frightened of@@
+<<elseif $activeSlave.trust lte 4>>@@color:yellow;fears@@
+<<elseif $activeSlave.trust lte 10>>@@color:mediumaquamarine;is careful around@@
+<<elseif $activeSlave.trust lte 18>>@@color:mediumseagreen;trusts@@
+<<else>>@@color:mediumseagreen;is very trusting of@@
+<</if>>
+  
+you; she is assigned to $activeSlave.assignment.
+
+<<if $activeSlave.assignment is "be a subordinate sex slave">>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $activeSlave.subTarget == $activeSlave.ID>>
+	She has been ordered to serve ''@@color:pink;$activeSlave.slaveName@@'' specifically.
+<</if>>
+<</for>>
+<</if>>
+
+<<else>>
+
+comes
+<<if $activeSlave.devotion lt -20>>@@color:darkviolet;furiously@@
+<<elseif $activeSlave.devotion lt -10>>@@color:darkviolet;hatefully@@
+<<elseif $activeSlave.devotion lt -4>>@@color:mediumorchid;reluctantly@@
+<<elseif $activeSlave.devotion lte 4>>@@color:yellow;hesitantly@@
+<<elseif $activeSlave.devotion lte 10>>@@color:hotpink;acceptingly@@
+<<elseif $activeSlave.devotion lte 18>>@@color:deeppink;devotedly@@
+<<else>>@@color:magenta;worshipfully@@
+<</if>>
+
+before your desk
+<<if $activeSlave.assignment is "whore">>
+	between customers,
+<<elseif $activeSlave.assignment is "serve the public">>
+	from where she was offering herself publicly,
+<<elseif $activeSlave.assignment is "work a glory hole">>
+	straight from confinement in a glory hole,
+<<elseif $activeSlave.assignment is "get milked">>
+	between milkings,
+<<elseif $activeSlave.assignment is "get cockmilked">>
+	between cockmilkings,
+<<elseif $activeSlave.assignment is "rest">>
+	from where she was resting,
+<<elseif $activeSlave.assignment is "please you">>
+	from where she was offering herself to you,
+<<elseif $activeSlave.assignment is "be a subordinate sex slave">>
+	straight from orally servicing another slave,
+<<elseif $activeSlave.assignment is "be a subordinate servant">>
+	straight from bathing another slave,
+<<elseif $activeSlave.assignment is "train slaves">>
+	between slave training contracts,
+<<elseif $activeSlave.assignment is "stay confined">>
+	straight from her confinement,
+<<elseif $activeSlave.assignment is "guard you">>
+	armed and alert,
+<</if>>
+to be inspected and receive verbal orders.
+
+Her $activeSlave.eyes eyes
+<<if ($activeSlave.fetish is "mindbroken")>>
+  gaze @@color:red;dully@@ ahead, betraying her broken mind.
+<<elseif $activeSlave.trust lte -18>>flick back and forth in @@color:goldenrod;abject terror.@@
+<<elseif $activeSlave.trust lt -10>>dart around in @@color:goldenrod;terror.@@
+<<elseif $activeSlave.trust lt -4>>glance at you with @@color:gold;fright.@@
+<<elseif $activeSlave.trust lte 4>>remain @@color:yellow;fearfully@@ downcast.
+<<elseif $activeSlave.trust lte 10>>remain @@color:mediumaquamarine;carefully@@ downcast.
+<<elseif $activeSlave.trust lt 18>>gaze @@color:mediumseagreen;trustingly@@ at you.
+<<else>>gaze at you with @@color:mediumseagreen;profound trust.@@
+<</if>>
+
+<<if $activeSlave.sentence gt 0>>
+  <<if $activeSlave.assignment is "work a glory hole">>
+	Her sentence lasts another <<if $activeSlave.sentence gt 1>>$activeSlave.sentence weeks<<else>>week<</if>>.
+  <<else>>
+	Her work assignment lasts another <<if $activeSlave.sentence gt 1>>$activeSlave.sentence weeks<<else>>week<</if>>.
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.ID is $HeadGirl.ID) and ($HGSuite is 1)>>
+	She lives in her own suite within your penthouse,
+<<elseif ($activeSlave.ID is $Bodyguard.ID) and ($dojo gt 1)>>
+	She lives in her own room within the armory,
+<<elseif $activeSlave.livingRules is "spare">>
+	She sleeps on a bedroll,
+<<elseif $activeSlave.livingRules is "normal">>
+	She sleeps on a cot,
+<<else>>
+	She sleeps in her own little room,
+<</if>>
+
+<<if $activeSlave.mute isnot 1>>	
+<<if $activeSlave.speechRules is "restrictive">>
+	is not allowed to speak unless spoken to,
+<<else>>
+	is allowed to ask questions,
+<</if>>
+<</if>>
+
+<<if $activeSlave.relationshipRules is "restrictive">>
+	is not allowed to associate freely with other slaves,
+<<else>>
+	is allowed to form relationships with other slaves,
+<</if>>
+
+<<if $activeSlave.releaseRules is "restrictive">>
+	and is not allowed to masturbate, and so must find sexual release in her duties.
+<<elseif $activeSlave.releaseRules is "permissive">>
+	and is allowed to masturbate if she likes.
+<<elseif $activeSlave.releaseRules is "sapphic">>
+	and is not allowed to masturbate, but is encouraged to find sexual release with your other slaves.
+<</if>>
+
+<</if>>
+
+<<if $activeSlave.slaveName isnot $activeSlave.birthName>>
+  $activeSlave.slaveName is not her original name;
+  <<if $activeSlave.devotion gt 28>>
+	she adores her slave name and affects to have forgotten that she was ever called $activeSlave.birthName.
+  <<elseif $activeSlave.devotion gt 10>>
+	she uses her slave name automatically and gives no sign that she was ever called $activeSlave.birthName.
+  <<elseif $activeSlave.devotion gt 4>>
+	she uses her slave name despite once being known as $activeSlave.birthName.
+  <<elseif $activeSlave.devotion gte -4>>
+	she uses her slave name hesitantly since she was once called $activeSlave.birthName.
+  <<elseif $activeSlave.devotion gte -10>>
+	she uses her slave name with resentment since she prefers her original name, $activeSlave.birthName.
+  <<else>>
+	she uses her slave name only when constantly punished, since she feels her real name is $activeSlave.birthName.
+  <</if>>
+<</if>>
+
+<<if $activeSlave.health lt -9>>
+	She is nearly unresponsive. @@color:red;She's obviously very sick.@@
+<<elseif $activeSlave.health lt -5>>
+	Her words are slurred and random. @@color:red;She must be sick.@@
+<<elseif $activeSlave.health lt -2>>
+	Her words are slow and strained. @@color:red;She seems ill.@@
+<<elseif $activeSlave.health lte 2>>
+	She seems reasonably @@color:yellow;healthy.@@
+<<elseif $activeSlave.health lte 5>>
+	She shines with @@color:green;good health.@@
+<<else>>
+	She almost gleams; she's in the absolute @@color:green;best of health.@@
+<</if>>
+
+<<if $activeSlave.ageImplant is 1>>
+  $activeSlave.slaveName is 
+  <<if $activeSlave.age lt 30>>in her late twenties, but has had excellent cosmetic surgery that makes her look barely into her early twenties.
+  <<elseif $activeSlave.age lt 36>>in her thirties, but has had excellent cosmetic surgery that makes her look like she's still in her early twenties.
+  <<elseif $activeSlave.age lt 40>>in her late thirties, but has had excellent cosmetic surgery that makes her look like she's still in her twenties.
+  <<else>>in her forties, but has had excellent cosmetic surgery that makes her look like she's barely thirty.
+  <</if>>
+<<else>>
+  $activeSlave.slaveName is 
+  <<if $activeSlave.age lt 20>>young and fresh, only 18 or 19. 
+  <<elseif $activeSlave.age lt 25>>a young woman, in her early twenties.
+  <<elseif $activeSlave.age lt 30>>a young woman, in her late twenties. 
+  <<elseif $activeSlave.age lt 36>>in her early thirties.
+  <<elseif $activeSlave.age lt 40>>middle-aged for a slave, in her late thirties. 
+  <<else>>old for a slave, in her forties. 
+  <</if>>
+<</if>>
+
+<<if $showSexualHistory is 1>>
+
+<<if $activeSlave.weekAcquired isnot 0>>
+<<if $week-$activeSlave.weekAcquired gt 1>>
+She has been with you <<print $week-$activeSlave.weekAcquired>> weeks.
+<<elseif $week-$activeSlave.weekAcquired is 1>>
+She has been with you 1 week.
+<</if>>
+<</if>>
+
+<<if ($activeSlave.oralCount + $activeSlave.vaginalCount + $activeSlave.analCount + $activeSlave.mammaryCount + $activeSlave.penetrativeCount) gt 0>>
+	While your slave, she has been fucked about <<print ($activeSlave.oralCount + $activeSlave.vaginalCount + $activeSlave.analCount + $activeSlave.mammaryCount + $activeSlave.penetrativeCount)>> times, including
+	<<if $activeSlave.mammaryCount gt 0>>
+		$activeSlave.mammaryCount mammary,
+	<</if>>
+	<<if $activeSlave.vaginalCount gt 0>>
+		$activeSlave.vaginalCount vanilla,
+	<</if>>
+	<<if $activeSlave.analCount gt 0>>
+		$activeSlave.analCount anal,
+	<</if>>
+	<<if $activeSlave.penetrativeCount gt 0>>
+		$activeSlave.penetrativeCount penetrating,
+	<</if>>
+	<<if ($activeSlave.penetrativeCount+$activeSlave.mammaryCount+$activeSlave.vaginalCount+$activeSlave.analCount) gt 0>>
+		 and
+	<</if>>
+	$activeSlave.oralCount oral sexual encounters.
+<</if>>
+
+<<if ($activeSlave.lactation gt 0) and ($activeSlave.milk lt 20)>>
+	She has given a small quantity of milk.
+<<elseif ($activeSlave.milk gt 1)>>
+	She has given about $activeSlave.milk liters of milk.
+<</if>>
+
+<<if ($activeSlave.cum gt 0)>>
+	She has given about $activeSlave.cum deciliters of cum.
+<</if>>
+
+<<if ($activeSlave.births is 1)>>
+	She has also given birth in your arcology once.
+<<elseif ($activeSlave.births gt 1)>>
+	She has also given birth in your arcology $activeSlave.births times.
+<</if>>
+
+<</if>>
+
+<<if ($activeSlave.intelligence gte 2)>>
+  <<if ($activeSlave.intelligenceImplant isnot 1)>>
+	She is so @@color:deepskyblue;highly intelligent@@ that her lack of education is unimportant.
+  <<else>>
+	She is both @@color:deepskyblue;highly intelligent@@ and well educated.
+  <</if>>
+<<elseif ($activeSlave.intelligence gte 1)>>
+  <<if ($activeSlave.intelligenceImplant isnot 1)>>
+	She is of @@color:deepskyblue;above average intelligence@@ despite being undereducated.
+  <<else>>
+	She is of @@color:deepskyblue;above average intelligence@@ due to being well educated.
+  <</if>>	
+<<elseif ($activeSlave.intelligence gte 0)>>
+  <<if ($activeSlave.intelligenceImplant isnot 1)>>
+	She is of average intelligence and is undereducated.
+  <<else>>
+	She is of average intelligence due to being well educated.
+  <</if>>
+<<elseif ($activeSlave.intelligence gte -1)>>
+  <<if ($activeSlave.intelligenceImplant isnot 1)>>
+	She is of @@color:orangered;below average intelligence@@ and is poorly educated.
+  <<else>>
+	She is of @@color:orangered;below average intelligence@@ despite having been educated.
+  <</if>>
+<<else>>
+  <<if ($activeSlave.intelligenceImplant isnot 1)>>
+	She is @@color:orangered;quite stupid@@ and ignorant.
+  <<else>>
+	She is @@color:orangered;quite stupid@@ despite having some education.
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.behavioralQuirk is "arrogant") and ($activeSlave.devotion lt -4)>>
+	She is @@color:red;arrogant@@ and clings to her dignity.
+<<elseif ($activeSlave.behavioralQuirk is "arrogant") and ($activeSlave.devotion lte 4)>>
+	She is @@color:red;arrogant@@ and seems to think slavery beneath her.
+<<elseif ($activeSlave.behavioralQuirk is "arrogant")>>
+	Despite being well broken, she seems to retain hints of @@color:red;arrogance@@.
+<<elseif ($activeSlave.behavioralQuirk is "bitchy") and ($activeSlave.devotion lt -4)>>
+	She is @@color:red;bitchy@@ and insults you every chance she gets.
+<<elseif ($activeSlave.behavioralQuirk is "bitchy") and ($activeSlave.devotion lte 4)>>
+	She is @@color:red;bitchy@@ and constantly tries to get a word in edgewise.
+<<elseif ($activeSlave.behavioralQuirk is "bitchy")>>
+	Since she is well broken, she tries to confine her @@color:red;bitchy@@ remarks to your other slaves.
+<<elseif ($activeSlave.behavioralQuirk is "quirky")>>
+	She behaves @@color:red;oddly@@, saying and doing random things.
+<<elseif ($activeSlave.behavioralQuirk is "anorexic")>>
+	She suffers from @@color:red;anorexia@@.
+<</if>>
+<<if ($activeSlave.sexualQuirk is "hates oral")>>
+	She @@color:red;hates@@ oral sex and tries to avoid it.
+<<elseif ($activeSlave.sexualQuirk is "hates anal")>>
+	She @@color:red;hates@@ anal sex and tries to avoid it.
+<<elseif ($activeSlave.sexualQuirk is "hates penetration")>>
+	She @@color:red;hates@@ penetration and tries to avoid it.
+<<elseif ($activeSlave.sexualQuirk is "hates men")>>
+	She @@color:red;strongly dislikes@@ men, preferring not to have sex with them.
+<<elseif ($activeSlave.sexualQuirk is "hates women")>>
+	She @@color:red;strongly dislikes@@ women, preferring not to have sex with them.
+<</if>>
+
+<<if ($activeSlave.fetishDiscovered is 1)>>
+<<if ($activeSlave.fetish is "submissive") and ($activeSlave.behavioralQuirk is "arrogant")>>
+	Her arrogance is really just a thin shell to protect her true need to @@color:pink;submit@@.
+<<elseif ($activeSlave.fetish is "submissive")>>
+	She's a confirmed @@color:pink;submissive@@, and enjoys the strictures of slavery.
+<<elseif ($activeSlave.fetish is "likes girls")>>
+	Slaves are expected to like men, but she @@color:pink;likes women@@, too.
+<<elseif ($activeSlave.fetish is "cumslut") and ($activeSlave.sexualQuirk is "hates oral")>>
+	She's torn between her @@color:pink;love of semen@@ and her dislike of having cocks in her mouth.
+<<elseif ($activeSlave.fetish is "cumslut")>>
+	She's a @@color:pink;cumslut@@, and loves giving blowjobs and receiving facials.
+<<elseif ($activeSlave.fetish is "humiliation") and ($activeSlave.behavioralQuirk is "bitchy")>>
+	Her bitchiness is really just an expression of her deep need to be @@color:pink;humiliated@@ herself.
+<<elseif ($activeSlave.fetish is "humiliation")>>
+	She's a slut for @@color:pink;humiliation@@, and gets off on having others see her enslavement.
+<<elseif ($activeSlave.fetish is "buttslut") and ($activeSlave.sexualQuirk is "hates anal")>>
+	Her hatred is just pretense to cover her shame about how much she really loves getting @@color:pink;fucked in the butt@@.
+<<elseif ($activeSlave.fetish is "buttslut")>>
+	She @@color:pink;prefers anal sex@@.
+<<elseif ($activeSlave.fetish is "nympho") and ($activeSlave.sexualQuirk is "hates men")>>
+	She is tormented by her dislike for penetration, which forces her to rely on oral, manual and other external forms of sex to satisfy her @@color:pink;raging libido@@.
+<<elseif ($activeSlave.fetish is "boobs")>>
+	Her sexuality @@color:pink;focuses on her breasts@@; she loves having her nipples fondled and sucked, and can orgasm to nipple stimulation alone.
+<<elseif ($activeSlave.fetish is "pregnancy") and ($activeSlave.balls gt 0)>>
+	Her sexuality @@color:pink;focuses on reproduction@@; she gets aroused by the mere thought of blowing her load in a fertile pussy.
+<<elseif ($activeSlave.fetish is "pregnancy") and ($activeSlave.preg lt -1)>>
+	Her sexuality @@color:pink;focuses on reproduction@@; she knows she can't get pregnant, so it mostly expresses itself as enthusiasm for sex with pregnant girls.
+<<elseif ($activeSlave.fetish is "pregnancy")>>
+	Her sexuality @@color:pink;focuses on reproduction@@; she gets aroused by the mere thought of getting pregnant.
+<<elseif ($activeSlave.fetish is "dom")>>
+	She likes to take an active, powerful role in sex; with other slaves this is expressed as @@color:pink;dominance@@, and with her betters she's a very energetic lover.
+<<elseif ($activeSlave.fetish is "sadist")>>
+	She gets off on @@color:pink;the suffering of others@@; she enjoys watching other slaves in pain, but truly loves causing pain herself.
+<<elseif ($activeSlave.fetish is "masochist")>>
+	She @@color:pink;gets off on pain@@.
+<<elseif ($activeSlave.fetish is "nympho")>>
+	Her glance is hungry and wild: she is a @@color:pink;complete sex addict@@.
+<<elseif ($activeSlave.fetishDiscovered is 1)>>
+	Her sexuality is @@color:pink;quite normal@@.
+<</if>>
+<<else>>
+	You do not understand her sexuality very well.
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if ($activeSlave.brand isnot 0) and ($activeSlave.brandLocation is "cheek")>>
+	She has $activeSlave.brand branded into the flesh of her $activeSlave.brandLocation.
+<</if>>
+
+<</if>>
+
+<<if $activeSlave.relation isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].ID is $activeSlave.relationTarget>>
+    	She is $slaves[$i].slaveName's $activeSlave.relation.
+    <</if>>
+  <</for>>
+<</if>>
+
+<<if $activeSlave.relationship isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].ID is $activeSlave.relationshipTarget>>
+    	She is
+        <<if $activeSlave.relationship lte 1>>
+        	@@color:lightgreen;friends@@ with $slaves[$i].slaveName.
+        <<elseif $activeSlave.relationship lte 2>>
+        	@@color:lightgreen;best friends@@ with $slaves[$i].slaveName.
+        <<elseif $activeSlave.relationship lte 3>>
+        	$slaves[$i].slaveName's @@color:lightgreen;friend with benefits.@@
+        <<elseif $activeSlave.relationship lte 4>>
+        	$slaves[$i].slaveName's @@color:lightgreen;lover.@@
+        <<elseif $slaves[$i].relationship gt 4>>
+        	$slaves[$i].slaveName's @@color:lightgreen;slave wife.@@      
+   		<</if>>
+    <</if>>
+  <</for>>
+<</if>>
+
+<<if $activeSlave.rivalry isnot 0>>
+  <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].ID is $activeSlave.rivalryTarget>>
+    	She 
+        <<if $activeSlave.rivalry lte 1>>
+        	@@color:lightsalmon;dislikes@@ $slaves[$i].slaveName.
+        <<elseif $activeSlave.rivalry lte 2>>
+        	is $slaves[$i].slaveName's @@color:lightsalmon;rival.@@
+        <<else>>
+        	@@color:lightsalmon;bitterly hates@@ $slaves[$i].slaveName.   
+   		<</if>>
+    <</if>>
+  <</for>>
+<</if>>
+
+<<if $saleDescription is 0>>
+  <<if $activeSlave.origin isnot 0>>
+    $activeSlave.origin
+  <</if>>
+<</if>>
+  <<if $activeSlave.career isnot 0>>
+    Before she was a slave, she was $activeSlave.career.
+  <</if>>
+  <<if $activeSlave.prestige gt 0>>
+    $activeSlave.prestigeDesc
+    <<if $activeSlave.prestige gt 2>>
+      It is extremely prestigious to own her.
+    <<elseif $activeSlave.prestige gt 1>>
+      It is quite prestigious to own her.
+    <<else>>
+      It is fairly prestigious to own her.
+    <</if>>
+  <</if>>
+
+<<if $activeSlave.entertainSkill is 1>>
+	She is @@color:aquamarine;reasonably entertaining.@@
+<<elseif $activeSlave.entertainSkill is 2>>
+	She is a @@color:aquamarine;skilled entertainer.@@
+<<elseif $activeSlave.entertainSkill is 3>>
+	She is a @@color:aquamarine;master of entertainment.@@
+<</if>>
+
+<<if ($activeSlave.customDesc isnot 0) and (def $activeSlave.customDesc)>>
+	<<print $activeSlave.customDesc>>
+<</if>>
+
+<</nobr>>
+\
+<<nobr>>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<<if $activeSlave.amp is 1>>
+	The most obvious thing about $activeSlave.slaveName is that she is a @@color:pink;quadruple amputee@@: she has neither arms nor legs.
+<</if>>
+
+<<if ($showClothing is 1) and ($saleDescription is 0)>>
+<<display "Clothes Description">>
+<</if>>
+
+$activeSlave.slaveName is
+
+<<if $activeSlave.height lt -1>>petite
+<<elseif $activeSlave.height is -1>>short
+<<elseif $activeSlave.height is 0>>an average height
+<<elseif $activeSlave.height is 1>>tall
+<<elseif $activeSlave.height gt 1>>very tall
+<</if>>
+
+and
+
+<<if $activeSlave.weight gt 2>>@@color:red;<<print either("overweight", "carrying a lot of extra weight", "fat")>>.@@
+<<elseif $activeSlave.weight is 2>>@@color:red;<<print either("chubby", "carrying extra weight")>>.@@
+<<elseif $activeSlave.weight is 1>><<print either("pleasingly curvy", "nicely plush")>>.
+<<elseif $activeSlave.weight is 0>><<print either("a healthy weight", "neither too fat nor too skinny", "an attractive weight for her frame")>>. 
+<<elseif $activeSlave.weight is -1>><<print either("pleasingly thin", "appealingly skinny")>>.
+<<elseif $activeSlave.weight is -2>>@@color:red;<<print either("rail thin", "underweight", "too skinny")>>.@@
+<<elseif $activeSlave.weight lt -2>>@@color:red;<<print either("emaciated", "dangerously skinny")>>.@@
+<</if>>
+
+<<if $activeSlave.heightImplant gt 0>>
+	The proportions of her arms and legs are odd, as though they have been artificially lengthened.
+<<elseif $activeSlave.heightImplant lt 0>>
+	The proportions of her arms and legs are odd, as though they have been surgically shortened.
+<</if>>
+
+<<if $activeSlave.ID == $Bodyguard.ID>>
+  She is your bodyguard.
+  <<if $activeSlave.muscles+$activeSlave.height gt 4>>
+    She has a ceramic zweihander strapped to her back, and  light machine gun slung crosswise on her chest.
+  <<elseif $activeSlave.muscles+$activeSlave.height gt 1>>
+    She has a long ceramic sword strapped to her back and a cut down para battle rifle slung across her chest.
+  <<elseif $activeSlave.muscles+$activeSlave.height gte -1>>
+    She has a straight ceramic sword strapped to her back and a heavy submachine gun slung across her chest.
+  <<else>>
+    She has a short ceramic sword strapped to her back and a machine pistol at her hip.
+  <</if>>
+<</if>>
+
+<<if $activeSlave.muscles gte 3>>
+	She is @@color:pink;extremely muscular,@@ with defined pecs, powerful glutes, and massive traps.
+<<elseif $activeSlave.muscles gte 2>>
+	She is @@color:pink;quite muscular,@@ with ripped abs, strong shoulders, and defined lats.
+<<elseif $activeSlave.muscles gte 1>>
+	She is @@color:pink;well built,@@ yet feminine, with just-visible muscles.
+<</if>>
+
+<<if $activeSlave.combatSkill gt 0>>
+	She is @@color:aquamarine;skilled at combat@@: she is comfortable with the use of modern firearms and edged weapons, and her hands are deadly weapons.
+<</if>>
+
+<<if $activeSlave.pitKills gt 0>>
+	$activeSlave.pitKills slaves have died by her hand in pit fights.
+<</if>>
+
+<<if $activeSlave.waist is 1>>
+	She has a lovely @@color:pink;narrow waist@@ that gives her an hourglass figure.
+<<elseif $activeSlave.waist gt 1>>
+	She has an @@color:pink;unnaturally narrow waist@@ that gives her a cartoonishly hourglass figure.
+<</if>>
+
+<<if ($activeSlave.preg is -2) and ($activeSlave.vagina lt 0)>>
+<<elseif ($activeSlave.preg is -2) and ($activeSlave.vagina isnot -1)>>
+	She is sterile.
+<<elseif $activeSlave.preg gt 30>>
+	She is @@color:pink;hugely pregnant@@.
+<<elseif $activeSlave.preg gt 20>>
+	She is @@color:pink;very pregnant@@.
+<<elseif $activeSlave.preg gt 10>>
+	She is @@color:pink;visibly pregnant@@.
+<<elseif $activeSlave.preg gt 0>>
+	She is @@color:pink;pregnant@@, though it isn't too visible yet.
+<</if>>
+
+<<if ($activeSlave.heels is 1)>>
+	Her @@color:pink;legs have been altered@@ so that she must wear heels in order to walk.
+<</if>>
+
+<<if ($showClothing is 1) and ($saleDescription is 0)>>
+<<if ($activeSlave.amp isnot 1)>>
+
+<<if ($activeSlave.heels is 1) and ($activeSlave.shoes isnot "none") and ($activeSlave.shoes isnot "flats")>>
+	She is, so she can walk reasonably well.
+<<elseif ($activeSlave.heels is 1)>>
+	Since she is without these, she's crawling on all fours.
+<</if>>
+
+<<if ($activeSlave.shoes is "boots") and ($activeSlave.clothes is "restrictive latex")>>
+	She is wearing a pair of thigh high boots, in tight latex to match her outfit.
+<<elseif ($activeSlave.shoes is "boots") and ($activeSlave.clothes is "battledress")>>
+	She is wearing combat boots with hardly any heel.
+<<elseif ($activeSlave.shoes is "boots") and ($activeSlave.clothes is "a comfortable bodysuit")>>
+	Her bodysuit includes a pair of heeled boots.
+<<elseif ($activeSlave.shoes is "boots") and ($activeSlave.clothes is "slutty jewelry")>>
+	Her thigh high boots are nothing more than a crossing and recrossing weave of gilded cord that runs gorgeously from her high heels all the way up to the bottom of her buttocks.
+<<elseif ($activeSlave.shoes is "boots") and ($activeSlave.clothes is "Western clothing")>>
+	Since she's wearing Western clothing, of course she's wearing a nice pair of high-heeled cowboy boots with depictions of big-breasted ladies worked into the leather.
+<<elseif ($activeSlave.shoes is "boots")>>
+	She is wearing a pair of leather thigh high, heeled boots that stop just short of her buttocks.
+<<elseif ($activeSlave.shoes is "extreme heels")>>
+	She is wearing a pair of painfully high heels.
+<<elseif ($activeSlave.shoes is "heels")>>
+	She is wearing a pair of high heels.
+<<elseif ($activeSlave.shoes is "flats") and ($activeSlave.clothes is "a kimono")>>
+	She is wearing a pair of geta.
+<<elseif ($activeSlave.shoes is "flats")>>
+	She is wearing a pair of basic flats.
+<<elseif ($activeSlave.shoes is "none") and ($activeSlave.clothes is "no clothing") and ($activeSlave.preg gt 0)>>
+	She is naked, barefoot, and pregnant, just like a woman should be.
+<<elseif ($activeSlave.shoes is "none") and ($activeSlave.clothes is "no clothing")>>
+	She is naked and barefoot.
+<<elseif ($activeSlave.shoes is "none")>>
+	She is barefoot.
+<</if>>
+
+<</if>>
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if ($activeSlave.brand isnot 0) and ($activeSlave.brandLocation is "back")>>
+	She has $activeSlave.brand branded into the flesh of her $activeSlave.brandLocation.
+<</if>>
+<<if ($activeSlave.brand isnot 0) and ($activeSlave.brandLocation is "chest")>>
+	She has $activeSlave.brand branded into the flesh of her $activeSlave.brandLocation.
+<</if>>
+
+<</if>>
+
+<<if ($seeNationality is 1)>>
+  <<if $activeSlave.nationality is 0>>She's<<else>>She's originally @@color:tan;<<print $activeSlave.nationality>>@@; ethnically, she's<</if>> @@color:tan;<<print $activeSlave.race>>@@, and her skin is <<print $activeSlave.skin>>.
+<<elseif ($seeRace is 1)>>
+  Ethnically, she's @@color:tan;<<print $activeSlave.race>>@@, and her skin is <<print $activeSlave.skin>>.
+<<else>>
+  Her skin is <<print $activeSlave.skin>>.
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if $activeSlave.hlength is "shaved bald">>Her hair has been shaved bald. If her hair were visible, it would be $activeSlave.hcolor.
+<<else>>Her hair is $activeSlave.hcolor and $activeSlave.hlength. 
+<</if>>
+
+<</if>>
+
+<<if ($showClothing is 1) and ($saleDescription is 0)>>
+
+<<if ($activeSlave.clothes is "restrictive latex")>>
+	The upper half of her face is covered by the hood of her latex suit: though she can see through eye-holes, these can easily be closed to blind her.
+<<elseif ($activeSlave.clothes is "attractive lingerie")>>
+	Her nice lingerie is set off by a delicate choker of the same material.
+<<elseif ($activeSlave.clothes is "a slave gown") and ($activeSlave.hlength isnot "shaved bald")>>
+	Her gown is accented by a lovely spray of imitation jewels in her hair.
+<<elseif ($activeSlave.clothes is "a slutty quipao") and ($activeSlave.hlength isnot "shaved bald")>>
+	Her quipao is accented by a lovely spray of imitation jewels in her hair.
+<<elseif ($activeSlave.clothes is "slutty business attire")>>
+	She's wearing a pair of horn-rimmed glasses without correction to accent her business attire.
+<<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+	She's wearing a pair of horn-rimmed glasses without correction to improve her schoolgirl look.
+<<elseif ($activeSlave.clothes is "nice business attire")>>
+	She's wearing a pair of wire-frame glasses without correction to accent her business attire.
+<<elseif ($activeSlave.clothes is "Western clothing")>>
+	Her girly little cowboy hat is set back on her head.
+<<elseif ($activeSlave.clothes is "harem gauze") and ($activeSlave.hlength isnot "shaved bald")>>
+	Her harem outfit includes the traditional veil for her face and hair.
+<<elseif ($activeSlave.clothes is "a hijab")>>
+	Above the shoulders, her hijab leaves only her face bare.
+<</if>>
+
+<</if>>
+
+<<if $activeSlave.mute is 1>>
+	She is @@color:pink;completely silent@@, which is understandable, since her ability to speak has been surgically removed.
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if $activeSlave.earPiercing is 1>>
+	Her earlobes are conventionally pierced.
+<<elseif $activeSlave.earPiercing is 2>>
+	Her ears are heavily pierced, with multiple lobe piercings and a row of helix piercings.
+<</if>>
+
+<<if $activeSlave.earPiercing gt 0>>
+  <<if ($activeSlave.assignment is "get milked") or ($activeSlave.assignment is "work in the dairy")>>
+	She has a plastic livestock tag in one ear to help identify her for milking.
+  <<elseif ($activeSlave.clothes is "attractive lingerie")>>
+	She's wearing pretty, womanly earrings.
+  <<elseif ($activeSlave.clothes is "a very tight corset")>>
+	She's wearing black enamelled earrings.
+  <<elseif ($activeSlave.clothes is "a fallen nun's habit")>>
+	Her earrings mimic tiny crowns of thorns.
+  <<elseif ($activeSlave.clothes is "a penitent nun's habit")>>
+	Her earrings mimic tiny crowns of thorns.
+  <<elseif ($activeSlave.clothes is "string lingerie")>>
+	She's wearing girly earrings.
+  <<elseif ($activeSlave.clothes is "cutoffs and a t-shirt")>>
+	She's wearing girly earrings.
+  <<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+	She's wearing girlish earrings.
+  <<elseif ($activeSlave.clothes is "a kimono")>>
+	She's wearing gorgeous enamelled earrings made to look like tiny koi.
+  <<elseif ($activeSlave.clothes is "a slave gown")>>
+	She's wearing lovely diamond earrings; the stones are cut in an alluring, feminine style.
+  <<elseif ($activeSlave.clothes is "slutty business attire")>>
+	She's wearing lovely diamond earrings; the stones are cut in a gaudy, noveau-riche style.
+  <<elseif ($activeSlave.clothes is "nice business attire")>>
+	She's wearing lovely diamond earrings; the stones are cut in an assertive, unsubtle style.
+  <<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+	She's wearing big hoop earrings inappropriate for a real maid.
+  <<elseif ($activeSlave.clothes is "a nice maid outfit")>>
+	She's wearing conservative earrings like those a free maid could afford.
+  <<elseif ($activeSlave.clothes is "harem gauze")>>
+	She's wearing broad gold earrings in faux-Arabian style.
+  <<elseif ($activeSlave.clothes is "slutty jewelry")>>
+	She's wearing heavy gold hoop earrings, to match the rest of her jewelry.
+  <</if>>
+<</if>>
+
+<<if $activeSlave.nosePiercing is 1>>
+	She has a simple stud in her nose.
+<<elseif $activeSlave.nosePiercing is 2>>
+	She has nasal studs and a large septum ring.
+	<<if ($activeSlave.clothes is "slutty jewelry") and ($activeSlave. earPiercing gt 0)>>
+    		Her bangles include a light chain from her nose ring to her ear piercings on one side.
+	<</if>>
+<</if>>
+
+<<if $activeSlave.eyebrowPiercing is 1>>
+	She has a simple stud in one eyebrow.
+<<elseif $activeSlave.eyebrowPiercing is 2>>
+	She has multiple eyebrow rings.
+<</if>>
+
+<<if $activeSlave.navelPiercing is 1>>
+	Her navel bears a simple stud.
+<<elseif $activeSlave.navelPiercing is 2>>
+	Her navel is pierced with a big ring.
+	<<if ($activeSlave.clothes is "slutty jewelry")>>
+    		It has a length of gilded chain dangling from it.
+	<<else>>
+    		It has a short length of chain dangling from it.
+	<</if>>
+<</if>>
+
+<<print $activeSlave.customTat>>
+
+<</if>>
+
+<<display "Lips Description">>
+
+<<if $showBodyMods is 1>>
+  <<if $activeSlave.amp isnot 1>>
+    <<if $activeSlave.nails is 1>>
+        Her nails are long and elegant.
+    <<elseif ($activeSlave. nails is 2) and ($activeSlave.hcolor is "blonde")>>
+        Her nails are yellow to go with her $activeSlave.hcolor hair.
+    <<elseif $activeSlave.nails is 2>>
+        Her nails are color-coordinated with her $activeSlave.hcolor hair.
+    <<elseif $activeSlave.nails is 3>>
+        She has the classic long, garish streetwalker nails.
+    <</if>>
+
+    <<if $activeSlave.shouldersTat is "tribal patterns">>
+        She has tribal tattoos encircling both her shoulders in swirling patterns.
+    <<elseif $activeSlave.shouldersTat is "floral designs">>
+        She has a gorgeous flower tattoo covering each shoulder.
+    <<elseif ($activeSlave.shouldersTat is "slutty advertisements") and ($activeSlave.vagina lt 0)>>
+        She has 'Two Hole Whore' tattooed on each of her shoulders.
+    <<elseif ($activeSlave.shouldersTat is "slutty advertisements")>>
+        She has 'Three Hole Whore' tattooed on each of her shoulders.
+    <<elseif $activeSlave.shouldersTat is "demeaning inscriptions">>
+        She has 'Dickholster' tattooed on her left shoulder, and 'Fuckmeat' tattooed on her right.
+    <<elseif ($activeSlave.shouldersTat is "lewd scenes") and ($activeSlave.vagina lt 0)>>
+        She has a stylized rendition of a dick plunging into an open mouth tattooed on her left shoulder, and a similar image of a dick entering an anus on her right.
+    <<elseif ($activeSlave.shouldersTat is "lewd scenes")>>
+        She has a stylized rendition of a dick going into a pussy tattooed on her left shoulder, and a similar image of a dick entering an anus on her right.
+    <<elseif $activeSlave.shouldersTat is "degrading language">>
+        She has punishment instructions tattooed on each of her shoulders.
+    <<elseif ($activeSlave.armsTat is "bovine patterns") and($activeSlave.legsTat is "bovine patterns") and ($activeSlave.shouldersTat is "bovine patterns")>>
+        Her bovine tattoos cover her shoulders and go down her arms but stop short of each of her elbows.
+    <</if>>
+
+    <<if ($activeSlave.armsTat is "tribal patterns")>>
+        Her tribal tattoos run down her arms.
+    <<elseif ($activeSlave.armsTat is "floral designs")>>
+        Her floral tattoos run down her arms to end in a pretty bloom on the back of each hand.
+    <<elseif ($activeSlave.armsTat is "slutty advertisements")>>
+        Her right arm is tattooed with a price list for use if she's whoring, and her left with a simple tourist guide for use if she's serving the public.
+    <<elseif ($activeSlave.armsTat is "demeaning inscriptions")>>
+        Her arms have helpful instructions on how to restrain her for rape, including indications of the best anchor points at her wrists.
+    <<elseif ($activeSlave.armsTat is "lewd scenes")>>
+        Her lewd tattoos cover her arms; they include lots of little vignettes of sex, with dates to show when she was first fucked like that.
+    <<elseif ($activeSlave.armsTat is "degrading language")>>
+        Her arms have little tick marks tattooed down them to show off how many times she's been fucked.
+    <</if>>
+  <</if>>
+<</if>>
+
+<<if $activeSlave.minorInjury isnot 0>>
+<<if $activeSlave.minorInjury isnot "sore ass">>
+	She is sporting a @@color:red;$activeSlave.minorInjury@@, covered by makeup.
+<</if>>
+<</if>>
+
+<</nobr>>
+\
+<<nobr>>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<<display "Boobs Description">>
+
+<<display "Butt Description">>
+
+<</nobr>>
+\
+<<nobr>>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<<display "Vagina Description">>
+
+<<display "Anus Description">>
+
+<<if $activeSlave.drugs is "no drugs">>
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.amp is 1)>>
+	She's on aphrodisiacs, but is an amputee, so she cannot touch herself. She writhes with sexual frustration.
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.vaginalAccessory is "chastity belt")>>
+	She's on aphrodisiacs, but is wearing a chastity belt and cannot touch herself. She writhes with sexual frustration.
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.releaseRules is "permissive") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina is -1)>>
+	She's on aphrodisiacs and is allowed to masturbate, so as she obeys your commands she idly rubs her shaft with one hand while the other pinches a nipple.
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.releaseRules is "permissive") and ($activeSlave.dick isnot 0)>>
+	She's on aphrodisiacs and is allowed to masturbate, so as she obeys your commands she idly rubs her shaft and pussy with one hand while the other pinches a nipple.
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.releaseRules is "permissive")>>
+	She's on aphrodisiacs and is allowed to masturbate, so as she obeys your commands she idly rubs her pussy with one hand while the other pinches a nipple.
+<<elseif ($activeSlave.drugs is "aphrodisiacs") and ($activeSlave.dick isnot 0)>>
+	She's on aphrodisiacs and is not allowed to masturbate, so as she obeys your commands she shifts her weight uncomfortably. Her erect dick sways as she does.
+<<elseif $activeSlave.drugs is "aphrodisiacs">>
+	She's on aphrodisiacs and is not allowed to masturbate, so as she obeys your commands she shifts her weight uncomfortably.
+<<elseif ($activeSlave.drugs is "extreme aphrodisiacs") and ($activeSlave.amp is 1)>>
+	She's on aphrodisiacs, but is an amputee, so she cannot touch herself. She writhes with extreme sexual frustration, desperately trying to relieve herself.
+<<elseif ($activeSlave.drugs is "extreme aphrodisiacs") and ($activeSlave.vaginalAccessory is "chastity belt")>>
+	She's on aphrodisiacs, but is wearing a chastity belt and cannot touch herself. She writhes with extreme sexual frustration, desperately trying to relieve herself.
+<<elseif ($activeSlave.drugs is "extreme aphrodisiacs") and ($activeSlave.releaseRules is "permissive") and ($activeSlave.dick isnot 0) and ($activeSlave.vagina is -1)>>
+	She's swimming in aphrodisiacs and is allowed to masturbate, so as she stands before you she rubs her shaft with one hand while she fingers her anus with the other. Her cock is painfully erect.
+<<elseif ($activeSlave.drugs is "extreme aphrodisiacs") and ($activeSlave.releaseRules is "permissive") and ($activeSlave.dick isnot 0)>>
+	She's swimming in aphrodisiacs and is allowed to masturbate, so as she stands before you she rubs her shaft and pussy with one hand while she fingers her anus with the other. Her cock is painfully erect.
+<<elseif ($activeSlave.drugs is "extreme aphrodisiacs") and ($activeSlave.releaseRules is "permissive")>>
+	She's swimming in aphrodisiacs and is allowed to masturbate, so as she stands before you she rubs her clit with one hand while she fingers her anus with the other.
+<<elseif ($activeSlave.drugs is "extreme aphrodisiacs") and ($activeSlave.dick isnot 0)>>
+	She's swimming in aphrodisiacs and is not allowed to masturbate, so as she stands before you she desperately presents her open mouth, her breasts, her crotch, and her anus in turn, hoping that something will entice you to give her relief. Her cock is painfully erect.
+<<elseif $activeSlave.drugs is "extreme aphrodisiacs">>
+	She's swimming in aphrodisiacs and is not allowed to masturbate, so as she stands before you she desperately presents her open mouth, her breasts, her pussy, and her anus in turn, hoping that something will entice you to give her relief.
+<<elseif $activeSlave.drugs is "breast injections">>
+	She massages her tits uncomfortably. The A-HGH must be having an effect, painfully stretching her breasts as the mammary and adipose tissue underneath grows explosively.
+<<elseif $activeSlave.drugs is "butt injections">>
+	She massages her butt uncomfortably. The A-HGH must be having an effect, painfully stretching her buttocks as the muscular and adipose tissue underneath grows explosively.
+<<elseif $activeSlave.drugs is "penis enhancement">>
+	She massages her dick uncomfortably. The A-HGH must be having an effect, painfully lengthening and thickening her dick.
+<<elseif $activeSlave.drugs is "vitamins, minerals, and curatives">>
+<</if>>
+
+<<if ($activeSlave.addict gt 0) and ($activeSlave.addict lte 2)>>
+	She is a new @@color:cyan;aphrodisiac addict@@.
+<<elseif ($activeSlave.addict gt 0) and ($activeSlave.addict lt 10)>>
+	She is a confirmed @@color:cyan;aphrodisiac addict@@.
+<<elseif ($activeSlave.addict gt 0)>>
+	She is completely @@color:cyan;dependent on aphrodisiacs@@, and it is unlikely you will ever be able to wean her off them.
+<</if>>
+
+<<if $activeSlave.whoreSkill is 1>>
+	She is an @@color:aquamarine;experienced prostitute.@@
+<<elseif $activeSlave.whoreSkill is 2>>
+	She is a @@color:aquamarine;hardened streetwalker.@@
+<<elseif $activeSlave.whoreSkill is 3>>
+	She is a @@color:aquamarine;veteran whore.@@
+<</if>>
+
+<</nobr>>

@@ -1,0 +1,45 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She was beaten, sexually assaulted, and finally enslaved for being stupid enough to visit an arcology that doesn't like her kind.">>
+<<set $activeSlave.race to $FSSubjugationistRace>>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.health to random(-8,-6)>>
+<<set $activeSlave.trust to random(-9,-5)>>
+<<set $activeSlave.devotion to random(-15,-13)>>
+<<set $activeSlave.anus to random(1,2)>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+Your security drones break up a minor disturbance on the lowest, poorest levels of the arcology without needing your direction, or indeed without even informing you. Your personal assistant is good enough at filtering incidents down to what you need to know that you typically leave minor things to her discretion. This time your personal assistant only informs you once it's apparent that that brawl left someone injured and unconscious.
+
+It seems the violence was racially motivated. The $FSSubjugationistRace victim was publicly sodomized and left bruised and bleeding, her clothes torn off, beaten into insensibility, with anti-$FSSubjugationistRace slogans written crudely across her $activeSlave.skin skin. It seems she came into the arcology despite the strong penalties for free $FSSubjugationistRace subhumans found here. You can easily enslave her in return for her medical costs, though no one is likely to object to your enslaving one of her kind, whatever the situation.
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	The enslavement process is disappointingly quiet, since she's still unconscious. As of this morning she was one of the last free $FSSubjugationistRace people in the arcology. Now she's simply the newest sex slave of the inferior race to take her proper place.
+	<<set $nextLink to "AS Dump">>\
+	<<set $returnTo to "RIE Eligibility Check">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

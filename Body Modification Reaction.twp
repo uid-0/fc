@@ -1,0 +1,46 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Slave Interact">>
+
+As you cast off her bindings and <<if ($activeSlave.amp isnot 1)>>let her stand<<else>>prop her up<</if>>, she catches sight of herself in the floor length mirror at the foot of the body modification table.
+
+<<if ($brandApplied is 1)>>
+	The smell of burnt flesh hangs in the air. Being branded @@color:red;has hurt her health a little.@@
+	<<set $brandApplied to 0>>
+    <<set $activeSlave.health -= 1>>
+<</if>>
+
+<<if ($degradation gt 10) and ($activeSlave.devotion lte 10) and ($activeSlave.trust lt -10)>>
+	She is appalled by the whorish spectacle you have made of her. She @@color:gold;fears@@ you all the more for this but is so terrified of you it does not affect her submission.
+    <<set $activeSlave.trust -= 2>>
+<<elseif ($degradation gt 10) and ($activeSlave.devotion lte 10)>>
+	She is appalled by the whorish spectacle you have made of her. She @@color:mediumorchid;hates@@ and @@color:gold;fears@@ you for this.
+    <<set $activeSlave.devotion -= 2>>
+    <<set $activeSlave.trust -= 2>>
+<<elseif ($degradation gt 10)>>
+	She is shocked by the whorish spectacle you have made of her. However, she is so submissive to your will that she @@color:hotpink;accepts@@ that the slave in the mirror is who she is now. 
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($degradation gt 4) and ($activeSlave.devotion lte 4) and ($activeSlave.trust lt -4)>>
+	She is so afraid of you that she suppresses any reaction to the slutty modifications you have made to her body and @@color:gold;fears@@ your power to do whatever you like to her.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($degradation gt 4)>>
+	She is surprised with the slutty modifications you have made to her body. However, she is so obedient that she @@color:hotpink;accepts@@ your changes. 
+    <<set $activeSlave.devotion += 1>>
+<<elseif ($degradation gt 1) and ($activeSlave.devotion lt -4) and ($activeSlave.trust lte 4)>>
+	She is @@color:gold;afraid@@ that she has been permanently altered against her will, but is also scared of your reaction to any objection and suppresses her disgust.
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($degradation gt 1) and ($activeSlave.devotion lt -4)>>
+	She is @@color:mediumorchid;angry@@ and @@color:gold;afraid@@ that she has been permanently altered against her will.
+    <<set $activeSlave.devotion -= 1>>
+    <<set $activeSlave.trust -= 1>>
+<<elseif ($degradation gt 1)>>
+	She is saddened to have been altered against her will. However, she realizes that she is a slave, so she @@color:hotpink;accepts@@ your work. 
+    <<set $activeSlave.devotion += 1>>
+<<else>>
+	She shows no real reaction to your modifications.
+<</if>>
+
+<<set $degradation to 0>>
+
+<</nobr>>\

@@ -1,0 +1,60 @@
+<<nobr>>
+
+<<if $slaves[$i].muscles lte 0.3>>
+  Her long workouts focus on cardio. She has finally @@color:lime;lost all visible musculature.@@
+  <<set $slaves[$i].muscles to 0>>
+  <<set $slaves[$i].diet to "healthy">>
+<<elseif ($slaves[$i].drugs is "steroids")>>
+  Her long workouts focus on cardio, but since she's still shooting gear, she @@color:lime;loses mass slowly.@@
+  <<set $slaves[$i].muscles -= 0.1>>
+<<elseif ($slaves[$i].balls gt 0) and ($slaves[$i].hormones lt 0)>>
+  Her long workouts focus on cardio, but since she's got so much natural and artificial testosterone, she @@color:lime;loses mass slowly.@@
+  <<set $slaves[$i].muscles -= 0.1>>
+<<elseif ($slaves[$i].balls gt 0) and ($slaves[$i].hormones gt 0)>>
+  Her long workouts focus on cardio, and with the natural testosterone in her system counteracted by hormone treatment, she @@color:lime;loses musculature.@@
+  <<set $slaves[$i].muscles -= 0.3>>
+<<elseif ($slaves[$i].balls gt 0)>>
+  Her long workouts focus on cardio, but with some natural testosterone in her system, she @@color:lime;loses muscle slowly.@@
+  <<set $slaves[$i].muscles -= 0.2>>
+<<elseif ($slaves[$i].hormones gt 0)>>
+  Her long workouts focus on cardio, and with female hormone treatment, she @@color:lime;loses musculature rapidly@@.
+  <<set $slaves[$i].muscles -= 0.4>>
+<<elseif ($slaves[$i].hormones lt 0)>>
+  Her long workouts focus on cardio, but under male hormone treatment, she @@color:lime;loses muscle slowly.@@
+  <<set $slaves[$i].muscles -= 0.2>>
+<<else>>
+  Her long workouts focus on cardio, and she @@color:lime;loses musculature.@@
+  <<set $slaves[$i].muscles -= 0.3>>
+<</if>>
+
+<<if random(1,100) gt 90>>
+<<if ($slaves[$i].boobs-$slaves[$i].boobsImplant gte 200)>>
+	@@color:orange;Her breasts get a little smaller.@@
+	<<set $slaves[$i].boobs -= 50>>
+<<elseif ($slaves[$i].butt gt 1)>>
+	@@color:orange;Her butt gets a little smaller.@@
+	<<set $slaves[$i].butt -= 1>>
+<</if>>
+<</if>>
+
+<<if random(1,100) gt 80>>
+  Her workout successes have @@color:green;improved her health.@@
+  <<set $slaves[$i].health += 1>>
+<</if>>
+
+<<if $slaves[$i].weight gt 0>>
+<<if random(1,100) gt 70>>
+	Her workouts have also @@color:orange;burned off some excess fat.@@
+	<<set $slaves[$i].weight -= 1>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].muscles lte 2.3) and ($slaves[$i].muscles gt 2)>>
+	<<set $slaves[$i].muscles to 2>>
+<<elseif ($slaves[$i].muscles lte 1.3) and ($slaves[$i].muscles gt 1)>>
+	<<set $slaves[$i].muscles to 1>>
+<<elseif ($slaves[$i].muscles lte 0.3) and ($slaves[$i].muscles gt 0)>>
+	<<set $slaves[$i].muscles to 0>>
+<</if>>
+
+<</nobr>>\

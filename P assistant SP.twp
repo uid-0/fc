@@ -1,0 +1,30 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Random Nonindividual Event">>
+
+<</nobr>>\
+\
+One night, after a long day of slave training, you are winding down towards bed when your smoky-voiced personal assistant reports for more orders. Though she's just a program, she's taken to wishing you good night. Tonight she's been helping you train bitches with her sex machines, and she's put an unmistakable tone of sexual satiation in her voice. "Mm, Sir, that was fun. Did you see how her muscles spasmed?"
+
+She continues, "You know something, Sir. I'm sure you've seen those expensive smart piercings the body mod studio can implant. Well, if you've been using them you may have noticed - " and here there is a note of satisfaction " - they work a little bit better than when I was a boring old secretary type. I'm no AI, but I can adapt with experience, and I've had a lot of yummy experience lately! If you want, I can concentrate a little more on any smart piercings you implant. I promise I'll make your sluts quiver."
+\
+<span id="result">
+<<click "Yes, improve the smart piercings">>
+	<<replace "#result">>
+	She does not respond verbally, but gives a throaty chuckle.
+    <<set $assistant to 2>>
+    <</replace>>
+<</click>>
+<<click "No, leave them alone">>
+	<<replace "#result">>
+	"Aww," she says. "I'll just have to work twice as hard with my sex machines then, Sir!"
+    <</replace>>
+<</click>>
+<<click "No, and go back to the standard personality">>
+	<<replace "#result">>
+	Your personal assistant reverts to its genderless, emotionless affect.
+    <<set $assistant to 0>>
+    <</replace>>
+<</click>>
+</span>

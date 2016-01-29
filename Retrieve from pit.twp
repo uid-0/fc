@@ -1,0 +1,13 @@
+<<if $fighterOne.ID is $activeSlave.ID>>
+      <<set $fighterOne to 0>>
+<<elseif $fighterTwo.ID is $activeSlave.ID>>
+      <<set $fighterTwo to 0>>
+<</if>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $activeSlave.ID == $slaves[$i].ID>>
+<<set $slaves[$i] to $activeSlave>>
+<</if>>
+<</for>>
+    
+<<goto "Pit">>

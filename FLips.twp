@@ -1,0 +1,129 @@
+<<nobr>>
+
+<<set $activeSlave.oralCount += 1>>
+<<set $oralTotal += 1>>
+
+You tell $activeSlave.slaveName to
+<<if ($PC.dick isnot 0)>>
+  <<if ($activeSlave.lips gt 2)>>
+	blow you with her cartoonish lips.
+  <<elseif ($activeSlave.lips is 2)>>
+	blow you with her dick-sucking lips.
+  <<elseif ($activeSlave.lips is 1)>>
+	blow you with her pretty mouth.
+  <<elseif ($activeSlave.lips is 0)>>
+	blow you with her whore mouth.
+  <</if>>
+<<else>>
+  <<if ($activeSlave.lips gt 2)>>
+	please your pussy with her cartoonish lips.
+  <<elseif ($activeSlave.lips is 2)>>
+	please your pussy with her dick-sucking lips.
+  <<elseif ($activeSlave.lips is 1)>>
+	please your pussy with her pretty mouth.
+  <<elseif ($activeSlave.lips is 0)>>
+	please your pussy with her whore mouth.
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.fetish is "cumslut") and ($activeSlave.devotion gte -4)>>
+	She's delighted at the prospect of her favorite activity.
+<</if>>
+
+<<if ($activeSlave.collar is "dildo gag")>>
+<<if ($activeSlave.amp isnot 1)>>
+	She removes the dildo from her throat, leaving the ring gag in place.
+<<else>>
+	As an amputee, she requires your assistance to get the dildo out of her throat.
+<</if>>
+	Able to breathe through her mouth for the first time in a while, she gasps gratefully, knowing the respite will be brief.
+<</if>>
+
+<<if ($activeSlave.lipsTat is "tribal patterns")>>
+	The tribal patterns on her face enhance her beauty.
+<<elseif ($activeSlave.lipsTat is "permanent makeup")>>
+	Her tattooed-on makeup encourages it.
+<<elseif ($activeSlave.lipsTat is "degrading language")>>
+	The tattoos on her face are asking for it, after all.
+<</if>>
+
+<<if ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	The stimulation from her many oral piercings should be great.
+<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 0)>>
+	The sensation of her oral piercings should be quite nice.
+<</if>>
+
+<<if ($activeSlave.teeth is 1) and ($activeSlave.devotion lt 4)>>
+	You pull her prosthetic teeth out of her mouth so you can enjoy an extra-soft throatfuck.
+<<elseif ($activeSlave.teeth is 1)>>
+	She slides her prosthetic teeth out of her mouth so she can give you an extra-soft suck.
+<</if>>
+
+<<if ($activeSlave.amp is 1)>>
+  <<if ($PC.dick isnot 0)>>
+	You set her limbless torso on the edge of your desk with her on her back. Her head dangles off the edge of the desk, leaving her <<if $seeRace is 1>>$activeSlave.race <</if>>mouth at the perfect angle for use. As an amputee she has absolutely no control over the depth or quickness of oral sex, so you are careful not to hurt her. Even so, you take her to the edge of gagging, enjoying the sight of her $activeSlave.skin throat bulging. Eventually you shoot your load directly down her gullet.
+  <<else>>
+	You set her limbless torso on the floor next to your desk and kneel on her with your legs on either side of her, so your pussylips are hard against her <<if $seeRace is 1>>$activeSlave.race <</if>>mouth. She desperately eats you out, trying to get you off as fast as possible so she can get a bit more air, but you grind down without mercy, taking your pleasure.
+  <</if>>
+<<elseif ($activeSlave.fetish is "cumslut") and ($activeSlave.fetishDiscovered is 1) and ($activeSlave.dick isnot 0) and ($PC.dick isnot 0)>>
+	She comes over eagerly, with hunger in her eyes. She gets to her knees, hurriedly takes you into her <<if $seeRace is 1>>$activeSlave.race <</if>>mouth, and gives the blowjob her all. As a cumslut she's almost desperate to get your cum into her mouth and <<if ($activeSlave.hormones lt 1) and ($activeSlave.balls isnot 0)>>jacks herself off<<else>>rubs her sadly limp member<</if>> in anticipation. When you finish, she sits back with an ecstatic look on her face and lets your cum rest in her mouth as she climaxes into her $activeSlave.skin hand. She pours her own cum from her hand into her mouth so it can mingle with yours.
+<<elseif ($activeSlave.fetish is "cumslut") and ($activeSlave.fetishDiscovered is 1) and ($PC.dick isnot 0)>>
+	She comes over eagerly, with hunger in her eyes. She gets to her knees, hurriedly takes you into her <<if $seeRace is 1>>$activeSlave.race <</if>>mouth, and gives the blowjob her all. As a cumslut she's almost desperate to get your cum into her mouth and rubs herself in anticipation. When you finish, she sits back with an ecstatic look on her face and lets your cum rest in her mouth as she climaxes.
+<<elseif  ($activeSlave.devotion lt -4) and ($activeSlave.collar is "dildo gag") and ($PC.dick isnot 0)>>
+	She tries to back away, so you grab her; her <<if $seeRace is 1>>$activeSlave.race <</if>>mouth is already held invitingly open by her gag, and she's prevented from biting. You push her down to her knees with her head against the couch next to your desk so you can give her a good hard throat fuck. When you cum down her $activeSlave.skin throat she retches through her tears.
+<<elseif  $activeSlave.devotion lt -4>>
+  <<if ($PC.dick isnot 0)>>
+	She tries to back away, so you grab her and force a ring gag into her <<if $seeRace is 1>>$activeSlave.race <</if>>mouth. Once you have the straps secured behind her head, she's prevented from biting. You push her down to her knees with her head against the couch next to your desk so you can give her a good hard throat fuck. When you cum down her $activeSlave.skin throat she retches through her tears.
+  <<else>>
+	She tries to back away, so you seize her and throw her onto the couch face up, and then kneel on her with your legs on either side of her crying body, so your pussylips are hard against her <<if $seeRace is 1>>$activeSlave.race <</if>>mouth. She desperately eats you out, trying to get you off as fast as possible so she can get a bit more air, but you grind down without mercy, taking your pleasure.
+  <</if>>
+<<elseif  $activeSlave.devotion lt 4>>
+  <<if ($PC.dick isnot 0)>>
+	She comes over reluctantly and begins to give you a blowjob. Deciding that she isn't showing the necessary enthusiasm, you hold her head and fuck her <<if $seeRace is 1>>$activeSlave.race <</if>>face instead. She does her best to follow your motions but still splutters and gags. You pull free to cum across her $activeSlave.skin face and hair.
+  <<else>>
+	She comes over reluctantly and begins to eat you out. Deciding that she isn't showing the necessary enthusiasm, you hold her head and grind your pussy against her <<if $seeRace is 1>>$activeSlave.race <</if>>face instead. She does her best to follow your motions but still splutters and gasps for air. You climax quickly and haul her to her feet, kissing the bewildered girl full on the mouth. You can taste yourself on her lips.  <</if>>
+<<elseif random(1,100) gt 50>>
+  <<if ($PC.dick isnot 0)>>
+	She licks her lips and looks you in the eyes as she gets to her knees. She gives you a long, deep blowjob. She massages your balls with one hand and her breasts with the other, giving you a show. She sucks your head until you climax, letting your cock pop free of her mouth to shoot pearly cum all across her $activeSlave.skin face.
+  <<else>>
+	She licks her lips and looks you in the eyes as she gets to her knees. She eats you out like she's starving, moaning into your pussy to show off her arousal and add to your pleasure. She massages your perineum with one hand and her breasts with the other, giving you a show. She slowly concentrates more and more attention on your clit until you climax convulsively. You pull her to her feet, kissing the compliant girl full on the mouth. You can taste yourself on her lips. 
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.teeth is 2)>>
+<<if ($activeSlave.oralSkill is 3)>>
+	She's so orally skilled that she had the confidence to lightly graze you with her sharp teeth on occasion, a delightfully scary sensation.
+<<elseif ($activeSlave.oralSkill is 2)>>
+	She's sufficiently orally skilled that she managed to accomplish all that without her sharp teeth contacting your dick once.
+<<elseif ($activeSlave.oralSkill is 1)>>
+	With her basic oral skills, she accidentally grazed you with her sharp teeth a few times, leaving your dick slightly the worse for wear.
+<<else>>
+	Since she is orally unskilled, you were sporting with your dick by using her mouth. She did her best to keep her sharp teeth off you, but you're bleeding a bit down there.
+<</if>>
+<</if>>
+
+<<if ($economy lte 1)>>
+
+<<if (random(1,100) gt (100+$activeSlave.devotion))>>
+  <<if ($activeSlave.fetish isnot "cumslut")>>
+  <<if ($activeSlave.fetish isnot "nympho")>>
+  <<if ($activeSlave.sexualQuirk isnot "hates oral")>>
+      Being facefucked by force has given her a @@color:red;hatred of oral sex.@@
+      <<set ($activeSlave.sexualQuirk to "hates oral")>>
+  <</if>>
+  <</if>>
+  <</if>>
+<<elseif (random(1,100) gt (110-$activeSlave.devotion))>>
+  <<if ($activeSlave.fetish is "none")>>
+  <<if ($activeSlave.sexualQuirk isnot "hates oral")>>
+      Consummating an enjoyable sexual encounter by drinking your cum has @@color:pink;encouraged her to focus on oral sex.@@
+      <<set ($activeSlave.fetish to "cumslut")>>
+      <<set ($activeSlave.fetishDiscovered to 1)>>
+  <</if>>
+  <</if>>
+<</if>>
+
+<</if>>
+
+
+<</nobr>>

@@ -1,0 +1,57 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> has a little free time this evening, so she finds a quiet corner and engages in her anal proclivities. Since her asshole is so stretched out, she sticks the base of a huge dildo to the ground and squats on it, moaning happily as the massive thing inches into her. She starts to slide up and down it hands-free, so she <<if $activeSlave.dick gt 4>>jacks off her huge cock with both hands<<elseif $activeSlave.dick gt 2>>jacks off with one hand and pinches a nipple with the other<<elseif $activeSlave.dick gt 0>>rubs her little penis with one hand and pinches a nipple with the other<<else>>rubs her clit with one hand and pinches a nipple with the other<</if>>. As she enjoys herself, her loose sphincter relaxes still further until it's barely gripping the dildo.
+\
+<span id="result">
+<<click "Add something to fill her completely">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She's so occupied that she doesn't hear you until you<<if ($PC.dick is 0)>> don a strap-on and<</if>> tip her over face forward. With her on her knees, her dildo-stuffed ass is in the air; she's still masturbating between her legs. After a moment's consideration, you slide two exploratory fingers in alongside the dildo. She gasps and masturbates harder. Thus encouraged, you shove <<if ($PC.dick is 0)>>the strap-on<<else>>your member<</if>> in alongside the dildo. <<if $activeSlave.mute isnot 1>>She screams at the surprise double anal, sobbing and begging,<<else>>She screams noiselessly at the surprise double anal, waving her hands in distress,<</if>> but she doesn't try to stop you and doggedly keeps rubbing. By the time you're finished her asshole is a gaping hole much bigger than the average pussy. @@color:hotpink;She has become more submissive to you.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Let her use a machine">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	There's no reason for her to do that in a quiet corner. You interrupt her and bring her into your office, setting her up on a machine so she can have that dildo rammed up her ass for as long as she likes. Your office is filled with the rhythmic sounds of a sloppy anus being pounded for a good long while<<if $assistant gt 0>> and your personal assistant's sexual banter with $activeSlave.slaveName as she uses her machine<</if>>. By the time she's climaxed out, she's so tired and apathetic that she can't bring herself to get off it or ask for help, so she just relaxes and enjoys the internal massage<<if $activeSlave.dick isnot 0>> while her flaccid dick twitches weakly<</if>>. @@color:mediumaquamarine;She has become more trusting of you,@@ since you knew just what she needed.
+	<<set $activeSlave.trust += 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<if ($HeadGirl isnot 0) and ($HeadGirl.ID isnot $activeSlave.ID)>>\
+<<click "Call your Head Girl in for double anal">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	When $HeadGirl.slaveName comes into your office in response to your summons, she finds $activeSlave.slaveName sitting in your lap with your <<if ($PC.dick is 0)>>strap-on<<else>>dick<</if>> up her gaping butt. $HeadGirl.slaveName's expression softens whe she realizes she's here for pleasure, not business. $activeSlave.slaveName gasps a little when she hears you tell $HeadGirl.slaveName to join you up her asshole, but she doesn't protest. <<if ($HeadGirl.dick gt 0) and ($HeadGirl.hormones gt 0)>>Since your poor Head Girl can't get hard due to her hormone therapy, she dons a strap-on over her flaccid penis and shoves it up $activeSlave.slaveName's already-filled butt without further ado.<<elseif ($HeadGirl.dick gt 0) and ($HeadGirl.balls is 0)>>Since your poor Head Girl can't get hard due to her orchidectomy, she dons a strap-on over her flaccid penis and shoves it up $activeSlave.slaveName's already-filled butt without further ado.<<elseif $HeadGirl.vagina is -1>>Your lusty Head Girl is already hard and shoves herself up $activeSlave.slaveName's already-filled butt while tweaking the writhing slave's nipples.<<else>>She dons a strap-on and shoves it up $activeSlave.slaveName's already-filled butt without further ado.<</if>> The two of you jackhammer in and out of $activeSlave.slaveName's ass without mercy; the poor anal whore does her best to relax, but two phalli at once is a lot, even for her. She's only allowed an anal respite when her sphincter is really fucked out and there's little butthole fun to be had from her any longer. She has become @@color:hotpink;more submissive to you,@@ and $HeadGirl.slaveName @@color:hotpink;enjoyed@@ taking a break to fuck her with you.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+    <<set $analTotal += 1>>
+	<<set $HeadGirl.devotion += 1>>
+	<<set $HeadGirl.penetrativeCount += 1>>
+    <<set $penetrativeTotal += 1>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $HeadGirl == $slaves[$i].ID>>
+		<<set $slaves[$i] to $HeadGirl>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>>
+<</if>>
+</span>

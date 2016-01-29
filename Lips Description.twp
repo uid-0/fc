@@ -1,0 +1,122 @@
+<<nobr>>
+
+<<if $activeSlave.face lt -1>>
+	Her face is ugly and masculine.
+<<elseif $activeSlave.face is -1>>
+	Her face is unattractive.
+<<elseif ($activeSlave.face is 0) and (random(1,100) gt 50)>>
+	Her face is pretty.
+<<elseif ($activeSlave.face is 0)>>
+	Her face is attractive.
+<<elseif ($activeSlave.face is 1) and (random(1,100) gt 50)>>
+	Her face is feminine and very pretty.
+<<elseif ($activeSlave.face is 1)>>
+	Her face is feminine and quite attractive.
+<<elseif ($activeSlave.face gt 1) and (random(1,100) gt 50)>>
+	Her face is the height of feminine beauty.
+<<elseif ($activeSlave.face gt 1)>>
+	Her face is truly gorgeous.
+<</if>>
+
+<<if $activeSlave.lips is 1>>
+	Her lips are plump and kissable.
+<<elseif $activeSlave.lips is 2>>
+	She has pillowlike dick sucking lips.
+<<elseif $activeSlave.lips gt 2>>
+	Her lips are huge and obviously augmented.
+<</if>>
+
+She is 
+<<if $activeSlave.oralSkill is 3>>an @@color:aquamarine;oral sex master@@.
+<<elseif $activeSlave.oralSkill is 2>>an @@color:aquamarine;expert at oral@@.
+<<elseif $activeSlave.oralSkill is 1>>@@color:aquamarine;orally skilled@@.
+<<else>>unskilled at oral sex.
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if $activeSlave.lipsTat is "tribal patterns">>
+	Her face is tattooed with tribal patterns that make her seem mysterious and exotic.
+<<elseif $activeSlave.lipsTat is "floral designs">>
+	Her minimal facial tattoos are limited to a cute flower on each cheek.
+<<elseif $activeSlave.lipsTat is "slutty advertisements">>
+	Her facial tattoos include 'Facefuck Me' across her forehead, 'Cock' to the left of her mouth, and 'Sucker' to the right of it.
+<<elseif $activeSlave.lipsTat is "demeaning inscriptions">>
+	Her facial tattoos include 'Sex Slave' across her forehead, 'Face' to the left of her mouth, and 'Pussy' to the right of it.
+<<elseif ($activeSlave.lipsTat is "permanent makeup") and ($activeSlave.makeup is 0)>>
+	Her face appears to bear very heavy, slutty makeup, but on closer inspection, the makeup is actually tattooed on.
+<<elseif $activeSlave.lipsTat is "degrading language">>
+	Her face is tattooed with degrading language; her name is tattooed across her forehead while her cheeks offer the reader oral sex with arrows pointing to her mouth.
+<<elseif $activeSlave.lipsTat is "bovine patterns">>
+	Her face is subtly tattooed to give her a somewhat bovine appearance.
+<</if>>
+
+<<if $activeSlave.makeup is 1>>
+	She's wearing minimal makeup.
+<<elseif ($activeSlave.makeup is 2) and ($activeSlave.hcolor is "blonde")>>
+	Her lipstick and eyeshadow are yellow to go with her $activeSlave.hcolor hair.
+<<elseif $activeSlave.makeup is 2>>
+	Her lipstick and eyeshadow are $activeSlave.hcolor, like her hair.
+<<elseif $activeSlave.makeup is 3>>
+	Her face is covered with stereotypical garish streetwalker makeup.
+<</if>>
+
+<<if $activeSlave.lipsPiercing is 1>>
+	She has a simple lip piercing.
+<<elseif $activeSlave.lipsPiercing is 2>>
+	Her lips are heavily pierced.
+<</if>>
+
+<<if $activeSlave.tonguePiercing is 1>>
+	Her tongue bears a single stud, so oral sex with her is a bit more fun.
+<<elseif $activeSlave.tonguePiercing is 2>>
+	Her tongue bears a row of studs, offering thorough stimulation to anyone she blows.
+<</if>>
+
+<</if>>
+
+<<if $activeSlave.mute isnot 1>> 
+<<if $activeSlave.lips is 2>>
+	She can barely enunciate past her dick-sucking lips; '<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>' comes out as '<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.'
+<<elseif $activeSlave.lipsPiercing is 2>>
+	She can barely enunciate past her slavish piercings; '<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>' comes out as '<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>.'
+<</if>>
+<</if>>
+
+<<if $activeSlave.teeth is 1>>
+	Her teeth have been removed and replaced with high-quality dentures. It's difficult to tell anything's unusual until you take them out for gummy oral sex.
+<<elseif $activeSlave.teeth is 2>>
+	Her teeth have been replaced with realistic implants that mimic the dentition of a carnivore. Her smiles are frightening, and she can bare them to become truly terrifying.
+<</if>>
+
+<<if ($showClothing is 1) and ($saleDescription is 0)>>
+
+<<if ($activeSlave.collar is "uncomfortable leather")>>
+	She is wearing an uncomfortable leather collar with a useful steel ring in front.
+<<elseif ($activeSlave.collar is "dildo gag")>>
+	She is wearing a sturdy leather collar that continues up to restrict her jaw as well. It holds a ring gag in her mouth, into which slots a formidable inward-facing dildo that reaches down her throat. It can be removed to facefuck her.
+<<elseif ($activeSlave.collar is "tight steel")>>
+	She is wearing a tight steel collar whose restricting metal touch she cannot escape.
+<<elseif ($activeSlave.collar is "shock punishment")>>
+	She is wearing a utilitarian collar with a punishment device at her throat to administer agonizing shocks.
+<<elseif ($activeSlave.collar is "heavy gold")>>
+	She is wearing a heavy gold collar, an outstanding bit of ostentation.
+<<elseif ($activeSlave.collar is "pretty jewelry")>>
+	She is wearing a pretty slave collar that can almost be mistaken for jewelry.
+<<elseif ($activeSlave.collar is "leather with cowbell")>>
+	She is wearing a comfortable leather collar with a small steel cowbell at her throat.
+<<elseif ($activeSlave.collar is "ancient Egyptian")>>
+	She is wearing a beautiful golden wesekh, a collar that spreads from her neck out onto both shoulders and down her front.
+<</if>>
+
+<<if ($activeSlave.relationship gt 4)>>
+<<if ($activeSlave.amp isnot 1)>>
+	She has a simple gold band on the little finger of her left hand.
+<<else>>
+	She has a simple gold band on a length of chain around her neck.
+<</if>>
+<</if>>
+
+<</if>>
+
+<</nobr>>

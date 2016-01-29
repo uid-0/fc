@@ -1,0 +1,120 @@
+<<nobr>>
+//
+
+$slaves[$i].slaveName
+
+<<if $slaves[$i].fetish is "mindbroken">>
+	is waiting dumbly nearby.
+<<elseif $slaves[$i].devotion gt 10>>
+  <<if $slaves[$i].toyHole is "mouth">>
+	  has positioned herself nearby with her mouth conveniently at dick height.
+  <<elseif $slaves[$i].toyHole is "boobs">>
+	  is kneeling nearby with her chest thrust out as far as it will go.
+  <<elseif ($slaves[$i].toyHole is "pussy") and ($slaves[$i].amp isnot 1)>>
+	  is kneeling on the couch with legs apart to present her pussy.
+  <<elseif $slaves[$i].toyHole is "pussy">>
+	  is lying on the couch with her pussy ready for you.
+  <<elseif ($slaves[$i].toyHole is "ass") and ($slaves[$i].amp isnot 1)>>
+	  is lying on the couch with her legs up and back to present her butthole.
+  <<elseif $slaves[$i].toyHole is "ass">>
+	  is lying on the couch with her butt ready for you.
+  <<else>>
+	  is nearby, eagerly presenting herself.
+  <</if>>
+<<elseif $slaves[$i].trust lt -4>>
+	is waiting nearby in terror, hoping obedience will save her from punishment.
+<<elseif $slaves[$i].devotion lt -18>>
+	is hogtied nearby for sexual abuse.
+<<elseif $slaves[$i].devotion lt -10>>
+	is restrained nearby for sexual use.
+<<elseif $slaves[$i].devotion lt -4>>
+	is unhappily waiting nearby for sexual use.
+<<elseif $slaves[$i].devotion lte 4>>
+	is obediently waiting nearby for sexual use.
+<<elseif $slaves[$i].devotion lte 10>>
+	has positioned herself nearby to offer you her body.
+<</if>>
+
+<<set $seed to random(1,100)>>
+<<if $slaves[$i].fetish is "mindbroken">>
+	She ignores her clothing, regarding it as an impediment to her purpose.
+<<elseif ($slaves[$i].clothes is "attractive lingerie")>>
+	Her nipples show invitingly through the holes in her white lace lingerie.
+<<elseif ($slaves[$i].clothes is "uncomfortable straps") and ($seed gt 75)>>
+	Her leather straps are forcing her to thrust out her tits.
+<<elseif ($slaves[$i].clothes is "uncomfortable straps") and ($seed gt 50)>>
+	Her leather straps are uncomfortably pressing her breasts and asscrack.
+<<elseif ($slaves[$i].clothes is "uncomfortable straps") and ($seed gt 25)>>
+	The rings in her leather straps over each nipple and hole make her look like a perfect fucktoy.
+<<elseif ($slaves[$i].clothes is "uncomfortable straps")>>
+	Her uncomfortable straps force her to constantly present her holes.
+<<elseif ($slaves[$i].clothes is "a very tight corset")>>
+	Her corset is so tight that it keeps her butt and boobs thrust well out regardless of whether she sits or stands.
+<<elseif ($slaves[$i].clothes is "restrictive latex")>>
+	Her complete suit of latex makes her a nice, artistic display, a plastic work of art in the shape of a female form.
+<<elseif ($slaves[$i].clothes is "a fallen nun's habit")>>
+	Her latex parody of a nun's habit gives the office a sacreligious air.
+<<elseif ($slaves[$i].clothes is "a penitent nun's habit")>>
+	Her sackcloth habit gives the office a somber air.
+<<elseif ($slaves[$i].clothes is "attractive lingerie")>>
+	She's wearing classy lingerie, making her an unusually refined ornament to the office.
+<<elseif ($slaves[$i].clothes is "string lingerie")>>
+	She's wearing a string bikini, making her a sexy, enticing office ornament.
+<<elseif ($slaves[$i].clothes is "cutoffs and a t-shirt")>>
+	She's wearing cutoffs and a t-shirt, making her a fun, clean office ornament.
+<<elseif ($slaves[$i].clothes is "a nurse outfit")>>
+	She's wearing a slutty nurse outfit, and looks more than ready to minister to any patient's needs.
+<<elseif ($slaves[$i].clothes is "a schoolgirl outfit")>>
+	She's wearing a slutty schoolgirl outfit, and looks ready to do whatever it takes to improve her grades.
+<<elseif ($slaves[$i].clothes is "a kimono")>>
+	She's wearing a kimono, lending your office an elegance, though she lacks some of the air of the true yamato nadeshiko.
+<<elseif ($slaves[$i].clothes is "a slutty quipao")>>
+	She's wearing a quipao, lending your office the elegance of an imperial court.
+<<elseif ($slaves[$i].clothes is "a hijab")>>
+	She's wearing a modest hijab, lending your office a certain air of conservatism.
+<<elseif ($slaves[$i].clothes is "battledress")>>
+	She's wearing skimpy battledress, making your office seem a little like the ideal bunker for a survivalist.
+<<elseif ($slaves[$i].clothes is "a slutty outfit") and ($slaves[$i].age lt 21)>>
+	She's wearing a schoolgirl uniform and sucking on hard candy, giving her a delectably youthful appearance.
+<<elseif ($slaves[$i].clothes is "a slutty outfit") and ($slaves[$i].age lt 30)>>
+	She's chosen to wear a slutty nurse outfit, and looks more than ready to minister to any patient's needs.
+<<elseif ($slaves[$i].clothes is "a slutty outfit") and ($slaves[$i].age lt 40)>>
+	She's wearing a schoolgirl uniform and sucking on hard candy, a delightfully perverse outfit for a slave in her thirties.
+<<elseif ($slaves[$i].clothes is "a slutty outfit")>>
+	She's wearing a wifely apron that covers her front, but leaves her backside bare, an appropriate outfit for a slave in her forties.
+<<elseif ($slaves[$i].clothes is "a slave gown")>>
+	The gorgeous gown she's wearing lends an air of class to the office.
+<<elseif ($slaves[$i].clothes is "slutty business attire")>>
+	The suit she's wearing would make it look like she's here to do business, if not for the extreme shortness of the skirt and her acre of cleavage.
+<<elseif ($slaves[$i].clothes is "nice business attire")>>
+	The suit she's wearing makes it look like she's here to do business, not fuck.
+<<elseif ($slaves[$i].clothes is "a comfortable bodysuit")>>
+	The bodysuit she's wearing displays her every fuckable curve.
+<<elseif ($slaves[$i].clothes is "a slutty maid outfit")>>
+	Her maid outfit makes her look useful and sexually easy.
+<<elseif ($slaves[$i].clothes is "a nice maid outfit")>>
+	Her maid outfit makes her servitude obvious while not looking too lewd.
+<<elseif ($slaves[$i].clothes is "harem gauze")>>
+	Her harem girl outfit lends her corner of your office an Eastern opulence.
+<<elseif ($slaves[$i].clothes is "slutty jewelry")>>
+	The bangles she's wearing make little noises every time she moves, serving as a constant reminder of her sexual availability.
+<<elseif ($activeSlave.clothes is "conservative clothing")>>
+  Her clothes make it look like she's here for some other purpose than sexual slavery. 
+<<elseif ($activeSlave.clothes is "chains")>>
+  Her chains make it obvious that she's here as an office sex toy.
+<<elseif ($activeSlave.clothes is "Western clothing")>>
+  Her Western clothing is comically out of place in a modern office.
+<<elseif ($activeSlave.clothes is "body oil")>>
+  Her body oil makes her muscles a lovely ornament to the office, and makes all her holes nice and inviting.
+<<elseif ($activeSlave.clothes is "a toga")>>
+  Her toga lends an air of antiquity to the office.
+<<elseif ($activeSlave.clothes is "a slutty quipao")>>
+  Her lovely quipao is a delicious contradiction of conservative silk patterns and scandalously high cuts.
+<<elseif ($slaves[$i].vaginalAccessory is "chastity belt")>>
+	Her chastity belt covers and protects her, but leaves her breasts naked, her mouth available, and her asshole vulnerable.
+<<else>>
+	She's nude and ready to be fucked.
+<</if>>
+
+//
+<</nobr>>\

@@ -1,0 +1,41 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is <<if ($activeSlave.amp is 1)>>sitting limblessly<<else>>standing<</if>> before your desk for her regular inspection. She is studiously observing the letter of the rule against speaking, and is doing her best to make your inspection as efficient as possible. Her desire to please radiates off her in almost palpable waves. She obviously wants to communicate something to you, but can't do it without breaking the rules.
+\
+<span id="result">
+<<click "Let her speak briefly if she's very quiet">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You stand up from your desk and approach her very closely without touching her. Looking straight into her eyes, which are fixed helplessly on you, you tell her that you'll let her say whatever it is she needs to say to you, but only if she's very quiet. She looks at you with huge eyes but nods vigorously. She waits until you lean into her, making her shiver at your proximity, before putting her <<if $activeSlave.lips gt 2>>ridiculous<<elseif $activeSlave.lips gt 1>>enormous<<elseif $activeSlave.lips gt 0>>pillowlike<<else>>girlish<</if>> lips next to your ear and whispering nervously, <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"I love you, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<else>>"I love you, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."<</if>> She recoils a little as if burned by the audacity of her words, but only manages to back off a little before you gather her <<if $activeSlave.amp is 1>>limbless<<else>>rocking<</if>> torso into your arms, holding the back of her head with one hand and rubbing her quivering back with the other. Eventually, she relaxes into <<if ($PC.boobs gt 0)>>your soft chest<<else>>you<</if>>, knowing that <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> can never and will never reciprocate, but @@color:hotpink;accepting@@ that the loving physical contact is a tremendously kind gesture for a master to make.
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+<<click "Make her say it in public">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Since you suspect you know what it is she wants to say, you <<if $activeSlave.amp is 1>>carry her out<<else>>lead her by the hand<</if>> onto the promenade, busy with citizens. You tell her quietly that she's to shout whatever it is she wanted to say, if it's something everyone should hear; otherwise she's to keep it to herself. She looks around nervously, her $activeSlave.skin skin betraying a growing blush, before clearing her throat twice, licking her lips, and howling <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"I LOVE MATHTER"<<else>>"I LOVE MY MASTER"<</if>> at the tops of her lungs. When this is out of her she collapses a little, as though the pressure of holding it inside were propping her up. This attracted a considerable amount of attention, almost all of it @@color:green;positive,@@ with many passersby laughing at the fun, and your fellow slaveowners giving you discreet winks and quiet congratulations.
+	<<set $rep += 150>>
+    <</replace>>
+<</click>>
+<<click "Keep her quiet but spend some time with her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You announce that you're finished with business for the day, and feel like some quiet time. She cannot keep a gleam of humor out of her eye at hearing 'quiet time,' and she <<if $activeSlave.amp is 1>>presents herself to be carried<<else>>follows you<</if>> happily enough. When she sees you're headed to your bedroom she begins to anticipate <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>>'s <<if ($PC.dick is 0)>>strap-on<<else>>cock<</if>>, but is surprised to find that instead of using her you simply <<if $activeSlave.amp is 1>>place her in bed and curl up around her limbless torso.<<else>>climb into bed and pull her under the sheets with you.<</if>> She's almost disappointed, but after looking into your resting face for a while, nestles her head onto your broad chest and goes to sleep with a @@color:hotpink;look of contentment@@ on her face. When the two of you wake from your brief nap, you ask her if she has anything else to communicate to you. She smiles sleepily and shakes her head no.
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+</span>

@@ -1,0 +1,45 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+There is a horrible crash from the shower. You rush in to see <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> face down and covered in soap. She's uninjured, but her tits are so huge that, soapy as she is, she can't seem to stand again. Her udders have her pinned to the ground with her legs sticking out of the shower. She pleads <<if ($activeSlave.lips gt 2)>>through her huge lips, "Help me, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>!"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>through her piercings, "Help me, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>!"<<else>>piteously, "Help me, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>!"<</if>>
+\
+<span id="result">
+<<click "Join her in the shower">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You step into the running water and help her to her feet with exaggerated gallantry. She seems surprised and stares at you through the steam for a moment before looking away with a blush. Before long you have her back against the shower wall, her titanic udders offering an amusing challenge as they slide soapily between you as you fuck. She comes in no time at all, and a brief massage of her huge soapy nipples produces a whimpering aftershock orgasm. @@color:hotpink;She has become more devoted to you.@@
+    <<if ($activeSlave.vagina isnot -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>><<display "Vaginal VCheck">><<else>><<display "Anal VCheck">><</if>>
+	<<set $activeSlave.devotion += 1>>
+    <<display "Simple FCount">>
+    <</replace>>
+<</click>>
+<<click "Fuck her immobilized body">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You make no answer, groping her soapy <<if $seeRace is 1>>$activeSlave.race <</if>>buttocks. <<if ($activeSlave.anus gt 2)>>Her rectum is so fucked out and loose that your groping hand almost slides up it.<<elseif ($activeSlave.vagina gt 2)>>Her pussy is so fucked out and loose that your groping hand almost slides up it.<<else>>You finger fuck her for a while, the sting of the soap on her sensitive insides making her gasp.<</if>> It's not like you can't tie her up and fuck her whenever you like, but sliding back and forth on her soapy body is kind of nice. <<if ($PC.dick is 0)>>You ride yourself against her until you orgasm<<else>>You leave a load of cum in <<if ($activeSlave.vagina lt 0)>>her loosened butthole<<else>>each of her holes<</if>><</if>> and only then do you help her to her feet. She drips soap, water, and <<if ($PC.dick is 0)>>your juices<<else>>cum<</if>>. @@color:hotpink;She has become more submissive.@@
+    <<display "Simple VCheck">>
+    <<display "Simple FCount">>
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<<click "Let her figure it out">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She flounders around for a while until you get bored and leave her to it. Eventually her whining brings another slave in, who helps her. This interdependence between slaves @@color:mediumorchid;reduces her devotion.@@
+	<<set $activeSlave.devotion -= 1>>
+    <</replace>>
+<</click>>
+</span>

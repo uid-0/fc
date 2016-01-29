@@ -1,0 +1,41 @@
+<<nobr>>
+
+<<set $nextButton to " ">>
+<<set $nextLink to "Random Nonindividual Event">>
+	<<set $nextButton to "Continue">>
+    
+	<<set $PStrip to 1>>
+
+<</nobr>>\
+\
+It's been a good few weeks, getting settled in as owner of your arcology. The power of being overlord of this great building and everyone in it is incredible, but so is the responsibility. It's a good thing you have ample opportunities for stress relief. You're going to need them after today. There's a nasty disturbance on a business level of the arcology. Normally, the arcology's public safety drones would suppress this kind of nonsense, but your personal assistant program is suggesting that you resolve the dispute.
+
+As you step off the elevator, you hear female shouting. Apparently one of the arcology's few remaining strip joints has closed. It was a topless bar and strip club all in one, but the owner is packing up his things. He's explaining to a crowd of his angry former employees that he can't make ends meet. The price of a slave whore is barely higher than that of a lapdance from a free stripper; it's not surprising. It looks like the girls are on the verge of trashing the place.
+\
+<span id="result">
+<<click "Offer to take them in">>
+	<<replace "#result">>
+	The now-unemployed strippers are not impressed by your offer to take them in. "What," one of them says, "be one of your shivering little cunts? You'd have us signing ourselves into slavery inside two weeks. Fuck off, we'll take the streets." Under the nonlethal riot cannons of the security drones, they file off, muttering mutinously. Unfortunately, you don't have any pretense to enslave or imprison them.
+	<<set $nextButton to "Continue">>
+	<<set $PStrip to 1>>
+    <</replace>>
+<</click>>
+<<click "Offer them severance pay">>
+	<<replace "#result">>
+	You have a word with them, stepping closer and speaking quietly to defuse the situation. You tell them you're aware that they're in a difficult place, but you also explain that the Free Cities are a new and changing place. No one can rely on the old way of doing things any more. You offer to pay each of them a small stipend to help tide them over until they find other employment. They're surprised at your munificence but @@color:green;accept it with gratitude.@@
+	<<set $nextButton to "Continue">>
+	<<set $rep += 500>>
+	<<set $cash -= 1000>>
+	<<set $PStrip to 2>>
+    <</replace>>
+<</click>> //This will cost ¤1000//
+<<click "Offer to set them up independently">>
+	<<replace "#result">>
+	You offer a way out of their situation. They, you suggest, can keep working in the now-vacant shop if they work together to pay the rent. They can move into a couple of vacant rooms nearby that you can easily have set up as a bunkhouse. You'll collect a little more rent, and they'll have a second chance. They @@color:green;accept it with gratitude.@@ It's quite likely they'll either fail or have to accept being whores rather than strippers, but that's not your concern. @@color:green;Your arcology's prosperity has increased.@@
+	<<set $nextButton to "Continue">>
+	<<set $AProsperity += 1>>
+	<<set $cash -= 500>>
+	<<set $PStrip to 3>>
+    <</replace>>
+<</click>> //This will cost ¤500//
+</span>

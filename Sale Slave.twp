@@ -1,0 +1,46 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+<<set $returnTo to "Main">>\
+<<set $encyclopedia to "Stables">>\
+\
+You review a piece of merchandise via video call, making a few lewd demands to gauge her obedience. In the background, you can hear the sounds of an auctioneer in full cry, frankly describing someone's private parts.
+
+<<nobr>>
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "You bought her at auction from a slave trainer.">>
+<<set $activeSlave.devotion += 12>>
+<<set $activeSlave.trust += 8>>
+<<set $activeSlave.health += 3>>
+<<if $activeSlave.vagina isnot -1>>
+    <<set $activeSlave.vaginalSkill += 1>>
+<<else>>
+    <<set $activeSlave.vaginalSkill to 0>>
+    <<set $activeSlave.clit to 0>>
+<</if>>
+<<if $activeSlave.vagina is 0>>
+	<<set $activeSlave.vagina += 1>>
+<</if>>
+<<if $activeSlave.anus is 0>>
+	<<set $activeSlave.anus += 1>>
+<</if>>
+<<set $activeSlave.oralSkill += 1>>
+<<set $activeSlave.analSkill += 1>>
+<<set $activeSlave.fetishDiscovered to 1>>
+<<set $activeSlave.sexualQuirk to either("none", "none", "none", "none", "none", "none", "none", "none", "none", "hates oral", "hates anal", "hates penetration", "hates men", "hates women")>>
+<<set $activeSlave.behavioralQuirk to either("none", "none", "none", "none", "none", "none", "none", "none", "none", "arrogant", "bitchy", "quirky", "anorexic")>>
+<<display "Slave Cost">>
+<<if $slavesSeen gt $slaveMarketLimit>><<set $slaveCost += Math.trunc($slaveCost*(($slavesSeen-$slaveMarketLimit)*0.1))>><</if>>
+<</nobr>>\
+\
+The offered price is <<print $slaveCost>>¤.<<if $slavesSeen gt $slaveMarketLimit>> You have cast such a wide net for slaves this week that it is becoming more expensive to find more for sale. Your reputation helps determine your reach within the slave market.<</if>>
+\
+<<nobr>>
+<<if $cash gte $slaveCost>>
+	[[Buy her slave contract|New Slave Intro][$cash -= $slaveCost,$nextButton to "Continue",$nextLink to "AS Dump",$returnTo to "Main"]]
+<<else>>
+	//You lack the necessary funds to buy this slave.//
+<</if>>
+<</nobr>>
+[[Decline to purchase her and check out another slave|Sale Slave][$slavesSeen += 1]]
+
+<<set $saleDescription to 1>><<display "Long Slave Description">><<set $saleDescription to 0>>

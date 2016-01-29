@@ -1,0 +1,14 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+
+<<set $slaveCostFactor += 0.3>>
+
+<</nobr>>\
+\
+//Sir, I have a flagged a news item that may be of business interest.//
+
+The Free Cities are almost totally unregulated. Prices and interest rates can spike and plummet with speeds not seen since the South Seas Bubble, and for the most silly or corrupt of reasons. Today, it's the latter. A massive attempt to rig the slave market was uncovered this morning. Ultimately, the culprits were caught and much of the damage reversed, but confidence in the marketplace has been shaken. Many great slave vendors are holding onto their stock until they're sure the water's calm again. It's a sellers' market out there; projections show the price of slaves rising as much as thirty percent in the short term.
+
+There will be no immediate impact on you or your slaves, but the coming weeks will be a great time to sell stock, and a bad time to buy. @@color:yellow;The market price of slaves has significantly increased.@@

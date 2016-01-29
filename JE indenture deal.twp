@@ -1,0 +1,85 @@
+<<nobr>>
+
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $nextButton to "Continue">>
+    
+<<set $indentureDealJustice to 1>>
+
+<<set $contractCost to 7500>>
+
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She was enslaved after you manipulated her deal for indentured servitude.">>
+<<set $activeSlave.devotion to random(5,6)>>
+<<set $activeSlave.trust to $activeSlave.devotion-4>>
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.health to random(0,2)>>
+<<set $activeSlave.age to random(24,44)>>
+<<set $activeSlave.health to random(-4,-3)>>
+<<set $activeSlave.anus to 2>>
+<<if $activeSlave.vagina gt -1>>
+  <<set $activeSlave.vagina to 2>>
+<</if>>
+<<set $activeSlave.vaginalSkill to 1>>
+<<set $activeSlave.oralSkill to 1>>
+<<set $activeSlave.analSkill to 1>>
+<<set $activeSlave.whoreSkill to 0>>
+<<set $activeSlave.entertainSkill to 1>>
+<<set $activeSlave.boobs += 600>>
+<<set $activeSlave.boobsImplant to 600>>
+<<set $activeSlave.butt += 1>>
+<<set $activeSlave.buttImplant to 1>>
+<<set $activeSlave.lips += 1>>
+<<set $activeSlave.lipsImplant to 1>>
+<<set $activeSlave.lipsPiercing to 1>>
+<<set $activeSlave.tonguePiercing to 1>>
+<<set $activeSlave.earPiercing to 1>>
+<<set $activeSlave.nosePiercing to 1>>
+<<set $activeSlave.eyebrowPiercing to 1>>
+<<set $activeSlave.navelPiercing to 1>>
+<<set $activeSlave.nipplesPiercing to 1>>
+<<set $activeSlave.clitPiercing to 1>>
+<<set $activeSlave.stampTat to either("tribal patterns", "floral designs")>>
+
+<</nobr>>\
+\
+Your personal assistant breaks in on your sleep with an urgent message. You push a slave off you and sit up to take it. As the owner of the arcology, you perform some functions that would traditionally be the province of a government. In this anarcho-liberal polity, it's still necessary for people making deals to have someone to appeal to when disputes arise. Part of your agreement with your tenants is that you will perform this duty on deals between two tenants. The message is about just such a disagreement; they always seem to happen in the middle of the night, and they're always urgent.
+
+A slutty-looking girl appears, bearing a split lip and a black eye, accusing a slave trader of tricking her. She sends you a lengthy contract of indentured servitude. Nothing seems out of order, though indentured servants are becoming less common, since slave labor is usually cheaper and less limited. The angry accuser claims that the trader told her that she wouldn't be required to have sex while indentured. The promise doesn't seem to be in writing, but the girl bitterly insists that it was made. "And now," she almost shrieks, "he's making me be a whore. I got assfucked five times yesterday. Five!"
+
+The trader indignantly denies ever making any such commitment, and points out, correctly, that she has no proof. He protests that he only made the indentured servitude deal as a favor to her, and is angry that she's repaying his courtesy in not insisting on enslavement by this ingratitude. "I see here in the record that she was indeed used anally five times yesterday," he observes acidly. "But that's her job."
+\
+<span id="result">
+<<click "Privately inform both parties you'll settle this in favor of the most generous">>
+	<<replace "#result">>
+	You privately inform both parties you'll settle this in favor of the most generous. You instantly receive a single notice of escrow payment contingent on the case going the payer's way. You select the @@color:yellowgreen;bigger of the two@@ and decide the matter before returning to bed in a good mood. However, the next day it becomes apparent that although she isn't stupid enough to make a public accusation, the whore has been @@color:red;whispering@@ to her peers that you helped the trader cheat her into prostitution. Few citizens care, but there is a faint scent of corruption.
+	<<set $rep -= 50>>
+	<<set $cash += 2000>>
+    <</replace>>
+<</click>>
+<<click "Settle the dispute in favor of the indentured whore">>
+	<<replace "#result">>
+	You settle the dispute in favor of the indentured whore, adding a requirement to the indentured servitude that she not be required to fuck against her will. The story of the brave prostitute and the conniving trader is @@color:green;told and retold,@@ impressing the more credulous citizens. It also @@color:red;raises doubts@@ among the wealthier, more business-minded residents about whether you can be depended on to promote their interests.
+	<<set $AProsperity -= 5>>
+	<<set $rep += 500>>
+    <</replace>>
+<</click>>
+<<click "Settle the dispute in favor of the indenture holder">>
+	<<replace "#result">>
+	You settle the dispute in favor of the owner of the indenture. No change in the contract is necessary, since it already says what it should: that he controls her for the required period. That's all. The story of your strictness in business disputes @@color:green;impresses@@ some of the more commercially powerful citizens of the arcology, but is @@color:red;hissed@@ by the stupider, more romantic residents, who see only a brave whore being beaten down by a conniving slave trader.
+	<<set $AProsperity += 5>>
+	<<set $rep -= 500>>
+    <</replace>>
+<</click>>
+<<click "Buy out the contract and enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	You quietly contact the trader and suggest an alternative method of settling the dispute. He is surprised, but agrees readily, chuckling at how the "recalcitrant bitch" is going to be dealt with. To her horror, she finds that your near-total power over deals made in your arcology has been employed to saddle her with additional debts that, under her indentured servitude, she cannot hope to repay. It is then the work of ten minutes to demand payment, and when she cannot pay, demand her body for enslavement. The story of your cunning @@color:green;impresses@@ the slave traders, but is @@color:red;booed@@ by fairer-minded citizens.
+	<<set $AProsperity += 5>>
+	<<set $rep -= 100>>
+	<<set $nextLink to "AS Dump">>
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>> //This will cost $contractCost and give you the slave//
+</span>

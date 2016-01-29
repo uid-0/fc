@@ -1,0 +1,50 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> generally obeys orders, even if she isn't yet a truly devoted sex slave. She blushes furiously when given any sexual command, but her true feelings about humiliation become clear when she is ordered to serve in front of others, even other slaves. It sometimes seems the number of people watching her get fondled, used, or fucked directly reduces the distance between her and her next blushing or even sobbing orgasm.
+\
+<span id="result">
+<<click "Publicly prove the depths of her humiliation to her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You drag a fearful, embarrassed and totally naked $activeSlave.slaveName out into a public hall. A small knot of passersby gather around grinning, enjoying the sight of her nakedness and anticipating a show. To her surprise, you order her to take a few minutes to recount her life story. She's hesitant at first, but obeys, only realizing as she nears the present day what an abject story of degradation and humiliation her life truly is. She continues shakily, describing in brief her current life, crying a little and trembling with arousal. At a whispered command from you, she concludes <<if ($activeSlave.mute is 1)>>in embarrassed gestures, "and now my <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> is going to fuck my worthless body in public."<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"an now mah <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>> is gonna fuck mah worthless body ehn public."<<else>>"and now my <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> is going to fuck my worthless body in public."<</if>> You take her standing there, as she cries with mixed shame and sexual pleasure. <<if ($activeSlave.dick gt 0)>>She cums even though she's soft with the shame, <<if ($PC.dick is 0)>>her anus clenching around the strap-on you're pumping in and out of it<<else>>adding a sad little dribble to the load dripping out of her asshole<</if>>.<<else>><<if ($PC.dick is 0)>>You make her clean her pussyjuice off your strap-on with her bitch mouth before you take it off.<<else>>As you pull out of her clenching pussy, cum runs down her quavering thighs<</if>>.<</if>> @@color:hotpink;She has become more submissive to you,@@ and @@color:green;your reputation has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $rep += 100>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+    <</if>>
+    <</replace>>
+<</click>>
+<<click "Use a bait and switch tactic on her, before public use">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You instruct her to get cleaned up and get dressed in her nicest clothing. She obeys, mystified, and is further puzzled to find that you're taking her out for a nice evening at a small bar. You share a tasty meal and listen to good music played on the little stage by an older slave. As the set concludes, you lean over and give $activeSlave.slaveName her real orders for the evening. She freezes in terror but eventually makes her way up to the stage, strips in front of all the patrons, and says <<if ($activeSlave.mute is 1)>>in embarrassed gestures, "please use me, I'm cheap."<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Ah'm cheap, please use meh."<<else>>"One credit per fuck, if you'll do my worthless body on stage."<</if>> By the end of the night, she's been fucked by almost everyone in the bar, and her itch for humiliation has been well and truly scratched. As you collect her earnings from the thoroughly pleased bartender, she lies quiescent in a puddle of cum and exhaustion. @@color:yellowgreen;You've collected a decent fee,@@ and @@color:green;your reputation has increased.@@
+	<<set $rep += 100>>
+	<<set $cash += 100>>
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 10>>
+		<<set $vaginalTotal += 10>>
+    	<<set $activeSlave.analCount += 10>>
+		<<set $analTotal += 10>>
+    <<else>>
+    	<<set $activeSlave.analCount += 20>>
+		<<set $analTotal += 20>>
+    <</if>>
+    <</replace>>
+<</click>>
+</span>

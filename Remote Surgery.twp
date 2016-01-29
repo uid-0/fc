@@ -1,0 +1,416 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Slave Interact">>
+
+<<set $degradation to 0>>
+<<set $surgeryType to 0>>
+<<set $encyclopedia to "The Remote Surgery">>
+
+<</nobr>>\
+\
+$activeSlave.slaveName is lying strapped down on the table in your <<if $surgeryUpgrade is 1>>heavily upgraded and customized remote surgery.<<else>>remote surgery.<</if>> The surgical equipment reads <<if $activeSlave.health lt -2>>@@color:red;SLAVE UNHEALTHY, SURGERY NOT RECOMMENDED.@@<<elseif $activeSlave.health lte 2>>@@color:yellow;SLAVE HEALTHY, SURGERY SAFE.@@<<else>>@@color:green;SLAVE HEALTHY, SURGERY ENCOURAGED.@@<</if>>
+
+<<nobr>>
+Her
+<<if $activeSlave.boobs lt 300>><<print either("androgynous", "flat")>> chest is barely there.
+<<elseif $activeSlave.boobs lt 400>><<print either("pointy", "tiny")>>, <<print $activeSlave.boobs>>cc chest only fills an A-cup.
+<<elseif $activeSlave.boobs lt 500>><<print either("perky", "small")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "boobs", "bosom")>> would fill a B-cup.
+<<elseif $activeSlave.boobs lt 650>><<print either("healthy", "curved")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "boobs", "bust", "bosom")>> would fill a C-cup.
+<<elseif $activeSlave.boobs lt 800>><<print either("big", "sizeable")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "boobs", "bust", "bosom")>> would fill a D-cup.
+<<elseif $activeSlave.boobs lt 1000>><<print either("large", "big")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "boobs", "bust", "bosom")>> would fill a DD-cup.
+<<elseif $activeSlave.boobs lt 1200>><<print either("proud", "hefty")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders", "boobs")>> would fill an F-cup.
+<<elseif $activeSlave.boobs lt 1400>><<print either("hefty", "huge")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill a G-cup.
+<<elseif $activeSlave.boobs lt 1600>><<print either("massive", "huge")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill an H-cup.
+<<elseif $activeSlave.boobs lt 1800>><<print either("enormous", "massive")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill an I-cup.
+<<elseif $activeSlave.boobs lt 2050>><<print either("titanic", "enormous")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill a J-cup.
+<<elseif $activeSlave.boobs lt 2300>><<print either("stupendous", "titanic")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill a K-cup.
+<<elseif $activeSlave.boobs lt 2600>><<print either("magnificent", "stupendous")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill an L-cup.
+<<elseif $activeSlave.boobs lt 2900>><<print either("tremendous", "magnificent")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill an M-cup.
+<<elseif $activeSlave.boobs lt 3250>><<print either("awe-inspiring", "tremendous")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill an N-cup.
+<<elseif $activeSlave.boobs lt 3600>><<print either("absurd", "awe-inspiring")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill an O-cup.
+<<elseif $activeSlave.boobs lt 3950>><<print either("disproportionate", "attention-grabbing")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill a P-cup.
+<<elseif $activeSlave.boobs lt 4300>><<print either("shocking", "massive")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill a Q-cup.
+<<elseif $activeSlave.boobs lt 4700>><<print either("unreal", "jaw-dropping")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill an R-cup.
+<<elseif $activeSlave.boobs lt 5100>><<print either("tremendous", "astounding")>>, <<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> would fill an S-cup.
+<<elseif ($activeSlave.amp is 1)>><<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> fill out an enormous custom bra; her tits dominate her entire frame.
+<<else>><<print $activeSlave.boobs>>cc <<print either("tits", "breasts", "mammaries", "udders")>> fill out an enormous custom bra; her tits dominate her entire frame.
+<</if>>
+
+<<if $activeSlave.boobsImplant gt 600>>
+	She has <<print $activeSlave.boobsImplant>>cc fillable breast implants.
+<<elseif $activeSlave.boobsImplant gt 400>>
+	She has large, <<print $activeSlave.boobsImplant>>cc breast implants.
+<<elseif $activeSlave.boobsImplant gt 200>>
+	She has normal, <<print $activeSlave.boobsImplant>>cc breast implants.
+<<elseif $activeSlave.boobsImplant gt 0>>
+	She has small, <<print $activeSlave.boobsImplant>>cc breast implants.
+<</if>>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<<if $activeSlave.boobs gt 10000>>
+	//Her breasts are as large as she can physically support//
+<<elseif $activeSlave.boobsImplant is 0>>
+	[[Give her standard implants|Surgery Degradation][$activeSlave.boobsImplant to 400,$activeSlave.boobs += 400,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to "boobs"]] | 
+	[[Give her small implants|Surgery Degradation][$activeSlave.boobsImplant to 200,$activeSlave.boobs += 200,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to "boobs"]]
+<<elseif $activeSlave.boobsImplant gt 600>>
+	[[Add inert filler|Surgery Degradation][$activeSlave.boobsImplant += 200,$activeSlave.boobs += 200,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1,$surgeryType to"boobs"]]
+<<elseif $activeSlave.boobsImplant gt 400>>
+	[[Give her fillable implants|Surgery Degradation][$activeSlave.boobsImplant to 800,$activeSlave.boobs += 200,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1,$surgeryType to"boobs"]]
+<<elseif $activeSlave.boobsImplant gt 200>>
+	[[Give her large implants|Surgery Degradation][$activeSlave.boobsImplant to 600,$activeSlave.boobs += 200,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1,$surgeryType to"boobs"]]
+<<elseif $activeSlave.boobsImplant gt 0>>
+	[[Give her standard implants|Surgery Degradation][$activeSlave.boobsImplant to 400,$activeSlave.boobs += 200,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1,$surgeryType to"boobs"]] | [[Give her large implants|Surgery Degradation][$activeSlave.boobsImplant to 600,$activeSlave.boobs += 400,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1,$surgeryType to"boobs"]]
+<</if>>
+<<if $activeSlave.boobsImplant isnot 0>>
+	 | [[Remove her breast implants|Surgery Degradation][$activeSlave.boobs to ($activeSlave.boobs-$activeSlave.boobsImplant),$activeSlave.boobsImplant to 0,$cash -= $surgeryCost, $surgeryType to"boobsLoss"]]
+<</if>>
+<<if ($activeSlave.boobs gt 300) and ($activeSlave.boobsImplant is 0)>>
+	 | [[Reduce her breasts|Surgery Degradation][$activeSlave.boobs -= 200,$cash -= $surgeryCost, $surgeryType to "boobsLoss"]]
+<</if>>
+<</nobr>>
+<<nobr>>
+<<if $activeSlave.lactation is 0>>
+	She is not lactating.
+<<elseif $activeSlave.lactation is 2>>
+	She is implanted with slow-release pro-lactation drugs.
+<<else>>
+	She is lactating naturally.
+<</if>>
+<<if $activeSlave.lactation lt 2>>
+	[[Implant her with slow-release pro-lactation drugs|Surgery Degradation][$activeSlave.lactation to 2,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"lactation"]] //This may increase her natural breast size//
+<</if>>
+<<if $activeSlave.lactation gt 1>>
+	 | [[Remove her lactation implant|Surgery Degradation][$activeSlave.lactation to 0,$cash -= $surgeryCost, $surgeryType to"endlac"]]
+<</if>>
+<</nobr>>
+
+<<nobr>>
+<<if $activeSlave.face lt -1>>
+	Her face is ugly and masculine.
+<<elseif $activeSlave.face is -1>>
+	Her face is unattractive.
+<<elseif ($activeSlave.face is 0) and (random(1,100) gt 50)>>
+	Her face is pretty.
+<<elseif ($activeSlave.face is 0)>>
+	Her face is attractive.
+<<elseif ($activeSlave.face is 1) and (random(1,100) gt 50)>>
+	Her face is feminine and very pretty.
+<<elseif ($activeSlave.face is 1)>>
+	Her face is feminine and quite attractive.
+<<elseif ($activeSlave.face gt 1) and (random(1,100) gt 50)>>
+	Her face is the height of feminine beauty.
+<<elseif ($activeSlave.face gt 1)>>
+	Her face is truly gorgeous.
+<</if>>
+
+<<if $activeSlave.faceImplant is 0>>
+	It is entirely natural.
+<<elseif $activeSlave.faceImplant is 1>>
+	It has seen some work.
+<<elseif $activeSlave.faceImplant gt 1>>
+	It has been totally reworked.
+<</if>>
+
+<<if ($activeSlave.faceImplant is 0) and ($activeSlave.face lt 2)>>
+	[[Give her facial surgery|Surgery Degradation][$activeSlave.faceImplant to 1,$activeSlave.face += 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"face"]]
+<<elseif ($activeSlave.faceImplant is 1) and ($activeSlave.face lt 2)>>
+	[[Rework her face further|Surgery Degradation][$activeSlave.faceImplant to 2,$activeSlave.face += 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"face"]]
+<<elseif ($activeSlave.faceImplant gt 0) and ($activeSlave.face lt 2) and ($surgeryUpgrade is 1)>>
+	[[Advanced facial work|Surgery Degradation][$activeSlave.faceImplant to 2,$activeSlave.face += 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"face"]]
+<</if>>
+<</nobr>>
+<<nobr>>
+<<if ($activeSlave.age gte 25) and ($activeSlave.ageImplant is 0)>>
+	<br>She's old enough that a face lift and other minor cosmetic procedures could make her look younger.
+<<elseif ($activeSlave.age gte 25)>>
+	<br>She's had a face lift and other minor cosmetic procedures to make her look younger.
+<</if>>
+
+<<if ($activeSlave.ageImplant isnot 1) and ($activeSlave.age gte 25)>>
+	[[Give her an age lift|Surgery Degradation][$activeSlave.ageImplant to 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"age"]]
+<</if>>
+<</nobr>>
+<<nobr>>
+<<if $activeSlave.lips is 0>>
+	Her lips are fairly normal.
+<<elseif $activeSlave.lips lte 1>>
+	Her lips are plump and kissable.
+<<elseif $activeSlave.lips lte 2>>
+	She has pillowlike dick sucking lips.
+<<elseif $activeSlave.lips gt 2>>
+	Her lips are huge and obviously augmented.
+<</if>>
+<<if $activeSlave.lipsImplant is 0>>
+<<elseif $activeSlave.lipsImplant is 1>>
+	She has normal lip implants.
+<<elseif $activeSlave.lipsImplant is 2>>
+	She has large lip implants.
+<<elseif $activeSlave.lipsImplant is 3>>
+	She has enormous lip implants.
+<</if>>
+<<if ($activeSlave.lipsImplant is 0) and ($activeSlave.lips lt 2)>>
+	[[Give her lip implants|Surgery Degradation][$activeSlave.lipsImplant to 1,$activeSlave.lips += 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"lips"]] //This will reduce her oral skills//
+<<elseif ($activeSlave.lipsImplant gt 0) and ($activeSlave.lips lt 3)>>
+	[[Replace her lip implants with the next size up|Surgery Degradation][$activeSlave.lipsImplant += 1,$activeSlave.lips += 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"lips"]] //This will reduce her oral skills//
+<</if>>
+<<if $activeSlave.lipsImplant isnot 0>>
+	 | [[Remove her lip implants|Surgery Degradation][$activeSlave.lips to ($activeSlave.lips-$activeSlave.lipsImplant),$activeSlave.lipsImplant to 0,$cash -= $surgeryCost, $surgeryType to"lips"]]
+<</if>>
+<<if ($activeSlave.lips gt 1) and ($activeSlave.lipsImplant is 0)>>
+	 | [[Reduce her lips|Surgery Degradation][$activeSlave.lips -= 1,$cash -= $surgeryCost, $surgeryType to "lips"]]
+<</if>>
+<</nobr>>
+
+<<nobr>>
+She's got a
+<<if $activeSlave.butt lt 2>>flat and <<print either("disappointing", "unimpressive")>> ass.
+<<elseif $activeSlave.butt lte 2>><<print either("small, sleek", "small but rounded", "rounded, small")>> rear end.
+<<elseif $activeSlave.butt lte 3>><<print either("big and healthy", "curved and plump", "healthy and plump")>> derriere.
+<<elseif $activeSlave.butt lte 4>><<print either("juicy and large butt", "big bubble butt", "curvy and enticing butt")>>.
+<<elseif $activeSlave.butt lte 5>><<print either("juicy and huge", "a huge", "massive and undeniable")>> rear end.
+<<elseif ($activeSlave.amp is 1)>>ridiculous ass. It's so big it would jiggle as she walked - if she could walk.
+<<else>>ridiculous ass. It's so big it jiggles as she walks.
+<</if>>
+
+<<if $activeSlave.buttImplant is 0>>
+<<elseif $activeSlave.buttImplant is 1>>
+	She has normal butt implants.
+<<elseif $activeSlave.buttImplant gt 1>>
+	She has enormous butt implants.
+<</if>>
+
+<<if $activeSlave.butt gt 7>>
+	//Her butt is as large as she can physically support//
+<<elseif $activeSlave.buttImplant is 0>>
+	[[Give her implants|Surgery Degradation][$activeSlave.buttImplant to 1,$activeSlave.butt += 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"butt"]]
+<<elseif $activeSlave.buttImplant is 1>>
+	[[Give her bigger implants|Surgery Degradation][$activeSlave.buttImplant to 2,$activeSlave.butt += 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"butt"]]
+<<elseif $activeSlave.buttImplant is 2>>
+	[[Give her fillable implants|Surgery Degradation][$activeSlave.buttImplant to 3,$activeSlave.butt += 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"butt"]]
+<<elseif $activeSlave.buttImplant gt 2>>
+	[[Add inert filler|Surgery Degradation][$activeSlave.buttImplant += 1,$activeSlave.butt += 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"butt"]]
+<</if>>
+<<if $activeSlave.buttImplant isnot 0>>
+	 | [[Remove her implants|Surgery Degradation][$activeSlave.butt to ($activeSlave.butt-$activeSlave.buttImplant),$activeSlave.buttImplant to 0,$cash -= $surgeryCost, $surgeryType to"buttLoss"]]
+<</if>>
+<<if ($activeSlave.butt gt 1) and ($activeSlave.buttImplant is 0)>>
+	 | [[Reduce her ass|Surgery Degradation][$activeSlave.butt -= 1,$cash -= $surgeryCost, $surgeryType to"buttLoss"]]
+<</if>>
+<</nobr>>
+
+<<nobr>>
+<<if $activeSlave.waist is 0>>
+	She has a normal figure.
+<<elseif $activeSlave.waist is 1>>
+	She has a lovely narrow waist that gives her an hourglass figure.
+<<elseif $activeSlave.waist is 2>>
+	She has an unnaturally narrow waist that gives her a cartoonishly hourglass figure.
+<</if>>
+<<if $activeSlave.waist is 0>>
+	[[Give her liposuction|Surgery Degradation][$activeSlave.waist to 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 0, $surgeryType to"lipo"]]
+<</if>>
+<<if $activeSlave.waist is 1>>
+	[[Remove ribs to further narrow her waist|Surgery Degradation][$activeSlave.waist to 2,$cash -= $surgeryCost, $activeSlave.health -= 4,$degradation += 2, $surgeryType to"ribs"]]
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if $activeSlave.vagina gt -1>>
+	<br>
+<<if $activeSlave.labia is 0>>
+	She has minimal pussylips.
+<<elseif $activeSlave.labia is 1>>
+	She has pretty, noticable pussylips.
+<<elseif $activeSlave.labia is 2>>
+	She has large pussylips.
+<<elseif $activeSlave.labia gt 2>>
+	She has extremely large pussylips.
+<</if>>
+<<if $activeSlave.labia gt 0>>
+	[[Apply labiaplasty|Surgery Degradation][$activeSlave.labia to 0,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 0, $surgeryType to"labiaplasty"]]
+<</if>>
+<<if ($activeSlave.labia lt 3) and ($surgeryUpgrade is 1)>>
+	 | [[Increase the size of her labia|Surgery Degradation][$activeSlave.labia += 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 0, $surgeryType to"labiaplasty"]]
+<</if>>
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($activeSlave.preg gt -2) and ($activeSlave.preg lt 1) and ($activeSlave.vagina gt -1) and ($activeSlave.ovaries isnot 0)>>
+	<br>She has a working womb.
+<<elseif ($activeSlave.preg is -2) and ($activeSlave.vagina gt -1) and ($activeSlave.ovaries isnot 0)>>
+	<br>She has a sterile womb.
+<</if>>
+<<if ($activeSlave.preg gt -2) and ($activeSlave.preg lt 1) and ($activeSlave.preg lt 1) and ($activeSlave.vagina gt -1) and ($activeSlave.ovaries isnot 0)>>
+	[[Sterilize her|Surgery Degradation][$activeSlave.preg to -2,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 2, $surgeryType to"ster"]]
+<<elseif ($activeSlave.preg lt 1) and ($activeSlave.vagina gt -1) and ($activeSlave.ovaries isnot 0)>>
+	[[Restore her fertility|Surgery Degradation][$activeSlave.preg to 0,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 2, $surgeryType to"fert"]]
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($activeSlave.ovaries is 1) and ($activeSlave.preg lt 1)>>
+	<br>She has working ovaries.
+	[[Subject her to an oophorectomy|Surgery Degradation][$activeSlave.ovaries to 0,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 2, $surgeryType to"ster"]]
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($activeSlave.vagina+$surgeryUpgrade gt 1)>>
+	<br>Her vaginal muscles could benefit from microsurgical rejeuvenation.
+	[[Tighten her pussy|Surgery Degradation][$activeSlave.vagina to 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to "vagina"]] //This will reduce her vaginal skills//
+<</if>>
+<<if ($activeSlave.vagina gt 0) and ($surgeryUpgrade is 1)>>
+   | [[Restore her virginity|Surgery Degradation][$activeSlave.vagina to 0,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to "vagina"]] //This will reduce her vaginal skills//
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($activeSlave.anus+$surgeryUpgrade gt 1)>>
+	<br>Her anal sphincter could benefit from microsurgical rejeuvenation.
+	[[Tighten her asshole|Surgery Degradation][$activeSlave.anus to 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to "anus"]] //This will reduce her anal skills//
+<</if>>
+<<if ($activeSlave.anus gt 0) and ($surgeryUpgrade is 1)>>
+   | [[Restore her anal virginity|Surgery Degradation][$activeSlave.anus to 0,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to "anus"]] //This will reduce her anal skills//
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if ($activeSlave.dick isnot 0) and ($activeSlave.vagina is -1)>>
+	<br>She has a penis.
+<<elseif ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	<br>She has a penis and an artificial vagina.
+<</if>>
+<<if ($activeSlave.dick isnot 0) and ($activeSlave.vagina is -1)>>
+	[[Convert genitalia to female|Surgery Degradation][$activeSlave.dick to 0,$activeSlave.balls to 0,$activeSlave.vagina to 0,$activeSlave.preg to -2,$activeSlave.vaginalSkill to 0,$cash -= $surgeryCost, $activeSlave.health -= 4,$degradation += 10, $surgeryType to"mtf"]]
+<<elseif ($activeSlave.dick isnot 0) and ($activeSlave.vagina isnot -1)>>
+	[[Remove her penis|Surgery Degradation][$activeSlave.dick to 0,$activeSlave.balls to 0,$activeSlave.vaginalSkill to 0,$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 10, $surgeryType to"chop"]] //This will reset her sexual skills//
+<</if>>
+<<if ($activeSlave.dick isnot 0) and ($activeSlave.vagina is -1) and ($surgeryUpgrade is 1)>>
+	 | [[Make her a surgical hermaphrodite|Surgery Degradation][$activeSlave.vagina to 0,$activeSlave.vaginalSkill to 0,$cash -= $surgeryCost, $activeSlave.health -= 4,$degradation += 10, $surgeryType to "herm"]]
+<</if>>
+<</nobr>>\
+<<nobr>>
+<<if  ($activeSlave.balls is 1)>>
+	<br>Her balls are so small they're scarcely visible.
+<<elseif ($activeSlave.balls gt 1)>>
+	<br>She has testicles.
+<</if>>
+<<if ($activeSlave.balls gt 0)>>
+	[[Geld her|Surgery Degradation][$activeSlave.balls to 0,$cash -= $surgeryCost, $activeSlave.health -= 4,$degradation += 10, $surgeryType to "geld"]]
+<</if>>
+<</nobr>>
+<<nobr>>
+<<if $activeSlave.areolae is 0>>
+	Her areolae are fairly normal.
+<<elseif $activeSlave.areolae is 1>>
+	Her areolae are large but still fairly normal.
+<<elseif ($activeSlave.areolae gt 1) and  ($activeSlave.areolae lt 4)>>
+	She has big areolae that could be reshaped into a pattern.  Graft skin to make her areolae:
+	[[Heart-shaped|Surgery Degradation][$activeSlave.areolae to 4,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"boobs"]]
+	 | [[Star-shaped|Surgery Degradation][$activeSlave.areolae to 5,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"boobs"]]
+<<elseif $activeSlave.areolae is 4>>
+	Her huge areolae have been surgically altered to be heart-shaped.
+<<else>>
+	Her huge areolae have been surgically altered to be star-shaped.
+<</if>>
+<<if $activeSlave.areolae gt 1>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;[[Reduce her areolae|Surgery Degradation][$activeSlave.areolae to 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"areolae"]]
+<<elseif $activeSlave.areolae gt 0>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;[[Reduce her areolae|Surgery Degradation][$activeSlave.areolae to 0,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"areolae"]]
+<</if>>
+<</nobr>>
+
+<<nobr>>
+<<set $toSearch to $activeSlave.race>>
+<<if $toSearch.indexOf("surgically") is -1>>
+	She is $activeSlave.race. Surgically alter her to look more:
+	[[Caucasian|Surgery Degradation][$activeSlave.race to "surgically altered to look white",$activeSlave.skin to either("pale", "tanned", "fair"),$activeSlave.eyes to either("blue", "brown", "green"),$activeSlave.hcolor to either("black", "blonde", "red", "brown"),$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 1, $surgeryType to "race"]] | 
+	[[Latina|Surgery Degradation][$activeSlave.race to "surgically altered to look latina",$activeSlave.skin to either("olive", "brown", "light brown"),$activeSlave.hcolor to either("black", "black", "brown", "brown"),$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 1, $surgeryType to "race"]] | 
+	[[Black|Surgery Degradation][$activeSlave.race to "surgically altered to look black",$activeSlave.skin to either("black", "brown", "light brown"),$activeSlave.hcolor to either("black", "black", "black", "brown"),$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 1, $surgeryType to "race"]] | 
+	[[Asian|Surgery Degradation][$activeSlave.race to "surgically altered to look asian",$activeSlave.skin to either("pale", "dark", "light"),$activeSlave.hcolor to either("black"),$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 1, $surgeryType to "race"]] | 
+	[[Middle Eastern|Surgery Degradation][$activeSlave.race to "surgically altered to look middle eastern",$activeSlave.skin to either("pale", "dark", "light"),$activeSlave.hcolor to "black",$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 1, $surgeryType to "race"]] | 
+	[[Indo-aryan|Surgery Degradation][$activeSlave.race to "surgically altered to look indo-aryan",$activeSlave.skin to either("dark", "light"),$activeSlave.hcolor to "black",$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 1, $surgeryType to "race"]]
+<<else>>
+	She is $activeSlave.race.
+<</if>>
+<</nobr>>\
+
+<<nobr>>
+<<if $activeSlave.teeth is 0>>
+	She has normal, healthy teeth.
+<<elseif $activeSlave.teeth is 1>>
+	She has prosthetic teeth that can be removed for extreme oral sex.
+<<elseif $activeSlave.teeth is 2>>
+	Her teeth have been replaced with sturdy, realistic implants that mimic the dentition of a predator.
+<</if>>
+<<if $activeSlave.teeth is 0>>
+	[[Replace them with removable prosthetics|Surgery Degradation][$activeSlave.teeth to 1,$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 2, $surgeryType to"teeth"]] | [[Replace them with sharp teeth|Surgery Degradation][$activeSlave.teeth to 2,$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 2, $surgeryType to"sharp"]]
+<<elseif $activeSlave.teeth is 1>>
+	[[Replace them with sharp teeth|Surgery Degradation][$activeSlave.teeth to 2,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"sharp"]] | [[Give her normal dental implants|Surgery Degradation][$activeSlave.teeth to 0,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"oral"]]
+<<elseif $activeSlave.teeth is 2>>
+	[[Replace them with removable prosthetics|Surgery Degradation][$activeSlave.teeth to 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"teeth"]] | [[Give her normal dental implants|Surgery Degradation][$activeSlave.teeth to 0,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"oral"]]
+<</if>>
+<</nobr>>\
+
+<<nobr>>
+<<if $activeSlave.mute is 0>>
+	She has normal, healthy vocal cords.
+<<elseif $activeSlave.mute is 1>>
+	She has been made a surgical mute.
+<</if>>
+<<if $activeSlave.mute is 0>>
+	[[Remove her vocal cords|Surgery Degradation][$activeSlave.mute to 1,$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 4, $surgeryType to"mute"]]
+<</if>>
+<</nobr>>\
+
+<<nobr>>
+<<if ($activeSlave.heels is 0) and ($activeSlave.amp is 0)>>
+	She has healthy calves.
+<<elseif ($activeSlave.heels is 1) and ($activeSlave.amp is 0)>>
+	Her calves have been altered so that she cannot walk in anything but very high heels.
+<</if>>
+<<if ($activeSlave.heels is 0) and ($activeSlave.amp is 0)>>
+	[[Alter her tendons so that she cannot walk in anything but very high heels|Surgery Degradation][$activeSlave.heels to 1,$activeSlave.shoes to "none",$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 2, $surgeryType to"heels"]]
+<</if>>
+<<if ($activeSlave.heels is 1) and ($activeSlave.amp is 0)>>
+	[[Replace her tendons|Surgery Degradation][$activeSlave.heels to 0,$activeSlave.shoes to "none",$cash -= $surgeryCost, $activeSlave.health -= 1,$degradation += 1, $surgeryType to"heelsRestoration"]]
+<</if>>
+<</nobr>>\
+
+<<nobr>>
+<<if ($activeSlave.heightImplant is 0) and ($activeSlave.amp is 0)>>
+	She has normal femurs and humeri.
+<<elseif ($activeSlave.heightImplant gt 0) and ($activeSlave.amp is 0)>>
+	Her femurs, humeri, and other major bones have been lengthened.
+<<elseif ($activeSlave.heightImplant lt 0) and ($activeSlave.amp is 0)>>
+	Her femurs, humeri, and other major bones have been shortened.
+<</if>>
+<<if ($activeSlave.heightImplant is 0) and ($activeSlave.amp is 0)>>
+	[[Lengthen major bones to make her taller|Surgery Degradation][$activeSlave.heightImplant to 1,$activeSlave.height += 1,$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 2, $surgeryType to"height"]] | [[Shorten major bones to make her shorter|Surgery Degradation][$activeSlave.heightImplant to -1,$activeSlave.height -= 1,$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 2, $surgeryType to"height"]]
+<<elseif ($activeSlave.height lt 2) and ($activeSlave.height gt -2) and ($activeSlave.amp is 0) and ($surgeryUpgrade is 1)>>
+	[[Advanced height gain surgery|Surgery Degradation][$activeSlave.heightImplant to 1,$activeSlave.height += 1,$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 2, $surgeryType to"height"]] | [[Advanced height reduction surgery|Surgery Degradation][$activeSlave.heightImplant to -1,$activeSlave.height -= 1,$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 2, $surgeryType to"height"]]
+<<elseif ($activeSlave.height lt 2) and ($activeSlave.amp is 0) and ($surgeryUpgrade is 1)>>
+	[[Advanced height gain surgery|Surgery Degradation][$activeSlave.heightImplant to 1,$activeSlave.height += 1,$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 2, $surgeryType to"height"]]
+<<elseif ($activeSlave.height gt -2) and ($activeSlave.amp is 0) and ($surgeryUpgrade is 1)>>
+	[[Advanced height reduction surgery|Surgery Degradation][$activeSlave.heightImplant to -1,$activeSlave.height -= 1,$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation += 2, $surgeryType to"height"]]
+<</if>>
+<</nobr>>\
+
+<<nobr>>
+<<if ($activeSlave.amp is 0)>>
+	She has healthy limbs.
+<<elseif ($activeSlave.amp is 1)>>
+	She is a quadruple amputee.
+<</if>>
+<<if ($activeSlave.amp is 0)>>
+	[[Remove her arms and legs|Surgery Degradation][$activeSlave.amp to 1,$activeSlave.heels to 0,$activeSlave.height to 0,$activeSlave.heightImplant to 0,$activeSlave.assignment to "rest",$activeSlave.assignmentVisible to 1,$cash -= $surgeryCost, $activeSlave.health -= 4,$activeSlave.entertainSkill to 0,$activeSlave.nails to 0,$degradation += 10,$surgeryType to"amp"]] //This will greatly restrict her//
+<</if>>
+<</nobr>>\
+
+<<nobr>>
+<<if $activeSlave.fetish isnot "mindbroken">>
+	She is mentally competent.
+<<elseif $activeSlave.fetish is "mindbroken">>
+	Her mind is gone; she has either been chemically lobotomized, or has lost her mind due to extreme abuse.
+<</if>>
+<<if $activeSlave.fetish isnot "mindbroken">>
+	[[Chemically lobotomize her|Surgery Degradation][$activeSlave.fetish to "mindbroken",$activeSlave.fetishDiscovered to 1,$cash -= $surgeryCost, $activeSlave.health -= 2,$degradation to -1, $surgeryType to"mindbreak"]]
+<</if>>
+<</nobr>>//Warning: this is permanent and irreversible. It will destroy her will and her ability to remember anything but the simplest skills.//

@@ -1,0 +1,100 @@
+<<nobr>>
+
+<<set $activeSlave.devotion += 1>>
+
+<<if ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "submissive")>>
+	Since $activeSlave.slaveName is a submissive, you @@color:hotpink;build her devotion to you@@ by indulging her need to be dominated. Already smiling to herself, she changes into bondage gear that blinds her, forces her arms behind her back, forces her to present her breasts uncomfortably, and forces painfully large dildoes up her <<if $activeSlave.vagina isnot -1>>vagina and <</if>>anus. Thus attired, she is forced to serve you in whatever petty ways occur to you. She holds your tablet for you on her upthrust ass as you work, holds a thin beverage glass for you in her upturned mouth when you eat, and lies still so you can use her tits as a pillow whenever you recline. She loves it.    
+    
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.amp is 1) and ($activeSlave.fetish is "likes girls") and ($slaves.length gt 1)>>
+    Since $activeSlave.slaveName lusts after your other slaves, you @@color:hotpink;build her devotion to you@@ by indulging her. Since she lusts shamelessly after your other slaves, you show her that sharing is indeed caring. You carry her with you through your normal routine, using her as an additional sexual ingredient. When you get a blowjob, the giver is permitted to sit on her hungry mouth. When you take a slave, $activeSlave.slaveName gets orally serviced in turn.
+	<<set $slaves[$i].oralCount += 4>>
+	<<set $oralTotal += 4>>
+	<<if ($activeSlave.vagina is -1)>>
+		<<set $slaves[$i].analCount += 4>>
+		<<set $analTotal += 4>>
+    <<else>>
+		<<set $slaves[$i].analCount += 2>>
+		<<set $analTotal += 2>>
+		<<set $slaves[$i].vaginalCount += 2>>
+		<<set $vaginalTotal += 2>>
+    <</if>>
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "likes girls") and ($slaves.length gt 1)>>
+    Since $activeSlave.slaveName lusts after your other slaves, you @@color:hotpink;build her devotion to you@@ by indulging her. Since she lusts shamelessly after your other slaves, you show her that sharing is indeed caring. She accompanies you through your normal routine, using your slaves with you. When you grope a soft breast, she giggles and fingers a wet pussy. When you get a blowjob, the giver has to spare her a hand. And when you take a slave, she uses a <<if $activeSlave.dick is 0>>strap-on<<else>>her dick<</if>> to mount another of her holes.
+	<<set $slaves[$i].oralCount += 4>>
+	<<set $oralTotal += 4>>
+	<<if ($activeSlave.vagina is -1)>>
+		<<set $slaves[$i].analCount += 4>>
+		<<set $analTotal += 4>>
+    <<else>>
+		<<set $slaves[$i].analCount += 2>>
+		<<set $analTotal += 2>>
+		<<set $slaves[$i].vaginalCount += 2>>
+		<<set $vaginalTotal += 2>>
+    <</if>>
+    
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "cumslut")>>
+	Since $activeSlave.slaveName has an unusual taste for oral sex and cum, you @@color:hotpink;build her devotion to you@@ by indulging her. You allow her to spend her free time following you around. She is permitted to act as your private cum receptacle. If you use another slave, you usually pull out and give her smiling face a facial. When you come inside another slave instead, $activeSlave.slaveName is allowed to get your cum anyway, regardless of whether that requires the other slave to spit it into her mouth or $activeSlave.slaveName to suck it out of the other slave's vagina or rectum. Either way, she rubs her stomach happily after she's swallowed it down.
+	<<set $slaves[$i].oralCount += 20>>
+	<<set $oralTotal += 20>>
+    
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "boobs")>>
+	Since $activeSlave.slaveName has an unusual taste for having her tits fondled, you @@color:hotpink;build her devotion to you@@ by indulging her. You keep her near you as a sort of living stress ball. Whenever you have a free hand, whether you're conducting business or buttfucking another slave, you reach over and play with her. She sometimes masturbates while you massage her breasts and pinch her nipples, but often she doesn't even need to.
+	<<set $slaves[$i].mammaryCount += 20>>
+	<<set $mammaryTotal += 20>>
+    
+<<elseif ($activeSlave.fetishDiscovered is 1) and ($activeSlave.fetish is "humiliation")>>
+	Since $activeSlave.slaveName has an unusual sexuality, you @@color:hotpink;build her devotion to you@@ by indulging her perversions. Since she's an absolute slut for humiliation, you let her whore around inside the special camera room whenever possible. When you're going out and feel like putting on a show, you bring her on a leash and fuck her in public. She comes harder than ever when you push her naked body up against the wall of a crowded public arcology elevator and molest her.
+	<<set $slaves[$i].oralCount += 4>>
+	<<set $oralTotal += 4>>
+	<<if ($activeSlave.vagina is -1)>>
+		<<set $slaves[$i].analCount += 4>>
+		<<set $analTotal += 4>>
+    <<else>>
+		<<set $slaves[$i].analCount += 2>>
+		<<set $analTotal += 2>>
+		<<set $slaves[$i].vaginalCount += 2>>
+		<<set $vaginalTotal += 2>>
+    <</if>>
+    
+<<elseif ($activeSlave.anus is 3) and ($activeSlave.vagina is 3)>>
+	$activeSlave.slaveName is a stretched-out, well-traveled slut. Some like their holes loose, but most prefer cunts and butts that don't make sloppy noises when fucked. So, you spend some quality care time with her, carefully massaging her abused holes with oils and lotions. She comes, of course, but her pussy and asshole do benefit from the treatment. You allow her to service you with her mouth to avoid spoiling your work right away. Afterward, she <<if ($activeSlave.amp isnot 1)>>@@color:hotpink;hugs you and gives you a kiss@@.<<else>>@@color:hotpink;gives you a kiss and tries to hug you,@@ but without arms, all she manages is a sort of nuzzle.<</if>>
+    <<set $activeSlave.anus -= 1>>
+    <<set $activeSlave.vagina -= 1>>
+	<<set $slaves[$i].oralCount += 5>>
+	<<set $oralTotal += 5>>
+    
+<<elseif $activeSlave.vagina is 0>>
+	You fuck $activeSlave.slaveName, of course, but you do it slowly and lovingly. She's accustomed to the slave life, so the experience is almost novel for her and she is affectingly @@color:hotpink;touched by the affection@@. She isn't used to being kissed, teased and massaged. She's almost disappointed when it becomes clear that you don't mean to take her virginity. You gently stimulate her clit while she sucks you off, bringing her to a moaning climax as you cum in her mouth.
+	<<set $slaves[$i].oralCount += 5>>
+	<<set $oralTotal += 5>>
+    
+<<elseif ($activeSlave.anus is 0) and ($activeSlave.vagina lt 0)>>
+	You haven't decided to take $activeSlave.slaveName's anus yet, so you let her suck you off and play with herself while she does. You stroke her hair, play with her tits, and generally pamper her while she orally services you. She's accustomed to the slave life, so the experience of affection is novel for her and she is @@color:hotpink;touched by the affection@@. She isn't used to being kissed, teased and massaged. She's almost disappointed when it becomes clear that you don't mean to take her virgin hole.
+	<<set $slaves[$i].oralCount += 5>>
+	<<set $oralTotal += 5>>
+    
+<<else>>
+	You fuck $activeSlave.slaveName, of course, but you do it slowly and lovingly. She's accustomed to the slave life, so the experience is almost novel for her and she is affectingly @@color:hotpink;touched by the affection@@. She isn't used to being kissed, teased and massaged before she takes cock. Slaves are usually used without regard to their orgasm, so she's also surprised and gratified when you make meticulous efforts to delay your own orgasm so it can coincide with her own. She's a puddle on the sheets under your hands.
+	<<set $slaves[$i].oralCount += 4>>
+	<<set $oralTotal += 4>>
+	<<if ($activeSlave.vagina is -1)>>
+		<<set $slaves[$i].analCount += 4>>
+		<<set $analTotal += 4>>
+    <<else>>
+		<<set $slaves[$i].analCount += 2>>
+		<<set $analTotal += 2>>
+		<<set $slaves[$i].vaginalCount += 2>>
+		<<set $vaginalTotal += 2>>
+    <</if>>
+    
+<</if>>
+
+<<if ($activeSlave.trust gt 2)>>
+  Spending time with you @@color:mediumaquamarine;builds her trust in <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>>.@@
+  <<set $slaves[$i].trust += 1>>
+<<else>>
+  Spending time with you @@color:mediumaquamarine;reduces her fear towards you.@@
+  <<set $slaves[$i].trust += 1>>
+<</if>>
+
+<</nobr>>\

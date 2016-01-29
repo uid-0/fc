@@ -1,0 +1,67 @@
+<<set $nextButton to "Back">>\
+<<set $nextLink to "Main">>\
+<<set $returnTo to "Main">>\
+<<set $encyclopedia to "Slave Schools">>\
+\
+//St. Claver Preparatory is an old world preparatory school that was purchased by an old world medical school adapting to the demand for plastic surgeons from the Free Cities. It functions as a standard slave school until its students near graduation. At that point they are paired with a budding plastic surgeon. Intensive, flawless, and of course successful surgical modification of the student is required to complete certification as a Free Cities plastic surgeon of the top rank. All St. Claver's graduates are modified to a single exacting standard. Meanwhile, the slave school is free to train its students for obedience and sexual conformity.//
+
+St. Claver Preparatory offers a fresh graduate for inspection via video call.
+
+<<nobr>>
+<<display "Generate XX Slave">>
+<<set $activeSlave.origin to "You bought her from St. Claver Preparatory after she served as a plastic surgeon's passing final exam.">>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.intelligenceImplant to 1>>
+<<set $activeSlave.intelligence to either (-1, 0, 1, 2)>>
+<<set $activeSlave.devotion to random(5,7)>>
+<<set $activeSlave.trust to random(5,9)>>
+<<set $activeSlave.health to 10>>
+<<set $activeSlave.heightImplant to 1>>
+<<set $activeSlave.height to 1>>
+<<set $activeSlave.buttImplant to (4-$activeSlave.butt)>>
+<<set $activeSlave.butt += $activeSlave.buttImplant>>
+<<set $activeSlave.boobsImplant to (2000-$activeSlave.boobs)>>
+<<set $activeSlave.boobs += $activeSlave.boobsImplant>>
+<<set $activeSlave.nipples to 1>>
+<<set $activeSlave.areolae to 0>>
+<<set $activeSlave.clit to 0>>
+<<set $activeSlave.lipsImplant to (2-$activeSlave.lips)>>
+<<set $activeSlave.lips += $activeSlave.lipsImplant>>
+<<set $activeSlave.faceImplant to (2-$activeSlave.face)>>
+<<set $activeSlave.face += $activeSlave.faceImplant>>
+<<set $activeSlave.anus to 0>>
+<<set $activeSlave.vagina to 0>>
+<<set $activeSlave.preg to 0>>
+<<set $activeSlave.weight to 0>>
+<<set $activeSlave.vaginalSkill to 0>>
+<<set $activeSlave.oralSkill to 0>>
+<<set $activeSlave.analSkill to 0>>
+<<set $activeSlave.whoreSkill to 0>>
+<<set $activeSlave.entertainSkill to 0>>
+<<set $activeSlave.combatSkill to 0>>
+<<set $activeSlave.pubicHLength to "waxed">>
+<<set $activeSlave.age to 19>>
+<<set $activeSlave.sexualQuirk to either("none")>>
+<<set $activeSlave.behavioralQuirk to either("none")>>
+<<set $activeSlave.hlength to "long">>
+<<set $activeSlave.hcolor to "blonde">>
+<<set $activeSlave.pubicHColor to "blonde">>
+<<if $activeSlave.race isnot "white">><<set $activeSlave.race to "surgically altered to look white">><</if>>
+<<set $activeSlave.skin to "tanned">>
+<<set $activeSlave.customTat to "She has the coat of arms of St. Claver Preparatory tattooed on her left cheek.">>
+<<display "Slave Cost">>
+<<if $slavesSeen gt $slaveMarketLimit>><<set $slaveCost += Math.trunc($slaveCost*(($slavesSeen-$slaveMarketLimit)*0.1))>><</if>>
+<</nobr>>\
+\
+The price is ¤<<print $slaveCost>>.<<if $slavesSeen gt $slaveMarketLimit>> You have cast such a wide net for slaves this week that it is becoming more expensive to find more for sale. Your reputation helps determine your reach within the slave market.<</if>>
+\
+<<nobr>>
+<<if $cash gte $slaveCost>>
+	[[Buy her slave contract|New Slave Intro][$cash -= $slaveCost,$nextButton to "Continue",$nextLink to "AS Dump",$returnTo to "Main"]]
+<<else>>
+	//You lack the necessary funds to buy this slave.//
+<</if>>
+<</nobr>>
+[[Request to see a different graduate of the same school|St. Claver Preparatory][$slavesSeen += 1]]
+
+<<set $saleDescription to 1>><<display "Long Slave Description">><<set $saleDescription to 0>>

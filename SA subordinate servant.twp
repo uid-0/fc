@@ -1,0 +1,28 @@
+<<nobr>>
+
+$slaves[$i].slaveName performs the lowest jobs in your penthouse, cleaning up after your other slaves, bathing them, helping them dress, and giving them quick oral relief.
+
+<<if ($slaves[$i].trust lt -4)>>
+	She is frightened of punishment and works very hard, @@color:yellowgreen;reducing the upkeep@@ of your slaves.
+<<elseif ($slaves[$i].devotion lt -4)>>
+	She is reluctant, requiring your other slaves to force her services, and does not @@color:yellowgreen;reduce upkeep@@ of your slaves much.
+<<elseif ($slaves[$i].devotion lte 4)>>
+	She is hesitant, requiring your other slaves to demand her services, and only slightly @@color:yellowgreen;reduces upkeep@@ of your slaves.
+<<elseif ($slaves[$i].devotion lte 10)>>
+	She is obedient, offering your other slaves to her services, and moderately @@color:yellowgreen;reduces the upkeep@@ of your slaves.
+<<elseif ($slaves[$i].devotion lte 20)>>
+	She is devoted, happily giving your other slaves her services, and @@color:yellowgreen;reduces the upkeep@@ of your slaves.
+<<else>>
+	She is so happy to serve your other slaves that she often sees to their needs before they know they have them, and greatly @@color:yellowgreen;reduces the upkeep@@ of your slaves.
+<</if>>
+
+<<set $activeSlave.oralCount += random(5,10)>>
+<<set $oralTotal += random(5,10)>>
+
+<<if ($slaves[$i].fetishDiscovered is 1) and (($slaves[$i].fetish is "submissive") or ($slaves[$i].fetish is "nympho"))>>
+	Her sexual appetite for submission increases her effectiveness.
+<<elseif ($slaves[$i].fetishDiscovered is 1) and ($slaves[$i].fetish is "dom")>>
+	Her sexual appetite for domination reduces her effectiveness.
+<</if>>
+
+<</nobr>>\

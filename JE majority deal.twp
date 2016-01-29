@@ -1,0 +1,71 @@
+<<nobr>>
+
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $nextButton to "Continue">>
+    
+<<set $majorityDealJustice to 1>>
+
+<<set $contractCost to 20000>>
+
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She was raised to be a slave, since she was mistakenly thought to be from good slave stock.">>
+<<set $activeSlave.career to 0>>
+<<set $activeSlave.devotion to random(2,3)>>
+<<set $activeSlave.trust to $activeSlave.devotion>>
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.health to random(8,9)>>
+<<set $activeSlave.age to 18>>
+<<if $activeSlave.dick is 0>>
+	<<set $activeSlave.vagina to 0>>
+	<<set $activeSlave.ovaries to 1>>
+<</if>>
+<<set $activeSlave.anus to 0>>
+<<set $activeSlave.analSkill to 0>>
+<<set $activeSlave.oralSkill to 0>>
+<<set $activeSlave.whoreSkill to 0>>
+<<set $activeSlave.vaginalSkill to 0>>
+<<set $activeSlave.entertainSkill to 0>>
+
+<</nobr>>\
+\
+Your personal assistant breaks in on your sleep with an urgent message. You push a slave off you and sit up to take it. As the owner of the arcology, you perform some functions that would traditionally be the province of a government. In this anarcho-liberal polity, it's still necessary for people making deals to have someone to appeal to when disputes arise. Part of your agreement with your tenants is that you will perform this duty on deals between two tenants. The message is about just such a disagreement; they always seem to happen in the middle of the night, and they're always urgent.
+
+A prominent citizen is accusing a slave school of lying to him about the pedigree of a girl about to reach her majority. She'll be enslaved once she's of age, and he owns the rights to her. He produces many messages from the school about her progress; they all reference her excellent bloodline. The slave's genes were sequenced recently for an unrelated treatment, and it appears she's not the child of the slaves the school stated she was. He angrily demands compensation for the effort he's put into planning for her.
+
+The school's representative is apologetic, but firm. The school readily admits an error, but he protests that they weren't aware of the confusion, either. They've offered to buy her back, with interest, but reject what they call an exorbitant demand for compensation. They produce the original pedigree, protesting that it shows that they were lied to, too. The slave does resemble the supposed parents closely; only an unusually invasive check would have disclosed the fraud.
+\
+<span id="result">
+<<click "Privately inform both parties you'll settle this in favor of the most generous">>
+	<<replace "#result">>
+	You privately inform both parties you'll settle this in favor of the most generous. You instantly receive two notices of escrow payments contingent on the case going the payer's way. You select the @@color:yellowgreen;bigger of the two@@ and decide the matter before returning to bed in a good mood. However, the next day it becomes apparent that although he isn't stupid enough to make a public accusation of corruption, the loser is proclaiming that he is @@color:red;not pleased@@ with your administration of justice.
+	<<set $rep -= 100>>
+	<<set $cash += 2000>>
+    <</replace>>
+<</click>>
+<<click "Settle the dispute in favor of the accuser">>
+	<<replace "#result">>
+	You settle the dispute in favor of the prominent accuser. He dabbles in slave breeding himself, and was looking forward to using the slave in question for breeding stock; like many breeders he cares deeply about his stable, and speaks @@color:green;positively@@ in public about how you helped an innocent breeder protect his prize bloodlines. Slave trading to and from your arcology is @@color:red;somewhat lessened@@ however, since the school lets it be known that trading in your arcology is a risk.
+	<<set $AProsperity -= 5>>
+	<<set $rep += 500>>
+    <</replace>>
+<</click>>
+<<click "Settle the dispute in favor of the trainer">>
+	<<replace "#result">>
+	You settle the dispute in favor of the school, and against the prominent accuser. He dabbles in slave breeding himself, and was looking forward to using the slave in question for breeding stock; like many breeders he cares deeply about his stable, and speaks @@color:red;furiously@@ in public about how you denied an innocent breeder justice against those swindling slave schools. The school, however, passes a @@color:green;good word@@ around the industry that schools trading with your arcology can expect to be protected from frivolous claims.
+	<<set $AProsperity += 5>>
+	<<set $rep -= 500>>
+    <</replace>>
+<</click>>
+<<click "Compromise on the compensation and offer to buy out the deal">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	You offer to buy out the deal, paying the school and taking the slave yourself, and compromising on the demanded compensation. The citizen was looking forward to using the slave in question for breeding stock; like many breeders he cares deeply about his stable and is mollified by the moderate payment, and speaks @@color:green;kindly@@ in public about how you helped an innocent breeder protect his prize bloodlines. The school sends a @@color:green;positive note@@ around the industry to the effect that schools trading with your arcology can expect to have excessive claims sensibly reduced.
+	<<set $AProsperity += 3>>
+	<<set $rep += 300>>
+	<<set $nextLink to "AS Dump">>
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>> //This will cost $contractCost and give you the slave//
+</span>

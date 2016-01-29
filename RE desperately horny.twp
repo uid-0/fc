@@ -1,0 +1,180 @@
+<<nobr>>
+
+	<<set $nextButton to "Continue">>
+	<<set $nextLink to "AS Dump">>
+    <<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> comes to see you, looking deeply unhappy and shivering occasionally.
+
+<<if ($activeSlave.speechRules is "restrictive")>>
+  Since she is not allowed to speak, she just enters your office and stands there, unsure what to do.
+<<else>>
+  <<if ($activeSlave.mute is 1)>>
+	She tries to communicate something with her hands, but she's so distracted she can't manage it. She starts to shake a little and gives up.
+  <<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>
+	"<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, pleathe! Pleathe - I - pleathe, I need to - oh, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>> -" she lisps frantically. She starts to shake a little and lapses into silence.
+  <<else>>
+	"<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, please! Please - I - please, I need to - oh, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>> -" she babbles. She starts to shake a little and lapses into silence.
+  <</if>>
+<</if>>
+
+The reason for her distress is obvious:
+
+<<if ($activeSlave.dick gt 0) and ($activeSlave.hormones gt 0)>>
+  though the hormones are keeping it soft, her member is dripping a stream of precum; droplets of the stuff spatter her legs. One of her spasms brings her dickhead brushing against her thigh, and the stimulation almost brings her to orgasm.
+<<elseif ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>
+  though she's gelded, her soft member is dripping a stream of watery precum; droplets of the stuff spatter her legs. One of her spasms brings her dickhead brushing against her thigh, and the stimulation almost brings her to orgasm.
+<<elseif $activeSlave.dick gt 4>>
+  her gigantic member juts out painfully, scattering droplets of precum whenever she moves. One of her spasms brings her dickhead brushing up against her abdomen, and the stimulation almost brings her to orgasm.
+<<elseif $activeSlave.dick gt 2>>
+  her impressive member juts out painfully, scattering droplets of precum whenever she moves. One of her spasms brings her dickhead brushing up against her abdomen, and the stimulation almost brings her to orgasm.
+<<elseif $activeSlave.dick gt 0>>
+  her little member juts out painfully, scattering droplets of precum whenever she moves. One of her spasms brings her dickhead brushing up against her abdomen, and the stimulation almost brings her to orgasm.
+<<elseif $activeSlave.clit gt 0>>
+  her lovely clit is painfully engorged, and her pussy is so wet there are little rivulets of moisture running down her inner thighs. One of her spasms brings her clit brushing accidentally against her hand, and the stimulation almost brings her to orgasm.
+<<elseif $activeSlave.labia gt 0>>
+  her lovely pussylips are painfully engorged, and her pussy is so wet there are little rivulets of moisture running down her inner thighs. One of her spasms brings her generous labia brushing against her thighs, and the stimulation almost brings her to orgasm.
+<<else>>
+  her pussy is so wet there are little rivulets of moisture running down her inner thighs. One of her spasms brings her enough stimulation that it almost brings her to orgasm. 
+<</if>>
+
+<</nobr>>
+
+This is the result of not getting off for several days while on the slave diet provided by the nutritional systems. The mild aphrodisiacs included in her food increase her sex drive, and the increased libido can become cumulative if it's not regularly addressed. It looks like she hasn't really gotten hers in a couple of days, and the poor girl can likely think of nothing but that. She's so horny she'll do anything for release. However, she did come to you with her trouble rather than masturbating illicitly.
+\
+<span id="result">
+<<click "Touch her enough to get her off">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You tell her that she deserves a reward for coming to you. She almost bursts into tears and nods jerkily, unable to do anything else. You brush a finger across her cheek, her ear, her lips; at each touch she <<if ($activeSlave.mute is 1)>>breathes in sharply<<else>>gasps<</if>>. Moving around behind her, you run a hand down her flank to her hip, and then around to her navel, and up to cup her breasts. Your run a thumb over each nipple, almost tipping her over the edge. Your hands move down again, spreading her buttocks to tease her clenched anus, and then forward across her perineum - and this is enough. She spasms, pitching forward and almost falling. She hurries to clean up after herself, sobbing with relief and thanking you; her submissiveness @@color:hotpink;has increased.@@
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+<<if ($activeSlave.fetish isnot "nympho") or ($activeSlave.fetishDiscovered isnot 1)>>\
+Let her get off:
+<<if ($activeSlave.fetish isnot "cumslut") or ($activeSlave.fetishDiscovered isnot 1)>>\
+&nbsp;&nbsp;&nbsp;&nbsp;<<click "while she sucks">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<nobr>>
+	You tell her that she deserves a way to get off for coming to tell you rather than breaking the rules. From now on, she can come to you and ask to <<if ($PC.dick is 0)>>perform cunnilingus on you<<else>>blow you<</if>>, and masturbate while she does. She nods through her tears and hurriedly gets to her knees, gagging in her clumsy eagerness, crying a little with relief as she masturbates furiously. She doesn't even pause after her first orgasm; her acceptance of sexual slavery @@color:hotpink;has increased.@@
+	<<set $activeSlave.oralCount += 5>>
+    <<set $oralTotal += 5>>
+	<<if random(1,100) gt 50>>
+	  <<set $activeSlave.fetish to "cumslut">>
+	  <<set $activeSlave.fetishDiscovered to 1>>
+	  Before she realizes what's happening, @@color:pink;she's getting aroused at the thought of <<if ($PC.dick is 0)>>giving head<<else>>sucking cock<</if>>.@@
+	<</if>>
+	<</nobr>>
+    <</replace>>
+<</click>>
+<</if>>\
+<<if ($activeSlave.fetish isnot "boobs") or ($activeSlave.fetishDiscovered isnot 1)>>\
+&nbsp;&nbsp;&nbsp;&nbsp;<<click "during nipple play">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<nobr>>
+	You tell her that she deserves a way to get off for coming to tell you rather than breaking the rules. From now on, she can come to you and offer you her breasts; she will be allowed to masturbate while you do. She nods through her tears and hurriedly presents her chest, crying a little with relief as she feels you nip a nipple with your teeth. She masturbates furiously, not even pausing after her first orgasm; her acceptance of sexual slavery @@color:hotpink;has increased.@@
+	<<set $activeSlave.mammaryCount += 1>>
+    <<set $mammaryTotal += 1>>
+	<<if random(1,100) gt 50>>
+	  <<set $activeSlave.fetish to "boobs">>
+	  <<set $activeSlave.fetishDiscovered to 1>>
+	  Before she realizes what's happening, @@color:pink;she's getting aroused at every brush against her breasts.@@
+	<</if>>
+	<</nobr>>
+    <</replace>>
+<</click>>
+<</if>>\
+<<if ($activeSlave.fetish isnot "buttslut") or ($activeSlave.fetishDiscovered isnot 1)>>\
+&nbsp;&nbsp;&nbsp;&nbsp;<<click "while she takes it up the ass">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<nobr>>
+	You tell her that she deserves a way to get off for coming to tell you rather than breaking the rules. For the rest of the week, she can come to you and offer you her <<if ($activeSlave.anus gt 2)>>big slit of an asspussy<<elseif ($activeSlave.anus gt 1)>>nice asspussy<<else>>tight asshole<</if>>; she will be allowed to masturbate while you buttfuck her. She nods through her tears and hurriedly gets up on your desk, lying on her side and using one hand to spread her buttocks apart while the other is poised to touch herself. She starts crying a little with relief as she feels you slowly insert <<if ($PC.dick is 0)>>a strap-on<<else>>your cock<</if>> into her spasming rectum. She masturbates furiously, not even pausing after her first orgasm; her acceptance of sexual slavery @@color:hotpink;has increased.@@
+    <<display "Anal VCheck">>
+	<<set $activeSlave.analCount += 5>>
+    <<set $analTotal += 5>>
+	<<if random(1,100) gt 50>>
+	  <<set $activeSlave.fetish to "buttslut">>
+	  <<set $activeSlave.fetishDiscovered to 1>>
+	  Before she realizes what's happening, @@color:pink;she's getting aroused at the thought of anal sex.@@
+	<</if>>
+	<</nobr>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take anal virginity//<</if>>
+<</if>>\
+<<if ($activeSlave.fetish isnot "humiliation") or ($activeSlave.fetishDiscovered isnot 1)>>\
+&nbsp;&nbsp;&nbsp;&nbsp;<<click "in public">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<nobr>>
+	You tell her that she deserves a way to get off for coming to tell you rather than breaking the rules. For the rest of the week, she can masturbate out on the promenade, sitting with her legs spread for as much exposure as possible. She nods through her tears and sprints out of your office, dribbling as she goes. She throws herself to the ground outside, to the considerable amusement of passersby, spreading her legs painfuly wide. She masturbates furiously, not even pausing after her first orgasm; her acceptance of sexual slavery @@color:hotpink;has increased.@@
+	<<if random(1,100) gt 50>>
+	  <<set $activeSlave.fetish to "humiliation">>
+	  <<set $activeSlave.fetishDiscovered to 1>>
+	  Before she realizes what's happening, @@color:pink;she's starting to long for humiliation.@@
+	<</if>>
+	<</nobr>>
+    <</replace>>
+<</click>>
+<</if>>\
+<<if ($activeSlave.fetish isnot "submissive") or ($activeSlave.fetishDiscovered isnot 1)>>\
+&nbsp;&nbsp;&nbsp;&nbsp;<<click "after submitting to you">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	<<nobr>>
+	You tell her that she deserves a way to get off for coming to tell you rather than breaking the rules. For the rest of the week, she can come to you and offer you her <<if ($activeSlave.anus gt 2)>>big slit of an asspussy<<elseif ($activeSlave.anus gt 1)>>nice asspussy<<else>>tight asshole<</if>>; she will be allowed to masturbate after, but only after, you are finished with her. She nods through her tears and hurriedly gets up on your desk, lying on her side and using one hand to spread her buttocks apart while the other is poised to touch herself. She starts crying a little with relief as she feels you slowly insert <<if ($PC.dick is 0)>>a strap-on<<else>>your cock<</if>> into her spasming rectum. You are not gentle, and despite the anal stimulation she does not orgasm by the time you <<if ($PC.dick is 0)>>climax to the vibrations of the strap-on, and the pleasure of buttfucking a bitch<<else>>blow your load in her ass<</if>>. She's so eager to get off she doesn't bother to move, and just rolls onto her face to hump herself against her hand, against the desk. <<if ($PC.dick is 0)>>After the momentary pause of your climax, you resume thrusting<<else>>Your cum leaks out of her used backdoor and onto her working hand<</if>>; her acceptance of sexual slavery @@color:hotpink;has increased.@@
+    <<display "Anal VCheck">>
+	<<set $activeSlave.analCount += 5>>
+    <<set $analTotal += 5>>
+	<<if random(1,100) gt 50>>
+	  <<set $activeSlave.fetish to "submissive">>
+	  <<set $activeSlave.fetishDiscovered to 1>>
+	  Before she realizes what's happening, @@color:pink;she's getting aroused at the thought of submission.@@
+	<</if>>
+	<</nobr>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take anal virginity//<</if>>
+<</if>>\
+<<if ($activeSlave.fetish isnot "masochist") or ($activeSlave.fetishDiscovered isnot 1)>>\
+&nbsp;&nbsp;&nbsp;&nbsp;<<click "while in pain">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You tell her that she deserves a way to get off for coming to tell you rather than breaking the rules. For the rest of the week, she can come to you and masturbate: but you will abuse her while she does. She starts to cry in fear, but gets hurriedly up on your desk anyway. You swat her thighs apart so she can get a hand down there. She hesitates desperately before touching herself, knowing that as soon as she does the pain will start, but her horniness wins out. You aim a vicious flick at her <<if ($activeSlave.nipples gt 1)>>absurd nipples<<elseif ($activeSlave.nipples gt 0)>>big nipples<<else>>nipples<</if>> and then take a crop out of your desk, flogging her <<if ($activeSlave.boobsImplant gt 600)>>fake<<elseif ($activeSlave.boobs gt 1000)>>jiggling<<else>>firm<</if>> breasts without mercy. She finally orgasms and flees, falling over her own feet in her desperation; her acceptance of sexual slavery @@color:hotpink;has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<if $activeSlave.fetish is "none">>
+	<<if random(1,100) gt 50>>
+	  <<set $activeSlave.fetish to "masochist">>
+	  <<set $activeSlave.fetishDiscovered to 1>>
+	  Before she realizes what's happening, @@color:pink;she's getting aroused at the thought of <<if $PC.title isnot 0>>her master<<else>>her mistress<</if>> beating her.@@
+	<</if>>
+	<</if>>
+    <</replace>>
+<</click>>
+<</if>>\
+<</if>>\
+</span>

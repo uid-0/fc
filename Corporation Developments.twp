@@ -1,0 +1,369 @@
+<<nobr>>
+
+__The Corporation__
+<br>
+
+<<set $seed to random(1,100)>>
+<<set $corpPeopleEnslaved += 1>>
+
+<<set $corpValue to ($generalAssets*$generalAssetPrice)+($slaveAssets*$slaveAssetPrice)+($entrapmentAssets*$entrapmentAssetPrice)+($captureAssets*$captureAssetPrice)+($trainingAssets*$trainingAssetPrice)+($surgicalAssets*$surgicalAssetPrice)+($drugAssets*$drugAssetPrice)>>
+<<set $corpProfit to Math.trunc($corpValue*(random(7,15)/1000))>>
+<<set $corpCash += $corpProfit>>
+Your corporation made a profit of ¤$corpProfit last week.
+<<if $seed gt 80>>
+  It was an outstanding week for enslavement;
+  <<set $slaveAssets += Math.trunc(($captureAssets+$entrapmentAssets)*0.09)>>
+  <<set $corpPeopleEnslaved += Math.trunc(($captureAssets+$entrapmentAssets)*0.0009)>>
+<<elseif $seed gt 60>>
+  It was a great week for enslavement;
+  <<set $slaveAssets += Math.trunc(($captureAssets+$entrapmentAssets)*0.07)>>
+  <<set $corpPeopleEnslaved += Math.trunc(($captureAssets+$entrapmentAssets)*0.0007)>>
+<<elseif $seed gt 60>>
+  It was a good week for enslavement;
+  <<set $slaveAssets += Math.trunc(($captureAssets+$entrapmentAssets)*0.05)>>
+  <<set $corpPeopleEnslaved += Math.trunc(($captureAssets+$entrapmentAssets)*0.0005)>>
+<<elseif $seed gt 60>>
+  It was a mediocre week for enslavement;
+  <<set $slaveAssets += Math.trunc(($captureAssets+$entrapmentAssets)*0.03)>>
+  <<set $corpPeopleEnslaved += Math.trunc(($captureAssets+$entrapmentAssets)*0.0003)>>
+<<else>>
+  It was a bad week for enslavement;
+  <<set $slaveAssets += Math.trunc(($captureAssets+$entrapmentAssets)*0.01)>>
+  <<set $corpPeopleEnslaved += Math.trunc(($captureAssets+$entrapmentAssets)*0.0001)>>
+<</if>>
+in total, the corporation has enslaved $corpPeopleEnslaved people.
+<<if $slaveAssets lt ($trainingAssets+$surgicalAssets+$drugAssets)>>
+  The corporation has enough training and medical assets to rapidly improve its human holdings.
+  <<set $slaveAssets to Math.trunc($slaveAssets*1.1)>>
+<<elseif $slaveAssets lt ($trainingAssets+$surgicalAssets+$drugAssets*2)>>
+  The corporation uses its training and medical assets to improve its human holdings.
+  <<set $slaveAssets to Math.trunc($slaveAssets*1.05)>>
+<<else>>
+  The corporation has only enough training and medical assets to maintain the value of its human holdings.
+<</if>>
+<<if $corpProfit gt ($personalShares+$publicShares)*2.4>>
+  Since it is now incredibly profitable, a massive dividend of ¤2/share was paid out to stockholders; you received @@color:yellowgreen;¤<<print $personalShares*2>>.@@
+  <<set $cash += $personalShares*2>>
+  <<set $corpCash -= ($personalShares+$publicShares)*2>>
+<<elseif $corpProfit gt ($personalShares+$publicShares)*1.5>>
+  Since it is now highly profitable, a large dividend of ¤1/share was paid out to stockholders; you received @@color:yellowgreen;¤$personalShares.@@
+  <<set $cash += $personalShares>>
+  <<set $corpCash -= ($personalShares+$publicShares)>>
+<<elseif $corpProfit gt ($personalShares+$publicShares)*0.8>>
+  Since it is now very profitable, a moderate dividend of ¤0.5/share was paid out to stockholders; you received @@color:yellowgreen;¤<<print $personalShares*0.5>>.@@
+  <<set $cash += Math.trunc($personalShares*0.5)>>
+  <<set $corpCash -= Math.trunc(($personalShares+$publicShares)*0.5)>>
+<<elseif $corpProfit gt ($personalShares+$publicShares)*0.4>>
+  Since it is now quite profitable, a moderate dividend of ¤0.2/share was paid out to stockholders; you received @@color:yellowgreen;¤<<print $personalShares*0.2>>.@@
+  <<set $cash += Math.trunc($personalShares*0.2)>>
+  <<set $corpCash -= Math.trunc(($personalShares+$publicShares)*0.2)>>
+<<elseif $corpProfit gt ($personalShares+$publicShares)*0.2>>
+  Since it is now quite profitable, a small dividend of ¤0.1/share was paid out to stockholders; you received @@color:yellowgreen;¤<<print $personalShares*0.1>>.@@
+  <<set $cash += Math.trunc($personalShares*0.1)>>
+  <<set $corpCash -= Math.trunc(($personalShares+$publicShares)*0.1)>>
+<</if>>
+
+<<set $seed to random(1,100)>>
+
+<<if $corpValue gt ($personalShares+$publicShares)*$sharePrice*1.1>>
+  The market consensus is that your corporation is undervalued, driving share prices sharply up.
+  <<set $sharePrice to (Math.trunc($sharePrice*random(115,125)))/100>>
+<<elseif random(1,100) lt $rep/30000>>
+  Share prices in your corporation are driven up by your reputation.
+  <<set $sharePrice to (Math.trunc($sharePrice*random(random(105,110),115)))/100>>
+<<elseif $seed gt 80>>
+  Market volatility drives share prices up.
+  <<set $sharePrice to (Math.trunc($sharePrice*random(random(105,110),115)))/100>>
+<<elseif $seed lt 20>>
+  Market volatility drives share prices down.
+  <<set $sharePrice to (Math.trunc($sharePrice*random(85,random(90,95))))/100>>
+<<elseif $corpValue lt ($personalShares+$publicShares)*$sharePrice*0.9>>
+  The market consensus is that your corporation is overvalued, driving share prices sharply down.
+  <<set $sharePrice to (Math.trunc($sharePrice*random(85,random(90,95))))/100>>
+<</if>>
+
+Shares in your corporation are trading at ¤$sharePrice:
+
+<<if $oldSharePrice is $sharePrice>>
+  no different from last week.
+<<elseif $oldSharePrice gt $sharePrice>>
+  down <<print Math.trunc(($oldSharePrice-$sharePrice)*100)/100>> since last week.
+<<else>>
+  up <<print Math.trunc(($sharePrice - $oldSharePrice)*100)/100>> since last week.
+<</if>>
+
+<<set $oldSharePrice to Math.trunc($sharePrice)>>
+
+You hold $personalShares shares personally while $publicShares are publicly held.
+<span id="capitalize">
+<<click "Purchase 500 shares from the corporation">><<set $personalShares += 500>><<set $cash -= 500*$sharePrice>><<set $corpCash += 500*$sharePrice>><<set $sharePrice to (Math.trunc($sharePrice*random(105,110)))/100>><<replace "#capitalize">><<print "You purchased 500 shares from the corporation, driving the share price up slightly.">><</replace>><</click>>
+<<if $personalShares-500 gt $publicShares>>
+   | <<click "Issue 500 new shares">><<set $publicShares += 500>><<set $corpCash += 500*$sharePrice>><<set $sharePrice to (Math.trunc($sharePrice*random(90,95)))/100>><<replace "#capitalize">><<print "The corporation issued 500 new shares, driving the share price down slightly.">><</replace>><</click>>
+<</if>>
+<<if $personalShares-1000 gt $publicShares>>
+   | <<click "Sell 500 of your shares">><<set $personalShares -= 500>><<set $publicShares += 500>><<set $cash += 500*$sharePrice>><<set $sharePrice to (Math.trunc($sharePrice*random(90,95)))/100>><<replace "#capitalize">><<print "You sold 500 shares, driving the share price down slightly.">><</replace>><</click>>
+<<else>>
+   | //You cannot give up majority control.//
+<</if>>
+<<if $publicShares gt 1000>>
+<<if $publicShares gt $personalShares*0.2>>
+   | <<click "Buy 500 publicly held shares">><<set $personalShares += 500>><<set $publicShares -= 500>><<set $cash -= 500*$sharePrice>><<set $sharePrice to (Math.trunc($sharePrice*random(105,110)))/100>><<replace "#capitalize">><<print "You bought 500 shares, driving the share price up slightly.">><</replace>><</click>>
+<<else>>
+   | //You cannot make the corporation privately held.//
+<</if>>
+<</if>>
+</span>
+
+<br>
+//Corporate assets//
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+¤$corpCash in cash on hand.
+<span id="assets">
+
+<br>
+<<if $generalAssetPrice gt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $generalAssetPrice -= 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $generalAssetPrice += 1>>
+  <</if>>
+<<elseif $generalAssetPrice lt 4>>
+	<<set $generalAssetPrice to 5>>
+<<elseif $generalAssetPrice lt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $generalAssetPrice += 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $generalAssetPrice -= 1>>
+  <</if>>
+<<else>>
+  <<if random(1,100) gt 50>>
+	<<set $generalAssetPrice += 1>>
+  <<else>>
+	<<set $generalAssetPrice -= 1>>
+  <</if>>
+<</if>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+¤<<print $generalAssetPrice*$generalAssets>> in general assets.
+General asset prices are
+<<if $generalAssetPrice gt 12>>@@color:yellowgreen;very high@@<<elseif $generalAssetPrice gt 10>>@@color:yellowgreen;high@@<<elseif $generalAssetPrice is 10>>average<<elseif $generalAssetPrice gte 8>>@@color:gold;low@@<<else>>@@color:gold;very low@@<</if>>.
+<<if $generalAssetPrice*500 lt $corpCash>>
+   | <<click "Buy">><<set $generalAssets += 500>><<set $corpCash -= 500*$generalAssetPrice>><<replace "#assets">><<print "You directed the corporation to invest in general assets.">><</replace>><</click>>
+<</if>>
+<<if $generalAssetPrice*1000 lt $corpCash>>
+   | <<click "Massive investment">><<set $generalAssets += Math.trunc($corpCash/($generalAssetPrice*2))>><<set $corpCash to Math.trunc($corpCash/2)>><<replace "#assets">><<print "You directed the corporation to invest in general assets.">><</replace>><</click>>
+<</if>>
+<<if $generalAssets gte 1000>>
+   | <<click "Sell">><<set $generalAssets -= 500>><<set $corpCash += 500*$generalAssetPrice>><<replace "#assets">><<print "You directed the corporation to sell general assets.">><</replace>><</click>>
+<</if>>
+
+<br>
+<<set $slaveAssetPrice to Math.trunc(10*$slaveCostFactor)>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+¤<<print $slaveAssetPrice*$slaveAssets>> in slaves.
+Slave prices are
+<<if $slaveAssetPrice gt 12>>@@color:yellowgreen;very high@@<<elseif $slaveAssetPrice gt 10>>@@color:yellowgreen;high@@<<elseif $slaveAssetPrice is 10>>average<<elseif $slaveAssetPrice gte 8>>@@color:gold;low@@<<else>>@@color:gold;very low@@<</if>>.
+<<if $slaveAssetPrice*500 lt $corpCash>>
+   | <<click "Buy">><<set $slaveAssets += 500>><<set $corpPeopleEnslaved += Math.trunc((500*$slaveAssetPrice)/1000)>><<set $corpCash -= 500*$slaveAssetPrice>><<replace "#assets">><<print "You directed the corporation to invest in slaves.">><</replace>><</click>>
+<</if>>
+<<if $slaveAssetPrice*1000 lt $corpCash>>
+   | <<click "Massive investment">><<set $slaveAssets += Math.trunc($corpCash/($slaveAssetPrice*2))>><<set $corpPeopleEnslaved += Math.trunc(($corpCash/($slaveAssetPrice*2))/1000)>><<set $corpCash to Math.trunc($corpCash/2)>><<replace "#assets">><<print "You directed the corporation to invest in slaves.">><</replace>><</click>>
+<</if>>
+<<if $slaveAssets gte 1000>>
+   | <<click "Sell">><<set $slaveAssets -= 500>><<set $corpCash += 500*$slaveAssetPrice>><<replace "#assets">><<print "You directed the corporation to sell slaves.">><</replace>><</click>>
+<</if>>
+
+<br>
+<<if $entrapmentAssetPrice gt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $entrapmentAssetPrice -= 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $entrapmentAssetPrice += 1>>
+  <</if>>
+<<elseif $entrapmentAssetPrice lt 4>>
+	<<set $entrapmentAssetPrice to 5>>
+<<elseif $entrapmentAssetPrice lt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $entrapmentAssetPrice += 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $entrapmentAssetPrice -= 1>>
+  <</if>>
+<<elseif $entrapmentAssetPrice is 10>>
+  <<if random(1,100) gt 50>>
+	<<set $entrapmentAssetPrice += 1>>
+  <<else>>
+	<<set $entrapmentAssetPrice -= 1>>
+  <</if>>
+<<else>>
+	<<set $entrapmentAssetPrice to 5>>
+<</if>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+¤<<print $entrapmentAssetPrice*$entrapmentAssets>> in legal enslavement assets.
+Legal enslavement assets prices are
+<<if $entrapmentAssetPrice gt 12>>@@color:yellowgreen;very high@@<<elseif $entrapmentAssetPrice gt 10>>@@color:yellowgreen;high@@<<elseif $entrapmentAssetPrice is 10>>average<<elseif $entrapmentAssetPrice gte 8>>@@color:gold;low@@<<else>>@@color:gold;very low@@<</if>>.
+<<if $entrapmentAssetPrice*500 lt $corpCash>>
+   | <<click "Buy">><<set $entrapmentAssets += 500>><<set $corpCash -= 500*$entrapmentAssetPrice>><<replace "#assets">><<print "You directed the corporation to invest in legal enslavement assets.">><</replace>><</click>>
+<</if>>
+<<if $entrapmentAssetPrice*1000 lt $corpCash>>
+   | <<click "Massive investment">><<set $entrapmentAssets += Math.trunc($corpCash/($entrapmentAssetPrice*2))>><<set $corpCash to Math.trunc($corpCash/2)>><<replace "#assets">><<print "You directed the corporation to invest in legal enslavement assets.">><</replace>><</click>>
+<</if>>
+<<if $entrapmentAssets gte 1000>>
+   | <<click "Sell">><<set $entrapmentAssets -= 500>><<set $corpCash += 500*$entrapmentAssetPrice>><<replace "#assets">><<print "You directed the corporation to sell legal enslavement assets.">><</replace>><</click>>
+<</if>>
+
+<br>
+<<if $captureAssetPrice gt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $captureAssetPrice -= 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $captureAssetPrice += 1>>
+  <</if>>
+<<elseif $captureAssetPrice lt 4>>
+	<<set $captureAssetPrice to 5>>
+<<elseif $captureAssetPrice lt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $captureAssetPrice += 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $captureAssetPrice -= 1>>
+  <</if>>
+<<elseif $captureAssetPrice is 10>>
+  <<if random(1,100) gt 50>>
+	<<set $captureAssetPrice += 1>>
+  <<else>>
+	<<set $captureAssetPrice -= 1>>
+  <</if>>
+<<else>>
+	<<set $captureAssetPrice to 5>>
+<</if>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+¤<<print $captureAssetPrice*$captureAssets>> in conflict zone enslavement assets.
+Extralegal enslavement asset prices are
+<<if $captureAssetPrice gt 12>>@@color:yellowgreen;very high@@<<elseif $captureAssetPrice gt 10>>@@color:yellowgreen;high@@<<elseif $captureAssetPrice is 10>>average<<elseif $captureAssetPrice gte 8>>@@color:gold;low@@<<else>>@@color:gold;very low@@<</if>>.
+<<if $captureAssetPrice*500 lt $corpCash>>
+   | <<click "Buy">><<set $captureAssets += 500>><<set $corpCash -= 500*$captureAssetPrice>><<replace "#assets">><<print "You directed the corporation to invest in conflict zone enslavement assets.">><</replace>><</click>>
+<</if>>
+<<if $captureAssetPrice*1000 lt $corpCash>>
+   | <<click "Massive investment">><<set $captureAssets += Math.trunc($corpCash/($captureAssetPrice*2))>><<set $corpCash to Math.trunc($corpCash/2)>><<replace "#assets">><<print "You directed the corporation to invest in conflict zone enslavement assets.">><</replace>><</click>>
+<</if>>
+<<if $captureAssets gte 1000>>
+   | <<click "Sell">><<set $captureAssets -= 500>><<set $corpCash += 500*$captureAssetPrice>><<replace "#assets">><<print "You directed the corporation to sell conflict zone enslavement assets.">><</replace>><</click>>
+<</if>>
+
+<br>
+<<if $trainingAssetPrice gt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $trainingAssetPrice -= 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $trainingAssetPrice += 1>>
+  <</if>>
+<<elseif $trainingAssetPrice lt 4>>
+	<<set $trainingAssetPrice to 5>>
+<<elseif $trainingAssetPrice lt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $trainingAssetPrice += 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $trainingAssetPrice -= 1>>
+  <</if>>
+<<elseif $trainingAssetPrice gt 5>>
+  <<if random(1,100) gt 50>>
+	<<set $trainingAssetPrice += 1>>
+  <<else>>
+	<<set $trainingAssetPrice -= 1>>
+  <</if>>
+<<else>>
+	<<set $trainingAssetPrice to 5>>
+<</if>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+¤<<print $trainingAssetPrice*$trainingAssets>> in slave training assets.
+Slave training asset prices are
+<<if $trainingAssetPrice gt 12>>@@color:yellowgreen;very high@@<<elseif $trainingAssetPrice gt 10>>@@color:yellowgreen;high@@<<elseif $trainingAssetPrice is 10>>average<<elseif $trainingAssetPrice gte 8>>@@color:gold;low@@<<else>>@@color:gold;very low@@<</if>>.
+<<if $trainingAssetPrice*500 lt $corpCash>>
+   | <<click "Buy">><<set $trainingAssets += 500>><<set $corpCash -= 500*$trainingAssetPrice>><<replace "#assets">><<print "You directed the corporation to invest in slave training assets.">><</replace>><</click>>
+<</if>>
+<<if $trainingAssetPrice*1000 lt $corpCash>>
+   | <<click "Massive investment">><<set $trainingAssets += Math.trunc($corpCash/($trainingAssetPrice*2))>><<set $corpCash to Math.trunc($corpCash/2)>><<replace "#assets">><<print "You directed the corporation to invest in slave training assets.">><</replace>><</click>>
+<</if>>
+<<if $trainingAssets gte 1000>>
+   | <<click "Sell">><<set $trainingAssets -= 500>><<set $corpCash += 500*$trainingAssetPrice>><<replace "#assets">><<print "You directed the corporation to sell slave training assets.">><</replace>><</click>>
+<</if>>
+
+<br>
+<<if $surgicalAssetPrice gt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $surgicalAssetPrice -= 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $surgicalAssetPrice += 1>>
+  <</if>>
+<<elseif $surgicalAssetPrice lt 4>>
+	<<set $surgicalAssetPrice to 5>>
+<<elseif $surgicalAssetPrice lt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $surgicalAssetPrice += 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $surgicalAssetPrice -= 1>>
+  <</if>>
+<<elseif $surgicalAssetPrice is 10>>
+  <<if random(1,100) gt 50>>
+	<<set $surgicalAssetPrice += 1>>
+  <<else>>
+	<<set $surgicalAssetPrice -= 1>>
+  <</if>>
+<<else>>
+	<<set $surgicalAssetPrice to 5>>
+<</if>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+¤<<print $surgicalAssetPrice*$surgicalAssets>> in surgical assets.
+Surgical asset prices are
+<<if $surgicalAssetPrice gt 12>>@@color:yellowgreen;very high@@<<elseif $surgicalAssetPrice gt 10>>@@color:yellowgreen;high@@<<elseif $surgicalAssetPrice is 10>>average<<elseif $surgicalAssetPrice gte 8>>@@color:gold;low@@<<else>>@@color:gold;very low@@<</if>>.
+<<if $surgicalAssetPrice*500 lt $corpCash>>
+   | <<click "Buy">><<set $surgicalAssets += 500>><<set $corpCash -= 500*$surgicalAssetPrice>><<replace "#assets">><<print "You directed the corporation to invest in surgical assets.">><</replace>><</click>>
+<</if>>
+<<if $surgicalAssetPrice*1000 lt $corpCash>>
+   | <<click "Massive investment">><<set $surgicalAssets += Math.trunc($corpCash/($surgicalAssetPrice*2))>><<set $corpCash to Math.trunc($corpCash/2)>><<replace "#assets">><<print "You directed the corporation to invest in surgical assets.">><</replace>><</click>>
+<</if>>
+<<if $surgicalAssets gte 1000>>
+   | <<click "Sell">><<set $surgicalAssets -= 500>><<set $corpCash += 500*$surgicalAssetPrice>><<replace "#assets">><<print "You directed the corporation to sell surgical assets.">><</replace>><</click>>
+<</if>>
+
+<br>
+<<if $drugAssetPrice gt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $drugAssetPrice -= 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $drugAssetPrice += 1>>
+  <</if>>
+<<elseif $drugAssetPrice lt 4>>
+	<<set $drugAssetPrice to 5>>
+<<elseif $drugAssetPrice lt 10>>
+  <<if random(1,100) gt 50>>
+	<<set $drugAssetPrice += 1>>
+  <<elseif random(1,100) gt 50>>
+	<<set $drugAssetPrice -= 1>>
+  <</if>>
+<<elseif $drugAssetPrice is 10>>
+  <<if random(1,100) gt 50>>
+	<<set $drugAssetPrice += 1>>
+  <<else>>
+	<<set $drugAssetPrice -= 1>>
+  <</if>>
+<<else>>
+	<<set $drugAssetPrice to 5>>
+<</if>>
+&nbsp;&nbsp;&nbsp;&nbsp;
+¤<<print $drugAssetPrice*$drugAssets>> in pharmaceutical assets.
+Drug asset prices are
+<<if $drugAssetPrice gt 12>>@@color:yellowgreen;very high@@<<elseif $drugAssetPrice gt 10>>@@color:yellowgreen;high@@<<elseif $drugAssetPrice is 10>>average<<elseif $drugAssetPrice gte 8>>@@color:gold;low@@<<else>>@@color:gold;very low@@<</if>>.
+<<if $drugAssetPrice*500 lt $corpCash>>
+   | <<click "Buy">><<set $drugAssets += 500>><<set $corpCash -= 500*$drugAssetPrice>><<replace "#assets">><<print "You directed the corporation to invest in pharmaceutical assets.">><</replace>><</click>>
+<</if>>
+<<if $drugAssetPrice*1000 lt $corpCash>>
+   | <<click "Massive investment">><<set $drugAssets += Math.trunc($corpCash/($drugAssetPrice*2))>><<set $corpCash to Math.trunc($corpCash/2)>><<replace "#assets">><<print "You directed the corporation to invest in pharmaceutical assets.">><</replace>><</click>>
+<</if>>
+<<if $drugAssets gte 1000>>
+   | <<click "Sell">><<set $drugAssets -= 500>><<set $corpCash += 500*$drugAssetPrice>><<replace "#assets">><<print "You directed the corporation to sell pharmaceutical assets.">><</replace>><</click>>
+<</if>>
+
+</span>
+
+
+<</nobr>>

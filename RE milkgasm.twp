@@ -1,0 +1,61 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<<set $activeSlave.devotion += 1>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is assigned to serve as a milk cow. Since she's implanted with slow-release lactation drugs, her lactation isn't really too similar to that of a normal mother. It's the same stuff, but it's produced at a much, much higher volume. To stay comfortable, $activeSlave.slaveName has to use milkers every couple of hours. Any more than that, and she gets painfully sore.
+
+She constantly passes by your desk as you work, going back and forth between the milkers and her other tasks. Even if you didn't know which was which, it would be easy to tell which way she was going. One way, she <<if ($activeSlave.heels is 1) and ($activeSlave.shoes isnot "heels") and ($activeSlave.shoes isnot "boots") and ($activeSlave.shoes isnot "extreme heels")>>crawls<<elseif ($activeSlave.shoes is "heels") or ($activeSlave.shoes is "boots") or ($activeSlave.shoes is "extreme heels")>>totters<<else>>walks<</if>> gingerly, supporting her udders with both hands, dribbling a little milk as she goes. The other way, she has a distinctly relieved expression and her breasts are distinctly saggier.
+\
+<span id="result">
+<<click "Have some fun with her once she's using the milkers">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	$activeSlave.slaveName is face down into a special chair a bit like a massage setup, with her breasts hanging down so the milkers can work away at her nipples. As such, her back and ass are on display as she grunts and groans with relief. She starts at your hand on her back but quickly relaxes. <<if ($activeSlave.vagina isnot -1)>>The stimulation of the milking has her soaking wet, and she whimpers with pleasure as you enter her sopping pussy. She's so wet that her plentiful vaginal secretions make it very easy for you to switch <<if ($PC.dick is 0)>>your strap-on<<else>>your dick<</if>> to the cow's butt.<<else>>Perversely, this milk cow has no pussy, so you spit on her ass and sodomize her<<if ($PC.dick is 0)>> with a strap-on<</if>> instead as she bucks and grinds against the chair.<</if>> When she comes, the milkers detect her orgasm to your fucking and shunt the milk into different reservoirs. Though you've never been able to taste much difference, there's a belief out there that 'milk-cum,' the squirts of milk a slave milk girl produces when climaxing with her <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, have special aphrodisiac powers. @@color:yellowgreen;It can be sold at a special premium.@@ Naturally, @@color:hotpink;her devotion to you has also increased.@@
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+        <<display "Simple VCheck">>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+        <<display "Anal VCheck">>
+    <</if>>
+    <</replace>>
+    <<set $cash += 100>>
+    <<set $activeSlave.devotion += 1>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<<click "Delay her milking and then fuck her in public">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	$activeSlave.slaveName obeys without hesitation when you order her to kneel next to your desk the next time she tries to go to the milkers. Her equanimity is severely tested over the next hours as you ignore her. The occasional glance at her shows her growing increasingly frantic as her breasts grow heavier and her nipples get prouder. Finally, you<<if ($PC.dick is 0)>> don a strap-on and<</if>> lead the whimpering, dripping slave out to a public street. Here, you hold her upright so you can fuck her standing. When she finally comes through the pain of her overfull udders, you reach forward and squeeze her so that she screams in pain and relief, spraying jets of milk. She continually aftershock orgasms as you continue pounding. You offer her breasts to the growing crowd, many of whom come forward to taste her cream. <<if ($activeSlave.vagina is -1)>>You fuck her butt<<else>>You fuck her pussy and ass, one after the other,<</if>> until they've sucked her empty. @@color:hotpink;Her submission to you has increased@@ and the @@color:green;public certainly appreciated the service.@@
+    <<if ($activeSlave.vagina gt -1)>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+        <<display "Vaginal VCheck">>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+        <<display "Anal VCheck">>
+    <<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+        <<display "Anal VCheck">>
+    <</if>>
+    <<set $activeSlave.devotion += 1>>
+    <<set $rep += 100>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+</span>

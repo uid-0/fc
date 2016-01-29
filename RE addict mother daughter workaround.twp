@@ -1,0 +1,35 @@
+	Despite herself, she sobs with relief when you agree. She offers to suck you while you complete the necessary legalities, but instead you idly place a big dose of aphrodisiac on your desk and tell her to wait quietly. After ten minutes of careful manipulation, she's signed away both her own freedom and her daughter's without realizing it, in return for the drug. She's masturbating furiously on a chair when her daughter arrives. She immediately realizes what's happened and her eyes fill with all-consuming hatred, but she can't stop rubbing.
+    
+    Unsurprisingly the daughter is an addict too, and before long she's given her signature and is sitting on a different chair on a strong dose of aphrodisiacs. <<if $activeSlave.dick gt 0>>Mother and daughter crank it desperately,<<else>>Mother and daughter schlick themselves desperately,<</if>> sobbing in despair as you hurry to complete the nastily complex paperwork. This is going to be fun.
+    
+<<display "Nationality to Name">>
+
+<<if $useFSNames is 0>>
+  <<set $activeSlave.slaveName to $activeSlave.birthName>>
+<<elseif $FSRomanRevivalist gt 20>>
+  <<set $activeSlave.slaveName to $romanSlaveNames.random()>>
+<<elseif $FSAncientEgyptianRevivalist gt 20>>
+  <<set $activeSlave.slaveName to $ancientEgyptianSlaveNames.random()>>
+<<elseif $FSDegradationist gt 0>>
+  <<display "Degrading Name">>
+<<else>>
+  <<set $activeSlave.slaveName to $activeSlave.birthName>>
+<</if>>
+    
+<<set $secondSlave.origin to "You tricked her mother into selling her into slavery to clear addiction debts.">>
+
+    <<set $secondSlave.slaveName to $activeSlave.birthName>>
+    <<set $secondSlave.ID to $activeSlave.ID + 1000>>
+    <<set $secondSlave.devotion += 2>>
+    <<set $secondSlave.trust += 2>>
+    <<set $secondSlave.oldDevotion to $secondSlave.devotion>>
+	<<set $secondSlave.boobs -= 100>>
+	<<set $secondSlave.butt -= 1>>
+<<if $secondSlave.vagina gt -1>><<set $secondSlave.vagina to 1>><</if>>
+	<<set $secondSlave.anus to 1>>
+	<<set $secondSlave.age to random(18,22)>>
+
+<<set $secondSlave.relation to "daughter">>
+<<set $secondSlave.relationTarget to $activeSlave.ID - 1000>>
+
+	<<set $slaves.push($secondSlave)>>

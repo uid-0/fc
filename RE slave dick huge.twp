@@ -1,0 +1,56 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+The showers your slaves use are well vented and transparent walled so that you can see their occupants clearly, even from your desk. Working late at night, you see <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> sitting hunched under the water in one of the showers, with her back to you. You tell your desk to focus on her, and you are rewarded with three different angles of $activeSlave.slaveName giving herself a blowjob. She has to bend over very hard to get the tip of her huge <<if $seeRace is 1>>$activeSlave.race <</if>>dick into her mouth, but she's obviously enjoying it all the same. It's not against the rules for her to masturbate; she's just found an impressive way of doing it. <<if $activeSlave.balls is 3>>As she works herself, she plays with her massive balls, rolling them around and squeezing them gently.<<elseif $activeSlave.balls is 2>>As she works herself, she plays with her balls, massaging them with one hand.<</if>>
+\
+<span id="result">
+<<click "Enter the shower and take her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She's so occupied that she doesn't hear you until you seize her under the armpits and drag her to her feet. Her massive dickhead pops free of her mouth and she squeaks in surprise as you push her against the wall of the shower and stuff your <<if ($PC.dick is 0)>>strap-on<<else>>dick<</if>> up her ass. She was already very close to orgasm, and the stimulation of her dick rubbing against the warm, wet wall of the shower, not to mention the feeling of being buttfucked, is enough that she climaxes quickly. <<if $activeSlave.balls is 3>>Her huge load coats the shower wall with cum. <</if>>You pull out and let her finish by <<if ($PC.dick is 0)>>giving you oral<<else>>sucking your dick<</if>>, since she started by sucking herself. @@color:hotpink;She has become more submissive to you.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <<if ($activeSlave.anus is 0)>>
+      @@color:lime;This breaks in $activeSlave.slaveName's virgin ass.@@
+      <<set $activeSlave.anus to 1>>
+      @@color:hotpink;She enjoys losing her butt cherry to you.@@
+      <<set  $activeSlave.devotion += 1>>
+ 	<</if>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take anal virginity//<</if>>
+<<if ($PC.dick isnot 0)>>\
+<<click "The only dick she should suck is her <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>'s">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She's so occupied that she doesn't hear you until you seize her hair and pull her head back. Her massive dickhead pops free of her mouth and she squeaks in surprise. The noise is cut off by a gag as you ram yourself down her throat. She plays with your balls as you face fuck her and jacks off with her other hand. She was so close when you intruded that she cums long before you do. There's a lot of cum in the shower when you're through. <<if $activeSlave.balls is 3>>Her huge balls made an especially major contribution. <</if>>@@color:hotpink;She has become more submissive to you.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 1>>
+	<<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+<</if>>\
+<<click "See if she can do that while you take her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You interrupt $activeSlave.slaveName and make her lie on a nearby bed. After some preparatory stretching, during which her frustrated erection flops forlornly around, you manage to get both her ankles behind her head. In this position she manages to resume sucking on the head of her penis. So contorted, her anus is not well angled for comfortable sodomy, so she is soon moaning and grunting into her cock as you fuck her. She finishes <<if $activeSlave.balls is 3>>her enormous ejaculation <</if>>into her own mouth and then <<if ($PC.dick is 0)>>finds herself giving you oral directly, since you pulled your strap-on off<<else>>receives your load into her now-brimming throat<</if>>. @@color:hotpink;Her devotion to you has increased.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <<display "Anal VCheck">>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0)>> //This option will take anal virginity//<</if>>
+</span>

@@ -1,0 +1,13 @@
+<<nobr>>
+
+<<if ($activeSlave.vagina isnot -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+<<else>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+<</if>>
+
+<</nobr>>\

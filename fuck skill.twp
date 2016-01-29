@@ -1,0 +1,29 @@
+<<nobr>>
+
+''Your head girl __@@color:pink;$HeadGirl.slaveName@@__'' notices that ''__@@color:pink;$activeSlave.slaveName@@__'' isn't as skilled at intercourse as she is.
+
+<<if ($HeadGirl.devotion lte 4)>>
+	Since your head girl is not obedient, her lazy attempts to teach are ineffectual.
+<<elseif ($HeadGirl.fetish is "nympho")>>
+	In spare moments she teaches $activeSlave.slaveName how to take a dick. Your head girl's enthusiasm for sex is infectious. @@color:green;$activeSlave.slaveName's vanilla sex skills have improved.@@
+	<<set $activeSlave.vaginalSkill += 1>>
+<<elseif ($HeadGirl.dick gt 0) and ($HeadGirl.hormones lt 1) and ($HeadGirl.balls isnot 0)>>
+	In spare moments she teaches $activeSlave.slaveName how to take a dick. Your head girl uses her penis as an effective teaching tool. @@color:green;$activeSlave.slaveName's vanilla sex skills have improved.@@
+	<<set $activeSlave.vaginalSkill += 1>>
+<<elseif ($HeadGirl.clit gt 2)>>
+	In spare moments she teaches $activeSlave.slaveName how to take a phallus. Your head girl uses her pseudophallus-sized clit as an effective teaching tool. @@color:green;$activeSlave.slaveName's vanilla sex skills have improved.@@
+	<<set $activeSlave.vaginalSkill += 1>>
+<<elseif random(1,100) lt (20+$HeadGirl.age+($HeadGirl.intelligence*10)+($activeSlave.intelligence*10))>>
+	In spare moments she teaches $activeSlave.slaveName how to take a dick. @@color:green;$activeSlave.slaveName's vanilla sex skills have improved.@@
+	<<set $activeSlave.vaginalSkill += 1>>
+<<else>>
+	$HeadGirl.slaveName does her best but $activeSlave.slaveName doesn't learn much from her this week.
+<</if>>
+
+<<if $HeadGirl.age gt 30>>
+	$HeadGirl.slaveName's age and experience are an advantage in passing on sexual technique.
+<<elseif $HeadGirl.age lt 25>>
+	$HeadGirl.slaveName's youth and inexperience are a disadvantage in passing on sexual technique.
+<</if>>
+
+<</nobr>>\

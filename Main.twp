@@ -1,0 +1,209 @@
+<<nobr>>
+
+/* GAMEOVERS */
+
+<<if $slaves.length lt 1>>
+	<<set $ui to "start">>
+	<<goto "No Slaves Gameover">>
+<</if>>
+
+<<if $rulesAssistantAuto is 1>>
+  <<silently>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<set $activeSlave to $slaves[$i]>>
+	  <<display "Default Rules">>
+	  <<set $slaves[$i] to $activeSlave>>
+	<</for>>
+  <</silently>>
+<</if>>
+
+<<if ($sortSlavesBy is "name") and ($sortSlavesOrder is "ascending")>>
+	<<set $slaves to $slaves.sort(function(a, b){if(a.slaveName < b.slaveName) return -1; if(a.slaveName > b.slaveName) return 1; return 0;})>>
+<<elseif ($sortSlavesBy is "name")>>
+	<<set $slaves to $slaves.sort(function(a, b){if(a.slaveName > b.slaveName) return -1; if(a.slaveName < b.slaveName) return 1; return 0;})>>
+<<elseif ($sortSlavesBy is "assignment") and ($sortSlavesOrder is "ascending")>>
+	<<set $slaves to $slaves.sort(function(a, b){if(a.assignment < b.assignment) return -1; if(a.assignment > b.assignment) return 1; return 0;})>>
+<<elseif ($sortSlavesBy is "assignment")>>
+	<<set $slaves to $slaves.sort(function(a, b){if(a.assignment > b.assignment) return -1; if(a.assignment < b.assignment) return 1; return 0;})>>
+<<elseif ($sortSlavesBy is "seniority") and ($sortSlavesOrder is "ascending")>>
+	<<set $slaves to $slaves.sort(function(a, b){return b.weekAcquired-a.weekAcquired})>>
+<<elseif ($sortSlavesBy is "seniority")>>
+	<<set $slaves to $slaves.sort(function(a, b){return a.weekAcquired-b.weekAcquired})>>
+<<elseif ($sortSlavesBy is "age") and ($sortSlavesOrder is "ascending")>>
+	<<set $slaves to $slaves.sort(function(a, b){return a.age-b.age})>>
+<<elseif ($sortSlavesBy is "age")>>
+	<<set $slaves to $slaves.sort(function(a, b){return b.age-a.age})>>
+<<elseif ($sortSlavesOrder is "ascending")>>
+	<<set $slaves to $slaves.sort(function(a, b){return a.devotion-b.devotion})>>
+<<else>>
+	<<set $slaves to $slaves.sort(function(a, b){return b.devotion-a.devotion})>>
+<</if>>
+
+<<set $nextButton to "END WEEK">>
+<<set $nextLink to "End Week">>
+<<set $encyclopedia to "How to Play">>
+<<display "Costs">>
+
+<</nobr>>\
+\
+''MAIN MENU''&nbsp;&nbsp;&nbsp;&nbsp;\
+<<if $seeDesk is 1>>\
+  <<nobr>>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;//<<display "Arcology Description">>//
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;//You are at your desk in your penthouse office. It has a glass top interface from which you can rule over your arcology. Next to your desk is a sturdy black leather couch with attachment points for cuffs. All the walls on this floor are glass, so you can see your <<if $slaves.length gt 50>>innumerable<<elseif $slaves.length gt 20>>many<<elseif $slaves.length gt 10>>numerous<<elseif $slaves.length gt 5>>handful of<<else>>few<</if>> slaves going about their business. The room is designed so that everyone must walk past the door to your office to get anywhere. Your <<if $AProsperityCap gt 150>>massively upgraded<<elseif $AProsperityCap gt 100>>heavily upgraded<<elseif $AProsperityCap gt 60>>upgraded<<else>>unimproved<</if>> arcology is <<if $AProsperity gt 150>>a beacon of prosperity<<elseif $AProsperity gt 100>>prosperous<<elseif $AProsperity gt 60>>busy<<else>>sparsely populated<</if>>.<<if $personalArms gt 0>> Your custom armor rests in the corner of the room where visitors can admire it, and you can don it quickly if necessary.<<if ($week gt 35) and ($mercenaries gte 5)>> Its plates bear scarring won in victorious battle, and from its back rises a banner depicting you at the head of your $mercenariesTitle.<<elseif $week gt 35>> Its plates bear scarring fairly won.<</if>><</if>>
+	[[Hide|Main][$seeDesk to 0]]
+  <</nobr>>\
+<<else>>\
+    //[[Show room description|Main][$seeDesk to 1]]//\
+<</if>>\
+<<if $seeFCNN is 1>>\
+<<if $fcnn.length gt 0>>
+FCNN: <<print $fcnn.random()>>//<</if>> //[[Hide|Main][$seeFCNN to 0]]//
+<<else>>\
+ | //[[Show FCNN news feed|Main][$seeFCNN to 1]]//
+<</if>>\
+
+__''Your House Slaves''__&nbsp;&nbsp;&nbsp;&nbsp;//[[Summary Options]]<<if $rulesAssistantMain isnot 0>> | [[Rules Assistant Options|Rules Assistant]] | <<if $rulesAssistantAuto isnot 1>><<click "Activate Rules Assistant">><<for $i to 0; $i lt $slaves.length; $i++>><<set $activeSlave to $slaves[$i]>><<display "Default Rules">><<set $slaves[$i] to $activeSlave>><</for>><<goto "Main">><</click>> | <<click "Automatically apply Rules Assistant">><<set $rulesAssistantAuto to 1>><<goto "Main">><</click>><<else>><<click "Stop automatically applying Rules Assistant">><<set $rulesAssistantAuto to 0>><<goto "Main">><</click>><</if>><</if>><<if $sortSlavesMain isnot 0>><br>&nbsp;&nbsp;&nbsp;&nbsp;Sort by: <<if $sortSlavesBy isnot "devotion">>[[Devotion|Main][$sortSlavesBy to "devotion"]]<<else>>Devotion<</if>> | <<if $sortSlavesBy isnot "name">>[[Name|Main][$sortSlavesBy to "name"]]<<else>>Name<</if>> | <<if $sortSlavesBy isnot "assignment">>[[Assignment|Main][$sortSlavesBy to "assignment"]]<<else>>Assignment<</if>> | <<if $sortSlavesBy isnot "seniority">>[[Seniority purchased|Main][$sortSlavesBy to "seniority"]]<<else>>Seniority<</if>> | <<if $sortSlavesBy isnot "age">>[[Age|Main][$sortSlavesBy to "age"]]<<else>>Age<</if>> | Sort: <<if $sortSlavesOrder isnot "descending">>[[Descending|Main][$sortSlavesOrder to "descending"]]<<else>>Descending<</if>> | <<if $sortSlavesOrder isnot "ascending">>[[Ascending|Main][$sortSlavesOrder to "ascending"]]<<else>>Ascending<</if>><</if>>//\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if $slaves[$i].choosesOwnClothes is 1>>\
+	<<silently>><<display "SA chooses own clothes">><</silently>>\
+<</if>>\
+<<if $slaves[$i].assignmentVisible is 1>>\
+<br><<if "be your Head Girl" == $slaves[$i].assignment>>\
+	''HG'' \
+<</if>>\
+<<if "recruit girls" == $slaves[$i].assignment>>\
+	''RC'' \
+<</if>>\
+<<if $personalAttention == $slaves[$i].ID>>\
+	''PA'' \
+<</if>>\
+<<if "guard you" == $slaves[$i].assignment>>\
+	''BG'' \
+<</if>>\
+<<print "[[$slaves[$i].slaveName|Slave Interact][$activeSlave to $slaves[" + $i + "]]]">>\
+<<display "Slave Summary">>\
+<</if>>\
+<</for>>\
+<<nobr>><center>
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $personalAttention == $slaves[$i].ID>>
+	''__@@color:pink;$slaves[$i].slaveName@@__'' will receive your attention to  $trainingRegimen this week.
+	<span id="managePA"><strong><<click "Change training plans">><<goto "Personal Attention Select">><</click>></strong></span>
+    <<set $assignment to 1>>
+<</if>>
+<</for>>
+<<if ($assignment is 0) and ($slaves.length gt 0)>>
+	You have not selected a slave for your personal attention and will focus on business matters this week.
+	<span id="managePA"><strong><<click "Select one">><<goto "Personal Attention Select">><</click>></strong></span>
+<</if>>
+</center><</nobr>>\
+<<nobr>><center>
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $HeadGirl.ID == $slaves[$i].ID>>
+	''__@@color:pink;$slaves[$i].slaveName@@__'' is <<if ndef $headGirlFocus>>serving as your head girl.<<else>>your head girl and is focusing on your slaves' $headGirlFocus.<</if>>
+	<span id="manageHG"><strong><<click "Manage Head Girl">><<goto "HG Select">><</click>></strong></span>
+    <<set $assignment to 1>>
+<</if>>
+<</for>>
+<<if ($assignment is 0) and ($slaves.length gt 1)>>
+	You have not selected a Head Girl.
+	<span id="manageHG"><strong><<click "Select one">><<goto "HG Select">><</click>></strong></span>
+<<elseif ($assignment is 0)>>
+	//You do not have enough slaves to keep a Head Girl//
+<</if>>
+</center><</nobr>>\
+<<nobr>><center>
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $Recruiter.ID == $slaves[$i].ID>>
+	''__@@color:pink;$slaves[$i].slaveName@@__'' is working to recruit girls.
+	<span id="manageRecruiter"><strong><<click "Manage Recruiter">><<goto "Recruiter Select">><</click>></strong></span>
+    <<set $assignment to 1>>
+<</if>>
+<</for>>
+<<if ($assignment is 0)>>
+	You have not selected a Recruiter.
+	<span id="manageRecruiter"><strong><<click "Select one">><<goto "Recruiter Select">><</click>></strong></span>
+<</if>>
+</center><</nobr>>\
+<<nobr>><center>
+<<if ($dojo isnot 0)>>
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $Bodyguard.ID == $slaves[$i].ID>>
+	''__@@color:pink;$slaves[$i].slaveName@@__'' is serving as your bodyguard.
+	<span id="manageBG"><strong><<click "Manage Bodyguard">><<goto "BG Select">><</click>></strong></span>
+    <<set $assignment to 1>>
+<</if>>
+<</for>>
+<<if ($assignment is 0)>>
+	You have not selected a bodyguard.
+	<span id="manageBG"><strong><<click "Select One">><<goto "BG Select">><</click>></strong></span>
+<</if>>
+<</if>>
+</center><</nobr>>\
+\
+<<nobr>><center><span id="buySlaves"><strong><<click "Buy Slaves">><<goto "Buy Slaves">><</click>></strong></span>
+<<if ($slaveCostFactor gt 1.1)>>
+	@@color:yellow;There is a bull market for slaves; the price of slaves is very high.@@
+<<elseif ($slaveCostFactor gt 1)>>
+	@@color:yellow;The slave market is bullish; the price of slaves is high.@@
+<<elseif ($slaveCostFactor lt 0.9)>>
+	@@color:yellow;There is a bear market for slaves; the price of slaves is very low.@@
+<<elseif ($slaveCostFactor lt 1)>>
+	@@color:yellow;The slave market is bearish; the price of slaves is low.@@
+<<else>>
+	The slave market is stable; the price of slaves is average.
+<</if>>
+</center><</nobr>>\
+\
+<<set $j to "Back",$k to "AS Dump",$l to "Main">>\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if ($slaves[$i].assignment is "please you")>>\
+<br><<display "Toychest">> //In the coming week you plan to concentrate on her $slaves[$i].toyHole, but for now://\
+    <<print "[[Use her mouth|FLips][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Play with her tits|FBoobs][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+<<if  ($slaves[$i].vaginalAccessory isnot "chastity belt")>>\
+     | <<print "[[Fuck her|FVagina][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Use her holes|FButt][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+<</if>>\
+     | <<print "[[Fuck her ass|FAnus][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Abuse her|FAbuse][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+<</if>>\
+<</for>>\
+\
+<<set $j to "Back",$k to "AS Dump",$l to "Main">>\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<if ($slaves[$i].assignment is "guard you")>>\
+<br><<if  ($slaves[$i].vaginalAccessory isnot "chastity belt")>>\
+	<<display "Use Guard">>\
+    <<print "[[Fuck her|FVagina][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Use her mouth|FLips][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Play with her tits|FBoobs][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Fuck her ass|FAnus][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Use her holes|FButt][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Abuse her|FAbuse][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>
+<<else>>\
+	<<display "Use Guard">>
+    <<print "[[Use her mouth|FLips][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Play with her tits|FBoobs][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Fuck her ass|FAnus][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>\
+     | <<print "[[Abuse her|FAbuse][$activeSlave to $slaves[" + $i + "],$nextButton to $j,$nextLink to $k,$returnTo to $l]]">>
+<</if>>\
+<</if>>\
+<</for>>\
+
+<<nobr>>
+
+<<set $activeSlave to Array.random($slaves)>>
+
+<<if ($activeSlave.assignment isnot "please you") and ($activeSlave.assignment isnot "guard you")>>
+	<<display "Walk Past">>
+<</if>>
+
+/*[[Slave Interact]]*/
+
+<</nobr>>

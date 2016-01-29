@@ -1,0 +1,70 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+You pass one of the penthouse's several supply closets by chance, and are surprised to hear your personal assistant's voice inside. Oddly, there seems to be more than one of her. You open the door on a whim, to find that almost every one of the dildo machines in the closet is currently fucking <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>, on all fours in the middle of the room with the machines all around her. She has <<if $activeSlave.vagina gt 2>>two large dildoes working her gaping cunt, <<elseif $activeSlave.vagina gt 1>>a large dildo working her cunt, <<elseif $activeSlave.vagina gt 0>>a dildo working her tight pussy, <</if>><<if $activeSlave.anus gt 2>>two large dildoes fucking her enormous butthole, <<elseif $activeSlave.anus gt 1>>a large dildo fucking her butthole, <<elseif $activeSlave.anus gt 0>>a dildo fucking her tight butt, <</if>><<if $activeSlave.boobs gt 1200>>has lubricated her cavernous cleavage to titfuck another, <<elseif $activeSlave.boobs gt 400>>has lubricated her cleavage to titfuck another, <</if>><<if $activeSlave.amp is 0>>is performing two handjobs at once, to either side, <</if>><<if $activeSlave.oralSkill gt 2>>and is making use of her outstanding oral skills to suck off two more.<<elseif $activeSlave.oralSkill gt 1>>and is taking a throatfuck from one more.<<else>>and is giving the final one a blowjob.<</if>> When she sees that you've entered - which takes a while, since she's distracted - she tries to smile<<if $activeSlave.amp is 0>> and wave<</if>>.
+
+The source of the many-voiced personal assistant becomes clear: probably on the incorrigible $activeSlave.slaveName's request, your sultry personal assistant is voicing each and every one of the machines. When the nymphomaniac masturbator tries to smile <<if $activeSlave.amp is 0>> and wave<</if>>, there's an absolute chorus of "Back to work, slut," "Smile less, suck more," "Take it, bitch," et cetera. Yet another instance of your personal assistant chuckles in your ear. "Care to join in, Sir? I'm sure we can find room somewhere."
+\
+<span id="result">
+<<click "No, spectate and relax with her afterward">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You leave for a moment, but return quickly with a chair and a refreshing beverage so you can sit and enjoy the spectacle. It's hard to tell, but you're reasonably sure $activeSlave.slaveName is flattered by your interest. Your personal assistant does not let her go for a long time, however, and when she finally retracts all the phalli, $activeSlave.slaveName collapses weakly to the sweat-stained floor. You gather the limp nympho in your arms and carry her to your private bath, which is all ready and filled with steaming water. $activeSlave.slaveName groans with pleasure as you lower her, still cradled in your arms, into the water. She nuzzles her $activeSlave.skin cheek against your <<if ($PC.boobs gt 0)>>breasts<<else>>chest<</if>>, eyes closed in @@color:hotpink;bliss.@@
+	<<set $activeSlave.devotion += 1>>
+    <</replace>>
+<</click>>
+<<click "Tour her holes">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	The polite thing to do would be to instruct your personal assistant to retract a dildo before replacing it with <<if ($PC.dick is 0)>>a strap-on<<else>>your dick<</if>>. You are not, however, feeling particularly polite. $activeSlave.slaveName writhes in anguish when she feels an additonal phallus forcing its way past her lips. She tries to relax but loses control and spasms; the throat fucking continues unmercifully and in short order she is gagging desperately. Each of her holes receives the same treatment in turn; all she manages to do in response is writhe here and there, and squeal incoherently whenever her mouth isn't totally full. She has become @@color:hotpink;more submissive to you.@@
+	<<display "Simple VCheck">>
+	<<set $activeSlave.devotion += 1>>
+	<<if $activeSlave.vagina is 1>>
+	  Her tight pussy @@color:lime;isn't so tight any more.@@
+	  <<set $activeSlave.vagina += 1>>
+	<</if>>
+	<<if $activeSlave.anus is 1>>
+	  Her tight butt @@color:lime;has been loosened by the double anal.@@
+	  <<set $activeSlave.anus += 1>>
+	<</if>>
+	<<if $activeSlave.analSkill is 0>>
+	  She can't help but @@green:green;learn how to take a rough buttfuck.@@
+	  <<set $activeSlave.analSkill += 1>>
+	<</if>>
+	<<if $activeSlave.oralSkill is 0>>
+	  She can't help but @@green:green;learn how to deepthroat.@@
+	  <<set $activeSlave.oralSkill += 1>>
+	<</if>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<<if ($collectionFacilitySlaves gte 5)>>\
+<<click "Replace the machines with slaves from the collection facility">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Some minutes later $activeSlave.slaveName feels one of the dildoes retract and wriggles in protest. She's not long disappointed, though, as she immediately feels it replaced by a turgid dick. You and your personal assistant stage-manage, and it isn't easy. Getting all the cocks into her requires some creative choreography; quite apart from the limits of even her well-used holes, it's hard just figuring out where everyone ought to stand. The cockmilked slaves are used to coming fast, and they do here, too, so there's also the necessity of switching them out periodically. Eventually you tire of the amusement and direct the collection facility bitches to clean up, which is no mean job, since $activeSlave.slaveName is by now lying in a pool of sweat and cum. But mostly cum. Despite the mess, everyone @@color:hotpink;enjoys@@ themselves immensely.
+	<<display "Simple VCheck">>
+	<<set $activeSlave.devotion += 1>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if $slaves[$i].assignment == "work in the collection facility">>
+		<<set $activeSlave.devotion += 1>>
+		<<set $activeSlave.penetrativeCount += 1>>
+		<<set $penetrativeTotal += 1>>
+	  <</if>>
+	<</for>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<</if>>
+</span>

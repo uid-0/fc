@@ -1,0 +1,14 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+
+<<set $slaveCostFactor -= 0.2>>
+
+<</nobr>>\
+\
+//Sir, I have a flagged a news item that may be of business interest.//
+
+The economy of the Free Cities is a rough-and-tumble place. The absence of old world regulations and institutions, and the often gold-rush atmosphere of the new cities, lead to fortunes being made and lost overnight. Last night, one of the Free Cities' greatest fortunes was lost. A great slave trading house unexpectedly went bankrupt, and its huge stable of slaves are being sold at fire-sale prices. The unforeseen sell off is driving down the market price of slaves all across the Free Cities. Projections show a short-term price drop of up to twenty percent.
+
+There will be no immediate impact on you or your slaves, but the coming weeks will be a fine time to buy new stock, and a poor time to sell. @@color:yellow;The market price of slaves has dropped precipitously.@@

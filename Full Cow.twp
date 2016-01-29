@@ -1,0 +1,51 @@
+	<<set $activeSlave.boobsTat to "bovine patterns">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+
+	<<set $activeSlave.buttTat to "bovine patterns">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+
+	<<set $activeSlave.vaginaTat to "bovine patterns">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+
+<<if $activeSlave.dick gt 0>>
+	<<set $activeSlave.dickTat to "bovine patterns">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+	<<set $activeSlave.lipsTat to "bovine patterns">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+
+	<<set $activeSlave.anusTat to "bovine patterns">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+
+<<if $activeSlave.shouldersTat is 0>>
+	<<set $activeSlave.shouldersTat to "bovine patterns">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.armsTat is 0>>
+	<<set $activeSlave.armsTat to "bovine patterns">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.legsTat is 0>>
+	<<set $activeSlave.legsTat to "bovine patterns">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.stampTat is 0>>
+	<<set $activeSlave.stampTat to "bovine patterns">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<goto "Body Modification">>

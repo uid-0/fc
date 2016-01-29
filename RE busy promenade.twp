@@ -1,0 +1,28 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+
+<</nobr>>\
+\
+The original designers of the modern arcology did not realize how inseparable from slavery their work would become. The promenade at the social heart of your arcology was not meant as a center of the more refined kind of sexual slavery, but that is what it has become. Free whores of the highest quality work here, and they are accompanied by a flock of your slaves who have simple orders to add cheer and perform sexual favors wherever they can.
+
+Offering slaves for free sex would become unmanageable if the promenade where your public servants work was open to the unwashed masses, but it is not. The arcology is already selective, and only the finest citizens stroll the promenade to show off, peruse expensive merchandise, and be propositioned by your girls. The upper classes @@color:green;recognize your contributions,@@<<set $rep += 100>> which you could probably parlay into an even greater benefit.
+\
+<span id="result">
+<<click "Sponsor a festival on the promenade">>
+	<<replace "#result">>
+	The Free Cities are new, and so is their culture. There are new traditions, new expectations, and now, new holidays. One morning, the upper classes of the arcology are surprised and gratified to find that the promenade has been bedecked with bright streamers. The skylights have been made less opaque to give an especially sunny air, and cheery music is filtering through the area. As bemused notables file onto the promenade, your slaves eagerly welcome them in special holiday uniforms. The festivities @@color:green;greatly improve your renown;@@ you have set a high bar for what a wealthy arcology owner should do.
+	<<set $cash -= 2000>>
+	<<set $rep += 500>>		
+    <</replace>>
+<</click>> //This will cost ¤2000//
+<<click "Host a business exposition">>
+	<<replace "#result">>
+	With the world economy in a perilous state, the Free Cities are one of the few remaining areas where innovation and new business opportunities still appear. The novel markets associated with the slave trade only reinforce this trend, offering a cornucopia of opportunities for the clear-eyed investor with liquid assets. Every other week there is news of a new fortune being made from smart investments in leather, in human growth hormones, or in psychoactive drugs. You host an exposition for slave services on the promenade, with your slaves serving as greeters who are eager to ensure that all the little wants of visiting notables are thoroughly satisfied. The optimistic outlook projected by this event @@color:green;improves your arcology's business prospects@@ and even @@color:green;reflects well on you personally.@@
+	<<set $cash -= 5000>>
+	<<set $AProsperity += 2>>
+	<<set $rep += 500>>
+    <</replace>>
+<</click>> //This will cost ¤5000//
+</span>

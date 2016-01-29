@@ -1,0 +1,77 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+You have a lot of work to do with <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span>. She compounds the usual rebellious anger at being a slave with an apparently unshakeable conviction that she is better than you. Oddly, she seems to maintain the idea that enslaving other people is somehow inappropriate, and that having done so has lowered you morally. This morning, she did not appear to start her morning chores as previously ordered. She sleeps on a bedroll: a brief investigation discloses that she is still in it, and has pulled the blanket up over her head. She refuses to acknowledge your preemptory command to get up.
+\
+<span id="result">
+<<click "Force her out of bed and humiliate her publicly">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You drag her unceremoniously out of bed and straight down into the public areas of the arcology. Her struggles and protests grow more frantic as she sees the first passersby beginning to stare at the little spectacle. You force her right there, thoroughly raping the struggling girl in public. @@color:gold;She learns the consequences of refusal,@@ but @@color:red;your reputation has been decreased by the unseemly commotion.@@
+      <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+          <<set $activeSlave.vaginalCount += 1>>
+          <<set $vaginalTotal += 1>>
+          <<set $activeSlave.analCount += 1>>
+          <<set $analTotal += 1>>
+  		  <<display "Simple VCheck">>
+      <<else>>
+          <<set $activeSlave.analCount += 1>>
+          <<set $analTotal += 1>>
+  		  <<display "Anal VCheck">>
+      <</if>>
+	<<set $activeSlave.trust -= 1>>
+	<<set $rep -= 1>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<<click "Let her stay in bed, but move it to a public restroom">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You quickly pin the blanket to the mattress, securing her in place. You direct that a urinal in one of the arcology's public restrooms be unbolted and replaced by the mattress, slave and all. She's been swearing and threatening all this time, but the calumny reaches a shrieking crescendo (though muffled by the blanket) when she feels urine beginning to soak through the blanket. After an hour or so she's begging to be let out, @@color:gold;swearing she'll improve her conduct.@@
+	<<set $activeSlave.trust -= 1>>
+    <</replace>>
+<</click>>
+<<click "Let her stay in bed, but move it to a whorehouse">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You quickly pin the blanket to the mattress, securing her in place. You direct that she be brought to an arcology salon that serves as a slave brothel. Once she's there, you take a pair of scissors and cut a slit through the sheets. She's been swearing and threatening all this time, but the calumny reaches a shrieking crescendo when she feels a cock being shoved through the slit and between her buttocks. Being muffled and held immobile for rape for hire @@color:gold;terrifies her@@ but @@color:yellowgreen;earns some cash.@@
+    <<display "Simple VCheck">>
+	<<set $activeSlave.trust -= 1>>
+    <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+    	<<set $activeSlave.vaginalCount += 5>>
+		<<set $vaginalTotal += 5>>
+    	<<set $activeSlave.analCount += 5>>
+		<<set $analTotal += 5>>
+    <<else>>
+    	<<set $activeSlave.analCount += 10>>
+		<<set $analTotal += 10>>
+    <</if>>
+	<<set $cash += 100>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<<if $arcade gt 0>>\
+<<click "Sentence her to a month in the arcade">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+    $activeSlave.slaveName screams and begs when she realizes what her punishment is, but you are obdurate. <<if ($activeSlave.muscles gt 1)>>Her powerful form has to be sedated for immurement in the arcade.<<elseif ($activeSlave.weight gt -1)>>Her desperate struggles make immuring her in the arcade difficult.<<else>>Her thin form makes immuring her in the arcade pathetically easy.<</if>> After she's properly confined, the only sign of her discomfiture is a slight movement of her $activeSlave.skin butt as she wriggles desperately against her restraints.
+	<<set $activeSlave.assignment to "be confined in the arcade">><<set $activeSlave.assignmentVisible to 0>>
+<<set $activeSlave.choosesOwnAssignment to 0>>
+	<<set $activeSlave.sentence to 4>>
+    <</replace>>
+<</click>>
+<</if>>\
+</span>

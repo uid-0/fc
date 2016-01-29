@@ -1,0 +1,417 @@
+<<nobr>>
+
+<<set $nextButton to "Back to Main">>
+<<set $nextLink to "Main">>
+<<set $returnTo to "Main">>
+<<set $encyclopedia to "Personal Assistant">>
+
+<</nobr>>\
+\
+//Sir, I will review your slaves and make changes that will have a beneficial effect. Apologies, sir, but this function is... not fully complete. It may have some serious limitations. Please use the 'no default setting' option to identify areas I should not address.//
+
+__Default Appearance:__
+<<nobr>>
+
+Clothes when obedient and better: 
+
+<<if $defaultRulesSlave.choosesOwnClothes is 1>>
+	''slave's choice.''
+<<else>>
+	''$defaultRulesSlave.goodClothes.''
+<</if>>
+
+[[No default clothes setting|Rules Assistant][$defaultRulesSlave.goodClothes to "no default setting",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Nude|Rules Assistant][$defaultRulesSlave.goodClothes to "no clothing",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Uncomfortable straps|Rules Assistant][$defaultRulesSlave.goodClothes to "uncomfortable straps",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Restrictive latex|Rules Assistant][$defaultRulesSlave.goodClothes to "restrictive latex",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Penitent nun|Rules Assistant][$defaultRulesSlave.goodClothes to "a penitent nun's habit",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Nice lingerie|Rules Assistant][$defaultRulesSlave.goodClothes to "attractive lingerie",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[String bikini|Rules Assistant][$defaultRulesSlave.goodClothes to "string lingerie",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Cutoffs and a t-shirt|Rules Assistant][$defaultRulesSlave.goodClothes to "cutoffs and a t-shirt",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Slave Gown|Rules Assistant][$defaultRulesSlave.goodClothes to "a slave gown",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Kimono|Rules Assistant][$defaultRulesSlave.goodClothes to "a kimono",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Quipao|Rules Assistant][$defaultRulesSlave.goodClothes to "a slutty quipao",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Slutty Suit|Rules Assistant][$defaultRulesSlave.goodClothes to "slutty business attire",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Nice Suit|Rules Assistant][$defaultRulesSlave.goodClothes to "nice business attire",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Slutty Nurse|Rules Assistant][$defaultRulesSlave.goodClothes to "a nurse outfit",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Schoolgirl|Rules Assistant][$defaultRulesSlave.goodClothes to "a schoolgirl outfit",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Bodysuit|Rules Assistant][$defaultRulesSlave.goodClothes to "a comfortable bodysuit",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Skimpy Battledress|Rules Assistant][$defaultRulesSlave.goodClothes to "battledress",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Slutty Maid|Rules Assistant][$defaultRulesSlave.goodClothes to "a slutty maid outfit",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Nice Maid|Rules Assistant][$defaultRulesSlave.goodClothes to "a nice maid outfit",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Harem gauze|Rules Assistant][$defaultRulesSlave.goodClothes to "harem gauze",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Hijab|Rules Assistant][$defaultRulesSlave.goodClothes to "a hijab",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Fallen nun|Rules Assistant][$defaultRulesSlave.goodClothes to "a fallen nun's habit",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Slutty jewelry|Rules Assistant][$defaultRulesSlave.goodClothes to "slutty jewelry",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Select her own outfit|Rules Assistant][$defaultRulesSlave.goodClothes to "choosing her own clothes",$defaultRulesSlave.choosesOwnClothes to 1]]
+
+<</nobr>>
+<<nobr>>
+
+Collar when obedient and better: ''$defaultRulesSlave.goodCollar.''
+
+[[No default collar setting|Rules Assistant][$defaultRulesSlave.goodCollar to "no default setting"]] | 
+[[Steel|Rules Assistant][$defaultRulesSlave.goodCollar to "tight steel"]] | 
+[[Leather|Rules Assistant][$defaultRulesSlave.goodCollar to "uncomfortable leather"]] | 
+[[Shock|Rules Assistant][$defaultRulesSlave.goodCollar to "shock punishment"]] | 
+[[Dildo gag|Rules Assistant][$defaultRulesSlave.goodCollar to "dildo gag"]] | 
+[[Gold|Rules Assistant][$defaultRulesSlave.goodCollar to "heavy gold"]] | 
+[[Pretty|Rules Assistant][$defaultRulesSlave.goodCollar to "pretty jewelry"]] | 
+[[Cowbell|Rules Assistant][$defaultRulesSlave.goodCollar to "leather with cowbell"]]
+
+<</nobr>>
+<<nobr>>
+
+Clothes when fearful and worse: ''$defaultRulesSlave.badClothes.''
+
+[[No default clothes setting|Rules Assistant][$defaultRulesSlave.badClothes to "no default setting",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Nude|Rules Assistant][$defaultRulesSlave.badClothes to "no clothing",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Uncomfortable straps|Rules Assistant][$defaultRulesSlave.badClothes to "uncomfortable straps",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Restrictive latex|Rules Assistant][$defaultRulesSlave.badClothes to "restrictive latex",$defaultRulesSlave.choosesOwnClothes to 0]] | 
+[[Penitent nun|Rules Assistant][$defaultRulesSlave.badClothes to "a penitent nun's habit",$defaultRulesSlave.choosesOwnClothes to 0]]
+
+<</nobr>>
+<<nobr>>
+
+Collar when fearful and worse: ''$defaultRulesSlave.badCollar.''
+
+[[No default collar setting|Rules Assistant][$defaultRulesSlave.badCollar to "no default setting"]] | 
+[[Steel|Rules Assistant][$defaultRulesSlave.badCollar to "tight steel"]] | 
+[[Leather|Rules Assistant][$defaultRulesSlave.badCollar to "uncomfortable leather"]] | 
+[[Shock|Rules Assistant][$defaultRulesSlave.badCollar to "shock punishment"]] | 
+[[Dildo gag|Rules Assistant][$defaultRulesSlave.badCollar to "dildo gag"]] | 
+[[Gold|Rules Assistant][$defaultRulesSlave.badCollar to "heavy gold"]] | 
+[[Pretty|Rules Assistant][$defaultRulesSlave.badCollar to "pretty jewelry"]] | 
+[[Cowbell|Rules Assistant][$defaultRulesSlave.badCollar to "leather with cowbell"]]
+
+<</nobr>>
+<<nobr>>
+
+Shoes when fearful and better: ''$defaultRulesSlave.shoes.''
+
+[[No default footwear setting|Rules Assistant][$defaultRulesSlave.shoes to "no default setting"]]
+| [[Barefoot|Rules Assistant][$defaultRulesSlave.shoes to "none"]]
+| [[Flats|Rules Assistant][$defaultRulesSlave.shoes to "flats"]]
+| [[Heels|Rules Assistant][$defaultRulesSlave.shoes to "heels"]]
+| [[Boots|Rules Assistant][$defaultRulesSlave.shoes to "boots"]]
+| [[Extreme heels|Rules Assistant][$defaultRulesSlave.shoes to "extreme heels"]]
+
+<</nobr>>
+<<nobr>>
+
+Vaginal accessories: ''$defaultRulesSlave.vaginalAccessory.''
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.vaginalAccessory to "no default setting"]]
+| [[None|Rules Assistant][$defaultRulesSlave.vaginalAccessory to "none"]]
+| [[Dildo|Rules Assistant][$defaultRulesSlave.vaginalAccessory to "dildo"]]
+| [[Huge dildo|Rules Assistant][$defaultRulesSlave.vaginalAccessory to "huge dildo"]]
+| [[Chastity belt|Rules Assistant][$defaultRulesSlave.vaginalAccessory to "chastity belt"]]
+
+<</nobr>>
+<<nobr>>
+
+Buttplugs: ''$defaultRulesSlave.buttplug.''
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.buttplug to "no default setting"]]
+| [[None|Rules Assistant][$defaultRulesSlave.buttplug to "none"]]
+| [[Standard plug|Rules Assistant][$defaultRulesSlave.buttplug to "plug"]]
+| [[Huge plug|Rules Assistant][$defaultRulesSlave.buttplug to "huge plug"]]
+
+<</nobr>>
+[[Cosmetic Rules Assistant Settings]]
+[[Body Mod Rules Assistant Settings]]
+
+__Default Health Regimen:__
+<<nobr>>
+
+Curatives will be administered to: 
+
+<<if $defaultRulesSlave.curatives is "imperfect">>
+	''imperfectly healthy slaves.''
+<<elseif $defaultRulesSlave.curatives is "unhealthy">>
+	''unhealthy slaves.''
+<<else>>
+	''no default setting.''
+<</if>>
+
+[[No default drug setting|Rules Assistant][$defaultRulesSlave.curatives to "no default setting"]] | 
+[[Unhealthy slaves|Rules Assistant][$defaultRulesSlave.curatives to "unhealthy"]] | 
+[[Imperfectly healthy slaves|Rules Assistant][$defaultRulesSlave.curatives to "imperfect"]]
+
+<</nobr>>
+<<nobr>>
+
+Growth hormones for healthy slaves: 
+
+<<if $defaultRulesSlave.growth is "girlish">>
+	''up to a girlish figure.''
+<<elseif $defaultRulesSlave.growth is "stacked">>
+	''up to a stacked figure.''
+<<elseif $defaultRulesSlave.growth is "unlimited">>
+	''no limits.''
+<<else>>
+	''no default setting.''
+<</if>>
+
+[[No default drug setting|Rules Assistant][$defaultRulesSlave.growth to "no default setting"]] | 
+[[Girlish figure|Rules Assistant][$defaultRulesSlave.growth to "girlish"]] | 
+[[Stacked figure|Rules Assistant][$defaultRulesSlave.growth to "stacked"]] | 
+[[Unlimited|Rules Assistant][$defaultRulesSlave.growth to "unlimited"]]
+
+<</nobr>>
+<<nobr>>
+
+Contraceptives for fertile slaves:
+
+<<if $defaultRulesSlave.preg is 0>>
+	''fertile.''
+<<elseif $defaultRulesSlave.preg is -1>>
+	''contraceptives.''
+<<else>>
+	''no default setting.''
+<</if>>
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.preg to "no default setting"]] | 
+[[Fertile|Rules Assistant][$defaultRulesSlave.preg to 0]] | 
+[[Contraceptives|Rules Assistant][$defaultRulesSlave.preg to -1]]
+
+<</nobr>>
+<<nobr>>
+
+Hormones for female slaves:
+
+<<if $defaultRulesSlave.XX is 0>>
+	''no hormones.''
+<<elseif $defaultRulesSlave.XX is 1>>
+	''female.''
+<<elseif $defaultRulesSlave.XX is 2>>
+	''intensive female.''
+<<elseif $defaultRulesSlave.XX is -1>>
+	''male.''
+<<elseif $defaultRulesSlave.XX is -2>>
+	''intensive male.''
+<<else>>
+	''no default setting.''
+<</if>>
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.XX to "no default setting"]] | 
+[[Intensive Female|Rules Assistant][$defaultRulesSlave.XX to 2]] | 
+[[Female|Rules Assistant][$defaultRulesSlave.XX to 1]] | 
+[[No hormones|Rules Assistant][$defaultRulesSlave.XX to 0]] | 
+[[Male|Rules Assistant][$defaultRulesSlave.XX to -1]] | 
+[[Intensive Male|Rules Assistant][$defaultRulesSlave.XX to -2]]
+
+<</nobr>>
+<<nobr>>
+
+Hormones for shemales:
+
+<<if $defaultRulesSlave.XY is 0>>
+	''no hormones.''
+<<elseif $defaultRulesSlave.XY is 1>>
+	''female.''
+<<elseif $defaultRulesSlave.XY is 2>>
+	''intensive female.''
+<<elseif $defaultRulesSlave.XY is -1>>
+	''male.''
+<<elseif $defaultRulesSlave.XY is -2>>
+	''intensive male.''
+<<else>>
+	''no default setting.''
+<</if>>
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.XY to "no default setting"]] | 
+[[Intensive Female|Rules Assistant][$defaultRulesSlave.XY to 2]] | 
+[[Female|Rules Assistant][$defaultRulesSlave.XY to 1]] | 
+[[No hormones|Rules Assistant][$defaultRulesSlave.XY to 0]] | 
+[[Male|Rules Assistant][$defaultRulesSlave.XY to -1]] | 
+[[Intensive Male|Rules Assistant][$defaultRulesSlave.XY to -2]]
+
+<</nobr>>
+<<nobr>>
+
+Hormones for geldings:
+
+<<if $defaultRulesSlave.gelding is 0>>
+	''no hormones.''
+<<elseif $defaultRulesSlave.gelding is 1>>
+	''female.''
+<<elseif $defaultRulesSlave.gelding is 2>>
+	''intensive female.''
+<<elseif $defaultRulesSlave.gelding is -1>>
+	''male.''
+<<elseif $defaultRulesSlave.gelding is -2>>
+	''intensive male.''
+<<else>>
+	''no default setting.''
+<</if>>
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.gelding to "no default setting"]] | 
+[[Intensive Female|Rules Assistant][$defaultRulesSlave.gelding to 2]] | 
+[[Female|Rules Assistant][$defaultRulesSlave.gelding to 1]] | 
+[[No hormones|Rules Assistant][$defaultRulesSlave.gelding to 0]] | 
+[[Male|Rules Assistant][$defaultRulesSlave.gelding to -1]] | 
+[[Intensive Male|Rules Assistant][$defaultRulesSlave.gelding to -2]]
+
+<</nobr>>
+<<nobr>>
+
+Slave diets:
+
+<<if $defaultRulesSlave.diet is 2>>
+	''cum-based, for perversion.''
+<<elseif $defaultRulesSlave.diet is 1>>
+	''designed to keep slaves plush.''
+<<elseif $defaultRulesSlave.diet is 0>>
+	''designed for average weight.''
+<<elseif $defaultRulesSlave.diet is -1>>
+	''designed to keep slaves thin.''
+<<elseif $defaultRulesSlave.diet is "attractive">>
+	''fat slaves will slim down to plush; skinny slaves will fill out to thin.''
+<<else>>
+	''no default setting.''
+<</if>>
+
+[[No default diet setting|Rules Assistant][$defaultRulesSlave.diet to "no default setting"]] | 
+[[Fix fat and skinny slaves|Rules Assistant][$defaultRulesSlave.diet to "attractive"]] | 
+[[Curvy|Rules Assistant][$defaultRulesSlave.diet to 1]] | 
+[[Average|Rules Assistant][$defaultRulesSlave.diet to 0]] | 
+[[Skinny|Rules Assistant][$defaultRulesSlave.diet to -1]] | 
+[[Include cum in slaves' diets|Rules Assistant][$defaultRulesSlave.diet to 2]]
+
+<</nobr>>
+<<nobr>>
+
+Muscles for slaves at a healthy weight:
+
+<<if $defaultRulesSlave.muscles is 3>>
+	''massive.''
+<<elseif $defaultRulesSlave.muscles is 2>>
+	''ripped.''
+<<elseif $defaultRulesSlave.muscles is 1>>
+	''toned.''
+<<elseif $defaultRulesSlave.muscles is 0>>
+	''none.''
+<<else>>
+	''no default setting.''
+<</if>>
+
+[[No default diet setting|Rules Assistant][$defaultRulesSlave.muscles to "no default setting"]] | 
+[[None|Rules Assistant][$defaultRulesSlave.muscles to 0]] | 
+[[Toned|Rules Assistant][$defaultRulesSlave.muscles to 1]] | 
+[[Ripped|Rules Assistant][$defaultRulesSlave.muscles to 2]] | 
+[[Massive|Rules Assistant][$defaultRulesSlave.muscles to 3]]
+
+<</nobr>>
+<<nobr>>
+
+Assistant-applied implants:
+
+<<if $defaultRulesSlave.autoSurgery is 3>>
+	''FULLY ACTIVE, STAND CLEAR.'' [[Off|Rules Assistant][$defaultRulesSlave.autoSurgery to 0]] | [[Cosmetic only|Rules Assistant][$defaultRulesSlave.autoSurgery to 1]] | [[Limit to slim figure|Rules Assistant][$defaultRulesSlave.autoSurgery to 2]]
+<<elseif $defaultRulesSlave.autoSurgery is 2>>
+	''Partially active.'' [[Off|Rules Assistant][$defaultRulesSlave.autoSurgery to 0]] | [[Cosmetic only|Rules Assistant][$defaultRulesSlave.autoSurgery to 1]] | [[Full implants|Rules Assistant][$defaultRulesSlave.autoSurgery to 3]]
+<<elseif $defaultRulesSlave.autoSurgery is 1>>
+	''Cosmetic surgery only.'' [[Off|Rules Assistant][$defaultRulesSlave.autoSurgery to 0]] | [[Limit to slim figure|Rules Assistant][$defaultRulesSlave.autoSurgery to 2]] | [[Full implants|Rules Assistant][$defaultRulesSlave.autoSurgery to 3]]
+<<else>>
+	''off.'' [[Cosmetic only|Rules Assistant][$defaultRulesSlave.autoSurgery to 1]] | [[Limit to slim figure|Rules Assistant][$defaultRulesSlave.autoSurgery to 2]] | [[Full implants|Rules Assistant][$defaultRulesSlave.autoSurgery to 3]]
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if $defaultRulesSlave.autoSurgery gt 0>>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+Lactation implants:
+
+<<if $defaultRulesSlave.lactation is 1>>
+	''universal.'' [[Off|Rules Assistant][$defaultRulesSlave.lactation to 0]]
+<<else>>
+	''off.'' [[Universal|Rules Assistant][$defaultRulesSlave.lactation to 1]]
+<</if>>
+
+<</if>>
+
+<</nobr>>
+
+__Default Rules:__
+<<nobr>>
+
+Assignments for devoted slaves:
+
+<<if $defaultRulesSlave.choosesOwnAssignment is 0>>
+  ''selected by the player.''
+  [[Slave's choice|Rules Assistant][$defaultRulesSlave.choosesOwnAssignment to 1]]
+<<else>>
+  ''selected by the slave.''
+  [[Player control|Rules Assistant][$defaultRulesSlave.choosesOwnAssignment to 0]]
+<</if>>
+
+<</nobr>>
+\
+<<nobr>>
+
+Living standard for slaves who are obedient or better: ''$defaultRulesSlave.goodLivingRules.''
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.goodLivingRules to "no default setting"]] | 
+[[Luxurious|Rules Assistant][$defaultRulesSlave.goodLivingRules to "luxurious"]] | [[Normal|Rules Assistant][$defaultRulesSlave.goodLivingRules to "normal"]] | 
+[[Spare|Rules Assistant][$defaultRulesSlave.goodLivingRules to "spare"]]
+
+<</nobr>>
+\
+<<nobr>>
+
+Masturbation rules for good slaves on sexual jobs: ''$defaultRulesSlave.goodReleaseRules.''
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.goodReleaseRules to "no default setting"]] | 
+[[Permissive|Rules Assistant][$defaultRulesSlave.goodReleaseRules to "permissive"]] | 
+[[Sapphic|Rules Assistant][$defaultRulesSlave.goodReleaseRules to "sapphic"]] | 
+[[Restrictive|Rules Assistant][$defaultRulesSlave.goodReleaseRules to "restrictive"]]
+
+<</nobr>>
+\
+<<nobr>>
+
+Speech rules for obedient slaves and better: ''$defaultRulesSlave.goodSpeechRules.''
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.goodSpeechRules to "no default setting"]] | 
+[[Permissive|Rules Assistant][$defaultRulesSlave.goodSpeechRules to "permissive"]] | 
+[[Restrictive|Rules Assistant][$defaultRulesSlave.goodSpeechRules to "restrictive"]]
+
+<</nobr>>
+\
+<<nobr>>
+
+Relationship rules for obedient slaves and better: ''$defaultRulesSlave.goodRelationshipRules.''
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.goodRelationshipRules to "no default setting"]] | 
+[[Permissive|Rules Assistant][$defaultRulesSlave.goodRelationshipRules to "permissive"]] | 
+[[Restrictive|Rules Assistant][$defaultRulesSlave.goodRelationshipRules to "restrictive"]]
+
+<</nobr>>
+\
+<<nobr>>
+
+Relationship rules for fearful slaves and worse: ''$defaultRulesSlave.badRelationshipRules.''
+
+[[No default setting|Rules Assistant][$defaultRulesSlave.badRelationshipRules to "no default setting"]] | 
+[[Permissive|Rules Assistant][$defaultRulesSlave.badRelationshipRules to "permissive"]] | 
+[[Restrictive|Rules Assistant][$defaultRulesSlave.badRelationshipRules to "restrictive"]]
+
+<</nobr>>
+\
+<span id="result">
+<<click "Apply default rules">>
+	<<replace "#result">>
+    //Rules applied.//
+	<<for $i to 0; $i lt $slaves.length; $i++>>\
+      <<set $activeSlave to $slaves[$i]>>\
+      <<display "Default Rules">>\
+      <<set $slaves[$i] to $activeSlave>>\
+	<</for>>\
+    <</replace>>
+<</click>>
+</span>
+\
+//[[Use FC Dev's preferred options|Main][$defaultRulesSlave.goodClothes to "slutty jewelry",$defaultRulesSlave.choosesOwnClothes to 1,$defaultRulesSlave.goodCollar to "pretty jewelry",$defaultRulesSlave.badClothes to "uncomfortable straps",$defaultRulesSlave.badCollar to "shock punishment",$defaultRulesSlave.shoes to "heels",$defaultRulesSlave.vaginalAccessory to "none",$defaultRulesSlave.buttplug to "none",$defaultRulesSlave.eyes to "no default setting",$defaultRulesSlave.makeup to 1,$defaultRulesSlave.nails to 1,$defaultRulesSlave.hcolor to "no default setting",$defaultRulesSlave.hlength to "long",$defaultRulesSlave.pubicHColor to "no default setting",$defaultRulesSlave.pubicHLength to "waxed",$defaultRulesSlave.earPiercing to 1,$defaultRulesSlave.nosePiercing to 1,$defaultRulesSlave.eyebrowPiercing to 1,$defaultRulesSlave.navelPiercing to 1,$defaultRulesSlave.nipplesPiercing to 1,$defaultRulesSlave.lipsPiercing to 1,$defaultRulesSlave.tonguePiercing to 1,$defaultRulesSlave.clitPiercing to 1,$defaultRulesSlave.vaginaPiercing to 1,$defaultRulesSlave.dickPiercing to 1,$defaultRulesSlave.anusPiercing to 1,$defaultRulesSlave.anusTat to "bleached",$defaultRulesSlave.curatives to "imperfect",$defaultRulesSlave.preg to -1,$defaultRulesSlave.XX to 2,$defaultRulesSlave.XY to 2,$defaultRulesSlave.gelding to 2,$defaultRulesSlave.diet to "attractive",$defaultRulesSlave.muscles to 1,$defaultRulesSlave.goodReleaseRules to "restrictive",$defaultRulesSlave.goodSpeechRules to "permissive",$defaultRulesSlave.badRelationshipRules to "restrictive",$defaultRulesSlave.goodRelationshipRules to "permissive",$defaultRulesSlave.goodLivingRules to "luxurious",$defaultRulesSlave.autoSurgery to 3,$defaultRulesSlave.growth to "unlimited",$defaultRulesSlave.lactation to 0]]//

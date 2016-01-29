@@ -1,0 +1,54 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Slave Interact">>
+
+<</nobr>>\
+\
+//These options will affect both the long form description of each slave and the miniscenes available from the main menu.//
+
+<<nobr>>
+
+<<if $showSexualHistory is 1>>
+	Sexual histories are @@color:green;SHOWN.@@ //[[Hide|Description Options][$showSexualHistory to 0]]//
+<<else>>
+	Sexual histories are @@color:red;HIDDEN.@@ //[[Show|Description Options][$showSexualHistory to 1]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $showBodyMods is 1>>
+	Cosmetic body mods are @@color:green;SHOWN.@@ //[[Hide|Description Options][$showBodyMods to 0]]//
+<<else>>
+	Cosmetic body mods are @@color:red;HIDDEN.@@ //[[Show|Description Options][$showBodyMods to 1]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $showImplantEffects is 1>>
+	The effects of implants are @@color:green;SHOWN.@@ //[[Hide|Description Options][$showImplantEffects to 0]]//
+<<else>>
+	The effects of implants are @@color:red;HIDDEN.@@ //[[Show|Description Options][$showImplantEffects to 1]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $showClothing is 1>>
+	Clothing is mostly @@color:green;SHOWN.@@ //[[Hide|Description Options][$showClothing to 0]]//
+<<else>>
+	Clothing is mostly @@color:red;HIDDEN.@@ //[[Show|Description Options][$showClothing to 1]]//
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if $showBoobCCs is 1>>
+	Volume, in CCs, of breasts is @@color:green;SHOWN.@@ //[[Hide|Description Options][$showBoobCCs to 0]]//
+<<else>>
+	Volume, in CCs, of breasts is @@color:red;HIDDEN.@@ //[[Show|Description Options][$showBoobCCs to 1]]//
+<</if>>
+
+<</nobr>>

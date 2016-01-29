@@ -1,0 +1,236 @@
+<<silently>>
+
+<<set $prefixes to []>>
+
+<<if ($seeRace is 1)>>
+<<if ($activeSlave.race is "white")>>
+	<<set $prefixes.push("White", "Pale")>>
+<<elseif ($activeSlave.race is "asian")>>
+	<<set $prefixes.push("Asian", "Yellow")>>
+<<elseif ($activeSlave.race is "latina")>>
+	<<set $prefixes.push("Latina", "Brown")>>
+<<elseif ($activeSlave.race is "black")>>
+	<<set $prefixes.push("Black", "Dark")>>
+<<elseif ($activeSlave.race is "pacific islander")>>
+	<<set $prefixes.push("Islander", "Sea")>>
+<<elseif ($activeSlave.race is "southern european")>>
+	<<set $prefixes.push("Mediterranean", "Olive")>>
+<<elseif ($activeSlave.race is "amerindian")>>
+	<<set $prefixes.push("Indian", "Reservation")>>
+<<elseif ($activeSlave.race is "semitic")>>
+	<<set $prefixes.push("Semitic")>>
+<<elseif ($activeSlave.race is "middle eastern")>>
+	<<set $prefixes.push("Arab", "Sand")>>
+<<elseif ($activeSlave.race is "indo-aryan")>>
+	<<set $prefixes.push("Indian", "Brown")>>
+<<elseif ($activeSlave.race is "mixed race")>>
+	<<set $prefixes.push("Mulatto", "Mutt")>>
+<</if>>
+<</if>>
+
+<<if ($activeSlave.boobs lt 500) and ($activeSlave.butt lt 3)>>
+	<<set $prefixes.push("Girly", "Thin")>>
+<</if>>
+<<if ($activeSlave.anus gt 2) or ($activeSlave.vagina gt 2)>>
+	<<set $prefixes.push("Gape", "Slit")>>
+<</if>>
+<<if ($activeSlave.anus gt 0)>>
+	<<set $prefixes.push("Butt", "Anus")>>
+<</if>>
+<<if ($activeSlave.vagina gt 0)>>
+	<<set $prefixes.push("Cunt", "Pussy")>>
+<</if>>
+<<if ($activeSlave.boobs lt 500) and ($activeSlave.butt lt 3) and ($activeSlave.dick gt 0)>>
+	<<set $prefixes.push("Trap", "Sissy")>>
+<</if>>
+<<if ($activeSlave.boobs gt 500) and ($activeSlave.butt gt 3) and ($activeSlave.dick gt 0)>>
+	<<set $prefixes.push("Futa", "She")>>
+<</if>>
+<<if ($activeSlave.weight gt 1)>>
+	<<set $prefixes.push("Fat", "Chubby")>>
+<<elseif ($activeSlave.weight lt -1)>>
+	<<set $prefixes.push("Skinny", "Bony")>>
+<</if>>
+<<if ($activeSlave.muscles gte 2)>>
+	<<set $prefixes.push("Ripped", "Strong")>>
+<</if>>
+<<if ($activeSlave.fetish is "nympho") and ($activeSlave.fetishDiscovered is 1)>>
+	<<set $prefixes.push("Fuck", "Nympho")>>
+<</if>>
+<<if ($activeSlave.fetish is "buttslut") and ($activeSlave.fetishDiscovered is 1)>>
+	<<set $prefixes.push("Anal", "Butthole")>>
+<</if>>
+<<if ($activeSlave.fetish is "cumslut") and ($activeSlave.fetishDiscovered is 1)>>
+	<<set $prefixes.push("Cum", "Suck")>>
+<</if>>
+<<if ($activeSlave.fetish is "humiliation") and ($activeSlave.fetishDiscovered is 1)>>
+	<<set $prefixes.push("Public", "Rape")>>
+<</if>>
+<<if ($activeSlave.fetish is "submissive") and ($activeSlave.fetishDiscovered is 1)>>
+	<<set $prefixes.push("Bottom", "Rape")>>
+<</if>>
+<<if ($activeSlave.fetish is "dom") and ($activeSlave.fetishDiscovered is 1)>>
+	<<set $prefixes.push("Top", "Dom")>>
+<</if>>
+<<if ($activeSlave.fetish is "masochist") and ($activeSlave.fetishDiscovered is 1)>>
+	<<set $prefixes.push("Pain", "Rape")>>
+<</if>>
+<<if ($activeSlave.fetish is "pregnancy") and ($activeSlave.fetishDiscovered is 1)>>
+	<<set $prefixes.push("Breeder", "Mommy")>>
+<</if>>
+<<if ($activeSlave.fetish is "boobs") and ($activeSlave.fetishDiscovered is 1)>>
+	<<set $prefixes.push("Titty", "Boob")>>
+<</if>>
+<<if (($activeSlave.boobs*$activeSlave.lactation) gt 1000)>>
+	<<set $prefixes.push("Cow", "Creamy")>>
+<</if>>
+<<if ($activeSlave.oralSkill lt 2) and ($activeSlave.analSkill lt 2)>>
+	<<set $prefixes.push("Cheap", "Gutter")>>
+<</if>>
+<<if ($activeSlave.nipples gt 1)>>
+	<<set $prefixes.push("Nipples", "Pointy")>>
+<</if>>
+<<if ($activeSlave.areolae gt 2)>>
+	<<set $prefixes.push("Headlights")>>
+<</if>>
+<<if ($activeSlave.lips gt 1)>>
+	<<set $prefixes.push("Lippy", "Plush")>>
+<</if>>
+<<if ($activeSlave.labia gt 1)>>
+	<<set $prefixes.push("Flower", "Lips")>>
+<</if>>
+<<if ($activeSlave.age gt 35)>>
+	<<set $prefixes.push("Old", "Cougar")>>
+<</if>>
+<<if ($activeSlave.age lt 25)>>
+	<<set $prefixes.push("Young", "Girly")>>
+<</if>>
+<<if ($activeSlave.amp is 1)>>
+	<<set $prefixes.push("Amp")>>
+<</if>>
+<<if ($activeSlave.boobsImplant gt 1000) or ($activeSlave.buttImplant gt 3)>>
+	<<set $prefixes.push("Fake", "Plastic")>>
+<</if>>
+<<if ($activeSlave.preg gt 5)>>
+	<<set $prefixes.push("Preg", "Belly")>>
+<</if>>
+<<if ($activeSlave.dick gt 4)>>
+	<<set $prefixes.push("Hung", "Dangle")>>
+<</if>>
+<<if ($activeSlave.dick gt 0) and ($activeSlave.balls is 0)>>
+	<<set $prefixes.push("Soft", "Gelded")>>
+<</if>>
+<<if ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0)>>
+	<<set $prefixes.push("Hard", "Stiff")>>
+<</if>>
+<<if ($activeSlave.dick is 1)>>
+	<<set $prefixes.push("Tiny", "Micro")>>
+<</if>>
+<<if ($activeSlave.boobs gte 800)>>
+	<<set $prefixes.push("Boob", "Boobs")>>
+<</if>>
+<<if ($activeSlave.butt gt 5)>>
+	<<set $prefixes.push("Ass", "Butt")>>
+<</if>>
+<<if ($activeSlave.vagina is 0)>>
+	<<set $prefixes.push("Virgin")>>
+<</if>>
+<<if ($activeSlave.height gt 1)>>
+	<<set $prefixes.push("Top", "Tower")>>
+<</if>>
+<<if ($activeSlave.height lt -1)>>
+	<<set $prefixes.push("Bottom", "Short")>>
+<</if>>
+<<if ($activeSlave.whoreSkill gt 0)>>
+	<<set $prefixes.push("Street", "Whore")>>
+<</if>>
+<<if ($activeSlave.entertainSkill gt 0)>>
+	<<set $prefixes.push("Easy", "Slut")>>
+<</if>>
+<<if ($activeSlave.oralSkill gt 0)>>
+	<<set $prefixes.push("Throat", "Suck")>>
+<</if>>
+<<if ($activeSlave.vaginalSkill gt 0)>>
+	<<set $prefixes.push("Pussy", "Kegel")>>
+<</if>>
+<<if ($activeSlave.analSkill gt 0)>>
+	<<set $prefixes.push("Asspussy", "Anal")>>
+<</if>>
+<<if ($activeSlave.vagina is 1) and ($activeSlave.vaginalSkill lt 1)>>
+	<<set $prefixes.push("Tight")>>
+<</if>>
+<<if ($activeSlave.anus is 1) and ($activeSlave.analSkill lt 1)>>
+	<<set $prefixes.push("Tightbutt")>>
+<</if>>
+<<if ($activeSlave.devotion lt -20)>>
+  <<set $prefixes.push("Angry", "Cage", "Biter")>>
+<<elseif ($activeSlave.devotion lt -10)>>
+  <<set $prefixes.push("Cell", "Cuffs")>>
+<<elseif ($activeSlave.devotion lt -4)>>
+  <<set $prefixes.push("Bag", "Box")>>
+<<elseif ($activeSlave.devotion lte 4)>>
+  <<set $prefixes.push("Whiner", "Sad")>>
+<</if>>
+<<if ($activeSlave.trust lt -10)>>
+  <<set $prefixes.push("Sobber", "Screamer")>>
+<<elseif ($activeSlave.trust lt -4)>>
+  <<set $prefixes.push("Weeper", "Crying")>>
+<<elseif ($activeSlave.trust lte 4)>>
+  <<set $prefixes.push("Tears", "Begging")>>
+<</if>>
+
+<<set $suffixes to ["bitch", "slut", "whore", "slave", "puppet", "hole", "butt"]>>
+
+<<if ($activeSlave.age lte 25)>>
+	<<set $suffixes.push("girl")>>
+<<elseif ($activeSlave.age gt 30)>>
+	<<set $suffixes.push("MILF", "cougar", "mother")>>
+<</if>>
+<<if ($activeSlave.vagina gt -1)>>
+	<<set $suffixes.push("cunt", "pussy")>>
+<</if>>
+<<if ($activeSlave.dick gt 0)>>
+  <<if ($activeSlave.balls is 0)>>
+	<<set $suffixes.push("gelding", "sissy", "trap")>>
+  <<elseif ($activeSlave.boobs lt 500)>>
+	<<set $suffixes.push("sissy", "trap")>>
+  <<else>>
+	<<set $suffixes.push("futa")>>
+  <</if>>
+<</if>>
+
+<<if ($activeSlave.assignment is "guard you")>>
+  <<set $activeSlave.slaveName to either("Guard", "Battle")>>
+<<elseif ($activeSlave.assignment is "recruit girls")>>
+  <<set $activeSlave.slaveName to either("Cam", "Recruiter")>>
+<<elseif ($activeSlave.assignment is "be the Madam")>>
+  <<set $activeSlave.slaveName to either("Pimp", "Madam")>>
+<<elseif ($activeSlave.assignment is "be the Concierge")>>
+  <<set $activeSlave.slaveName to either("Promenade", "Greeter")>>
+<<elseif ($activeSlave.assignment is "be the Milkmaid")>>
+  <<set $activeSlave.slaveName to either("Farm", "Dairy")>>
+<<elseif ($activeSlave.assignment is "be the Collectrix")>>
+  <<set $activeSlave.slaveName to either("Milker", "Fucker")>>
+<<elseif ($activeSlave.assignment is "be your Head Girl")>>
+  <<set $activeSlave.slaveName to either("Chief", "Head")>>
+<<elseif ($activeSlave.assignment is "be the Schoolteacher")>>
+  <<set $activeSlave.slaveName to either("Teacher", "Classroom")>>
+<<elseif ($activeSlave.assignment is "be the Attendant")>>
+  <<set $activeSlave.slaveName to either("Spa", "Bath")>>
+<<elseif ($activeSlave.assignment is "be the Wardeness")>>
+  <<set $activeSlave.slaveName to either("Jail", "Prison")>>
+<<elseif ($activeSlave.assignment is "be the Concubine")>>
+  <<set $activeSlave.slaveName to either("Bed", "Master")>>
+<<else>>
+  <<set $activeSlave.slaveName to $prefixes.random()>>
+<</if>>
+
+<<set $seed to $suffixes.random()>>
+
+<<if $seed is $activeSlave.slaveName.toLowerCase()>>
+  <<goto "Degrading Name">>
+<</if>>
+
+<<set $activeSlave.slaveName to $activeSlave.slaveName+$seed>>
+
+<</silently>>

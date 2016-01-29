@@ -1,0 +1,80 @@
+<<nobr>>
+
+<<set $schoolroomSlaves to 0>>
+<<set $schoolteacherFetish to 0>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].assignment is "learn in the schoolroom")>>
+  <<set $schoolroomSlaves += 1>>
+  <<silently>>
+  <<display [[SA take classes]]>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if ($slaves[$i].health lt -4)>>
+	<<set $slaves[$i].health += 1>>
+  <<elseif ($slaves[$i].health lt 0)>>
+	<<set $slaves[$i].health += 0.7>>
+  <<elseif ($slaves[$i].health lt 9)>>
+	<<set $slaves[$i].health += 0.3>>
+  <</if>>
+<<elseif ($Schoolteacher isnot 0) and ($slaves[$i].ID is $Schoolteacher.ID)>>
+  <<silently>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if ($slaves[$i].health lt -4)>>
+	<<set $slaves[$i].health += 1.3>>
+  <<elseif ($slaves[$i].health lt 0)>>
+	<<set $slaves[$i].health += 1>>
+  <<elseif ($slaves[$i].health lt 9)>>
+	<<set $slaves[$i].health += 0.7>>
+  <</if>>
+  <<if ($slaves[$i].devotion lt 12)>>
+	<<set $slaves[$i].devotion += 0.3>>
+  <</if>>
+  <<if (($slaves[$i].fetish isnot "likes girls") and ($slaves[$i].fetish isnot "nympho")) or ($slaves[$i].fetishDiscovered is 0)>>
+	<<if ($slaves[$i].clitSetting is "likes girls") or ($slaves[$i].clitPiercing lt 3)>>
+	  <<if random(1,100) lt $slaves[$i].devotion>>
+		<<set $schoolteacherFetish to 1>>
+		<<set $slaves[$i].fetish to "likes girls">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+  <</if>>
+<</if>>
+<</for>>
+
+<<if ($schoolroomSlaves gt 0)>>
+  <<if ($schoolroomSlaves is 1)>>
+	''There is one slave studying in the schoolroom.''
+  <<else>>
+	''There are $schoolroomSlaves slaves studying in the schoolroom.''
+  <</if>>
+
+  <<if ($Schoolteacher isnot 0)>>
+	$Schoolteacher.slaveName is serving as your schoolteacher.
+	<<if ($schoolteacherFetish is 1)>>
+	  She's allowed and even expected to use her students for her own sexual gratification, and in their own way her students are complicit, offering sexual favors for an easier time in the classroom. Before long, she's running a hungry eye over the tits and asses of new trainees; she now @@color:pink;appreciates girls.@@
+	<</if>>
+	<<if ($Schoolteacher.age gt 35)>>
+	  Her age earns her the respect of her students.
+	<</if>>
+	<<if ($Schoolteacher.intelligence gt 0)>>
+	  She's intelligent enough to be a good teacher.
+	<</if>>
+	<<if ($Schoolteacher.intelligenceImplant is 1)>>
+	  Since she's educated herself, she understands her students.
+	<</if>>
+	<<if ($Schoolteacher.face gt 1)>>
+	  Her students want to be just like their beautiful teacher.
+	<</if>>
+  <</if>>
+<<else>>
+  ''The schoolroom is empty.''
+<</if>>
+<br>
+
+<</nobr>>

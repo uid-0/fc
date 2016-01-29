@@ -1,0 +1,62 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Random Nonindividual Event">>
+<<set $returnTo to "Random Nonindividual Event">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate New Slave">>
+    
+<<set $activeSlave.origin to "She offered herself to you, impressed by your handling of her employment situation.">>
+<<set $activeSlave.career to "prostitute">>
+
+<<set $activeSlave.devotion to 9>>
+<<set $activeSlave.trust to $activeSlave.devotion-4>>
+<<set $activeSlave.health to 2>>
+<<set $activeSlave.anus to 2>>
+<<if $activeSlave.dick is 0>>
+	<<set $activeSlave.vagina to 2>>
+	<<set $activeSlave.vaginalSkill to 2>>
+<</if>>
+<<set $activeSlave.oralSkill to 2>>
+<<set $activeSlave.analSkill to 2>>
+<<set $activeSlave.whoreSkill to 2>>
+<<set $activeSlave.boobs += 600>>
+<<set $activeSlave.boobsImplant to 600>>
+<<set $activeSlave.lipsPiercing to 1>>
+<<set $activeSlave.earPiercing to 1>>
+<<set $activeSlave.nosePiercing to 1>>
+<<set $activeSlave.eyebrowPiercing to 1>>
+<<set $activeSlave.navelPiercing to 1>>
+<<set $activeSlave.nipplesPiercing to 1>>
+<<set $activeSlave.clitPiercing to 1>>
+<<set $activeSlave.hlength to "fashionable for a Free Cities hooker, long, with both sides buzzed">>
+<<display "Slave Cost">>
+
+<</nobr>>\
+\
+One day, you walk by the commercial space where the strip club that closed was located. It's now advertised as a massage parlor, and indeed, you can see a couple of competent-looking, modestly dressed masseuses seeing to clients. The only chink in the old world decorum is the pretty sign detailing pricing, which lists not only various massages but the masseuses' hands, breasts, mouths, pussies, and anuses.
+
+As you pass, a pretty streetwalker walking by wearing an attractive club girl outfit sidles up to you. She's halfway through her first flirty come-on before she recognizes you. She gasps and says, "You own this arcology! Sir, I was a stripper here! Thank you so much for helping us. That money set most of us up pretty well." She hefts her chest. "It bought me new boobs, that's for sure. So, um," she bites her lip in indecision, "I hear -" she hesitates and then the words come out in a rush. "I hear your girls do really well. I've seen them, they look good. Can I come?" You arch an eyebrow and begin to ask whether she knows what that means. "Yep," she interrupts. "I'll be your sex slave."
+
+//Enslaving her will cost ¤<<print $contractCost>>. Alternatively, you could sell her. Less costs, this will bring in  ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    She smiles with gratitude as the biometric scanners scrupulously record her every particular as belonging not to a person but to a piece of human property. She's seen what Free Cities life is, and she seems to have come to the conclusion that being a slave in the penthouse is better than being a free whore on the lower levels.
+	<<set $nextLink to "AS Dump">>\
+	<<set $returnTo to "Main">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

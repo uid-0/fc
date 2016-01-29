@@ -1,0 +1,40 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+
+Going about your day, <<if ($activeSlave.amp isnot 1)>>you see <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> sitting crosslegged in the remote surgery room, staring intently at the equipment.<<else>>you see <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> sitting propped against the doorway of the surgery room, staring intently at the equipment.<</if>> She's not breaking any rules, but this behavior is so strange you investigate. She asks hesitantly <<if ($activeSlave.lips gt 2)>>through her huge lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, Ah... Ah have a loh of implanth. A loh." <<if ($activeSlave.amp isnot 1)>>She touches her body absently.<<else>>She wriggles her stumps, trying to indicate her implants.<</if>> "Cahn... cahn yeh give me thome more?"<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>through her piercings, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, Ah... Ah have a loh of implanth. A loh."<<if ($activeSlave.amp isnot 1)>>She touches her body absently.<<else>>She wriggles her stumps, trying to indicate her implants.<</if>> "Cahn... cahn yeh give me thome more?"<<else>>, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I... I have a lot of implants. A lot."<<if ($activeSlave.amp isnot 1)>>She touches her body absently.<<else>>She wriggles her stumps, trying to indicate her implants.<</if>> "Can... can you give me some more?"<</if>>
+\
+<span id="result">
+<<click "She asked for it; give her the works">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	As the sterile doors of the surgical equipment hiss closed over her, you whisper in her ear that she's about to be cut up. She looks at you with a mix of fear and wild excitement. After nearly a whole week of constant surgery and expensive drug-induced recovery, she finally gets to see her new body in the mirror. She has cartoonishly huge lips, boobs, and buttocks; she looks like a caricature of a bimbo. She cries with gratitude to see herself, and can scarcely wait to recover enough to get fucked. @@color:hotpink;She has become extremely devoted to you.@@
+	<<set $cash -= 125>>
+	<<set $activeSlave.devotion += 2>>
+    <<set $activeSlave.boobs -= $activeSlave.boobsImplant>>
+	<<set $activeSlave.boobsImplant to 1200>>
+	<<set $activeSlave.boobs += 1200>>
+    <<set $activeSlave.butt -= $activeSlave.buttImplant>>
+	<<set $activeSlave.buttImplant to 6>>
+	<<set $activeSlave.butt += 6>>
+	<<set $activeSlave.lipsImplant to 2>>
+	<<set $activeSlave.lips to 2>>
+    <</replace>>
+<</click>>
+<<click "No">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	She's clearly disappointed, but she accepts your will and goes about her business. After the incident, you notice that she definitely seems to have a kink for implants. She loves it when her implants are groped, but her favorite is when she gets to fuck another slave with fake tits. She can't keep her <<if ($activeSlave.amp isnot 1)>>hands<<else>>lips<</if>> off a pair of bolted-on boobs.
+    <</replace>>
+<</click>>
+</span>

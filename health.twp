@@ -1,0 +1,12 @@
+<<nobr>>
+
+''Your head girl __@@color:pink;$HeadGirl.slaveName@@__'' notices that ''__@@color:pink;$activeSlave.slaveName@@__'' is unwell.
+
+<<if ($HeadGirl.devotion lte 4)>>
+	Since your head girl is not obedient, her lazy attempts to help are ineffectual.
+<<else>>
+	She helps $activeSlave.slaveName however she can. The tender nursing has @@color:green;improved $activeSlave.slaveName's health.@@
+	<<set $activeSlave.health += 1>>
+<</if>>
+
+<</nobr>>\

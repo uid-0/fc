@@ -1,0 +1,67 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> hurries into your office with a strange light in her eyes. She sits down on the couch and scoots down so her butt is right at the edge of the couch. She then spreads her legs and uses one hand to spread her pussylips for you.
+
+<<if ($activeSlave.mute is 1)>>She pantomimes pregnancy with her other hand, lewdly gesturing to ask you to cum inside her fertile pussy.<<elseif ($activeSlave.lips gt 2)>>"Pleathe knock me up, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she begs through her dick-sucking lips. "I can't thtand it. I need to make you another thlave, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Pleathe knock me up, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she begs through her ridiculous piercings. "I can't thtand it. I need to make you another thlave, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>."<<else>>"Please knock me up, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>," she begs. "I can't stand it. I need to make you another slave, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. Please use my body as your slave factory."<</if>> She stares at you doe-eyed, desperately awaiting your answer.
+\
+<span id="result">
+<<click "Put a slave in her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Despite herself, she breaks down when she feels your cock enter her <<if ($activeSlave.vagina is 1)>>deliciously tight<<elseif ($activeSlave.vagina is 2)>>well experienced<<else>>fucked-out<</if>> cunt. She smiles up reassuringly at you to let you know she's not in pain or anguish, blinking away her happy tears. She reaches up to hug herself close to you, <<if ($activeSlave.boobs lt 600)>>and her modest breasts let her snuggle close to you, face-to-face, as you take her.<<elseif ($activeSlave.boobs lt 1200)>>and her big tits form a soft cushion between you as you take her.<<else>>but her massive tits stop her from bringing herself too close to you as you take her.<</if>> She enjoys herself immensely, but she loses it again when she feels your seed in her, blubbering inelegantly and <<if ($activeSlave.mute is 1)>>gesturing<<elseif ($activeSlave.lips gt 2)>>lisping<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>lisping<<else>>whimpering<</if>> @@color:hotpink;her thanks.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.vaginalCount += 1>>
+	<<set $vaginalTotal += 1>>
+    <<if random(1,100) gt 50>><<set $activeSlave.preg to 1>><</if>>
+    <</replace>>
+<</click>>
+<<click "Use her ass but give her what she wants">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+    You tell her that impregnation will be her reward if she's a good little buttslut. She visibly resolves to do her anal best. You recline on the couch and she squats over you, one leg on the floor and the other bent up on the cushion, with one hand on the back of the couch and the other rubbing her pussy. She <<if ($activeSlave.anus is 1)>>winces in pain as she lowers her tight<<elseif ($activeSlave.anus is 2)>>moans with discomfort as she lowers her tight<<else>>barely reacts as she lowers her huge<</if>> butthole down onto your cock. She gets quite a workout, raising and lowering her body to fuck her own ass on your stationary dick. Since she's facing you you get a great view of her body in motion. Her clitoral stimulation is having an effect, and after a while she <<if ($activeSlave.mute is 1)>>takes her hand away to make an unintelligible gesture. After she repeats it, you figure out that she means she wishes she could get pregnant anally.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>pants, "That'th good, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>. It'th too bad I can't get pregnant there."<<else>>pants, "That's so good, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>. I wish you could get my ass pregnant."<</if>> When you're close, you scoot back to pull yourself out and she spears her cunt down onto your cock. The sudden difference of sensation brings you to violent climax, and she @@color:hotpink;cries with joy@@ at feeling your hot seed.
+    <<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+	<<set $activeSlave.vaginalCount += 1>>
+	<<set $vaginalTotal += 1>>
+    <<if random(1,100) gt 50>><<set $activeSlave.preg to 1>><</if>>
+    <</replace>>
+<</click>>
+<<click "Sneak it into her ass instead">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Despite herself, she breaks down when she sees you coming over and kneeling down to line your cock up with the entrance to her <<if ($activeSlave.vagina is 1)>>deliciously tight<<elseif ($activeSlave.vagina is 2)>>well experienced<<else>>fucked-out<</if>> cunt. Her happy tears turn to a ragged gasp of surprise and pain when you slide your dickhead down to her <<if ($activeSlave.anus is 1)>>painfully inexperienced<<elseif ($activeSlave.anus is 2)>>tight<<else>>loose<</if>> ass and shove it up there instead. She knows better than to protest, but the expression on her face is a wonderful mix of submission, anguish and disappointment as she takes the anal fuck. To stop her fugue of disappointment you give her a light slap on the cheek to get her attention, and then instruct her that it's not her place to plan her pregnancies. They'll happen when they happen, and until then she'll take it up the butt like a good slut. She @@color:gold;nods and wipes her eyes@@ even as <<if ($activeSlave.anus is 1)>>she grimaces involuntarily at your painful use of her tight butthole.<<elseif ($activeSlave.anus is 2)>>she takes your cock up her tight ass.<<else>>her gaping anus makes occasional lewd noises as you pound it.<</if>>
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.analCount += 1>>
+	<<set $analTotal += 1>>
+    <</replace>>
+<</click>>
+<<if ($collectionFacilitySlaves gte 5)>>
+  <<click "Use Collection Facility product to impregnate her">>
+	  <<replace "#name">>\
+	  $activeSlave.slaveName\
+	  <</replace>>\
+	  <<replace "#result">>
+	  You tell her she'll be having everyone's children. She looks puzzled until you put her on the couch, legs spread, and produce a large, soft injector full of fresh cum. At this she giggles and thanks you; she rapturously rubs her belly as you gently push the injector home. For the rest of the week, she appears in your office morning and night, receiving the seed of every slave you're currently having cockmilked. She goes about her other business with a @@color:hotpink;deeply pleased@@ expression on her face. Whenever she has a spare moment she steals down to the collection facility to hug the slaves there or otherwise show them a little affection.
+	  <<set $activeSlave.devotion += 2>>
+	<<set $activeSlave.vaginalCount += 1>>
+	<<set $vaginalTotal += 1>>
+    <<if random(1,100) gt 10>><<set $activeSlave.preg to 1>><</if>>
+	  <</replace>>
+  <</click>>
+<</if>>
+</span>

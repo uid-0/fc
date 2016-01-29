@@ -1,0 +1,15 @@
+<<set $activeSlave to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+  <<if $slaves[$i].assignment is "be confined in the arcade">>
+  <<if $slaves[$i].fetish isnot "mindbroken">>
+  <<if $slaves[$i].amp isnot 1>>
+	<<set $activeSlave to $slaves[$i]>>
+  <</if>>
+  <</if>>
+  <</if>>
+<</for>>
+<<if $activeSlave is 0>>
+  <<goto "RIE Eligibility Check">>
+<<else>>
+  <<goto "RE busy arcade workaround">>
+<</if>>

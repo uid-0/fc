@@ -1,0 +1,48 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+Late at night, <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> returns to the living area of the penthouse. It's the end of her day as a working girl, and despite being obviously tired, she's smiling with obvious sexual satiation. Every so often, she'll get a dreamy expression and lick her lips. She fetishizes cum to the extent that getting to eat a mile of dick really satisfies her.
+\
+<span id="result">
+<<click "She must have at least a little room left">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You call $activeSlave.slaveName in and ask how full she is. She looks confused for a moment but soon figures out what you mean. <<if ($activeSlave.mute is 1) and ($activeSlave.amp is 1)>>As a mute amputee she communicates poorly, but she does manage to look hungry.<<elseif ($activeSlave.mute is 1)>>She gestures at her stomach, makes a sign for "full," and then makes a sign for "never."<<elseif ($activeSlave.lips gt 2)>>"Ahm never full, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she says past her enormous lips.<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Ahm never full, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she says past her mouthful of piercings.<<else>>"Oh <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I'll never be full again," she says.<</if>> She comes eagerly over and sucks you off with enthusiasm. As you cum, she orgasms quickly at the taste of the stuff hitting her mouth. <<if ($activeSlave.mute is 1)>>She signs that you taste great.<<elseif ($activeSlave.lips gt 2)>>"Yeh taste good, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she purrs.<<elseif ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Yeh taste good, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>," she purrs.<<else>>"<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, you taste great," she purrs.<</if>> @@color:hotpink;She has become more devoted to you.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 1>>
+    <<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+<<click "Bring her along for your busy evening">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You've had a busy day, so you've been unusually remiss in fucking your slaves. Naturally, this means you'll be spending the evening wandering around your home using your living sexual appliances. $activeSlave.slaveName is instructed to follow you and assist. She's tired, so <<if ($activeSlave.amp is 1)>>you bring her limbless torso along as a cum receptacle. Whenever you're about to finish in another slave, you pull out and fill her mouth instead.<<else>>you let her tag meekly along, masturbating gently as you use other slaves or just watching lazily. But whenever you're on the point of coming, you switch to her mouth and let her finish you with a few sucks and pumps of her fatigued hands.<</if>> By the time you put the exhausted $activeSlave.slaveName to bed she's in a haze of cum-induced pleasure. @@color:hotpink;She has become more submissive to you.@@
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.oralCount += 1>>
+    <<set $oralTotal += 1>>
+    <</replace>>
+<</click>>
+<<if ($collectionFacilitySlaves gte 5)>>
+  <<click "Give her access to the Collection Facility product">>
+	  <<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	  You let her know you have a sexual accessory for her to use. This isn't too unusual, so she comes to your office without much anticipation. She doesn't understand why you have an enormous sealed canister of fresh cum on your desk, but when you explain that it's hers to play with on the job, she starts to bounce with excitement. Not all of her customers are interested in cum play, but quite a few are, and she spends almost as much time cleaning up the gorgeous messes that get made as she does making them. It's a valuable and @@color:yellowgreen;profitable@@ whore who @@color:hotpink;looks forward@@ to her next customer.
+	  <<set $activeSlave.devotion += 2>>
+	  <<set $cash += random(500,1000)>>
+	  <</replace>>
+  <</click>>
+<</if>>
+</span>

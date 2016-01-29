@@ -1,0 +1,55 @@
+<<nobr>>
+
+<<if ($slaves[$i].ovaries is 1)>>
+
+<<if ($slaves[$i].preg lt 0) and ($slaves[$i].vagina isnot 0)>>
+<<elseif ($slaves[$i].assignment is "whore") and ($slaves[$i].vaginalAccessory isnot "chastity belt") and ($slaves[$i].vagina gt 0) and ($slaves[$i].preg is 0) and ($slaves[$i].ovaries isnot 0) and (random(1,100) gt 50)>>
+	Due to all the customers cumming in her fertile pussy, @@color:lime;she has gotten pregnant.@@
+	<<set $slaves[$i].preg to 1>>
+<<elseif ($slaves[$i].assignment is "serve the public") and ($slaves[$i].vaginalAccessory isnot "chastity belt") and ($slaves[$i].vagina gt 0) and ($slaves[$i].preg is 0) and ($slaves[$i].ovaries isnot 0) and (random(1,100) gt 50)>>
+      Due to all the guys cumming in her fertile pussy, @@color:lime;she has gotten pregnant.@@
+      <<set $slaves[$i].preg to 1>>
+<<elseif ($slaves[$i].assignment is "work a glory hole") and ($slaves[$i].vaginalAccessory isnot "chastity belt") and ($slaves[$i].vagina gt 0) and ($slaves[$i].preg is 0) and ($slaves[$i].ovaries isnot 0) and (random(1,100) gt 10)>>
+      Due to all the customers cumming in her fertile, restrained pussy, @@color:lime;she has gotten pregnant.@@
+      <<set $slaves[$i].preg to 1>>
+<<elseif ($slaves[$i].vaginalAccessory isnot "chastity belt") and ($slaves[$i].vagina gt 0) and ($slaves[$i].preg is 0) and ($slaves[$i].ovaries isnot 0) and (random(1,100) gt 80)>>
+	<<if ($slaves[$i].vaginalCount gt 0)>>
+	<<if ($slaves[$i].assignment isnot "rest")>>
+	<<if ($slaves[$i].assignment isnot "stay confined")>>
+      @@color:lime;She has gotten pregnant.@@
+      <<set $slaves[$i].preg to 1>>
+    <</if>>
+    <</if>>
+    <</if>>
+<<elseif ($slaves[$i].fetish isnot "pregnancy") and ($slaves[$i].fetish isnot "nympho") and ($slaves[$i].preg gt 0) and ($slaves[$i].oralCount+$slaves[$i].vaginalCount+$slaves[$i].analCount gt 200) and ($slaves[$i].clitSetting isnot $slaves[$i].fetish) and (random(1,100) gt 90)>>
+	The combination of pregnancy and constant sex has @@color:pink;sexualized pregnancy for her.@@
+	<<set $slaves[$i].fetish to "pregnancy">>
+<<elseif ($slaves[$i].preg gt 10) and (($slaves[$i].boobs - $slaves[$i].boobsImplant) lt 350) and (random(1,100) gt 80)>>
+	Pregnancy @@color:lime;causes her breasts to swell somewhat.@@
+	<<set $slaves[$i].boobs += 50>>
+<<elseif ($slaves[$i].preg gt 20) and ($slaves[$i].lactation is 0) and (random(1,100) gt 70)>>
+	Pregnancy @@color:lime;causes her to begin lactating.@@
+	<<set $slaves[$i].lactation to 1>>
+<<elseif ($slaves[$i].preg gt 34) and (random(1,100) gt 50)>>
+	@@color:orange;She has given birth.@@ Childbirth @@color:lime;stretches out her vagina.@@ The child has been remitted to a slave orphanage as is the law.
+	<<set $slaves[$i].preg to -1>>
+	<<set $slaves[$i].births += 1>>
+	<<set $birthsTotal += 1>>
+	<<set $slaves[$i].vagina to 3>>
+<<elseif ($slaves[$i].preg gt 30) and (random(1,100) gt 90)>>
+	@@color:orange;She has given birth.@@ Childbirth @@color:lime;stretches out her vagina.@@ The child has been remitted to a slave orphanage as is the law.
+	<<set $slaves[$i].preg to -1>>
+	<<set $slaves[$i].births += 1>>
+	<<set $birthsTotal += 1>>
+	<<set $slaves[$i].vagina to 3>>
+<<elseif ($slaves[$i].preg gt 36)>>
+	@@color:orange;She has given birth.@@ Childbirth @@color:lime;stretches out her vagina.@@ The child has been remitted to a slave orphanage as is the law.
+	<<set $slaves[$i].preg to -1>>
+	<<set $slaves[$i].births += 1>>
+	<<set $birthsTotal += 1>>
+	<<set $slaves[$i].vagina to 3>>
+<</if>>	
+	
+<</if>>
+
+<</nobr>>

@@ -1,0 +1,124 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Free Cities Justice">>
+
+<<set $contractCost to 1000>>
+
+<<display "Generate XX Slave">>
+<<set $activeSlave.origin to "You sentenced her to enslavement as a punishment for attempted theft of a slave.">>
+<<set $activeSlave.career to "antislavery activist">>
+<<set $activeSlave.devotion to random(-15,-11)>>
+<<set $activeSlave.trust to random(-3,0)>>
+    <<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.muscles to 2>>
+<<set $activeSlave.vaginalSkill to 0>>
+<<set $activeSlave.oralSkill to 0>>
+<<set $activeSlave.analSkill to 0>>
+<<set $activeSlave.whoreSkill to 0>>
+<<set $activeSlave.combatSkill to 1>>
+<<set $activeSlave.anus to 0>>
+<<set $activeSlave.age to random(28,43)>>
+<<set $activeSlave.health to random(6,8)>>
+<<set $activeSlave.behavioralQuirk to "arrogant">>
+<<set $activeSlave.sexualQuirk to "hates men">>
+<<set $activeSlave.hlength to "shaved into a mohawk">>
+<<set $activeSlave.customTat to "She seems to have had slave tattoos at one time, but has had them cheaply removed.">>
+
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+Your personal assistant alerts you that a criminal has been detected by your security systems and detained by the drones. Crime is extremely uncommon in your arcology, but this is a special case. A well-muscled, well-armed woman was caught attempting to smuggle a slave owned by one of your tenants out of the arcology. Though the slave surrendered immediately (and will be dealt with by her owner), the would-be liberatrix was caught by your security drones. She destroyed two of them and caused @@color:red;other minor damage@@<<set $cash -= 1000>> that will require a small sum to repair, but was eventually subdued.
+
+The drones had to expend a great deal of nonlethal ordnance to bring her down and keep her down, but she is now entirely at your mercy.
+
+//Applying enslavement as punishment will cost ¤$contractCost. Doing so and then selling her immediately will bring in approximately ¤$slaveCost.//
+
+<<set $saleDescription to 1>>\
+<<display "Long Slave Description">>\
+<<set $saleDescription to 0>>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave the bitch">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You complete the legalities and biometric scanning quickly and cautiously. Though the would-be liberator is of course restrained, disarmed, and still sedated, she could awake at any time. Based on the drone logs, she is likely to be violent when she does.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<click "Sentence her to a day in the stocks, then enslave her">>
+	<<set $activeSlave.health -= 1>>
+	<<set $activeSlave.behavioralQuirk to "quirky">>
+	<<set $activeSlave.sexualQuirk to "hates men">>
+	<<set $activeSlave.anus to 2>>
+	<<if $activeSlave.vagina gt -1>>
+	  <<set $activeSlave.vagina to 2>>
+	  <<if random(1,100) gt 60>>
+		<<set $activeSlave.preg to 1>>
+	  <</if>>
+	<</if>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    Slave ownership is the cornerstone of the society you're building in your arcology, and this woman attempted to undermine it. Her holes are thus fair game for the entire arcology. She spends a torturous day in the stocks before being hauled in for enslavement, somewhat @@color:red;the worse for wear@@ and @@color:red;acting oddly@@ due to her ordeal, bruises all over her body, cum leaking from her @@color:lime;loosened@@ anus<<if $activeSlave.vagina gt -1>> and @@color:lime;fucked-out@@ pussy<</if>>. The public @@color:green;enjoys the fun,@@ and small slaveholders are @@color:green;encouraged to do business with your arcology@@ after word of the incident gets around.
+	<<set $rep += 100>>
+	<<set $AProsperity += 2>>
+	<<set $nextLink to "AS Dump">>
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<if $arcade gt 0>>\
+<<click "Enslave her and sentence her to a month in the arcade">>
+	<<set $activeSlave.assignment to "be confined in the arcade">>
+	<<set $activeSlave.assignmentVisible to 0>>
+	<<set $activeSlave.choosesOwnAssignment to 0>>
+	<<set $activeSlave.sentence to 4>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    You complete the legalities and biometric scanning quickly and cautiously. Though the would-be liberator is of course restrained, disarmed, and still sedated, she could awake at any time. It would be best to have her restrained for public use in the arcade first. The public @@color:green;looks forward@@ to seeing her there.
+	<<set $rep += 50>>
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<</if>>\
+<<click "Permit the slaveowner she tried to steal from to flog her, then enslave her yourself">>
+	<<set $activeSlave.health to random(-5,-7)>>
+	<<set $activeSlave.behavioralQuirk to "quirky">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+    An example must be made. Slave ownership is the cornerstone of the society you're building in your arcology, and this woman attempted to undermine it. She is stripped and the slaveowner whose property she tried to free is offered the instrument of torture. It seems the escapee was a favorite he does not wish to mangle, so he flogs the criminal mercilessly instead. He whips her so severely that @@color:red;her health is affected@@ and the experience has left her @@color:red;acting oddly.@@ Her nearly-dead form is hauled off for treatment. The public @@color:green;approves of this harshness,@@ and small slaveholders are @@color:green;encouraged to do business with your arcology@@ after word of the incident gets around.
+	<<set $rep += 100>>
+	<<set $AProsperity += 2>>
+	<<set $nextLink to "AS Dump">>
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+<<click "Permit the slaveowner she tried to steal from to flog her">>
+	<<replace "#result">>
+    An example must be made. Slave ownership is the cornerstone of the society you're building in your arcology, and this woman attempted to undermine it. She is stripped and the slaveowner whose property she tried to free is handed the leathern instrument. It seems the escapee was a favorite he does not wish to mangle, so he flogs the criminal mercilessly instead. She is flung out of the arcology, nearly dead. The public @@color:green;approves of this harshness,@@ and small slaveholders are @@color:green;encouraged to do business with your arcology@@ after word of the incident gets around.
+	<<set $rep += 100>>
+	<<set $AProsperity += 10>>
+    <</replace>>
+<</click>>
+<<click "Publicly flog the criminal">>
+	<<replace "#result">>
+    An example must be made. Slave ownership is the cornerstone of the society you're building in your arcology, and this woman attempted to undermine it. The protesting bitch is stripped and flogged on the main promenade before being escorted bleeding from the arcology. The public @@color:green;approves of this harshness.@@
+	<<set $rep += 100>>
+	<<set $nextLink to "RIE Eligibility Check">>
+    <</replace>>
+<</click>>
+</span>

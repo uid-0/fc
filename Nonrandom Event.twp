@@ -1,0 +1,88 @@
+<<if ($plot is 1)>>
+
+<<if ($week is 4)>>
+	<<goto "P strip club closing">>
+<<elseif ($week is 9)>>
+	<<goto "P assistant">>
+<<elseif ($week is 13)>>
+	<<if $PStrip is 1>><<goto "P strip club aftermath 1">>
+    <<elseif $PStrip is 2>><<goto "P strip club aftermath 2">>
+    <<else>><<goto "P strip club aftermath 3">>
+    <</if>>
+<<elseif ($week is 16)>>
+	<<goto "P militia">>
+<<elseif ($week is 19)>>
+	<<goto "P shoot invitation">>
+<<elseif ($week is 20) and ($PShoot is 1)>>
+	<<goto "P shoot result">>
+<<elseif ($week is 23)>>
+	<<goto "P mercenaries">>
+<<elseif ($week is 25) and ($mercenaries gt 0)>>
+	<<goto "P snatch and grab">>
+<<elseif ($week is 29) and ($assistant gt 0)>>
+	<<goto "P assistant SP">>
+<<elseif ($week is 31)>>
+	<<goto "P bad curatives">>
+<<elseif ($week is 35)>>
+	<<goto "P invasion">>
+<<elseif ($week is 36) and ($mercenaries gt 0)>>
+	<<goto "P mercenary romeo">>
+<<elseif ($week is 39) and ($mercenaries gt 0)>>
+	<<goto "P raid invitation">>
+<<elseif ($week is 41) and ($slaveMedic gt 0)>>
+	<<goto "P slave medic">>
+<<elseif ($week is 46)>>
+	<<goto "P underground railroad">>
+<<elseif ($week is 47) and ($traitor is 0)>>
+	<<goto "P bombing">>
+<<elseif ($week is 49) and ($traitor isnot 0)>>
+	<<goto "P traitor message">>
+<<elseif ($week is 50) and ($mercenaries lt 3)>>
+	<<goto "P defense fears">>
+<<elseif ($week is 53) and ($mercenaries gte 3)>>
+	<<goto "P citizens and civilians">>
+<<elseif ($week is 55) and ($traitor isnot 0)>>
+	<<goto "P collaboration choice">>
+<<elseif ($week is 57)>>
+	<<goto "P hacker support">>
+<<elseif ($week is 58) and ($collaboration is 1)>>
+	<<goto "P coup collaboration">>
+<<elseif ($week is 59) and ($mercenaries + $personalArms + $hackerSupport lt 5)>>
+	<<goto "P coup loss">>
+<<elseif ($week is 59)>>
+	<<goto "P coup attempt">>
+<<elseif ($week is 60)>>
+	<<goto "P coup aftermath">>
+<<elseif ($week gt 20) and ($rep gt 2000) and ($FSAnnounced is 0)>>
+	<<goto "P FS Announcement">>
+<<elseif ($cash gt 30000) and ($rep gt 4000) and ($corpAnnounced is 0)>>
+	<<goto "P Corp Announcement">>
+<<elseif ($rivalOwner gt 0)>>
+  <<if ($rivalryPower gt $rivalOwner)>>
+	<<goto "P rivalry victory">>
+  <<else>>
+	<<goto "P rivalry actions">>
+  <</if>>
+<<elseif ($PSnatch is 1)>>
+	<<goto "P snatch and grab result">>
+<<elseif ($PRaid is 1)>>
+	<<goto "P raid result">>
+<<elseif ($PPit is 1) and ($Bodyguard isnot 0)>>
+	<<goto "PE pit fight">>
+<<else>>
+  <<if random(1,100) gt $week+25>>
+	<<goto "RIE Eligibility Check">>
+  <<else>>	
+	<<goto "Random Nonindividual Event">>
+  <</if>>
+<</if>>
+
+<<else>>
+
+<<if random(1,100) gt $week+25>>
+  <<goto "RIE Eligibility Check">>
+<<else>>	
+  <<goto "Random Nonindividual Event">>
+<</if>>
+
+<</if>>

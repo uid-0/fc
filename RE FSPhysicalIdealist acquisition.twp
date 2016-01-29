@@ -1,0 +1,46 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "RIE Eligibility Check">>
+<<set $returnTo to "RIE Eligibility Check">>
+<<set $encyclopedia to "Enslaving People">>
+
+<<set $contractCost to 1000>>
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "She was voluntarily enslaved after she decided that your arcology was the best place for her to get the steroids that she'd allowed to define her life.">>
+<<set $activeSlave.career to $uneducatedCareers.random()>>
+<<set $activeSlave.health to random(2,6)>>
+<<set $activeSlave.muscles to 3>>
+<<set $activeSlave.addict to 1>>
+<<set $activeSlave.devotion to random(0,3)>>
+<<set $activeSlave.trust to random(0,3)>>
+<<set $activeSlave.intelligence to either(-2,-1)>>
+<<set $activeSlave.intelligenceImplant to 0>>
+<<display "Slave Cost">>
+<<set $slaveCost -= 1000>>
+
+<</nobr>>\
+\
+You receive so many messages, as a noted titan of the new Free Cities world, that your personal assistant has to be quite draconian in culling them. She lets only the most important through to you. One category of message that always gets through regardless of content, though, is requests for voluntary enslavement. As the new world takes shape, they've become less rare than they once were.
+
+The subject line of the latest is badly mispelled, but the accompanying profile image is impressive, if trite, depicting the sender's massive bicep flexing, veins playing across the striated muscle. Getting her situation out of her proves to be something of a chore, since she scarcely has two functional neurons to rub together. It seems that she's on a fair number of drugs, not limited to aphrodisiacs and steroids, that she can't afford them, and that she has a distorted image of your arcology as a sort of muscle-worshipping Valhalla of sex and gains. Hearing her describe her idea of life as one of your slaves, you understand why this idiot wants to be enslaved. If her idea of slave life were accurate, //you'd// want to be enslaved.
+
+//Enslaving her will cost ¤<<print $contractCost>>. Selling her immediately will bring in ¤<<print $slaveCost>>.//
+
+<<display "Long Slave Description">>\
+
+<span id="result">
+<<if $cash gte $contractCost>>\
+<<click "Enslave her">>
+	<<set $slaves.push($activeSlave)>>
+	<<set $cash -= $contractCost>>
+	<<replace "#result">>
+	She gets through the enslavement process without breaking anything, mostly due to your increasingly exasperated supervision. You wondered whether the destruction of her moronic ideas about life as one of your slaves was going to cause an explosion, but it seems that she's under fewer illusions than you thought. She's obviously familiar with getting fucked as a way of earning her keep, and hangs around, flexing idly and clearly wondering when you'll get on with it.
+	<<set $nextLink to "AS Dump">>\
+    <<display "New Slave Intro">>
+    <</replace>>
+<</click>>
+<<else>>\
+	//You lack the necessary funds to enslave her.//
+<</if>>\
+</span>

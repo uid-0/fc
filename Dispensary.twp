@@ -1,0 +1,45 @@
+<<set $nextButton to "Back">>\
+<<set $nextLink to "Main">>\
+<<set $encyclopedia to "The Pharmaceutical Fab.">>\
+\
+//The pharmaceutical fabricator is running smoothly. It can quickly and cheaply replicate complex medications, and has already cut the cost of drugs for your slaves in half. It can easily produce advanced drugs should you obtain the data necessary to create them.//
+
+<<nobr>>
+
+<<if ($injectionUpgrade is 0) and ($rep lte 6000)>>
+	//You lack the reputation to obtain prototype medicines//
+<</if>>
+
+<<if ($injectionUpgrade is 0) and ($rep gt 6000)>>
+    [[Purchase data on advanced growth hormone tests|Dispensary][$cash -= 25000, $injectionUpgrade to 50]]
+	//Costs ¤25000//
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;//Should vastly improve the reliability of growth injections of all kinds.//
+<<elseif ($injectionUpgrade gt 0)>>
+	The fabricator is producing advanced growth hormones.
+<</if>>
+
+<</nobr>>
+
+<<nobr>>
+
+<<if ($curativeUpgrade is 0) and ($rep gt 6000)>>
+    [[Purchase data on advanced curatives|Dispensary][$cash -= 25000, $curativeUpgrade to 1]]
+	//Costs ¤25000//
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;//Should improve the effectiveness of curative treatment.//
+<<elseif ($curativeUpgrade is 1)>>
+	The fabricator is producing highly effective curative cocktails.
+<</if>>
+
+<</nobr>>
+
+<<nobr>>
+
+<<if ($aphrodisiacUpgrade is 0) and ($rep gt 6000)>>
+    [[Purchase data on aphrodisiac withdrawal treatment|Dispensary][$cash -= 10000, $aphrodisiacUpgrade to 1]]
+	//Costs ¤10000//
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;//Should prevent most negative effects of withdrawal.//
+<<elseif ($aphrodisiacUpgrade is 1)>>
+	The fabricator is producing a substitute that will protect slaves from aphrodisiac withdrawal.
+<</if>>
+
+<</nobr>>

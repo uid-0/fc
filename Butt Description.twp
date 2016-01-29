@@ -1,0 +1,269 @@
+<<nobr>>
+
+<<if ($showClothing is 1) and ($saleDescription is 0)>>
+
+<<if $surgeryDescription is 0>>
+<<if ($activeSlave.clothes is "a very tight corset")>>
+	Her corset ends at her tailbone, leaving her buttocks totally bare.
+<<elseif ($activeSlave.clothes is "conservative clothing")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her slacks are pressed and well-tailored, but can't hide the huge size of her ass.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her slacks are pressed and well-tailored, but can't hide the huge size of her ass.
+  <<else>>
+	Her slacks are pressed and well-tailored.
+  <</if>>
+<<elseif ($activeSlave.clothes is "chains")>>
+  <<if ($activeSlave.butt gt 3)>>
+	Each buttock has a length of chain disappearing under it.
+  <<else>>
+	Each buttock has a length of chain running tightly under it.
+  <</if>>
+<<elseif ($activeSlave.clothes is "Western clothing")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her chaps are assless, and her butt is so big it seems to explode out of the hole left for it.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her chaps are assless, and her big butt is bare.
+  <<else>>
+	Her chaps are assless, and her butt is bare.
+  <</if>>
+<<elseif ($activeSlave.clothes is "body oil")>>
+  Her buttocks are shiny with oil.
+<<elseif ($activeSlave.clothes is "a toga")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her toga covers her ass, though it cannot conceal its absurd size.
+  <<else>>
+	Her toga covers her ass.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a slutty quipao")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her quipao is slit up the side, and her ass is so big that the rear part of the quipao only covers its top half.
+  <<else>>
+	Her quipao is slit up the side, baring quite a bit of the side of each buttock.
+  <</if>>
+<<elseif ($activeSlave.clothes is "uncomfortable straps")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her slave outfit's straining straps frame her enormous rear, with a strap disappearing under each massive buttock.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her slave outfit's straining straps frame her enormous buttocks, with a strap passing uncomfortably under each one.
+  <<else>>
+	Her slave outfit's straps frame her buttocks, with a strap passing uncomfortably between them.
+  <</if>>
+<<elseif ($activeSlave.clothes is "restrictive latex") and ($activeSlave.butt gt 5)>>
+<<elseif ($activeSlave.clothes is "restrictive latex")>>
+  <<if ($activeSlave.butt gt 6)>>
+	The latex creaks ominously as it is strained by her massive ass.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her big buttocks strain the latex.
+  <<else>>
+	The latex makes her ass look even shapelier.
+  <</if>>
+<<elseif ($activeSlave.clothes is "attractive lingerie")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her pretty lace g-string disappears between her huge buttocks.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her pretty lace g-string peeks out from between her big buttocks.
+  <<else>>
+	Her pretty lace g-string makes her buttocks especially delectable.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a slutty maid outfit")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her maid dress only covers the top quarter of her massive buttocks.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her maid dress ends halfway down her big buttocks.
+  <<else>>
+	Her maid dress ends three-quarters of the way down her buttocks.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a nice maid outfit")>>
+<<elseif ($activeSlave.clothes is "string lingerie")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her slutty string bikini bottom disappears between her huge buttocks.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her slutty string bikini bottom peeks out from between her big buttocks.
+  <<else>>
+	Her string bikini bottom runs enticingly down between her buttocks.
+  <</if>>
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt") and ($activeSlave.butt gt 5)>>
+<<elseif ($activeSlave.clothes is "cutoffs and a t-shirt")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her cutoffs fail to cover her huge buttocks, with the jean material almost disappearing between them.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her cutoffs bare the bottom of each of her big buttocks.
+  <<else>>
+	Her cutoffs bare a little buttock in back.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a slutty outfit") and ($activeSlave.butt gt 5)>>
+	Many of her choices of slutty outfit leave all or part of her huge buttocks bare.
+<<elseif ($activeSlave.clothes is "a slutty outfit")>>
+	Some of her choices of slutty outfit reveal part of her buttocks.
+<<elseif ($activeSlave.clothes is "a nurse outfit")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her huge buttocks are easily visible below the hem of her tight skirt.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her big butt is just visible past the hem of her tight skirt.
+  <<else>>
+	Her tight skirt comes down to just below the bottom of her buttocks.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a schoolgirl outfit")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her skirt can't begin to cover her huge butt, and just rests on top of her buttocks, leaving virtually her entire behind bare.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her skirt only covers the top of her big butt, leaving most of her bottom bare.
+  <<else>>
+	Her skirt only covers the top half of her butt, leaving the bottom half of her behind bare.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a fallen nun's habit")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her latex habit parts to leave her massive buttocks bare.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her latex habit parts to leave her big buttocks bare.
+  <<else>>
+	Her latex habit parts to leave her buttocks bare.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a slave gown")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her slave gown is tailored as tastefully as possible for her massive buttocks.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her slave gown is tailored to flatter her big buttocks.
+  <<else>>
+	Her slave gown tastefully clings to her buttocks.
+  <</if>>
+<<elseif ($activeSlave.clothes is "nice business attire")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her suit skirt is tailored as tastefully as possible to restrain her huge buttocks.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her suit skirt is tailored to flatter her big buttocks.
+  <<else>>
+	Her suit skirt tastefully hugs her derriere.
+  <</if>>
+<<elseif ($activeSlave.clothes is "slutty business attire")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her skirt is so short that quite a lot of massive buttock is visible in back.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her skirt is so short that more than a hint of buttock is visible in back.
+  <<else>>
+	Her skirt is so short that a hint of buttock is visible in back.
+  <</if>>
+<<elseif ($activeSlave.clothes is "a comfortable bodysuit")>>
+	Her bodysuit comfortably hugs her butt.
+<<elseif ($activeSlave.clothes is "harem gauze")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her harem gauze filmily covers the expanse of assflesh.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her harem gauze filmily covers her big buttocks.
+  <<else>>
+	Her harem gauze filmily covers her buttocks.
+  <</if>>
+<<elseif ($activeSlave.clothes is "slutty jewelry")>>
+  <<if ($activeSlave.butt gt 6)>>
+	Her bangles include a loose chain about her waist that she constantly has to fish out of the cleft between her massive buttocks.
+  <<elseif ($activeSlave.butt gt 3)>>
+	Her bangles include a loose chain about her waist that dips seductively down toward the cleft between her big buttocks.
+  <<else>>
+	Her bangles include a loose chain about her waist that dips seductively down toward the cleft between her buttocks.
+  <</if>>
+<</if>>
+<</if>>
+
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if $activeSlave.stampTat is "tribal patterns">>
+	She has a tribal-patterned tramp stamp.
+<<elseif $activeSlave.stampTat is "floral designs">>
+	She has a floral-patterned tramp stamp.
+<<elseif $activeSlave.stampTat is "slutty advertisements">>
+	She has a tramp stamp which reads 'Anal Whore.'
+<<elseif $activeSlave.stampTat is "demeaning inscriptions">>
+	She has a tramp stamp which reads 'Rear Entrance,' with an arrow pointing downward.
+<<elseif $activeSlave.stampTat is "lewd scenes">>
+	She has a tramp stamp which shows a figure, recognizable as $activeSlave.slaveName, being sodomized.
+<<elseif $activeSlave.stampTat is "degrading language">>
+	She has a tramp stamp which begs for buttsex.
+<</if>>
+
+<</if>>
+
+She's got a
+<<if $activeSlave.butt lte 1>>
+  flat and
+  <<if $FSSlimnessEnthusiasm gt 20>>
+	<<print either("fashionable", "attractive", "enticing")>>
+  <<else>>
+	<<print either("disappointing", "unimpressive")>>
+  <</if>>
+  ass.
+<<elseif $activeSlave.butt lte 2>>
+  <<if $FSSlimnessEnthusiasm gt 20>>
+	<<print either("fashionable", "small and enticing", "sleek and attractive")>>
+  <<else>>
+	<<print either("small, sleek", "small but rounded", "rounded, small")>>
+  <</if>>
+  rear end.
+<<elseif $activeSlave.butt lte 3>><<print either("big and healthy", "curved and plump", "healthy and plump")>> derriere.
+<<elseif $activeSlave.butt lte 4>><<print either("juicy and large", "big bubble", "curvy and enticing")>> butt.
+<<elseif $activeSlave.butt lte 5>><<print either("juicy and huge", "huge", "massive and undeniable")>> rear end.
+<<elseif $activeSlave.butt lte 6>><<print either("truly massive", "enormous")>> posterior.
+<<elseif $activeSlave.butt lte 7>><<print either("gigantic", "titanic")>> ass.
+<<elseif ($activeSlave.amp is 1)>>ridiculous ass. It's so big it would jiggle as she walked - if she could walk.
+<<else>>ridiculous ass. It's so big it jiggles as she walks.
+<</if>>
+
+<<if $showImplantEffects is 1>>
+
+<<if $activeSlave.buttImplant is 1>>
+	Her butt implants make her ass look especially pert no matter how she moves.
+<<elseif $activeSlave.buttImplant is 2>>
+	Her big butt implants make her ass jut out curvaceously whatever pose she's in.
+<<elseif $activeSlave.buttImplant gt 2>>
+	She has fillable butt implants, and it shows. Whatever her position, her ass looks just as artificially enticing.
+<</if>>
+
+<</if>>
+
+<<if $showBodyMods is 1>>
+
+<<if $activeSlave.buttTat is "tribal patterns">>
+	Her buttocks and hips are tattooed with tribal patterns that emphasize her womanly curves.
+<<elseif $activeSlave.buttTat is "floral designs">>
+	Her hips are tattooed with a cute floral design.
+<<elseif $activeSlave.buttTat is "slutty advertisements">>
+	'Fuck My' is tattooed across her left buttock; 'Asshole' is tattooed across her right.
+<<elseif $activeSlave.buttTat is "demeaning inscriptions">>
+	'Anal' is tattooed across her left buttock; 'Rapebait' is tattooed across her right.
+<<elseif ($activeSlave.buttTat is "lewd scenes") and ($activeSlave.dick gt 0) and ($activeSlave.balls gt 0)>>
+	Her buttocks are tattooed with lewd scenes; each of her buttocks shows a smiling shemale offering her anus, while each of her thighs shows a rear view of a shemale simultaneously being sodomized and sodomizing.
+<<elseif ($activeSlave.buttTat is "lewd scenes") and ($activeSlave.dick gt 0)>>
+	Her buttocks are tattooed with lewd scenes; each of her buttocks shows a gelding, legs together to conceal her cock and display her anus, while each of her thighs shows a gelding being double penetrated in her gaping anus.
+<<elseif $activeSlave.buttTat is "lewd scenes">>
+	Her buttocks are tattooed with lewd scenes; each of her buttocks shows a woman being sodomized while each of her thighs shows a woman being gangbanged in all her holes.
+<<elseif $activeSlave.buttTat is "degrading language">>
+	Her buttocks are tattooed with degrading language;  the inscriptions on her buttocks beg the reader to buttfuck her while the inscriptions on her thighs describe her sexual exploits leaving room for more to be added.
+<<elseif $activeSlave.buttTat is "bovine patterns">>
+	Her buttocks are tattooed with large black splotches like those of a Holstein cow.
+<</if>>
+
+<<if ($activeSlave.brand isnot 0) and ($activeSlave.brandLocation is "buttocks")>>
+	She has $activeSlave.brand branded into the flesh of one of her $activeSlave.brandLocation.
+<</if>>
+
+<<if ($activeSlave.legsTat is "tribal patterns")>>
+	Her tribal tattoos run down her legs.
+<<elseif ($activeSlave.legsTat is "floral designs")>>
+	Her floral tattoos run down her legs, with an especially beautiful bouquet of blooms sprayed across each thigh.
+<<elseif ($activeSlave.legsTat is "slutty advertisements")>>
+	Her thighs are used as simple ad space, promoting your arcology and your business pursuits.
+<<elseif ($activeSlave.legsTat is "demeaning inscriptions") and ($activeSlave.vagina lt 0)>>
+	Her left thigh reads 'I Used To Fuck,' and the right 'But Now I Get Fucked.'
+<<elseif ($activeSlave.legsTat is "demeaning inscriptions")>>
+	Her left thigh reads 'My Life Is Sex' and the right 'All I'm Good For.'
+<<elseif ($activeSlave.legsTat is "lewd scenes")>>
+	She has symmetrical tattoos on each thigh depicting her being spitroasted.
+<<elseif ($activeSlave.legsTat is "degrading language")>>
+	Her thighs are tattooed with tick marks to record her sexual history.
+<</if>>
+
+<</if>>
+
+<</nobr>>

@@ -1,0 +1,45 @@
+<<nobr>>
+
+<<set $nextButton to " ">>
+<<set $nextLink to "Random Nonindividual Event">>
+	<<set $nextButton to "Continue">>
+    
+	<<set $personalArms to 0>>
+
+<</nobr>>\
+\
+The outside world continues to deteriorate. The Free Cities are a popular target for old world demagogues looking for a convenient scapegoat for the restive populate to hate. The Free Cities were originally founded without much thought towards how they might be defended, should it come to that. But recently, the leading citizens have begun to worry that there might one day be barbarians at the gates. It has been suggested that citizens of means should form a militia.
+
+This is a less ludicrous suggestion than it might sound. Your arcology's security drones alone could form a formidable means of defense if adapted for that purpose. However, it's not likely that the anarchic Free Cities are going to ever make this anything more than a polite suggestion.
+
+''This is a unique opportunity.'' Without this security scare, it's unlikely you could convince any of your free-spirited tenants to even stay near lethally armed drones.
+\
+<span id="result">
+<<if $AProsperityCap gt 60>>\
+<<click "Arm yourself and your drones">>
+	<<replace "#result">>
+	In a time of uncertainty, the public adores people who protect them. So, in addition to publicly procuring yourself the latest weapons and armor, you update the arcology's drone systems. The security drones' riot cannons can be replaced for easy maintenance, so it's rather easy to provide them with alternate, lethal weaponry that they can switch to if it becomes necessary. Your arcology becomes known as one of the best-protected in the Free Cities. @@color:green;Your reputation has greatly improved.@@
+	<<set $nextButton to "Continue">>
+	<<set $rep += 1500>>
+	<<set $cash -= 5000>>
+	<<set $personalArms to 3>>
+    <</replace>>
+<</click>> //This will cost ¤5000//
+<</if>>\
+<<click "Arm yourself">>
+	<<replace "#result">>
+	In a time of uncertainty, the public looks up to people who project strength. So, you purchase yourself some of the latest armor and weapons, and make sure they are visible in a glass-walled cabinet in your office. Many of your wealthier tenants follow suit. A few of them even emulate your example and practice using these implements once a week. @@color:green;Your reputation has improved.@@
+	<<set $nextButton to "Continue">>
+	<<set $rep += 500>>
+	<<set $cash -= 2000>> //This will cost ¤2000//
+	<<set $personalArms to 1>>
+    <</replace>>
+<</click>> //This will cost ¤2000//
+<<click "Ignore this foolishness">>
+	<<replace "#result">>
+	No doubt this panicky fad will pass. You ignore the controversy. In a few days, the subject of a militia passes from the public mind.
+	<<set $nextButton to "Continue">>
+	<<set $personalArms to 0>>
+    <</replace>>
+<</click>>
+</span>

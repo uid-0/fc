@@ -1,0 +1,110 @@
+<<set $nextButton to "Back to Main">>\
+<<set $nextLink to "Main">>\
+<<set $returnTo to "Main">>\
+<<set $encyclopedia to "Household Liquidations">>\
+\
+<<if random(1,100) gt 50>>\
+\
+The household liquidator is offering a set of siblings for sale. As usual, you will only be permitted to inspect the older, but there is a guarantee that the younger will be similar.
+
+<<nobr>>
+
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "You bought her from the household liquidator.">>
+
+<<set $activeSlave.devotion to random(-15,-5)>>
+<<set $activeSlave.trust to random(-9,-5)>>
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.oldTrust to $activeSlave.trust>>
+<<set $activeSlave.health to random(-5,2)>>
+<<set $activeSlave.relation to "sister">>
+<<set $activeSlave.relationTarget to $activeSlave.ID + 1000>>
+
+<<display "Slave Cost">>
+
+<</nobr>>\
+
+The price is ¤<<print $slaveCost*3>>.
+
+<<nobr>>
+<<if $cash gte $slaveCost*3>>
+	[[Buy their slave contract|Siblings Workaround][$cash -= $slaveCost*3,$olderSister to $activeSlave, $slaves.push($olderSister),$nextButton to "Continue",$nextLink to "AS Dump",$returnTo to "Main"]]
+<<else>>
+	//You lack the necessary funds to buy these slaves.//
+<</if>>
+<</nobr>>
+[[Decline to purchase them and check out another set of slaves|Household Liquidator]]
+
+<<set $saleDescription to 1>><<display "Long Slave Description">><<set $saleDescription to 0>>
+\
+<<elseif random(1,100) gt 20>>\
+\
+The household liquidator is offering a mother and her daughter for sale. As usual, you will only be permitted to inspect the mother, but there is a guarantee that the daughter will be similar.
+
+<<nobr>>
+
+<<display "Generate New Slave">>
+
+<<set $activeSlave.devotion to random(-15,-5)>>
+<<set $activeSlave.trust to random(-9,-5)>>
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.oldTrust to $activeSlave.trust>>
+<<set $activeSlave.health to random(-5,2)>>
+<<set $activeSlave.boobs += 100>>
+<<set $activeSlave.butt += 1>>
+<<if $activeSlave.vagina gt -1>><<set $activeSlave.vagina += 1>><</if>>
+<<set $activeSlave.age to random(35,44)>>
+<<set $activeSlave.relation to "mother">>
+<<set $activeSlave.relationTarget to $activeSlave.ID + 1000>>
+
+<<display "Slave Cost">>
+<<if $slavesSeen gt $slaveMarketLimit>><<set $slaveCost += Math.trunc($slaveCost*(($slavesSeen-$slaveMarketLimit)*0.1))>><</if>>
+
+<</nobr>>\
+
+The price is ¤<<print $slaveCost*3>>.<<if $slavesSeen gt $slaveMarketLimit>> You have cast such a wide net for slaves this week that it is becoming more expensive to find more for sale. Your reputation helps determine your reach within the slave market.<</if>>
+
+<<nobr>>
+<<if $cash gte $slaveCost*3>>
+	[[Buy their slave contract|Mother Daughter Workaround][$cash -= $slaveCost*3,$mother to $activeSlave, $slaves.push($mother),$nextButton to "Continue",$nextLink to "AS Dump",$returnTo to "Main"]]
+<<else>>
+	//You lack the necessary funds to buy these slaves.//
+<</if>>
+<</nobr>>
+[[Decline to purchase them and check out another set of slaves|Household Liquidator]]
+
+<<set $saleDescription to 1>><<display "Long Slave Description">><<set $saleDescription to 0>>
+\
+<<else>>\
+\
+The household liquidator is offering something special: twins. The markup is huge, but the merchandise isn't something you see every day.
+
+<<nobr>>
+
+<<display "Generate New Slave">>
+
+<<set $activeSlave.devotion to random(-15,-5)>>
+<<set $activeSlave.trust to random(-9,-5)>>
+<<set $activeSlave.oldDevotion to $activeSlave.devotion>>
+<<set $activeSlave.oldTrust to $activeSlave.trust>>
+<<set $activeSlave.health to random(-5,2)>>
+<<set $activeSlave.relation to "twin">>
+<<set $activeSlave.relationTarget to $activeSlave.ID + 1000>>
+<<display "Slave Cost">>
+
+<</nobr>>\
+
+The price is ¤<<print $slaveCost*4>>.<<if $slavesSeen gt $slaveMarketLimit>> You have cast such a wide net for slaves this week that it is becoming more expensive to find more for sale. Your reputation helps determine your reach within the slave market.<</if>>
+
+<<nobr>>
+<<if $cash gte $slaveCost*4>>
+	[[Buy their slave contract|Twins Workaround][$cash -= $slaveCost*4,$alphaTwin to $activeSlave, $slaves.push($alphaTwin),$nextButton to "Continue",$nextLink to "AS Dump",$returnTo to "Main"]]
+<<else>>
+	//You lack the necessary funds to buy these slaves.//
+<</if>>
+<</nobr>>
+[[Decline to purchase them and check out another set of slaves|Household Liquidator][$slavesSeen += 2]]
+
+<<set $saleDescription to 1>><<display "Long Slave Description">><<set $saleDescription to 0>>
+
+<</if>>

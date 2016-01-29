@@ -1,0 +1,66 @@
+<<set $goto to "Slave Assignments Report">>
+
+<<set $encyclopedia to " ">>
+
+<<set $racialVarieties to []>>
+
+<<set $oldWeek to $week>>
+
+<<set $HGEnergy to 0>>
+
+<<set $HeadGirl to 0>>
+<<set $Recruiter to 0>>
+<<set $Madam to 0>>
+<<set $Concierge to 0>>
+<<set $Milkmaid to 0>>
+<<set $Collectrix to 0>>
+<<set $Stewardess to 0>>
+<<set $Schoolteacher to 0>>
+<<set $Wardeness to 0>>
+<<set $Concubine to 0>>
+<<set $Attendant to 0>>
+<<set $Bodyguard to 0>>
+
+<<set $bedSlaves to 0>>
+
+<<set $slaves to $slaves.sort(function(a, b){return b.devotion-a.devotion})>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].assignment == "be your Head Girl")>>
+  <<set $HeadGirl to $slaves[$i]>>
+  <<set $HGEnergy += 1>>
+<<elseif ($slaves[$i].assignment == "live with your Head Girl")>>
+  <<set $HGEnergy += 1>>
+<<elseif ($slaves[$i].assignment == "recruit girls")>>
+	<<set $Recruiter to $slaves[$i]>>
+<<elseif ($slaves[$i].assignment == "be the Madam")>>
+	<<set $Madam to $slaves[$i]>>
+<<elseif ($slaves[$i].assignment == "be the Concierge")>>
+	<<set $Concierge to $slaves[$i]>>
+<<elseif ($slaves[$i].assignment == "be the Milkmaid")>>
+	<<set $Milkmaid to $slaves[$i]>>
+<<elseif ($slaves[$i].assignment == "be the Collectrix")>>
+	<<set $Collectrix to $slaves[$i]>>
+<<elseif ($slaves[$i].assignment == "be the Stewardess")>>
+	<<set $Stewardess to $slaves[$i]>>
+<<elseif ($slaves[$i].assignment == "be the Schoolteacher")>>
+	<<set $Schoolteacher to $slaves[$i]>>
+<<elseif ($slaves[$i].assignment == "be the Wardeness")>>
+	<<set $Wardeness to $slaves[$i]>>
+<<elseif ($slaves[$i].assignment == "be your Concubine")>>
+	<<set $Concubine to $slaves[$i]>>
+<<elseif ($slaves[$i].assignment == "be the Attendant")>>
+	<<set $Attendant to $slaves[$i]>>
+<<elseif ($slaves[$i].assignment == "guard you")>>
+	<<set $Bodyguard to $slaves[$i]>>
+<<elseif ($slaves[$i].ID == $fighterOne.ID)>>
+	<<set $fighterOne to $slaves[$i]>>
+<<elseif ($slaves[$i].ID == $fighterTwo.ID)>>
+	<<set $fighterTwo to $slaves[$i]>>
+<</if>>
+<<if $slaves[$i].preg gt 0>>
+	<<set $slaves[$i].preg += 1>>
+<</if>>
+<</for>>
+
+<<goto $goto>>

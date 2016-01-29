@@ -1,0 +1,65 @@
+<<nobr>>
+
+<<if $activeSlave.oralSkill is 0>>
+	Since she's orally unskilled, you start with her mouth. She <<if $PC.dick isnot 0>>sucks your dick<<else>>eats you out<</if>>, of course, but her training is more creative than just that. You give her delicious hard candies to suck and feed her phallic fruits and vegetables that she must deepthroat before she can eat. As her skill improves, she wears a gag with an inward-facing dildo, which is swapped out for a bigger size every so often. You only let her orgasm when she's sucking, and before long she's associating giving someone oral pleasure with experiencing pleasure herself.
+	@@color:green;Her oral skills have improved to a decent level.@@
+	<<set $activeSlave.oralSkill to 1>>
+<<elseif ($activeSlave.vaginalSkill is 0) and ($activeSlave.vagina gt 0) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+	Since she's vaginally unskilled, and not a virgin, you start with her pussy.
+	@@color:green;Her vaginal skills have improved to a decent level.@@
+	<<set $activeSlave.vaginalSkill to 1>>
+<<elseif ($activeSlave.analSkill is 0) and ($activeSlave.anus gt 0)>>
+	Since she's anally unskilled, and not an anal virgin, you start with her ass.
+	@@color:green;Her anal skills have improved to a decent level.@@
+	<<set $activeSlave.analSkill to 1>>
+<<elseif $activeSlave.oralSkill is 1>>
+	Since she's sexually experienced, you work with her on the finer points of oral sex.
+	@@color:green;Her oral skills have increased to an expert level.@@
+	<<set $activeSlave.oralSkill to 2>>
+<<elseif ($activeSlave.vaginalSkill is 1) and ($activeSlave.vagina gt 0) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+	Since she's sexually experienced, you work with her on the finer points of penetrative sex. She can already fuck pretty well, but her muscular control could be improved. She works her kegel muscles all week, using fingers, dildoes, and your <<if $PC.dick isnot 0>>strap-on<<else>>cock<</if>> as training tools. She becomes expert enough that she is able to make you cum without any thrusting at all by you or any riding by her; she just flexes her muscles enough to <<if $PC.dick isnot 0>>squeeze the fake phallus<<else>>stimulate you<</if>>.
+	@@color:green;Her vaginal skills have increased to an expert level.@@
+	<<set $activeSlave.vaginalSkill to 2>>
+<<elseif ($activeSlave.analSkill is 1) and ($activeSlave.anus gt 0)>>
+	Since she's anally experienced, you work with her on the finer points of penetrative sex. She can already take it up her ass, but her muscular control could be improved. She works her kegel muscles and anal sphincter all week, using fingers, dildoes, and your <<if $PC.dick isnot 0>>strap-on<<else>>cock<</if>> as training tools. She becomes expert enough that she is able to make you cum without any thrusting at all by you or any riding by her; she just flexes her muscles enough to <<if $PC.dick isnot 0>>squeeze the fake phallus<<else>>stimulate you<</if>>.
+	@@color:green;Her anal skills have increased to an expert level.@@
+	<<set $activeSlave.analSkill to 2>>
+<<elseif $activeSlave.oralSkill is 2>>
+	She is already an expert whore, but her skills can be polished further. You train her in the basics of urine play, massage, pet play, needle play, and many other niche skills. You also expand her oral endurance, enabling her to deepthroat for extended periods. 
+	@@color:green;Her oral skills have been perfected.@@
+	<<set $activeSlave.oralSkill to 3>>
+<<elseif ($activeSlave.vaginalSkill is 2) and ($activeSlave.vagina gt 0) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+	She is already an expert whore, but her skills can be polished further. You train her in the basics of urine play, massage, pet play, needle play, and many other niche skills. You also work with her to develop a personal regimen of vaginal muscle exercises. This will enable her to squeeze and massage dicks with her practiced vaginal walls.
+	@@color:green;Her vaginal skills have been perfected.@@
+	<<set $activeSlave.vaginalSkill to 3>>
+<<elseif ($activeSlave.analSkill is 2) and ($activeSlave.anus gt 0)>>
+	She is already an expert anal whore, but her skills can be polished further. You train her in the basics of urine play, massage, pet play, needle play, and many other niche skills. You also expand her knowledge of sexual positions. She learns to balance herself on tiptoe for the challenge of standing anal sex without support.
+	@@color:green;Her sexual skills have been perfected.@@
+	<<set $activeSlave.analSkill to 3>>
+<<elseif $activeSlave.whoreSkill is 0>>
+	Since she's dangerously naive about selling sex, you teach her the basics of self protection and business. If you want her to become more expert, she will have to get practical experience.
+	@@color:green;Her prostitution skills have improved.@@
+	<<set $activeSlave.whoreSkill to 1>>
+<<elseif $activeSlave.entertainSkill is 0>>
+	Since she's rough and unskilled at entertainment, you teach her the basics of polite conversation, music, and dance. If you want her to become more expert, she will have to get practical experience.
+	@@color:green;Her entertainment skills have improved.@@
+	<<set $activeSlave.entertainSkill to 1>>
+<<else>>
+	You cannot teach her anything further; @@color:yellow;her assignment has defaulted to fostering devotion.@@
+	<<set $trainingRegimen to "build her devotion">>
+<</if>>
+
+<<if ($activeSlave.analSkill gt 2) and ($activeSlave.oralSkill gt 2) and ($activeSlave.vaginalSkill gt 2) and ($activeSlave.whoreSkill gt 0) and ($activeSlave.entertainSkill gt 0)>>
+	She is now a masterful slut; @@color:yellow;her assignment has defaulted to fostering devotion.@@
+	<<set $trainingRegimen to "build her devotion">>
+<<elseif ($activeSlave.analSkill gt 2) and ($activeSlave.oralSkill gt 2) and ($activeSlave.whoreSkill gt 0) and ($activeSlave.entertainSkill gt 0) and ($activeSlave.vagina is -1) and ($activeSlave.balls is 0)>>
+	She is now a masterful gelded slut; @@color:yellow;her assignment has defaulted to fostering devotion.@@
+<<elseif ($activeSlave.analSkill gt 2) and ($activeSlave.oralSkill gt 2) and ($activeSlave.whoreSkill gt 0) and ($activeSlave.entertainSkill gt 0) and ($activeSlave.vagina is -1)>>
+	She is now a masterful shemale slut; @@color:yellow;her assignment has defaulted to fostering devotion.@@
+	<<set $trainingRegimen to "build her devotion">>
+<<elseif ($activeSlave.analSkill gt 2) and ($activeSlave.oralSkill gt 2) and ($activeSlave.whoreSkill gt 0) and ($activeSlave.entertainSkill gt 0) and ($activeSlave.vaginalAccessory is "chastity belt")>>
+	She is now a masterful slut, notwithstanding her chastity belt; @@color:yellow;her assignment has defaulted to fostering devotion.@@
+	<<set $trainingRegimen to "build her devotion">>
+<</if>>
+
+<</nobr>>\

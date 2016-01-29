@@ -1,0 +1,127 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Random Nonindividual Event">>
+
+<<display "Generate New Slave">>
+<<set $activeSlave.origin to "You won her at a shotgun match against other arcology owners.">>
+	<<set $activeSlave.butt to either(1, 2, 2, 3, 3, 4)>>
+	<<set $activeSlave.boobs to either(10, 20, 20, 30, 30, 30, 40, 40, 50)>>
+	<<set $activeSlave.lips to either(0, 0, 1)>>
+	<<set $activeSlave.skin to either("pale", "tanned", "white")>>
+	<<set $activeSlave.hcolor to either("black", "blonde", "red", "brown")>>
+    <<set $activeSlave.hlength to either("ass-length", "long", "shoulder-length")>>
+<<set $activeSlave.skin to "pale">>
+<<set $activeSlave.anus to 1>>
+<<set $activeSlave.vagina to 1>>
+<<set $activeSlave.vaginalSkill to 1>>
+<<set $activeSlave.oralSkill to 1>>
+<<set $activeSlave.analSkill to 1>>
+<<set $activeSlave.whoreSkill to 0>>
+<<set $activeSlave.entertainSkill to 0>>
+<<set $activeSlave.weight to 0>>
+
+<</nobr>>\
+\
+You are delivered to your host's arcology by hired VTOL limousine. His arcology is flared at the top, to allow a flat space occupied by a classic Georgian mansion surrounded by lawns. After a brief reception for the handful of well-heeled attendees, the host calls for your attention. "Ladies and gentlemen," he says, "I would like to celebrate here today the return of many things which should not have been allowed to lapse."
+
+He leads the party towards a broad lawn with a long table along one side, and indicates the handsome single-barrel shotguns lined up on the table. He continues, "In a few moments, some really choice livestock are going to be led up onto this lawn. They have been told that if they can run from one side to the other, they'll be freed." He winks. "Those guns are loaded with taser slugs, of course. Whatever you drop and fuck, you get to take home."
+
+The crowd of nude slaves led up to the lawn and chained to rings along one edge all have pale skin - the better to show impacts, perhaps. But besides that, they are extremely varied, and all physically extraordinary in some way. After you and your fellow partiers are ready, your host fires an old-fashioned revolver in the air and the chained slaves are all released at once. You could easily hit any of them, but you only have one shot.
+\
+<span id="result">
+<<click "Hit the muscular slave about to successfully cross the lawn">>
+	<<replace "#result">>
+	You decide to stop the athletic slave girl about to win her freedom, and place your taser slug in her muscular buttock. She goes stiff and skids across the grass with a growl. Your taser slug is linked to your personal assistant, who hits her again whenever she tries to continue running. Fury glints from her eyes, but she apparently knows how to pick her battles. By the time you approach her, she's already bent over, presenting herself, and from the oily sheen on her privates, it looks like she even managed to get some lube somewhere to make the experience a little easier. It is a strange thing, respecting a slave, but she rises even higher in your estimation as you fuck her on the grass. She does her best to please you, having clearly decided to do her best given her situation. She's sexually inexpert, but clearly smart enough to know when to submit.
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+	<<set $activeSlave.devotion to 5>>
+	<<set $activeSlave.trust to $activeSlave.devotion-4>>
+	<<set $activeSlave.oldDevotion to 5>>
+	<<set $activeSlave.face to 0>>
+	<<set $activeSlave.dick to 0>>
+	<<set $activeSlave.vagina to 1>>
+	<<set $activeSlave.balls to 0>>
+	<<set $activeSlave.preg to -1>>
+	<<set $activeSlave.muscles to 2>>
+	<<set $activeSlave.weight to 0>>
+	<<set $activeSlave.health to 8>>
+	<<set $activeSlave.boobs to 400>>
+	<<set $activeSlave.butt to 2>>
+	<<set $activeSlave.age to 28>>
+	<<set $activeSlave.height to 1>>
+	<<set $activeSlave.waist to 0>>
+	<<set $activeSlave.fetish to "none">>
+	<<set $activeSlave.behavioralQuirk to "arrogant">>
+	<<set $activeSlave.sexualQuirk to "hates men">>
+<<set $slaves.push($activeSlave)>>
+    <</replace>>
+<</click>>
+<<click "Hit the plush older slave lagging behind">>
+	<<replace "#result">>
+	You decide to drop the luscious specimen in the rear, and place your taser slug in her huge buttock. She goes stiff and slumps to the grass in defeat. Your taser slug is linked to your personal assistant, who hits her again whenever she tries to rise. Meanwhile, an athletic slave has successfully crossed the lawn, and is sobbing with joy as her manumission forms are completed. Disbelief and anger fills your supine prize's eyes, and she's spitting with rage by the time you reach her. It's a comical sight, since her gyrations only serve to display her magnificent breasts and broad butt. She must have been recently enslaved, and is new enough to slavery that you are obliged to taze her twice more before she presents her holes. The impression of newness to slavery despite her age is reinforced by her gratifyingly tight pussy, which is so nice that you confine yourself entirely to it despite the appealing sight of what is almost certainly a virgin butthole.
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+	<<set $activeSlave.devotion to -12>>
+	<<set $activeSlave.trust to $activeSlave.devotion+4>>
+	<<set $activeSlave.oldDevotion to -12>>
+	<<set $activeSlave.face to 1>>
+	<<set $activeSlave.dick to 0>>
+	<<set $activeSlave.balls to 0>>
+	<<set $activeSlave.preg to -1>>
+	<<set $activeSlave.anus to 0>>
+	<<set $activeSlave.analSkill to 0>>
+	<<set $activeSlave.muscles to 1>>
+	<<set $activeSlave.weight to 0>>
+	<<set $activeSlave.health to 3>>
+    <<if $activeSlave.lips lt 1>><<set $activeSlave.lips += 1>><</if>>
+	<<set $activeSlave.boobs to 1000>>
+	<<set $activeSlave.butt to 6>>
+	<<set $activeSlave.age to 42>>
+	<<set $activeSlave.height to 1>>
+	<<set $activeSlave.waist to 1>>
+	<<set $activeSlave.fetish to "none">>
+	<<set $activeSlave.behavioralQuirk to "bitchy">>
+	<<set $activeSlave.sexualQuirk to "hates anal">>
+<<set $slaves.push($activeSlave)>>
+    <</replace>>
+<</click>>
+<<click "Hit the slave with the tits, pussy and impressive dick">>
+	<<replace "#result">>
+	You decide to drop the really rare specimen, and place your taser slug in her leg. She goes stiff and slumps to the grass, squealing with pain since the taser robbed her ability to break her fall, leading her to land on nearly a foot of flaccid cock. Your taser slug is linked to your personal assistant, who hits her again whenever she tries to rise. Meanwhile, an athletic slave has successfully crossed the lawn, and is sobbing with joy as her manumission forms are completed. Apathy fills your supine prize's eyes, and she simply lies face down and quiescent. She obeys orders to roll over so you can see what you've gotten, however. She's clearly a work of long and careful hormonal treatment. She has no implants, but sports big breasts, feminine hips, a nice butt, plush lips, and a huge dick. When you fuck her pussy and then her anus, she even gets a massive erection, showing that she isn't even on hormone treatment to maintain this unusual set of attributes.
+    	<<set $activeSlave.vaginalCount += 1>>
+		<<set $vaginalTotal += 1>>
+    	<<set $activeSlave.analCount += 1>>
+		<<set $analTotal += 1>>
+	<<set $activeSlave.devotion to 5>>
+	<<set $activeSlave.trust to $activeSlave.devotion-4>>
+	<<set $activeSlave.oldDevotion to 5>>
+	<<set $activeSlave.dick to 3>>
+	<<set $activeSlave.vagina to 1>>
+	<<set $activeSlave.ovaries to 0>>
+	<<set $activeSlave.preg to -2>>
+	<<set $activeSlave.balls to 3>>
+	<<set $activeSlave.face to 0>>
+	<<set $activeSlave.clit to 0>>
+	<<set $activeSlave.preg to -2>>
+	<<set $activeSlave.anus to 2>>
+	<<set $activeSlave.analSkill to 2>>
+	<<set $activeSlave.muscles to 0>>
+	<<set $activeSlave.weight to 0>>
+	<<set $activeSlave.health to 3>>
+    <<if $activeSlave.lips lt 1>><<set $activeSlave.lips += 1>><</if>>
+	<<set $activeSlave.boobs to 800>>
+	<<set $activeSlave.butt to 4>>
+	<<set $activeSlave.age to 24>>
+	<<set $activeSlave.height to 1>>
+	<<set $activeSlave.waist to 1>>
+	<<set $activeSlave.fetish to "none">>
+	<<set $activeSlave.behavioralQuirk to "none">>
+	<<set $activeSlave.behavioralQuirk to "quirky">>
+<<set $slaves.push($activeSlave)>>
+    <</replace>>
+<</click>>
+</span>
+
+<<set $nextLink to "AS Dump">>\
+<<set $returnTo to "Random Nonindividual Event">>\

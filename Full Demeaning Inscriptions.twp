@@ -1,0 +1,63 @@
+<<if $activeSlave.boobsTat is 0>>
+	<<set $activeSlave.boobsTat to "demeaning inscriptions">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.buttTat is 0>>
+	<<set $activeSlave.buttTat to "demeaning inscriptions">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.vaginaTat is 0>>
+	<<set $activeSlave.vaginaTat to "demeaning inscriptions">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.dick gt 0>>
+<<if $activeSlave.dickTat is 0>>
+	<<set $activeSlave.dickTat to "demeaning inscriptions">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+<</if>>
+
+<<if $activeSlave.lipsTat is 0>>
+	<<set $activeSlave.lipsTat to "demeaning inscriptions">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if ($activeSlave.anusTat is 0) or ($activeSlave.anusTat is "bleached")>>
+	<<set $activeSlave.anusTat to "demeaning inscriptions">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.shouldersTat is 0>>
+	<<set $activeSlave.shouldersTat to "demeaning inscriptions">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.armsTat is 0>>
+	<<set $activeSlave.armsTat to "demeaning inscriptions">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.legsTat is 0>>
+	<<set $activeSlave.legsTat to "demeaning inscriptions">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<if $activeSlave.stampTat is 0>>
+	<<set $activeSlave.stampTat to "demeaning inscriptions">>
+	<<set $cash -= $modCost>>
+	<<set $degradation += 1>>
+<</if>>
+
+<<goto "Body Modification">>

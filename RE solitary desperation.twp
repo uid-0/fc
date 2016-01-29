@@ -1,0 +1,51 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<<set $activeSlave.devotion += 1>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> is in solitary. She's let out whenever required for a slave task, but unless she's serving, she spends her days in a featureless cell. It's clean and dry, but designed to totally deny any mental stimulation. Careful monitoring is necessary to prevent mental damage.
+
+As you pass her cell on other business, there is a faint stirring within. She must have heard the dim sound of your footsteps through the door. There's a small port for meals to be inserted into the cell, and she shouts at it, clearly with her mouth right against it, <<if ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>"Pleeze don go! Ah'll do ennything if yeh just stay a bit, whoehver yeh are!"<<else>>"Please don't go! I'll do anything if you just stay a bit! I just need some time with someone! Please!"<</if>>
+\
+<span id="result">
+<<click "Keep walking">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	As you walk away from the cell door, the pleas become a desperate, hopeless sobbing. In the coming days, it becomes apparent that $activeSlave.slaveName was right at the edge of a mental precipice when she pled with you. @@color:red;She has sunk into mental incompetence.@@ She's just a piece of meat, now.
+    <</replace>>
+    <<set $activeSlave.fetish to "mindbroken">>
+<</click>>
+<<click "Impersonate a slave and manipulate her">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Kneeling next to the port in the cell door, you set up a voice filter through the arcology systems to make your voice sound feminine. You sympathize with $activeSlave.slaveName, listening to her pour out her heart. She despairs of being able to avoid punishment, and is afraid that you will hurt her or sell her to a cheap brothel. In your female voice, you encourage her to keep trying, and you even give her some useful advice about how to address her faults. She gathers herself together and thanks you. Just then, you pop the door open, reassuring her in the female voice while revealing who you actually are. When she realizes the truth, she wordlessly prostrates herself, trembling with fear. @@color:gold;Her fear of you has increased.@@
+    <</replace>>
+    <<set $activeSlave.trust -= 1>>
+<</click>>
+<<if ($PC.dick isnot 0)>>\
+<<if ($activeSlave.amp isnot 1)>>\
+<<click "Exploit her need for personal contact">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Without a word, you push your erect member through the hole and into the cell. After a moment's pause, you feel her begin to orally service you with almost desperate concentration. You climax quickly to her manic efforts, and begin to pull out. As you do, she tearfully begs you not to go. She promises something better, anything better, so you reinsert yourself, only to find that she has her <<if ($activeSlave.vagina lt 0)>>ass<<else>>pussy<</if>> pressed against the slot. You can't fuck her all that hard through the door, so she has to do the work. You begin to withdraw whenever she shows herself any mercy, so she pounds herself against you so hard that she sobs a little even as you talk to her, the lifeline she so needs. <<if ($activeSlave.vagina gt -1)>>In her desperation she even guides your cock into her butt, too, and without prompting. <</if>>@@color:hotpink;Her submission to you has increased.@@
+    <<display "Simple VCheck">>
+    <<display "Simple FCount">>
+    <</replace>>
+    <<set $activeSlave.devotion += 2>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+<</if>>\
+<</if>>\
+</span>

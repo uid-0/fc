@@ -1,0 +1,1098 @@
+<<nobr>>
+<<set $slaves[$i].devotion to Math.trunc($slaves[$i].devotion*10)/10>>
+<<set $slaves[$i].trust to Math.trunc($slaves[$i].trust*10)/10>>
+<<set $slaves[$i].health to Math.trunc($slaves[$i].health*10)/10>>
+
+<<if ($slaves[$i].assignment is "rest") and ($slaves[$i].health gte -2)>>
+  will ''__@@color:lawngreen;rest.@@__''
+<<elseif ($slaves[$i].assignment is "stay confined") and (($slaves[$i].devotion gt 4) or (($slaves[$i].trust lt -4) and ($slaves[$i].devotion gte -4)))>>
+  will ''__@@color:lawngreen;stay confined.@@__''
+<<else>>
+  will $slaves[$i].assignment<<if $slaves[$i].sentence gt 0>> <<print "($slaves[$i].sentence)">><</if>>.
+<</if>>
+
+<<if $abbreviateDevotion is 1>>
+  <<if $slaves[$i].fetish is "mindbroken">>@@color:red;MB@@
+  <<elseif $slaves[$i].devotion lt -19>><<set $slaves[$i].devotion to -20>>@@color:darkviolet;VHate <<print "[$slaves[$i].devotion]">>@@
+  <<elseif $slaves[$i].devotion lt -10>>@@color:darkviolet;Hate <<print "[$slaves[$i].devotion]">>@@
+  <<elseif $slaves[$i].devotion lt -4>>@@color:mediumorchid;Res <<print "[$slaves[$i].devotion]">>@@
+  <<elseif $slaves[$i].devotion lte 4>>@@color:yellow;Ambiv <<print "[$slaves[$i].devotion]">>@@
+  <<elseif $slaves[$i].devotion lte 10>>@@color:hotpink;Accept <<print "[$slaves[$i].devotion]">>@@
+  <<elseif $slaves[$i].devotion lte 18>>@@color:deeppink;Devo <<print "[$slaves[$i].devotion]">>@@
+  <<else>><<set $slaves[$i].devotion to 20>>@@color:magenta;Wor <<print "[$slaves[$i].devotion]">>@@
+  <</if>>
+  <<if $slaves[$i].trust lte -19>><<set $slaves[$i].trust to -20>>@@color:goldenrod;ETerr <<print "[$slaves[$i].trust]">>@@
+  <<elseif $slaves[$i].trust lt -10>>@@color:goldenrod;Terr <<print "[$slaves[$i].trust]">>@@
+  <<elseif $slaves[$i].trust lt -4>>@@color:gold;Fright <<print "[$slaves[$i].trust]">>@@
+  <<elseif $slaves[$i].trust lte 4>>@@color:yellow;Fear <<print "[$slaves[$i].trust]">>@@
+  <<elseif $slaves[$i].trust lte 10>>@@color:mediumaquamarine;Caref <<print "[$slaves[$i].trust]">>@@
+  <<elseif $slaves[$i].trust lt 18>>@@color:mediumseagreen;Trust <<print "[$slaves[$i].trust]">>@@
+  <<else>><<set $slaves[$i].trust to 20>>@@color:mediumseagreen;VTrust <<print "[$slaves[$i].trust]">>@@
+  <</if>>
+<<elseif $abbreviateDevotion is 2>>
+  <<if $slaves[$i].fetish is "mindbroken">>@@color:red;Mindbroken.@@
+  <<elseif $slaves[$i].devotion lt -20>>@@color:darkviolet;Very hateful.@@
+  <<elseif $slaves[$i].devotion lt -10>>@@color:darkviolet;Hateful.@@
+  <<elseif $slaves[$i].devotion lt -4>>@@color:mediumorchid;Resistant.@@
+  <<elseif $slaves[$i].devotion lte 4>>@@color:yellow;Ambivalent.@@
+  <<elseif $slaves[$i].devotion lte 10>>@@color:hotpink;Accepting.@@
+  <<elseif $slaves[$i].devotion lte 18>>@@color:deeppink;Devoted.@@
+  <<else>><<set $slaves[$i].devotion to 20>>@@color:magenta;Worshipful.@@
+  <</if>>
+  <<if $slaves[$i].trust lte -18>><<set $slaves[$i].trust to -10>>@@color:goldenrod;Extremely terrified@@
+  <<elseif $slaves[$i].trust lt -10>>@@color:goldenrod;Terrified@@
+  <<elseif $slaves[$i].trust lt -4>>@@color:gold;Frightened@@
+  <<elseif $slaves[$i].trust lte 4>>@@color:yellow;Fearful@@
+  <<elseif $slaves[$i].trust lte 10>>@@color:mediumaquamarine;Careful@@
+  <<elseif $slaves[$i].trust lt 18>>@@color:mediumseagreen;Trusting@@
+  <<else>><<set $slaves[$i].trust to 20>>@@color:mediumseagreen;Very trusting@@
+  <</if>>
+<</if>>
+
+<<if $abbreviateRules is 1>>
+	<<if $slaves[$i].livingRules is "luxurious">>
+    	''LS:Lux''
+	<<elseif $slaves[$i].livingRules is "normal">>
+    	''LS:Nor''
+    <<else>>
+    	''LS:Spa''
+	<</if>>
+    <<if $slaves[$i].mute isnot 1>>
+      <<if $slaves[$i].speechRules is "permissive">>
+          ''SpR:P''
+      <<else>>
+          ''SpR:R''
+      <</if>>
+	<</if>>
+	<<if $slaves[$i].relationshipRules is "permissive">>
+    	''ReR:P''
+    <<else>>
+    	''ReR:R''
+	<</if>>
+	<<if $slaves[$i].releaseRules is "permissive">>
+    	''MaR:P''
+	<<elseif $slaves[$i].releaseRules is "sapphic">>
+    	''MaR:S''
+    <<else>>
+    	''MaR:R''
+	<</if>>
+<<elseif $abbreviateRules is 2>>
+  Living standard: $slaves[$i].livingRules.
+  <<if $slaves[$i].mute isnot 1>>
+    Speech rules: $slaves[$i].speechRules.
+  <</if>>
+  Relationship rules: $slaves[$i].relationshipRules.
+  Masturbation rules: $slaves[$i].releaseRules.
+<</if>>
+
+<<if $abbreviateClothes is 2>>
+<<if ($slaves[$i].clothes is "attractive lingerie")>>
+	Lingerie.
+<<elseif ($slaves[$i].clothes is "string lingerie")>>
+	String bikini.
+<<elseif ($slaves[$i].clothes is "cutoffs and a t-shirt")>>
+	Cutoffs, t-shirt.
+<<elseif ($slaves[$i].clothes is "a slutty outfit")>>
+	Slutty outfit.
+<<elseif ($slaves[$i].clothes is "uncomfortable straps")>>
+	Slave clothes.
+<<elseif ($slaves[$i].clothes is "a fallen nun's habit")>>
+	Slutty habit.
+<<elseif ($slaves[$i].clothes is "a penitent nun's habit")>>
+	Cilice.
+<<elseif ($slaves[$i].clothes is "slutty jewelry")>>
+	Bangles.
+<<elseif ($slaves[$i].clothes is "harem gauze")>>
+	Harem outfit.
+<<elseif ($slaves[$i].clothes is "a slave gown")>>
+	Gown.
+<<elseif ($slaves[$i].clothes is "slutty business attire")>>
+	Slutty suit.
+<<elseif ($slaves[$i].clothes is "nice business attire")>>
+	Nice suit.
+<<elseif ($slaves[$i].clothes is "a comfortable bodysuit")>>
+	Bodysuit.
+<<elseif ($slaves[$i].clothes is "a slutty maid outfit")>>
+	Slutty maid.
+<<elseif ($slaves[$i].clothes is "a nurse outfit")>>
+	Nurse outfit.
+<<elseif ($slaves[$i].clothes is "a schoolgirl outfit")>>
+	Schoolgirl outfit.
+<<elseif ($slaves[$i].clothes is "a kimono")>>
+	Kimono.
+<<elseif ($slaves[$i].clothes is "a hijab")>>
+	Hijab.
+<<elseif ($slaves[$i].clothes is "battledress")>>
+	Battledress.
+<<elseif ($slaves[$i].clothes is "a nice maid outfit")>>
+	Pretty maid.
+<<elseif ($slaves[$i].clothes is "restrictive latex")>>
+	Latex.
+<<elseif ($slaves[$i].clothes is "a very tight corset")>>
+	Corseting.
+<<elseif ($slaves[$i].clothes is "conservative clothing")>>
+	Conservative clothing.
+<<elseif ($slaves[$i].clothes is "chains")>>
+ 	Chains.
+<<elseif ($slaves[$i].clothes is "Western clothing")>>
+	Chaps.
+<<elseif ($slaves[$i].clothes is "body oil")>>
+	Body oil.
+<<elseif ($slaves[$i].clothes is "a toga")>>
+	Toga.
+<<elseif ($slaves[$i].clothes is "a slutty quipao")>>
+	Quipao.
+<<elseif ($slaves[$i].choosesOwnClothes is 1)>>
+	Dressing herself.
+<<else>>
+	Naked.
+<</if>>
+<<if ($slaves[$i].vaginalAccessory is "chastity belt")>>
+	Chastity.
+<</if>>
+<<if ($slaves[$i].collar is "uncomfortable leather")>>
+	Leather collar.
+<<elseif ($slaves[$i].collar is "tight steel")>>
+	Steel collar.
+<<elseif ($slaves[$i].collar is "shock punishment")>>
+	Shock collar.
+<<elseif ($slaves[$i].collar is "dildo gag")>>
+	Dildo gag.
+<<elseif ($slaves[$i].collar is "heavy gold")>>
+	Gold collar.
+<<elseif ($slaves[$i].collar is "pretty jewelry")>>
+	Pretty collar.
+<<elseif ($slaves[$i].collar is "leather with cowbell")>>
+	Cowbell collar.
+<</if>>
+<<if ($slaves[$i].amp isnot 1)>>
+<<if ($slaves[$i].shoes is "heels")>>
+	Heels.
+<<elseif ($slaves[$i].shoes is "extreme heels")>>
+	Extreme heels.
+<<elseif ($slaves[$i].shoes is "boots")>>
+	Boots.
+<<elseif ($slaves[$i].heels is 1)>>
+	@@color:yellow;Crawling.@@
+<<elseif ($slaves[$i].shoes is "flats")>>
+	Flats.
+<</if>>
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].tired isnot 0)>>
+	Tired.
+<</if>>
+
+<<if $abbreviateHealth is 1>>
+  <<if $slaves[$i].health lt -9>>
+      ''@@color:red;H <<print "[$slaves[$i].health]">>@@''
+  <<elseif $slaves[$i].health lt -5>>
+      ''@@color:red;H <<print "[$slaves[$i].health]">>@@''
+  <<elseif $slaves[$i].health lt -2>>
+      ''@@color:red;H <<print "[$slaves[$i].health]">>@@''
+  <<elseif $slaves[$i].health lte 2>>
+      ''@@color:yellow;H <<print "[$slaves[$i].health]">>@@''
+  <<elseif $slaves[$i].health lte 5>>
+      ''@@color:green;H <<print "[$slaves[$i].health]">>@@''
+  <<elseif $slaves[$i].health lte 9>>
+      ''@@color:green;H <<print "[$slaves[$i].health]">>@@''
+  <<else>>
+      ''@@color:green;H <<print "[$slaves[$i].health]">>@@''
+  <</if>>
+<<elseif $abbreviateHealth is 2>>
+  <<if $slaves[$i].health lt -9>>
+      @@color:red;On the edge of death.@@
+  <<elseif $slaves[$i].health lt -5>>
+      @@color:red;Extremely unhealthy.@@
+  <<elseif $slaves[$i].health lt -2>>
+      @@color:red;Unhealthy.@@
+  <<elseif $slaves[$i].health lte 2>>
+      @@color:yellow;Healthy.@@
+  <<elseif $slaves[$i].health lte 5>>
+      @@color:green;Very healthy.@@
+  <<elseif $slaves[$i].health lte 9>>
+      @@color:green;Extremely healthy.@@
+  <<else>>
+      @@color:green;Unnaturally healthy.@@
+  <</if>>
+<</if>>
+
+<<if $abbreviateDiet is 1>>
+  <<if ($slaves[$i].weight lt -2)>>
+      ''@@color:red;W---@@''
+  <<elseif ($slaves[$i].weight is -2)>>
+      ''@@color:red;W--@@''
+  <<elseif ($slaves[$i].weight is -1)>>
+      ''W-''
+  <<elseif ($slaves[$i].weight is 1)>>
+      ''W+''
+  <<elseif ($slaves[$i].weight is 2)>>
+      ''@@color:red;W++@@''
+  <<elseif ($slaves[$i].weight gt 2)>>
+      ''@@color:red;W+++@@''
+  <</if>>
+  <<if ($slaves[$i].diet is "restricted")>>
+      ''Di:W-''
+  <<elseif ($slaves[$i].diet is "fattening")>>
+      ''Di:W+''
+  <<elseif ($slaves[$i].diet is "muscle building")>>
+      ''Di:M+''
+  <<elseif ($slaves[$i].diet is "slimming")>>
+      ''Di:M-''
+  <<elseif ($slaves[$i].diet is "cum")>>
+      ''Di:C''
+  <</if>>
+<<elseif $abbreviateDiet is 2>>
+  <<if ($slaves[$i].weight lt -2)>>
+      @@color:red;Emaciated.@@
+  <<elseif ($slaves[$i].weight is -2)>>
+      @@color:red;Very thin.@@
+  <<elseif ($slaves[$i].weight is -1)>>
+      Thin.
+  <<elseif ($slaves[$i].weight is 1)>>
+      Plush.
+  <<elseif ($slaves[$i].weight is 2)>>
+      @@color:red;Overweight.@@
+  <<elseif ($slaves[$i].weight gt 2)>>
+      @@color:red;Fat.@@
+  <</if>>
+  <<if ($slaves[$i].diet is "restricted")>>
+      Dieting.
+  <<elseif ($slaves[$i].diet is "fattening")>>
+      Gaining weight.
+  <<elseif ($slaves[$i].diet is "muscle building")>>
+      Pumping iron.
+  <<elseif ($slaves[$i].diet is "slimming")>>
+      Slimming down.
+  <<elseif ($slaves[$i].diet is "cum")>>
+      On a cum-based diet.
+  <</if>>
+<</if>>
+
+<<if $abbreviateDrugs is 1>>
+  <<if ($slaves[$i].addict isnot 0)>>
+      @@color:cyan;Add@@
+  <</if>>
+  <<if ($slaves[$i].drugs isnot "no drugs") and ($slaves[$i].drugs isnot "none")>>
+    <<if ($slaves[$i].drugs is "aphrodisiacs")>>
+        ''Dr:Aph''
+    <<elseif ($slaves[$i].drugs is "extreme aphrodisiacs")>>
+        ''Dr:Aph++''
+    <<elseif ($slaves[$i].drugs is "breast injections")>>
+        ''Dr:Boobs+''
+    <<elseif ($slaves[$i].drugs is "butt injections")>>
+        ''Dr:Butt+''
+    <<elseif ($slaves[$i].drugs is "lip injections")>>
+        ''Dr:Lip+''
+    <<elseif ($slaves[$i].drugs is "penis enhancement")>>
+        ''Dr:Dick+''
+    <<elseif ($slaves[$i].drugs is "curatives")>>
+        ''Dr:Health+''
+    <<elseif ($slaves[$i].drugs is "psychosuppressants")>>
+        ''Dr:Psych''
+    <<elseif ($slaves[$i].drugs is "preventatives")>>
+        ''Dr:Prev''
+    <<elseif ($slaves[$i].drugs is "steroids")>>
+        ''Dr:Ster''
+    <<else>>
+        ''Dr:none''
+    <</if>>
+  <</if>>
+  <<if ($slaves[$i].hormones gt 1)>>
+      ''Ho:F+''
+  <<elseif ($slaves[$i].hormones gt 0)>>
+      ''Ho:F''
+  <<elseif ($slaves[$i].hormones lt -1)>>
+      ''Ho:M+''
+  <<elseif ($slaves[$i].hormones lt 0)>>
+      ''Ho:M''
+  <</if>>
+  <<if ($slaves[$i].preg is -2) and ($slaves[$i].vagina isnot -1)>>
+      ''Barr''
+  <<elseif ($slaves[$i].ovaries is 0) and ($slaves[$i].vagina isnot -1)>>
+      ''Barr''
+  <<elseif ($slaves[$i].preg is -1)>>
+      ''CC''
+  <<elseif ($slaves[$i].preg is 0)>>
+      ''Fert+''
+  <<elseif ($slaves[$i].preg lt 4) and ($slaves[$i].preg gt 0)>>
+      ''Preg?''
+  <<elseif ($slaves[$i].preg gte 4)>>
+      ''$slaves[$i].preg wks preg''
+  <</if>>
+<<elseif $abbreviateDrugs is 2>>
+  <<if ($slaves[$i].addict isnot 0)>>
+      @@color:cyan;Addict.@@
+  <</if>>
+  <<if ($slaves[$i].drugs isnot "no drugs") and ($slaves[$i].drugs isnot "none")>>
+      On <<print $slaves[$i].drugs>>.
+  <</if>>
+  <<if ($slaves[$i].hormones gt 1)>>
+      ''Heavy female hormones.''
+  <<elseif ($slaves[$i].hormones gt 0)>>
+      ''Female hormones.''
+  <<elseif ($slaves[$i].hormones lt -1)>>
+      ''Heavy male hormones.''
+  <<elseif ($slaves[$i].hormones lt 0)>>
+      ''Male hormones.''
+  <</if>>
+  <<if ($slaves[$i].preg is -2) and ($slaves[$i].vagina isnot -1)>>
+      Barren.
+  <<elseif ($slaves[$i].ovaries is 0) and ($slaves[$i].vagina isnot -1)>>
+       Barren.
+  <<elseif ($slaves[$i].preg is -1)>>
+      On contraceptives.
+  <<elseif ($slaves[$i].preg is 0)>>
+      Fertile.
+  <<elseif ($slaves[$i].preg lt 4) and ($slaves[$i].preg gt 0)>>
+      May be pregnant.
+  <<elseif ($slaves[$i].preg gte 4)>>
+      $slaves[$i].preg weeks pregnant.
+  <</if>>
+<</if>>
+
+<</nobr>><<nobr>>
+
+<<if $abbreviateGenitalia+$abbreviatePhysicals+$abbreviateSkills+$abbreviateMental isnot 0>>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<</if>>
+
+<<if ($seeRace is 1)>> 
+<<if $abbreviateRace is 1>>
+  ''<<if ($slaves[$i].race is "white")>> 
+      @@color:tan;C@@
+  <<elseif ($slaves[$i].race is "asian")>> 
+      @@color:tan;A@@
+  <<elseif ($slaves[$i].race is "indo-aryan")>> 
+      @@color:tan;I@@
+  <<elseif ($slaves[$i].race is "latina")>> 
+      @@color:tan;L@@
+  <<elseif ($slaves[$i].race is "middle eastern")>> 
+      @@color:tan;ME@@
+  <<elseif ($slaves[$i].race is "black")>> 
+      @@color:tan;B@@
+  <<elseif ($slaves[$i].race is "pacific islander")>> 
+      @@color:tan;PI@@
+  <<elseif ($slaves[$i].race is "malay")>> 
+      @@color:tan;M@@
+  <<elseif ($slaves[$i].race is "amerindian")>> 
+      @@color:tan;AI@@
+  <<elseif ($slaves[$i].race is "semitic")>> 
+      @@color:tan;S@@
+  <<elseif ($slaves[$i].race is "southern European")>> 
+      @@color:tan;SE@@
+  <<else>> 
+      @@color:tan;MR@@
+  <</if>>''
+<<elseif $abbreviateRace is 2>>
+  <<if ($slaves[$i].race is "white")>> 
+      @@color:tan;Caucasian.@@
+  <<elseif ($slaves[$i].race is "asian")>> 
+      @@color:tan;Asian.@@
+  <<elseif ($slaves[$i].race is "indo-aryan")>> 
+      @@color:tan;Indo-aryan.@@
+  <<elseif ($slaves[$i].race is "latina")>> 
+      @@color:tan;Latina.@@
+  <<elseif ($slaves[$i].race is "middle eastern")>> 
+      @@color:tan;Middle Eastern.@@
+  <<elseif ($slaves[$i].race is "black")>> 
+      @@color:tan;Black.@@
+  <<elseif ($slaves[$i].race is "pacific islander")>> 
+      @@color:tan;Pacific Islander.@@
+  <<elseif ($slaves[$i].race is "malay")>> 
+      @@color:tan;Malay.@@
+  <<elseif ($slaves[$i].race is "amerindian")>> 
+      @@color:tan;Amerindian.@@
+  <<elseif ($slaves[$i].race is "semitic")>> 
+      @@color:tan;Semitic.@@
+  <<elseif ($slaves[$i].race is "southern European")>> 
+      @@color:tan;Southern European.@@
+  <<else>> 
+      @@color:tan;Mixed race.@@
+  <</if>>
+<</if>>
+<</if>>
+
+<<if $abbreviateGenitalia is 1>>
+  ''<<if ($slaves[$i].vagina lt 0) and ($slaves[$i].balls is 0)>>
+      @@color:pink;Geld@@
+  <<elseif ($slaves[$i].vagina lt 0)>>
+      @@color:pink;Shem@@
+  <<elseif ($slaves[$i].dick gt 0)>>
+      @@color:pink;Herm@@
+  <</if>>
+  <<if ($slaves[$i].dick gt 5) and ($slaves[$i].balls gt 5)>>
+      @@color:pink;Junk++@@
+  <<elseif ($slaves[$i].dick gt 3) and ($slaves[$i].balls gt 3)>>
+      @@color:pink;Junk+@@
+  <<elseif ($slaves[$i].dick gt 5)>>
+      @@color:pink;Dick++@@
+  <<elseif ($slaves[$i].dick gt 3)>>
+      @@color:pink;Dick+@@
+  <<elseif ($slaves[$i].balls gt 5)>>
+      @@color:pink;Balls++@@
+  <<elseif ($slaves[$i].balls gt 3)>>
+      @@color:pink;Balls++@@
+  <</if>>
+  <<if ($slaves[$i].vagina is 0)>>
+      @@color:lime;VV@@
+  <<elseif ($slaves[$i].preg gt 0) and ($slaves[$i].amp isnot 1) and ($slaves[$i].clothes is "no clothing") and ($slaves[$i].shoes is "none")>>
+      @@color:pink;NBP@@
+  <</if>>
+  <<if ($slaves[$i].anus is 0)>>
+      @@color:lime;AV@@
+  <</if>>
+  <<if ($slaves[$i].vagina gt 2) and ($slaves[$i].anus gt 2)>>
+      @@color:pink;V++A++@@
+  <<elseif ($slaves[$i].vagina gt 2)>>
+      @@color:pink;V++@@
+  <<elseif ($slaves[$i].anus gt 2)>>
+      @@color:pink;A++@@
+  <</if>>''
+<<elseif $abbreviateGenitalia is 2>>
+  <<if ($slaves[$i].vagina lt 0) and ($slaves[$i].balls is 0)>>
+      @@color:pink;Gelded.@@
+  <<elseif ($slaves[$i].vagina lt 0)>>
+      @@color:pink;Shemale.@@
+  <<elseif ($slaves[$i].dick gt 0)>>
+      @@color:pink;Hermaphrodite.@@
+  <</if>>
+  <<if ($slaves[$i].dick gt 5) and ($slaves[$i].balls gt 5)>>
+      @@color:pink;Huge dick & balls.@@
+  <<elseif ($slaves[$i].dick gt 3) and ($slaves[$i].balls gt 3)>>
+      @@color:pink;Big dick & balls.@@
+  <<elseif ($slaves[$i].dick gt 5)>>
+      @@color:pink;Huge dick.@@
+  <<elseif ($slaves[$i].dick gt 3)>>
+      @@color:pink;Big dick.@@
+  <<elseif ($slaves[$i].balls gt 5)>>
+      @@color:pink;Huge balls.@@
+  <<elseif ($slaves[$i].balls gt 3)>>
+      @@color:pink;Big balls.@@
+  <</if>>
+  <<if ($slaves[$i].vagina is 0)>>
+      @@color:pink;Virgin.@@
+  <<elseif ($slaves[$i].preg gt 0) and ($slaves[$i].amp isnot 1) and ($slaves[$i].clothes is "no clothing") and ($slaves[$i].shoes is "none")>>
+      @@color:pink;Naked, barefoot, and pregnant.@@
+  <</if>>
+  <<if ($slaves[$i].anus is 0)>>
+      @@color:pink;Anal virgin.@@
+  <</if>>
+  <<if ($slaves[$i].vagina gt 2) and ($slaves[$i].anus gt 2)>>
+      @@color:pink;High mileage.@@
+  <<elseif ($slaves[$i].vagina gt 2)>>
+      @@color:pink;Loose pussy.@@
+  <<elseif ($slaves[$i].anus gt 2)>>
+      @@color:pink;Gaping anus.@@
+  <</if>>
+<</if>>
+
+<<if $abbreviatePhysicals is 1>>
+  ''<<if ($slaves[$i].age gte 40)>>
+      @@color:pink;40s@@
+  <<elseif ($slaves[$i].age gte 35)>>
+      @@color:pink;Lt30s@@
+  <<elseif ($slaves[$i].age gte 30)>>
+      @@color:pink;Ea30s@@
+  <<elseif ($slaves[$i].age gte 25)>>
+      @@color:pink;Lt20s@@
+  <<elseif ($slaves[$i].age gte 20)>>
+      @@color:pink;Ea20s@@
+  <<elseif ($slaves[$i].age gte 19)>>
+      @@color:pink;19@@
+  <<else>>
+      @@color:pink;18@@
+  <</if>>
+  <<if ($slaves[$i].ageImplant is 1)>>
+      @@color:pink;Age-@@
+  <</if>>
+  <<if $slaves[$i].face lt -1>>
+  	@@color:pink;Face--@@
+  <<elseif $slaves[$i].face is -1>>
+  	@@color:pink;Face-@@
+  <<elseif ($slaves[$i].face is 0)>>
+  	@@color:pink;Face@@
+  <<elseif ($slaves[$i].face is 1)>>
+  	@@color:pink;Face+@@
+  <<elseif ($slaves[$i].face gt 1)>>
+  	@@color:pink;Face++@@
+  <</if>>
+  <<if $slaves[$i].lips gt 2>>
+  	@@color:pink;Lips++@@
+  <<elseif $slaves[$i].lips gt 0>>
+  	@@color:pink;Lips+@@
+  <</if>>
+  <<if ($slaves[$i].muscles gte 3)>>
+      @@color:pink;Musc+++@@
+  <<elseif ($slaves[$i].muscles gte 2)>>
+      @@color:pink;Musc++@@
+  <<elseif ($slaves[$i].muscles gte 1)>>
+      @@color:pink;Musc+@@
+  <</if>>
+  <<if ($slaves[$i].amp is 1)>>
+      @@color:pink;Amp@@
+  <</if>>
+  <<if ($slaves[$i].heels is 1)>>
+      @@color:pink;Heel@@
+  <</if>>
+  <<if ($slaves[$i].mute is 1)>>
+      @@color:pink;Mute@@
+  <</if>>
+  <<if ($slaves[$i].boobs gte 800) and ($slaves[$i].butt gt 4)>>
+  	@@color:pink;T&A++@@
+  <<elseif ($slaves[$i].boobs lt 500) and ($slaves[$i].butt lt 3) and ($slaves[$i].weight lt 1) and ($slaves[$i].muscles lt 1)>>
+  	@@color:pink;Girlish@@
+  <<elseif ($slaves[$i].boobs gt 800)>>
+  	@@color:pink;Boobs++@@
+  <<elseif ($slaves[$i].butt gt 4)>>
+  	@@color:pink;Ass++@@
+  <</if>>
+  <<if ($slaves[$i].boobsImplant is 0) and ($slaves[$i].buttImplant is 0) and ($slaves[$i].waist lt 2) and ($slaves[$i].lipsImplant is 0) and ($slaves[$i].faceImplant lt 2)>>
+  	@@color:pink;Natr@@
+  <<else>>
+  	@@color:pink;Impl@@
+  <</if>>
+  <<if ($slaves[$i].lactation is 1)>>
+  	@@color:pink;Lact@@
+  <<elseif ($slaves[$i].lactation is 2)>>
+  	@@color:pink;Lact++@@
+  <</if>>
+  <<if (($slaves[$i].lipsPiercing + $slaves[$i].nipplesPiercing + $slaves[$i].vaginaPiercing + $slaves[$i].clitPiercing + $slaves[$i].anusPiercing + $slaves[$i].earPiercing + $slaves[$i].eyebrowPiercing + $slaves[$i].nosePiercing) gt 7) and ($slaves[$i].lipsTat isnot 0) and ($slaves[$i].buttTat isnot 0) and ($slaves[$i].anusTat isnot 0) and ($slaves[$i].vaginaTat isnot 0) and ($slaves[$i].boobsTat isnot 0)>>
+        @@color:pink;Mods++@@
+  <<else>>
+    <<if (($slaves[$i].lipsPiercing + $slaves[$i].nipplesPiercing + $slaves[$i].vaginaPiercing + $slaves[$i].clitPiercing + $slaves[$i].anusPiercing + $slaves[$i].earPiercing + $slaves[$i].eyebrowPiercing + $slaves[$i].nosePiercing) gt 7)>>
+        @@color:pink;Pierced+@@
+    <</if>>
+    <<if ($slaves[$i].lipsTat isnot 0) and ($slaves[$i].buttTat isnot 0) and ($slaves[$i].anusTat isnot 0) and ($slaves[$i].vaginaTat isnot 0) and ($slaves[$i].boobsTat isnot 0)>>
+        @@color:pink;Inked+@@
+    <</if>>
+  <</if>>
+  <<if ($slaves[$i].brand isnot 0)>>
+        @@color:pink;Br@@
+  <</if>>''
+<<elseif $abbreviatePhysicals is 2>>
+  <<if ($slaves[$i].age gte 40)>>
+      @@color:pink;Forties.@@
+  <<elseif ($slaves[$i].age gte 35)>>
+      @@color:pink;Late thirties.@@
+  <<elseif ($slaves[$i].age gte 30)>>
+      @@color:pink;Early thirties.@@
+  <<elseif ($slaves[$i].age gte 25)>>
+      @@color:pink;Late twenties.@@
+  <<elseif ($slaves[$i].age gte 20)>>
+      @@color:pink;Early twenties.@@
+  <<elseif ($slaves[$i].age gte 19)>>
+      @@color:pink;Nineteen.@@
+  <<else>>
+      @@color:pink;Eighteen.@@
+  <</if>>
+  <<if ($slaves[$i].ageImplant is 1)>>
+      @@color:pink;Looks younger.@@
+  <</if>>
+  <<if $slaves[$i].face lt -1>>
+  	@@color:pink;Ugly face.@@
+  <<elseif $slaves[$i].face is -1>>
+  	@@color:pink;Unattractive face.@@
+  <<elseif ($slaves[$i].face is 0)>>
+  	@@color:pink;Attractive face.@@
+  <<elseif ($slaves[$i].face is 1)>>
+  	@@color:pink;Pretty face.@@
+  <<elseif ($slaves[$i].face gt 1)>>
+  	@@color:pink;Gorgeous face.@@
+  <</if>>
+  <<if $slaves[$i].lips gt 2>>
+  	@@color:pink;Huge lips.@@
+  <<elseif $slaves[$i].lips gt 0>>
+  	@@color:pink;Big lips.@@
+  <</if>>
+  <<if ($slaves[$i].muscles gte 3)>>
+      @@color:pink;Hugely muscular.@@
+  <<elseif ($slaves[$i].muscles gte 2)>>
+      @@color:pink;Muscular.@@
+  <<elseif ($slaves[$i].muscles gte 1)>>
+      @@color:pink;Well built.@@
+  <</if>>
+  <<if ($slaves[$i].amp is 1)>>
+      @@color:pink;Amputee.@@
+  <</if>>
+  <<if ($slaves[$i].heels is 1)>>
+      @@color:pink;Heeled.@@
+  <</if>>
+  <<if ($slaves[$i].mute is 1)>>
+      @@color:pink;Mute.@@
+  <</if>>
+  <<if ($slaves[$i].boobs gt 800) and ($slaves[$i].butt gt 4)>>
+  	@@color:pink;Huge T&A.@@
+  <<elseif ($slaves[$i].boobs lt 500) and ($slaves[$i].butt lt 3) and ($slaves[$i].weight lt 1) and ($slaves[$i].muscles lt 3)>>
+  	@@color:pink;Girlish figure.@@
+  <<elseif ($slaves[$i].boobs gt 800)>>
+  	@@color:pink;Huge tits.@@
+  <<elseif ($slaves[$i].butt gt 4)>>
+  	@@color:pink;Huge ass.@@
+  <</if>>
+  <<if ($slaves[$i].boobsImplant is 0) and ($slaves[$i].buttImplant is 0) and ($slaves[$i].waist lt 2) and ($slaves[$i].lipsImplant is 0) and ($slaves[$i].faceImplant lt 2)>>
+  	@@color:pink;All natural.@@
+  <<else>>
+  	@@color:pink;Implants.@@
+  <</if>>
+  <<if ($slaves[$i].lactation is 1)>>
+  	@@color:pink;Lactating naturally.@@
+  <<elseif ($slaves[$i].lactation is 2)>>
+  	@@color:pink;Heavy lactation.@@
+  <</if>>
+  <<if (($slaves[$i].lipsPiercing + $slaves[$i].nipplesPiercing + $slaves[$i].vaginaPiercing + $slaves[$i].clitPiercing + $slaves[$i].anusPiercing + $slaves[$i].earPiercing + $slaves[$i].eyebrowPiercing + $slaves[$i].nosePiercing) gt 7) and ($slaves[$i].lipsTat isnot 0) and ($slaves[$i].buttTat isnot 0) and ($slaves[$i].anusTat isnot 0) and ($slaves[$i].vaginaTat isnot 0) and ($slaves[$i].boobsTat isnot 0)>>
+        @@color:pink;Heavy ink & piercings.@@
+  <<else>>
+    <<if (($slaves[$i].lipsPiercing + $slaves[$i].nipplesPiercing + $slaves[$i].vaginaPiercing + $slaves[$i].clitPiercing + $slaves[$i].anusPiercing + $slaves[$i].earPiercing + $slaves[$i].eyebrowPiercing + $slaves[$i].nosePiercing) gt 7)>>
+        @@color:pink;Heavily pierced.@@
+    <</if>>
+    <<if ($slaves[$i].lipsTat isnot 0) and ($slaves[$i].buttTat isnot 0) and ($slaves[$i].anusTat isnot 0) and ($slaves[$i].vaginaTat isnot 0) and ($slaves[$i].boobsTat isnot 0)>>
+        @@color:pink;Heavily inked.@@
+    <</if>>
+  <</if>>
+  <<if ($slaves[$i].brand isnot 0)>>
+        @@color:pink;Branded.@@
+  <</if>>
+<</if>>
+
+<<if $abbreviateSkills is 1>>
+  ''<<if $slaves[$i].intelligenceImplant is 1>>
+	<<if $slaves[$i].intelligence gte 2>>
+      @@color:deepskyblue;I++(e)@@
+	<<elseif $slaves[$i].intelligence gte 1>>
+      @@color:deepskyblue;I+(e)@@
+	<<elseif $slaves[$i].intelligence gte 0>>
+      I(e)
+	<<elseif $slaves[$i].intelligence gte -1>>
+      @@color:orangered;I-(e)@@
+	<<else>>
+      @@color:orangered;I--(e)@@
+	<</if>>
+  <<else>>
+	<<if $slaves[$i].intelligence gte 2>>
+      @@color:deepskyblue;I++@@
+	<<elseif $slaves[$i].intelligence gte 1>>
+      @@color:deepskyblue;I+@@
+	<<elseif $slaves[$i].intelligence gte 0>>
+      I
+	<<elseif $slaves[$i].intelligence gte -1>>
+      @@color:orangered;I-@@
+	<<else>>
+      @@color:orangered;I--@@
+	<</if>>
+  <</if>>
+  <<if (($slaves[$i].vaginalSkill + $slaves[$i].analSkill + $slaves[$i].oralSkill) gt 8)>>
+      @@color:aquamarine;S+++@@
+  <<elseif (($slaves[$i].vaginalSkill + $slaves[$i].analSkill + $slaves[$i].oralSkill) gt 5) and ($slaves[$i].vagina lt 0)>>
+      @@color:aquamarine;Sh++@@
+  <<elseif (($slaves[$i].vaginalSkill + $slaves[$i].analSkill + $slaves[$i].oralSkill) gt 5)>>
+      @@color:aquamarine;S++@@
+  <<elseif (($slaves[$i].vaginalSkill + $slaves[$i].analSkill + $slaves[$i].oralSkill) gt 2)>>
+      @@color:aquamarine;S+@@
+  <</if>>
+  <<if ($slaves[$i].whoreSkill gt 2)>>
+      @@color:aquamarine;W+++@@
+  <<elseif ($slaves[$i].whoreSkill is 2)>>
+      @@color:aquamarine;W++@@
+  <<elseif ($slaves[$i].whoreSkill is 1)>>
+      @@color:aquamarine;W+@@
+  <</if>>
+  <<if ($slaves[$i].entertainSkill gt 2)>>
+      @@color:aquamarine;E+++@@
+  <<elseif ($slaves[$i].entertainSkill is 2)>>
+      @@color:aquamarine;E++@@
+  <<elseif ($slaves[$i].entertainSkill is 1)>>
+      @@color:aquamarine;E+@@
+  <</if>>
+  <<if ($slaves[$i].combatSkill gt 0)>>
+      @@color:aquamarine;C+@@
+  <</if>>
+  <<if ($slaves[$i].prestige gt 2)>>
+      @@color:green;Prest+++.@@
+  <<elseif ($slaves[$i]. prestige is 2)>>
+      @@color:green;Prest++.@@
+  <<elseif ($slaves[$i]. prestige is 1)>>
+      @@color:green;Prest+.@@
+  <</if>>''
+<<elseif $abbreviateSkills is 2>>
+  <<if $slaves[$i].intelligenceImplant is 1>>
+	<<if $slaves[$i].intelligence gte 2>>
+      @@color:deepskyblue;Very smart, educated.@@
+	<<elseif $slaves[$i].intelligence gte 1>>
+      @@color:deepskyblue;Smart, educated.@@
+	<<elseif $slaves[$i].intelligence gte 0>>
+      Average intelligence, educated.
+	<<elseif $slaves[$i].intelligence gte -1>>
+      @@color:orangered;Slow, educated.@@
+	<<else>>
+      @@color:orangered;Very slow, educated.@@
+	<</if>>
+  <<else>>
+	<<if $slaves[$i].intelligence gte 2>>
+      @@color:deepskyblue;Very smart.@@
+	<<elseif $slaves[$i].intelligence gte 1>>
+      @@color:deepskyblue;Smart.@@
+	<<elseif $slaves[$i].intelligence gte 0>>
+      Average intelligence.
+	<<elseif $slaves[$i].intelligence gte -1>>
+      @@color:orangered;Slow.@@
+	<<else>>
+      @@color:orangered;Very slow.@@
+	<</if>>
+  <</if>>
+  <<if (($slaves[$i].vaginalSkill + $slaves[$i].analSkill + $slaves[$i].oralSkill) gt 8)>>
+      @@color:aquamarine;Sex master.
+  <<elseif (($slaves[$i].vaginalSkill + $slaves[$i].analSkill + $slaves[$i].oralSkill) gt 5) and ($slaves[$i].vagina lt 0)>>
+      @@color:aquamarine;Masterful shemale.@@
+  <<elseif (($slaves[$i].vaginalSkill + $slaves[$i].analSkill + $slaves[$i].oralSkill) gt 5)>>
+      @@color:aquamarine;Sexual expert.@@
+  <<elseif (($slaves[$i].vaginalSkill + $slaves[$i].analSkill + $slaves[$i].oralSkill) gt 2)>>
+      @@color:aquamarine;Sexually skilled.@@
+  <</if>>
+  <<if ($slaves[$i].whoreSkill gt 2)>>
+      @@color:aquamarine;Veteran whore.@@
+  <<elseif ($slaves[$i].whoreSkill is 2)>>
+      @@color:aquamarine;Hardened whore.@@
+  <<elseif ($slaves[$i].whoreSkill is 1)>>
+      @@color:aquamarine;Experienced whore.@@
+  <</if>>
+  <<if ($slaves[$i].entertainSkill gt 2)>>
+      @@color:aquamarine;Masterful entertainer.@@
+  <<elseif ($slaves[$i].entertainSkill is 2)>>
+      @@color:aquamarine;Expert entertainer.@@
+  <<elseif ($slaves[$i].entertainSkill is 1)>>
+      @@color:aquamarine;Skilled entertainer.@@
+  <</if>>
+  <<if ($slaves[$i].combatSkill gt 0)>>
+      @@color:aquamarine;Trained fighter.@@
+  <</if>>
+  <<if ($slaves[$i].prestige gt 2)>>
+      @@color:green;Extremely prestigious.@@
+  <<elseif ($slaves[$i]. prestige is 2)>>
+      @@color:green;Very prestigious.@@
+  <<elseif ($slaves[$i]. prestige is 1)>>
+      @@color:green;Prestigious.@@
+  <</if>>
+<</if>>
+
+<<if $abbreviateMental is 1>>
+
+<<if $slaves[$i].relation isnot 0>>
+<<if $slaves[$i].relation is "twin">>
+  @@color:lightgreen;Twin@@
+<<elseif $slaves[$i].relation is "sister">>
+  @@color:lightgreen;Sister@@
+<<elseif $slaves[$i].relation is "mother">>
+  @@color:lightgreen;Mother@@
+<<elseif $slaves[$i].relation is "daughter">>
+  @@color:lightgreen;Daughter@@
+<</if>>
+<</if>>
+<<if $slaves[$i].relationship isnot 0>>
+<<if $slaves[$i].relationship lte 1>>
+  @@color:lightgreen;Friend@@
+<<elseif $slaves[$i].relationship lte 2>>
+  @@color:lightgreen;Best Fr@@
+<<elseif $slaves[$i].relationship lte 3>>
+  @@color:lightgreen;FWB@@
+<<elseif $slaves[$i].relationship lte 4>>
+  @@color:lightgreen;Lover@@
+<<elseif $slaves[$i].relationship gt 4>>
+  @@color:lightgreen;Wife@@      
+<</if>>
+<</if>>
+<<if $slaves[$i].rivalry isnot 0>>
+<<if $slaves[$i].rivalry lte 1>>
+  @@color:lightsalmon;Dislike@@
+<<elseif $slaves[$i].rivalry lte 2>>
+  @@color:lightsalmon;Rival@@
+<<else>>
+  @@color:lightsalmon;Hate@@   
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].fetishDiscovered is 1)>>
+<<if ($slaves[$i].fetish is "submissive")>>
+	@@color:lightcoral;Sub.@@
+<<elseif ($slaves[$i].fetish is "likes girls")>>
+	@@color:lightcoral;Girls.@@
+<<elseif ($slaves[$i].fetish is "cumslut")>>
+	@@color:lightcoral;Cum.@@
+<<elseif ($slaves[$i].fetish is "humiliation")>>
+	@@color:lightcoral;Humil.@@
+<<elseif ($slaves[$i].fetish is "buttslut")>>
+	@@color:lightcoral;Butt.@@
+<<elseif ($slaves[$i].fetish is "boobs")>>
+	@@color:lightcoral;Boobs.@@
+<<elseif ($slaves[$i].fetish is "sadist")>>
+	@@color:lightcoral;Sadist.@@
+<<elseif ($slaves[$i].fetish is "masochist")>>
+	@@color:lightcoral;Pain.@@
+<<elseif ($slaves[$i].fetish is "dom")>>
+	@@color:lightcoral;Dom.@@
+<<elseif ($slaves[$i].fetish is "pregnancy")>>
+	@@color:lightcoral;Preg.@@
+<<elseif ($slaves[$i].fetish is "nympho")>>
+	@@color:lightcoral;Nympho!@@
+<<else>>
+	@@color:pink;Vanilla.@@
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].clitPiercing is 3)>>
+<<if ($slaves[$i].fetishDiscovered is 1)>>
+
+<<if ($slaves[$i].clitSetting is "off")>>
+	SP-
+<<elseif ($slaves[$i].fetish isnot "submissive") and ($slaves[$i].clitSetting is "submissive")>>
+	SP:sub
+<<elseif ($slaves[$i].fetish isnot "likes girls") and ($slaves[$i].clitSetting is "lesbian")>>
+	SP:bi
+<<elseif ($slaves[$i].fetish isnot "cumslut") and ($slaves[$i].clitSetting is "oral")>>
+	SP:oral
+<<elseif ($slaves[$i].fetish isnot "humiliation") and ($slaves[$i].clitSetting is "humiliation")>>
+	SP:humil
+<<elseif ($slaves[$i].fetish isnot "buttslut") and ($slaves[$i].clitSetting is "anal")>>
+	SP:anal
+<<elseif ($slaves[$i].fetish isnot "boobs") and ($slaves[$i].clitSetting is "boobs")>>
+	SP:boobs
+<<elseif ($slaves[$i].fetish isnot "sadist") and ($slaves[$i].clitSetting is "sadist")>>
+	SP:sade
+<<elseif ($slaves[$i].fetish isnot "masochist") and ($slaves[$i].clitSetting is "masochist")>>
+	SP:pain
+<<elseif ($slaves[$i].fetish isnot "dom") and ($slaves[$i].clitSetting is "dom")>>
+	SP:dom
+<<elseif ($slaves[$i].fetish isnot "pregnancy") and ($slaves[$i].clitSetting is "pregnancy")>>
+	SP:preg
+<<elseif ($slaves[$i].fetish isnot "none") and ($slaves[$i].clitSetting is "vanilla")>>
+	SP:vanilla
+<<elseif ($slaves[$i].fetish isnot "nympho") and ($slaves[$i].clitSetting is "all")>>
+	SP:all
+<</if>>
+
+<<else>>
+
+<<if ($slaves[$i].clitSetting is "off")>>
+	SP-
+<<elseif ($slaves[$i].clitSetting is "submissive")>>
+	SP:sub
+<<elseif ($slaves[$i].clitSetting is "lesbian")>>
+	SP:les
+<<elseif ($slaves[$i].clitSetting is "oral")>>
+	SP:oral
+<<elseif ($slaves[$i].clitSetting is "humiliation")>>
+	SP:humil
+<<elseif ($slaves[$i].clitSetting is "anal")>>
+	SP:anal
+<<elseif ($slaves[$i].clitSetting is "boobs")>>
+	SP:boobs
+<<elseif ($slaves[$i].clitSetting is "sadist")>>
+	SP:sade
+<<elseif ($slaves[$i].clitSetting is "masochist")>>
+	SP:pain
+<<elseif ($slaves[$i].clitSetting is "dom")>>
+	SP:dom
+<<elseif ($slaves[$i].clitSetting is "pregnancy")>>
+	SP:pregnancy
+<<elseif ($slaves[$i].clitSetting is "vanilla")>>
+	SP:vanilla
+<<elseif ($slaves[$i].clitSetting is "all")>>
+	SP:all
+<</if>>
+
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].behavioralQuirk is "arrogant")>>
+	@@color:red;Arrog.@@
+<<elseif ($slaves[$i].behavioralQuirk is "bitchy")>>
+	@@color:red;Bitchy.@@
+<<elseif ($slaves[$i].behavioralQuirk is "quirky")>>
+	@@color:red;Odd.@@
+<<elseif ($slaves[$i].behavioralQuirk is "anorexic")>>
+	@@color:red;Ano.@@
+<</if>>
+<<if ($slaves[$i].sexualQuirk is "hates oral")>>
+	@@color:red;Oral-.@@
+<<elseif ($slaves[$i].sexualQuirk is "hates anal")>>
+	@@color:red;Anal-.@@
+<<elseif ($slaves[$i].sexualQuirk is "hates penetration")>>
+	@@color:red;Fuck-.@@
+<<elseif ($slaves[$i].sexualQuirk is "hates men")>>
+	@@color:red;Men-.@@
+<<elseif ($slaves[$i].sexualQuirk is "hates women")>>
+	@@color:red;Women-.@@
+<</if>>
+
+<<elseif $abbreviateMental is 2>>
+
+<<if $slaves[$i].relation isnot 0>>
+<<for $j to 0; $j lt $slaves.length; $j++>>
+  <<if $slaves[$i].relationTarget == $slaves[$j].ID>>
+    <<set $relatedSlave to $slaves[$j]>>
+  <</if>>
+<</for>>
+<<if $slaves[$i].relation is "twin">>
+  $relatedSlave.slaveName's @@color:lightgreen;twin.@@
+<<elseif $slaves[$i].relation is "sister">>
+  $relatedSlave.slaveName's @@color:lightgreen;sister.@@
+<<elseif $slaves[$i].relation is "mother">>
+  $relatedSlave.slaveName's @@color:lightgreen;mother.@@
+<<elseif $slaves[$i].relation is "daughter">>
+  $relatedSlave.slaveName's @@color:lightgreen;daughter.@@
+<</if>>
+<</if>>
+<<if $slaves[$i].relationship isnot 0>>
+<<for $j to 0; $j lt $slaves.length; $j++>>
+  <<if $slaves[$i].relationshipTarget == $slaves[$j].ID>>
+    <<set $relatedSlave to $slaves[$j]>>
+  <</if>>
+<</for>>
+<<if $slaves[$i].relationship lte 1>>
+  $relatedSlave.slaveName's @@color:lightgreen;friend.@@
+<<elseif $slaves[$i].relationship lte 2>>
+  $relatedSlave.slaveName's @@color:lightgreen;best friend.@@
+<<elseif $slaves[$i].relationship lte 3>>
+  $relatedSlave.slaveName's @@color:lightgreen;FWB.@@
+<<elseif $slaves[$i].relationship lte 4>>
+  $relatedSlave.slaveName's @@color:lightgreen;lover.@@
+<<elseif $slaves[$i].relationship gt 4>>
+  $relatedSlave.slaveName's @@color:lightgreen;slave wife.@@      
+<</if>>
+<</if>>
+<<if $slaves[$i].rivalry isnot 0>>
+<<for $j to 0; $j lt $slaves.length; $j++>>
+  <<if $slaves[$i].rivalryTarget == $slaves[$j].ID>>
+    <<set $relatedSlave to $slaves[$j]>>
+  <</if>>
+<</for>>
+<<if $slaves[$i].rivalry lte 1>>
+  @@color:lightsalmon;Dislikes@@ $relatedSlave.slaveName.
+<<elseif $slaves[$i].rivalry lte 2>>
+  $relatedSlave.slaveName's @@color:lightsalmon;rival.@@
+<<else>>
+  @@color:lightsalmon;Hates@@ $relatedSlave.slaveName.
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].fetishDiscovered is 1)>>
+<<if ($slaves[$i].fetish is "submissive")>>
+	@@color:lightcoral;Submissive.@@
+<<elseif ($slaves[$i].fetish is "likes girls")>>
+	@@color:lightcoral;Likes girls.@@
+<<elseif ($slaves[$i].fetish is "cumslut")>>
+	@@color:lightcoral;Cumslut.@@
+<<elseif ($slaves[$i].fetish is "humiliation")>>
+	@@color:lightcoral;Humiliation.@@
+<<elseif ($slaves[$i].fetish is "buttslut")>>
+	@@color:lightcoral;Buttslut.@@
+<<elseif ($slaves[$i].fetish is "boobs")>>
+	@@color:lightcoral;Breast fetish.@@
+<<elseif ($slaves[$i].fetish is "sadist")>>
+	@@color:lightcoral;Sadist.@@
+<<elseif ($slaves[$i].fetish is "masochist")>>
+	@@color:lightcoral;Masochist.@@
+<<elseif ($slaves[$i].fetish is "dom")>>
+	@@color:lightcoral;Sexually dominant.@@
+<<elseif ($slaves[$i].fetish is "pregnancy")>>
+	@@color:lightcoral;Pregnancy fetish.@@
+<<elseif ($slaves[$i].fetish is "nympho")>>
+	@@color:lightcoral;Nympho!@@
+<<else>>
+	@@color:pink;Normal sexuality.@@
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].clitPiercing is 3)>>
+<<if ($slaves[$i].fetishDiscovered is 1)>>
+
+<<if ($slaves[$i].clitSetting is "off")>>
+	SP off.
+<<elseif ($slaves[$i].fetish isnot "submissive") and ($slaves[$i].clitSetting is "submissive")>>
+	SP: submissive.
+<<elseif ($slaves[$i].fetish isnot "likes girls") and ($slaves[$i].clitSetting is "lesbian")>>
+	SP: girls.
+<<elseif ($slaves[$i].fetish isnot "cumslut") and ($slaves[$i].clitSetting is "oral")>>
+	SP: oral.
+<<elseif ($slaves[$i].fetish isnot "humiliation") and ($slaves[$i].clitSetting is "humiliation")>>
+	SP: humiliation.
+<<elseif ($slaves[$i].fetish isnot "buttslut") and ($slaves[$i].clitSetting is "anal")>>
+	SP: anal.
+<<elseif ($slaves[$i].fetish isnot "boobs") and ($slaves[$i].clitSetting is "boobs")>>
+	SP: breasts.
+<<elseif ($slaves[$i].fetish isnot "sadist") and ($slaves[$i].clitSetting is "sadist")>>
+	SP: sadism.
+<<elseif ($slaves[$i].fetish isnot "masochist") and ($slaves[$i].clitSetting is "masochist")>>
+	SP: masochism.
+<<elseif ($slaves[$i].fetish isnot "dom") and ($slaves[$i].clitSetting is "dom")>>
+	SP: dominance.
+<<elseif ($slaves[$i].fetish isnot "pregnancy") and ($slaves[$i].clitSetting is "pregnancy")>>
+	SP: pregnancy.
+<<elseif ($slaves[$i].fetish isnot "none") and ($slaves[$i].clitSetting is "vanilla")>>
+	SP: vanilla.
+<<elseif ($slaves[$i].fetish isnot "nympho") and ($slaves[$i].clitSetting is "all")>>
+	SP: all.
+<</if>>
+
+<<else>>
+
+<<if ($slaves[$i].clitSetting is "off")>>
+	SP off.
+<<elseif ($slaves[$i].clitSetting is "submissive")>>
+	SP: submissive.
+<<elseif ($slaves[$i].clitSetting is "lesbian")>>
+	SP: bisexuality.
+<<elseif ($slaves[$i].clitSetting is "oral")>>
+	SP: oral.
+<<elseif ($slaves[$i].clitSetting is "humiliation")>>
+	SP: humiliation.
+<<elseif ($slaves[$i].clitSetting is "anal")>>
+	SP: anal.
+<<elseif ($slaves[$i].clitSetting is "boobs")>>
+	SP: breasts.
+<<elseif ($slaves[$i].clitSetting is "sadist")>>
+	SP: sadism.
+<<elseif ($slaves[$i].clitSetting is "masochist")>>
+	SP: masochism.
+<<elseif ($slaves[$i].clitSetting is "dom")>>
+	SP: dominance.
+<<elseif ($slaves[$i].clitSetting is "pregnancy")>>
+	SP: pregnancy.
+<<elseif ($slaves[$i].clitSetting is "vanilla")>>
+	SP: vanilla.
+<<elseif ($slaves[$i].clitSetting is "all")>>
+	SP: all.
+<</if>>
+
+<</if>>
+<</if>>
+
+<<if ($slaves[$i].behavioralQuirk is "arrogant")>>
+	@@color:red;Arrogant.@@
+<<elseif ($slaves[$i].behavioralQuirk is "bitchy")>>
+	@@color:red;Bitchy.@@
+<<elseif ($slaves[$i].behavioralQuirk is "quirky")>>
+	@@color:red;Odd.@@
+<<elseif ($slaves[$i].behavioralQuirk is "anorexic")>>
+	@@color:red;Anorexic.@@
+<</if>>
+<<if ($slaves[$i].sexualQuirk is "hates oral")>>
+	@@color:red;Hates oral.@@
+<<elseif ($slaves[$i].sexualQuirk is "hates anal")>>
+	@@color:red;Hates anal.@@
+<<elseif ($slaves[$i].sexualQuirk is "hates penetration")>>
+	@@color:red;Hates penetration.@@
+<<elseif ($slaves[$i].sexualQuirk is "hates men")>>
+	@@color:red;Hates men.@@
+<<elseif ($slaves[$i].sexualQuirk is "hates women")>>
+	@@color:red;Hates women.@@
+<</if>>
+
+<</if>>
+
+<<if ($slaves[$i].customLabel isnot " ")>>
+	''@@color:yellow;$slaves[$i].customLabel@@''
+<</if>>
+
+<</nobr>>\

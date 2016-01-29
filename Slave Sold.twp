@@ -1,0 +1,55 @@
+<<nobr>>
+
+<<set $nextButton to "Back to Main">>
+<<set $nextLink to "Main">>
+<<set $returnTo to "Main">>
+<<set $encyclopedia to "Personal Assistant">>
+
+<</nobr>>\
+\
+<<nobr>>
+
+<<set $seed to 0>>
+
+	<<if $activeSlave.relation isnot 0>>
+		<<for $j to 0; $j lt $slaves.length; $j++>>
+			<<if $slaves[$j].ID is $activeSlave.relationTarget>>
+			<<if $slaves[$j].fetish isnot "mindbroken">>
+        		$slaves[$j].slaveName is @@color:mediumorchid;grieved@@ that you are selling her $activeSlave.relation.
+        		<<set $slaves[$j].devotion -= 4>>
+				<<set $seed to 1>>
+			<</if>>
+			<</if>>
+		<</for>>
+	<</if>>
+	<<if $activeSlave.relationship isnot 0>>
+		<<for $j to 0; $j lt $slaves.length; $j++>>
+			<<if $slaves[$j].ID is $activeSlave.relationshipTarget>>
+			<<if $slaves[$j].fetish isnot "mindbroken">>
+        		$slaves[$j].slaveName is @@color:mediumorchid;grieved@@ that you are selling her best source of comfort and companionship in a life of bondage.
+        		<<set $slaves[$j].devotion -= $slaves[$j].relationship>>
+				<<set $seed to 1>>
+			<</if>>
+			<</if>>
+		<</for>>
+	<</if>>
+	<<if $activeSlave.rivalry isnot 0>>
+		<<for $j to 0; $j lt $slaves.length; $j++>>
+			<<if $slaves[$j].ID is $activeSlave.rivalryTarget>>
+			<<if $slaves[$j].fetish isnot "mindbroken">>
+        		$slaves[$j].slaveName is @@color:hotpink;pleased@@ that she won't have to see her rival any more.
+        		<<set $slaves[$j].devotion += $slaves[$j].rivalry*0.3>>
+				<<set $seed to 1>>
+			<</if>>
+			<</if>>
+		<</for>>
+	<</if>>
+
+<</nobr>>\
+
+<<if $seed is 0>>
+  <<display "Remove activeSlave">>
+  <<goto "Main">>
+<<else>>
+  <<display "Remove activeSlave">>
+<</if>>

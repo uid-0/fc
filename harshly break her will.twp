@@ -1,0 +1,72 @@
+<<nobr>>
+
+<<set $activeSlave.devotion -= 1>>
+<<set $activeSlave.health -= 1>>
+
+<<if ($activeSlave.fetish is "mindbroken")>>
+	<<set $slaves[$i].minorInjury to either("black eye", "split lip", "bruise")>>
+	$activeSlave.slaveName's mind is broken. She is a boring slave to torture, though her body will still occasionally react to intense pain. No matter what you try, nothing really reaches her destroyed soul. The agonies do @@color:red;affect her health, leaving her with a $slaves[$i].minorInjury.@@
+
+<<elseif ($activeSlave.devotion lt -18)>>
+	<<set $slaves[$i].minorInjury to either("black eye", "split lip", "bruise")>>
+	Old traditions should not be forgotten. The scourge is the oldest slavebreaking tool known to man, and to slave girls who do not properly obey men. For the whole week, whenever $activeSlave.slaveName disobeys you or whenever the whim strikes, you bind her securely and flog her without mercy. You use a soft leather appliance and apply medical care afterward, so there will be no permanent scarring, but @@color:red;her health is affected and the beatings leave her with a minor injury.@@ She is subjected to immense mental pressure @@color:mediumorchid;in favor of obedience.@@
+
+<<elseif ($activeSlave.devotion lt -10) and ($activeSlave.anus gt 0)>>
+	<<set $slaves[$i].minorInjury to either("black eye", "split lip", "bruise")>>
+	$activeSlave.slaveName is willing to physically defend herself against sexual abuse. Training her out of this rebelliousness is a nice sexual change of pace. For the entire week, whenever she commits some minor sin, you fight her into a state of physical submission and then sodomize her. This usually requires an extended beating to render her quiescent, followed by holding her down so that her struggles do not dislodge your cock from her delightfully spasming butthole. She is subjected to immense mental pressure @@color:mediumorchid;in favor of obedience,@@ but the extreme stress @@color:red;affects her health, leaving her with a $slaves[$i].minorInjury.@@
+		<<set $slaves[$i].analCount += 6>>
+		<<set $analTotal += 6>>
+    
+<<elseif ($activeSlave.balls gt 0)>>
+	<<set $slaves[$i].minorInjury to either("black eye", "split lip", "bruise")>>
+	$activeSlave.slaveName has indefensible, obvious targets for harsh breaking. Whenever she falls short in the smallest way, you bind her in such a way that her cock and balls are dangling defenseless, and she cannot move to avoid blows. You then indulge your inventiveness, applying clips, weights, and simple beatings to her member and sack, while beating the rest of her thoroughly. She is subjected to immense mental pressure @@color:mediumorchid;in favor of obedience,@@ but the beatings @@color:red;affect her health, leaving her with a $slaves[$i].minorInjury.@@
+    
+<<elseif ($activeSlave.dick gt 0)>>
+	<<set $slaves[$i].minorInjury to either("black eye", "split lip", "bruise")>>
+	$activeSlave.slaveName has an indefensible, obvious target for harsh breaking. Whenever she falls short in the smallest way, you bind her in such a way that her cock is dangling defenseless, and she cannot move to avoid blows. You then indulge your inventiveness, applying clips, weights, and simple beatings to her member, while beating the rest of her thoroughly. She is subjected to immense mental pressure @@color:mediumorchid;in favor of obedience,@@ but the beatings @@color:red;affect her health, leaving her with a $slaves[$i].minorInjury.@@
+
+<<elseif ($activeSlave.clit gt 0)>>
+	<<set $slaves[$i].minorInjury to either("black eye", "split lip", "bruise")>>
+	$activeSlave.slaveName has an indefensible, obvious target for harsh breaking. Whenever she falls short in the smallest way, you bind her in such a way that her unusually large clit is visible and defenseless, and she cannot move to avoid blows. You then indulge your inventiveness, applying clips, weights, and simple slaps to her womanhood, while beating the rest of her thoroughly. She is subjected to immense mental pressure @@color:mediumorchid;in favor of obedience,@@ but the beatings @@color:red;affect her health, leaving her with a $slaves[$i].minorInjury.@@
+
+<<elseif ($activeSlave.nipples gt 1)>>
+	<<set $slaves[$i].minorInjury to either("black eye", "split lip", "bruise")>>
+	$activeSlave.slaveName's nipples beg for punishment. Whenever she falls short in the smallest way, you bind her in such a way that breasts dangle, her nipples are free and at your mercy, and she can only move enough to cause her boobs to sway erotically when she flinches with pain. You then indulge your inventiveness, applying clips, weights, and simple abuse to her nipples, while beating the rest of her thoroughly. She is subjected to immense mental pressure @@color:mediumorchid;in favor of obedience,@@ but the beatings @@color:red;affect her health, leaving her with a $slaves[$i].minorInjury.@@
+
+<<elseif ($activeSlave.anus gt 0)>>
+	You bind $activeSlave.slaveName with the head of an uncomfortably large dildo just inside her anus. The setup offers her a choice: she can either stand and have only tip up her butt, or she can take her weight off her legs, and take a massive phallus up the ass. You keep her like this for hours on end. At the start she tries to stand all the time. Then, she tries to rest on for short periods, but realizes that this up and down motion really just leads to her assraping herself. Finally, she becomes so tired and apathetic that she accepts having a dildo up the ass, and sits down. She is subjected to immense mental pressure @@color:mediumorchid;in favor of obedience,@@ but the extreme stress @@color:red;affects her health.@@
+    
+<<else>>
+	<<set $slaves[$i].minorInjury to either("black eye", "split lip", "bruise")>>
+	The first time you force $activeSlave.slaveName to please you this week, she could be forgiven for thinking sexual abuse is to be her sentence. By the end of the week she remembers only fearing rape as a pleasant dream. This change is due to your program of roughly using her whenever she shows any sign of sleeping. You reward her with a short doze now and then, but she is slowly reduced to a nearly insensible state of agonizing fatigue. She is subjected to immense mental pressure @@color:mediumorchid;in favor of obedience,@@ but the extreme stress and rough treatment @@color:red;affect her health and leave her with a $slaves[$i].minorInjury.@@
+
+<</if>>
+
+<<set $seed to random(1,100)>>
+<<if ($seed gt 90) and ($activeSlave.fetish isnot "mindbroken")>>
+	This abuse has shattered her already-fragile self; @@color:red;her mind has been broken.@@
+	<<set $activeSlave.fetish to "mindbroken">>
+	<<set $activeSlave.sexualQuirk to "none">>
+	<<set $activeSlave.behavioralQuirk to "none">>
+<<elseif ($seed gt 80) and ($activeSlave.fetish isnot "mindbroken") and ($activeSlave.sexualQuirk isnot "hates men")>>
+	This abuse has associated masculinity with pain in her mind; @@color:red;she now instinctually hates men.@@
+	<<set $activeSlave.sexualQuirk to "hates men">>
+<<elseif ($seed gt 70) and ($activeSlave.fetish isnot "mindbroken") and ($activeSlave.sexualQuirk isnot "quirky")>>
+	This abuse has changed her a bit; @@color:red;she has begun to act strangely.@@
+	<<set $activeSlave.behavioralQuirk to "quirky">>
+<</if>>
+
+<<if ($activeSlave.trust gt 2)>>
+  A week of agony @@color:gold;reduces her trust@@ in you.
+  <<set $slaves[$i].trust -= 2>>
+<<else>>
+  A week of agony @@color:gold;encourages her fear@@ of you.
+  <<set $slaves[$i].trust -= 2>>
+<</if>>
+
+<<if ($activeSlave.devotion gt 4)>>
+	She is now fully broken; @@color:yellow;her training assignment has defaulted to fostering devotion.@@
+	<<set $trainingRegimen to "build her devotion">>
+<</if>>
+
+<</nobr>>\

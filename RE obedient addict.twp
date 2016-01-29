@@ -1,0 +1,47 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+<span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> takes her aphrodisiacs in pill form, with her food. They're dispensed alongside her nutrition in the kitchen. You happen to be passing by when she's being issued her drugs, and you see her staring thoughtfully at the insignificant-looking little pill, just holding it in her hand and considering it for a long time.
+
+When she relizes you're watching, she turns to you and you realize her eyes are moist. <<if ($activeSlave.mute is 1)>>She uses trembling gestures to pour out dissatisfaction with life as an aphrodisiac addict. She is emotionally unsatisfied with the mechanical orgasms she gets on the drugs, but craves them intensely.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She lisps through huge, quivering lips, "<<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>, I hate thith thit. I come and come and come but ith jutht phythical. I haven't felt clothe to anyone ever thinthe I been on thethe fucking aphrodithiacs." She shrugs bitterly. "Thtill crave them though."<<else>>>She mutters, "<<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>, I hate this shit. I come and come and come but its just physical. I haven't felt close to anyone ever since I've been on these fucking aphrodisiacs." She shrugs bitterly. "Still crave them though."<</if>>
+\
+<span id="result">
+<<click "Make an example by forcing her to take a massive dose">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You take her by the shoulders, look into her eyes, and tell her you'll fix things so she doesn't mind so much. She looks hopeful, even when you tell her to take her pill. She does, and you hand her another. And another. She's crying with dread by the fourth pill, knowing that this is her punishment for complaining. Her pupils dilate, she begins to breathe hard, and her $activeSlave.skin skin flushes badly. She tries to beg you to fuck her but can't seem to find the words. She begins to masturbate compulsively, so hard that she collapses to the kitchen floor with her first spastic orgasm. <<if $activeSlave.dick gt 3>>Her big cock is agonizingly erect and doesn't soften at all when she spatters her own chest with cum.<<elseif $activeSlave.dick gt 1>>Her cock is agonizingly erect and doesn't soften at all when she spatters her own chest with cum.<<elseif $activeSlave.dick gt 0>>Her pathetic dick is agonizingly erect and doesn't soften at all when she weakly dribbles cum.<<else>>Her pussy is dripping with moisture and her ragingly stiff clit doesn't soften at all when she comes.<</if>> For the hour or so it takes her to pass out, slaves using the kitchen have to step over her prostrate, orgasming body, lying in a pool of her own drool, tears, sweat, and fluids. The next time you see her in the kitchen, she takes her medicine like a @@color:gold;good girl.@@ All your aphrodisiac addicts recognize the symptoms and the punishment, and @@color:gold;avoid even thinking@@ about resisting the system.
+    <<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if ($slaves[$i].drugs is "extreme aphrodisiacs") or ($slaves[$i].drugs is "aphrodisiacs")>>
+		<<set $slaves[$i].trust -= 1>>
+	  <</if>>
+    <</for>>	
+    <</replace>>
+<</click>>
+<<click "Have caring sex with her before she takes the aphrodisiacs">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You back her up against the wall of the kitchen, kissing her, touching her body with care, and quietly shushing her attempts to ask questions. You deftly extract the pill form her hand and put in on the counter for later. With time and skill you bring her to a fine state of arousal, not to mention @@color:hotpink;emotional need;@@ she begins to kiss you back with almost frantic enthusiasm. When she's clearly ready, you lay her across the kitchen table and <<if ($PC.dick is 0)>>work your groin up between her legs<<else>>enter her<</if>>, drawing out a lusty moan. As the sex continues, however, she begins to look doubtful, then distracted, and then to twitch occasionally. Finally she bursts into tears. <<if ($activeSlave.mute is 1)>>She indicates through her weeping that she can't climax without the drugs.<<elseif ($activeSlave.lips gt 2) or ($activeSlave.lipsPiercing+$activeSlave.tonguePiercing gt 2)>>She sobs, "I can't come without my fixth, <<if $PC.title isnot 0>>Mathter<<else>>Mithtreth<</if>>!"<<else>>>She sobs, "I - I - fucking need my fix to come, <<if $PC.title isnot 0>>Master<<else>>Mistress<</if>>."<</if>> You pass her the pill, and she continues to weep inconsolably, apologizing all the while, until the drug takes away her ability to care about anything but getting fucked. When you finish and extract <<if ($PC.dick is 0)>>yourself from between her legs<<else>>your cock from her well-used hole<</if>>, though, you think you can detect a deep sadness in her eyes that it cannot reach.
+	<<set $activeSlave.devotion += 1>>
+      <<if ($activeSlave.vagina gt -1) and ($activeSlave.vaginalAccessory isnot "chastity belt")>>
+          <<set $activeSlave.vaginalCount += 1>>
+          <<set $vaginalTotal += 1>>
+  		  <<display "Vaginal VCheck">>
+      <<else>>
+          <<set $activeSlave.analCount += 1>>
+          <<set $analTotal += 1>>
+  		  <<display "Anal VCheck">>
+      <</if>>
+    <</replace>>
+<</click>><<if ($activeSlave.anus is 0) or ($activeSlave.vagina is 0)>> //This option will take virginity//<</if>>
+</span>

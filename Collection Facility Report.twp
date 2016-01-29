@@ -1,0 +1,161 @@
+<<nobr>>
+
+<<set $milked to 0>>
+<<set $legendaryBallsID to 0>>
+<<set $collectionFacilitySlaves to 0>>
+<<set $profits to 0>>
+<<set $collectrixFetish to 0>>
+
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if ($slaves[$i].assignment is "work in the collection facility")>>
+  <<set $collectionFacilitySlaves += 1>>
+  <<if ($legendaryBallsID is 0) and ($slaves[$i].dick gt 4) and ($slaves[$i].balls gt 4) and ($slaves[$i].devotion gt 10) and ($slaves[$i].prestige is 0)>>
+	<<set $legendaryBallsID to $slaves[$i].ID>>
+  <</if>>
+  <<silently>>
+  <<set $oldCash to $cash>>
+  <<display [[SA get cockmilked]]>>
+  <<if ($collectionFacilityUpgradeMilkers gt 0) and ($slaves[$i].lactation gt 0)>>
+	<<display [[SA get milked]]>>
+	<<if ($slaves[$i].boobs lt 2000)>>
+	  <<set $slaves[$i].boobs += 100>>
+	<<elseif ($slaves[$i].boobs lt 5000)>>
+	  <<set $slaves[$i].boobs += 50>>
+	<<elseif ($slaves[$i].boobs lt 10000)>>
+	  <<set $slaves[$i].boobs += 25>>
+	<</if>>
+	<<set $milked to 1>>
+  <</if>>
+  <<set $profits += $cash-$oldCash>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if ($slaves[$i].devotion lt 4) and ($slaves[$i].trust gt -4)>>
+	<<set $slaves[$i].devotion -= 1>>
+	<<set $slaves[$i].trust -= 1>>
+  <<elseif ($slaves[$i].devotion lt 9)>>
+	<<set $slaves[$i].devotion += 0.3>>
+  <<elseif ($slaves[$i].devotion gt 9)>>
+	<<set $slaves[$i].devotion -= 0.3>>
+  <</if>>
+  <<if ($slaves[$i].health lt -4)>>
+	<<set $slaves[$i].health += 1.3>>
+  <<elseif ($slaves[$i].health lt 0)>>
+	<<set $slaves[$i].health += 1>>
+  <<elseif ($slaves[$i].health lt 9)>>
+	<<set $slaves[$i].health += 0.7>>
+  <</if>>
+  <<if ($slaves[$i].balls lt 5)>>
+	<<if (random(1,100) gt (40+(10*$slaves[$i].balls)))>>
+	  <<set $slaves[$i].balls += 1>>
+	<</if>>
+  <</if>>
+  <<if ($slaves[$i].dick lt 5)>>
+	<<if (random(1,100) gt (40+(10*$slaves[$i].dick)))>>
+	  <<set $slaves[$i].dick += 1>>
+	<</if>>
+  <</if>>
+  <<if ($collectionFacilityUpgradeStimulators is 1)>>
+	<<set $slaves[$i].anus to 3>>
+	<<if ($slaves[$i].fetish isnot "nympho") and ($slaves[$i].fetish isnot "mindbroken")>>
+	  <<set $slaves[$i].fetish to "buttslut">>
+	  <<set $slaves[$i].fetishDiscovered to 1>>
+	<</if>>
+  <</if>>
+<<elseif ($Collectrix isnot 0) and ($slaves[$i].ID is $Collectrix.ID)>>
+  <<silently>>
+  <<display "SA long term effects">>
+  <<display "SA relationships">>
+  <<display "SA rivalries">>
+  <</silently>>
+  <<if ($slaves[$i].health lt -4)>>
+	<<set $slaves[$i].health += 1.3>>
+  <<elseif ($slaves[$i].health lt 0)>>
+	<<set $slaves[$i].health += 1>>
+  <<elseif ($slaves[$i].health lt 9)>>
+	<<set $slaves[$i].health += 0.7>>
+  <</if>>
+  <<if $slaves[$i].devotion lt 12>>
+	<<set $slaves[$i].devotion += 0.3>>
+  <</if>>
+  <<if $slaves[$i].trust lt 12>>
+	<<set $slaves[$i].trust += 0.3>>
+  <</if>>
+  <<if (($slaves[$i].fetish isnot "dom") and ($slaves[$i].fetish isnot "nympho")) or ($slaves[$i].fetishDiscovered is 0)>>
+	<<if ($slaves[$i].clitSetting is "dom") or ($slaves[$i].clitPiercing lt 3)>>
+	  <<if random(1,100) lt $slaves[$i].devotion>>
+		<<set $collectrixFetish to 1>>
+		<<set $slaves[$i].fetish to "dom">>
+		<<set $slaves[$i].fetishDiscovered to 1>>
+	  <</if>>
+	<</if>>
+  <</if>>
+<</if>>
+<</for>>
+  
+<<if ($collectionFacilitySlaves gt 0)>>
+  <<if ($collectionFacilitySlaves is 1)>>
+	''There is 1 milker in your collection facility.''
+  <<else>>
+	''There are $collectionFacilitySlaves milkers in your collection facility.''
+  <</if>>
+
+  <<if ($Collectrix isnot 0)>>
+	$Collectrix.slaveName is serving as your collectrix.
+	<<set $oldCash to $cash>>		
+	<<if ($collectrixFetish is 1)>>
+	  <<for $i to 0; $i lt $slaves.length; $i++>>
+	  <<if ($slaves[$i].ID is $Collectrix.ID)>>
+		One can only fuck so many restrained, quivering butts before experiencing a change in sexual outlook. It's her job to force prostate orgasms regardless of the milkee's feelings; they take it up the ass regardless of whining or begging. She becomes adept at soothing and dominating slaves even as she penetrates them, and is now a skilled @@color:pink;sexual dominant.@@
+	  <</if>>
+	  <</for>>
+	<</if>>
+	<<if ($Collectrix.oralSkill lt 1)>>
+	  Though $Collectrix.slaveName does her best to help the slaves cum as much as possible, her poor oral sex skills inhibit her.
+	<<elseif ($Collectrix.oralSkill is 1)>>
+	  $Collectrix.slaveName's basic oral skills marginally @@color:yellowgreen;improve@@ semen production.
+	  <<set $cash += Math.trunc($profits*0.05)>>
+	<<elseif ($Collectrix.oralSkill is 2)>>
+	  $Collectrix.slaveName's oral skills @@color:yellowgreen;improve@@ semen production.
+	  <<set $cash += Math.trunc($profits*0.1)>>
+	<<elseif ($Collectrix.oralSkill gt 2)>>
+	  $Collectrix.slaveName's oral skills greatly @@color:yellowgreen;improve@@ semen production.
+	  <<set $cash += Math.trunc($profits*0.15)>>
+	<</if>>
+	<<if ($Collectrix.butt gt 4) and ($Collectrix.boobs gt 800)>>
+	  $Collectrix.slaveName's enticing tits and ass help keep her charges ready to cum.
+	  <<set $cash += Math.trunc($profits*0.1)>>
+	<</if>>
+	<<if ($Collectrix.dick gt 4) and ($Collectrix.balls gt 0) and ($Collectrix.hormones lt 1)>>
+	  Her big, stiff prick can force a convulsive prostate orgasm out of any slave.
+	  <<set $cash += Math.trunc($profits*0.1)>>
+	<</if>>
+	<<if ($Collectrix.fetishDiscovered is 1) and ($Collectrix.fetish is "nympho")>>
+	  She can't stop herself from fucking the slaves, even when they aren't being cockmilked, keeping them subservient and productive.
+	  <<set $cash += Math.trunc($profits*0.1)>>
+	<<elseif ($Collectrix.fetishDiscovered is 1) and ($Collectrix.fetish is "dom")>>
+	  She enjoys dominating the slaves' buttholes, and makes sure that they know who's boss even when they're not being cockmilked, keeping them subservient and productive.
+	  <<set $cash += Math.trunc($profits*0.1)>>
+	<</if>>		
+	<<set $profits += $cash-$oldCash>>
+  <</if>>
+  <<if ($milked is 1)>>
+	Your collection facility milks lactacting slaves, too, draining them of milk and cum.
+  <</if>>
+  The collection facility makes you @@color:yellowgreen;¤$profits@@ this week.
+  <<if ($collectionFacility*5 lt $collectionFacilitySlaves)>>
+	<<for $i to 0; $i lt $slaves.length; $i++>>
+	<<if ($slaves[$i].assignment is "work in the collection facility")>>
+	  <<set $slaves[$i].health -= 1>>
+	<</if>>
+	<</for>>
+	There are too many slaves crammed into the collection facility. Living this way is @@color:red;bad for their health.@@
+  <</if>>
+
+<<else>>
+  ''Your collection facility is empty.''
+<</if>>
+<br>
+
+<</nobr>>

@@ -1,0 +1,83 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "Random Nonindividual Event">>
+	<<set $nextButton to "Continue">>
+	
+<<set $daughtersVictory to 1>>
+
+<</nobr>>\
+\
+You are awakened in the middle of the night by a jolt that shakes the entire arcology, accompanied by a distant boom. It is followed by the wail of the arcology's alarm systems, and then finally by a faint crackle that grows to a constant chatter of gunfire. Main power goes out, and you claw your way in the darkness to the video feeds, running on emergency backup. The Daughters of Liberty have more sympathizers in the arcology than even you suspected, and they're well armed and have the element of surprise.
+
+<<if $hackerSupport is 0>>Many of the arcology systems are not responding properly. It seems the Daughters' penetration of your systems is thorough. Your security systems are still reasonably functional, but the rebels are aided by partial control of things like lights and door locks.<<else>>It seems your cyberwarfare ally of convenience is having an effect. Arcology systems are working perfectly unless the rebels disable them physically. Their fighters are impeded by uncooperative lights, resistant locking systems, and even your personal assistant's selective deployment of firefighting systems to obscure visibility.<</if>>
+
+<<if $personalArms is 0>>Since you are not well armed or armored, you stay in your penthouse and do what you can to coordinate the defense.<<elseif $personalArms is 1>>The Daughters are appalled to encounter you striding thunderously out of your penthouse, fully armored. Your exoskeleton mounts an acoustic riot control system that even allows you to take prisoners.<<else>>The Daughters are appalled to encounter you striding thunderously out of your penthouse, fully armored. Your exoskeleton mounts an acoustic riot control system that even allows you to take prisoners. Meanwhile, your security drones are busily rearming themselves, and soon the dominant sound in the arcology is the ripping noise made by their small-caliber guns. A few of them retain their nonlethal weapons and swoop in to subdue when possible.<</if>>
+
+<<if $mercenaries is 0>>You are alone in contributing to the defense of your home.<<elseif $mercenaries is 1>>Your mercenaries desperately defend their barracks but manage little else.<<elseif $mercenaries is 3>>Your mercenaries manage to get into action quickly enough, but are bogged down in the streets. They are obliged to fight a confused battle to establish a perimeter. Only once it's stable are they able to push out.<<else>>Your $mercenariesTitle spread out into the arcology, as invincible as Medieval men-at-arms matched against peasants. They are so dominant over the Daughters that they are able to take many prisoners. Their armor often permits them to approach armed, resisting rebels and disarm them manually.<</if>>
+
+<<nobr>>
+<<if $mercenaries + $personalArms + $hackerSupport lt 9>>
+	@@color:yellow;The Daughters of Liberty are defeated.@@ @@color:red;Your arcology is heavily damaged,@@ and the repairs will be very costly. The effect on your reputation is @@color:green;muted, but positive,@@ since though you won, your victory was hard-fought and set the arcology's prosperity back @@color:red;a long way.@@ <<if $traitor isnot 0>>$traitor.slaveName was killed in the fighting.<</if>>
+	<<set $daughtersVictory to 2>>
+    <<set $cash -= 10000>>
+    <<set $cash -= Math.trunc($cash*0.3)>>
+	<<set $AProsperity to Math.trunc($AProsperity*0.5)>>
+    <<set $rep += 500>>
+    <<if ($seeDicks gt 0)>>
+      <<display "Generate XY Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+      <<display "Generate XX Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+    <<else>>
+      <<display "Generate XX Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+      <<display "Generate XX Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+    <</if>>
+<<else>>
+	@@color:yellow;The Daughters of Liberty are annihilated.@@ @@color:red;Your arcology has been damaged,@@ and the repairs will be quite costly. However, the effect on your reputation is @@color:green;very positive,@@ since though your victory was hard-fought and set the arcology's prosperity back @@color:red;considerably,@@ you did better than other arcology owners have done when faced with similar well-armed unrest. You also took a truly impressive bag of prisoners. <<if $traitor isnot 0>>$traitor.slaveName was captured and has been returned to you.<</if>>
+	<<set $daughtersVictory to 3>>
+    <<set $cash -= 5000>>
+    <<set $cash -= Math.trunc($cash*0.2)>>
+	<<set $AProsperity to Math.trunc($AProsperity*0.7)>>
+    <<set $rep += 1000>>
+    <<if $traitor isnot 0>>
+      <<set $activeSlave to $traitor>>
+      <<set $activeSlave.health to random(-8,-6)>>
+      <<set $activeSlave.origin to "She was your slave, but you freed her, which she repaid by participating in a coup attempt against you. It failed, and she is again your chattel.">>
+      <<set $slaves.push($activeSlave)>>
+    <</if>>
+    <<if ($seeDicks gt 0)>>
+      <<display "Generate XY Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+      <<display "Generate XX Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+      <<display "Generate XY Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+      <<display "Generate XX Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+    <<else>>
+      <<display "Generate XX Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+      <<display "Generate XX Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+      <<display "Generate XX Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+      <<display "Generate XX Slave">>
+      <<set $activeSlave.origin to "She is an enslaved Daughter of Liberty.">>
+      <<set $slaves.push($activeSlave)>>
+    <</if>>
+<</if>>
+<</nobr>>

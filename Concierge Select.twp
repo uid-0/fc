@@ -1,0 +1,39 @@
+<<set $nextButton to "Back">>\
+<<set $nextLink to "Promenade">>\
+<<set $encyclopedia to "Concierges">>\
+\
+<<nobr>>
+
+<<set $assignment to 0>>
+<<for $i to 0; $i lt $slaves.length; $i++>>
+<<if $Concierge.ID == $slaves[$i].ID>>
+	''__@@color:pink;$slaves[$i].slaveName@@__'' is serving as your Concierge.
+    <<set $assignment to 1>>
+    <<set $slaves[$i].assignment to "be the Concierge">>
+    <<set $slaves[$i].assignmentVisible to 0>>
+    <br><br>She will lead your slaves out on the promenade.
+<</if>>
+<</for>>
+<<if ($assignment is 0)>>
+	You have not selected a Concierge.
+<</if>>
+
+<</nobr>>
+
+__Appoint a Concierge from your devoted slaves:__\
+<<for $i to 0; $i lt $slaves.length; $i++>>\
+<<nobr>>
+<<if ($slaves[$i].devotion gt 10)>>
+<<if $slaves[$i].assignmentVisible is 1>>
+<<if ($slaves[$i].amp isnot 1)>>
+<<if ($slaves[$i].intelligence gt -2)>>
+  <br><<print "[[$slaves[$i].slaveName|Concierge Workaround][$Concierge to $slaves[" + $i + "]]]">>
+  <<display "Slave Summary">>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</nobr>>\
+<</for>>\
+
+[[None|Concierge Workaround][$Concierge to 0]]

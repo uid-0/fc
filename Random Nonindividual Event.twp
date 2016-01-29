@@ -1,0 +1,147 @@
+<<silently>>
+
+<<set $events = []>>
+<<set $activeSlave = 0>>
+<<set $groomSlave = 0>>
+<<set $brideSlave = 0>>
+
+<<set $seed to 0>>
+<<set $eventSlave to $slaves.random()>>
+<<if $nicknamesAllowed is 1>>
+<<if $eventSlave.assignment isnot "be confined in the arcade">>
+<<set $toSearch to $eventSlave.slaveName.toLowerCase();>>
+<<if ($toSearch.indexOf("'") is -1)>>
+  <<if ($eventSlave.devotion gte -4)>>
+	<<set $events.push("RE nickname")>>
+	<<set $events.push("RE nickname")>>
+	<<set $events.push("RE nickname")>>
+	<<set $events.push("RE nickname")>>
+	<<set $seed to 1>>
+  <<else>>
+	<<set $events.push("RE nickname")>>
+	<<set $events.push("RE nickname")>>
+	<<set $seed to 1>>
+  <</if>>
+<</if>> /* closes nickname check */
+<</if>>
+<</if>> /* closes no nicknames option */
+
+<<if $legendaryWhoreID isnot 0>>
+  <<set $events.push("RE legendary whore")>>
+<</if>>
+<<if $legendaryEntertainerID isnot 0>>
+  <<set $events.push("RE legendary entertainer")>>
+<</if>>
+<<if $legendaryCowID isnot 0>>
+  <<set $events.push("RE legendary cow")>>
+<</if>>
+<<if $legendaryBallsID isnot 0>>
+  <<set $events.push("RE legendary balls")>>
+<</if>>
+<<if $legendaryAbolitionistID isnot 0>>
+<<set $events.push("RE former abolitionist")>>
+<</if>>
+
+<<display "Relationship Events">>
+
+<<display "Fetish Interest Events">>
+
+<<display "Multislave Events">>
+
+<<display "Position Events">>
+
+<<display "Acquisition Events">>
+
+<<if $FSAnnounced is 1>>
+  <<if $FSSupremacist gt random(1,100)>>
+	  <<set $events.push("RE FSSupremacist acquisition")>>
+  <</if>>
+  <<if $FSSubjugationist gt random(1,100)>>
+	  <<set $events.push("RE FSSubjugationist acquisition")>>
+  <</if>>
+  <<if $FSGenderRadicalist gt random(1,100)>>
+	  <<set $events.push("RE FSGenderRadicalist acquisition")>>
+  <</if>>
+  <<if $FSGenderFundamentalist gt random(1,100)>>
+	  <<set $events.push("RE FSGenderFundamentalist acquisition")>>
+  <</if>>
+  <<if $FSPaternalist gt random(1,100)>>
+	  <<set $events.push("RE FSPaternalist acquisition")>>
+  <</if>>
+  <<if $FSDegradationist gt random(1,100)>>
+	  <<set $events.push("RE FSDegredationist acquisition")>>
+  <</if>>
+  <<if $FSBodyPurist gt random(1,100)>>
+	  <<set $events.push("RE FSBodyPurist acquisition")>>
+  <</if>>
+  <<if $FSTransformationFetishist gt random(1,100)>>
+	  <<set $events.push("RE FSTransformationFetishist acquisition")>>
+  <</if>>
+  <<if $FSSlimnessEnthusiast gt random(1,100)>>
+	  <<set $events.push("RE FSSlimnessEnthusiast acquisition")>>
+  <</if>>
+  <<if $FSAssetExpansionist gt random(1,100)>>
+	  <<set $events.push("RE FSAssetExpansionist acquisition")>>
+  <</if>>
+  <<if $FSPastoralist gt random(1,100)>>
+	  <<set $events.push("RE FSPastoralist acquisition")>>
+  <</if>>
+  <<if $FSPhysicalIdealist gt random(1,100)>>
+	  <<set $events.push("RE FSPhysicalIdealist acquisition")>>
+  <</if>>
+  <<if $FSChattelReligionist gt random(1,100)>>
+	  <<set $events.push("RE FSChattelReligionist acquisition")>>
+  <</if>>
+  <<if $FSRomanRevivalist gt random(1,100)>>
+	  <<set $events.push("RE FSRomanRevivalist acquisition")>>
+  <</if>>
+  <<if $FSAncientEgyptianRevivalist gt random(1,100)>>
+	  <<set $events.push("RE FSAncientEgyptianRevivalist acquisition")>>
+  <</if>>
+<</if>>
+
+<<if $slaveDealJustice isnot 1>>
+	<<set $events.push("JE slave deal")>>
+<</if>>
+<<if $trainingDealJustice isnot 1>>
+	<<set $events.push("JE training deal")>>
+<</if>>
+<<if $majorityDealJustice isnot 1>>
+	<<set $events.push("JE majority deal")>>
+<</if>>
+<<if $indentureDealJustice isnot 1>>
+	<<set $events.push("JE indenture deal")>>
+<</if>>
+<<if $virginityDealJustice isnot 1>>
+	<<set $events.push("JE virginity deal")>>
+<</if>>
+
+<<if $corpCash gt 50000>>
+	<<set $events.push("REM merger")>>
+<</if>>
+
+<<if $rep-10000 gt random(1,10000)>>
+	<<set $events.push("RE female arcology owner")>>
+<</if>>
+
+<<if random(1,100) gt $slaveCostFactor*40>>
+	<<set $events.push("REM tainted drugs")>>
+	<<set $events.push("REM new free city")>>
+	<<set $events.push("REM speculation")>>
+<</if>>
+
+<<if random(1,100) lt $slaveCostFactor*60>>
+  <<set $events.push("REM war")>>
+  <<set $events.push("REM bankruptcy")>>
+  <<set $events.push("REM empty prisons")>>
+<</if>>
+
+/* EVENT RANDOMIZATION */
+
+<<if $cheatMode is 1>>
+  <<goto "random event select">>
+<<else>>
+  <<goto "random event roll">>
+<</if>>
+
+<</silently>>

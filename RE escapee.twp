@@ -1,0 +1,101 @@
+<<nobr>>
+
+<<set $nextButton to "Continue">>
+<<set $nextLink to "AS Dump">>
+<<set $returnTo to "Next Week">>
+
+<<set $activeSlave to $eventSlave>>
+
+<</nobr>>\
+\
+An escape attempt occurs and is stopped almost before you are informed of it. <span id="name"><<print "[[$activeSlave.slaveName|Long Slave Description][$nextLink to passage(), $eventDescription to 1]]">></span> made a rash attempt to leave the penthouse, but your personal assistant monitors everyone constantly and was able to enclose her before she got very far. <<if $assistant is 0>>It reports impersonally that the would-be escapee is locked in the entryway awaiting your judgment.<<else>>She reports suggestively that the would-be escapee is locked in the entryway awaiting your pleasure.<</if>>
+
+<<if $AProsperityCap gt 60>>Your advanced security systems are able to stop her promptly, and there is no indication to the public that any escape attempt was made.<<else>>Your basic security systems are only able to stop her by briefly locking down your penthouse, exciting @@color:red;some adverse public comment.@@<<set $rep -= 100>><</if>>
+\
+<span id="result">
+<<click "Just confine would-be escapee to prevent future attempts">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	You order $activeSlave.slaveName confined until further notice. $activeSlave.slaveName is @@color:hotpink;a little crushed@@ by her failure to escape. However, every single one of your other slaves not already obedient to you is slightly @@color:mediumaquamarine;encouraged in her trust that you won't hurt her@@ by this moderate punishment of an escape attempt.
+	<<set $activeSlave.devotion += 1>>
+	<<set $activeSlave.assignment to "stay confined">>
+    <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].devotion lte 4>>
+	<<set $slaves[$i].trust += 1>>
+    <</if>>
+    <</for>>				
+    <</replace>>
+<</click>>
+<<click "Flog the would-be escapee">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	Lesser whippings are usually performed by binding a slave's hands and then securing them to the ceiling so that she will dance titillatingly when struck. This is not such a beating. You tie $activeSlave.slaveName to a wall by her wrists and ankles and flog her with workmanlike thoroughness. She passes from angry struggles to agonized sobbing and finally to bloody, exhausted weeping before you untie her now-limp form and apply first aid. $activeSlave.slaveName's rebelliousness is @@color:gold;dulled by the experience,@@ and her @@color:red;health is damaged.@@ Furthermore, every single one of your other slaves not already obedient to you is @@color:gold;frightened@@ by the example set.
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.health -= 4>>
+    <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].devotion lte 4>>
+	<<set $slaves[$i].trust -= 1>>
+    <</if>>
+    <</for>>				
+    <</replace>>
+<</click>>
+<<click "Amputate the would-be escapee's limbs">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	The simple thing to do would be to sedate $activeSlave.slaveName and haul her to the remote surgery for her punishment. That would deny her the added weight of terror, however, and would stop your other slaves from learning by the sight of it. So, you restrain her, pronounce judgment, and drag her struggling, weeping form through the penthouse to the surgery. $activeSlave.slaveName is @@color:mediumorchid;filled with implacable hatred@@ by this terrible punishment, and her @@color:red;health is damaged@@ by the major surgery. However, every single one of your other slaves not already obedient to you is @@color:gold;utterly terrified@@ by the example set.
+	<<set $activeSlave.devotion -= 10>>
+	<<set $activeSlave.trust -= 10>>
+	<<set $activeSlave.health -= 4>>
+	<<set $activeSlave.amp to 1>>
+	<<set $activeSlave.diet to "healthy">>
+	<<set $activeSlave.heels to 0>>
+    <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].devotion lte 4>>
+	<<set $slaves[$i].trust -= 2>>
+    <</if>>
+    <</for>>				
+    <</replace>>
+<</click>>
+<<click "Clip the would-be escapee's tendons">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	The simple thing to do would be to sedate $activeSlave.slaveName and haul her to the remote surgery for her punishment. That would deny her the added weight of terror, however, and would stop your other slaves from learning by the sight of it. So, you restrain her, pronounce judgment, and drag her struggling, weeping form through the penthouse to the surgery. $activeSlave.slaveName is @@color:mediumorchid;saddened@@ and @@color:gold;frightened@@ by this punishment, and her @@color:red;health is damaged@@ by the surgery. Every single one of your other slaves with any resistance left in them is @@color:gold;sensibly restrained@@ from trying such rash acts.
+	<<set $activeSlave.devotion -= 1>>
+	<<set $activeSlave.trust -= 1>>
+	<<set $activeSlave.health -= 1>>
+	<<set $activeSlave.heels to 1>>
+    <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].devotion lte 4>>
+	<<set $slaves[$i].trust -= 1>>
+    <</if>>
+    <</for>>				
+    <</replace>>
+<</click>>
+<<if $activeSlave.mute isnot 1>>\
+<<click "Mute the would-be escapee">>
+	<<replace "#name">>\
+	$activeSlave.slaveName\
+    <</replace>>\
+	<<replace "#result">>
+	The simple thing to do would be to sedate $activeSlave.slaveName and haul her to the remote surgery for her punishment. That would deny her the added weight of terror, however, and would stop your other slaves from learning by the sight of it. So, you restrain her, pronounce judgment, and drag her struggling, protesting form through the penthouse to the surgery. She is allowed one last chance to verbally resist you, plead with you, and finally to beg with you, all in vain. $activeSlave.slaveName is @@color:mediumorchid;filled with hatred@@ and @@color:gold;terror@@ by this harsh punishment, and her @@color:red;health is slightly damaged@@ by the surgery. However, every single one of your other slaves not already obedient to you is @@color:hotpink;terrified@@ by the example set.
+	<<set $activeSlave.devotion -= 5>>
+	<<set $activeSlave.trust -= 5>>
+	<<set $activeSlave.health -= 1>>
+	<<set $activeSlave.mute to 1>>
+    <<for $i to 0; $i lt $slaves.length; $i++>>
+    <<if $slaves[$i].devotion lte 4>>
+	<<set $slaves[$i].devotion += 1>>
+    <</if>>
+    <</for>>				
+    <</replace>>
+<</click>>
+<</if>>
+</span>

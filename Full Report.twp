@@ -1,0 +1,140 @@
+<<nobr>>
+
+''__@@color:pink;$slaves[$i].slaveName@@__''
+
+<<display "SA rules">>
+<<if $slaves[$i].choosesOwnClothes is 1>>
+  <<display "SA chooses own clothes">>
+  <<if ($slaves[$i].devotion lte 4)>>
+    <<set $slaves[$i].devotion -= 1>>
+  <<else>>
+    <<set $slaves[$i].devotion += 0.3>>
+  <</if>>
+<<else>>
+  <<display "SA clothes">>
+<</if>>
+<<display "SA accessories">>
+<<display "SA diet">>
+<<display "SA long term effects">>
+<<display "SA drugs">>
+<<display "SA relationships">>
+<<display "SA rivalries">>
+
+<<if $slaves[$i].choosesOwnAssignment is 1>>
+  <<display "SA chooses own job">>
+<</if>>
+
+<<if $slaves[$i].assignment is "whore">>
+	<<display "SA whore">>
+<<elseif $slaves[$i].assignment is "serve the public">>
+	<<display "SA serve the public">>
+<<elseif $slaves[$i].assignment is "work a glory hole">>
+	<<display "SA work a glory hole">>
+<<elseif $slaves[$i].assignment is "get milked">>
+	<<display "SA get milked">>
+<<elseif $slaves[$i].assignment is "get cockmilked">>
+	<<display "SA get cockmilked">>
+<<elseif $slaves[$i].assignment is "take classes">>
+	<<display "SA take classes">>
+<<elseif $slaves[$i].assignment is "rest">>
+	<<display "SA rest">>
+<<elseif $slaves[$i].assignment is "please you">>
+	<<display "SA please you">>
+<<elseif $slaves[$i].assignment is "be a subordinate sex slave">>
+	<<display "SA serve your other slaves">>
+<<elseif $slaves[$i].assignment is "be a subordinate servant">>
+	<<display "SA subordinate servant">>
+<<elseif $slaves[$i].assignment is "stay confined">>
+	<<display "SA stay confined">>
+<<elseif $slaves[$i].assignment is "guard you">>
+	<<display "SA guard you">>
+<<elseif $slaves[$i].assignment is "be your Head Girl">>
+	<<display "SA be your Head Girl">>
+<<elseif $slaves[$i].assignment is "recruit girls">>
+	<<display "SA recruit girls">>
+<<elseif $slaves[$i].assignment is "recover from surgery">>
+	<<set $slaves[$i].assignment to "rest">>
+	<<set $slaves[$i].assignmentVisible to 1>>
+<</if>>
+
+<<if $slaves[$i].minorInjury isnot 0>>
+	Her $slaves[$i].minorInjury will heal by the end of the week.
+<</if>>
+
+<</nobr>>
+<<nobr>>
+
+<<if ($personalAttention == $slaves[$i].ID)>>
+<<if ($slaves[$i].tired is 0)>>
+	<<set $activeSlave to $slaves[$i]>>
+    <<display "PT Workaround">>
+    <br>
+<</if>>
+<</if>>
+
+<</nobr>>\
+<<nobr>>
+
+<<if ($HGEnergy gt 0)>>
+<<if ($slaves[$i].fetish isnot "mindbroken")>>
+<<if ($personalAttention isnot $slaves[$i].ID)>>
+<<if ($slaves[$i].assignment isnot "guard you")>>
+<<if ($HeadGirl.assignment is "be your Head Girl")>>
+<<if (def $HeadGirl.slaveName)>>
+<<if $HeadGirl.ID isnot $slaves[$i].ID>>
+<<if ($headGirlTrainsHealth isnot 0) and ($slaves[$i].health lt -2)>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<set $HGtraining to "health">>
+    <<display "HG Application">>
+    <br>
+<<elseif ($headGirlTrainsQuirks isnot 0) and ($slaves[$i].behavioralQuirk isnot "none")>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<set $HGtraining to "quirk">>
+    <<display "HG Application">>
+    <br>
+<<elseif ($headGirlTrainsQuirks isnot 0) and ($slaves[$i].sexualQuirk isnot "none")>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<set $HGtraining to "quirk">>
+    <<display "HG Application">>
+    <br>
+<<elseif ($headGirlTrainsObedience isnot 0) and ($slaves[$i].devotion lte 4) and ($slaves[$i].trust gt -4)>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<set $HGtraining to "obedience">>
+    <<display "HG Application">>
+    <br>
+<<elseif ($headGirlTrainsSkills isnot 0) and ($slaves[$i].oralSkill lt $HeadGirl.oralSkill)>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<set $HGtraining to "oral skill">>
+    <<display "HG Application">>
+    <br>
+<<elseif ($headGirlTrainsSkills isnot 0) and ($slaves[$i].vaginalSkill lt $HeadGirl.vaginalSkill) and ($slaves[$i].vagina gt 0) and ($slaves[$i].clothes isnot "chastity")>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<set $HGtraining to "fuck skill">>
+    <<display "HG Application">>
+    <br>
+<<elseif ($headGirlTrainsSkills isnot 0) and ($slaves[$i].analSkill lt $HeadGirl.analSkill) and ($slaves[$i].anus gt 0)>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<set $HGtraining to "anal skill">>
+    <<display "HG Application">>
+    <br>
+<<elseif ($headGirlTrainsSkills isnot 0) and ($slaves[$i].whoreSkill lt $HeadGirl.whoreSkill)>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<set $HGtraining to "whore skill">>
+    <<display "HG Application">>
+    <br>
+<<elseif ($headGirlTrainsSkills isnot 0) and ($slaves[$i].entertainSkill lt $HeadGirl.entertainSkill) and ($slaves[$i].amp isnot 1)>>
+	<<set $activeSlave to $slaves[$i]>>
+	<<set $HGtraining to "entertain skill">>
+    <<display "HG Application">>
+    <br>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+<</if>>
+
+<<display "SA devotion">>
+<</nobr>>\
